@@ -1,0 +1,613 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Dayalamurthy.2013}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ff6296c26b18bf9c6491e01f20c9856b}{%
+           family={Dayalamurthy},
+           familyi={D\bibinitperiod},
+           given={Divya},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SRI Security Research Institute, Edith Cowan University, Perth, Western~…}%
+      }
+      \strng{namehash}{ff6296c26b18bf9c6491e01f20c9856b}
+      \strng{fullhash}{ff6296c26b18bf9c6491e01f20c9856b}
+      \strng{bibnamehash}{ff6296c26b18bf9c6491e01f20c9856b}
+      \strng{authorbibnamehash}{ff6296c26b18bf9c6491e01f20c9856b}
+      \strng{authornamehash}{ff6296c26b18bf9c6491e01f20c9856b}
+      \strng{authorfullhash}{ff6296c26b18bf9c6491e01f20c9856b}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Forensic memory dump analysis and recovery of the artefacts of using tor bundle browser--the need}
+      \field{year}{2013}
+    \endentry
+    \entry{Fayyad.2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=569aa589ec89dbff6b88dca0287cff66}{%
+           family={Fayyad-Kazan},
+           familyi={F\bibinithyphendelim K\bibinitperiod},
+           given={Hasan},
+           giveni={H\bibinitperiod}}}%
+        {{hash=115abeb9cdd57943c88167aded3635c6}{%
+           family={Kassem-Moussa},
+           familyi={K\bibinithyphendelim M\bibinitperiod},
+           given={Sondos},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b193e4ebc8b77d45a2cc87472500b0bc}{%
+           family={Hejase},
+           familyi={H\bibinitperiod},
+           given={Hussin\bibnamedelima J},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=22f0cbaa0ed26cf32c47d43496ed8f24}{%
+           family={Hejase},
+           familyi={H\bibinitperiod},
+           given={Ale\bibnamedelima J},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e13ba4184ff465c17d41f5616845e90}
+      \strng{fullhash}{c1e356fcb9686ddb04c1c51b933396ad}
+      \strng{bibnamehash}{1e13ba4184ff465c17d41f5616845e90}
+      \strng{authorbibnamehash}{1e13ba4184ff465c17d41f5616845e90}
+      \strng{authornamehash}{1e13ba4184ff465c17d41f5616845e90}
+      \strng{authorfullhash}{c1e356fcb9686ddb04c1c51b933396ad}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Forensic analysis of private browsing mechanisms: Tracing internet activities}
+      \field{year}{2021}
+    \endentry
+    \entry{Gabet.2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=580b463ebaa1b592ee2d7c7830fb0a21}{%
+           family={Gabet},
+           familyi={G\bibinitperiod},
+           given={Ryan\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=118f8c557efbcd77d66a9a7168504267}{%
+           family={Seigfried-Spellar},
+           familyi={S\bibinithyphendelim S\bibinitperiod},
+           given={Kathryn\bibnamedelima C},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b6ba85ae22552e7715063b31201b976e}{%
+           family={Rogers},
+           familyi={R\bibinitperiod},
+           given={Marcus\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Inderscience Publishers (IEL)}%
+      }
+      \strng{namehash}{e9661d9a0ea40623e7abe691852a3082}
+      \strng{fullhash}{e9661d9a0ea40623e7abe691852a3082}
+      \strng{bibnamehash}{e9661d9a0ea40623e7abe691852a3082}
+      \strng{authorbibnamehash}{e9661d9a0ea40623e7abe691852a3082}
+      \strng{authornamehash}{e9661d9a0ea40623e7abe691852a3082}
+      \strng{authorfullhash}{e9661d9a0ea40623e7abe691852a3082}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Electronic Security and Digital Forensics}
+      \field{number}{4}
+      \field{title}{A comparative forensic analysis of privacy enhanced web browsers and private browsing modes of common web browsers}
+      \field{volume}{10}
+      \field{year}{2018}
+      \field{pages}{356\bibrangedash 371}
+      \range{pages}{16}
+    \endentry
+    \entry{Hariharan.2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=01cc6f7ad7752b9254fae098e913be70}{%
+           family={Hariharan},
+           familyi={H\bibinitperiod},
+           given={Meenu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d8d342cb4e8d7f35135842ec86508311}{%
+           family={Thakar},
+           familyi={T\bibinitperiod},
+           given={Akash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6db216779decf05409b2379b42f7e28e}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Parvesh},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3190458b4b98095c624204520f2e9fe2}
+      \strng{fullhash}{3190458b4b98095c624204520f2e9fe2}
+      \strng{bibnamehash}{3190458b4b98095c624204520f2e9fe2}
+      \strng{authorbibnamehash}{3190458b4b98095c624204520f2e9fe2}
+      \strng{authornamehash}{3190458b4b98095c624204520f2e9fe2}
+      \strng{authorfullhash}{3190458b4b98095c624204520f2e9fe2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 International Conference on Computing, Communication, Security and Intelligent Systems (IC3SIS)}
+      \field{title}{Forensic Analysis of Private Mode Browsing Artifacts in Portable Web Browsers Using Memory Forensics}
+      \field{year}{2022}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+    \endentry
+    \entry{Hedberg.2013}{report}{}
+      \name{author}{1}{}{%
+        {{hash=dc5947d36739fb5dc2c00b999bab3f3b}{%
+           family={Hedberg},
+           familyi={H\bibinitperiod},
+           given={Ashley},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Technical Report, Tufts University, MA, USA}%
+      }
+      \strng{namehash}{dc5947d36739fb5dc2c00b999bab3f3b}
+      \strng{fullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
+      \strng{bibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
+      \strng{authorbibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
+      \strng{authornamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
+      \strng{authorfullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The privacy of private browsing}
+      \field{type}{techreport}
+      \field{year}{2013}
+    \endentry
+    \entry{Horsman.2019}{article}{}
+      \name{author}{10}{}{%
+        {{hash=0a7ecb8323f6a3c2ca69ac8614e172a3}{%
+           family={Horsman},
+           familyi={H\bibinitperiod},
+           given={Graeme},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f27ef8d65f2e0d44c56d416952d538c4}{%
+           family={Findlay},
+           familyi={F\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c76446249f452bd19f61890800b18a39}{%
+           family={Edwick},
+           familyi={E\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d9f1c685f8794ace1ae6cca2b43d2e26}{%
+           family={Asquith},
+           familyi={A\bibinitperiod},
+           given={Alisha},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5300dede4735549426bf9a6e69f653fe}{%
+           family={Swannell},
+           familyi={S\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b5121ac9b422668baddd46e4f0a42291}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Dean},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1951003ee793260aca7f56711d5b64a4}{%
+           family={Grieves},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b22d9e706e5b4bc84cbfa4e827529cc9}{%
+           family={Guthrie},
+           familyi={G\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=821a1999d250aa94c14e7ed758d5a17b}{%
+           family={Stobbs},
+           familyi={S\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f719ef8a5b4874bcec81c9873e1f4634}{%
+           family={McKain},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{3b72546ff6d9409a3ac5f9b4bccce279}
+      \strng{fullhash}{68b7eedf5e08cb61d70e64818e829893}
+      \strng{bibnamehash}{3b72546ff6d9409a3ac5f9b4bccce279}
+      \strng{authorbibnamehash}{3b72546ff6d9409a3ac5f9b4bccce279}
+      \strng{authornamehash}{3b72546ff6d9409a3ac5f9b4bccce279}
+      \strng{authorfullhash}{68b7eedf5e08cb61d70e64818e829893}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forensic Science International: Reports}
+      \field{title}{A forensic examination of web browser privacy-modes}
+      \field{volume}{1}
+      \field{year}{2019}
+      \field{pages}{100036}
+      \range{pages}{1}
+    \endentry
+    \entry{Izzati.2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0e2367641a223159d7c2edf3dcd4e08f}{%
+           family={Izzati},
+           familyi={I\bibinitperiod},
+           given={Aina},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9afb5da3bb4cc380cfb98ecfac675dfd}{%
+           family={Ab\bibnamedelima Rahman},
+           familyi={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Nurul\bibnamedelima Hidayah},
+           giveni={N\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{235c5a52e4a052c782b2f2749688453f}
+      \strng{fullhash}{235c5a52e4a052c782b2f2749688453f}
+      \strng{bibnamehash}{235c5a52e4a052c782b2f2749688453f}
+      \strng{authorbibnamehash}{235c5a52e4a052c782b2f2749688453f}
+      \strng{authornamehash}{235c5a52e4a052c782b2f2749688453f}
+      \strng{authorfullhash}{235c5a52e4a052c782b2f2749688453f}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Information Technology And Computer Science}
+      \field{number}{2}
+      \field{title}{A Comparative Analysis of Residual Data Between Private Browsing and Normal Browsing Using Live Memory Acquisition}
+      \field{volume}{3}
+      \field{year}{2022}
+      \field{pages}{68\bibrangedash 83}
+      \range{pages}{16}
+    \endentry
+    \entry{Mahlous.2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=813278c2f12e84f66c305ad4c118bc79}{%
+           family={Mahlous},
+           familyi={M\bibinitperiod},
+           given={Ahmed\bibnamedelima Redha},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=913cb9205280f72ac07669f2f9da0ab2}{%
+           family={Mahlous},
+           familyi={M\bibinitperiod},
+           given={Houssam},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e43aa537863db5975243134f45587e81}
+      \strng{fullhash}{e43aa537863db5975243134f45587e81}
+      \strng{bibnamehash}{e43aa537863db5975243134f45587e81}
+      \strng{authorbibnamehash}{e43aa537863db5975243134f45587e81}
+      \strng{authornamehash}{e43aa537863db5975243134f45587e81}
+      \strng{authorfullhash}{e43aa537863db5975243134f45587e81}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Intelligent Engineering Systems}
+      \field{number}{06}
+      \field{title}{Private Browsing Forensic Analysis: A Case Study of Privacy Preservation in the Brave Browser}
+      \field{volume}{13}
+      \field{year}{2020}
+      \field{pages}{294\bibrangedash 306}
+      \range{pages}{13}
+    \endentry
+    \entry{Md.2018}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=d3a47f64c28a247a0310eede1d072b63}{%
+           family={Md\bibnamedelima Saidi},
+           familyi={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Raihana},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7be82bb552361304669bc79317cc2963}{%
+           family={Saleh\bibnamedelima Udin},
+           familyi={S\bibinitperiod\bibinitdelim U\bibinitperiod},
+           given={Fatin\bibnamedelima Farhanah},
+           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=d874a4c0c90a4efd7658d384dd5ce114}{%
+           family={Zolkeplay},
+           familyi={Z\bibinitperiod},
+           given={Anwar\bibnamedelima Farhan},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=54a34310762f804ea2373ef7f3ea78d3}{%
+           family={Arshad},
+           familyi={A\bibinitperiod},
+           given={Mohamad\bibnamedelima Asrol},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=321e4ca2ae6b401bde4eee93c2bf6c69}{%
+           family={Sappar},
+           familyi={S\bibinitperiod},
+           given={Faridah},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{454e8b5bd12c8da3e8105d5e61e5f7a2}
+      \strng{fullhash}{de6ecf490af374d7b8bf9943f1a8236b}
+      \strng{bibnamehash}{454e8b5bd12c8da3e8105d5e61e5f7a2}
+      \strng{authorbibnamehash}{454e8b5bd12c8da3e8105d5e61e5f7a2}
+      \strng{authornamehash}{454e8b5bd12c8da3e8105d5e61e5f7a2}
+      \strng{authorfullhash}{de6ecf490af374d7b8bf9943f1a8236b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Regional Conference on Science, Technology and Social Sciences (RCSTSS 2016) Theoretical and Applied Sciences}
+      \field{title}{Analysis of Private Browsing Activities}
+      \field{year}{2018}
+      \field{pages}{217\bibrangedash 228}
+      \range{pages}{12}
+    \endentry
+    \entry{Montasari.2015}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=a4a11326398bc2775580ae9e6cab75cd}{%
+           family={Montasari},
+           familyi={M\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6ae3200c0c8a2d01bba4976cc652f754}{%
+           family={Peltola},
+           familyi={P\bibinitperiod},
+           given={Pekka},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cdd08940180eea02a1bfb9eb5611bc9c}
+      \strng{fullhash}{cdd08940180eea02a1bfb9eb5611bc9c}
+      \strng{bibnamehash}{cdd08940180eea02a1bfb9eb5611bc9c}
+      \strng{authorbibnamehash}{cdd08940180eea02a1bfb9eb5611bc9c}
+      \strng{authornamehash}{cdd08940180eea02a1bfb9eb5611bc9c}
+      \strng{authorfullhash}{cdd08940180eea02a1bfb9eb5611bc9c}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Global Security, Safety and Sustainability: Tomorrow's Challenges of Cyber Security: 10th International Conference, ICGS3 2015, London, UK, September 15-17, 2015. Proceedings 10}
+      \field{title}{Computer forensic analysis of private browsing modes}
+      \field{year}{2015}
+      \field{pages}{96\bibrangedash 109}
+      \range{pages}{14}
+    \endentry
+    \entry{Muir.2019}{article}{}
+      \name{author}{3}{}{%
+        {{hash=86e5eabaed92bae449c0180d01060308}{%
+           family={Muir},
+           familyi={M\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=202ab264bd4d6b7b7548613f1ab0449e}{%
+           family={Leimich},
+           familyi={L\bibinitperiod},
+           given={Petra},
+           giveni={P\bibinitperiod}}}%
+        {{hash=650d3dbba500aadfaaaf19ff1264b598}{%
+           family={Buchanan},
+           familyi={B\bibinitperiod},
+           given={William\bibnamedelima J},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e8f0a2172d33d645abae75985d234a92}
+      \strng{fullhash}{e8f0a2172d33d645abae75985d234a92}
+      \strng{bibnamehash}{e8f0a2172d33d645abae75985d234a92}
+      \strng{authorbibnamehash}{e8f0a2172d33d645abae75985d234a92}
+      \strng{authornamehash}{e8f0a2172d33d645abae75985d234a92}
+      \strng{authorfullhash}{e8f0a2172d33d645abae75985d234a92}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Digital Investigation}
+      \field{title}{A forensic audit of the tor browser bundle}
+      \field{volume}{29}
+      \field{year}{2019}
+      \field{pages}{118\bibrangedash 128}
+      \range{pages}{11}
+    \endentry
+    \entry{Nelson.2020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f9cf93b60699365ed68c60f8875a1ea7}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=67c35e3bda40fb8ebb3c25d1e260d216}{%
+           family={Shukla},
+           familyi={S\bibinitperiod},
+           given={Atul},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9806584db113f694a5eafce6a9057815}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Cory},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d230dbf90df5688ea8c0bac62b33e847}
+      \strng{fullhash}{d230dbf90df5688ea8c0bac62b33e847}
+      \strng{bibnamehash}{d230dbf90df5688ea8c0bac62b33e847}
+      \strng{authorbibnamehash}{d230dbf90df5688ea8c0bac62b33e847}
+      \strng{authornamehash}{d230dbf90df5688ea8c0bac62b33e847}
+      \strng{authorfullhash}{d230dbf90df5688ea8c0bac62b33e847}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Digital Forensic Education: An Experiential Learning Approach}
+      \field{title}{Web browser forensics in google chrome, mozilla firefox, and the tor browser bundle}
+      \field{year}{2020}
+      \field{pages}{219\bibrangedash 241}
+      \range{pages}{23}
+    \endentry
+    \entry{Ohana.2013}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=644d5cb30bd4d92ad4eb68302e085b8a}{%
+           family={Ohana},
+           familyi={O\bibinitperiod},
+           given={Donny\bibnamedelima Jacob},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e3832b88d767b30ea25fedd1a305189c}{%
+           family={Shashidhar},
+           familyi={S\bibinitperiod},
+           given={Narasimha},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{fullhash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{bibnamehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{authorbibnamehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{authornamehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{authorfullhash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE Security and Privacy Workshops}
+      \field{title}{Do private and portable web browsers leave incriminating evidence? a forensic analysis of residual artifacts from private and portable web browsing sessions}
+      \field{year}{2013}
+      \field{pages}{135\bibrangedash 142}
+      \range{pages}{8}
+    \endentry
+    \entry{Rochmadi.2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f4e201a4835d189672eebf8d32cc3b52}{%
+           family={Rochmadi},
+           familyi={R\bibinitperiod},
+           given={Tri},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d9f5e6f2290b643798c30bfee8c39ccb}{%
+           family={Riadi},
+           familyi={R\bibinitperiod},
+           given={Imam},
+           giveni={I\bibinitperiod}}}%
+        {{hash=f22f420e9ca6788c9be97932badaa6cf}{%
+           family={Prayudi},
+           familyi={P\bibinitperiod},
+           given={Yudi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{636dd37db84c0f4ae527edaf42747b7f}
+      \strng{fullhash}{636dd37db84c0f4ae527edaf42747b7f}
+      \strng{bibnamehash}{636dd37db84c0f4ae527edaf42747b7f}
+      \strng{authorbibnamehash}{636dd37db84c0f4ae527edaf42747b7f}
+      \strng{authornamehash}{636dd37db84c0f4ae527edaf42747b7f}
+      \strng{authorfullhash}{636dd37db84c0f4ae527edaf42747b7f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Int. J. Comput. Appl}
+      \field{number}{8}
+      \field{title}{Live forensics for anti-forensics analysis on private portable web browser}
+      \field{volume}{164}
+      \field{year}{2017}
+      \field{pages}{31\bibrangedash 37}
+      \range{pages}{7}
+    \endentry
+    \entry{Said.2011}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=fa562f317d429e7e87f8f75b94d797be}{%
+           family={Said},
+           familyi={S\bibinitperiod},
+           given={Huwida},
+           giveni={H\bibinitperiod}}}%
+        {{hash=286fd94dac4257462e6b0cea6b7851d9}{%
+           family={Al\bibnamedelima Mutawa},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Noora},
+           giveni={N\bibinitperiod}}}%
+        {{hash=794fa81e21c9ccc8ca7b3806f0a32405}{%
+           family={Al\bibnamedelima Awadhi},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Ibtesam},
+           giveni={I\bibinitperiod}}}%
+        {{hash=02b2ef6e7fc7e647267297eef79817ea}{%
+           family={Guimaraes},
+           familyi={G\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{09ff18a55f33363b06686aa3a5440f5f}
+      \strng{fullhash}{eaad361fa1fd9bcb1ad36213c7d90432}
+      \strng{bibnamehash}{09ff18a55f33363b06686aa3a5440f5f}
+      \strng{authorbibnamehash}{09ff18a55f33363b06686aa3a5440f5f}
+      \strng{authornamehash}{09ff18a55f33363b06686aa3a5440f5f}
+      \strng{authorfullhash}{eaad361fa1fd9bcb1ad36213c7d90432}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 International Conference on Innovations in Information Technology}
+      \field{title}{Forensic analysis of private browsing artifacts}
+      \field{year}{2011}
+      \field{pages}{197\bibrangedash 202}
+      \range{pages}{6}
+    \endentry
+    \entry{Sajan.2021}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=432b69a6c461cfb04538767198c519ed}{%
+           family={Sajan},
+           familyi={S\bibinitperiod},
+           given={Priya\bibnamedelima P},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9fa4756e213c8ea35e397ccab984598}
+      \strng{fullhash}{a9fa4756e213c8ea35e397ccab984598}
+      \strng{bibnamehash}{a9fa4756e213c8ea35e397ccab984598}
+      \strng{authorbibnamehash}{a9fa4756e213c8ea35e397ccab984598}
+      \strng{authornamehash}{a9fa4756e213c8ea35e397ccab984598}
+      \strng{authorfullhash}{a9fa4756e213c8ea35e397ccab984598}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Turkish Journal of Computer and Mathematics Education (TURCOMAT)}
+      \field{number}{11}
+      \field{title}{Tor Browser Forensics}
+      \field{volume}{12}
+      \field{year}{2021}
+      \field{pages}{5599\bibrangedash 5608}
+      \range{pages}{10}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,64 @@
+\chapter{Methodik}
+
+Warum Methodik? 
+	> \cite{Izzati.2022}
+		•	Die Verfahren für die digitale Forensik für Browser-Forensik müssen angemessen befolgt werden, um dem Ermittler bei der Durchführung der Untersuchung zu helfen. Die Verfahren unterscheiden sich je nachdem, wie die Untersuchung durchgeführt werden soll.
+	> \cite{Horsman.2019}
+		•	Das Fehlen von Klarheit hat einen signifikanten Einfluss auf forensische Untersuchungen von Strafverfolgungsbehörden und deren Ansätze
+		•	Eine Kette von Beweisführung muss dokumentiert werden, um die Integrität und Zuverlässigkeit der Daten sicherzustellen.
+		•	Ein formaler forensischer Bericht wird dann vor Gericht präsentiert.
+	
+
+
+
+Phasen nach \cite{Izzati.2022}:
+	•	Es gibt verschiedene Modelle für digitale Forensik, die sich in ihren Phasen unterscheiden können.
+	•	Fünf Phasen sind besonders wichtig: Identifikation und Sammlung, Bewahrung, Erwerb, Analyse und Prüfung sowie Dokumentation.
+	•	In der Identifikations- und Sammelphase werden alle potenziellen Beweismittel identifiziert, gekennzeichnet und gesammelt, um sie in der nächsten Phase zu verwenden.
+	•	Beweismittel können z.B. Log-Dateien, temporäre Dateien, Netzwerkverbindungen, Browserverlauf und Cache sein.
+	> Phasen:
+		Preparation Phase
+		o	Versuchsplanung + Konfiguration der HW/SW + Durchführen des Experiments Acquisition Stage
+		o	Abbildung von der Festplatte (Static Forensics) und des RAMs (Live Forensics) Analysephase
+		o	Bilder der Speicherabbilder mit einem forensischen Tool untersuchen	Validierungsphase
+		o	gefundenen Artefakte verglichen und dokumentiert
+
+
+
+\section{Preparation Stage}
+\Blindtext[1][3]
+
+\subsection{Vorbereitung der VMs}
+
+\subsubsection*{Browserauswahl}
+
+> Browserstudie \cite{Izzati.2022}
+	- Die Herstellerangaben unterschiedlicher Browser bzgl. Privatheit untersucht
+	- Firefox 58.02: No Browsing History stored, No Cookies stored, No login Info stored, Tracking Protection Enabled: Disconnect, Download Files not Hidden
+	- Chrome 63.0.3239: No Browsing History stored, No Cookies stored, No login Info stored, Tracking Protection Enabled: No, Download Files not Hidden
+
+> design aim of Tor: \cite{Muir.2019}
+	- preventing from writing to disk (Perry et al., 2018) 
+	- enabling secure deletion of the browser (Sandvik, 2013) (hier nicht relevant)
+
+
+\subsection{Vorbereitung des Analyserechners}
+
+\subsubsection*{Volatility}
+Plugins-Liste: \cite{Dayalamurthy.2013}
+
+\subsection{Browsing Szenario}
+
+
+\section{Acquisition Stage}
+- Warum Process Monitor während Browsing?
+	o Während Browsing Szenario Filechanges untersuchen: DaemonFS set to monitor all activity within local hard drive\cite{Ohana.2013}
+	
+- Registry: \cite{Rochmadi.2017}
+	•	Das Windows-Registrierungsverzeichnis enthält viele Informationen zur Nutzung des Computers, Benutzerkonfigurationen, Anwendungen und Hardwaregeräte
+	•	Informationen im Registrierungsverzeichnis werden nach Ausführungsreihenfolge, Suchschlüsselwörtern, zuletzt aufgerufenen Ordnern, Anwendungsprotokollen und anderen Kategorien sortiert.
+	
+	
+
+\section{Analysis und Validation Stage}
+\Blindtext[1][4]

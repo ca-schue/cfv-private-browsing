@@ -1,0 +1,43 @@
+\chapter{Diskussion}
+
+> Artefakte im DNS Cache: \cite{Satvat.2014}
+	●	DNS-Caching ist eine Bedrohung für private Browsing
+	●	Diese Schwachstelle entsteht, weil das Betriebssystem DNS-Anfragen des Browsers im Cache speichert, unabhängig davon, ob der Browser im privaten Modus ist oder nicht
+	●	Mehrere Jahre nach der Meldung dieser Schwachstelle besteht sie immer noch in allen Browsern fort
+	●	Es wurden einige Erweiterungen von Drittanbietern entwickelt, um dieses Problem zu beheben, aber keine davon wurde von den Browserherstellern übernommen.
+	
+
+
+> Viele RAM-Artefakte
+	- Firefox \cite{Muir.2019}
+		●	Darcie et al. (2014) fanden Beweise für das Web-Browsing in Form von JPEG- und HTML-Dateien in Live-Forensik, aber eine statische Forensik war erfolglos.
+		●	Eine vorherige Live-Forensik-Analyse des Firefox-Browsers zeigte, dass Artefakte aus einer privaten Browsing-Sitzung aus dem Speicher wiederhergestellt werden konnten. (Findlay and Leimich, 2014). 
+		
+
+> IE hinterlässt viele Spuren im Gegensatz zu Ergebnissen: \cite{Md.2018}
+	o	hidden folders are usually stored at C/Users/User/AppData
+	o	evidence searches are conducted extensively in the C:\ partition
+	o	bookmarks remain and can be viewed
+	o	downloads remain in the downloads folder until the user manually deletes them
+	o	CacheView trace entire URL and browsing histories including the temporary files
+	CacheView enables to find the image’s URL and from specific website
+	
+> Urteil über die Privatheit von Tor nach \cite{Muir.2019}
+	The design aim of preventing Tor from writing to disk (Perry et al., 2018) is not achieved in this version.
+		•	Configuration files, downloaded files, and browserrelated data are recoverable from the file system.
+		•	Significant data-leakage from the browsing session occurred: HTTP header information, titles of web pages and an instance of a URL were found in registry files, system files, and unallocated space.
+		•	The data-leakage contained the German word for ’search’ in reference to a Google search. This hints at the locale of the Tor server used to exit the network (exit relay).
+	The Tor Project’s design aim of enabling secure deletion of the browser (Sandvik, 2013) is not achieved in this version.
+		•	References to: the installation directory, Firefox SQLite files, bridging IPs/ports, default bookmarks, Tor-related DLLs and Tor product information were all recovered after the browser was deleted.
+		•	In a scenario where the operating system paged memory, an instance
+
+Weiterführende Arbeiten:
+> Cross-mode interference \cite{Hedberg.2013}:
+	o	the Chrome://memory page displays all the opened tabs in the browser regardless if they are in the usual or private mode -> Nicht mehr aktuell -> Stattdessen: Chrome Task-manager (Ctrl + Esc), Funktioniert auch bei Firefox
+
+
+
+> Für wen wird Browser entwickelt
+> Warum und für wen wird Private Browsing analysiert?
+> Ist das Auffinden privater Browsing Artefakte Schuld von Browser Entwicklern? (Oder Schuld des Betriebssystem, wie in (TODO!) erwähnt)
+

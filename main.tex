@@ -3,8 +3,7 @@
 paper=a4,
 DIV=13,				% Seitenlayout (Satzspiegel)
 parskip=half,			% Abstand zwischen Absätzen
-twoside,				% Doppelseitig
-openright,			% neues Kapitel rechts
+oneside,				% Doppelseitig
 %  cleardoublepage,
 bibtotoc,				% Literaturverzeichis in Inhaltsverzeichnis
 headsepline,			% Kopfzeilentrennlinie
@@ -32,14 +31,16 @@ headings,
 \usepackage{microtype}	% harmonische Typenverteilung
 
 % Literatur einbinden
-\usepackage{csquotes}	% Steuerung der Anführungszeichen
 \usepackage[
-backend=biber,			% Sortier-Compiler
-style=numeric-comp,	% Zitationsstil
-block=ragged,
+backend=biber,
+style=numeric-comp,
+block=ragged
 ]{biblatex}
 
-\addbibresource{ref/ref_liste.bib}
+\addbibresource{ref/citavi.bib}
+\addbibresource{ref/manual.bib}
+\addbibresource{ref/carl.bib}
+\addbibresource{ref/christoph.bib}
 
 % Mathemodus
 \usepackage{amsmath,amssymb}
@@ -58,8 +59,7 @@ headsepline,	% Kopfzeilen-Sepparationslinie
 automark,		% Lebende Kolumnentitel
 ]
 {scrlayer-scrpage}
-\pagestyle{scrheadings}		
-\ofoot*{\pagemark}			
+\pagestyle{scrheadings}	
 \ohead{\headmark}
 
 
@@ -99,11 +99,24 @@ automark,		% Lebende Kolumnentitel
 	
 	
 	% Kapitel einbinden
-	\include{kapitel/kapitel_01}
+	\include{kapitel/01_Einführung.tex}
 	
-	\include{kapitel/kapitel_02} 
+	\include{kapitel/02_Theoretischer Hintergrund.tex}
+	 
+	\include{kapitel/03_Ziel der Arbeit.tex}
+	
+	\include{kapitel/04_Methodik.tex}
+	
+	\include{kapitel/05_Ergebnisse.tex}
+	
+	\include{kapitel/06_Vergleich der Browser.tex}
+	
+	\include{kapitel/07_Diskussion.tex}
+	
+	\include{kapitel/08_Fazit.tex}
 	
 	% Literatur anzeigen
+	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 	\printbibliography
 	
 \end{document}

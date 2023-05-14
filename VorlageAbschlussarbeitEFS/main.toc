@@ -1,9 +1,0 @@
-\babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\numberline {1}Einleitung}{1}{}%
-\contentsline {section}{\numberline {1.1}Motivation}{1}{}%
-\contentsline {section}{\numberline {1.2}Problemstellung}{1}{}%
-\contentsline {section}{\numberline {1.3}Forschungsfrage}{2}{}%
-\contentsline {section}{\numberline {1.4}Vorgehen/Forschungmethode}{3}{}%
-\contentsline {chapter}{\numberline {2}Stand der Technik}{5}{}%
-\contentsline {chapter}{\nonumberline Literatur}{7}{}%
-\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

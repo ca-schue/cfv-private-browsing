@@ -1,0 +1,48 @@
+\chapter{Ziel der Arbeit}
+
+Forensiker müssen Funktionsweise von Private Browsing kennen \cite{Horsman.2019}
+	•	Die Kenntnis der Erfolgsrate der PB-Technologie unterstützt die Strafverfolgungsbehörden bei digitalen Untersuchungen von Internetinhalten
+	•	Internetbeweise sind oft entscheidend für Untersuchungen
+	•	Bestimmung des Umfangs und des Erfolgs von PB-Technologie unterstützt die Strafverfolgungsbehörden bei digitalen Untersuchungen von Internetinhalten
+	•	Durch die Bestimmung des Umfangs und des Erfolgs von PB-Technologie können sie unnötige Datenverarbeitung und Zeitverschwendung vermeiden, die Untersuchungseffizienz verbessern und sicherstellen, dass keine wichtigen Inhalte übersehen werden. Daher können diese Punkte dazu beitragen, die Effektivität und Effizienz von Untersuchungen zu verbessern, insbesondere in Fällen, in denen Vor-Ort-Triage stattfindet oder in denen eine SHPO angeordnet wurde. Drei Punkte wichtig:
+	•	Wenn der Verdacht besteht, dass PB stattgefunden hat, hilft es zu wissen, wie erfolgreich die PB-Funktion eines bestimmten Browsers ist, um unnötige Datenverarbeitung (und Zeitverschwendung) zu vermeiden, wenn tatsächlich keine Browserdaten auf einem Gerät vorhanden sind.
+	•	Die Kenntnis darüber, wo PB möglicherweise Informationen zu Browsing-Sitzungen preisgibt, verbessert die Effizienz von Untersuchungen und verhindert, dass wichtige Inhalte übersehen werden. Dies ist besonders wichtig bei Vor-Ort-Triage, wie sie in einigen Fällen mit einer SHPO angeordnet wird.
+	
+
+
+Ziel der Arbeit:
+================
+-	Welche Browsing Artefakte werden beim private Browsing auf einem Rechner hinterlassen, welche zeigen, dass eine Browsing Aktion vom Browser durchgeführt wurde?
+-	Das heißt: 
+	o	Es wird nach Browsing Artefakten gesucht, welche die Zuordnung „Durchgeführte Browsing Aktion“ <-> Browser ermöglichen
+	o	Vor, während und nach private Browsing Session nach Browsing Artefakten suchen, welche dem Browser zugeordnet werden können
+-	Negativbeispiel: Suche in Hexdump nach im Browser gesuchtem String nicht als Beweis ausreichend, dass private Browsing Artefakte gefunden wurde.
+- Kategorisierung nach \cite{Ohana.2013}: 
+	> Browsing History
+	> Usernames/Email Accounts
+	> Images
+
+=> Thematisiert in \cite{Ohana.2013}:
+	o	It appeared that the overall best way to recover residual data was to obtain the evidence from RAM or working memory,
+	o	Kritik: Oft nur String Match in RAM-Hex als Nachweis für PB genannt -> ausreichend? (Evtl. Gegenexperiment mit Editor)
+
+
+Warum muss String-Artefakt Browser zugeordnet werden können? \cite{Izzati.2022}
+	•	Die Artefakte, die von den Browsing-Aktivitäten eines Kriminellen zurückgelassen wurden, können mit forensischen Tools extrahiert werden, um die Untersuchung des Ermittlers zu unterstützen.
+	•	Die erlangten Beweise müssen vor Gericht zugelassen werden, insbesondere digitale Beweise, da sie ohne ordnungsgemäße Verfahren leicht manipuliert werden können.
+	•	Es gibt bestimmte Merkmale von digitalen Beweisen, die Gerichte nach folgenden Kriterien akzeptieren:
+	1.	Durchsuchungsbefehle - Beweise, die ohne Genehmigung erlangt wurden, können vor Gericht nicht anerkannt werden.
+	2.	Berichte - Alle Prozesse, Werkzeuge, Methoden, Techniken, spezifischen Zeit- und Datumsangaben sowie die Beweiskette müssen formell dokumentiert werden, um die Authentizität der digitalen Beweise vor Gericht zu demonstrieren und zu unterstützen.
+	3.	Beweisauthentifizierung - Der ursprünglich erhaltene Beweis sollte durch Vergleich der Hash-Werte mit dem Kopiebeweis übereinstimmen. Der erworbene Beweis muss unverändert bleiben, um die Gerichte mit genauen Informationen zu überzeugen. Gerichte akzeptieren Kopien von Beweisen, wenn der ursprüngliche Beweis verloren gegangen oder zerstört wurde, die Kopie jedoch noch intakt ist.
+	
+
+Keine Ziele der Arbeit:
+=======================
+- 	Private Browsing "Indicators": Entering/Leaving Private Browsing \cite{Ohana.2013}
+-	Zeigen, dass ein Browser gestartet/geschlossen wurde
+-	Zeigen, dass ein Browser im privaten Modus gestartet wurde
+-	Zeigen, wann ein Browser gestartet/geschlossen wurde
+
+
+
+
