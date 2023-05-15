@@ -1,10 +1,21 @@
 \chapter{Ergebnisse}
 
-Einleitend werden Struktur, Motivation und die abgeleiteten Forschungsfragen diskutiert.
+= LÄNGSTES/AUSFÜHRLICHSTES KAPITEL!!!
+
+Für jedes Unterkapitel gilt: 
+> Erst allgemeines Vorgehen/Methodik definieren
+> Danach spezifisch für jeden Browser: Unterschied zwischen Snapshot-Zeitpunkten, insb. zwischen Live- und Dead-Forensik
+
 
 \section{Common Locations}
 
 (= i.d.R. Installationsverzeichnisse der Browser) = „Bekannte Speicherorte“, z.B. bei Firefox   
+
+- TODO: Quelle
+> Welche Dateien in Common Locations mit Process Monitor identifiziert
+> Wie haben sich Dateien verändert in verschiedenen Snapshots?
+> Was in Dateien gefunden?
+
 
 -	Ziel: Befinden sich unter den Dateien, die ein Browser direkt auf die Festplatte schreibt private Browsing Artefakte?
 -	Dateien sind Browserspezifisch, befinden sich in bekannten Pfaden. Beispiele: Datenbank-Dateien, Caches, temporäre Dateien.
@@ -94,12 +105,11 @@ o	Sonstige Dateien: ???
 \subsection*{Quantitative Zusammenfassung}
 
 
-
-
-
 \section{Uncommon Locations}
 
-= „Unbekannte Speicherorte“, nur durch forensische Analyse z.B. Keywordsuche in Autopsy entdeckt
+= „Unbekannte Speicherorte“, nur durch tiefgehende forensische Analyse entdeckt
+
+- TODO: Quelle
 o	Registry
 o	Pagefile.sys
 o	Unallocated Disk Space
@@ -113,6 +123,7 @@ o	Favicons
 o	etilqs
 o	Manifest.json
 o	slack space
+
 - Beispiele in der Literatur:
 	> “\$MFT”, “\$LogFile”, “Favicons”, “etilqs”, “Manifest.json”, “pagefile.sys.”, “unallocated space” and “slack space” \cite{Montasari.2015}
 
@@ -128,9 +139,15 @@ o	slack space
 			o \cite{Montasari.2015}	Firefox: URLs und Keywords als Strings in WinHex gesucht und gefunden 
 			o \cite{Montasari.2015}	Chrome: URLs und Keywords als Strings in WinHex gesucht und gefunden
 			
-			
 	o	Analyse der Registry
+		>	Welche Registry Änderungen mit Regshot identifiziert?
+		>	Änderungen in NTUSER.DAT identifizierbar?
+		>	Änderungen in RAM (hivdump) identifizierbar?
+	
 	o	Untersuchung von Netzwerkartefakten
+		>	Volatility: dnslist Plugin
+		>	Evtl. Snapshot unfreezen, danach DNSlist in cmd
+		
 
 
 \subsection*{Durchführung der Analyse}
@@ -162,8 +179,6 @@ o	In Literatur oft verwendet: Stichwortsuchen:
 		exactly, the difference of these two sets indicating images of interest
 		
 		
-			
-		
 o	Analyse der Registry:
 	>	NTUSER.DAT (inkl. Logs)
  	>	Registry-Hives in RAM
@@ -172,9 +187,8 @@ o	(Ermittlung von Netzwerkartefakten: DNS-Cache, Offene Sockets etc.)
 
 \subsection{Firefox}
 
+
 \subsubsection*{Qualitative Analyse}
-
-
 
 o	Autopsy Keywortsuche: 
 	>	In alles Snapshots ergebnislos (keine Keyword-Hits

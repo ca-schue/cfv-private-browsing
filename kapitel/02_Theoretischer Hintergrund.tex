@@ -108,7 +108,68 @@ Stakeholder Private Browsing:
 
 
 \section{Angreifermodell}
-\Blindtext[1][4]
+
+Definition Local Attacker nach \cite{Aggarwal.2010}:
+	-	Z.B. Forensischer Prüfer
+	-	hat physischen Zugriff auf den Computer des Benutzers 
+	-	versucht, auf dessen privaten Browserverlauf zuzugreifen. 
+	-	beispielsweise ein Familienmitglied oder ein Freund sein, der den Computer des Benutzers nutzt, um auf dessen Browserverlauf zuzugreifen. 
+	-	kann darauf installierte Programme verwenden, um Informationen zu sammeln.
+	-	hat keinen Zugriff auf die Maschine des Benutzers, bevor der Benutzer das private Surfen beendet hat. Ohne diese Einschränkung ist Sicherheit gegen einen lokalen Angreifer unmöglich. (z.B: Keylogger installieren, Benutzeraktionen aufzeichnen)
+	-	Durch die Beschränkung des lokalen Angreifers auf "forensische Untersuchungen nach dem Ereignis" kann man hoffen, Sicherheit zu gewährleisten, indem der Browser persistenten Zustandsänderungen während einer privaten Surfsitzung ausreichend löscht.
+	-	Der Angreifer wartet, bis der Benutzer den privaten Browsing-Modus verlässt, und erhält dann die vollständige Kontrolle über die Maschine. Dies bedeutet, dass der Angreifer auf forensische Daten angewiesen ist.
+	-	Während der aktiven Phase kann der Angreifer nicht mit Netzwerkelementen kommunizieren, die Informationen über die Aktivitäten des Benutzers im privaten Modus enthalten. Dies bedeutet, dass die Implementierung von Browser-seitigen Datenschutzmodi untersucht wird, nicht die serverseitigen Datenschutzmodi.
+	
+	-	Das Ziel des Angreifers besteht darin, für eine bestimmte Menge von HTTP-Anfragen, die er wählt, festzustellen, ob der Browser eine dieser Anfragen im privaten Browsing-Modus ausgeführt hat oder nicht. Wenn der lokale Angreifer dieses Ziel nicht erreichen kann, gilt die Implementierung des privaten Browsings als sicher.
+	-> Local Attacker weiß, wonach er sucht!
+	
+	- Es wird darauf hingewiesen, dass die Definition impliziert, dass der Angreifer nicht feststellen kann, welche Websites der Benutzer besucht hat oder was der Benutzer auf einer bestimmten Website getan hat. Darüber hinaus wird auf die Eigenschaften des privaten Browsings nicht formal eingegangen, wenn der Benutzer den privaten Browsing-Modus nie verlässt.
+
+Problem: Local Attacker muss überarbeitet werden: \cite{Montasari.2015}
+	•	Es wurde festgestellt, dass das Konzept des lokalen Angreifers nicht ausreichend untersucht wurde und dass neue Experimente durchgeführt werden müssen, um ein besseres Verständnis für das Phänomen zu erlangen und herauszufinden, wie sich diese Funktion auf digitale forensische Untersuchungen auswirken könnte.
+
+
+Definition Web Attacker nach \cite{Aggarwal.2010}
+	-	Z.B. ISP
+	-	versucht Online-Aktivitäten des Benutzers im privaten Modus zu verfolgen und zu identifizieren, um diese mit seinen Aktivitäten im öffentlichen Modus in Verbindung zu bringen. 
+	-	durch den Einsatz von Tracking-Tools oder das Sammeln von Informationen über die IP-Adresse des Benutzers oder andere Identifikationsmerkmale erfolgen. 
+	•	Kontrolliert die von Benutzer besuchten Websites und kann Informationen über Benutzeraktivitäten sammeln (-> z.B. ISP), aber nicht über den Computer des Benutzers.
+	•	Webseiten können auch verschiedene Browser-Funktionen nutzen, um Browser zu identifizieren und sie über Privatsphäre-Grenzen hinweg zu verfolgen.
+	•	Die Electronic Frontier Foundation hat eine Website namens Panopticlick (-> TODO: In Demo zeigen?) erstellt, die zeigt, dass die meisten Browser eindeutig identifiziert werden können, was die Ziele (1) und (2) des privaten Surfens in allen Browsern unterbricht.
+	
+	
+Anti-Forensiche Grundsätze bei Browserentwicklung, um sich gegen Web-Attacker zu schützen nach \cite{Aggarwal.2010}
+	•	Browser haben drei Ziele, um die Privatsphäre der Benutzer zu schützen.
+		o	Ziel 1: Ein Benutzer, der im privaten Modus surft, soll nicht mit demselben Benutzer verknüpft werden können, der im öffentlichen Modus surft.
+		o	Ziel 2: Ein Benutzer in einer privaten Sitzung soll nicht mit demselben Benutzer in einer anderen privaten Sitzung verknüpft werden können.
+		o	Ziel 3: Eine Website soll nicht erkennen können, ob der Browser im privaten Modus ist.
+	•	Ziele (1) und (2) sind schwierig zu erreichen, da die IP-Adresse des Browsers von Webseiten genutzt werden kann, um Benutzer über private Browsing-Grenzen hinweg zu verfolgen.
+	•	Das Torbutton Firefox-Erweiterung (ein Tor-Client) macht große Anstrengungen, um Ziele (1) und (2) zu erreichen, indem es die IP-Adresse des Clients über das Tor-Netzwerk versteckt und Schritte unternimmt, um das Browser-Fingerprinting zu verhindern.
+	
+
+Beispiel: Web Attacker Angriffe:
+	> IP-Angriffe \cite{Perdices.2023}
+		•	Obwohl Nutzer Verschlüsselung oder VPNs nutzen, ist ihre Privatsphäre oft ungeschützt, da mehrere Domains gleichzeitig besucht werden oder IP-Adressen von Cloud-Providern geteilt werden.
+		•	Eine neue Methode zur Identifizierung von Web-Browsing wird vorgestellt, die nur auf den IP-Adressen basiert, mit denen der Nutzer verbunden war, ohne DNS Reverse-Resolution durchzuführen.
+		•	Diese IP-Adresse-Sequenz wird in verschiedene Deep Learning Modelle eingespeist, um die tatsächlich besuchte Website zu identifizieren.
+		•	Untersucht wurden auch andere Faktoren wie Abhängigkeit vom DNS-Server, Genauigkeit bei Top-Domains, Datenverstärkung durch Paket-Sampling-Simulation, Auswirkungen auf Paket-Sampling und Skalierbarkeit der Methode.
+		•	Mit nur 10\% der Pakete konnte die besuchte Website mit einer Genauigkeit und F1-Score von 94\% bis 95\% identifiziert werden.
+	> ISP als „Web attacker“, um Kundenaktivität zu verfolgen \cite{Aggarwal.2010}
+		•	ISP können unsere Ergebnisse nutzen, um den Datenverkehr ihrer Kunden zu identifizieren.
+		•	Dies ermöglicht ISP, Daten für Marketingzwecke zu monetarisieren, sofern sie anonymisiert und mit Zustimmung der Kunden erfolgt.
+		•	ISP müssen jedoch darauf achten, wer Zugriff auf Netzwerkverkehrsdaten hat.
+		•	Das Weitergeben dieser Daten an Dritte kann zu potenziellen Datenschutzverletzungen bei Kunden führen.
+		•	Hauptaufgabe ist eigentlich einfach, aber es können viele Komplikationen auftreten
+		•	Hauptproblem ist das sogenannte "verwickelte Netz"
+		•	Beim Verbinden mit einer Website muss der Webbrowser eine Kaskade von Verbindungen zu anderen Websites öffnen
+		•	Grund dafür sind Bilder, Anzeigen, Banner, JavaScript-Bibliotheken, Social-Media-Links und vieles mehr
+		
+		
+
+
+
+
+
 
 \section{Private Browsing Artefakte}
 
@@ -218,16 +279,16 @@ Live-Forensik: unterschiedliche Definitionen in Literatur
 		Im Gegensatz zur traditionellen (toten) digitalen Forensik wird bei der Live-Forensik versucht, flüchtige Daten aufzubewahren und Gegenmaßnahmen für verschlüsselte Dateien auf einem Live-System zu ergreifen.
 	> \cite{Hassan.2019}: TODO!
 	> \cite{Izzati.2022}
-		●	„Live Forensics“ wird auch als „Live System Acquisition“ bezeichnet.
-		●	Diese Methode wird angewendet, wenn das System in Betrieb ist, um potenzielle Artefakte im flüchtigen Arbeitsspeicher (RAM) zu finden, die als Beweismittel genutzt werden können.
-		●	Viele Spuren von Computer-Sitzungen und Artefakte sind nur im flüchtigen Speicher zu finden und können nicht von externem Speicher aus ausgelesen werden.
-		●	Die Daten können jedoch nicht gesammelt werden, da sie verloren gehen, sobald das System gestoppt oder neu gestartet wird.
-		●	Die RAM-Daten müssen daher mit besonderen Verfahren behandelt werden, um ihre Integrität und Zuverlässigkeit während der Analyse zu gewährleisten.
-		●	„Live Forensics“ ist nützlich, um auch Ereignisse zu untersuchen, die nur während der Nutzung des Systems aufgetreten sind, und um Daten effizient im flüchtigen Arbeitsspeicher zu speichern.	
-		●	Digitale Forensik kann dazu genutzt werden, die Gültigkeit von Beweismitteln bei Gerichtsverfahren zu untersuchen.
-		●	Nach der Identifikation und Sammlung von potenziellen Beweismitteln wird in den meisten Fällen eine exakte Kopie der Daten erstellt, um sie als Backup zu nutzen und Veränderungen zu vermeiden.
-		●	Es gibt zwei Arten von forensischen Techniken, um Speicherabbilder zu erstellen: „Dead Forensics“ und „Live Forensics“.
-		●	Bei „Live Forensics“ hingegen wird das System im laufenden Betrieb untersucht, was oft schwieriger ist, aber auch wertvolle Informationen liefern kann.
+		•	„Live Forensics“ wird auch als „Live System Acquisition“ bezeichnet.
+		•	Diese Methode wird angewendet, wenn das System in Betrieb ist, um potenzielle Artefakte im flüchtigen Arbeitsspeicher (RAM) zu finden, die als Beweismittel genutzt werden können.
+		•	Viele Spuren von Computer-Sitzungen und Artefakte sind nur im flüchtigen Speicher zu finden und können nicht von externem Speicher aus ausgelesen werden.
+		•	Die Daten können jedoch nicht gesammelt werden, da sie verloren gehen, sobald das System gestoppt oder neu gestartet wird.
+		•	Die RAM-Daten müssen daher mit besonderen Verfahren behandelt werden, um ihre Integrität und Zuverlässigkeit während der Analyse zu gewährleisten.
+		•	„Live Forensics“ ist nützlich, um auch Ereignisse zu untersuchen, die nur während der Nutzung des Systems aufgetreten sind, und um Daten effizient im flüchtigen Arbeitsspeicher zu speichern.	
+		•	Digitale Forensik kann dazu genutzt werden, die Gültigkeit von Beweismitteln bei Gerichtsverfahren zu untersuchen.
+		•	Nach der Identifikation und Sammlung von potenziellen Beweismitteln wird in den meisten Fällen eine exakte Kopie der Daten erstellt, um sie als Backup zu nutzen und Veränderungen zu vermeiden.
+		•	Es gibt zwei Arten von forensischen Techniken, um Speicherabbilder zu erstellen: „Dead Forensics“ und „Live Forensics“.
+		•	Bei „Live Forensics“ hingegen wird das System im laufenden Betrieb untersucht, was oft schwieriger ist, aber auch wertvolle Informationen liefern kann.
 	> \cite{Rochmadi.2017}
 		•	Forensische Untersuchung eines Systems, während es in Betrieb ist
 		•	Daten gehen verloren, wenn das System heruntergefahren oder neu gestartet wird
@@ -241,10 +302,10 @@ Live-Forensik: unterschiedliche Definitionen in Literatur
 
 Beispiele Live-Forensik 
 	> \cite{Satvat.2014}
-		●	Volatiler Speicher (Memory Inspection) kann eine wichtige Informationsquelle für forensische Untersuchungen sein
-		● DNS-Caching ist eine Bedrohung für private Browsing: Diese Schwachstelle entsteht, weil das Betriebssystem DNS-Anfragen des Browsers im Cache speichert, unabhängig davon, ob der Browser im privaten Modus ist oder nicht
+		•	Volatiler Speicher (Memory Inspection) kann eine wichtige Informationsquelle für forensische Untersuchungen sein
+		• DNS-Caching ist eine Bedrohung für private Browsing: Diese Schwachstelle entsteht, weil das Betriebssystem DNS-Anfragen des Browsers im Cache speichert, unabhängig davon, ob der Browser im privaten Modus ist oder nicht
 	> \cite{Mahlous.2020}
-		● Registry Snapshots: Um Veränderungen im System-Registry aufgrund der Browserinstallation zu verfolgen, wurde Regshot verwendet, um vor der Installation einen Snapshot der Registry aufzunehmen.
+		• Registry Snapshots: Um Veränderungen im System-Registry aufgrund der Browserinstallation zu verfolgen, wurde Regshot verwendet, um vor der Installation einen Snapshot der Registry aufzunehmen.
 			- Ein zweiter Snapshot wurde nach der Installation des Browsers aufgenommen und mit dem ersten verglichen.
 			- Regshot generiert einen Bericht über die Ergebnisse, der die neuen Dateien und Ordner zeigt, die dem Registry-Schlüssel hinzugefügt wurden.
 			
@@ -259,8 +320,8 @@ Vorteile Live-Forensik
 		> \cite{Muir.2019}
 			•	Da es wahrscheinlich ist, dass RAM-Aufnahmen Inhalte der Browsing-Session (z.B. durch Caching) aufzeigen, wurde dies in das Projekt aufgenommen, insbesondere da Warren (2017) dies aufgrund von Zeitbeschränkungen nicht tun konnte.
 	> \cite{Muir.2019}
-		●	Live Analyse während der Laufzeit einer Anwendung ist besonders vorteilhaft, um zu verstehen, wie das Betriebssystem und die Anwendung interagieren.
-		●	Live Analyse kann potenziell mehr Informationen zur Browsing-Session liefern, da die Designbemühungen des Tor-Projekts darauf abzielten, Schreibzugriffe auf die Festplatte zu vermeiden.
+		•	Live Analyse während der Laufzeit einer Anwendung ist besonders vorteilhaft, um zu verstehen, wie das Betriebssystem und die Anwendung interagieren.
+		•	Live Analyse kann potenziell mehr Informationen zur Browsing-Session liefern, da die Designbemühungen des Tor-Projekts darauf abzielten, Schreibzugriffe auf die Festplatte zu vermeiden.
 		
 
 Herausforderungen von Live-Forensik = Kontaminieren von Beweismitteln \cite{Gupta.2013}
@@ -269,7 +330,7 @@ Herausforderungen von Live-Forensik = Kontaminieren von Beweismitteln \cite{Gupt
 
 Definition Dead Forensik:
 	> \cite{Izzati.2022}
-		●	Bei „Dead Forensics“ wird der Computer oder das Gerät, das untersucht werden soll, zuerst heruntergefahren, bevor das Speicherabbild erstellt wird.
+		•	Bei „Dead Forensics“ wird der Computer oder das Gerät, das untersucht werden soll, zuerst heruntergefahren, bevor das Speicherabbild erstellt wird.
 	> \cite{Horsman.2019}
 		-	Physische Speichererfassung ist nicht übliche Praxis und in den meisten Fällen nicht verfügbar
 	> \cite{Hassan.2019}: TODO!
@@ -282,9 +343,9 @@ Definition Dead Forensik:
 		-	Ausschalten eines Geräts reduziert Risiko einer Datenänderung (versehentlich oder absichtlich) 
 		-	isoliert es vom Netzwerk, um etwaige Versuche, es ferngesteuert zu löschen, zu verhindern, unter anderem.
 	> \cite{Izzati.2022} -> wiedersprüchlich?
-		●	System wird heruntergefahren, bevor das Speicherabbild erstellt wird.
-		●	Volatile Dateien gehen verloren: versteckte Dateien, ausgetauschte Dateien, Web-Aktivitäten, Artefakte und Log-Dateien 
-		●	Das Ziel ist es, eine genaue Kopie des nichtflüchtigen Speichers zu erstellen, bevor das System heruntergefahren wird, um die Originalität der Beweismittel zu erhalten.
+		•	System wird heruntergefahren, bevor das Speicherabbild erstellt wird.
+		•	Volatile Dateien gehen verloren: versteckte Dateien, ausgetauschte Dateien, Web-Aktivitäten, Artefakte und Log-Dateien 
+		•	Das Ziel ist es, eine genaue Kopie des nichtflüchtigen Speichers zu erstellen, bevor das System heruntergefahren wird, um die Originalität der Beweismittel zu erhalten.
 		
 Beispiele Dead Forensik:
 	> Stichwortsuche in Festplatten-Images nach herunterfahren \cite{Satvat.2014}
@@ -299,17 +360,17 @@ Probleme bei Dead Forensik
 
 
 Wann Live-, wann Dead Forensik? \cite{Izzati.2022}
-	●	Die Wahl der Methode hängt von der Art der Untersuchung und der verfügbaren Zeit ab.
-	●	Das Ziel ist es, eine genaue Kopie des Speichers zu erstellen, um die Integrität der Beweise zu bewahren und das Risiko von Veränderungen zu minimieren.
+	•	Die Wahl der Methode hängt von der Art der Untersuchung und der verfügbaren Zeit ab.
+	•	Das Ziel ist es, eine genaue Kopie des Speichers zu erstellen, um die Integrität der Beweise zu bewahren und das Risiko von Veränderungen zu minimieren.
 	
 	
 Definition: Darknet Forensik: \cite{Rathod.2017}
-	●	Motivation Darknet Forensik:
+	•	Motivation Darknet Forensik:
 		o	Terroristen, Kriminelle, extremistische Gruppen und Hassorganisationen nutzen das Darknet, um Cybercrime zu begehen.
 		o	Die Verwendung von TOR und Bitcoin auf dem Darknet erschwert die Verfolgung von Straftaten durch digitale Forensik-Experten.
 		o	Die vorgeschlagenen forensischen Techniken können digitale Forensik-Experten helfen, mit Cybercrime-Fällen im Zusammenhang mit dem Darknet umzugehen.
-	●	Darknet-Forensik sind in zwei Kategorien unterteilt: 
+	•	Darknet-Forensik sind in zwei Kategorien unterteilt: 
 		1.	TOR-Browser-Forensik:
-		▪	vier Möglichkeiten zur Extraktion von TOR-Browser Artefakten: RAM-Forensik, Registry-Änderungen, Netzwerk-Forensik und Datenbank
+		•	vier Möglichkeiten zur Extraktion von TOR-Browser Artefakten: RAM-Forensik, Registry-Änderungen, Netzwerk-Forensik und Datenbank
 		2.	Bitcoin-Transaktions-Forensik: Extrahieren von forensischen Artefakten aus Bitcoin-Wallet-Anwendung
 		

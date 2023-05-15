@@ -1,6 +1,8 @@
 \chapter{Methodik}
 
 Warum Methodik? 
+	> \cite{Aggarwal.2010}
+		Aufgrund der Komplexität moderner Browser ist eine systematische Methode erforderlich, um zu testen, ob der private Browsing-Modus ausreichend gegen die Bedrohungsmodelle aus Abschnitt 2 verteidigt.		
 	> \cite{Izzati.2022}
 		•	Die Verfahren für die digitale Forensik für Browser-Forensik müssen angemessen befolgt werden, um dem Ermittler bei der Durchführung der Untersuchung zu helfen. Die Verfahren unterscheiden sich je nachdem, wie die Untersuchung durchgeführt werden soll.
 	> \cite{Horsman.2019}
@@ -8,7 +10,14 @@ Warum Methodik?
 		•	Eine Kette von Beweisführung muss dokumentiert werden, um die Integrität und Zuverlässigkeit der Daten sicherzustellen.
 		•	Ein formaler forensischer Bericht wird dann vor Gericht präsentiert.
 	
+	
+Bekanntes Computer Forensik Vorgehensmodell: \cite{Yusoff.2011}: Generic Model Computer Forensics Investigations (GCFIM) -> Daran orientieren sich alle in der Literatur
 
+
+Phasen nach \cite{Montasari.2015}
+	•	Die forensische Analyse erfolgt in zwei Phasen.
+	1.	Zunächst wird die Analyse an sowohl "üblichen" als auch "ungewöhnlichen" Speicherorten auf der Festplatte durchgeführt.
+	2.	In der zweiten Phase wird der physische Arbeitsspeicher (RAM) untersucht.
 
 
 Phasen nach \cite{Izzati.2022}:
@@ -30,6 +39,24 @@ Phasen nach \cite{Izzati.2022}:
 
 \subsection{Vorbereitung der VMs}
 
+\subsubsection*{Konfiguration}
+RAM:
+	- Kaum Angaben in der Literatur:
+		> \cite{Rochmadi.2017}: 2 GB 
+		> \cite{Ohana.2013}: 4 GB
+	- Hier: 6 GB 
+	-> Ausblick: Kritik an Literatur, dass RAM-Größe kaum thematisiert wird, obwohl sie Auswirkungen auf Ergebnisse hat -> Siehe Kapitel X (TODO!)
+
+Netzwerkeinstellungen: 
+	- TODO
+
+Windows 10 Installation:
+	- TODO
+
+\subsubsection*{Tools auf VM}
+	- Process Monitor
+	- Regshot
+
 \subsubsection*{Browserauswahl}
 
 > Browserstudie \cite{Izzati.2022}
@@ -45,12 +72,36 @@ Phasen nach \cite{Izzati.2022}:
 \subsection{Vorbereitung des Analyserechners}
 
 \subsubsection*{Volatility}
-Plugins-Liste: \cite{Dayalamurthy.2013}
+Plugins-Liste: (Ähnlich zu \cite{Hariharan} und \cite{Dayalamurthy.2013})
+	- TODO
+	
+\subsubsection*{Autopsy}
+Evtl. hier Sleuthkit vs Autopsy thematisieren
+	- TODO
+
+\subsubsection*{Sonstige Tools}
+WinHex SQLite Viewer etc.
+	- TODO
+
+-> Evtl. am Schluss Tabelle mit allen Tool, Versionen und Plug-Ins
+
 
 \subsection{Browsing Szenario}
+- Wichtig für White-Box-Ansatz: Browsing Szenario ist bekannt
+- URL X … 	(TODO!)
+
 
 
 \section{Acquisition Stage}
+
+> Browsing Szenario durchfüren
+> Zeitpunkte von -> Orientieren an: \cite{Muir.2019}
+	- RAM-Dumps 
+	- VM-Snapshots (nur letzter Snapshot ist Post-Mortem Forensik)
+	- Process Monitor Logfiles
+	- Registry Snapshots
+	
+
 - Warum Process Monitor während Browsing?
 	o Während Browsing Szenario Filechanges untersuchen: DaemonFS set to monitor all activity within local hard drive\cite{Ohana.2013}
 	
@@ -61,4 +112,11 @@ Plugins-Liste: \cite{Dayalamurthy.2013}
 	
 
 \section{Analysis und Validation Stage}
-\Blindtext[1][4]
+
+> Analysis Stage (= Kapitel „Results“)
+	- Analyse der akquirierten Artefakte der vorherigen Phase: VM-Snapshots, RAM-Dumps, Process Monitor Logfiles und Registry Snapshots mit ggf. zusätzlichen Tools
+	- Oberster Leitsatz dabei: gefundenes Artefakt muss eindeutig Browser zugeordnet werden können: Deshalb einfache Stringsuche in RAM mit WinHex ungenügend -> Hier evtl. negatives Beispiel zu Stringsuche einflechten
+
+> Validation Stage (= Kapitel „Vergleich der Browser“)
+
+

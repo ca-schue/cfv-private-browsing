@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7.30) (preloaded format=pdflatex 2022.8.6)  14 MAY 2023 21:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.7.30) (preloaded format=pdflatex 2022.8.6)  15 MAY 2023 12:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1064,37 +1064,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: Citation 'Perdices.2023' on page 1 undefined on input line 10.
-
-[1
+ [1
 
 
 
 
-] [2]
-
-LaTeX Warning: Citation 'Satvat.2014' on page 3 undefined on input line 76.
-
-
-! LaTeX Error: Unicode character  (U+F0E0)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.78 	•	Laut einer Studie (
-                                 TODO: welche?) leiden alle Browser unter ei...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Citation 'Rathod.2017' on page 3 undefined on input line 91.
-
-) [3]
+]
+[2]) [3]
 \openout2 = `"kapitel/02_Theoretischer Hintergrund.aux"'.
 
  (kapitel/02_Theoretischer Hintergrund.tex
@@ -1104,93 +1080,58 @@ chapter 2.
 
 
 
-]
-
-LaTeX Warning: Citation 'Aggarwal.2010' on page 5 undefined on input line 50.
-
-[5]
-
-LaTeX Warning: Citation 'Aggarwal.2010' on page 6 undefined on input line 87.
-
-[6] [7]
-
-LaTeX Warning: Citation 'Chivers.2014' on page 8 undefined on input line 139.
-
-
-LaTeX Warning: Citation 'Aggarwal.2010' on page 8 undefined on input line 145.
-
-
-! LaTeX Error: Unicode character  (U+F0E0)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.180 ...m Design und Entwicklung des Browsers 
-                                                   führt dazu, dass Daten v...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Overfull \hbox (13.69048pt too wide) in paragraph at lines 184--187
+] [5] [6] [7] [8]
+Overfull \hbox (13.69048pt too wide) in paragraph at lines 245--248
 []\T1/lmss/m/n/10.95 (-20) Definition pri-va-te Brow-sing Ar-te-fakt: =========
 ============================
  []
 
-[8]
-
-LaTeX Warning: Citation 'Gupta.2013' on page 9 undefined on input line 225.
-
-
-LaTeX Warning: Citation 'Hassan.2019' on page 9 undefined on input line 228.
-
-
-LaTeX Warning: Citation 'Gupta.2013' on page 9 undefined on input line 234.
-
-) [9]
+[9] [10] [11]) [12]
 \openout2 = `"kapitel/03_Ziel der Arbeit.aux"'.
 
  (kapitel/03_Ziel der Arbeit.tex
 chapter 3.
-[10
+[13
 
 
 
 
-]) [11]
+] [14]) [15]
 \openout2 = `kapitel/04_Methodik.aux'.
 
  (kapitel/04_Methodik.tex
 chapter 4.
-[12
+[16
 
 
 
 
-] [13]) [14]
+]
+
+LaTeX Warning: Citation 'Hariharan' on page 17 undefined on input line 75.
+
+[17]) [18]
 \openout2 = `kapitel/05_Ergebnisse.aux'.
 
  (kapitel/05_Ergebnisse.tex
 chapter 5.
-[15
+[19
 
 
 
 
-] [16] [17] [18]
-Overfull \hbox (136.56464pt too wide) in paragraph at lines 205--214
+] [20] [21] [22]
+Overfull \hbox (136.56464pt too wide) in paragraph at lines 219--228
 \T1/lmss/m/n/10.95 (-20) sic: - Reg-Que-ryVa-lue: HKCU/Software/Microsoft/Windo
 ws/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
  []
 
-[19]) [20]
+[23]) [24]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
  (kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [21
+) [25
 
 
 
@@ -1200,7 +1141,7 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-) [22
+) [26
 
 
 
@@ -1210,7 +1151,7 @@ chapter 7.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [23
+) [27
 
 
 
@@ -1219,11 +1160,11 @@ chapter 8.
 chapter without number
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 120.
-[24
+[28
 
 
 
-] [25] (main.aux (kapitel/01_Einführung.aux)
+] [29] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -1241,11 +1182,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21423 strings out of 478337
- 454171 string characters out of 2836667
- 1383959 words of memory out of 3000000
- 39246 multiletter control sequences out of 15000+600000
- 562341 words of font info for 199 fonts, out of 8000000 for 9000
+ 21457 strings out of 478337
+ 455364 string characters out of 2836667
+ 1385225 words of memory out of 3000000
+ 39274 multiletter control sequences out of 15000+600000
+ 562683 words of font info for 202 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,20n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
@@ -1254,9 +1195,9 @@ sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
 /Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-Output written on main.pdf (27 pages, 194508 bytes).
+Output written on main.pdf (31 pages, 212787 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  45074 words of extra memory for PDF output out of 51595 (max. 10000000)
 
