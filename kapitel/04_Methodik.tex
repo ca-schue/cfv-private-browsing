@@ -1,5 +1,7 @@
 \chapter{Methodik}
 
+> Validation Stage (= Kapitel „Vergleich der Browser“)
+
 Warum Methodik? 
 	> \cite{Aggarwal.2010}
 		Aufgrund der Komplexität moderner Browser ist eine systematische Methode erforderlich, um zu testen, ob der private Browsing-Modus ausreichend gegen die Bedrohungsmodelle aus Abschnitt 2 verteidigt.		
@@ -35,11 +37,10 @@ Phasen nach \cite{Izzati.2022}:
 
 
 \section{Preparation Stage}
-\Blindtext[1][3]
 
-\subsection{Vorbereitung der VMs}
+\subsection{Konfiguration der Versuchsumgebung}
 
-\subsubsection*{Konfiguration}
+\subsubsection*{VM Konfiguration}
 RAM:
 	- Kaum Angaben in der Literatur:
 		> \cite{Rochmadi.2017}: 2 GB 
@@ -53,37 +54,36 @@ Netzwerkeinstellungen:
 Windows 10 Installation:
 	- TODO
 
-\subsubsection*{Tools auf VM}
+Tools auf VM:
 	- Process Monitor
 	- Regshot
 
-\subsubsection*{Browserauswahl}
+\subsubsection*{Konfiguration des Analyse-Rechners}
 
-> Browserstudie \cite{Izzati.2022}
-	- Die Herstellerangaben unterschiedlicher Browser bzgl. Privatheit untersucht
-	- Firefox 58.02: No Browsing History stored, No Cookies stored, No login Info stored, Tracking Protection Enabled: Disconnect, Download Files not Hidden
-	- Chrome 63.0.3239: No Browsing History stored, No Cookies stored, No login Info stored, Tracking Protection Enabled: No, Download Files not Hidden
-
-> design aim of Tor: \cite{Muir.2019}
-	- preventing from writing to disk (Perry et al., 2018) 
-	- enabling secure deletion of the browser (Sandvik, 2013) (hier nicht relevant)
-
-
-\subsection{Vorbereitung des Analyserechners}
-
-\subsubsection*{Volatility}
-Plugins-Liste: (Ähnlich zu \cite{Hariharan} und \cite{Dayalamurthy.2013})
-	- TODO
+Volatility:
+	Plugins-Liste: (Ähnlich zu \cite{Hariharan} und \cite{Dayalamurthy.2013})
+		- TODO
 	
-\subsubsection*{Autopsy}
-Evtl. hier Sleuthkit vs Autopsy thematisieren
-	- TODO
+Autopsy:
+	Evtl. hier Sleuthkit vs Autopsy thematisieren
+		- TODO
 
-\subsubsection*{Sonstige Tools}
-WinHex SQLite Viewer etc.
-	- TODO
+Sonstige Tools:
+	WinHex SQLite Viewer etc.
+		- TODO
 
 -> Evtl. am Schluss Tabelle mit allen Tool, Versionen und Plug-Ins
+
+\subsection{Browserauswahl}
+
+> Browserstudie \cite{Izzati.2022}
+- Die Herstellerangaben unterschiedlicher Browser bzgl. Privatheit untersucht
+- Firefox 58.02: No Browsing History stored, No Cookies stored, No login Info stored, Tracking Protection Enabled: Disconnect, Download Files not Hidden
+- Chrome 63.0.3239: No Browsing History stored, No Cookies stored, No login Info stored, Tracking Protection Enabled: No, Download Files not Hidden
+
+> design aim of Tor: \cite{Muir.2019}
+- preventing from writing to disk (Perry et al., 2018) 
+- enabling secure deletion of the browser (Sandvik, 2013) (hier nicht relevant)
 
 
 \subsection{Browsing Szenario}
@@ -99,8 +99,7 @@ WinHex SQLite Viewer etc.
 	- RAM-Dumps 
 	- VM-Snapshots (nur letzter Snapshot ist Post-Mortem Forensik)
 	- Process Monitor Logfiles
-	- Registry Snapshots
-	
+	- Registry Snapshots	
 
 - Warum Process Monitor während Browsing?
 	o Während Browsing Szenario Filechanges untersuchen: DaemonFS set to monitor all activity within local hard drive\cite{Ohana.2013}
@@ -111,12 +110,179 @@ WinHex SQLite Viewer etc.
 	
 	
 
-\section{Analysis und Validation Stage}
+\section{Analysis Stage}
 
 > Analysis Stage (= Kapitel „Results“)
-	- Analyse der akquirierten Artefakte der vorherigen Phase: VM-Snapshots, RAM-Dumps, Process Monitor Logfiles und Registry Snapshots mit ggf. zusätzlichen Tools
-	- Oberster Leitsatz dabei: gefundenes Artefakt muss eindeutig Browser zugeordnet werden können: Deshalb einfache Stringsuche in RAM mit WinHex ungenügend -> Hier evtl. negatives Beispiel zu Stringsuche einflechten
+- Analyse der akquirierten Artefakte der vorherigen Phase: VM-Snapshots, RAM-Dumps, Process Monitor Logfiles und Registry Snapshots mit ggf. zusätzlichen Tools
+- Oberster Leitsatz dabei: gefundenes Artefakt muss eindeutig Browser zugeordnet werden können: Deshalb einfache Stringsuche in RAM mit WinHex ungenügend -> Hier evtl. negatives Beispiel zu Stringsuche einflechten
 
-> Validation Stage (= Kapitel „Vergleich der Browser“)
+\subsection{White-Box Analyse}
+
+Whitebox-Analyse: (gezieltes Suchen nach Dateien) \cite{Bonetti.2014}
+	Definition: "White-Box" Computer Forensik bezieht sich auf eine forensische Untersuchungsmethode, bei der der forensische Analyst über umfassende Kenntnisse und Zugriff auf das untersuchte System verfügt. Im Kontext der Computerforensik bezieht sich "White-Box" darauf, dass der Analyst über volle Transparenz und Zugriff auf alle Informationen, Ressourcen und Artefakte des Systems verfügt.
+	
+	Die "White-Box" Forensik kann verschiedene Techniken und Tools umfassen (z.B. Process Monitor, Regshot, Registry Explorer, Dekomprimierungstools), um Daten wiederherzustellen, gelöschte Informationen wiederherzustellen, Metadaten zu analysieren, Netzwerkaktivitäten zu überwachen und weitere forensische Analysen durchzuführen. Der Fokus liegt darauf, das System vollständig zu verstehen und alle relevanten Beweise zu sammeln.
+	
+	Hier: In Orten gesucht, die 1. Process Monitor ermittelt hat und 2. in der Literatur vorgeschlagen wurden.
+
+Definition: Common Location
+	(= i.d.R. Installationsverzeichnisse der Browser) = „Bekannte Speicherorte“, z.B. bei Firefox   	
+	- TODO: Quelle
+		> Welche Dateien in Common Locations mit Process Monitor identifiziert
+		> Wie haben sich Dateien verändert in verschiedenen Snapshots?
+		> Was in Dateien gefunden?	
+	-	Ziel: Befinden sich unter den Dateien, die ein Browser direkt auf die Festplatte schreibt private Browsing Artefakte?
+	-	Dateien sind Browserspezifisch, befinden sich in bekannten Pfaden. Beispiele: Datenbank-Dateien, Caches, temporäre Dateien.
+	-	String-Suche wäre nicht ausreichend, da Artefakte teilweise komprimiert (siehe .jsonlz4)	
+	- Beispiele:
+		> Cache folder, Web history \cite{Montasari.2015}
+
+\subsubsection*{Schreiboperationen mit Process Monitor verfolgen}
+- Process Monitor: WriteFile Operationen von Browser
+- Vorgehen: (Siehe Aktivitätsdiagramm)
+	o	Basis = Process Monitor Logfile 1 und 2
+	o	Processmonitor Filter: Browser-Prozess, Dateioperationen, nur WriteFile
+	o	Export als CSV
+	o	Datenaufbereitung in Excel
+	o	Irrelevante Spalten löschen: Time of Day (zeitl. Kontext nicht wichtig), Process Name (Da in Process Monitor bereits nach Namen gefiltert wurde -> Alle Prozesse haben gleichen Namen), Operation (Da in Process Monitor bereits nach Operation gefiltert wurde -> Alle Prozesse haben gleiche Operation „WriteFile“), Result, Detail
+	o	Gleiche Operationen (Duplikate) löschen
+	o	Neue Spalte mit Dateiendung
+	-> Weiteres gruppieren, sortieren und analysieren ist browserspezifisch
+	o	Wenn Daten aufbereitet wurden: 
+	1.	Autopsy: Prüfen, ob Dateien noch in Snapshot Image vorhanden
+	2.	Wenn ja, Dateien mit Autopsy extrahieren 
+	3.	Wenn nein, prüfen, ob Datei in RAM gecacht
+	-> Hier beschreiben, wie mit Volatility filelist etc. Dateien aus RAM wiederhergestellt werden können
+	4.	Prüfen ob Browsing Artefakte in Dateien enhalten sind: Stringsuche nach Aktionen des Browsing-Protokolls
+	\begin{figure}[h!]
+		\centering
+		\small
+		\centerline{\resizebox{\linewidth}{!}{\input{bilder/process_monitor_to_excel-Latex.pdf_tex}}}
+		\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
+		\label{fig:jes}
+	\end{figure}
+
+\subsubsection*{SQLite-Datenbänke}
+- Gesondert betrachtet: Zeitlicher Vergleich von SQLite Datenbänken
+	> Begründung: In Literatur ermittelt, dass SQLite DB von zentraler Bedeutung bei Browser History -> Hier wird i.d.R. Suchverlauf gespeichert
+	> Zählt zu den wichtigsten "Common Locations"
+	-> Vorgehen: Siehe Aktivitätsdiagramm
+\begin{figure}[h!]
+	\centering
+	\small
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/sqlite_file_diffs-Latex.pdf_tex}}}
+	\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
+	\label{fig:jes}
+\end{figure}
+
+\subsubsection*{Registry}
+- Registry:
+	> Process Monitor: SetValue Operationen von Browser -> Values der Keys untersucht
+	> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
+	> "shellactivities-ähnliche" Keys untersucht (Gesondert betrachtet wie SQLite DBs)
+- TODO: 
+	- Aktivitätsdiagramm?
+	- Liste von bekannten Registry Hives
+	- Screenshot Process Monitor?
+	- Screenshot Registry Explorer?
+
+\subsection{Black-Box Analyse}
+
+Blackbox-Analyse: \cite{Bonetti.2014} (Stringsuchen im gesamten Image mithilfe von Tool) 
+Definition: Auch "triage-style keyword search" \cite{Horsman.2019} genannt, = Durchsuchung des Beweismaterials ohne 
+Vorwissen über Browserverhalten (d.h. welche Dateien geschrieben wurden) sowie ohne Vorverarbeitung der Dateien (z.B. Entpacken von Dateien).
+Stattdessen: Untersuchen der Images nur mittels vordefinierter Funktionen von Forensik-Tools
+"Triage", da dies schnelles erstes Mittel von Forensikern, um nach Acquisition Phase Ergebnisse zu erhalten
+
+Hier entscheidend "Uncommon Locations":
+	= „Unbekannte Speicherorte“, nur durch tiefgehende forensische Analyse entdeckt
+	
+	- TODO: Quelle
+	o	Registry
+	o	Pagefile.sys
+	o	Unallocated Disk Space
+	->	Suche nach „obfs4“ deckt Bridging IP-Adressen auf
+	o	Windows-Prefetching
+	o	Timestamps
+	o	\$MFT
+	o	\$Unalloc
+	o	\$LogFile
+	o	Favicons
+	o	etilqs
+	o	Manifest.json
+	o	slack space
+	
+	- Beispiele in der Literatur:
+	> “\$MFT”, “\$LogFile”, “Favicons”, “etilqs”, “Manifest.json”, “pagefile.sys.”, “unallocated space” and “slack space” \cite{Montasari.2015}	
+	
+	-	Ziel: Untypische Orte, wo private Browsing Artefakte gefunden werden können. Im
+	-	Unterschied zu Common Locations: Weitergreifendes Konzept, umfasst Dateien, die nicht von Browsern in bekannten Browser-Ordnern gespeichert werden, sondern auch Speicherorte wie RAM, Registry oder Caches des Rechners, wie 
+	-	In Literatur ermittelt: für private Browsing drei uncommon Locations relevant:
+	o	Stichwortsuchen in kompletten Speicherabbildern: Festplatte (Common Location Browser-Pfade ausgenommen) + RAM 
+	-> Wichtig: String-Treffer muss Browser zugeordnet werden können
+	-> Negativbeispiele:
+	o \cite{Rochmadi.2017}: in WinHex: URLs, Passwörter gefunden -> Wie wird URL Browser zugeordnet? Reicht gefundener String in RAM-Hex als Beweis aus?
+	o \cite{Md.2018} WinHex: email account can be retrieved, retrieves all URL histories including the directories visited by a user
+	o \cite{Montasari.2015}	Firefox: URLs und Keywords als Strings in WinHex gesucht und gefunden 
+	o \cite{Montasari.2015}	Chrome: URLs und Keywords als Strings in WinHex gesucht und gefunden
+	
+o	In Literatur oft verwendet: Stichwortsuchen:
+	>	Autopsy Keyword-Suche außerhalb der Common Locations, in allen Partitionen
+		•	Definition der gesuchten Strings
+		•	Weiterführend:  In Literatur nichts über verwendete Plugins gefunden. Hier:
+			o	Automatische Kategorisierung von Dateien
+			o	Timeliner-Plugin (Wenn verwendbar?)
+	>	RAM: Yarascan Treffer -> String Kontext
+		•	Definierte Yararules
+			- TODO!
+		•	HTML-Fragmente: \cite{Said.2011} We were also able to find blocks of HTML code that constructs Web sites we visited.
+		•	Image Carving: 
+	> Carved from Memdump \cite{Ohana.2013}
+	> Bildsuche mit: Griffeye’s DI Analyze Pro with LACE plug-in \cite{Horsman.2019}
+
+- Windows: Prozess-Struktur im RAM: 
+	(--> TODO: Wo gefunden?)
+	The EPROCESS data structure contains information about process instances, such as image name and ProcessID, the resources allocated in terms of memory allocations (how much and where), types (private, mapped, shareable, etc.), memory protections (combinations of read, write, execute, and reserved), modules loaded, and pointers to ETHREADs and the process environment block.
+	
+	Both EPROCESS and ETHREAD are considered opaque objects by Microsoft [28], inhibiting analysis; fortunately, third-party work has been done to understand these struc tures [29], [30]. Microsoft does provide symbol files1, which help communicate the layout of data structures [31]. Indeed, Volatility uses these symbols for its own processing.
+	
+	Included in EPROCESS, the ETHREAD object is an opaque structure which contains useful information about the stack. We calculated the size of a stack from the difference between its limit and base, both of which are attached to the ETHREAD.
+	
+	Another member of the EPROCESS structure, the VAD tree, maps out the virtually allocated memory for a process [32]. VAD nodes refer to loaded modules (in the allocations in which they were referenced) and also have unique permission flags per node.
+	
+	The PEB (process environment block) contains data about the number of heaps, which modules have been loaded into memory, and the command-line string that invoked the process [33]. The module list may not match the VAD tree’s list
+	exactly, the difference of these two sets indicating images of interest
+
+
+In Literatur der Web Browser Forensik vorwiegend verwendet: 
+- Autopsy Stichwort Suche nach PB Artefakten + Indizieren der Dateien durch Autopsy-PlugIns
+- Stichwortsuche in RAM mit Volatility Yarascan PlugIn. Vertiefende Untersuchung für jeden Yara-Rule-Treffer *** Hier werden Artefakte gefunden *** -> Flussdiagramm
+
+\subsubsection*{Analyse mit Autopsy}
+Bei White-Box Analyse: Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
+Wichtig dabei:
+- Stichwortsuche 
+	-> TODO: Screenshot von Suchfunktion
+	-> TODO: Liste von Strings
+- Nutzen der Plug-Ins
+
+\subsubsection*{Analyse mit Volatility}
+Bei White-Box Analyse: RAM nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
+
+Wichtig: Auf Ziel der Arbeit verweisen: gefundenes PB Artefakt muss zwingend Browser zugeordnet werden können -> d.h. gefundener String des Browsing Protocols in Hex des RAM-Dumps reicht nicht als Beweis für gefundenes PB Artefakt aus.
+Stattdessen: gefundenes PB Artefakt im RAM muss Browser zugeordnet werden können -> Passendes Werkzeug = Volatility PlugIn "Yarascan" 
+-> TODO: Definition Yarascan
+-> TODO: Auflistung der Yara-Rules
+-> Vorgehen: Siehe Baumdiagramm
+\begin{figure}[h!]
+	\centering
+	\small
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/yarascan_plugin_tree-Latex.pdf_tex}}}
+	\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
+	\label{fig:jes}
+\end{figure}
+
+
+
 
 

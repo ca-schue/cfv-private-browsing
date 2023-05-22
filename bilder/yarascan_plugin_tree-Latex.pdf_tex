@@ -1,0 +1,107 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'yarascan_plugin_tree-Latex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{651.99993896bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.91960349)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.51942802,0.88105724){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}yarascan\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.44161276,0.73788543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PID\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.00621214,0.73788543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string virtual address\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.73490847,0.73788543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}triggered yara rule\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.86816838,0.73788543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}triggered string object\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.61083771,0.73788543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}found string\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.1038856,0.57268719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memmap \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.43758605,0.57268719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}pslist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.48822963,0.46255503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process name\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.10056443,0.38656384){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}map table: \end{tabular}}}}%
+    \put(0.08055135,0.37114533){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}virtual address -> \end{tabular}}}}%
+    \put(0.07779805,0.35462551){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}physical address \&\end{tabular}}}}%
+    \put(0.07425317,0.33920701){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}offset in memory file\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.22281113,0.13215854){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}winhex\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.02615639,0.26101317){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string offset in\end{tabular}}}}%
+    \put(0.03303965,0.24449335){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.20408866,0.0330396){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string context\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.36011496,0.46255503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PPID\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.68720748,0.57268719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}dllist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.64386014,0.46255503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}List of loaded DLLs\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.81348088,0.57268719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}dumpfiles \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.25144549,0.37114533){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process \end{tabular}}}}%
+    \put(0.24227355,0.35462551){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.80136635,0.46916296){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
+    \put(0.82046739,0.45264313){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.79035313,0.45814974){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
+    \put(0.80945418,0.44162992){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.24705742,0.58039644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memmap \end{tabular}}}}%
+    \put(0.25550661,0.56387661){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}--dump\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

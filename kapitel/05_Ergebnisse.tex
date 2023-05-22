@@ -6,234 +6,100 @@ Für jedes Unterkapitel gilt:
 > Erst allgemeines Vorgehen/Methodik definieren
 > Danach spezifisch für jeden Browser: Unterschied zwischen Snapshot-Zeitpunkten, insb. zwischen Live- und Dead-Forensik
 
+\section{Firefox}
 
-\section{Common Locations}
+\subsection*{White-Box Analyse/Common Locations}
 
-(= i.d.R. Installationsverzeichnisse der Browser) = „Bekannte Speicherorte“, z.B. bei Firefox   
+\subsubsection*{Schreiboperationen mit Process Monitor verfolgen}
 
-- TODO: Quelle
-> Welche Dateien in Common Locations mit Process Monitor identifiziert
-> Wie haben sich Dateien verändert in verschiedenen Snapshots?
-> Was in Dateien gefunden?
+Qualitative Analyse:
+	o no traces were found in “common locations” \cite{Montasari.2015}
+		>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
+	o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
+		•	Logfile 1 vs Logfile 2
+	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing Artefakte)
+		•	Logfile 1 vs Logfile 2
+	o	SQLite Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
+		> \cite{Fayyad.2021} for Mozilla Firefox, 7 database files were recovered: cookies.sqlite-shm, places.sqlite-shm, prefs.js etc.
+		> \cite{Muir.2019} The two SQLite databases used by Firefox to track cookies and history (cookies.sqlite und places.sqlite) were both recoverable from the file system after deletion	
+		Ergebnisse stehen im Gegensatz zu \cite{Hedberg.2013} :
+			o	Chrome und Firefox: Einträge in places.sqlite + history.sqlite DB gefunden während PB! (Noch aktuell??)
+		Sonderfall: SQlite DB-Crash \cite{Hedberg.2013}
+			> WAL Files/Journal Files bei Crash gefunden -> Kann genutzt werden um zu beweisen, dass privater Browser genutzt wurde
+			> Daher: WAL Rollback mit sqlite3		
+		•	Logfile 1 vs Logfile 2
+	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
+		•	Logfile 1 vs Logfile 2
+	o	JSON: ???
+		•	Logfile 1 vs Logfile 2
+	o	Glean: Enthalten Tracking Daten; Pageload insb. interessant
+		•	Logfile 1 vs Logfile 2
+	o	Sonstige Dateien: ???
+		•	Logfile 1 vs Logfile 2
 
+Quantitative Zusammenfassung
+	•	Anzahl geschriebene Daten nach Dateiendung
+	•	Anzahl geschriebene Dateien nach Kategorie (Safebrowsing, Cache, etc.)
+	•	Anteil nicht-gelöschter Dateien am Ende von Logfile 1 (Snapshot 2)
+	•	Anteil nicht-gelöschter Dateien am Ende von Logfile 2 (Snapshot 3)
 
--	Ziel: Befinden sich unter den Dateien, die ein Browser direkt auf die Festplatte schreibt private Browsing Artefakte?
--	Dateien sind Browserspezifisch, befinden sich in bekannten Pfaden. Beispiele: Datenbank-Dateien, Caches, temporäre Dateien.
--	String-Suche wäre nicht ausreichend, da Artefakte teilweise komprimiert (siehe .jsonlz4)
+\subsubsection*{SQLite-Datenbänke}
+	TODO
 
-- Beispiele:
-	> Cache folder, Web history \cite{Montasari.2015}
-
-\subsection*{Durchführung der Analyse}
-
-o	Basis = Process Monitor Logfile 1 und 2
-o	Processmonitor Filter: Browser-Prozess, Dateioperationen, nur WriteFile
-o	Export als CSV
-o	Datenaufbereitung in Excel
-	o	Irrelevante Spalten löschen: Time of Day (zeitl. Kontext nicht wichtig), Process Name (Da in Process Monitor bereits nach Namen gefiltert wurde -> Alle Prozesse haben gleichen Namen), Operation (Da in Process Monitor bereits nach Operation gefiltert wurde -> Alle Prozesse haben gleiche Operation „WriteFile“), Result, Detail
-	o	Gleiche Operationen (Duplikate) löschen
-	o	Neue Spalte mit Dateiendung
-		-> Weiteres gruppieren, sortieren und analysieren ist browserspezifisch
-	o	Wenn Daten aufbereitet wurden: 
-		1.	Autopsy: Prüfen, ob Dateien noch in Snapshot Image vorhanden
-		2.	Wenn ja, Dateien mit Autopsy extrahieren 
-		3.	Wenn nein, Datien mit Autopsy File Carving Plugin suchen oder in RAM gecachte Dateien auslesen 
-			-> Hier beschreiben, wie mit Volatility filelist etc. Dateien aus RAM wiederhergestellt werden können
-		4.	Prüfen ob Browsing Artefakte in Dateien enhalten sind: Stringsuche nach Aktionen des Browsing-Protokolls
-
-
-\subsection{Firefox}
-
-\subsubsection*{Qualitative Analyse}
-
-o no traces were found in “common locations” \cite{Montasari.2015}
-	>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
-
-
-o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
-	•	Logfile 1 vs Logfile 2
-o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing Artefakte)
-	•	Logfile 1 vs Logfile 2
-o	SQLite Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)
-	
-	> \cite{Fayyad.2021} for Mozilla Firefox, 7 database files were recovered: cookies.sqlite-shm, places.sqlite-shm, prefs.js etc.
-	> \cite{Muir.2019} The two SQLite databases used by Firefox to track cookies and history (cookies.sqlite und places.sqlite) were both recoverable from the file system after deletion
-	
-	Ergebnisse stehen im Gegensatz zu \cite{Hedberg.2013} :
-		o	Chrome und Firefox: Einträge in places.sqlite + history.sqlite DB gefunden während PB! (Noch aktuell??)
-
-	Sonderfall: SQlite DB-Crash \cite{Hedberg.2013}
-		> WAL Files/Journal Files bei Crash gefunden -> Kann genutzt werden um zu beweisen, dass privater Browser genutzt wurde
-		> Daher: WAL Rollback mit sqlite3
-		
-
-	•	Logfile 1 vs Logfile 2
-o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
-	•	Logfile 1 vs Logfile 2
-o	JSON: ???
-	•	Logfile 1 vs Logfile 2
-o	Glean: Enthalten Tracking Daten; Pageload insb. interessant
-	•	Logfile 1 vs Logfile 2
-o	Sonstige Dateien: ???
-	•	Logfile 1 vs Logfile 2
-
-\subsubsection*{Quantitative Zusammenfassung}
-•	Anzahl geschriebene Daten nach Dateiendung
-•	Anzahl geschriebene Dateien nach Kategorie (Safebrowsing, Cache, etc.)
-•	Anteil nicht-gelöschter Dateien am Ende von Logfile 1 (Snapshot 2)
-•	Anteil nicht-gelöschter Dateien am Ende von Logfile 2 (Snapshot 3)
+\subsubsection*{Registry}
+>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
+> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
+> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
+> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
+- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
+- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
+- IRP\_MJ\_READ: C:/pagefile.sys
 
 
-\subsection{Tor}
+\subsection*{Black-Box Analyse/Uncommon Locations}
 
-\subsubsection*{Qualitative Analyse}
+\subsubsection*{Analyse mit Autopsy}
+Qualitative Analyse:
+	o	Autopsy Keywortsuche: 
+		>	In alles Snapshots ergebnislos (keine Keyword-Hits
+		-->	In Literatur: Autoren fanden Ergebnisse in pagefile.sys 
+			> Autopsy: websites and some of the keywords found in hidden file called “pagefile.sys” \cite{Mahlous.2020}
+			o \cite{Montasari.2015} traces were found in: 
+				> However, on investigating the “pagefile.sys”, some entries were discovered
+				> Using the “data carving” technique, profile picture was recovered
+			o \cite{Said.2011} 
+				> Examining pagefile.sys showed some positive hits 			
+		--> Evtl. hier zeigen, was gefunden werden kann, wenn RAM reduziert
+		--> Aber auf Problem hinweisen, dass gefundener String in pagefile nicht direkt Browser zugeordnet werden kann
+		> \cite{Gabet.2018}	Firefox only produced three recoverable artefacts as reported by both tools (FTK, Autopsy) --> Artefakte werden nicht genannt!
+		> \cite{Muir.2019} Autopsy Keyword Suche nach Suchbegriffen: unallocated space
+		> Autopsy Carving Module (\$Carved): \cite{Muir.2019}
+			•	When searching for the string ’clot’ from the browsing protocol, six .dll, .edb and .reg files were discovered in unallocated space.
+			•	Further searching of unallocated space uncovered references to the Tor installation directory and the obfs4 bridging IP addresses
+			•	browsing data found in NTUSER.DAT was also replicated in unallocated space.
+	o	Autopsy PlugIns:
+		>	TODO:
 
-\subsection*{Quantitative Zusammenfassung}
-
-
-\subsection{Chrome}
-
-\subsubsection*{Qualitative Analyse}
-
-\subsection*{Quantitative Zusammenfassung}
-
-
-\subsection{Brave}
-
-\subsubsection*{Qualitative Analyse}
-
-\subsection*{Quantitative Zusammenfassung}
-
-
-\section{Uncommon Locations}
-
-= „Unbekannte Speicherorte“, nur durch tiefgehende forensische Analyse entdeckt
-
-- TODO: Quelle
-o	Registry
-o	Pagefile.sys
-o	Unallocated Disk Space
-	->	Suche nach „obfs4“ deckt Bridging IP-Adressen auf
-o	Windows-Prefetching
-o	Timestamps
-o	\$MFT
-o	\$Unalloc
-o	\$LogFile
-o	Favicons
-o	etilqs
-o	Manifest.json
-o	slack space
-
-- Beispiele in der Literatur:
-	> “\$MFT”, “\$LogFile”, “Favicons”, “etilqs”, “Manifest.json”, “pagefile.sys.”, “unallocated space” and “slack space” \cite{Montasari.2015}
-
-
--	Ziel: Untypische Orte, wo private Browsing Artefakte gefunden werden können. Im
--	Unterschied zu Common Locations: Weitergreifendes Konzept, umfasst Dateien, die nicht von Browsern in bekannten Browser-Ordnern gespeichert werden, sondern auch Speicherorte wie RAM, Registry oder Caches des Rechners, wie 
--	In Literatur ermittelt: für private Browsing drei uncommon Locations relevant:
-	o	Stichwortsuchen in kompletten Speicherabbildern: Festplatte (Common Location Browser-Pfade ausgenommen) + RAM 
-		-> Wichtig: String-Treffer muss Browser zugeordnet werden können
-		-> Negativbeispiele:
-			o \cite{Rochmadi.2017}: in WinHex: URLs, Passwörter gefunden -> Wie wird URL Browser zugeordnet? Reicht gefundener String in RAM-Hex als Beweis aus?
-			o \cite{Md.2018} WinHex: email account can be retrieved, retrieves all URL histories including the directories visited by a user
-			o \cite{Montasari.2015}	Firefox: URLs und Keywords als Strings in WinHex gesucht und gefunden 
-			o \cite{Montasari.2015}	Chrome: URLs und Keywords als Strings in WinHex gesucht und gefunden
-			
-	o	Analyse der Registry
-		>	Welche Registry Änderungen mit Regshot identifiziert?
-		>	Änderungen in NTUSER.DAT identifizierbar?
-		>	Änderungen in RAM (hivdump) identifizierbar?
-	
-	o	Untersuchung von Netzwerkartefakten
-		>	Volatility: dnslist Plugin
-		>	Evtl. Snapshot unfreezen, danach DNSlist in cmd
-		
-
-
-\subsection*{Durchführung der Analyse}
-o	In Literatur oft verwendet: Stichwortsuchen:
->	Autopsy Keyword-Suche außerhalb der Common Locations, in allen Partitionen
-	•	Definition der gesuchten Strings
-	•	Weiterführend:  In Literatur nichts über verwendete Plugins gefunden. Hier:
-		o	Automatische Kategorisierung von Dateien
-		o	Timeliner-Plugin (Wenn verwendbar?)
->	RAM: Yarascan Treffer -> String Kontext
-	•	Definierte Yararules
-		- TODO!
-	•	HTML-Fragmente: \cite{Said.2011} We were also able to find blocks of HTML code that constructs Web sites we visited.
-	•	Image Carving: 
-		> Carved from Memdump \cite{Ohana.2013}
-		>  Bildsuche mit: Griffeye’s DI Analyze Pro with LACE plug-in \cite{Horsman.2019}
-	
-	- Windows: Prozess-Struktur im RAM: 
-		(--> TODO: Wo gefunden?)
-		
-		The EPROCESS data structure contains information about process instances, such as image name and ProcessID, the resources allocated in terms of memory allocations (how much and where), types (private, mapped, shareable, etc.), memory protections (combinations of read, write, execute, and reserved), modules loaded, and pointers to ETHREADs and the process environment block.
-		
-		Both EPROCESS and ETHREAD are considered opaque objects by Microsoft [28], inhibiting analysis; fortunately, third-party work has been done to understand these struc tures [29], [30]. Microsoft does provide symbol files1, which help communicate the layout of data structures [31]. Indeed, Volatility uses these symbols for its own processing.
-		
-		Included in EPROCESS, the ETHREAD object is an opaque structure which contains useful information about the stack. We calculated the size of a stack from the difference between its limit and base, both of which are attached to the ETHREAD.
-		
-		Another member of the EPROCESS structure, the VAD tree, maps out the virtually allocated memory for a process [32]. VAD nodes refer to loaded modules (in the allocations in which they were referenced) and also have unique permission flags per node.
-		
-		The PEB (process environment block) contains data about the number of heaps, which modules have been loaded into memory, and the command-line string that invoked the process [33]. The module list may not match the VAD tree’s list
-		exactly, the difference of these two sets indicating images of interest
-		
-		
-o	Analyse der Registry:
-	>	NTUSER.DAT (inkl. Logs)
- 	>	Registry-Hives in RAM
-o	(Ermittlung von Netzwerkartefakten: DNS-Cache, Offene Sockets etc.)
-
-
-\subsection{Firefox}
-
-
-\subsubsection*{Qualitative Analyse}
-
-o	Autopsy Keywortsuche: 
-	>	In alles Snapshots ergebnislos (keine Keyword-Hits
-	-->	In Literatur: Autoren fanden Ergebnisse in pagefile.sys 
-		> Autopsy: websites and some of the keywords found in hidden file called “pagefile.sys” \cite{Mahlous.2020}
-		o \cite{Montasari.2015} traces were found in: 
-			> However, on investigating the “pagefile.sys”, some entries were discovered
-			> Using the “data carving” technique, profile picture was recovered
-		o \cite{Said.2011} 
-			> Examining pagefile.sys showed some positive hits 
-			
-	--> Evtl. hier zeigen, was gefunden werden kann, wenn RAM reduziert
-	--> Aber auf Problem hinweisen, dass gefundener String in pagefile nicht direkt Browser zugeordnet werden kann
-	> \cite{Gabet.2018}	Firefox only produced three recoverable artefacts as reported by both tools (FTK, Autopsy) --> Artefakte werden nicht genannt!
-	> \cite{Muir.2019} Autopsy Keyword Suche nach Suchbegriffen: unallocated space
-	> Autopsy Carving Module (\$Carved): \cite{Muir.2019}
-		•	When searching for the string ’clot’ from the browsing protocol, six .dll, .edb and .reg files were discovered in unallocated space.
-		•	Further searching of unallocated space uncovered references to the Tor installation directory and the obfs4 bridging IP addresses
-		•	browsing data found in NTUSER.DAT was also replicated in unallocated space.
-	
-	
+\subsubsection*{Analyse mit Volatility}
 o	RAM Yarascan Treffer
 	>	Dump 1 vs 2 vs 3 
 	>	Im 3. Dump svchost: Evtl. mit Process Explorer VM Snapshot klonen, “auftauen” und zeigen, dass DNS-Cache die Daten speichert. 
 	-->	Hier DNSlist zeigen
 	-->	Evtl. 4. Dump nach Beenden/Deaktivieren von DNS-Cache zeigen, dass keine Yarascan Ergebnisse mehr vorhanden
-	
-o	Registry:
-	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
-	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
-	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
-	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
-	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
-		- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
-		- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
-		- IRP\_MJ\_READ: C:/pagefile.sys
-		
+
+	> Diagramme:
+		- 
+
 		
 \subsubsection*{Quantitative Zusammenfassung}
 >	Keyword-Hits Autopsy vs. RAM (pro Zeitpunkt)
 >	Anzahl private Browsing Artefakte pro Keyword (pro Zeitpunkt)
 
 
-\subsection{Tor}
+\section{Tor}
+
+\subsection*{Uncommon Locations}
 
 \subsubsection*{Qualitative Analyse}
 
@@ -273,7 +139,9 @@ o Registry:
 
 
 
-\subsection{Chrome}
+\section{Chrome}
+
+\subsection*{Uncommon Locations}
 
 o Autopsy Keyword-Suche: 
 	> Chrome and Edge produced five artefacts as reported by both tools. (FTK, Autopsy) \cite{Gabet.2018}
@@ -281,13 +149,5 @@ o Autopsy Keyword-Suche:
 	> only two temporary files (Figure 7) were recovered with Minitool Power Data Recovery but it was a dead end; Location: appdata/…/Chrome/…/ Preferences/RF1533fa.TMP \cite{Fayyad.2021}
 	> pagefile.sys file showed no traces at all \cite{Said.2011}
 	
-\subsubsection*{Qualitative Analyse}
 
-\subsubsection*{Quantitative Zusammenfassung}
-
-
-\subsection{Brave}
-
-\subsubsection*{Qualitative Analyse}
-
-\subsubsection*{Quantitative Zusammenfassung}
+\section{Brave}

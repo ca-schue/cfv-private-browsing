@@ -4,29 +4,24 @@
 \contentsline {section}{\numberline {2.1}Private Browsing}{4}{}%
 \contentsline {section}{\numberline {2.2}Angreifermodell}{6}{}%
 \contentsline {section}{\numberline {2.3}Private Browsing Artefakte}{8}{}%
-\contentsline {section}{\numberline {2.4}Live- und Post-Mortem-Forensik}{9}{}%
 \contentsline {chapter}{\numberline {3}Ziel der Arbeit}{13}{}%
 \contentsline {chapter}{\numberline {4}Methodik}{16}{}%
 \contentsline {section}{\numberline {4.1}Preparation Stage}{16}{}%
-\contentsline {subsection}{\numberline {4.1.1}Vorbereitung der VMs}{17}{}%
-\contentsline {subsection}{\numberline {4.1.2}Vorbereitung des Analyserechners}{18}{}%
-\contentsline {subsection}{\numberline {4.1.3}Browsing Szenario}{18}{}%
-\contentsline {section}{\numberline {4.2}Acquisition Stage}{18}{}%
-\contentsline {section}{\numberline {4.3}Analysis und Validation Stage}{18}{}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{19}{}%
-\contentsline {section}{\numberline {5.1}Common Locations}{19}{}%
-\contentsline {subsection}{\numberline {5.1.1}Firefox}{20}{}%
-\contentsline {subsection}{\numberline {5.1.2}Tor}{21}{}%
-\contentsline {subsection}{\numberline {5.1.3}Chrome}{21}{}%
-\contentsline {subsection}{\numberline {5.1.4}Brave}{21}{}%
-\contentsline {section}{\numberline {5.2}Uncommon Locations}{21}{}%
-\contentsline {subsection}{\numberline {5.2.1}Firefox}{22}{}%
-\contentsline {subsection}{\numberline {5.2.2}Tor}{23}{}%
-\contentsline {subsection}{\numberline {5.2.3}Chrome}{24}{}%
-\contentsline {subsection}{\numberline {5.2.4}Brave}{24}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{25}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{26}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{27}{}%
-\contentsline {chapter}{Literaturverzeichnis}{28}{}%
-\contentsline {chapter}{\nonumberline Literatur}{28}{}%
+\contentsline {subsection}{\numberline {4.1.1}Konfiguration der Versuchsumgebung}{16}{}%
+\contentsline {subsection}{\numberline {4.1.2}Browserauswahl}{17}{}%
+\contentsline {subsection}{\numberline {4.1.3}Browsing Szenario}{17}{}%
+\contentsline {section}{\numberline {4.2}Acquisition Stage}{17}{}%
+\contentsline {section}{\numberline {4.3}Analysis Stage}{18}{}%
+\contentsline {subsection}{\numberline {4.3.1}White-Box Analyse}{18}{}%
+\contentsline {subsection}{\numberline {4.3.2}Black-Box Analyse}{20}{}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{23}{}%
+\contentsline {section}{\numberline {5.1}Firefox}{23}{}%
+\contentsline {section}{\numberline {5.2}Tor}{25}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{25}{}%
+\contentsline {section}{\numberline {5.4}Brave}{26}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{27}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{28}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{29}{}%
+\contentsline {chapter}{Literaturverzeichnis}{30}{}%
+\contentsline {chapter}{\nonumberline Literatur}{30}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
