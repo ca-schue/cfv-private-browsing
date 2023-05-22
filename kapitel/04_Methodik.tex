@@ -116,7 +116,7 @@ Sonstige Tools:
 - Analyse der akquirierten Artefakte der vorherigen Phase: VM-Snapshots, RAM-Dumps, Process Monitor Logfiles und Registry Snapshots mit ggf. zusätzlichen Tools
 - Oberster Leitsatz dabei: gefundenes Artefakt muss eindeutig Browser zugeordnet werden können: Deshalb einfache Stringsuche in RAM mit WinHex ungenügend -> Hier evtl. negatives Beispiel zu Stringsuche einflechten
 
-\subsection{White-Box Analyse}
+\subsection{Common Locations}
 
 Whitebox-Analyse: (gezieltes Suchen nach Dateien) \cite{Bonetti.2014}
 	Definition: "White-Box" Computer Forensik bezieht sich auf eine forensische Untersuchungsmethode, bei der der forensische Analyst über umfassende Kenntnisse und Zugriff auf das untersuchte System verfügt. Im Kontext der Computerforensik bezieht sich "White-Box" darauf, dass der Analyst über volle Transparenz und Zugriff auf alle Informationen, Ressourcen und Artefakte des Systems verfügt.
@@ -175,18 +175,19 @@ Definition: Common Location
 	\label{fig:jes}
 \end{figure}
 
-\subsubsection*{Registry}
+\subsection*{Registry}
 - Registry:
-	> Process Monitor: SetValue Operationen von Browser -> Values der Keys untersucht
+	> Process Monitor: SetValue Operationen von Browser 
+		-> Values der Keys untersucht (je nach Datentyp) -> Sonderfall: REG\_BIN
+		- Kategorien der Keys auflisten
+		Diagramm: z.B. Kreisdiagramm mit Anteil der Kategorien an gesamten Schreiboperationen
 	> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
-	> "shellactivities-ähnliche" Keys untersucht (Gesondert betrachtet wie SQLite DBs)
-- TODO: 
-	- Aktivitätsdiagramm?
-	- Liste von bekannten Registry Hives
-	- Screenshot Process Monitor?
-	- Screenshot Registry Explorer?
+		- Suchbegriffe auflisten
+		- Hives (Speicherorte) auflisten
+	> "shellactivities-ähnliche" Keys untersucht
+		- Arbeit von "shellactivities-ähnliche" Keys erklären
 
-\subsection{Black-Box Analyse}
+\subsection{Uncommon Locations}
 
 Blackbox-Analyse: \cite{Bonetti.2014} (Stringsuchen im gesamten Image mithilfe von Tool) 
 Definition: Auch "triage-style keyword search" \cite{Horsman.2019} genannt, = Durchsuchung des Beweismaterials ohne 
@@ -262,9 +263,11 @@ In Literatur der Web Browser Forensik vorwiegend verwendet:
 Bei White-Box Analyse: Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
 Wichtig dabei:
 - Stichwortsuche 
-	-> TODO: Screenshot von Suchfunktion
-	-> TODO: Liste von Strings
+	-> Screenshot von Suchfunktion
+	-> Suchbegriffe auflisten 
 - Nutzen der Plug-Ins
+- evtl. "pagefile.sys"-Problematik ansprechen
+
 
 \subsubsection*{Analyse mit Volatility}
 Bei White-Box Analyse: RAM nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug

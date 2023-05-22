@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  22 MAY 2023 10:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  22 MAY 2023 17:55
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -863,6 +863,66 @@ File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 sprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen166
+\captionmargin=\dimen167
+\caption@leftmargin=\dimen168
+\caption@rightmargin=\dimen169
+\caption@width=\dimen170
+\caption@indent=\dimen171
+\caption@parindent=\dimen172
+\caption@hangindent=\dimen173
+Package caption Info: KOMA-Script document class detected.
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.st
+o
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count437
+\c@continuedfloat=\count438
+)
+\c@KVtest=\count439
+\sf@farskip=\skip91
+\sf@captopadj=\dimen174
+\sf@capskip=\skip92
+\sf@nearskip=\skip93
+\c@subfigure=\count440
+\c@subfigure@save=\count441
+\c@lofdepth=\count442
+\c@subtable=\count443
+\c@subtable@save=\count444
+\c@lotdepth=\count445
+\sf@top=\skip94
+\sf@bottom=\skip95
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen175
+\lightrulewidth=\dimen176
+\cmidrulewidth=\dimen177
+\belowrulesep=\dimen178
+\belowbottomsep=\dimen179
+\aboverulesep=\dimen180
+\abovetopsep=\dimen181
+\cmidrulesep=\dimen182
+\cmidrulekern=\dimen183
+\defaultaddspace=\dimen184
+\@cmidla=\count446
+\@cmidlb=\count447
+\@aboverulesep=\dimen185
+\@belowrulesep=\dimen186
+\@thisruleclass=\count448
+\@lastruleclass=\count449
+\@thisrulewidth=\dimen187
+)
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-sc
 rpage.sty
 Package: scrlayer-scrpage 2022/10/12 v3.38 KOMA-Script package (end user interf
@@ -886,10 +946,10 @@ Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count437
-\@quotereset=\count438
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 8
-6.
+\@quotelevel=\count450
+\@quotereset=\count451
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 9
+0.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -906,36 +966,52 @@ LaTeX Warning: Label `fig:jes' multiply defined.
 
 LaTeX Warning: Label `fig:jes' multiply defined.
 
-) (kapitel/05_Ergebnisse.aux) (kapitel/06_Vergleich der Browser.aux)
-(kapitel/07_Diskussion.aux) (kapitel/08_Fazit.aux))
+) (kapitel/05_Ergebnisse.aux
+
+LaTeX Warning: Label `chart:final-criteria' multiply defined.
+
+
+LaTeX Warning: Label `chart:final-criteria' multiply defined.
+
+
+LaTeX Warning: Label `chart:final-criteria' multiply defined.
+
+
+LaTeX Warning: Label `chart:final-criteria' multiply defined.
+
+
+LaTeX Warning: Label `chart:final-criteria' multiply defined.
+
+) (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
+(kapitel/08_Fazit.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Info: Redefining \microtypecontext on input line 86.
-Package microtype Info: Applying patch `item' on input line 86.
-Package microtype Info: Applying patch `toc' on input line 86.
-Package microtype Info: Applying patch `eqnum' on input line 86.
-Package microtype Info: Applying patch `footnote' on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Info: Redefining \microtypecontext on input line 90.
+Package microtype Info: Applying patch `item' on input line 90.
+Package microtype Info: Applying patch `toc' on input line 90.
+Package microtype Info: Applying patch `eqnum' on input line 90.
+Package microtype Info: Applying patch `footnote' on input line 90.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 86.
+LaTeX Info: Redefining \showhyphens on input line 90.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -977,22 +1053,22 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 86.
-Package biblatex Info: Reference segment=0 on input line 86.
+Package biblatex Info: Reference section=0 on input line 90.
+Package biblatex Info: Reference segment=0 on input line 90.
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count439
-\scratchdimen=\dimen166
+\scratchcounter=\count452
+\scratchdimen=\dimen188
 \scratchbox=\box59
-\nofMPsegments=\count440
-\nofMParguments=\count441
+\nofMPsegments=\count453
+\nofMParguments=\count454
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count442
-\MPscratchDim=\dimen167
-\MPnumerator=\count443
-\makeMPintoPDFobject=\count444
+\MPscratchCnt=\count455
+\MPscratchDim=\dimen189
+\MPnumerator=\count456
+\makeMPintoPDFobject=\count457
 \everyMPtoPDFconversion=\toks33
 )
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -1017,13 +1093,16 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
 <bilder//thi_logo.pdf, id=4, 165.87971pt x 73.25368pt>
 File: bilder//thi_logo.pdf Graphic file (type pdf)
 <use bilder//thi_logo.pdf>
-Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 90.
+Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 94.
 (pdftex.def)             Requested size: 137.88785pt x 60.8933pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-90.
+94.
  (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1031,7 +1110,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
 
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1040,7 +1119,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
 
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1054,7 +1133,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 {C:/Users/carls/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./bilder//th
 i_logo.pdf>]
-Package tocbasic Info: character protrusion at toc deactivated on input line 95
+Package tocbasic Info: character protrusion at toc deactivated on input line 99
 .
  (main.toc)
 \tf@toc=\write5
@@ -1744,23 +1823,122 @@ nclusion: multiple pdfs with page group included in a single page
 
  (kapitel/05_Ergebnisse.tex
 chapter 5.
+<bilder/bar-chart-logfile1vs2-test.png, id=328, 777.231pt x 335.946pt>
+File: bilder/bar-chart-logfile1vs2-test.png Graphic file (type png)
+<use bilder/bar-chart-logfile1vs2-test.png>
+Package pdftex.def Info: bilder/bar-chart-logfile1vs2-test.png  used on input l
+ine 34.
+(pdftex.def)             Requested size: 777.22911pt x 335.94518pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+[][]
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<bilder/stacked-bar-chart-sqlite-test.png, id=329, 818.184pt x 464.28pt>
+File: bilder/stacked-bar-chart-sqlite-test.png Graphic file (type png)
+<use bilder/stacked-bar-chart-sqlite-test.png>
+Package pdftex.def Info: bilder/stacked-bar-chart-sqlite-test.png  used on inpu
+t line 42.
+(pdftex.def)             Requested size: 818.182pt x 464.27885pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (39.49564pt too wide) in paragraph at lines 48--56
+\T1/lmss/m/n/10.95 (-20) HKCU/Software/Microsoft/Windows/CurrentVersion/Interne
+tSettings/Connections/DefaultConnectionSettings
+ []
+
 [23
 
 
 
 
-]
-Overfull \hbox (136.56464pt too wide) in paragraph at lines 82--91
-\T1/lmss/m/n/10.95 (-20) sic: - Reg-Que-ryVa-lue: HKCU/Software/Microsoft/Windo
-ws/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
+] [24 <./bilder/bar-chart-logfile1vs2-test.png> <./bilder/stacked-bar-chart-sql
+ite-test.png>]
+<bilder/bar-chart-test-1.png, id=339, 264.552pt x 306.819pt>
+File: bilder/bar-chart-test-1.png Graphic file (type png)
+<use bilder/bar-chart-test-1.png>
+Package pdftex.def Info: bilder/bar-chart-test-1.png  used on input line 100.
+(pdftex.def)             Requested size: 264.55135pt x 306.81824pt.
+<bilder/bar-chart-test-2.png, id=340, 377.775pt x 304.191pt>
+File: bilder/bar-chart-test-2.png Graphic file (type png)
+<use bilder/bar-chart-test-2.png>
+Package pdftex.def Info: bilder/bar-chart-test-2.png  used on input line 104.
+(pdftex.def)             Requested size: 377.77406pt x 304.19025pt.
+<bilder/bar-chart-test-3.png, id=341, 340.107pt x 303.534pt>
+File: bilder/bar-chart-test-3.png Graphic file (type png)
+<use bilder/bar-chart-test-3.png>
+Package pdftex.def Info: bilder/bar-chart-test-3.png  used on input line 108.
+(pdftex.def)             Requested size: 340.10616pt x 303.53325pt.
+
+Overfull \hbox (23.56917pt too wide) in paragraph at lines 100--110
+ [][]|  []|  [][] 
  []
 
-[24]) [25] [26]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: bilder/bar-chart-test-1.png Graphic file (type png)
+<use bilder/bar-chart-test-1.png>
+Package pdftex.def Info: bilder/bar-chart-test-1.png  used on input line 119.
+(pdftex.def)             Requested size: 264.55135pt x 306.81824pt.
+File: bilder/bar-chart-test-2.png Graphic file (type png)
+<use bilder/bar-chart-test-2.png>
+Package pdftex.def Info: bilder/bar-chart-test-2.png  used on input line 123.
+(pdftex.def)             Requested size: 377.77406pt x 304.19025pt.
+File: bilder/bar-chart-test-3.png Graphic file (type png)
+<use bilder/bar-chart-test-3.png>
+Package pdftex.def Info: bilder/bar-chart-test-3.png  used on input line 127.
+(pdftex.def)             Requested size: 340.10616pt x 303.53325pt.
+
+Overfull \hbox (23.56917pt too wide) in paragraph at lines 119--129
+ [][]|  []|  [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: bilder/bar-chart-test-1.png Graphic file (type png)
+<use bilder/bar-chart-test-1.png>
+Package pdftex.def Info: bilder/bar-chart-test-1.png  used on input line 138.
+(pdftex.def)             Requested size: 264.55135pt x 306.81824pt.
+File: bilder/bar-chart-test-2.png Graphic file (type png)
+<use bilder/bar-chart-test-2.png>
+Package pdftex.def Info: bilder/bar-chart-test-2.png  used on input line 142.
+(pdftex.def)             Requested size: 377.77406pt x 304.19025pt.
+File: bilder/bar-chart-test-3.png Graphic file (type png)
+<use bilder/bar-chart-test-3.png>
+Package pdftex.def Info: bilder/bar-chart-test-3.png  used on input line 146.
+(pdftex.def)             Requested size: 340.10616pt x 303.53325pt.
+
+Overfull \hbox (23.56917pt too wide) in paragraph at lines 138--148
+ [][]|  []|  [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<bilder/stacked-bar-chart-test.png, id=342, 716.13pt x 313.389pt>
+File: bilder/stacked-bar-chart-test.png Graphic file (type png)
+<use bilder/stacked-bar-chart-test.png>
+Package pdftex.def Info: bilder/stacked-bar-chart-test.png  used on input line 
+152.
+(pdftex.def)             Requested size: 716.12827pt x 313.38823pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25] [26 <./bilder/bar-chart-test-1.png> <./bilder/bar-chart-test-2.png> <./bil
+der/bar-chart-test-3.png>] [27 <./bilder/stacked-bar-chart-test.png>]) [28]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
- (kapitel/06_Vergleich der Browser.tex
+
+(kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [27
+) [29
 
 
 
@@ -1770,7 +1948,7 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-) [28
+) [30
 
 
 
@@ -1780,7 +1958,7 @@ chapter 7.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [29
+) [31
 
 
 
@@ -1788,12 +1966,12 @@ chapter 8.
 ]
 chapter without number
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 120.
-[30
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 124.
+[32
 
 
 
-] [31] (main.aux (kapitel/01_Einführung.aux)
+] [33] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -1806,11 +1984,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 21736 strings out of 475281
- 468462 string characters out of 2774064
- 1451948 words of memory out of 3000000
- 42580 multiletter control sequences out of 15000+600000
- 574992 words of font info for 215 fonts, out of 8000000 for 9000
+ 23349 strings out of 475281
+ 500723 string characters out of 2774064
+ 1482262 words of memory out of 3000000
+ 44163 multiletter control sequences out of 15000+600000
+ 577987 words of font info for 218 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,20n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
@@ -1819,9 +1997,9 @@ sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
 /Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-Output written on main.pdf (33 pages, 280532 bytes).
+Output written on main.pdf (35 pages, 693586 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
+ 397 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51498 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 53576 words of extra memory for PDF output out of 61914 (max. 10000000)
 

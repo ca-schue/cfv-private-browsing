@@ -58,6 +58,54 @@
       \field{pages}{79\bibrangedash 94}
       \range{pages}{16}
     \endentry
+    \entry{Bonetti.2014}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d368a45bf3415ef763c33471b2baa432}{%
+           family={Bonetti},
+           familyi={B\bibinitperiod},
+           given={Gabriele},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9cd8529c1202a30f89016f06454210d5}{%
+           family={Viglione},
+           familyi={V\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=811ac8e1e5d74c17bfeed58f5849703b}{%
+           family={Frossi},
+           familyi={F\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=33c39d2a14f0a87e48c597722550e31f}{%
+           family={Maggi},
+           familyi={M\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a53063063aa9f3b678c152d8e4b34e17}{%
+           family={Zanero},
+           familyi={Z\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f195cd68d33c98a8ecac0d0c80cfe26a}
+      \strng{fullhash}{3a5a9f3dbe611b5f45f8281f425f0af4}
+      \strng{bibnamehash}{f195cd68d33c98a8ecac0d0c80cfe26a}
+      \strng{authorbibnamehash}{f195cd68d33c98a8ecac0d0c80cfe26a}
+      \strng{authornamehash}{f195cd68d33c98a8ecac0d0c80cfe26a}
+      \strng{authorfullhash}{3a5a9f3dbe611b5f45f8281f425f0af4}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computer Virology and Hacking Techniques}
+      \field{title}{Black-box forensic and antiforensic characteristics of solid-state drives}
+      \field{volume}{10}
+      \field{year}{2014}
+      \field{pages}{255\bibrangedash 271}
+      \range{pages}{17}
+    \endentry
     \entry{Chivers.2014}{article}{}
       \name{author}{1}{}{%
         {{hash=b38c156c49fa7c0bbacaa0de4c5fcc43}{%

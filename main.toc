@@ -16,12 +16,12 @@
 \contentsline {subsection}{\numberline {4.3.2}Black-Box Analyse}{20}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{23}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{23}{}%
-\contentsline {section}{\numberline {5.2}Tor}{25}{}%
-\contentsline {section}{\numberline {5.3}Chrome}{25}{}%
-\contentsline {section}{\numberline {5.4}Brave}{26}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{27}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{28}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{29}{}%
-\contentsline {chapter}{Literaturverzeichnis}{30}{}%
-\contentsline {chapter}{\nonumberline Literatur}{30}{}%
+\contentsline {section}{\numberline {5.2}Tor}{27}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{28}{}%
+\contentsline {section}{\numberline {5.4}Brave}{28}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{29}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{30}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{31}{}%
+\contentsline {chapter}{Literaturverzeichnis}{32}{}%
+\contentsline {chapter}{\nonumberline Literatur}{32}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

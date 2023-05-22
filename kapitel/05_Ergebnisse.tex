@@ -26,27 +26,27 @@ Qualitative Analyse:
 			o	Chrome und Firefox: Einträge in places.sqlite + history.sqlite DB gefunden während PB! (Noch aktuell??)
 		Sonderfall: SQlite DB-Crash \cite{Hedberg.2013}
 			> WAL Files/Journal Files bei Crash gefunden -> Kann genutzt werden um zu beweisen, dass privater Browser genutzt wurde
-			> Daher: WAL Rollback mit sqlite3		
-		•	Logfile 1 vs Logfile 2
+			> Daher: WAL Rollback mit sqlite3	
 	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
-		•	Logfile 1 vs Logfile 2
-	o	JSON: ???
-		•	Logfile 1 vs Logfile 2
-	o	Glean: Enthalten Tracking Daten; Pageload insb. interessant
-		•	Logfile 1 vs Logfile 2
-	o	Sonstige Dateien: ???
-		•	Logfile 1 vs Logfile 2
 
-Quantitative Zusammenfassung
-	•	Anzahl geschriebene Daten nach Dateiendung
-	•	Anzahl geschriebene Dateien nach Kategorie (Safebrowsing, Cache, etc.)
-	•	Anteil nicht-gelöschter Dateien am Ende von Logfile 1 (Snapshot 2)
-	•	Anteil nicht-gelöschter Dateien am Ende von Logfile 2 (Snapshot 3)
+Diagramme:
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
+
 
 \subsubsection*{SQLite-Datenbänke}
-	TODO
+Diagramme:
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/stacked-bar-chart-sqlite-test.png}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
 
-\subsubsection*{Registry}
+
+\subsection*{Registry}
 >	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
 >	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
 > \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
@@ -61,6 +61,9 @@ Quantitative Zusammenfassung
 
 \subsubsection*{Analyse mit Autopsy}
 Qualitative Analyse:
+
+*** Hier Liste mit Suchbegriffen ***
+
 	o	Autopsy Keywortsuche: 
 		>	In alles Snapshots ergebnislos (keine Keyword-Hits
 		-->	In Literatur: Autoren fanden Ergebnisse in pagefile.sys 
@@ -79,7 +82,7 @@ Qualitative Analyse:
 			•	Further searching of unallocated space uncovered references to the Tor installation directory and the obfs4 bridging IP addresses
 			•	browsing data found in NTUSER.DAT was also replicated in unallocated space.
 	o	Autopsy PlugIns:
-		>	TODO:
+		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsubsection*{Analyse mit Volatility}
 o	RAM Yarascan Treffer
@@ -90,11 +93,68 @@ o	RAM Yarascan Treffer
 
 	> Diagramme:
 		- 
+	\captionsetup[subfigure]{labelformat=empty}
+	\begin{figure}[h!]
+		\small
+		\centering	
+		\subfloat[]{
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
+		}
+		\hspace*{\fill}
+		\subfloat[]{           
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
+		}
+		\hspace*{\fill}
+		\subfloat[]{           
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
+		}
+		\label{chart:final-criteria}  
+		\caption{PB Artifacts found in RAM Dump 1}
+	\end{figure}
 
+	\captionsetup[subfigure]{labelformat=empty}
+	\begin{figure}[h!]
+		\small
+		\centering	
+		\subfloat[]{
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
+		}
+		\hspace*{\fill}
+		\subfloat[]{           
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
+		}
+		\hspace*{\fill}
+		\subfloat[]{           
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
+		}
+		\label{chart:final-criteria}  
+		\caption{PB Artifacts found in RAM Dump 2}
+	\end{figure}
+	
+	\captionsetup[subfigure]{labelformat=empty}
+	\begin{figure}[h!]
+		\small
+		\centering	
+		\subfloat[]{
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
+		}
+		\hspace*{\fill}
+		\subfloat[]{           
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
+		}
+		\hspace*{\fill}
+		\subfloat[]{           
+			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
+		}
+		\label{chart:final-criteria}  
+		\caption{PB Artifacts found in RAM Dump 3}
+	\end{figure}
 		
-\subsubsection*{Quantitative Zusammenfassung}
->	Keyword-Hits Autopsy vs. RAM (pro Zeitpunkt)
->	Anzahl private Browsing Artefakte pro Keyword (pro Zeitpunkt)
+	\begin{figure}[h!]
+		\resizebox{\linewidth}{!}{\includegraphics{bilder/stacked-bar-chart-test.png}}
+		\label{chart:final-criteria}  
+		\caption{Comparison of found PB artifacts between RAM Dumps}
+	\end{figure}
 
 
 \section{Tor}
