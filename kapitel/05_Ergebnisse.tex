@@ -12,7 +12,77 @@ Für jedes Unterkapitel gilt:
 
 \subsubsection*{Schreiboperationen mit Process Monitor verfolgen}
 
-Qualitative Analyse:
+Allgemein: Nur Dateien untersucht, die gemäß Methodik (Kapitel X) entweder im Snapshot vorhanden sind oder sich über Autopsy Carving PlugIn bzw. RAM wiederherstellen lassen.
+> Wenn Temp-Dateien nicht mehr vorhanden, wird die nicht-Temp Datei aufgeführt
+> SQLite: um DBs auswerten zu können, werden alle WAL-Dateien mittels PRAGMA Checkpoint in die .sqlite-Datei überführt
+
+> TODO: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
+> TODO: In Tabelle auch Tool aufführen, mit dem Datei untersucht wurde
+
+Logfile 1:
+==========
+Kategorien der Logs:
+- Common Paths:
+	(Local) %C:\Users\Forensik\AppData\Local\Mozilla\Firefox\Profiles\<Profile>.default-release\
+	(Roaming) %C:\Users\Forensik\AppData\Roaming\Mozilla\Firefox\Profiles\<Profile>.default-release\
+- Cache:
+	> % \cache2\entries\037778A55E1B7E9BED3390289866D09402D6C913 (Local)
+	> % \cache2\entries\1223A0378B8971FA4CD25EA1731C80B2B1676B42 (Local)
+	> % \cache2\entries\250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E (Local)
+	> % \jumpListCache\ZKJGVJPzPe7w4w0KwEY0jw==.ico (Local)
+- Datareporting:
+	> % \datareporting\glean\events\pageload (Roaming)
+	> % \datareporting\glean\db\data.safe (Roaming)	
+- SQLite:
+	> % \storage\permanent\chrome\idb\3870112724rsegmnoittet-es.sqlite (Roaming)
+	> % \places.sqlite (Roaming)
+	> % \formhistory.sqlite (Roaming)
+- Sessionstore:
+	> % \sessionstore-backups\recovery.jsonlz4 (Roaming)
+- Sonstige Dateien:
+	> % \prefs-1.js
+	> % \xulstore.json
+		
+
+Logfile 2:
+==========
+Allgemein: Nur 4 Schreiboperationen auf Dateien, die in 1. Logfile (mit * markiert) beschrieben wurden
+> TODO: Bei diesen Dateien gleich Diff beschreiben => SQLite-Dateien gesondert betrachtet
+- Cache: 
+	> % \cache2\index (Local)
+	> % \cache2\index.log (Local)
+		=> Untersucht mit HxD
+- datareporting:
+	*> % \datareporting\glean\db\data.safe (Roaming)
+	> %  \datareporting\glean\db\9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4 (Roaming)
+	> % \datareporting\glean\db\86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4 (Roaming)
+	> % \datareporting\glean\db\abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4 (Roaming)
+		=> dekomprimiert mit dejsonlz4
+- SQLite: (TODO: Abgleich mit Diffs-Exceltabelle, ob wirklich nur in places.sqlite geschrieben wurde)
+	*> % \places.sqlite (Roaming)
+	> % \formhistory.sqlite (Roaming)
+	> % \webappsstore.sqlite (Roaming)
+	> % \favicons.sqlite-wal (Roaming)
+	> % \storage.sqlite (Roaming)
+	> % \storage\permanent\chrome\idb\1657114595AmcateirvtiSty.sqlite (Roaming)
+		=> Untersucht mit SQLite-viewer
+		=> Diff mit sqldiff
+		=> Checkpoints mit PRAGMA wal\_checkpoints
+		=> TODO: ganz zum Schluss schreiben, danach gleich SQLite Diff Tabelle erklären
+- Sessionstore-Backup:
+	> % \sessionstore.jsonlz4.tmp
+		=> dekomprimiert mit dejsonlz4
+- Sonstige Dateien:
+	*> % \prefs-1.js (Roaming)
+	*> % \xulstore.json (Roaming)
+	> % \sessionCheckpoints.json (Roaming)
+	> % \9102466b-e465-4ecb-810f-74ae90c64c63.tmp (Roaming)
+	> % \86f4c992-6329-415b-8c29-911a2d4b7f9d.tmp (Roaming)
+	> % \abf8b065-41a4-4e94-a044-1cead61e396a.tmp (Roaming)
+	> % \a35decee-d7c6-4820-a381-2dc89ff33c76.tmp (Roaming)
+		
+
+Literatur:
 	o no traces were found in “common locations” \cite{Montasari.2015}
 		>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
 	o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
