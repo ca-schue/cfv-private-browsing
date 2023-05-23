@@ -16,12 +16,12 @@
 \contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{20}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{23}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{23}{}%
-\contentsline {section}{\numberline {5.2}Tor}{27}{}%
-\contentsline {section}{\numberline {5.3}Chrome}{28}{}%
-\contentsline {section}{\numberline {5.4}Brave}{28}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{29}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{30}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{31}{}%
-\contentsline {chapter}{Literaturverzeichnis}{32}{}%
-\contentsline {chapter}{\nonumberline Literatur}{32}{}%
+\contentsline {section}{\numberline {5.2}Tor}{26}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{29}{}%
+\contentsline {section}{\numberline {5.4}Brave}{29}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{30}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{31}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{32}{}%
+\contentsline {chapter}{Literaturverzeichnis}{33}{}%
+\contentsline {chapter}{\nonumberline Literatur}{33}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
