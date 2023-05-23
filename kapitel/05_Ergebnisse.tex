@@ -160,7 +160,7 @@ Literatur:
 	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
 		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
 		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
-		> The BAM registry key contains multiple subkeys under bam\State\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
+		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
 		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
 		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
 		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
@@ -238,77 +238,62 @@ Literatur:
 		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsubsection*{Analyse mit Volatility}
-o	RAM Yarascan Treffer
-	>	Dump 1 vs 2 vs 3 
-	>	Im 3. Dump svchost: Evtl. mit Process Explorer VM Snapshot klonen, “auftauen” und zeigen, dass DNS-Cache die Daten speichert. 
-	-->	Hier DNSlist zeigen
-	-->	Evtl. 4. Dump nach Beenden/Deaktivieren von DNS-Cache zeigen, dass keine Yarascan Ergebnisse mehr vorhanden
+Vorgehen: Siehe "Methodik" Kapitel
+	- Ausgangslage: Volatility Yarascan Treffer
+	- Für jeden Treffer: virtueller Offset des Strings, PID, getriggerte Yararule, getriggerte Yara Component z(= Variablenname des gesuchten Strings), gefundener String
+	- Neue Spalte: "Prozessname" -> zu jeder PID Prozessnamen
+	- Ergebnisse Aufbereitet nach folgendem Schema:
+		> Für jeden RAM Dump
+		> Für jede Yararule
+		> Für jede Component
+		> Filter: Prozessname = Firefox -> Anzahl zählen
+		> Filter: Prozessname = Alle Prozesse außer Firefox -> Anzahl zählen
 
-	> Diagramme:
-		- 
-	\captionsetup[subfigure]{labelformat=empty}
-	\begin{figure}[h!]
-		\small
-		\centering	
-		\subfloat[]{
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
-		}
-		\hspace*{\fill}
-		\subfloat[]{           
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
-		}
-		\hspace*{\fill}
-		\subfloat[]{           
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
-		}
-		\label{chart:final-criteria}  
-		\caption{PB Artifacts found in RAM Dump 1}
-	\end{figure}
+Quantitative Auswertung:
+	- RAM Dump 1: 0 Yarascan-Treffer
+	- RAM Dump 2: (Nach Browsing Szenario, Browser noch geöffnet)
+		\captionsetup[subfigure]{labelformat=empty}
+		\begin{figure}[h!]
+			\small
+			\centering	
+			\subfloat[]{
+				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
+			}
+			\hspace*{\fill}
+			\subfloat[]{           
+				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
+			}
+			\hspace*{\fill}
+			\subfloat[]{           
+				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
+			}
+			\label{chart:final-criteria}  
+			\caption{PB Artifacts found in RAM Dump 1}
+		\end{figure}	
+		Yararule "Keyword":
+			> Firefox: 1974x
+			> Non-Firefox: 12x
+		Yararule "URL"
+			> Firefox: 8211x
+			> Non-Firefox: 444x		
+		Yararule "Mail":
+			> Firefox: 1974x
+				=> Absenderadresse so häufig wie Empfängeradressen zusammen
+				=> PW im Klartext 4x!
+			> Non-Firefox: 12x
+		Yararule "Image":
+			> TODO!
+	- RAM Dump 3: (Nach Browsing Szenario, Browser geschlossen)
+		TODO!
 
-	\captionsetup[subfigure]{labelformat=empty}
-	\begin{figure}[h!]
-		\small
-		\centering	
-		\subfloat[]{
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
-		}
-		\hspace*{\fill}
-		\subfloat[]{           
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
-		}
-		\hspace*{\fill}
-		\subfloat[]{           
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
-		}
-		\label{chart:final-criteria}  
-		\caption{PB Artifacts found in RAM Dump 2}
-	\end{figure}
-	
-	\captionsetup[subfigure]{labelformat=empty}
-	\begin{figure}[h!]
-		\small
-		\centering	
-		\subfloat[]{
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
-		}
-		\hspace*{\fill}
-		\subfloat[]{           
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
-		}
-		\hspace*{\fill}
-		\subfloat[]{           
-			\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
-		}
-		\label{chart:final-criteria}  
-		\caption{PB Artifacts found in RAM Dump 3}
-	\end{figure}
-		
-	\begin{figure}[h!]
-		\resizebox{\linewidth}{!}{\includegraphics{bilder/stacked-bar-chart-test.png}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
+Zusammenfassung = Stacked Bar Chart:
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/stacked-bar-chart-test.png}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
 
+TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
 
 \section{Tor}
 

@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{20}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{23}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{23}{}%
-\contentsline {section}{\numberline {5.2}Tor}{26}{}%
+\contentsline {section}{\numberline {5.2}Tor}{28}{}%
 \contentsline {section}{\numberline {5.3}Chrome}{29}{}%
 \contentsline {section}{\numberline {5.4}Brave}{29}{}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{30}{}%
