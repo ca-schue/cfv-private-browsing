@@ -154,6 +154,11 @@ Definition: Common Location
 	3.	Wenn nein, prüfen, ob Datei in RAM gecacht
 	-> Hier beschreiben, wie mit Volatility filelist etc. Dateien aus RAM wiederhergestellt werden können
 	4.	Prüfen ob Browsing Artefakte in Dateien enhalten sind: Stringsuche nach Aktionen des Browsing-Protokolls
+	
+	TODO:
+	Allgemein: Nur Dateien untersucht, die gemäß Methodik (Kapitel X) entweder im Snapshot vorhanden sind oder sich über Autopsy Carving PlugIn bzw. RAM wiederherstellen lassen.
+	> Wenn Temp-Dateien nicht mehr vorhanden, wird die nicht-Temp Datei aufgeführt
+	
 	\begin{figure}[h!]
 		\centering
 		\small
@@ -167,6 +172,8 @@ Definition: Common Location
 	> Begründung: In Literatur ermittelt, dass SQLite DB von zentraler Bedeutung bei Browser History -> Hier wird i.d.R. Suchverlauf gespeichert
 	> Zählt zu den wichtigsten "Common Locations"
 	-> Vorgehen: Siehe Aktivitätsdiagramm
+		TODO: WAL Checkpoint
+		
 \begin{figure}[h!]
 	\centering
 	\small

@@ -12,11 +12,13 @@ Für jedes Unterkapitel gilt:
 
 Schreiboperationen mit Process Monitor verfolgen:
 
-Allgemein: Nur Dateien untersucht, die gemäß Methodik (Kapitel X) entweder im Snapshot vorhanden sind oder sich über Autopsy Carving PlugIn bzw. RAM wiederherstellen lassen.
-> Wenn Temp-Dateien nicht mehr vorhanden, wird die nicht-Temp Datei aufgeführt
-> SQLite: um DBs auswerten zu können, werden alle WAL-Dateien mittels PRAGMA Checkpoint in die .sqlite-Datei überführt
+Aux-Dateien, welche nicht mehr vorhanden waren, aber dafür "richtige" Dateien:
+	- % *\datareporting\glean\db\data.safe
+	- % *\sessionstore-backups\recovery.jsonlz4
+	- % *\xulstore.json
 
 Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Tool mit dem Datei untersucht wurde
+- Dateien, die in beiden Logfiles nicht wiederherstellbar 
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-tabelle-logfile1vlogfile2-reduced.png}}
 %	\label{...}
@@ -103,17 +105,18 @@ Kategorien der Logs:
 			"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" 
 			%https://wiki.mozilla.org/Firefox/Activity_Stream
 			--> DB enthält keine Browsing Artefakte
+	\begin{figure}[h!]
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sqlite-table.png}}}
+		\label{chart:final-criteria}  
+		\caption{Comparison of found PB artifacts between RAM Dumps}
+	\end{figure}
+
 
 Zusammenfassung:
 	Allgemein: Nur 4 Schreiboperationen auf Dateien, die in 1. Logfile (mit * markiert) beschrieben wurden => TODO: für Sqlite Datien prüfen
 
 Quantitativ: (Diagramme)		
-	> Gestacktes Balkendiagramm zu veränderten SQLite DBs
-	\begin{figure}[h!]
-		\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/firefox-stacked-bar-chart-sqlite-test.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
+	> Gestacktes Balkendiagramm zu veränderten SQLite DBs => Erst bei Vergleich mit Tor!
 	> Balkendiagramm: Für jede Logfilekategorie: Anzahl Schreiboperationen Logfile 1 vs Logfile 2
 	\begin{figure}[h!]
 		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}}
