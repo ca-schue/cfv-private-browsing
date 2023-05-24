@@ -16,16 +16,14 @@ Allgemein: Nur Dateien untersucht, die gemäß Methodik (Kapitel X) entweder im 
 > Wenn Temp-Dateien nicht mehr vorhanden, wird die nicht-Temp Datei aufgeführt
 > SQLite: um DBs auswerten zu können, werden alle WAL-Dateien mittels PRAGMA Checkpoint in die .sqlite-Datei überführt
 
-Hier: Nur Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2
+Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Tool mit dem Datei untersucht wurde
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-tabelle-logfile1vlogfile2-reduced.png}}
 %	\label{...}
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
 
-
-> TODO: Tabelle in Anhang mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
-> TODO: In Tabelle auch Tool aufführen, mit dem Datei untersucht wurde
+Im Anhang: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
 
 Kategorien der Logs:
 - Common Paths:
