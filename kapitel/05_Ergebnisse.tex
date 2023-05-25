@@ -12,10 +12,15 @@ Für jedes Unterkapitel gilt:
 
 Schreiboperationen mit Process Monitor verfolgen:
 
+Im Anhang: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
+
 Aux-Dateien, welche nicht mehr vorhanden waren, aber dafür "richtige" Dateien:
 	- % *\datareporting\glean\db\data.safe
-	- % *\sessionstore-backups\recovery.jsonlz4
-	- % *\xulstore.json
+	- % *\datareporting\archived\2023-05\1683405837882.9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4
+	- % *datareporting\archived\2023-05\1683405837905.86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4
+	- % *datareporting\archived\2023-05\1683405837939.abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4
+	- % *sessionstore-backups\recovery.jsonlz4
+	- % *xulstore.json
 
 Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Tool mit dem Datei untersucht wurde
 - Dateien, die in beiden Logfiles nicht wiederherstellbar 
@@ -25,47 +30,61 @@ Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Too
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
 
-Im Anhang: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
+Allgemein: Artefakte in zwei "Common Pfaden"
+-	(Local) %C:\Users\Forensik\AppData\Local\Mozilla\Firefox\Profiles\<Profile>.default-release\
+-	(Roaming) %C:\Users\Forensik\AppData\Roaming\Mozilla\Firefox\Profiles\<Profile>.default-release\
 
 Kategorien der Logs:
-- Common Paths:
-	(Local) %C:\Users\Forensik\AppData\Local\Mozilla\Firefox\Profiles\<Profile>.default-release\
-	(Roaming) %C:\Users\Forensik\AppData\Roaming\Mozilla\Firefox\Profiles\<Profile>.default-release\
-
-> TODO: Bei diesen Dateien gleich Diff beschreiben => SQLite-Dateien gesondert betrachtet
 - Cache: 
 	Logfile 1:
 		> % \cache2\entries\037778A55E1B7E9BED3390289866D09402D6C913 (Local)
 		> % \cache2\entries\1223A0378B8971FA4CD25EA1731C80B2B1676B42 (Local)
 		> % \cache2\entries\250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E (Local)
+		Analyse:
+			- Tool: MozillaCacheView
+			- TODO: Screenshot
 		> % \jumpListCache\ZKJGVJPzPe7w4w0KwEY0jw==.ico (Local)
-			Enthält kleines "m" Icon
+			- Tool: Windows Foto App
+			- Enthält kleines "m" Icon
 	Logfile 2:
 		> % \cache2\index (Local)
 		> % \cache2\index.log (Local)
-			=> Untersucht mit HxD
+		Analyse:
+			- Tool: siehe Github und HxD
 - datareporting:
-	=> dekomprimiert mit dejsonlz4
 	Logfile 1:
 		> % \datareporting\glean\events\pageload (Roaming)
 		> % \datareporting\glean\db\data.safe (Roaming)	
+		Analyse:
+			- Tool: HxD
+			- keine PB Artefakte
 	Logfile 2:
 		*> % \datareporting\glean\db\data.safe (Roaming)
 		> %  \datareporting\glean\db\9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4 (Roaming)
 		> % \datareporting\glean\db\86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4 (Roaming)
 		> % \datareporting\glean\db\abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4 (Roaming)
-			enthält Systeminformationen
+		Analyse:
+			- TODO: Definition glean
+			- jsonlz4 Dateien (TODO: Definition) mit dejsonlz4 dekomprimiert (Quelle Github)
+			- Dateien enthalten Systeminformationen im Json-Format (Screenshot?)
+			- keine PB Artefakte
 - Sessionstore-Backup:
-	=> dekomprimiert mit dejsonlz4
 	Logfile 1:
 		> % \sessionstore-backups\recovery.jsonlz4 (Roaming)
-			mit Tool: Tab 1:  Willkommen bei Firefox [6.5.2023, 22:25:06, about:welcome;
-			Tab 2:  Firefox Datenschutzhinweis — Mozilla [6.5.2023, 22:24:59], % https://www.mozilla.org/de/privacy/firefox/
-			(Gleicher Inhalt in recovery.baklz4)
+		Analyse:
+			- TODO: Definition sessionstore-backup = Datei, die Backup von Sitzungsdaten enthält
+			- jsolz4 Datei in sessionstore-backup lassen sich mit Online-Tool parsen (https://www.jeffersonscher.com/ffu/scrounger.html)
+			- Ergebnise: 
+				Tab 1:  Willkommen bei Firefox [6.5.2023, 22:25:06, about:welcome;
+				Tab 2:  Firefox Datenschutzhinweis — Mozilla [6.5.2023, 22:24:59], % https://www.mozilla.org/de/privacy/firefox/
+			- Sind Seiten, die sich automatisch geöffnet haben, nachdem Firefox zum ersten Mal geöffnet wurde
+			- keine PB Artefakte
 	Logfile 2:
 		> % \sessionstore.jsonlz4
-			nein, nach Dekompression image-Eintrag als base64 entdeckt: "m" Icon
-			(https://base64.guru/converter/decode/image)
+		Analyse:
+			- Lässt sich nicht mit Online-Tool aus Logfile 1 parsen
+			- Stattdessen: dejsonlz4, danach Notepad++ mit JSON Plugin
+			- Ergebnis: image-Eintrag als base64 entdeckt, in PNG umgewandelt (https://base64.guru/converter/decode/image), mit Windows Foto-App: "m" Icon (Mozilla-Logo)
 - Sonstige Dateien:
 	Logfile 1:
 		> % \prefs-1.js
@@ -73,50 +92,71 @@ Kategorien der Logs:
 	Logfile 2:
 		*> % \prefs-1.js (Roaming)
 		*> % \xulstore.json (Roaming)
-			neuer Eintrag "sidebar-box"
 		> % \sessionCheckpoints.json (Roaming)
 		> % \9102466b-e465-4ecb-810f-74ae90c64c63.tmp (Roaming)
 		> % \86f4c992-6329-415b-8c29-911a2d4b7f9d.tmp (Roaming)
 		> % \abf8b065-41a4-4e94-a044-1cead61e396a.tmp (Roaming)
 		> % \a35decee-d7c6-4820-a381-2dc89ff33c76.tmp (Roaming)
+	Analyse:
+		- Weder JSON-Dateien (Notepad++) noch .tmp Dateien (HxD) enthalten PB Artefakte
+		
 - SQLite: (TODO: Abgleich mit Diffs-Exceltabelle, ob wirklich nur in places.sqlite geschrieben wurde)
-	=> Untersucht mit SQLite-viewer
-	=> Diff mit sqldiff
-	=> Checkpoints mit PRAGMA wal\_checkpoints
-	=> SQLite Diff Tabelle 
-	Logfile 1:
-		> % \storage\permanent\chrome\idb\3870112724rsegmnoittet-es.sqlite (Roaming)
-		*> % \places.sqlite (Roaming)
-		> % \formhistory.sqlite (Roaming)
-	Logfile 2:
-		*> % \places.sqlite (Roaming)
-		> % \formhistory.sqlite (Roaming)
-			This file remembers what you have searched for in the Firefox search bar and what information you’ve entered into forms on websites.
-			% (https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data)
-		> % \webappsstore.sqlite (Roaming)
-		> % \favicons.sqlite-wal (Roaming)
-		> % \storage.sqlite (Roaming)
-		> % \storage\permanent\chrome\idb\1657114595AmcateirvtiSty.sqlite (Roaming)
-			> IndexedDB-Dateien, sind DBs, die von besuchten Webseiten
-			angelegt werden % (https://www.reddit.com/r/firefox/comments/dri650/what_are_the_idb_files_in_the_permanent_storage/)
-			> Im Chrome-Ordner: "the databases in the chrome subfolder relate to various pieces of integrated firefox functionality (content for the new tab page, blocklists, shield/normandy, remote settings, push api, ...)"
-			> Enthalten eigentlich URL im Dateinamen
-			> TODO: können geparsed werden: % https://stackoverflow.com/a/59923297/18037004
-			"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" 
-			%https://wiki.mozilla.org/Firefox/Activity_Stream
-			--> DB enthält keine Browsing Artefakte
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sqlite-table.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
+	Dateien haben Sonderstellung:
+		- Diese DBs dienen zur Verwaltung und Speicherung sämtlicher Browser Artefakte, insb. der Browser Historie
+		- Aus diesem Grund: Dateien intensiver betrachtet
+	Siehe Kapitel Methodik:
+		> Entwicklung von Dateiinhalt in allen Snapshots (1, 2, 3 und 4) betrachtet
+		> Für jeden Snapshot: 
+			- SQLite-Datei extrahiert und mit SQLite-Datei aus vorherigem Snapshot verglichen
+			- Untersuchung der SQLite-Dateien mit SQLite-Viewer (GUI-Tools)
+			- Wenn zu SQLite-Datei WAL-Datei existiert: mit sqlite3 Kommandozeilentool PRAGMA wal\_checkpoint durchgeführt, danach neue SQLite-Datei mit ursprünglicher SQLite-Datei verglichen
+		> Dabei gibt es drei Zustände: 
+			- leere Datei
+			- neuer (nicht-leerer) Inhalt
+			- gleichbleibender Inhalt
+	Mit Process Monitor Logfiles festgestellt, dass in folgende SQLite-DBs geschrieben: 
+		(TODO: Tabelle mit Spalten: Dateiname, Zweck)
+			Dateiename:							Zweck:
+		- places.sqlite 						Browsing Historie
+		- cookies.sqlite						Speichert Webseiten-Cookies
+		- storage.sqlite						Speicher für Webseiten
+		- favicons.sqlite						Speichert Icons für Lesezeichen
+		- webappsstore.sqlite					Speicher für Webseiten
+		- formhistory.sqlite					???
+		- 1657114595AmcateirvtiSty.sqlite		> IndexedDB-Dateien, sind DBs, die von besuchten Webseiten
+												angelegt werden % (https://www.reddit.com/r/firefox/comments/dri650/what_are_the_idb_files_in_the_permanent_storage/)
+												> Im Chrome-Ordner: "the databases in the chrome subfolder relate to various pieces of integrated firefox functionality (content for the new tab page, blocklists, shield/normandy, remote settings, push api, ...)"
+												> Enthalten eigentlich URL im Dateinamen
+												> TODO: können geparsed werden: % https://stackoverflow.com/a/59923297/18037004
+												"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" 
+												%https://wiki.mozilla.org/Firefox/Activity_Stream
+												--> DB enthält keine Browsing Artefakte
+		- 3870112724rsegmnoittet-es.sqlite		???
+		
+	Ergebnisse:
+		\begin{figure}[h!]
+			\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sqlite-table.png}}}
+			\label{chart:final-criteria}  
+			\caption{Comparison of found PB artifacts between RAM Dumps}
+		\end{figure}
+		> Nach Browser-Installation noch keine SQLite-Datei angelegt (Snapshot 1)
+		> Während Browsing Szenario alle DBs Initialisiert, außer "webappsstore.sqlite" (Snapshot 2)
+			- Dabei wurden in places.sqlite die Seiten geschrieben, die sich automatisch nach Browserstart im public Modus geöffnet haben (Datenschutzhinweise zu Firefox)
+			- Restliche Dateien ohne Inhalt, nur Spaltennamen
+			- Nach WAL Checkpoints bleiben Dateien unverändert
+		> Nach Schließen des Browsers (Snapshot 3)
+			- in places.sqlite: Indizes bei eingetragenen Seiten aktualisiert
+			- 1657114595AmcateirvtiSty.sqlite erhielt BLOB Eintrag, in HxD keine Muster erkennbar
+			- webappsstore.sqlite: leer initialisiert, nur Spaltennamen
+			- restliche Dateien unverändert
+			- nach WAL Checkpoints bleiben Dateien unverändert
+		> Nach herunterfahren der VM (Snapshot 4)
+			- Alle Dateien unverändert, auch nach WAL Checkpoint
+	
+- Zusammenfassung: in keiner Datei PB Artefakte
 
-
-Zusammenfassung:
-	Allgemein: Nur 4 Schreiboperationen auf Dateien, die in 1. Logfile (mit * markiert) beschrieben wurden => TODO: für Sqlite Datien prüfen
 
 Quantitativ: (Diagramme)		
-	> Gestacktes Balkendiagramm zu veränderten SQLite DBs => Erst bei Vergleich mit Tor!
 	> Balkendiagramm: Für jede Logfilekategorie: Anzahl Schreiboperationen Logfile 1 vs Logfile 2
 	\begin{figure}[h!]
 		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}}
@@ -124,27 +164,32 @@ Quantitativ: (Diagramme)
 		\caption{Comparison of found PB artifacts between RAM Dumps}
 	\end{figure}
 
-Literatur:
-	o no traces were found in “common locations” \cite{Montasari.2015}
-		>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
-	o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
-	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing Artefakte)
-	o	SQLite Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
-		> \cite{Fayyad.2021} for Mozilla Firefox, 7 database files were recovered: cookies.sqlite-shm, places.sqlite-shm, prefs.js etc.
-		> \cite{Muir.2019} The two SQLite databases used by Firefox to track cookies and history (cookies.sqlite und places.sqlite) were both recoverable from the file system after deletion	
-		Ergebnisse stehen im Gegensatz zu \cite{Hedberg.2013} :
-			o	Chrome und Firefox: Einträge in places.sqlite + history.sqlite DB gefunden während PB! (Noch aktuell??)
-		Sonderfall: SQlite DB-Crash \cite{Hedberg.2013}
-			> WAL Files/Journal Files bei Crash gefunden -> Kann genutzt werden um zu beweisen, dass privater Browser genutzt wurde
-			> Daher: WAL Rollback mit sqlite3	
-	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
+%Literatur:
+%	o no traces were found in “common locations” \cite{Montasari.2015}
+%		>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
+%	o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
+%	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing Artefakte)
+%	o	SQLite Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
+%		> \cite{Fayyad.2021} for Mozilla Firefox, 7 database files were recovered: cookies.sqlite-shm, places.sqlite-shm, prefs.js etc.
+%		> \cite{Muir.2019} The two SQLite databases used by Firefox to track cookies and history (cookies.sqlite und places.sqlite) were both recoverable from the file system after deletion	
+%		Ergebnisse stehen im Gegensatz zu \cite{Hedberg.2013} :
+%			o	Chrome und Firefox: Einträge in places.sqlite + history.sqlite DB gefunden während PB! (Noch aktuell??)
+%		Sonderfall: SQlite DB-Crash \cite{Hedberg.2013}
+%			> WAL Files/Journal Files bei Crash gefunden -> Kann genutzt werden um zu beweisen, dass privater Browser genutzt wurde
+%			> Daher: WAL Rollback mit sqlite3	
+%	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
 
 
 \subsection*{Registry}
 > Process Monitor: SetValue Operationen von Browser 
 	Kategorien Registry Keys:
 	1) PreXULSkeletonUISettings:
-		> UI Einstellungen von Firefox (TODO: Quelle) 
+		> Prefix: Absoluter Installationspfad von Firefox
+		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
+			Definition:
+				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
+				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
+			
 		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
 		> Unterschiedliche UI Einstellungen
 			- % ScreenX (DWORD)
@@ -169,23 +214,27 @@ Literatur:
 
 Quantitativ: (Diagramme)
 	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
-
+	\begin{figure}[h!]
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
+		\label{chart:final-criteria}  
+		\caption{Comparison of found PB artifacts between RAM Dumps}
+	\end{figure}
+	
 > Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
 	In allen Hives kein Treffer für alle Suchbegriffe
 
-> "shellactivities-ähnliche" Keys untersucht
-	TODO!
-	
-Literatur:
-	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
-	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
-	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
-	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
-	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
-	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
-	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
-	- IRP\_MJ\_READ: C:/pagefile.sys
+Literatur: 
+	> angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
 
+%Literatur:
+%	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+%	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
+%	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
+%	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
+%	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
+%	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
+%	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
+%	- IRP\_MJ\_READ: C:/pagefile.sys
 
 \subsection*{Black-Box Analyse/Uncommon Locations}
 
@@ -198,7 +247,7 @@ Stichwortsuche:
 - In allen Snapshots keine Treffer (auch innerhalb \$Carved)
 - TODO: Pagefile gefunden?
 
-Plug-Ins:
+Von Autopsy automatisch indexierte Dateien: 
 - Web Bookmarks:
 	Snapshot 2:
 		> 5 Einträge in places.sqlite: (Firefox Standardseiten -> Deckt sich mit Beobachtungen aus Process Monitor Analyse)
@@ -217,26 +266,26 @@ Plug-Ins:
 	Snapshot 2:
 		> 2x WebCacheV01.dat aufgelistet => Mit HxD untersucht, keine PB Artefakte
 
-Literatur:
-	o	Autopsy Keywortsuche: 
-		>	In alles Snapshots ergebnislos (keine Keyword-Hits
-		-->	In Literatur: Autoren fanden Ergebnisse in pagefile.sys 
-			> Autopsy: websites and some of the keywords found in hidden file called “pagefile.sys” \cite{Mahlous.2020}
-			o \cite{Montasari.2015} traces were found in: 
-				> However, on investigating the “pagefile.sys”, some entries were discovered
-				> Using the “data carving” technique, profile picture was recovered
-			o \cite{Said.2011} 
-				> Examining pagefile.sys showed some positive hits 			
-		--> Evtl. hier zeigen, was gefunden werden kann, wenn RAM reduziert
-		--> Aber auf Problem hinweisen, dass gefundener String in pagefile nicht direkt Browser zugeordnet werden kann
-		> \cite{Gabet.2018}	Firefox only produced three recoverable artefacts as reported by both tools (FTK, Autopsy) --> Artefakte werden nicht genannt!
-		> \cite{Muir.2019} Autopsy Keyword Suche nach Suchbegriffen: unallocated space
-		> Autopsy Carving Module (\$Carved): \cite{Muir.2019}
-			•	When searching for the string ’clot’ from the browsing protocol, six .dll, .edb and .reg files were discovered in unallocated space.
-			•	Further searching of unallocated space uncovered references to the Tor installation directory and the obfs4 bridging IP addresses
-			•	browsing data found in NTUSER.DAT was also replicated in unallocated space.
-	o	Autopsy PlugIns:
-		>	*** TODO: Hier Liste mit PlugIns ***
+%Literatur:
+%	o	Autopsy Keywortsuche: 
+%		>	In alles Snapshots ergebnislos (keine Keyword-Hits
+%		-->	In Literatur: Autoren fanden Ergebnisse in pagefile.sys 
+%			> Autopsy: websites and some of the keywords found in hidden file called “pagefile.sys” \cite{Mahlous.2020}
+%			o \cite{Montasari.2015} traces were found in: 
+%				> However, on investigating the “pagefile.sys”, some entries were discovered
+%				> Using the “data carving” technique, profile picture was recovered
+%			o \cite{Said.2011} 
+%				> Examining pagefile.sys showed some positive hits 			
+%		--> Evtl. hier zeigen, was gefunden werden kann, wenn RAM reduziert
+%		--> Aber auf Problem hinweisen, dass gefundener String in pagefile nicht direkt Browser zugeordnet werden kann
+%		> \cite{Gabet.2018}	Firefox only produced three recoverable artefacts as reported by both tools (FTK, Autopsy) --> Artefakte werden nicht genannt!
+%		> \cite{Muir.2019} Autopsy Keyword Suche nach Suchbegriffen: unallocated space
+%		> Autopsy Carving Module (\$Carved): \cite{Muir.2019}
+%			•	When searching for the string ’clot’ from the browsing protocol, six .dll, .edb and .reg files were discovered in unallocated space.
+%			•	Further searching of unallocated space uncovered references to the Tor installation directory and the obfs4 bridging IP addresses
+%			•	browsing data found in NTUSER.DAT was also replicated in unallocated space.
+%	o	Autopsy PlugIns:
+%		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsubsection*{Analyse mit Volatility}
 Vorgehen: Siehe "Methodik" Kapitel
@@ -251,41 +300,53 @@ Vorgehen: Siehe "Methodik" Kapitel
 		> Filter: Prozessname = Alle Prozesse außer Firefox -> Anzahl zählen
 
 Quantitative Auswertung:
-	- RAM Dump 1: 0 Yarascan-Treffer
-	- RAM Dump 2: (Nach Browsing Szenario, Browser noch geöffnet)
-		\captionsetup[subfigure]{labelformat=empty}
-		\begin{figure}[h!]
-			\small
-			\centering	
-			\subfloat[]{
-				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
-			}
-			\hspace*{\fill}
-			\subfloat[]{           
-				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
-			}
-			\hspace*{\fill}
-			\subfloat[]{           
-				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
-			}
-			\label{chart:final-criteria}  
-			\caption{PB Artifacts found in RAM Dump 1}
-		\end{figure}	
+TODO: Abbildung Ändern: Eine Abbildung = Eine Yara-Rule-Kategorie, vergleich zwischen RAM-Dump 1, 2 und 3
+%		\captionsetup[subfigure]{labelformat=empty}
+%		\begin{figure}[h!]
+%			\small
+%			\centering	
+%			\subfloat[]{
+%				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-1.png}}
+%			}
+%			\hspace*{\fill}
+%			\subfloat[]{           
+%				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-2.png}}
+%			}
+%			\hspace*{\fill}
+%			\subfloat[]{           
+%				\resizebox{!}{5cm}{\includegraphics{bilder/bar-chart-test-3.png}}
+%			}
+%			\label{chart:final-criteria}  
+%			\caption{PB Artifacts found in RAM Dump 1}
+%		\end{figure}	
 		Yararule "Keyword":
-			> Firefox: 1974x
-			> Non-Firefox: 12x
-		Yararule "URL"
-			> Firefox: 8211x
-			> Non-Firefox: 444x		
+			RAM-Dump 2:
+				> Firefox: 1974x
+				> Non-Firefox: 12x
+		Yararule "URL":
+			RAM-Dump 2:
+				> Firefox: 8211x
+				> Non-Firefox: 444x		
 		Yararule "Mail":
-			> Firefox: 1974x
-				=> Absenderadresse so häufig wie Empfängeradressen zusammen
-				=> PW im Klartext 4x!
-			> Non-Firefox: 12x
+			RAM-Dump 2:
+				> Firefox: 1974x
+					=> Absenderadresse so häufig wie Empfängeradressen zusammen
+					=> PW im Klartext 4x!
+				> Non-Firefox: 12x
 		Yararule "Image":
-			> TODO!
-	- RAM Dump 3: (Nach Browsing Szenario, Browser geschlossen)
-		TODO!
+			RAM-Dump 2:
+				> TODO!
+
+Ergebnis: 
+	> RAM-Dump 3 enthält deutlich weniger Artefakte
+	> Hauptsächlich in nicht-Firefox Prozessen
+	> Genaue Untersuchung: Hauptsächlich in SVCHost (TODO: Definition)
+	> Welcher Service genau? Volatility svcscan liefert keine PID zu laufenden Services
+	> Deshalb Snapshot 3 erneut aufgetaut, danach mit Process Explorer PID von SVChost gefiltert
+	> Ergebnis: DNSCache Service
+	> Ausführung von ifconfig dnslist liefert gecachte URLs
+	> Nach Löschen des DNSCaches + Erneuter RAM-Dump -> Keine PB Artefakte mehr gefunden!
+	
 
 Zusammenfassung = Stacked Bar Chart:
 \begin{figure}[h!]
