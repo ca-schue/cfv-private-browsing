@@ -15,12 +15,17 @@ Warum Methodik?
 	
 Bekanntes Computer Forensik Vorgehensmodell: \cite{Yusoff.2011}: Generic Model Computer Forensics Investigations (GCFIM) -> Daran orientieren sich alle in der Literatur
 
+BSI: "abschnittsbasierter Verlauf einer forensischen Untersuchung" % https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Cyber-Sicherheit/Themen/Leitfaden_IT-Forensik.pdf?__blob=publicationFile&v=2
+- Vorbereitung;
+- Datensammlung;
+- Untersuchung: Extraktion von Bilddateien aus dem Image
+- Datenanalyse: Verbindungen zwischen mehreren Daten herstellen
+- Dokumentation
 
 Phasen nach \cite{Montasari.2015}
 	•	Die forensische Analyse erfolgt in zwei Phasen.
 	1.	Zunächst wird die Analyse an sowohl "üblichen" als auch "ungewöhnlichen" Speicherorten auf der Festplatte durchgeführt.
 	2.	In der zweiten Phase wird der physische Arbeitsspeicher (RAM) untersucht.
-
 
 Phasen nach \cite{Izzati.2022}:
 	•	Es gibt verschiedene Modelle für digitale Forensik, die sich in ihren Phasen unterscheiden können.
@@ -34,45 +39,13 @@ Phasen nach \cite{Izzati.2022}:
 		o	Bilder der Speicherabbilder mit einem forensischen Tool untersuchen	Validierungsphase
 		o	gefundenen Artefakte verglichen und dokumentiert
 
+\section{Vorbereitung}
 
-
-\section{Preparation Stage}
+- \cite{Izzati.2022} Versuchsplanung + Konfiguration der HW/SW + Durchführen des Experiments Acquisition Stage
+- BSI: alle Maßnahmen, die nach vermuteten Eintreten eines Vorfalls aber vor der eigentlichen Datensammlung erfolgen. 
+	-> z.B. Identifikation und Enumeration potentieller Datenquellen
 
 \subsection{Konfiguration der Versuchsumgebung}
-
-\subsubsection*{VM Konfiguration}
-RAM:
-	- Kaum Angaben in der Literatur:
-		> \cite{Rochmadi.2017}: 2 GB 
-		> \cite{Ohana.2013}: 4 GB
-	- Hier: 6 GB 
-	-> Ausblick: Kritik an Literatur, dass RAM-Größe kaum thematisiert wird, obwohl sie Auswirkungen auf Ergebnisse hat -> Siehe Kapitel X (TODO!)
-
-Netzwerkeinstellungen: 
-	- TODO
-
-Windows 10 Installation:
-	- TODO
-
-Tools auf VM:
-	- Process Monitor
-	- Regshot
-
-\subsubsection*{Konfiguration des Analyse-Rechners}
-
-Volatility:
-	Plugins-Liste: (Ähnlich zu \cite{Hariharan} und \cite{Dayalamurthy.2013})
-		- TODO
-	
-Autopsy:
-	Evtl. hier Sleuthkit vs Autopsy thematisieren
-		- TODO
-
-Sonstige Tools:
-	WinHex SQLite Viewer etc.
-		- TODO
-
--> Evtl. am Schluss Tabelle mit allen Tool, Versionen und Plug-Ins
 
 \subsection{Browserauswahl}
 
@@ -85,21 +58,157 @@ Sonstige Tools:
 - preventing from writing to disk (Perry et al., 2018) 
 - enabling secure deletion of the browser (Sandvik, 2013) (hier nicht relevant)
 
-
 \subsection{Browsing Szenario}
 - Wichtig für White-Box-Ansatz: Browsing Szenario ist bekannt
 - URL X … 	(TODO!)
 
+\subsubsection*{VM Konfiguration}
 
+Virtualisierung:
+	> Oracle VirtualBox VM, Version 7.0.8 r156879 (Qt5.15.2)
+	TODO: Warum Virtualisierung?
+	> Pro Browser eine VM
+
+VM Betriebssystem: In Literatur (wie viele?) ausschließlich Windows untersucht -> Da Ziel dieser Arbeit: keine neuen wissenschaftlichen Ergebnisse => auch Windows 10
+	Dazu: Windows 10 Pro, Build: 19045.2006 (nicht aktiviert)
+	> Auf einer VM installiert, danach OVA erstellt. Von dieser ausgehend, für jeden Browser VM erstellt
+
+VM Massenspeicher: 30 GB (VDI-Format), kein SSD-Laufwerk
+
+VM RAM: Kaum Angaben in der Literatur:
+	> \cite{Rochmadi.2017}: 2 GB 
+	> \cite{Ohana.2013}: 4 GB
+	- Hier: 6 GB (maximal möglich, mit verfügbaren Speicherresourcen, um später RAM-Dumps zu speichern)
+	-> Ausblick: Kritik an Literatur, dass RAM-Größe kaum thematisiert wird, obwohl sie Auswirkungen auf Ergebnisse hat -> Siehe Pagefile-Thematik in Analysis Stage
+
+VM Netzwerkeinstellungen: An Literatur orientiert (Quelle?)
+	- Netzwerkadapter mit Netzwerkbrücke = direkt mit dem physischen Netzwerk deines Hostsystems verbinden -> virtuelle Maschine eine eigene IP-Adresse im physischen Netzwerk
+	- Netzwerkadapter erst nach Browserinstallation aktiviert
+
+Programme auf VM:
+	- Untersuchter Browser. Installationsverzeichnisse:
+		> Firefox: % C:\Program Files\Mozilla Firefox\firefox.exe
+		> Tor: % "C:\Program Files\Tor Browser\Browser\firefox.exe"
+		> Chrome:
+		> Brave:
+			
+	- Process Monitor
+		"Process Monitor ist ein Dienstprogramm für das Windows-Betriebssystem, das von Microsoft entwickelt wurde. Es ermöglicht die Überwachung und Aufzeichnung aller Aktivitäten und Ereignisse, die auf einem Windows-System im Zusammenhang mit Prozessen, Dateisystemen, Registrierungseinträgen, Netzwerkverbindungen und vielem mehr stattfinden. Mit Process Monitor kannst du detaillierte Informationen über den Betrieb deines Systems erhalten, um Probleme zu diagnostizieren, Softwarekonflikte zu lösen oder verdächtige Aktivitäten zu untersuchen. Das Tool bietet eine umfassende Echtzeit-Überwachungsfunktion, die es dir ermöglicht, alle Ereignisse und Aktionen zu erfassen, die während der Ausführung von Prozessen auf deinem System auftreten."
+		% https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
+		Version: v3.93
+		Hier: Verwendet, um Aktivitäten des Browsers aufzuzeichnen (vgl. Wireshark Capture) -> Siehe Sammlungsphase
+	
+	- Process Explorer
+		"Process Explorer erweitert die Funktionen des Windows Task Managers und ermöglicht es Benutzern, einen umfassenden Überblick über alle aktiven Prozesse und deren Eigenschaften zu erhalten." 
+		Hier wichtig: Ermöglicht zudem alle ausgeführten Services einer PID zuzuordnen
+		% https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
+		Version: v17.04
+
+\subsubsection*{Verwendete Tools zur Analyse}
+
+Volatility: % https://www.volatilityfoundation.org/
+	"Das Volatility Memory Forensics Framework ist ein Open-Source-Tool, das für die forensische Analyse von Arbeitsspeicherabbildern verwendet wird. Es ist speziell darauf ausgerichtet, Informationen und Artefakte aus dem physischen oder virtuellen Arbeitsspeicher eines Computers zu extrahieren.
+	
+	Frei auf GitHub verfügbar: % https://github.com/volatilityfoundation/volatility3	
+	Version: 2.4.1 (aktuellster Release)
+	Basierend auf python
+
+	Die Volatility Foundation wurde ins Leben gerufen, um die Interessen der Volatility-Community zu vertreten und sicherzustellen, dass das Framework frei verfügbar 	bleibt und kontinuierlich weiterentwickelt wird. Das Projekt wird von einer Gemeinschaft von Freiwilligen vorangetrieben, die zur Code-Entwicklung, Dokumentation und Fehlerbehebung beitragen.
+
+	Das Tool wurde entwickelt, um Forensikern und Sicherheitsexperten bei der Untersuchung von Sicherheitsvorfällen, Malware-Angriffen und anderen verdächtigen Aktivitäten zu unterstützen. Durch die Analyse des Arbeitsspeichers können wichtige Informationen wie Prozesse, Netzwerkverbindungen, Dateisystemstrukturen, Registrierungseinträge und sogar verschlüsselte Daten wiederhergestellt werden."
+
+	Volatility3:
+	"Volatility 3 tatsächlich eine vollständige Neuschreibung des Volatility Memory Forensics Frameworks zu sein, die im Jahr 2020 veröffentlicht wurde. Diese Neuschreibung sollte viele technische und Leistungsprobleme der ursprünglichen Version beheben, die seit der ersten Veröffentlichung im Jahr 2007 aufgetreten sind.
+
+	Volatility 3 wurde mit dem Ziel entwickelt, eine robustere, flexiblere und skalierbarere Plattform für die Analyse von Arbeitsspeicherabbildern bereitzustellen. Es wurden Verbesserungen hinsichtlich der Architektur, der Leistung und der Plugin-Entwicklung vorgenommen. Die Neuschreibung ermöglichte auch eine Anpassung der Lizenzierung durch die Einführung der Volatility Software License (VSL)."
+
+	Großer Vorteil von Volatility3: kein "Profile" mehr notwendig. = Konfigurationseinstellung, die angibt, um welches Betriebssystem und welche Version es sich im Arbeitsspeicherabbild handelt. Ein Profil definiert die Speicherstruktur und die Verhaltensweisen des Betriebssystems, die Volatility bei der Analyse des Arbeitsspeichers berücksichtigen muss.
+		=> Grund: kann neue Symboltabellen für die meisten Windows-Speicherabbilder generieren, basierend auf dem Speicherabbild selbst
+		% https://volatility3.readthedocs.io/en/latest/vol2to3.html
+
+	Plugins-Liste: (Ähnlich zu \cite{Hariharan} und \cite{Dayalamurthy.2013})
+	  > pslist: Das Plugin "pslist" wird verwendet, um eine Liste der aktiven Prozesse im Arbeitsspeicherabbild zu erstellen. Es extrahiert Informationen wie Prozessnamen, PID (Prozess-ID), Elternprozess, Startzeitpunkt, Priorität und andere Attribute für jeden laufenden Prozess.
+			% vol.py -f ram_dump.img windows.pslist > pslist.txt
+	
+	  > yarascan: Das Plugin "yarascan" ermöglicht die Durchführung einer YARA-basierten Malware-Erkennung im Arbeitsspeicherabbild. YARA ist eine flexible Regel-Engine, die verwendet werden kann, um nach bestimmten Mustern, Signaturen oder Verhaltensmerkmalen von Malware zu suchen. Das Plugin wendet YARA-Regeln auf den Arbeitsspeicher an und gibt potenzielle Treffer aus.
+			% vol.py -f ram_dump.img windows.vadyarascan --yara-file yara_rules.yara > yarascan.txt
+			Wichtig: yara\_rules.yara = In domainspecific Yara-Skriptsprache geschriebene Regeln, nach welchen RAM durchsucht wird.
+			Hier: Einfache String-Pattern, die jeden Schritt des Browsing-Szenarios abdecken:
+			*** TODO Yara-Rules einfügen ***
+			*** TODO: Erklärung Yara-Ausgaben, mit Screenshot ***
+			Wichtig hier: Gibt u.a. virtuelle Adresse des gefundenen Strings im Speicherbereich des Prozesses an
+		
+	  > memmap: Das Plugin "memmap" dient dazu, eine detaillierte Karte des physischen Speichers des Systems zu erstellen. Es gibt Informationen über die physischen Speicherbereiche, deren Startadressen, Größen, Schutzattribute und andere relevante Details. Dieses Plugin kann bei der Analyse von Speicherlayout und -nutzung hilfreich sein.
+			1) % vol.py -f ram_dump.img windows.memmap --pid <PID> > memmap.txt
+				gibt Abbildung der Adressen des virtuellen Speichers auf die physikalische Adresse des Speicherbereichs des Prozesses mit der PID <PID>.
+				Weiterhin und hier relevant: gibt Abbildung von virtuellen Adresse auf einen Datei-Offset an. Dieser bezieht sich auf die Datei, die erzeugt wird, wenn der Befehl mit dem --dump Flag ausgeführt wird:
+			2) % vol.py -f ram_dump.img -o \dump_dir\ windows.memmap --pid <PID> --dump
+				führt dies zur physischen Extraktion des Speicherbereichs des Prozesses mit der PID <PID> in eine separate Datei.		
+	 	
+	  > filescan: Das filescan-Plugin von Volatility durchsucht den Arbeitsspeicher nach Speicherbereichen, die Informationen über Dateien enthalten. Die Ausgabe des Plugins enthält eine Liste von Dateinamen, die im Speicher gefunden wurden. Können sein: Ausführbare Dateien, Bibliotheksdateien oder Konfigurationsdateien.
+			% vol.py -f ram_dump.img windows.filescan > filescan.txt
+		
+	Zusammenhang der Plugins: Siehe Analysephase
+
+	
+Autopsy:
+	"Autopsy ist ein Open-Source-Digital-Forensik-Tool, das auf der Sleuthkit-Bibliothek basiert. Es wurde entwickelt, um forensische Untersuchungen von digitalen Beweismitteln auf Computern und mobilen Geräten durchzuführen.
+
+	Sleuthkit ist eine Sammlung von Open-Source-Tools für die forensische Analyse von Dateisystemen. Es bietet Funktionen zum Lesen, Analysieren und Wiederherstellen von Daten aus verschiedenen Dateisystemen, darunter NTFS, FAT, exFAT, HFS+, Ext2/3/4 und mehr. Sleuthkit ermöglicht die Extraktion von Metadaten, das Durchsuchen von Dateien und die Analyse von Dateisystemstrukturen, um wichtige Informationen für forensische Untersuchungen zu gewinnen.
+	
+	Autopsy baut auf der Funktionalität von Sleuthkit auf und bietet eine benutzerfreundliche grafische Benutzeroberfläche für die forensische Analyse. Es erweitert die Funktionalität von Sleuthkit, indem es zusätzliche Tools, Plug-Ins und Automatisierungsfunktionen bereitstellt, um den forensischen Untersuchungsprozess zu unterstützen.
+	
+	Mit Autopsy können Forensiker die Daten auf einem Datenträger untersuchen, Dateien und Metadaten analysieren, gelöschte Dateien wiederherstellen, Keyword-Suchen durchführen, Berichte generieren und vieles mehr."
+
+	"Sowohl Autopsy als auch Sleuthkit sind weit verbreitete und respektierte Tools in der digitalen Forensik-Community. Sie werden von Forensikern, Strafverfolgungsbehörden, Sicherheitsexperten und anderen Fachleuten eingesetzt, um digitale Beweise zu sammeln, zu analysieren und Berichte zu erstellen, die in rechtlichen Verfahren verwendet werden können."
+	
+	Hier: Verwendet um Festplattenimages der VMs einzulesen. 
+
+Darstellung von Daten:
+	- HxD
+	- Notepad++ (inkl. PlugIns, bsow. JSON)
+
+Tools zur Dateiverwaltung:
+	- dejsonlz4: % https://github.com/avih/dejsonlz4
+		= Hilfsprogramm des GitHub Nutzers "avih", das verwendet wird, um JSON-Dateien zu dekomprimieren, die im LZ4-komprimierten Format vorliegen.
+		> jsonlz4 = proprietäres Firefox-Format Benutzerdaten zu speichern. Das Format basiert auf JSON (JavaScript Object Notation), einem verbreiteten Datenformat zur Repräsentation strukturierter Daten. Die Daten werden jedoch zusätzlich mit dem LZ4-Komprimierungsalgorithmus komprimiert, um Speicherplatz zu sparen und den Zugriff zu beschleunigen.
+		> Um auf die Informationen in einer "jsonlz4"-Datei zuzugreifen, muss sie zuerst dekomprimiert werden. 
+		> "dejsonlz4": Dekomprimierung von lz4. Danach: normale JSON-Datei, die gelesen und verarbeitet werden kann.
+	- MZCacheView:
+		= Tool zum Parsen von Firefox Cache-Dateien. Kann auf diese Dateien zugreifen und verschiedene Informationen anzeigen, wie z.B. URL, Dateigröße, MIME-Typ und Datum des Downloads.
+		> Erwartet Firefox Cache-Dateien: % C:\Benutzer<Benutzername>\AppData\Local\Mozilla\Firefox\Profile<Profilname>\cache2
+		> "Das Cache2-Verzeichnis ist der Speicherort, an dem Firefox zwischengespeicherte Dateien speichert" % https://github.com/libyal/dtformats/blob/main/documentation/Firefox%20cache%20file%20format.asciidoc
+	- FirefoxCache2: % https://github.com/JamesHabben/FirefoxCache2 
+		> Skript "firefox-cache2-index-parser.py"
+		> Erweitert MZCacheView, indem die sogenannte "index"-Datei im Cache2 Ordner analysiert wird.
+			"Die Indexdatei fungiert als Referenz für den Cache und ermöglicht es Firefox, schnell auf die zwischengespeicherten Dateien zuzugreifen"
 
 \section{Acquisition Stage}
 
 > Browsing Szenario durchfüren
+
 > Zeitpunkte von -> Orientieren an: \cite{Muir.2019}
 	- RAM-Dumps 
 	- VM-Snapshots (nur letzter Snapshot ist Post-Mortem Forensik)
 	- Process Monitor Logfiles
-	- Registry Snapshots	
+	- Registry Snapshots
+
+VM Snapshot durchführen:
+	...
+	Dazu folgende Schritte notwendig:
+		> VM Festplatte liegt als VirtualBox Disk Image (.vdi  Datei) vor -> Wird nicht von Autopsy unterstützt
+		> Deshalb: Umwandlung in .img Format
+			"Das Image-Format (.img) ist ein generisches Dateiformat, das verwendet wird, um ein binäres Abbild eines gesamten Datenträgers zu speichern. Es erfasst den Inhalt des Datenträgers, einschließlich des MBR (Master Boot Record), der Partitionstabellen, der Dateisysteme und aller Dateien und Ordner."
+		> Dazu "vboxmanage" verwendet = Kommandozeilen-Tool, das bei Installation von VirtualBox enthalten ist.	
+			% vboxmanage clonehd <VDI_File>.vdi <IMG_File>.img --format raw
+		  	Wobei: .vdi Datei das zu konvertierende VirtualBox Disk Image und .img die neue Image-Datei
+		> Hinweis
+
+RAM Dump durchführen:
+
+Process Monitor Logfile erstellen:
+
+
 
 - Warum Process Monitor während Browsing?
 	o Während Browsing Szenario Filechanges untersuchen: DaemonFS set to monitor all activity within local hard drive\cite{Ohana.2013}
@@ -182,7 +291,7 @@ Definition: Common Location
 	\label{fig:jes}
 \end{figure}
 
-\subsection*{Registry}
+\subsection{Registry}
 - Registry:
 	> Process Monitor: SetValue Operationen von Browser 
 		-> Values der Keys untersucht (je nach Datentyp) -> Sonderfall: REG\_BIN
