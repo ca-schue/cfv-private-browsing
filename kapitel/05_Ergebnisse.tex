@@ -358,6 +358,8 @@ Vorgehen: Siehe "Methodik" Kapitel
 		> Filter: Prozessname = Firefox -> Anzahl zählen
 		> Filter: Prozessname = Alle Prozesse außer Firefox -> Anzahl zählen
 
+HTML Artefakte wurden in keinem RAM Dump gefunden => Nicht aufgeführt
+
 Yararule "Keyword":
 	\begin{figure}[h!]
 		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/keywords.png}}}
@@ -736,7 +738,7 @@ In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue
 Zusammenfassung:
 - keine PB Artefakte
 - Keine neuen Erkenntnisse vgl. mit intensiver Analyse mittels Process Monitor in Kapitel X
-- Eintrag von Datenschutzseite in places.sqlite wurde erkannt.
+- .onion URL Einträge in places.sql nicht erkannt
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 
@@ -771,52 +773,49 @@ Vorgehen: Siehe "Methodik" Kapitel
 		> Filter: Prozessname = Firefox -> Anzahl zählen
 		> Filter: Prozessname = Alle Prozesse außer Firefox -> Anzahl zählen
 
+Wie bei Firefox: HTML Artefakte wurden in keinem RAM Dump gefunden => Nicht aufgeführt
+
 Yararule "Keyword":
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/keywords.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/keywords.png}}}
 		\label{chart:final-criteria}  
 		\caption{Keywords}
 	\end{figure}
 	Analyse:
-		> Ausschließlich in RAM Dump 2 Keyword Artefakte gefunden
-		> Hauptsächlich in Firefox Prozess
-		> Mit 1301 Artefakten, am häufigsten pfaffenhofen vertreten. Vermutung: Evtl. weil Google Maps viele zusätzliche Artefakte lädt. 
+		> Ausschließlich in RAM Dump 2 und RAM Dump 3-1 Keyword Artefakte gefunden
+		> In RAM Dump 3-1 bei jedem Keyword deutlich weniger Artefakte als in RAM Dump 2 => Identitäts-Reset reduziert Keyword Artefakte deutlich
+		> Hauptsächlich in Firefox Prozess, kein Artefakt in Tor.exe Prozess
+		> Mit 4833 Artefakten in RAM Dump 2 am häufigsten "pfaffenhofen" vertreten. Vermutung: Evtl. weil Google Maps viele zusätzliche Artefakte lädt. 
+		> Nach Schließen von Tor Browser: keine Keyword Artefakte mehr in RAM
 		
 Yararule "URL":
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/url.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/url.png}}}
 		\label{chart:final-criteria}  
 		\caption{URL}
 	\end{figure}
 	Analyse:
-		> Wie bei anderen Kategorien: Die meisten Artefakte in RAM Dump 2, in Firefox Prozessen
-		> mooserliesl tritt am wenigsten auf, donaukurier am meisten (vmtl. auf Öffnen von Bild zurückzuführen)
-		> Hier bemerkenswert, dass in RAM Dump 3 Artefakte von allen vier URLs zu finden sind
-		> Bei genauerer Analyse des Process Monitor Logfiles herausgefunden: Artefakte alle in svchost.exe Prozess gefunden
-		> Deshalb RAM Dump erneut mit Volatility windows.svcscan Plugin untersucht:
-			"The svcscan plugin allows the analyst to list out the services running. This plugin gives more detail to the running processes in the event that the analyst requires additional details such as the display name, binary path, or service type." % (https://www.oreilly.com/library/view/digital-forensics-and/9781787288683/9ab60586-2b04-45e0-b437-dbfe10ab3be8.xhtml)
-		> Ausgabe aller im RAM gefundener Services
-		> Problem: Volatility svcscan liefert keine PID zu laufenden Services
-		> Deshalb: "White-Box" Analyse: Snapshot 3 erneut aufgetaut, danach mit Process Explorer PID X (TODO!) von SVChost Prozess gesucht, in dem PB Artefakte gefunden wurden
-			Def. Process Explorer:
-				"Prozess Explorer zeigt Ihnen Informationen darüber an, welche Handles und DLLs-Prozesse geöffnet oder geladen wurden." % https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
-				"Process Explorer, from Sysinternals, is a process management program that allows you to see the running processes on your computer and a great deal of information about each process. One of the nice features of Process Explorer is that it also gives you the ability to see what services a particular SVCHOST.EXE process is controlling."
-		> Ergebnis: DNSCache Service mit PID X (TODO!) = DNScache Service
-			TODO: Screenshot
-		> Ausführung von ipconfig /displaydns liefert gecachte URLs
-			TODO: Screenshot
-		> Nach Löschen des DNSCaches mit ipconfig /flushdns + Schließen aller Process Monitor Instanzen + Beenden des DNSCaches Services + Erneuter RAM-Dump -> Keine PB Artefakte mehr gefunden!
+		> Wie bei Yararule "Keyword": Ausschließlich in RAM Dump 2 und RAM Dump 3-1 Keyword Artefakte gefunden
+		> In RAM Dump 3-1 bei jedem Keyword deutlich weniger Artefakte als in RAM Dump 2 => Identitäts-Reset reduziert URL Artefakte deutlich
+		> Hauptsächlich in Firefox Prozess, danach am häufigsten Tor.exe Prozess und am wenigsten Artefakte in anderen Prozessen
+		> Bemerkenswert: "mallofamerica.com" ist mit 26.505 mal in RAM Dump 2 am häufigsten als Artefakt gefunden worden. Vergleich: "mooserliesl.de" wurde nur 508 mal in RAM Dump 2 gefunden
+		> Nach Schließen von Tor Browser: keine URL Artefakte mehr in RAM
+		
+		> TODO: DNSCache?
+
 Yararule "Mail":
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/mail.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/mail.png}}}
 		\label{chart:final-criteria}  
 		\caption{Mail}
 	\end{figure}
 	Analyse:
 		> Alle Mail Artefakte gefunden
-		> Ausschließlich in RAM Dump 2 Mail Artefakte gefunden
-		> Am häufigsten Absenderadresse "computerforensikvl@gmail.com" gefunden, als einziges Artefakt auch in anderen Prozessen gefunden.
-		> Bemerkenswert: Passwort wurde 4x als Klartext im RAM gefunden!
+		> Artefakte ausschließlich in Firefox Prozess gefunden
+		> Artefakte fast ausschließlich in RAM Dump 2 Mail gefunden
+		> Nur die Absenderadresse "computerforensikvl@gmail.com" wurde nach Identitäts-Reset in RAM Dump 3-1 gefunden
+		> Absenderadresse ist häufigstes Mail Artefakt
+		> Bemerkenswert: Passwort wurde 2x als Klartext im RAM gefunden!
 			String Kontext:
 				Offsets:		PIDs:
 				0xb9ce29180c8	7420
@@ -826,20 +825,25 @@ Yararule "Mail":
 				
 Yararule "Image":
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/image.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/image.png}}}
 		\label{chart:final-criteria}  
 		\caption{Image}
 	\end{figure}
 	Analyse:
-		> Hex-Wert von Donaukurier Bild wurde im 2. RAM Dump in 3 Firefox Prozessen gefunden
+		> Hex-Wert von Donaukurier Bild wurde ein einzigees mal im 2. RAM Dump in einem Firefox Prozess gefunden
 	
 
 Zusammenfassung = Stacked Bar Chart:
 \begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/summary.png}}}
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/summary.png}}}
 	\label{chart:final-criteria}  
 	\caption{Summary}
 \end{figure}
+- PB Artefakte ausschließlich in RAM Dump 2 und 3-1 gefunden
+- Nach Identitäts-Reset deutlich weniger Artefakte in vorhanden
+- Am meisten URL-Artefakte gefunden, wobei mallofamerica.com dominant 
+- HTML Artefakte wurden in keinem RAM Dump gefunden
+
 
 TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
 

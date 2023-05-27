@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  27 MAY 2023 11:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  27 MAY 2023 14:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2122,47 +2122,53 @@ ut line 721.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
  [37 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web
 _cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
-File: bilder/volatility/firefox/keywords.png Graphic file (type png)
-<use bilder/volatility/firefox/keywords.png>
-Package pdftex.def Info: bilder/volatility/firefox/keywords.png  used on input 
-line 776.
-(pdftex.def)             Requested size: 887.60483pt x 463.18385pt.
+<bilder/volatility/tor/keywords.png, id=427, 1533.657pt x 713.721pt>
+File: bilder/volatility/tor/keywords.png Graphic file (type png)
+<use bilder/volatility/tor/keywords.png>
+Package pdftex.def Info: bilder/volatility/tor/keywords.png  used on input line
+ 776.
+(pdftex.def)             Requested size: 1533.65327pt x 713.71925pt.
+ [38 <./bilder/cfv_tor_autopsy_web_categories.png> <./bilder/volatility/tor/key
+words.png>]
+<bilder/volatility/tor/url.png, id=433, 1539.789pt x 751.608pt>
+File: bilder/volatility/tor/url.png Graphic file (type png)
+<use bilder/volatility/tor/url.png>
+Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 789.
+
+(pdftex.def)             Requested size: 1539.78525pt x 751.60617pt.
+<bilder/volatility/tor/mail.png, id=434, 1473.87pt x 952.869pt>
+File: bilder/volatility/tor/mail.png Graphic file (type png)
+<use bilder/volatility/tor/mail.png>
+Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 804
+.
+(pdftex.def)             Requested size: 1473.86641pt x 952.86668pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-File: bilder/volatility/firefox/url.png Graphic file (type png)
-<use bilder/volatility/firefox/url.png>
-Package pdftex.def Info: bilder/volatility/firefox/url.png  used on input line 
-787.
-(pdftex.def)             Requested size: 988.34459pt x 560.63863pt.
-File: bilder/volatility/firefox/mail.png Graphic file (type png)
-<use bilder/volatility/firefox/mail.png>
-Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
- 811.
-(pdftex.def)             Requested size: 1162.88716pt x 779.85709pt.
+<bilder/volatility/tor/image.png, id=435, 1473.87pt x 242.652pt>
+File: bilder/volatility/tor/image.png Graphic file (type png)
+<use bilder/volatility/tor/image.png>
+Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 82
+4.
+(pdftex.def)             Requested size: 1473.86641pt x 242.6514pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38 <./bilder/cfv_tor_autopsy_web_categories.png>] [39]
-File: bilder/volatility/firefox/image.png Graphic file (type png)
-<use bilder/volatility/firefox/image.png>
-Package pdftex.def Info: bilder/volatility/firefox/image.png  used on input lin
-e 829.
-(pdftex.def)             Requested size: 1150.6232pt x 200.38449pt.
-File: bilder/volatility/firefox/summary.png Graphic file (type png)
-<use bilder/volatility/firefox/summary.png>
-Package pdftex.def Info: bilder/volatility/firefox/summary.png  used on input l
-ine 839.
-(pdftex.def)             Requested size: 1566.0652pt x 393.54202pt.
-
+<bilder/volatility/tor/summary.png, id=436, 1537.38pt x 628.092pt>
+File: bilder/volatility/tor/summary.png Graphic file (type png)
+<use bilder/volatility/tor/summary.png>
+Package pdftex.def Info: bilder/volatility/tor/summary.png  used on input line 
+834.
+(pdftex.def)             Requested size: 1537.37627pt x 628.09045pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40]) [41]
+[39 <./bilder/volatility/tor/url.png>] [40 <./bilder/volatility/tor/mail.png> <
+./bilder/volatility/tor/image.png>]) [41 <./bilder/volatility/tor/summary.png>]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
- (kapitel/06_Vergleich der Browser.tex
+(kapitel/06_Vergleich der Browser.tex
 chapter 6.
 ) [42
 
@@ -2199,13 +2205,13 @@ chapter 8.
 
 
 ]
-<bilder/firefox-all-write-operations.png, id=453, 520.94624pt x 1173.63469pt>
+<bilder/firefox-all-write-operations.png, id=463, 520.94624pt x 1173.63469pt>
 File: bilder/firefox-all-write-operations.png Graphic file (type png)
 <use bilder/firefox-all-write-operations.png>
 Package pdftex.def Info: bilder/firefox-all-write-operations.png  used on input
  line 17.
 (pdftex.def)             Requested size: 520.94498pt x 1173.63184pt.
-<bilder/tor-all-write-operations.png, id=454, 489.32813pt x 1149.5447pt>
+<bilder/tor-all-write-operations.png, id=464, 489.32813pt x 1149.5447pt>
 File: bilder/tor-all-write-operations.png Graphic file (type png)
 <use bilder/tor-all-write-operations.png>
 Package pdftex.def Info: bilder/tor-all-write-operations.png  used on input lin
@@ -2241,10 +2247,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23648 strings out of 475281
- 511045 string characters out of 2774064
+ 23679 strings out of 475281
+ 512184 string characters out of 2774064
  1484204 words of memory out of 3000000
- 44427 multiletter control sequences out of 15000+600000
+ 44457 multiletter control sequences out of 15000+600000
  583880 words of font info for 222 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,21n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2254,9 +2260,9 @@ sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
 /Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-Output written on main.pdf (51 pages, 1674509 bytes).
+Output written on main.pdf (51 pages, 3029402 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
+ 504 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 57777 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 57802 words of extra memory for PDF output out of 61914 (max. 10000000)
 
