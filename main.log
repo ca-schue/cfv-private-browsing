@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  26 MAY 2023 19:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  27 MAY 2023 11:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1905,116 +1905,121 @@ used on input line 28.
 
 
 
- <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>]
-<bilder/firefox-sqlite-table.png, id=336, 892.83563pt x 161.85469pt>
+ <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>] [24]
+<bilder/firefox-sqlite-table.png, id=339, 892.83563pt x 161.85469pt>
 File: bilder/firefox-sqlite-table.png Graphic file (type png)
 <use bilder/firefox-sqlite-table.png>
-Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 13
-8.
+Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 14
+9.
 (pdftex.def)             Requested size: 892.83345pt x 161.85428pt.
- [24 <./bilder/firefox-sqlite-table.png>]
-<bilder/bar-chart-logfile1vs2-test.png, id=341, 777.231pt x 335.946pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[25]
+<bilder/bar-chart-logfile1vs2-test.png, id=343, 777.231pt x 335.946pt>
 File: bilder/bar-chart-logfile1vs2-test.png Graphic file (type png)
 <use bilder/bar-chart-logfile1vs2-test.png>
 Package pdftex.def Info: bilder/bar-chart-logfile1vs2-test.png  used on input l
-ine 162.
+ine 172.
 (pdftex.def)             Requested size: 777.22911pt x 335.94518pt.
- [25 <./bilder/bar-chart-logfile1vs2-test.png>]
-<bilder/firefox-registry-stacked-bar-chart.png, id=346, 713.721pt x 268.275pt>
+ [26 <./bilder/firefox-sqlite-table.png> <./bilder/bar-chart-logfile1vs2-test.p
+ng>]
+<bilder/firefox-registry-stacked-bar-chart.png, id=349, 698.172pt x 150.891pt>
 File: bilder/firefox-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/firefox-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/firefox-registry-stacked-bar-chart.png  used on
- input line 219.
-(pdftex.def)             Requested size: 713.71925pt x 268.27432pt.
- [26 <./bilder/firefox-registry-stacked-bar-chart.png>]
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=351, 874.76813pt x 117.43875p
+ input line 229.
+(pdftex.def)             Requested size: 698.17029pt x 150.89063pt.
+ [27 <./bilder/firefox-registry-stacked-bar-chart.png>]
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=354, 874.76813pt x 117.43875p
 t>
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
-input line 253.
+input line 263.
 (pdftex.def)             Requested size: 874.76599pt x 117.43845pt.
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=352, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=355, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
-put line 267.
+put line 277.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
-<bilder/cfv_firefox_autopsy_web_history.png, id=353, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=356, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
-put line 281.
+put line 291.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-<bilder/cfv_firefox_autopsy_web_categories.png, id=354, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=357, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
- input line 300.
+ input line 310.
 (pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
- [27 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
+ [28 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
 opsy_web_cookies.png> <./bilder/cfv_firefox_autopsy_web_history.png> <./bilder/
 cfv_firefox_autopsy_web_categories.png>]
-<bilder/volatility/firefox/keywords.png, id=362, 887.607pt x 463.185pt>
+<bilder/volatility/firefox/keywords.png, id=365, 887.607pt x 463.185pt>
 File: bilder/volatility/firefox/keywords.png Graphic file (type png)
 <use bilder/volatility/firefox/keywords.png>
 Package pdftex.def Info: bilder/volatility/firefox/keywords.png  used on input 
-line 353.
+line 363.
 (pdftex.def)             Requested size: 887.60483pt x 463.18385pt.
-<bilder/volatility/firefox/url.png, id=363, 988.347pt x 560.64pt>
+<bilder/volatility/firefox/url.png, id=366, 988.347pt x 560.64pt>
 File: bilder/volatility/firefox/url.png Graphic file (type png)
 <use bilder/volatility/firefox/url.png>
 Package pdftex.def Info: bilder/volatility/firefox/url.png  used on input line 
-364.
+374.
 (pdftex.def)             Requested size: 988.34459pt x 560.63863pt.
-<bilder/volatility/firefox/mail.png, id=364, 1162.89pt x 779.859pt>
+<bilder/volatility/firefox/mail.png, id=367, 1162.89pt x 779.859pt>
 File: bilder/volatility/firefox/mail.png Graphic file (type png)
 <use bilder/volatility/firefox/mail.png>
 Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
- 388.
+ 398.
 (pdftex.def)             Requested size: 1162.88716pt x 779.85709pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[28 <./bilder/volatility/firefox/keywords.png>]
+[29 <./bilder/volatility/firefox/keywords.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=369, 462.22687pt
+<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=373, 462.22687pt
  x 203.25937pt>
 File: bilder/volatility/firefox/password_0xb9ce29180c8_7420.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0xb9ce29180c8_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0xb9ce29180c8_7420.
-png  used on input line 409.
+png  used on input line 419.
 (pdftex.def)             Requested size: 462.22574pt x 203.25887pt.
-<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=370, 453.94594p
+<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=374, 453.94594p
 t x 179.92218pt>
 File: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png Graphic file (
 type png)
 <use bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420
-.png  used on input line 416.
+.png  used on input line 426.
 (pdftex.def)             Requested size: 453.94482pt x 179.92174pt.
-<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=371, 456.95718pt
+<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=375, 456.95718pt
  x 170.13562pt>
 File: bilder/volatility/firefox/password_0x24083b41858_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x24083b41858_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x24083b41858_8424.
-png  used on input line 425.
+png  used on input line 435.
 (pdftex.def)             Requested size: 456.95605pt x 170.1352pt.
-<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=372, 458.46281pt
+<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=376, 458.46281pt
  x 231.11343pt>
 File: bilder/volatility/firefox/password_0x240840e5b08_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x240840e5b08_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x240840e5b08_8424.
-png  used on input line 432.
+png  used on input line 442.
 (pdftex.def)             Requested size: 458.46169pt x 231.11287pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2028,125 +2033,138 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./bilder/volatility/firefox/url.png>]
-<bilder/volatility/firefox/image.png, id=378, 1150.626pt x 200.385pt>
+[30 <./bilder/volatility/firefox/url.png>]
+<bilder/volatility/firefox/image.png, id=381, 1150.626pt x 200.385pt>
 File: bilder/volatility/firefox/image.png Graphic file (type png)
 <use bilder/volatility/firefox/image.png>
 Package pdftex.def Info: bilder/volatility/firefox/image.png  used on input lin
-e 440.
+e 450.
 (pdftex.def)             Requested size: 1150.6232pt x 200.38449pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/summary.png, id=379, 1566.069pt x 393.543pt>
+<bilder/volatility/firefox/summary.png, id=382, 1566.069pt x 393.543pt>
 File: bilder/volatility/firefox/summary.png Graphic file (type png)
 <use bilder/volatility/firefox/summary.png>
 Package pdftex.def Info: bilder/volatility/firefox/summary.png  used on input l
-ine 450.
+ine 460.
 (pdftex.def)             Requested size: 1566.0652pt x 393.54202pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30 <./bilder/volatility/firefox/mail.png> <./bilder/volatility/firefox/passwor
-d_0xb9ce29180c8_7420.png>] [31 <./bilder/volatility/firefox/password_0x2859f4ff
+[31 <./bilder/volatility/firefox/mail.png> <./bilder/volatility/firefox/passwor
+d_0xb9ce29180c8_7420.png>] [32 <./bilder/volatility/firefox/password_0x2859f4ff
 d4e0_7420.png> <./bilder/volatility/firefox/password_0x24083b41858_8424.png> <.
 /bilder/volatility/firefox/password_0x240840e5b08_8424.png>]
-File: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png Graphic file (type p
-ng)
-<use bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>
-Package pdftex.def Info: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png  
-used on input line 478.
-(pdftex.def)             Requested size: 672.00897pt x 257.9631pt.
+<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=394, 823.57687pt
+ x 331.2375pt>
+File: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png Graphic file (t
+ype png)
+<use bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>
+Package pdftex.def Info: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.
+png  used on input line 489.
+(pdftex.def)             Requested size: 823.57486pt x 331.23668pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32 <./bilder/volatility/firefox/image.png> <./bilder/volatility/firefox/summar
+[33 <./bilder/volatility/firefox/image.png> <./bilder/volatility/firefox/summar
 y.png>]
-<bilder/tor-sqlite-table.png, id=396, 925.95938pt x 185.94469pt>
+<bilder/tor-sqlite-table.png, id=400, 925.95938pt x 185.94469pt>
 File: bilder/tor-sqlite-table.png Graphic file (type png)
 <use bilder/tor-sqlite-table.png>
-Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 588.
+Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 551.
 (pdftex.def)             Requested size: 925.95712pt x 185.94421pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33]
-File: bilder/bar-chart-logfile1vs2-test.png Graphic file (type png)
-<use bilder/bar-chart-logfile1vs2-test.png>
-Package pdftex.def Info: bilder/bar-chart-logfile1vs2-test.png  used on input l
-ine 612.
-(pdftex.def)             Requested size: 777.22911pt x 335.94518pt.
- [34 <./bilder/tor-sqlite-table.png>]
-File: bilder/firefox-registry-stacked-bar-chart.png Graphic file (type png)
-<use bilder/firefox-registry-stacked-bar-chart.png>
-Package pdftex.def Info: bilder/firefox-registry-stacked-bar-chart.png  used on
- input line 669.
-(pdftex.def)             Requested size: 713.71925pt x 268.27432pt.
- [35]
-File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
-<use bilder/cfv_firefox_autopsy_web_bookmarks.png>
-Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
-input line 703.
-(pdftex.def)             Requested size: 874.76599pt x 117.43845pt.
-File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
-<use bilder/cfv_firefox_autopsy_web_cookies.png>
-Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
-put line 717.
-(pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
-File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
-<use bilder/cfv_firefox_autopsy_web_history.png>
-Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
-put line 731.
-(pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
-<use bilder/cfv_firefox_autopsy_web_categories.png>
-Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
- input line 750.
-(pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
- [36]
+[34 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
+<bilder/tor-bar-chart-logfile1vs2cs3.png, id=405, 777.231pt x 336.165pt>
+File: bilder/tor-bar-chart-logfile1vs2cs3.png Graphic file (type png)
+<use bilder/tor-bar-chart-logfile1vs2cs3.png>
+Package pdftex.def Info: bilder/tor-bar-chart-logfile1vs2cs3.png  used on input
+ line 579.
+(pdftex.def)             Requested size: 777.22911pt x 336.16417pt.
+ [35 <./bilder/tor-sqlite-table.png> <./bilder/tor-bar-chart-logfile1vs2cs3.png
+>]
+<bilder/tor-registry-stacked-bar-chart.png, id=412, 698.391pt x 150.891pt>
+File: bilder/tor-registry-stacked-bar-chart.png Graphic file (type png)
+<use bilder/tor-registry-stacked-bar-chart.png>
+Package pdftex.def Info: bilder/tor-registry-stacked-bar-chart.png  used on inp
+ut line 635.
+(pdftex.def)             Requested size: 698.3893pt x 150.89063pt.
+ [36 <./bilder/tor-registry-stacked-bar-chart.png>]
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=417, 660.96938pt x 32.37094pt>
+File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_bookmarks.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
+t line 669.
+(pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
+<bilder/cfv_tor_autopsy_web_cookies.png, id=418, 810.77907pt x 166.37157pt>
+File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_cookies.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
+line 685.
+(pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
+<bilder/cfv_tor_autopsy_web_history.png, id=419, 712.91344pt x 98.61844pt>
+File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_history.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
+line 701.
+(pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
+<bilder/cfv_tor_autopsy_web_categories.png, id=420, 654.94687pt x 51.19125pt>
+File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_categories.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
+ut line 721.
+(pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
+ [37 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web
+_cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
 File: bilder/volatility/firefox/keywords.png Graphic file (type png)
 <use bilder/volatility/firefox/keywords.png>
 Package pdftex.def Info: bilder/volatility/firefox/keywords.png  used on input 
-line 803.
+line 776.
 (pdftex.def)             Requested size: 887.60483pt x 463.18385pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: bilder/volatility/firefox/url.png Graphic file (type png)
 <use bilder/volatility/firefox/url.png>
 Package pdftex.def Info: bilder/volatility/firefox/url.png  used on input line 
-814.
+787.
 (pdftex.def)             Requested size: 988.34459pt x 560.63863pt.
 File: bilder/volatility/firefox/mail.png Graphic file (type png)
 <use bilder/volatility/firefox/mail.png>
 Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
- 838.
+ 811.
 (pdftex.def)             Requested size: 1162.88716pt x 779.85709pt.
- [37]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38]
+[38 <./bilder/cfv_tor_autopsy_web_categories.png>] [39]
 File: bilder/volatility/firefox/image.png Graphic file (type png)
 <use bilder/volatility/firefox/image.png>
 Package pdftex.def Info: bilder/volatility/firefox/image.png  used on input lin
-e 856.
+e 829.
 (pdftex.def)             Requested size: 1150.6232pt x 200.38449pt.
 File: bilder/volatility/firefox/summary.png Graphic file (type png)
 <use bilder/volatility/firefox/summary.png>
 Package pdftex.def Info: bilder/volatility/firefox/summary.png  used on input l
-ine 866.
+ine 839.
 (pdftex.def)             Requested size: 1566.0652pt x 393.54202pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39]) [40]
+[40]) [41]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
  (kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [41
+) [42
 
 
 
@@ -2156,7 +2174,7 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-) [42
+) [43
 
 
 
@@ -2166,7 +2184,7 @@ chapter 7.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [43
+) [44
 
 
 
@@ -2174,32 +2192,35 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [44
+ (kapitel/09_Anhang.tex [45
 
 
 
 
 
 ]
-<bilder/firefox-all-write-operations.png, id=436, 520.94624pt x 1173.63469pt>
+<bilder/firefox-all-write-operations.png, id=453, 520.94624pt x 1173.63469pt>
 File: bilder/firefox-all-write-operations.png Graphic file (type png)
 <use bilder/firefox-all-write-operations.png>
 Package pdftex.def Info: bilder/firefox-all-write-operations.png  used on input
  line 17.
 (pdftex.def)             Requested size: 520.94498pt x 1173.63184pt.
- [45 <./bilder/firefox-all-write-operations.png>]
-chapter A.
-) [46
-
-]
+<bilder/tor-all-write-operations.png, id=454, 489.32813pt x 1149.5447pt>
+File: bilder/tor-all-write-operations.png Graphic file (type png)
+<use bilder/tor-all-write-operations.png>
+Package pdftex.def Info: bilder/tor-all-write-operations.png  used on input lin
+e 25.
+(pdftex.def)             Requested size: 489.32692pt x 1149.54189pt.
+ [46 <./bilder/firefox-all-write-operations.png>]) [47 <./bilder/tor-all-write-
+operations.png>]
 chapter without number
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 130.
-[47
+[48
 
 
 
-] [48] (main.aux (kapitel/01_Einführung.aux)
+] [49] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -2220,10 +2241,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23591 strings out of 475281
- 508535 string characters out of 2774064
- 1484202 words of memory out of 3000000
- 44378 multiletter control sequences out of 15000+600000
+ 23648 strings out of 475281
+ 511045 string characters out of 2774064
+ 1484204 words of memory out of 3000000
+ 44427 multiletter control sequences out of 15000+600000
  583880 words of font info for 222 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,21n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -2233,9 +2254,9 @@ sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
 sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
 /Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-Output written on main.pdf (50 pages, 1472825 bytes).
+Output written on main.pdf (51 pages, 1674509 bytes).
 PDF statistics:
- 475 PDF objects out of 1000 (max. 8388607)
+ 494 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 57737 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 57777 words of extra memory for PDF output out of 61914 (max. 10000000)
 

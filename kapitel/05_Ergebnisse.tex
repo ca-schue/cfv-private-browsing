@@ -36,67 +36,77 @@ Allgemein: Artefakte in zwei "Common Pfaden"
 
 Kategorien der Logs:
 - Cache: 
-	Logfile 1:
-		> % \cache2\entries\037778A55E1B7E9BED3390289866D09402D6C913 (Local)
-		> % \cache2\entries\1223A0378B8971FA4CD25EA1731C80B2B1676B42 (Local)
-		> % \cache2\entries\250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E (Local)
-		Analyse:
-			- Tool: MozillaCacheView
-			- TODO: Screenshot
-		> % \jumpListCache\ZKJGVJPzPe7w4w0KwEY0jw==.ico (Local)
-			- Tool: Windows Foto App
-			- Enthält kleines "m" Icon
-	Logfile 2:
-		> % \cache2\index (Local)
-		> % \cache2\index.log (Local)
+	> % \cache2\entries\037778A55E1B7E9BED3390289866D09402D6C913 (Local)
+	> % \cache2\entries\1223A0378B8971FA4CD25EA1731C80B2B1676B42 (Local)
+	> % \cache2\entries\250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E (Local)
+	Zweck:
+		"Firefox verwendet den Cache, um Webseiten und Ressourcen wie Bilder, Stylesheets, Skripte und andere Dateien temporär auf dem lokalen Computer zu speichern. Dadurch können wiederholte Anfragen an den Server vermieden und die Ladezeiten verringert werden, da der Browser die Inhalte aus dem Cache abrufen kann, anstatt sie erneut herunterzuladen.Die tatsächlichen Inhalte dieser Datei sind binär und können je nach Art der Ressource variieren, beispielsweise HTML, Bild- oder Audiodateien."
+		% https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
+	Analyse:
+		- Tool: MozillaCacheView
+		- TODO: Screenshot
+	> % \cache2\index (Local)
+		Zweck:
+			"Die Indexdatei im Cache dient als Datenbank, die Informationen über die gespeicherten Dateien enthält. Sie ermöglicht dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten"
 		Analyse:
 			- Tool: siehe Github und HxD
+	> % \jumpListCache\ZKJGVJPzPe7w4w0KwEY0jw==.ico (Local)
+		- Tool: Windows Foto App
+		- Enthält kleines "m" Icon
+
 - datareporting:
-	Logfile 1:
-		> % \datareporting\glean\events\pageload (Roaming)
-		> % \datareporting\glean\db\data.safe (Roaming)	
-		Analyse:
-			- Tool: HxD
-			- keine PB Artefakte
-	Logfile 2:
-		*> % \datareporting\glean\db\data.safe (Roaming)
-		> %  \datareporting\glean\db\9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4 (Roaming)
-		> % \datareporting\glean\db\86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4 (Roaming)
-		> % \datareporting\glean\db\abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4 (Roaming)
-		Analyse:
-			- TODO: Definition glean
-			- jsonlz4 Dateien (TODO: Definition) mit dejsonlz4 dekomprimiert (Quelle Github)
-			- Dateien enthalten Systeminformationen im Json-Format (Screenshot?)
-			- keine PB Artefakte
+	Allgemein: "Dateien im Ordner "/datareporting/glean/db" sind Teil des Glean-Systems, das von Mozilla (dem Entwickler von Firefox) für die Sammlung von Telemetriedaten verwendet wird. Telemetrie-Daten sind anonyme Informationen über die Nutzung des Browsers, die zur Verbesserung der Software und zur Behebung von Problemen verwendet werden können. % https://github.com/mozilla/glean
+	> % \datareporting\glean\db\data.safe (Roaming)	
+	Zweck:
+		" Die "data.safe.bin"-Datei enthält verschlüsselte Telemetrie-Daten, um ihre Integrität und Sicherheit zu gewährleisten."
+	Analyse:
+		- Tool: HxD
+		- keine PB Artefakte
+	> %  \datareporting\glean\db\<Profilname>.new-profile.jsonlz4 (Roaming)
+	Zweck:
+		"Diese Dateien speichern Informationen über das Firefox-Profil, das von Glean verwendet wird, um Telemetriedaten zu sammeln."
+	Analyse:
+		- Mit firefox propreritärem jsonlz4 Algorithmus verschlüsselt
+		- können mit speziellem Tool "dejsonlz4" dekomprimiert werden (Quelle Github)
+		- Dateien enthalten Systeminformationen im Json-Format (Screenshot?)
+
 - Sessionstore-Backup:
-	Logfile 1:
-		> % \sessionstore-backups\recovery.jsonlz4 (Roaming)
+	> % \sessionstore-backups\recovery.jsonlz4 (Roaming)
+		Zweck:
+			"Die Datei "recovery.jsonlz4" enthält eine Sicherungskopie der vorherigen Sitzung. Sie wird erstellt, wenn der Firefox-Browser nach einem Absturz oder einem unerwarteten Beenden neu gestartet wird." % https://support.mozilla.org/de/questions/1221836
 		Analyse:
-			- TODO: Definition sessionstore-backup = Datei, die Backup von Sitzungsdaten enthält
 			- jsolz4 Datei in sessionstore-backup lassen sich mit Online-Tool parsen (https://www.jeffersonscher.com/ffu/scrounger.html)
 			- Ergebnise: 
 				Tab 1:  Willkommen bei Firefox [6.5.2023, 22:25:06, about:welcome;
 				Tab 2:  Firefox Datenschutzhinweis — Mozilla [6.5.2023, 22:24:59], % https://www.mozilla.org/de/privacy/firefox/
 			- Sind Seiten, die sich automatisch geöffnet haben, nachdem Firefox zum ersten Mal geöffnet wurde
 			- keine PB Artefakte
-	Logfile 2:
-		> % \sessionstore.jsonlz4
+	> % \sessionstore.jsonlz4
+		Zweck: "Die Datei "sessionstore.jsonlz4" speichert den aktuellen Zustand der Firefox-Sitzung.  Diese Datei wird während der Browsersitzung regelmäßig aktualisiert, um sicherzustellen, dass Änderungen im Zustand der Sitzung erfasst werden."
 		Analyse:
 			- Lässt sich nicht mit Online-Tool aus Logfile 1 parsen
 			- Stattdessen: dejsonlz4, danach Notepad++ mit JSON Plugin
-			- Ergebnis: image-Eintrag als base64 entdeckt, in PNG umgewandelt (https://base64.guru/converter/decode/image), mit Windows Foto-App: "m" Icon (Mozilla-Logo)
+			- kaum Einträge zu Sitzung, hauptsächlich CSS Daten zu Fenstergröße- und position, insb. keine PB Artefakte
+			- Interessant: image-Eintrag als base64 entdeckt, in PNG umgewandelt (https://base64.guru/converter/decode/image), mit Windows Foto-App: "m" Icon (Mozilla-Logo)
+
 - Sonstige Dateien:
-	Logfile 1:
-		> % \prefs-1.js
-		> % \xulstore.json			
-	Logfile 2:
-		*> % \prefs-1.js (Roaming)
-		*> % \xulstore.json (Roaming)
-		> % \sessionCheckpoints.json (Roaming)
-		> % \9102466b-e465-4ecb-810f-74ae90c64c63.tmp (Roaming)
-		> % \86f4c992-6329-415b-8c29-911a2d4b7f9d.tmp (Roaming)
-		> % \abf8b065-41a4-4e94-a044-1cead61e396a.tmp (Roaming)
-		> % \a35decee-d7c6-4820-a381-2dc89ff33c76.tmp (Roaming)
+	> % \prefs-1.js
+		Zweck:
+			"Die Datei "prefs-1.js" enthält benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser. Sie speichert die Präferenzen des Benutzers in Form von JavaScript-Objekten.
+
+			In dieser Datei werden verschiedene Arten von Einstellungen gespeichert, darunter:
+			
+		   Allgemeine Einstellungen: Dies umfasst Optionen wie die Standardsuchmaschine, die Startseite, den Zoomfaktor, die Spracheinstellungen und andere globale Einstellungen, die das Verhalten des Browsers beeinflussen.
+							
+		   Datenschutzeinstellungen: Hier werden Präferenzen bezüglich Cookies, Verlauf, Passwortverwaltung, Standortfreigabe und Tracking-Schutz gespeichert. Diese Einstellungen kontrollieren, wie der Browser mit persönlichen Daten und der Privatsphäre umgeht.
+							
+		   Add-On-Einstellungen: Wenn der Benutzer Erweiterungen oder Add-Ons installiert hat, können in dieser Datei die spezifischen Einstellungen und Konfigurationen für jedes Add-On gespeichert werden."
+					% https://kb.mozillazine.org/Prefs.js_file
+
+	> % \xulstore.json
+		Zweck:
+			"Die Datei "xulstore.json" speichert benutzerspezifische Anpassungen und Konfigurationen für den Firefox-Browser."
+			% https://support.mozilla.org/de/kb/firefox-support-troubleshooting-guide
 	Analyse:
 		- Weder JSON-Dateien (Notepad++) noch .tmp Dateien (HxD) enthalten PB Artefakte
 		
@@ -115,23 +125,24 @@ Kategorien der Logs:
 			- neuer (nicht-leerer) Inhalt
 			- gleichbleibender Inhalt
 	Mit Process Monitor Logfiles festgestellt, dass in folgende SQLite-DBs geschrieben: 
-		(TODO: Tabelle mit Spalten: Dateiname, Zweck)
-			Dateiename:							Zweck:
-		- places.sqlite 						Browsing Historie
+		% https://mozilla.github.io/firefox-browser-architecture/text/0010-firefox-data-stores.html
+		- places.sqlite
+			"Diese Datenbank enthält Informationen über die Lesezeichen, den Verlauf und die Tags im Firefox-Browser. Sie speichert die URLs der besuchten Websites, die Zeitstempel der Besuche, die Titel der Seiten und andere relevante Daten."
 		- cookies.sqlite						Speichert Webseiten-Cookies
+			"In dieser Datenbank werden die Cookies gespeichert, die von Websites im Firefox-Browser verwendet werden. Cookies sind kleine Textdateien, die von Websites auf dem Computer des Benutzers abgelegt werden und verschiedene Informationen speichern können, z. B. Anmeldeinformationen, Sitzungsdaten oder Präferenzen."
 		- storage.sqlite						Speicher für Webseiten
+			"Diese Datenbank wird von Firefox verwendet, um verschiedene Arten von Webdaten zu speichern, wie z. B. die IndexedDB-Datenbanken von Websites, Offline-Cache-Daten, Webseiten-Skriptdaten und andere lokale Speicherinformationen."
 		- favicons.sqlite						Speichert Icons für Lesezeichen
+			"Diese Datenbank speichert die Favicons, also die kleinen Symbole, die in der Adressleiste und bei den Lesezeichen angezeigt werden, um Websites visuell zu identifizieren. Sie enthält die gespeicherten Favicons für die besuchten Websites."
 		- webappsstore.sqlite					Speicher für Webseiten
-		- formhistory.sqlite					???
-		- 1657114595AmcateirvtiSty.sqlite		> IndexedDB-Dateien, sind DBs, die von besuchten Webseiten
-												angelegt werden % (https://www.reddit.com/r/firefox/comments/dri650/what_are_the_idb_files_in_the_permanent_storage/)
-												> Im Chrome-Ordner: "the databases in the chrome subfolder relate to various pieces of integrated firefox functionality (content for the new tab page, blocklists, shield/normandy, remote settings, push api, ...)"
-												> Enthalten eigentlich URL im Dateinamen
-												> TODO: können geparsed werden: % https://stackoverflow.com/a/59923297/18037004
-												"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" 
-												%https://wiki.mozilla.org/Firefox/Activity_Stream
-												--> DB enthält keine Browsing Artefakte
-		- 3870112724rsegmnoittet-es.sqlite		???
+			"Diese Datenbank speichert Informationen über installierte Webanwendungen im Firefox-Browser. Sie enthält Daten wie Berechtigungen, Einstellungen und andere spezifische Informationen für Webanwendungen."
+		- formhistory.sqlite
+			"In dieser Datenbank werden Informationen aus Webformularen gespeichert, die der Benutzer in Firefox ausfüllt. Sie enthält die eingegebenen Daten wie Name, E-Mail-Adresse, Adresse und andere Formulardaten, um das automatische Ausfüllen von Formularen zu ermöglichen."
+		- 1657114595AmcateirvtiSty.sqlite		
+			"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" % https://wiki.mozilla.org/Firefox/Activity_Stream
+		- 3870112724rsegmnoittet-es.sqlite		% https://wiki.mozilla.org/Firefox/RemoteSettings
+			"Remote Settings in Firefox sind eine Funktion, die es ermöglicht, Browser-Einstellungen zentral zu verwalten und an die Benutzer zu übertragen, ohne ein vollständiges Browser-Update durchführen zu müssen."
+			SQLite DB ist Datenspeicher dazu
 		
 	Ergebnisse:
 		\begin{figure}[h!]
@@ -154,7 +165,6 @@ Kategorien der Logs:
 			- Alle Dateien unverändert, auch nach WAL Checkpoint
 	
 - Zusammenfassung: in keiner Datei PB Artefakte
-
 
 Quantitativ: (Diagramme)		
 	> Balkendiagramm: Für jede Logfilekategorie: Anzahl Schreiboperationen Logfile 1 vs Logfile 2
@@ -456,6 +466,13 @@ TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Tr
 
 \newpage
 
+
+% ######################################################################
+% ######################################################################
+% ######################################################################
+% ######################################################################
+
+
 \section{Tor}
 
 \subsection*{White-Box Analyse/Common Locations}
@@ -465,124 +482,70 @@ Schreiboperationen mit Process Monitor verfolgen:
 Im Anhang: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
 
 Aux-Dateien, welche nicht mehr vorhanden waren, aber dafür "richtige" Dateien:
-	- % *\datareporting\glean\db\data.safe
-	- % *\datareporting\archived\2023-05\1683405837882.9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4
-	- % *datareporting\archived\2023-05\1683405837905.86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4
-	- % *datareporting\archived\2023-05\1683405837939.abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4
-	- % *sessionstore-backups\recovery.jsonlz4
-	- % *xulstore.json
 
 Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Tool mit dem Datei untersucht wurde
 - Dateien, die in beiden Logfiles nicht wiederherstellbar 
 \begin{figure}[h!]
-	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-tabelle-logfile1vlogfile2-reduced.png}}
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png}}
 %	\label{...}
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
 
-Allgemein: Artefakte in zwei "Common Pfaden"
--	(Local) %C:\Users\Forensik\AppData\Local\Mozilla\Firefox\Profiles\<Profile>.default-release\
--	(Roaming) %C:\Users\Forensik\AppData\Roaming\Mozilla\Firefox\Profiles\<Profile>.default-release\
+Allgemein: Tor hat nur einen "Common Pfad"
+-	% C:\Users\Forensik\Desktop\Tor Browser\Browser\TorBrowser\Data\Browser\
+- Dateien tauchen in zwei unterschiedlichen Ordnern auf:
+	- % C:\Users\Forensik\Desktop\Tor Browser\Browser\TorBrowser\Data\Browser\Caches\profile.default\ (Caches)
+	- % C:\Users\Forensik\Desktop\Tor Browser\Browser\TorBrowser\Data\Browser\profile.default\ (Profile.Default)
+
+- Alle Schreibopertationen von Prozess "firefox.exe" durchgeführt, nicht "tor.exe" 
+
+=> Keine der Dateien enthält PB Artefakte, trotzdem nachfolgende genauere Betrachtung der wichtigsten Dateien im Zusammenhang des Tor Browsers
 
 Kategorien der Logs:
 - Cache: 
-	Logfile 1:
-		> % \cache2\entries\037778A55E1B7E9BED3390289866D09402D6C913 (Local)
-		> % \cache2\entries\1223A0378B8971FA4CD25EA1731C80B2B1676B42 (Local)
-		> % \cache2\entries\250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E (Local)
-		Analyse:
-			- Tool: MozillaCacheView
-			- TODO: Screenshot
-		> % \jumpListCache\ZKJGVJPzPe7w4w0KwEY0jw==.ico (Local)
-			- Tool: Windows Foto App
-			- Enthält kleines "m" Icon
-	Logfile 2:
-		> % \cache2\index (Local)
-		> % \cache2\index.log (Local)
-		Analyse:
-			- Tool: siehe Github und HxD
-- datareporting:
-	Logfile 1:
-		> % \datareporting\glean\events\pageload (Roaming)
-		> % \datareporting\glean\db\data.safe (Roaming)	
-		Analyse:
-			- Tool: HxD
-			- keine PB Artefakte
-	Logfile 2:
-		*> % \datareporting\glean\db\data.safe (Roaming)
-		> %  \datareporting\glean\db\9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4 (Roaming)
-		> % \datareporting\glean\db\86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4 (Roaming)
-		> % \datareporting\glean\db\abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4 (Roaming)
-		Analyse:
-			- TODO: Definition glean
-			- jsonlz4 Dateien (TODO: Definition) mit dejsonlz4 dekomprimiert (Quelle Github)
-			- Dateien enthalten Systeminformationen im Json-Format (Screenshot?)
-			- keine PB Artefakte
-- Sessionstore-Backup:
-	Logfile 1:
-		> % \sessionstore-backups\recovery.jsonlz4 (Roaming)
-		Analyse:
-			- TODO: Definition sessionstore-backup = Datei, die Backup von Sitzungsdaten enthält
-			- jsolz4 Datei in sessionstore-backup lassen sich mit Online-Tool parsen (https://www.jeffersonscher.com/ffu/scrounger.html)
-			- Ergebnise: 
-				Tab 1:  Willkommen bei Firefox [6.5.2023, 22:25:06, about:welcome;
-				Tab 2:  Firefox Datenschutzhinweis — Mozilla [6.5.2023, 22:24:59], % https://www.mozilla.org/de/privacy/firefox/
-			- Sind Seiten, die sich automatisch geöffnet haben, nachdem Firefox zum ersten Mal geöffnet wurde
-			- keine PB Artefakte
-	Logfile 2:
-		> % \sessionstore.jsonlz4
-		Analyse:
-			- Lässt sich nicht mit Online-Tool aus Logfile 1 parsen
-			- Stattdessen: dejsonlz4, danach Notepad++ mit JSON Plugin
-			- Ergebnis: image-Eintrag als base64 entdeckt, in PNG umgewandelt (https://base64.guru/converter/decode/image), mit Windows Foto-App: "m" Icon (Mozilla-Logo)
-- Sonstige Dateien:
-	Logfile 1:
-		> % \prefs-1.js
-		> % \xulstore.json			
-	Logfile 2:
-		*> % \prefs-1.js (Roaming)
-		*> % \xulstore.json (Roaming)
-		> % \sessionCheckpoints.json (Roaming)
-		> % \9102466b-e465-4ecb-810f-74ae90c64c63.tmp (Roaming)
-		> % \86f4c992-6329-415b-8c29-911a2d4b7f9d.tmp (Roaming)
-		> % \abf8b065-41a4-4e94-a044-1cead61e396a.tmp (Roaming)
-		> % \a35decee-d7c6-4820-a381-2dc89ff33c76.tmp (Roaming)
+	> % \Caches\profile.default\startupCache\startupCache.8.little (Caches Folder)
+	Zweck:
+		"Die Datei "startupCache.8.little" ist eine interne Datei, die von Firefox und dem Tor Browser erstellt wird, um den Startvorgang des Browsers zu beschleunigen. Sie enthält im Wesentlichen eine Zwischenspeicherung von Daten, die beim Starten des Browsers benötigt werden.
+
+		Diese Datei enthält Informationen über bereits geladene Browser-Komponenten wie JavaScript-Code, CSS-Dateien, Bilder und andere Ressourcen. Indem der Browser diese Informationen zwischenspeichert, kann er sie beim erneuten Starten des Browsers wiederverwenden, anstatt sie erneut herunterladen und verarbeiten zu müssen. Dadurch wird die Startzeit des Browsers verkürzt und die allgemeine Leistung verbessert." %https://wiki.mozilla.org/StartupCache
 	Analyse:
-		- Weder JSON-Dateien (Notepad++) noch .tmp Dateien (HxD) enthalten PB Artefakte
-		
-- SQLite: (TODO: Abgleich mit Diffs-Exceltabelle, ob wirklich nur in places.sqlite geschrieben wurde)
-	Dateien haben Sonderstellung:
-		- Diese DBs dienen zur Verwaltung und Speicherung sämtlicher Browser Artefakte, insb. der Browser Historie
-		- Aus diesem Grund: Dateien intensiver betrachtet
-	Siehe Kapitel Methodik:
-		> Entwicklung von Dateiinhalt in allen Snapshots (1, 2, 3 und 4) betrachtet
-		> Für jeden Snapshot: 
-			- SQLite-Datei extrahiert und mit SQLite-Datei aus vorherigem Snapshot verglichen
-			- Untersuchung der SQLite-Dateien mit SQLite-Viewer (GUI-Tools)
-			- Wenn zu SQLite-Datei WAL-Datei existiert: mit sqlite3 Kommandozeilentool PRAGMA wal\_checkpoint durchgeführt, danach neue SQLite-Datei mit ursprünglicher SQLite-Datei verglichen
-		> Dabei gibt es drei Zustände: 
-			- leere Datei
-			- neuer (nicht-leerer) Inhalt
-			- gleichbleibender Inhalt
-	Mit Process Monitor Logfiles festgestellt, dass in folgende SQLite-DBs geschrieben: 
-		(TODO: Tabelle mit Spalten: Dateiname, Zweck)
-			Dateiename:							Zweck:
-		- places.sqlite 						Browsing Historie
-		- cookies.sqlite						Speichert Webseiten-Cookies
-		- storage.sqlite						Speicher für Webseiten
-		- favicons.sqlite						Speichert Icons für Lesezeichen
-		- webappsstore.sqlite					Speicher für Webseiten
-		- formhistory.sqlite					???
-		- 1657114595AmcateirvtiSty.sqlite		> IndexedDB-Dateien, sind DBs, die von besuchten Webseiten
-												angelegt werden % (https://www.reddit.com/r/firefox/comments/dri650/what_are_the_idb_files_in_the_permanent_storage/)
-												> Im Chrome-Ordner: "the databases in the chrome subfolder relate to various pieces of integrated firefox functionality (content for the new tab page, blocklists, shield/normandy, remote settings, push api, ...)"
-												> Enthalten eigentlich URL im Dateinamen
-												> TODO: können geparsed werden: % https://stackoverflow.com/a/59923297/18037004
-												"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" 
-												%https://wiki.mozilla.org/Firefox/Activity_Stream
-												--> DB enthält keine Browsing Artefakte
-		- 3870112724rsegmnoittet-es.sqlite		???
-		
+		- Tool: HxD
+		- kein PB Artefakte
+
+- datareporting:
+	> % *\datareporting\state.json 
+	Zweck: 
+		"Die Datei "state.json" im Ordner "/datareporting" enthält Informationen über den Zustand und die Konfiguration des Firefox- oder Tor Browsers. Diese Datei kann Daten über die Verwendung des Browsers, wie z.B. installierte Add-Ons, zuletzt besuchte Websites, Browser-Einstellungen und andere Informationen enthalten. Sie wird verwendet, um dem Browser bei Bedarf den Zustand und die Einstellungen wiederherzustellen."
+		% https://github.com/mozilla/firefox-data-store-docs/blob/master/README.md
+	Analyse:
+		- Tool Notepad++ mit JSON Plugin
+		- keine PB Artefakte
+
+- Sonstige Dateien:
+	> % \AlternateServices.txt
+		Zweck:
+			"enthält onion URLs,
+			HTTP Alternative Services is a mechanism that allows servers to tell clients that the service they are accessing is available at another network location or over another protocol.
+			This mapping can be stored in a file in the profile folder. This allows websites that do not support HTTPS to communicate in a secure way via port 443 (Opportunistic Encryption)."
+			% https://support.mozilla.org/en-US/questions/1310302
+	> % \extensions\staged\{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi
+		Zweck:
+			"Ist "NoScript" Extension. Wenn in Firefox geöffnet, kann installiert werden"
+		=> TODO: Screenshot, wenn in Firefox per "drag-and-drop" gezogen
+	> % *\onion-aliases.json
+		Zweck:
+			Enthält SecureDrop Adressen: z.B. sueddeutsche.securedrop.tor.onion (z.B. %https://www.sueddeutsche.de/projekte/kontakt/#securedrop)
+	> % \security_state\data.safe.bin
+		Zweck: The file containing the updated security data % (https://bbs.archlinux.org/viewtopic.php?pid=1952286#p1952286)
+	> % \SiteSecurityServiceState.txt
+		Entielt früher private Browsing Artefakte (https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589), jetzt aber keine private Browsing Artefakte
+	=> Keine der Dateien enthält PB Artefakte
+				
+- SQLite: 
+	Aus Process Monitor Logfiles erkennbar: Tor verwaltet und beschreibt die exakt gleichen SQLite Datenbanken wie Firefox.
+
+	Hier ebenfalls gesondert betrachtet: Fokus auf die Entwicklung von Dateiinhalt in allen Snapshots (1, 2, 3-1, 3 und 4) betrachtet
+	
 	Ergebnisse:
 		\begin{figure}[h!]
 			\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-sqlite-table.png}}}
@@ -591,13 +554,17 @@ Kategorien der Logs:
 		\end{figure}
 		> Nach Browser-Installation noch keine SQLite-Datei angelegt (Snapshot 1)
 		> Während Browsing Szenario alle DBs Initialisiert, außer "webappsstore.sqlite" (Snapshot 2)
-			- Dabei wurden in places.sqlite die Seiten geschrieben, die sich automatisch nach Browserstart im public Modus geöffnet haben (Datenschutzhinweise zu Firefox)
+			- Dabei wurden in places.sqlite automatisch .onion URLs geschreiben, die zu Tor Standardseiten führen, wie "The Tor Blog" oder "Tor Browser Manual" bzw. die Tor Spenden-Seite, obwohl keine dieser Seiten aufgerufen wurde
+				TODO: Screenshot von URLs?
+			- in Favicons.sqlite wurden die exakt gleichen Enträge geschrieben, mit dem Präfix "Fake-favicon-uri". Ein tatsächliches Icon wurde nicht in die DB geschrieben
+			- remote settings Datenbank enthielt den gleichen Eintrag wie es bereits bei Firefox der Fall war. Keine PB Artefakte
 			- Restliche Dateien ohne Inhalt, nur Spaltennamen
 			- Nach WAL Checkpoints bleiben Dateien unverändert
-		> Nach Schließen des Browsers (Snapshot 3)
+		> Nach Zurücksetzen der Browser-Identität (Snapshot 3-1)
 			- in places.sqlite: Indizes bei eingetragenen Seiten aktualisiert
-			- 1657114595AmcateirvtiSty.sqlite erhielt BLOB Eintrag, in HxD keine Muster erkennbar
-			- webappsstore.sqlite: leer initialisiert, nur Spaltennamen
+			- restliche Dateien unverändert
+		> Nach Schließen des Browsers (Snapshot 3)
+			- in places.sqlite sowie favicons.sqlite: Indizes bei eingetragenen Seiten aktualisiert
 			- restliche Dateien unverändert
 			- nach WAL Checkpoints bleiben Dateien unverändert
 		> Nach herunterfahren der VM (Snapshot 4)
@@ -609,7 +576,7 @@ Kategorien der Logs:
 Quantitativ: (Diagramme)		
 	> Balkendiagramm: Für jede Logfilekategorie: Anzahl Schreiboperationen Logfile 1 vs Logfile 2
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-bar-chart-logfile1vs2cs3.png}}}
 		\label{chart:final-criteria}  
 		\caption{Comparison of found PB artifacts between RAM Dumps}
 	\end{figure}
@@ -632,8 +599,7 @@ Quantitativ: (Diagramme)
 
 \subsection*{Registry}
 > Process Monitor: SetValue Operationen von Browser 
-TODO: Logfile 1 vs 2?
-	Kategorien Registry Keys:
+	Kategorien Registry Keys: Analog zu Firefox
 	1) PreXULSkeletonUISettings:
 		> Prefix: Absoluter Installationspfad von Firefox
 		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
@@ -666,7 +632,7 @@ TODO: Logfile 1 vs 2?
 Quantitativ: (Diagramme)
 	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
 		\label{chart:final-criteria}  
 		\caption{Comparison of found PB artifacts between RAM Dumps}
 	\end{figure}
@@ -675,7 +641,7 @@ Quantitativ: (Diagramme)
 	In allen Hives kein Treffer für alle Suchbegriffe
 
 Literatur: 
-	> angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+	> Wie bei Firefox: Shellactivities Key existiert nicht mehr --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
 
 %Literatur:
 %	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
@@ -700,35 +666,39 @@ Von Autopsy automatisch indexierte Dateien:
 In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue dazugekommen
 - Web Bookmarks:
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_bookmarks.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_bookmarks.png}}}
 		\label{chart:final-criteria}  
 		\caption{Autopsy Web Bookmarks}
 	\end{figure}
 	Snapshot 1:
 		> Bing.url (Unter C:/User/Forensik/Favorites/Links) enthält Bing Startseite
 	Snapshot 2:
-		> 5 Einträge in places.sqlite: (Firefox Standardseiten -> Deckt sich mit Beobachtungen aus Process Monitor Analyse, siehe Kapitel X)
-	Snapshot 3:
+		> unverändert zu 1
+	Snapshot 3-1:
 		> unverändert zu 2
+	Snapshot 3-2:	
+		> unverändert zu 3-1
 	Snapshot 4:
-		> unverändert zu 3
+		> unverändert zu 3-2
 - Web Cookies:
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_cookies.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_cookies.png}}}
 		\label{chart:final-criteria}  
 		\caption{Autopsy Web Cookies}
 	\end{figure}
 	Snapshot 1:
-		> 10 Einträge in WebCacheV01.dat (= DB des Internet Explorers zum speichern von Browserdaten): Cookies für bing.com und live.com (= outlook)
+		> 9 Einträge in WebCacheV01.dat (= DB des Internet Explorers zum speichern von Browserdaten): Cookies für bing.com und live.com (= outlook)
 	Snapshot 2:
 		> unverändert zu 1
-	Snapshot 3:
+	Snapshot 3-1:
 		> unverändert zu 2
+	Snapshot 3-2:
+		> unverändert zu 3-1
 	Snapshot 4:
-		> unverändert zu 3
+		> unverändert zu 3-2
 - Web History:
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_history.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_history.png}}}
 		\label{chart:final-criteria}  
 		\caption{Autopsy Web History}
 	\end{figure}
@@ -736,18 +706,19 @@ In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue
 		> 2 Einträge in WebCacheV01.dat:
 			- 2x live.com (= outlook)
 	Snapshot 2:
-		> 1 Eintrag in places.sqlite: % https://www.mozilla.org/privacy/firefox/
-			-> Zurückzuführen auf Seite, die sich automatisch geöffnet hat, als Firefox gestartet (bevor privates Fenster geöffnet wurde)
 		> 1 neuer Einträge in WebCacheV01.dat:
 			- file:///Z:/Logfile\_1 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
-	Snapshot 3:
+	Snapshot 3-1:
 		> 1 neuer Eintrag in WebCacheV01.dat:
-			- file:///Z:/Logfile\_2 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
+			- file:///Z:/Logfile\_2-1 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
+	Snapshot 3-2:
+		> 1 neuer Eintrag in WebCacheV01.dat:
+			- file:///Z:/Logfile\_2-2 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
 	Snapshot 4:
-		> unverändert zu 3
+		> unverändert zu 3-2
 - Web Categories:
 	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_categories.png}}}
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_categories.png}}}
 		\label{chart:final-criteria}  
 		\caption{Autopsy Web Categories}
 	\end{figure}
@@ -755,10 +726,12 @@ In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue
 		> 2x WebCacheV01.dat aufgelistet => Mit HxD untersucht, keine PB Artefakte
 	Snapshot 2:
 		> unverändert zu 2
-	Snapshot 3:
+	Snapshot 3-1:
 		> unverändert zu 3
+	Snapshot 3-2:
+		> unverändert zu 3-1
 	Snapshot 4:
-		> unverändert zu 4
+		> unverändert zu 3-2
 		
 Zusammenfassung:
 - keine PB Artefakte
