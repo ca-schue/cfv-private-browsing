@@ -1,36 +1,32 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  27 MAY 2023 14:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  28 MAY 2023 22:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **./main.tex
 (main.tex
 LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2022-11-02>
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrreprt.cl
-s
-Document Class: scrreprt 2022/10/12 v3.38 KOMA-Script document class (report)
+L3 programming layer <2023-04-20>
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrreprt.cls
+Document Class: scrreprt 2023/04/24 v3.40 KOMA-Script document class (report)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
-y
-Package: scrkbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-dependent b
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.sty
+Package: scrkbase 2023/04/24 v3.40 KOMA-Script package (KOMA-Script-dependent b
 asics and keyval usage)
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
-Package: scrbase 2022/10/12 v3.38 KOMA-Script package (KOMA-Script-independent 
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+Package: scrbase 2023/04/24 v3.40 KOMA-Script package (KOMA-Script-independent 
 basics and keyval usage)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
-y
-Package: scrlfile 2022/10/12 v3.38 KOMA-Script package (file load hooks)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.sty
+Package: scrlfile 2023/04/24 v3.40 KOMA-Script package (file load hooks)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
-ok.sty
-Package: scrlfile-hook 2022/10/12 v3.38 KOMA-Script package (using LaTeX hooks)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-hoo
+k.sty
+Package: scrlfile-hook 2023/04/24 v3.40 KOMA-Script package (using LaTeX hooks)
 
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
-Package: scrlogo 2022/10/12 v3.38 KOMA-Script package (logo)
-))) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+Package: scrlogo 2023/04/24 v3.40 KOMA-Script package (logo)
+))) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
@@ -38,15 +34,14 @@ Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
 Already applied: [0000/00/00] Usage of raw or classic option list on input line
  368.
 ))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.st
-y
-Package: tocbasic 2022/10/12 v3.38 KOMA-Script package (handling toc-files)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\tocbasic.sty
+Package: tocbasic 2023/04/24 v3.40 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip48
 \scr@dte@tocline@numbox=\box51
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 137.
+(tocbasic)             for `toc' on input line 135.
 Package scrreprt Info: You've used standard option `11pt'.
 (scrreprt)             This is correct!
 (scrreprt)             Internally I'm using `fontsize=11pt'.
@@ -95,16 +90,15 @@ Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
 (scrreprt)              is not recommended.
 
 Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
-ine 2614.
+ine 2668.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt
-.clo
-File: scrsize11pt.clo 2022/10/12 v3.38 KOMA-Script font size class option (11pt
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize11pt.
+clo
+File: scrsize11pt.clo 2023/04/24 v3.40 KOMA-Script font size class option (11pt
 )
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.st
-y
-Package: typearea 2022/10/12 v3.38 KOMA-Script package (type area)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.sty
+Package: typearea 2023/04/24 v3.40 KOMA-Script package (type area)
 \ta@bcor=\skip49
 \ta@div=\count185
 Package typearea Info: You've used standard option `oneside'.
@@ -117,7 +111,6 @@ Package typearea Info: You've used standard option `oneside'.
 \ta@vblk=\skip51
 \ta@temp=\skip52
 \footheight=\skip53
-
 
 Package typearea Warning: Bad type area settings!
 (typearea)                The detected line width is about 17%
@@ -142,7 +135,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1767.
+(typearea)              on input line 1798.
 )
 \c@part=\count186
 \c@chapter=\count187
@@ -153,96 +146,96 @@ Package typearea Info: These are the values describing the layout:
 \c@subparagraph=\count192
 \scr@dte@chapter@maxnumwidth=\skip54
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\chapter on input line 5902.
+(scrreprt)           for `\chapter on input line 5961.
 \scr@dte@section@maxnumwidth=\skip55
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\section on input line 5913.
+(scrreprt)           for `\section on input line 5972.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\section on input line 5913.
+(scrreprt)           for `\section on input line 5972.
 \scr@dte@part@maxnumwidth=\skip56
 Class scrreprt Info: using compatibility default `afterindent=true'
-(scrreprt)           for `\part on input line 5922.
+(scrreprt)           for `\part on input line 5981.
 \scr@dte@subsection@maxnumwidth=\skip57
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsection on input line 5932.
+(scrreprt)           for `\subsection on input line 5991.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsection on input line 5932.
+(scrreprt)           for `\subsection on input line 5991.
 \scr@dte@subsubsection@maxnumwidth=\skip58
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsubsection on input line 5942.
+(scrreprt)           for `\subsubsection on input line 6001.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsubsection on input line 5942.
+(scrreprt)           for `\subsubsection on input line 6001.
 \scr@dte@paragraph@maxnumwidth=\skip59
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\paragraph on input line 5953.
+(scrreprt)           for `\paragraph on input line 6012.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\paragraph on input line 5953.
+(scrreprt)           for `\paragraph on input line 6012.
 \scr@dte@subparagraph@maxnumwidth=\skip60
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subparagraph on input line 5963.
+(scrreprt)           for `\subparagraph on input line 6022.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subparagraph on input line 5963.
+(scrreprt)           for `\subparagraph on input line 6022.
 \abovecaptionskip=\skip61
 \belowcaptionskip=\skip62
 \c@pti@nb@sid@b@x=\box52
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 7140.
+(tocbasic)             for `lof' on input line 7199.
 \scr@dte@figure@maxnumwidth=\skip63
 \c@figure=\count193
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 7157.
+(tocbasic)             for `lot' on input line 7216.
 \scr@dte@table@maxnumwidth=\skip64
 \c@table=\count194
 Class scrreprt Info: Using old \@makefntext due to compatibility level
-(scrreprt)           less than 3.22 on input line 7315.
-Class scrreprt Info: Redefining `\numberline' on input line 7328.
+(scrreprt)           less than 3.22 on input line 7374.
+Class scrreprt Info: Redefining `\numberline' on input line 7387.
 \bibindent=\dimen140
-) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2022/11/30 3.83 The Babel package
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2023/04/18 3.88 The Babel package
 \babel@savecnt=\count195
 \U@D=\dimen141
 \l@unhyphenated=\language79
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count196
 
 *************************************
 * Local config file bblopts.cfg used
 *
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ld
-f
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngerman.ldf
 Language: ngerman 2021/02/27 v2.13 German support for babel (post-1996 orthogra
 phy)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngermanb.l
-df
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/babel-german\ngermanb.ld
+f
 Language: ngermanb 2021/02/27 v2.13 German support for babel (post-1996 orthogr
 aphy)
 Package babel Info: Making " an active character on input line 122.
 )))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/de\babel
--ngerman.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/de\babel-
+ngerman.tex
 Package babel Info: Importing font and identification data for ngerman
 (babel)             from babel-de.ini. Reported on input line 11.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count197
@@ -264,7 +257,7 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count279
 \c@blind@pangrammax=\count280
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -299,7 +292,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/sansmath\sansmath.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/sansmath\sansmath.sty
 Package: sansmath 2007/02/28  ver 1.1 Donald Arseneau
 \c@mv@sans=\count281
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `sans'
@@ -315,73 +308,74 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `sans'
 LaTeX Font Info:    Overwriting math alphabet `\mathsfbf' in version `sans'
 (Font)                  OT1/lmss/bx/sl --> OT1/lmss/bx/n on input line 112.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
-Package: microtype 2022/06/23 v3.0f Micro-typographical refinements (RS)
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count282
 )
 \MT@toks=\toks19
 \MT@tempbox=\box53
 \MT@count=\count283
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1045.
-LaTeX Info: Redefining \leftprotrusion on input line 1046.
-LaTeX Info: Redefining \rightprotrusion on input line 1056.
-LaTeX Info: Redefining \textls on input line 1234.
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks20
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
 \MT@outer@kern=\dimen142
-LaTeX Info: Redefining \textmicrotypecontext on input line 1858.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
 \MT@listname@count=\count284
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
-tex.def
-File: microtype-pdftex.def 2022/06/23 v3.0f Definitions specific to pdftex (RS)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdft
+ex.def
+File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
 
-LaTeX Info: Redefining \lsstyle on input line 900.
-LaTeX Info: Redefining \lslig on input line 900.
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
 \MT@outer@space=\skip65
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
-File: microtype.cfg 2022/06/23 v3.0f microtype main configuration file (RS)
-))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
-Package: biblatex 2022/07/12 v3.18b programmable bibliographies (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
+)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count285
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -445,8 +439,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
-File: blx-dm.def 2022/07/12 v3.18b biblatex localization (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric-comp.dbx' not found.
@@ -537,13 +531,13 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
-File: blx-compat.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
-File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \c@textcitecount=\count400
 \c@textcitetotal=\count401
 \c@textcitemaxnames=\count402
@@ -561,30 +555,29 @@ File: biblatex.def 2022/07/12 v3.18b biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric-co
-mp.bbx
-File: numeric-comp.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric-com
+p.bbx
+File: numeric-comp.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bb
-x
-File: numeric.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.b
-bx
-File: standard.bbx 2022/07/12 v3.18b biblatex bibliography style (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bb
+x
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count409
 \c@bbx:relatedtotal=\count410
 )))
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-co
-mp.cbx
-File: numeric-comp.cbx 2022/07/12 v3.18b biblatex citation style (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric-com
+p.cbx
+File: numeric-comp.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 \c@cbx@tempcnta=\count411
 \c@cbx@tempcntb=\count412
 \c@cbx@tempcntc=\count413
@@ -604,63 +597,182 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2022-11-02 L3 programming layer (loader) 
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2023-04-20 L3 programming layer (loader) 
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count415
 \l__pdf_internal_box=\box54
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2022-11-02 L3 programming layer (loader) 
+(biblatex)             2023-04-20 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-case-expl3.
+sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xparse
 .sty
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
-e.sty
-Package: xparse 2022-06-22 L3 Experimental document command parser
+Package: xparse 2023-02-02 L3 Experimental document command parser
 )
-Package: blx-case-expl3 2022/07/12 v3.18b expl3 case changing code for biblatex
-
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2023-04-22 v7.00x Hypertext links for LaTeX
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
+y
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro.
+sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
+estring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count416
+)
+\@linkdim=\dimen143
+\Hy@linkcounter=\count417
+\Hy@pagecounter=\count418
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2023-04-22 v7.00x Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count419
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2023-04-22 v7.00x Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4065.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4065.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4065
+.
+Package hyperref Info: Hyper figures OFF on input line 4182.
+Package hyperref Info: Link nesting OFF on input line 4187.
+Package hyperref Info: Hyper index ON on input line 4190.
+Package hyperref Info: Plain pages OFF on input line 4197.
+Package hyperref Info: Backreferencing OFF on input line 4202.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4449.
+\c@Hy@tempcnt=\count420
+LaTeX Info: Redefining \url on input line 4787.
+\XeTeXLinkMargin=\dimen144
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.
+sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count421
+\Field@Width=\dimen145
+\Fld@charsize=\dimen146
+Package hyperref Info: Hyper figures OFF on input line 6066.
+Package hyperref Info: Link nesting OFF on input line 6071.
+Package hyperref Info: Hyper index ON on input line 6074.
+Package hyperref Info: backreferencing OFF on input line 6081.
+Package hyperref Info: Link coloring OFF on input line 6086.
+Package hyperref Info: Link coloring with OCG OFF on input line 6091.
+Package hyperref Info: PDF/A mode OFF on input line 6096.
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count422
+\c@Item=\count423
+\c@Hfootnote=\count424
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2023-04-22 v7.00x Hyperref driver for pdfTeX
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count425
+\c@bookmark@seq@number=\count426
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
+check.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqueco
+unter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip88
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 52.
+Package hyperref Info: Option `colorlinks' set `true' on input line 52.
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
-\@mathmargin=\skip88
+\@mathmargin=\skip89
 
 For additional information on amsmath, use the `?' option.
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks20
-\ex@=\dimen143
+\@emptytoks=\toks21
+\ex@=\dimen147
 ))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen144
+\pmbraise@=\dimen148
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count416
+\inf@bad=\count427
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count417
-\leftroot@=\count418
+\uproot@=\count428
+\leftroot@=\count429
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count419
-\DOTSCASE@=\count420
+\classnum@=\count430
+\DOTSCASE@=\count431
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -670,102 +782,103 @@ LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen145
+\big@size=\dimen149
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count421
+\macc@depth=\count432
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count422
+\c@MaxMatrixCols=\count433
 \dotsspace@=\muskip21
-\c@parentequation=\count423
-\dspbrk@lvl=\count424
-\tag@help=\toks21
-\row@=\count425
-\column@=\count426
-\maxfields@=\count427
-\andhelp@=\toks22
-\eqnshift@=\dimen146
-\alignsep@=\dimen147
-\tagshift@=\dimen148
-\tagwidth@=\dimen149
-\totwidth@=\dimen150
-\lineht@=\dimen151
-\@envbody=\toks23
-\multlinegap=\skip89
-\multlinetaggap=\skip90
-\mathdisplay@stack=\toks24
+\c@parentequation=\count434
+\dspbrk@lvl=\count435
+\tag@help=\toks22
+\row@=\count436
+\column@=\count437
+\maxfields@=\count438
+\andhelp@=\toks23
+\eqnshift@=\dimen150
+\alignsep@=\dimen151
+\tagshift@=\dimen152
+\tagwidth@=\dimen153
+\totwidth@=\dimen154
+\lineht@=\dimen155
+\@envbody=\toks24
+\multlinegap=\skip90
+\multlinetaggap=\skip91
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.st
-y
+))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen152
-\Gin@req@width=\dimen153
-) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
+\Gin@req@height=\dimen156
+\Gin@req@width=\dimen157
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/svg\svg.sty
 Package: svg 2020/11/26 v2.02k (include SVG pictures)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
-ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.st
+y
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.s
-ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.st
+y
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.s
-ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.st
+y
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
+)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))
-\c@svg@param@lastpage=\count428
+\c@svg@param@lastpage=\count439
 \svg@box=\box57
-\c@svg@param@currpage=\count429
-) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+\c@svg@param@currpage=\count440
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 227.
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
 Package xcolor Info: Model `RGB' extended on input line 1369.
@@ -776,187 +889,612 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent
-.sty
-Package: transparent 2019/11/29 v1.4 Transparency via pdfTeX's color stack (HO)
-
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
-Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent.
 sty
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
-y
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--common.tex
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen154
-\pgfutil@tempdimb=\dimen155
+Package: transparent 2022-10-27 v1.5 Transparency with color stacks
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--common-lists.tex))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
--latex.def
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/transparent\transparent-
+nometadata.sty
+Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color
+ stack (HO)
+))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.s
+ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
+common.tex
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen158
+\pgfutil@tempdimb=\dimen159
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-
+latex.def
 \pgfutil@abb=\box58
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
-code.tex
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
-Package: pgfrcs 2021/05/15 v3.1.9a (3.1.9a)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.c
+ode.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s.code.tex
-Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
 .code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
-filtered.code.tex
-\pgfkeys@tmptoks=\toks28
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.
+code.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeysl
+ibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen156
-\pgf@y=\dimen157
-\pgf@xa=\dimen158
-\pgf@ya=\dimen159
-\pgf@xb=\dimen160
-\pgf@yb=\dimen161
-\pgf@xc=\dimen162
-\pgf@yc=\dimen163
-\pgf@xd=\dimen164
-\pgf@yd=\dimen165
+\pgf@x=\dimen160
+\pgf@y=\dimen161
+\pgf@xa=\dimen162
+\pgf@ya=\dimen163
+\pgf@xb=\dimen164
+\pgf@yb=\dimen165
+\pgf@xc=\dimen166
+\pgf@yc=\dimen167
+\pgf@xd=\dimen168
+\pgf@yd=\dimen169
 \w@pgf@writea=\write4
 \r@pgf@reada=\read4
-\c@pgf@counta=\count430
-\c@pgf@countb=\count431
-\c@pgf@countc=\count432
-\c@pgf@countd=\count433
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count434
+\c@pgf@counta=\count441
+\c@pgf@countb=\count442
+\c@pgf@countc=\count443
+\c@pgf@countd=\count444
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count445
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
-fg
-File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cf
+g
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-pdftex.def
-File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-s-common-pdf.def
-File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-ssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count435
-\pgfsyssoftpath@bigbuffer@items=\count436
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+softpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count446
+\pgfsyssoftpath@bigbuffer@items=\count447
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
-sprotocol.code.tex
-File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys
+protocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen166
-\captionmargin=\dimen167
-\caption@leftmargin=\dimen168
-\caption@rightmargin=\dimen169
-\caption@width=\dimen170
-\caption@indent=\dimen171
-\caption@parindent=\dimen172
-\caption@hangindent=\dimen173
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen170
+\captionmargin=\dimen171
+\caption@leftmargin=\dimen172
+\caption@rightmargin=\dimen173
+\caption@width=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
 Package caption Info: KOMA-Script document class detected.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.st
-o
-File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the 
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.sto
+File: caption-koma.sto 2022/12/27 v2.0c Adaption of the caption package to the 
 KOMA-Script document classes (AR)
 ))
-\c@caption@flags=\count437
-\c@continuedfloat=\count438
+\c@caption@flags=\count448
+\c@continuedfloat=\count449
+Package caption Info: hyperref package is loaded.
+Package caption Info: KOMA-Script scrextend package detected.
+\caption@addmargin@hsize=\dimen178
+\caption@addmargin@linewidth=\dimen179
 )
-\c@KVtest=\count439
-\sf@farskip=\skip91
-\sf@captopadj=\dimen174
-\sf@capskip=\skip92
-\sf@nearskip=\skip93
-\c@subfigure=\count440
-\c@subfigure@save=\count441
-\c@lofdepth=\count442
-\c@subtable=\count443
-\c@subtable@save=\count444
-\c@lotdepth=\count445
-\sf@top=\skip94
-\sf@bottom=\skip95
+\c@KVtest=\count450
+\sf@farskip=\skip92
+\sf@captopadj=\dimen180
+\sf@capskip=\skip93
+\sf@nearskip=\skip94
+\c@subfigure=\count451
+\c@subfigure@save=\count452
+\c@lofdepth=\count453
+\c@subtable=\count454
+\c@subtable@save=\count455
+\c@lotdepth=\count456
+\sf@top=\skip95
+\sf@bottom=\skip96
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen175
-\lightrulewidth=\dimen176
-\cmidrulewidth=\dimen177
-\belowrulesep=\dimen178
-\belowbottomsep=\dimen179
-\aboverulesep=\dimen180
-\abovetopsep=\dimen181
-\cmidrulesep=\dimen182
-\cmidrulekern=\dimen183
-\defaultaddspace=\dimen184
-\@cmidla=\count446
-\@cmidlb=\count447
-\@aboverulesep=\dimen185
-\@belowrulesep=\dimen186
-\@thisruleclass=\count448
-\@lastruleclass=\count449
-\@thisrulewidth=\dimen187
+\heavyrulewidth=\dimen181
+\lightrulewidth=\dimen182
+\cmidrulewidth=\dimen183
+\belowrulesep=\dimen184
+\belowbottomsep=\dimen185
+\aboverulesep=\dimen186
+\abovetopsep=\dimen187
+\cmidrulesep=\dimen188
+\cmidrulekern=\dimen189
+\defaultaddspace=\dimen190
+\@cmidla=\count457
+\@cmidlb=\count458
+\@aboverulesep=\dimen191
+\@belowrulesep=\dimen192
+\@thisruleclass=\count459
+\@lastruleclass=\count460
+\@thisrulewidth=\dimen193
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-sc
-rpage.sty
-Package: scrlayer-scrpage 2022/10/12 v3.38 KOMA-Script package (end user interf
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-scr
+page.sty
+Package: scrlayer-scrpage 2023/04/24 v3.40 KOMA-Script package (end user interf
 ace for scrlayer)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.st
-y
-Package: scrlayer 2022/10/12 v3.38 KOMA-Script package (defining layers and pag
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.sty
+Package: scrlayer 2023/04/24 v3.40 KOMA-Script package (defining layers and pag
 e styles)
 Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 217
 6.
 )
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
-(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1089.
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1097.
 )
 1: section
 1: chapter
 1: chapter
 1: section
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count450
-\c@@ppsavesec=\count451
-\c@@ppsaveapp=\count452
+\c@@pps=\count461
+\c@@ppsavesec=\count462
+\c@@ppsaveapp=\count463
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/comment\comment.sty
+\CommentStream=\write5
+
+Excluding comment 'comment')
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks33
+\XKV@tempa@toks=\toks34
+)
+\XKV@depth=\count464
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.st
+y
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box59
+)
+\tc@llx=\dimen194
+\tc@lly=\dimen195
+\tc@urx=\dimen196
+\tc@ury=\dimen197
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen198
+\adjbox@Height=\dimen199
+\adjbox@Depth=\dimen256
+\adjbox@Totalheight=\dimen257
+\adjbox@pwidth=\dimen258
+\adjbox@pheight=\dimen259
+\adjbox@pdepth=\dimen260
+\adjbox@ptotalheight=\dimen261
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count465
+) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box60
+\sift@deathcycles=\count466
+\@vwid@loff=\dimen262
+\@vwid@roff=\dimen263
+)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip97
+\multirow@cntb=\count467
+\multirow@dima=\skip98
+\bigstrutjot=\dimen264
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revi
+sion.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.s
+ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.s
+ty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.
+tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.c
+ode.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser
+.code.tex
+\pgfmath@dimen=\dimen265
+\pgfmath@count=\count468
+\pgfmath@box=\box61
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.basic.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.trigonometric.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.random.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.comparison.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.base.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.round.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.misc.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
+ons.integerarithmetics.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.c
+ode.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.
+code.tex
+\c@pgfmathroundto@lastzeros=\count469
+))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.t
+ex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+points.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen266
+\pgf@picmaxx=\dimen267
+\pgf@picminy=\dimen268
+\pgf@picmaxy=\dimen269
+\pgf@pathminx=\dimen270
+\pgf@pathmaxx=\dimen271
+\pgf@pathminy=\dimen272
+\pgf@pathmaxy=\dimen273
+\pgf@xx=\dimen274
+\pgf@xy=\dimen275
+\pgf@yx=\dimen276
+\pgf@yy=\dimen277
+\pgf@zx=\dimen278
+\pgf@zy=\dimen279
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+pathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen280
+\pgf@path@lasty=\dimen281
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+pathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen282
+\pgf@shorten@start@additional=\dimen283
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+scopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box62
+\pgf@hbox=\box63
+\pgf@layerbox@main=\box64
+\pgf@picture@serial@count=\count470
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+graphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen284
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+transformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen285
+\pgf@pt@y=\dimen286
+\pgf@pt@temp=\dimen287
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+quick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+objects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+pathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+arrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen288
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+shade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen289
+\pgf@sys@shading@range@num=\count471
+\pgf@shadingcount=\count472
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+image.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+external.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box65
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+layers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+transparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+patterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
+rdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodules
+hapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box66
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulep
+lot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
+p-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen290
+\pgf@nodesepend=\dimen291
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
+p-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.st
+y
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.
+code.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.
+tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.c
+ode.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen292
+\pgffor@skip=\dimen293
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count473
+\pgfplotmarksize=\dimen294
+)
+\tikz@lastx=\dimen295
+\tikz@lasty=\dimen296
+\tikz@lastxsaved=\dimen297
+\tikz@lastysaved=\dimen298
+\tikz@lastmovetox=\dimen299
+\tikz@lastmovetoy=\dimen300
+\tikzleveldistance=\dimen301
+\tikzsiblingdistance=\dimen302
+\tikz@figbox=\box67
+\tikz@figbox@bg=\box68
+\tikz@tempbox=\box69
+\tikz@tempbox@bg=\box70
+\tikztreelevel=\count474
+\tikznumberofchildren=\count475
+\tikznumberofcurrentchild=\count476
+\tikz@fig@count=\count477
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulem
+atrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count478
+\pgfmatrixcurrentcolumn=\count479
+\pgf@matrix@numberofcolumns=\count480
+)
+\tikz@expandcount=\count481
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.code
+.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.
+code.tex
+\t@pgfplots@toka=\toks40
+\t@pgfplots@tokb=\toks41
+\t@pgfplots@tokc=\toks42
+\pgfplots@tmpa=\dimen303
+\c@pgfplots@coordindex=\count482
+\c@pgfplots@scanlineindex=\count483
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotss
+ysgeneric.code.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgfplots
+library.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompati
+b\pgfplotsoldpgfsupp_loader.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryfpu.code.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks43
+\t@pgf@tokb=\toks44
+\t@pgf@tokc=\toks45
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompati
+b\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+util.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsliststructure.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsliststructureext.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count484
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsmatrix.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfp
+lotstableshared.code.tex
+\c@pgfplotstable@counta=\count485
+\t@pgfplotstable@a=\toks46
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
+\pgfplotsdeque.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+binary.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+binary.data.code.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+util.verb.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibra
+rypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count486
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
+ypgfplots.surfshading.pgfsys-pdftex.def)))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+colormap.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/util\pgfplots
+color.code.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsstack
+edplots.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsploth
+andlers.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshp
+lothandler.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsmeshp
+lotimage.code.tex)))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.scal
+ing.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscoord
+processing.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.erro
+rbars.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.mark
+ers.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotsticks
+.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.path
+s.code.tex)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduled
+ecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen304
+\pgfdecoratedremainingdistance=\dimen305
+\pgfdecoratedinputsegmentcompleteddistance=\dimen306
+\pgfdecoratedinputsegmentremainingdistance=\dimen307
+\pgf@decorate@distancetomove=\dimen308
+\pgf@decorate@repeatstate=\count487
+\pgfdecorationsegmentamplitude=\dimen309
+\pgfdecorationsegmentlength=\dimen310
+)
+\tikz@lib@dec@box=\box71
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarydecorations.pathmorphing.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorati
+ons\pgflibrarydecorations.pathmorphing.code.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorati
+ons\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibr
+arypgfplots.contourlua.code.tex)
+\pgfplots@numplots=\count488
+\pgfplots@xmin@reg=\dimen311
+\pgfplots@xmax@reg=\dimen312
+\pgfplots@ymin@reg=\dimen313
+\pgfplots@ymax@reg=\dimen314
+\pgfplots@zmin@reg=\dimen315
+\pgfplots@zmax@reg=\dimen316
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
+ryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/bchart\bchart.sty
+Package: bchart 
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
+/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+\bcpos=\skip99
+\bcwidth=\skip100
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count453
-\@quotereset=\count454
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 9
-4.
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
+\@quotelevel=\count489
+\@quotereset=\count490
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+15.
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
@@ -1058,32 +1596,37 @@ LaTeX Warning: Label `chart:final-criteria' multiply defined.
 (kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
-LaTeX Font Info:    ... okay on input line 94.
-LaTeX Info: Redefining \microtypecontext on input line 94.
-Package microtype Info: Applying patch `item' on input line 94.
-Package microtype Info: Applying patch `toc' on input line 94.
-Package microtype Info: Applying patch `eqnum' on input line 94.
-Package microtype Info: Applying patch `footnote' on input line 94.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Info: Redefining \microtypecontext on input line 115.
+Package microtype Info: Applying patch `item' on input line 115.
+Package microtype Info: Applying patch `toc' on input line 115.
+Package microtype Info: Applying patch `eqnum' on input line 115.
+Package microtype Info: Applying patch `footnote' on input line 115.
+Package microtype Info: Applying patch `verbatim' on input line 115.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 94.
+LaTeX Info: Redefining \showhyphens on input line 115.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1094,20 +1637,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lb
-x
-File: ngerman.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\ngerman.lbx
+File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
-File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
-File: german.lbx 2022/07/12 v3.18b biblatex localization (PK/MW)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 ))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1125,91 +1665,114 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 94.
-Package biblatex Info: Reference segment=0 on input line 94.
+Package biblatex Info: Reference section=0 on input line 115.
+Package biblatex Info: Reference segment=0 on input line 115.
+Package hyperref Info: Link coloring ON on input line 115.
+ (main.out) (main.out)
+\@outlinefile=\write6
+\openout6 = `main.out'.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
-ii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count455
-\scratchdimen=\dimen188
-\scratchbox=\box59
-\nofMPsegments=\count456
-\nofMParguments=\count457
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count458
-\MPscratchDim=\dimen189
-\MPnumerator=\count459
-\makeMPintoPDFobject=\count460
-\everyMPtoPDFconversion=\toks33
-)
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
-ase.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Class scrreprt Info: loading recommended package `bookmark'.
+(scrreprt)           Using `bookmark' together with `hyperref' is recommended,
+(scrreprt)           because of handling of possible bookmark level gaps.
+(scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
+(scrreprt)           `bookmarkpackage=false' before \begin{document} and
+(scrreprt)           you can avoid this message adding:
+(scrreprt)             \usepackage{bookmark}
+(scrreprt)           before \begin{document} on input line 115.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
-keys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count491
 ))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count492
+\scratchdimen=\dimen317
+\scratchbox=\box72
+\nofMPsegments=\count493
+\nofMParguments=\count494
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count495
+\MPscratchDim=\dimen318
+\MPnumerator=\count496
+\makeMPintoPDFobject=\count497
+\everyMPtoPDFconversion=\toks48
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
-fg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
+g
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-))
+)) ()
+
+Package svg Warning: No version of Inkscape was detected by invoking
+(svg)                `inkscape -V'
+(svg)                so the Inkscape export will fail quite sure as the
+(svg)                command is probably unknown to your OS. You could set
+(svg)                `inkscapeversion=<version>' manually but this is very
+(svg)                unlikely to work on input line 115.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<bilder//thi_logo.pdf, id=4, 165.87971pt x 73.25368pt>
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 115.
+
+<bilder//thi_logo.pdf, id=6, 165.87971pt x 73.25368pt>
 File: bilder//thi_logo.pdf Graphic file (type pdf)
 <use bilder//thi_logo.pdf>
-Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 98.
+Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 119.
 (pdftex.def)             Requested size: 137.88785pt x 60.8933pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-98.
- (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
+119.
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 119
+.
 
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 119
+.
 
-
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 [1
 
 
-{C:/Users/carls/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./bilder//th
-i_logo.pdf>]
-Package tocbasic Info: character protrusion at toc deactivated on input line 10
-3.
+{C:/Users/sell/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sell/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./bilder//thi_logo
+.pdf>]
+Package tocbasic Info: character protrusion at toc deactivated on input line 12
+4.
  (main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write7
+\openout7 = `main.toc'.
 
  [1
 
@@ -1220,23 +1783,30 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 10
 chapter 1.
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
 4.
-(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.38 I
+      mmer mehr Internet-Nuter:\cite{Izzati.2022} [1
 
 
 
 
-]
-[2]) [3]
+{C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [2
+]) [3]
 \openout2 = `"kapitel/02_Theoretischer Hintergrund.aux"'.
 
- (kapitel/02_Theoretischer Hintergrund.tex
+
+(kapitel/02_Theoretischer Hintergrund.tex
 chapter 2.
 [4
 
@@ -1274,148 +1844,148 @@ chapter 4.
 LaTeX Warning: Citation 'Hariharan' on page 17 undefined on input line 64.
 
 [17] [18] (bilder/process_monitor_to_excel-Latex.pdf_tex
-<bilder//process_monitor_to_excel-Latex.pdf, id=78, page=1, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=290, page=1, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=79, page=2, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=291, page=2, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page2 use
 d on input line 58.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=80, page=3, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=292, page=3, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page3 use
 d on input line 60.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=81, page=4, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=293, page=4, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page4 use
 d on input line 63.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=82, page=5, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=294, page=5, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page5 use
 d on input line 65.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=83, page=6, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=295, page=6, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page6 use
 d on input line 67.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=84, page=7, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=296, page=7, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page7 use
 d on input line 71.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=85, page=8, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=297, page=8, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page8 use
 d on input line 74.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=86, page=9, 798.9303pt x 286.93
-419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=298, page=9, 798.9303pt x 286.9
+3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page9 use
 d on input line 76.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=87, page=10, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=299, page=10, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page10 us
 ed on input line 78.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=88, page=11, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=300, page=11, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page11 us
 ed on input line 81.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=89, page=12, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=301, page=12, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page12 us
 ed on input line 83.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=90, page=13, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=302, page=13, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page13 us
 ed on input line 85.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=91, page=14, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=303, page=14, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page14 us
 ed on input line 87.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=92, page=15, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=304, page=15, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page15 us
 ed on input line 90.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=93, page=16, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=305, page=16, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page16 us
 ed on input line 94.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=94, page=17, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=306, page=17, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page17 us
 ed on input line 97.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=95, page=18, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=307, page=18, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page18 us
 ed on input line 100.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=96, page=19, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=308, page=19, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page19 us
 ed on input line 103.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=97, page=20, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=309, page=20, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page20 us
 ed on input line 107.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=98, page=21, 798.9303pt x 286.9
-3419pt>
+<bilder//process_monitor_to_excel-Latex.pdf, id=310, page=21, 798.9303pt x 286.
+93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 21>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page21 us
@@ -1423,97 +1993,98 @@ ed on input line 111.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
 )
 (bilder/sqlite_file_diffs-Latex.pdf_tex
-<bilder//sqlite_file_diffs-Latex.pdf, id=99, page=1, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=311, page=1, 563.17224pt x 286.8669pt>
+
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page1 used on in
 put line 56.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=100, page=2, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=312, page=2, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page2 used on in
 put line 58.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=101, page=3, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=313, page=3, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page3 used on in
 put line 60.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=102, page=4, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=314, page=4, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page4 used on in
 put line 63.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=103, page=5, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=315, page=5, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page5 used on in
 put line 65.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=104, page=6, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=316, page=6, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page6 used on in
 put line 67.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=105, page=7, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=317, page=7, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page7 used on in
 put line 71.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=106, page=8, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=318, page=8, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page8 used on in
 put line 75.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=107, page=9, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=319, page=9, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page9 used on in
 put line 78.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=108, page=10, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=320, page=10, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page10 used on i
 nput line 81.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=109, page=11, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=321, page=11, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page11 used on i
 nput line 85.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=110, page=12, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=322, page=12, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page12 used on i
 nput line 89.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=111, page=13, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=323, page=13, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page13 used on i
 nput line 91.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=112, page=14, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=324, page=14, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 14>
@@ -1527,279 +2098,279 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [19 <./bilder//process_monitor_to_excel-Latex.pdf> <./bilder//process_monitor_t
 o_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
-DF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
 >] [20 <./bilder//sqlite_file_diffs-Latex.pdf> <./bilder//sqlite_file_diffs-Lat
 ex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 > <./bilder//sqlite_file_diffs-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
+inclusion: multiple pdfs with page group included in a single page
 >] (bilder/yarascan_plugin_tree-Latex.pdf_tex
-<bilder//yarascan_plugin_tree-Latex.pdf, id=234, page=1, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=463, page=1, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=235, page=2, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=464, page=2, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page2 used on
  input line 58.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=236, page=3, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=465, page=3, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page3 used on
  input line 60.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=237, page=4, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=466, page=4, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page4 used on
  input line 62.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=238, page=5, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=467, page=5, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page5 used on
  input line 64.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=239, page=6, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=468, page=6, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page6 used on
  input line 66.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=240, page=7, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=469, page=7, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page7 used on
  input line 68.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=241, page=8, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=470, page=8, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page8 used on
  input line 70.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=242, page=9, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=471, page=9, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page9 used on
  input line 72.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=243, page=10, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=472, page=10, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page10 used o
 n input line 74.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=244, page=11, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=473, page=11, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page11 used o
 n input line 79.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=245, page=12, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=474, page=12, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page12 used o
 n input line 81.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=246, page=13, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=475, page=13, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page13 used o
 n input line 84.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=247, page=14, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=476, page=14, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page14 used o
 n input line 86.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=248, page=15, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=477, page=15, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page15 used o
 n input line 88.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=249, page=16, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=478, page=16, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page16 used o
 n input line 90.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=250, page=17, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=479, page=17, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page17 used o
 n input line 92.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=251, page=18, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=480, page=18, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page18 used o
 n input line 94.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=252, page=19, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=481, page=19, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page19 used o
 n input line 97.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=253, page=20, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=482, page=20, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page20 used o
 n input line 100.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=254, page=21, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=483, page=21, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 21>
@@ -1809,90 +2380,90 @@ n input line 103.
 ) [21]) [22 <./bilder//yarascan_plugin_tree-Latex.pdf> <./bilder//yarascan_plug
 in_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 > <./bilder//yarascan_plugin_tree-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
+DF inclusion: multiple pdfs with page group included in a single page
 >]
 \openout2 = `kapitel/05_Ergebnisse.aux'.
 
  (kapitel/05_Ergebnisse.tex
 chapter 5.
-<bilder/firefox-tabelle-logfile1vlogfile2-reduced.png, id=329, 672.01062pt x 25
+<bilder/firefox-tabelle-logfile1vlogfile2-reduced.png, id=563, 672.01062pt x 25
 7.96375pt>
 File: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png Graphic file (type p
 ng)
@@ -1906,7 +2477,7 @@ used on input line 28.
 
 
  <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>] [24]
-<bilder/firefox-sqlite-table.png, id=339, 892.83563pt x 161.85469pt>
+<bilder/firefox-sqlite-table.png, id=577, 892.83563pt x 161.85469pt>
 File: bilder/firefox-sqlite-table.png Graphic file (type png)
 <use bilder/firefox-sqlite-table.png>
 Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 14
@@ -1917,7 +2488,7 @@ Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 14
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25]
-<bilder/bar-chart-logfile1vs2-test.png, id=343, 777.231pt x 335.946pt>
+<bilder/bar-chart-logfile1vs2-test.png, id=582, 777.231pt x 335.946pt>
 File: bilder/bar-chart-logfile1vs2-test.png Graphic file (type png)
 <use bilder/bar-chart-logfile1vs2-test.png>
 Package pdftex.def Info: bilder/bar-chart-logfile1vs2-test.png  used on input l
@@ -1925,35 +2496,35 @@ ine 172.
 (pdftex.def)             Requested size: 777.22911pt x 335.94518pt.
  [26 <./bilder/firefox-sqlite-table.png> <./bilder/bar-chart-logfile1vs2-test.p
 ng>]
-<bilder/firefox-registry-stacked-bar-chart.png, id=349, 698.172pt x 150.891pt>
+<bilder/firefox-registry-stacked-bar-chart.png, id=592, 698.172pt x 150.891pt>
 File: bilder/firefox-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/firefox-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/firefox-registry-stacked-bar-chart.png  used on
  input line 229.
 (pdftex.def)             Requested size: 698.17029pt x 150.89063pt.
  [27 <./bilder/firefox-registry-stacked-bar-chart.png>]
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=354, 874.76813pt x 117.43875p
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=601, 874.76813pt x 117.43875p
 t>
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
 input line 263.
 (pdftex.def)             Requested size: 874.76599pt x 117.43845pt.
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=355, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=602, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
 put line 277.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
-<bilder/cfv_firefox_autopsy_web_history.png, id=356, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=603, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
 put line 291.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-<bilder/cfv_firefox_autopsy_web_categories.png, id=357, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=604, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
@@ -1963,23 +2534,23 @@ Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
  [28 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
 opsy_web_cookies.png> <./bilder/cfv_firefox_autopsy_web_history.png> <./bilder/
 cfv_firefox_autopsy_web_categories.png>]
-<bilder/volatility/firefox/keywords.png, id=365, 887.607pt x 463.185pt>
+<bilder/volatility/firefox/keywords.png, id=617, 887.607pt x 463.185pt>
 File: bilder/volatility/firefox/keywords.png Graphic file (type png)
 <use bilder/volatility/firefox/keywords.png>
 Package pdftex.def Info: bilder/volatility/firefox/keywords.png  used on input 
-line 363.
+line 365.
 (pdftex.def)             Requested size: 887.60483pt x 463.18385pt.
-<bilder/volatility/firefox/url.png, id=366, 988.347pt x 560.64pt>
+<bilder/volatility/firefox/url.png, id=618, 988.347pt x 560.64pt>
 File: bilder/volatility/firefox/url.png Graphic file (type png)
 <use bilder/volatility/firefox/url.png>
 Package pdftex.def Info: bilder/volatility/firefox/url.png  used on input line 
-374.
+376.
 (pdftex.def)             Requested size: 988.34459pt x 560.63863pt.
-<bilder/volatility/firefox/mail.png, id=367, 1162.89pt x 779.859pt>
+<bilder/volatility/firefox/mail.png, id=619, 1162.89pt x 779.859pt>
 File: bilder/volatility/firefox/mail.png Graphic file (type png)
 <use bilder/volatility/firefox/mail.png>
 Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
- 398.
+ 400.
 (pdftex.def)             Requested size: 1162.88716pt x 779.85709pt.
 
 
@@ -1989,37 +2560,37 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=373, 462.22687pt
+<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=628, 462.22687pt
  x 203.25937pt>
 File: bilder/volatility/firefox/password_0xb9ce29180c8_7420.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0xb9ce29180c8_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0xb9ce29180c8_7420.
-png  used on input line 419.
+png  used on input line 421.
 (pdftex.def)             Requested size: 462.22574pt x 203.25887pt.
-<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=374, 453.94594p
+<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=629, 453.94594p
 t x 179.92218pt>
 File: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png Graphic file (
 type png)
 <use bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420
-.png  used on input line 426.
+.png  used on input line 428.
 (pdftex.def)             Requested size: 453.94482pt x 179.92174pt.
-<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=375, 456.95718pt
+<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=630, 456.95718pt
  x 170.13562pt>
 File: bilder/volatility/firefox/password_0x24083b41858_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x24083b41858_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x24083b41858_8424.
-png  used on input line 435.
+png  used on input line 437.
 (pdftex.def)             Requested size: 456.95605pt x 170.1352pt.
-<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=376, 458.46281pt
+<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=631, 458.46281pt
  x 231.11343pt>
 File: bilder/volatility/firefox/password_0x240840e5b08_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x240840e5b08_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x240840e5b08_8424.
-png  used on input line 442.
+png  used on input line 444.
 (pdftex.def)             Requested size: 458.46169pt x 231.11287pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2030,25 +2601,24 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[30 <./bilder/volatility/firefox/url.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30 <./bilder/volatility/firefox/url.png>]
-<bilder/volatility/firefox/image.png, id=381, 1150.626pt x 200.385pt>
+<bilder/volatility/firefox/image.png, id=638, 1150.626pt x 200.385pt>
 File: bilder/volatility/firefox/image.png Graphic file (type png)
 <use bilder/volatility/firefox/image.png>
 Package pdftex.def Info: bilder/volatility/firefox/image.png  used on input lin
-e 450.
+e 452.
 (pdftex.def)             Requested size: 1150.6232pt x 200.38449pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/summary.png, id=382, 1566.069pt x 393.543pt>
+<bilder/volatility/firefox/summary.png, id=639, 1566.069pt x 393.543pt>
 File: bilder/volatility/firefox/summary.png Graphic file (type png)
 <use bilder/volatility/firefox/summary.png>
 Package pdftex.def Info: bilder/volatility/firefox/summary.png  used on input l
-ine 460.
+ine 462.
 (pdftex.def)             Requested size: 1566.0652pt x 393.54202pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2057,13 +2627,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 d_0xb9ce29180c8_7420.png>] [32 <./bilder/volatility/firefox/password_0x2859f4ff
 d4e0_7420.png> <./bilder/volatility/firefox/password_0x24083b41858_8424.png> <.
 /bilder/volatility/firefox/password_0x240840e5b08_8424.png>]
-<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=394, 823.57687pt
+<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=658, 823.57687pt
  x 331.2375pt>
 File: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png Graphic file (t
 ype png)
 <use bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>
 Package pdftex.def Info: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.
-png  used on input line 489.
+png  used on input line 491.
 (pdftex.def)             Requested size: 823.57486pt x 331.23668pt.
 
 
@@ -2071,106 +2641,141 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [33 <./bilder/volatility/firefox/image.png> <./bilder/volatility/firefox/summar
 y.png>]
-<bilder/tor-sqlite-table.png, id=400, 925.95938pt x 185.94469pt>
+<bilder/tor-sqlite-table.png, id=668, 925.95938pt x 185.94469pt>
 File: bilder/tor-sqlite-table.png Graphic file (type png)
 <use bilder/tor-sqlite-table.png>
-Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 551.
+Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 553.
 (pdftex.def)             Requested size: 925.95712pt x 185.94421pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [34 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
-<bilder/tor-bar-chart-logfile1vs2cs3.png, id=405, 777.231pt x 336.165pt>
+<bilder/tor-bar-chart-logfile1vs2cs3.png, id=675, 777.231pt x 336.165pt>
 File: bilder/tor-bar-chart-logfile1vs2cs3.png Graphic file (type png)
 <use bilder/tor-bar-chart-logfile1vs2cs3.png>
 Package pdftex.def Info: bilder/tor-bar-chart-logfile1vs2cs3.png  used on input
- line 579.
+ line 581.
 (pdftex.def)             Requested size: 777.22911pt x 336.16417pt.
  [35 <./bilder/tor-sqlite-table.png> <./bilder/tor-bar-chart-logfile1vs2cs3.png
 >]
-<bilder/tor-registry-stacked-bar-chart.png, id=412, 698.391pt x 150.891pt>
+<bilder/tor-registry-stacked-bar-chart.png, id=685, 698.391pt x 150.891pt>
 File: bilder/tor-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/tor-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/tor-registry-stacked-bar-chart.png  used on inp
-ut line 635.
+ut line 637.
 (pdftex.def)             Requested size: 698.3893pt x 150.89063pt.
  [36 <./bilder/tor-registry-stacked-bar-chart.png>]
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=417, 660.96938pt x 32.37094pt>
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=693, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
-t line 669.
+t line 671.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
-<bilder/cfv_tor_autopsy_web_cookies.png, id=418, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=694, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
-line 685.
+line 687.
 (pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
-<bilder/cfv_tor_autopsy_web_history.png, id=419, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=695, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
-line 701.
+line 703.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
-<bilder/cfv_tor_autopsy_web_categories.png, id=420, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=696, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
-ut line 721.
+ut line 723.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
  [37 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web
 _cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
-<bilder/volatility/tor/keywords.png, id=427, 1533.657pt x 713.721pt>
+<bilder/volatility/tor/keywords.png, id=709, 1533.657pt x 713.721pt>
 File: bilder/volatility/tor/keywords.png Graphic file (type png)
 <use bilder/volatility/tor/keywords.png>
 Package pdftex.def Info: bilder/volatility/tor/keywords.png  used on input line
- 776.
+ 780.
 (pdftex.def)             Requested size: 1533.65327pt x 713.71925pt.
- [38 <./bilder/cfv_tor_autopsy_web_categories.png> <./bilder/volatility/tor/key
-words.png>]
-<bilder/volatility/tor/url.png, id=433, 1539.789pt x 751.608pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<bilder/volatility/tor/url.png, id=710, 1539.789pt x 751.608pt>
 File: bilder/volatility/tor/url.png Graphic file (type png)
 <use bilder/volatility/tor/url.png>
-Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 789.
+Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 793.
 
 (pdftex.def)             Requested size: 1539.78525pt x 751.60617pt.
-<bilder/volatility/tor/mail.png, id=434, 1473.87pt x 952.869pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<bilder/volatility/tor/mail.png, id=711, 1473.87pt x 952.869pt>
 File: bilder/volatility/tor/mail.png Graphic file (type png)
 <use bilder/volatility/tor/mail.png>
-Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 804
+Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 808
 .
 (pdftex.def)             Requested size: 1473.86641pt x 952.86668pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/image.png, id=435, 1473.87pt x 242.652pt>
+[38 <./bilder/cfv_tor_autopsy_web_categories.png>]
+<bilder/volatility/tor/image.png, id=719, 1473.87pt x 242.652pt>
 File: bilder/volatility/tor/image.png Graphic file (type png)
 <use bilder/volatility/tor/image.png>
 Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 82
-4.
+8.
 (pdftex.def)             Requested size: 1473.86641pt x 242.6514pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/summary.png, id=436, 1537.38pt x 628.092pt>
+<bilder/volatility/tor/summary.png, id=720, 1537.38pt x 628.092pt>
 File: bilder/volatility/tor/summary.png Graphic file (type png)
 <use bilder/volatility/tor/summary.png>
 Package pdftex.def Info: bilder/volatility/tor/summary.png  used on input line 
-834.
+838.
 (pdftex.def)             Requested size: 1537.37627pt x 628.09045pt.
+[39 <./bilder/volatility/tor/keywords.png> <./bilder/volatility/tor/url.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39 <./bilder/volatility/tor/url.png>] [40 <./bilder/volatility/tor/mail.png> <
-./bilder/volatility/tor/image.png>]) [41 <./bilder/volatility/tor/summary.png>]
+Excluding 'comment' comment. [40 <./bilder/volatility/tor/mail.png> <./bilder/v
+olatility/tor/image.png>]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 972.
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--976
+\T1/lmss/m/n/10.95 (+20) Auch wur-den noch \T1/lmss/m/sl/10.95 (+20) 000003.log
+\T1/lmss/m/n/10.95 (+20) -Dateien ge-schrie-ben. Die-se sind Teil ei-nes LevelD
+B-
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 972--976
+\T1/lmss/m/n/10.95 (+20) Schl�sselwertespeichers [[][]8[][], [][]10[][]] . Mit-
+hi-fe von HxD und ei-ner Ana-ly-se mit-tels ei-nes selbst
+ []
+
+[41 <./bilder/volatility/tor/summary.png>] [42] [43] [44{C:/Users/sell/AppData/
+Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+Excluding 'comment' comment.
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1125
+
+ []
+
+[45]) [46]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
-(kapitel/06_Vergleich der Browser.tex
+ (kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [42
+) [47
 
 
 
@@ -2180,7 +2785,7 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-) [43
+) [48
 
 
 
@@ -2190,7 +2795,7 @@ chapter 7.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [44
+) [49
 
 
 
@@ -2198,71 +2803,91 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [45
+ (kapitel/09_Anhang.tex [50
 
 
 
 
 
 ]
-<bilder/firefox-all-write-operations.png, id=463, 520.94624pt x 1173.63469pt>
+<bilder/firefox-all-write-operations.png, id=828, 520.94624pt x 1173.63469pt>
 File: bilder/firefox-all-write-operations.png Graphic file (type png)
 <use bilder/firefox-all-write-operations.png>
 Package pdftex.def Info: bilder/firefox-all-write-operations.png  used on input
  line 17.
 (pdftex.def)             Requested size: 520.94498pt x 1173.63184pt.
-<bilder/tor-all-write-operations.png, id=464, 489.32813pt x 1149.5447pt>
+<bilder/tor-all-write-operations.png, id=829, 489.32813pt x 1149.5447pt>
 File: bilder/tor-all-write-operations.png Graphic file (type png)
 <use bilder/tor-all-write-operations.png>
 Package pdftex.def Info: bilder/tor-all-write-operations.png  used on input lin
 e 25.
 (pdftex.def)             Requested size: 489.32692pt x 1149.54189pt.
- [46 <./bilder/firefox-all-write-operations.png>]) [47 <./bilder/tor-all-write-
+ [51 <./bilder/firefox-all-write-operations.png>]) [52 <./bilder/tor-all-write-
 operations.png>]
 chapter without number
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 130.
-[48
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15
+1.
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10.95> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 151.
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+51.
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [53
 
 
 
-] [49] (main.aux (kapitel/01_Einführung.aux)
+]
+[54] [55] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
 (kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 23679 strings out of 475281
- 512184 string characters out of 2774064
- 1484204 words of memory out of 3000000
- 44457 multiletter control sequences out of 15000+600000
- 583880 words of font info for 222 fonts, out of 8000000 for 9000
+ 51195 strings out of 476315
+ 1192302 string characters out of 5787669
+ 2236844 words of memory out of 5000000
+ 70319 multiletter control sequences out of 15000+600000
+ 630496 words of font info for 232 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,21n,106p,10601b,2367s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
-:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
-sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
-sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
-sers/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
-/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-Output written on main.pdf (51 pages, 3029402 bytes).
+ 108i,21n,106p,10901b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pf
+b><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb
+><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb>
+<C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
+><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb
+><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+
+Output written on main.pdf (57 pages, 3166337 bytes).
 PDF statistics:
- 504 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 57802 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1019 PDF objects out of 1200 (max. 8388607)
+ 186 named destinations out of 1000 (max. 500000)
+ 60570 words of extra memory for PDF output out of 61914 (max. 10000000)
 

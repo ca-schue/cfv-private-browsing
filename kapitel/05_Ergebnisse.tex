@@ -880,17 +880,287 @@ Literatur:
 %		 -> Registry and indicates the execution path of the program, as well as the number of times the program was executed 
 
 
-
+%%%%%%%%%%%%%%%%%%%%%
+% CHRISTOPH AB HIER %
+%%%%%%%%%%%%%%%%%%%%%
 
 \section{Chrome}
 
-\subsection*{Uncommon Locations}
+\subsection*{White-Box Analyse/Common Locations}
 
+\begin{comment}
 o Autopsy Keyword-Suche: 
 	> Chrome and Edge produced five artefacts as reported by both tools. (FTK, Autopsy) \cite{Gabet.2018}
 		--> Artefakte werden nicht genannt!
 	> only two temporary files (Figure 7) were recovered with Minitool Power Data Recovery but it was a dead end; Location: appdata/…/Chrome/…/ Preferences/RF1533fa.TMP \cite{Fayyad.2021}
 	> pagefile.sys file showed no traces at all \cite{Said.2011}
-	
+\end{comment}
+
+Auch beim Chrome Browser werden zunächst die Ergebnisse der Schreiboperationen ausgewertet. Dargelegt sind diese in die folgenden zwei Unterkapiteln. 
+
+\subsubsection*{Process Monitor Log 1}
+
+Zunächst werden alle Schreiboperationen während des tatsächlichen Browsing-Szenarios analysiert. Dabei sind 148 Schreiboperationen aufgezeichnet worden. Nach Entfernen der Duplikate in den gleichen Dateipfaden waren es dann 42 verschiedene Dateien, welche beschrieben wurden. Einen Überblick über alle diese Dateien zeigt \autoref{tab:chrome-log-1-written-files}. Diese sind in verschiedene Kategorien aufgeteilt, was in der ersten Spalte zu sehen ist. Ob und welche Artefakte gefunden wurden zeugt die letzte Spalte. Nicht rekonstruierbar bedeutet, wie bereits erläutert, dass die Datei weder im Snapshot oder im RAM zu finden ist.
+
+\begin{table}[ht]
+	\centering
+	\begin{adjustbox}{max width=\textwidth}
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline
+			Categories & Process Name & PID  & Path                                                                                                                                                                                                                                                                                                                               & Artefakte                  \\
+			\hline\hline
+			\multirow{6}{*}{Datenbanken und zugehörige journal-Dateien} & chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}History-journal                                                                                                           & Leere Datei (0 Bytes groß) \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}History                                                                                                                     & Keine Artefakte            \\
+			\cline{2-5}
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Data-journal                                                                                                          & Leere Datei (0 Bytes groß) \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web Data                                                                                                                    & Keine Artefakte            \\
+			\cline{2-5}
+			& chrome.exe   & 396  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Network\textbackslash{}Reporting and NEL-journal                                                                          & Leere Datei (0 Bytes groß) \\
+			& chrome.exe   & 396  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Network\textbackslash{}Reporting and NEL                                                                                  & Keine Artefakte            \\
+			\hline
+			\multirow{15}{*}{Temporäre Dateien (.tmp)} & chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}6f9e2d84-9a77-41e3-8955-b0c836f8fd0c.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}a0ea17f1-38e8-48e0-a2f4-98e9be6a6dd3.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 396  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Network\textbackslash{}a3ab3887-9ed6-45e7-a1bc-e0a34974b332.tmp                                                           & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}b23e8f25-4bfb-4625-a9d5-836ff096b671.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}2da074d0-9208-4026-b970-d7261bd389c3.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}44a1b7b5-40eb-4265-8d3e-b55d21084e65.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}1f7ba833-406a-40cf-b107-6e391f4bd1d3.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}97615fa9-9081-43b0-af51-534da2fd8cb4.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}fbd23442-8e9b-47cb-95e6-9da65df2c42e.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}fecad46f-9d32-40a2-aa3c-7b1cc275a5e2.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}e5e0606b-51a1-44ba-a8f9-80f1cf5c48a3.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}c029e5f2-88df-4271-bc24-2c50db41cc89.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			& chrome.exe   & 396  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Network\textbackslash{}184cc287-bc19-4faf-bd09-fdfc1ff1c6b8.tmp                                                           & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}9a105eba-925a-4d38-994f-c59962a8a60c.tmp                                                                                  & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}8b2096fb-9e68-4a4c-9df5-3dd0949aa210.tmp                                                                                                         & Nicht rekonstruierbar      \\
+			\hline
+			\multirow{8}{*}{Temporäre Bilddateien (.png)} & chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}32.png  & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}48.png  & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}64.png  & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}96.png  & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}128.png & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}192.png & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}256.png & Nicht rekonstruierbar      \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Web   Applications\textbackslash{}Temp\textbackslash{}scoped\_dir764\_530297989\textbackslash{}Icons\textbackslash{}512.png & Nicht rekonstruierbar      \\
+			\hline
+			\multirow{5}{*}{data\_1 Dateien} & chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}GPUCache\textbackslash{}data\_1                                                                                           & Keine Artefakte            \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}DawnCache\textbackslash{}data\_1                                                                                          & Keine Artefakte            \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}ShaderCache\textbackslash{}data\_1                                                                                                               & Keine Artefakte            \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}GrShaderCache\textbackslash{}data\_1                                                                                                             & Keine Artefakte            \\
+			& chrome.exe   & 396  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Cache\textbackslash{}Cache\_Data\textbackslash{}data\_1                                                                   & Keine Artefakte            \\
+			\hline
+			\multirow{2}{*}{LevelDB 000003.log Dateien} & chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}shared\_proto\_db\textbackslash{}000003.log                                                                               & Keine Artefakte            \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Default\textbackslash{}Sync   Data\textbackslash{}LevelDB\textbackslash{}000003.log                                                                & Keine Artefakte            \\
+			\hline\hline
+			\multirow{3}{*}{Shader Cache Dateien} & chrome.exe   & 8904 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}D3DSCache\textbackslash{}cb00da9ba77862e\textbackslash{}F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.idx                                                                                                                        & Keine Artefakte            \\
+			& chrome.exe   & 8904 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}D3DSCache\textbackslash{}cb00da9ba77862e\textbackslash{}F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.lock                                                                                                                       & Keine Artefakte            \\
+			& chrome.exe   & 8904 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}D3DSCache\textbackslash{}cb00da9ba77862e\textbackslash{}F4EB2D6C-ED2B-4BDD-AD9D-F913287E6768.val                                                                                                                      & Keine Artefakte            \\
+			\hline
+			\multirow{3}{*}{Windows dictionary files} & chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Microsoft\textbackslash{}Spelling\textbackslash{}de-DE\textbackslash{}default.dic                                                                                                                                     & Keine Artefakte            \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Microsoft\textbackslash{}Spelling\textbackslash{}de-DE\textbackslash{}default.exc                                                                                                                                     & Keine Artefakte            \\
+			& chrome.exe   & 764  & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Roaming\textbackslash{}Microsoft\textbackslash{}Spelling\textbackslash{}de-DE\textbackslash{}default.acl                                                                                                                                     & Keine Artefakte \\
+			\hline           
+		\end{tabular}
+	\end{adjustbox}
+	\caption{Tabelle mit allen Schreiboperationen des ersten ProcessMonitor-Logs}
+	\label{tab:chrome-log-1-written-files}
+\end{table}
+
+Die verschiedenen Kategorien aus der ersten Spalte werden unterschiedlich analysiert. Im Folgenden wird zu jeder Kategorie das Vorgehen erklärt und der Inhalt der Daten, bzw. wofür diese von Chrome verwendet werden, erläutert.
+
+\begin{sloppypar}
+Zunächst geht es um die Datenbanken und die dazugehörigen journal-Dateien. Chrome speichert Informationen bzgl. des Browsings wie den Verlauf oder Cookies nicht wie Firefox in direkt als solche erkennbare .sqlte Dateien, sondern als Dateien ohne spezielle Endungen. Diese enthalten am Anfang der Datei den header string \glqq{}SQLite format 3\grqq{}, was auf eine SQLite-Datenbank hinweist \cite{SQLiteFileFormat}, was in [link pic] zu sehen ist. Autopsy erkennt dies auch und es ist mittels des \textit{Application} Tabs möglich, diese direkt in Autopsy zu analysieren. [link pic] zeigt dies. Außerdem befinden sich neben den eigentlichen Datenbanken noch gleichnamige Dateien mit dem Zusatz \textit{-journal} am Ende. Diese sind sogenannte \glqq{}Rollback Journals\grqq{} und sind relevant für atomare Commit- und Rollback-Funktionen \cite{SQLiteTempfiles}. Da diese -journal Dateien jedoch alle 0 Bytes groß waren, konnte hier kein Artefakt gefunden werden. Auch die Analyse der eigentlichen Datenbanken direkt in Autopsy und zusätzlich mittels des DB-Browsers lieferte hier keine Ergebnisse. Die relevanten Datenbanken werden später [link nach unten] nochmals genauer untersucht.\\
+Anschließend wurde Temporäre Dateien, einmal mit der Endung \textit{.tmp}, und weitere temporäre Bilddateien mit der Endung \textit{.png}, geschrieben. Davon kann jedoch keine Datei rekonstruiert werden, wodurch hier kein Artefakt gefunden werden kann.\\
+Als nächstes werden Dateien mit dem Namen \textit{data\_1} analysiert. Diese sind alle 270.336 Bytes groß und enthalten, bis auf die Datei, welche im Cache\textbackslash{}Cache\_Data Ordner geschrieben wird, keine erkennbaren Zeichenketten und sind großteils leer (0-Bytes). Auch die Datei im Cache-Ordner weißt nur standard Google HTTPS Adressen. Hierin konnte auch kein Artefakt gefunden werden.\\
+Auch wurden noch \textit{000003.log}-Dateien geschrieben. Diese sind Teil eines LevelDB-Schlüsselwertespeichers \cite{LevelDBGithub,LevelDBCCL} . Mithife von HxD und einer Analyse mittels eines selbst erstellen Python-Scripts zur Ausgabe der Schlüssel-Werte-Paare der Ordner, welche die .log und weitere LevelDB spezifische Dateien enthält, kann auch in diesen Ordner bzw. Dateien auch keine Artefakte gefunden werden.
+
+Alle zuvor aufgeführten Dateien sind im Browser-Verzeichnis AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{} zu finden. Dies wird auch als Browser-spezifischer Pfad oder Common location bezeichnet. Alle folgenden Schreiboperationen wurden außerhalb dieses Ordners durchgeführt. Dies ist in \autoref{tab:chrome-log-1-written-files} auch graphisch nochmals durch eine zusätzliche Linie abgetrennt.\end{sloppypar}
+
+In den browser-unspezifischen Pfaden wurden einmal Shader-Cache Dateien geschrieben. Diese enthalten jedoch keine Artefakte. Außerdem wurden noch Dateien beschrieben, welche auf das Windows 10 Wörterbuch zurückzuführen sind \cite{DictionaryWin10Files}. All diese Dateien enthalten jedoch auch keine Browsing-Artefakte.
+
+Zusammenfassend können also im ersten Prozessor-Log keine auf das Browsingszenario zurückzuführenden Artefakte gefunden werden.
+
+\subsubsection*{Process Monitor Log 2}
+
+Während des Schließens des Prozessors fanden insgesamt 30 Schreiboperationen durch Chrome statt. Das Entfernen von Duplikaten zeigt, dass 14 Dateien beschrieben wurden. Diese befinden sich bei dem zweiten Log alle im browserspezifischen Ordner AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}. \autoref{tab:chrome-log-2-written-files} zeigt eine Überblick über diese wieder mit Angabe, ob Artefakte gefunden werden können.
+
+\begin{table}[ht]
+	\centering
+	\begin{adjustbox}{max width=\textwidth}
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline
+			Categories & Process Name & PID  & Path                                                                                                                                                                                                                                                                                                                               & Artefakte                  \\
+			\hline\hline
+			Crashpad settings-Datei & chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Crashpad\textbackslash{}settings.dat                                                                                                                                                                & Keine Artefakte            \\
+			\hline
+			\multirow{5}{*}{Temporäre Dateien (.tmp)} & chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}35debf2e-9a97-4829-b0d1-2c6efb7246bc.tmp                                                                                                                                                            & Nicht rekonstruierbar      \\
+			& chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}4dce7d9d-2753-424d-ad13-eb84e1ea9326.tmp                                                                                                                                                            & Nicht rekonstruierbar      \\
+			& chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}51ff0ac1-e188-4c8a-8b3d-891f326bb890.tmp                                                                                                                                     & Nicht rekonstruierbar      \\
+			& chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}52837c44-01bc-43d1-b859-0fe50c823372.tmp                                                                                                                                                            & Nicht rekonstruierbar      \\
+			& chrome.exe   & 7012 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Storage\textbackslash{}ext\textbackslash{}nmmhkkegccagdldgiimedpiccmgmieda\textbackslash{}def\textbackslash{}Network\textbackslash{}c280cbe5-825f-482f-8c5f-e4b0f0e8d560.tmp & Keine Artefakte            \\
+			\hline
+			\multirow{2}{*}{Datenbank und zugehörige journal-Datei} & chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}History-journal                                                                                                                                                              & Leere Datei (0 Bytes groß) \\
+			& chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}History                                                                                                                                                                      & Keine Artefakte            \\
+			\hline
+			JSON-Datei & chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}Variations                                                                                                                                                                                            & Keine Artefakte            \\
+			\hline
+			LevelDB 000003.log Datei & chrome.exe   & 5484 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Session Storage\textbackslash{}000003.log                                                                                                                                    & Keine Artefakte            \\
+			\hline
+			\multirow{3}{*}{data\_1 Dateien} & chrome.exe   & 7012 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}Default\textbackslash{}Cache\textbackslash{}Cache\_Data\textbackslash{}data\_1                                                                                                                      & Keine Artefakte            \\
+			& chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}GrShaderCache\textbackslash{}data\_1                                                                                                                                                                & Keine Artefakte            \\
+			& chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}ShaderCache\textbackslash{}data\_1                                                                                                                                                                  & Keine Artefakte            \\
+			\hline
+			Millisekunden Chrome shutdown Zeit & chrome.exe   & 6152 & C:\textbackslash{}Users\textbackslash{}Forensik\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Google\textbackslash{}Chrome\textbackslash{}User   Data\textbackslash{}chrome\_shutdown\_ms.txt                                                                                                                                                                            & Keine Artefakte\\           
+			
+			\hline           
+			\end{tabular}
+		\end{adjustbox}
+	\caption{Tabelle mit allen Schreiboperationen des zweiten ProcessMonitor-Logs}
+\label{tab:chrome-log-2-written-files}
+\end{table}
+
+Die Datei \textit{settings.dat} im Crashpad Ordner ist Teil der Crashpad library, welche den Maschinen- und Programmzustand im Falle eines Prozessabsturzes erfasst und einen Absturzbericht an einen Backend-Server übermittelt \cite{CrashpadOverviewDesign}. Die (binäre) Datei an sich beinhaltet dabei die Einstellungen für die Bibliothek \cite{CrashpadOverviewDesign}. Diese Datei beinhaltet jedoch keine Browsing-Artefakte. \\
+Weiterhin wurden wieder temporäre Dateien geschrieben, welche bis auf eine Datei nicht rekonstruierbar sind. Diese Eine enthält jedoch keine Artefakte. \\
+Die Datenbank \textit{History} sowie die dazugehörige \textit{-journal}-Datei zeigten auch wieder keine Artefakte.
+Die Datei \textit{Variations} direkt im Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}-Ordner ist der Dateistruktur nach eine JSON-Datei. Diese enthält aber auch keinerlei Informationen über das durchgeführte Browsing-Szenario.\\
+Auch wird wieder eine \textit{000003.log}-Datei geschrieben, welche aber wieder keine Artefakte enthält.\\
+Gleiches gilt für die geschriebenen \textit{data\_1}-Dateien.\\
+Zuletzt wurde noch eine Textdatei namens \textit{chrome\_shotdown\_ms.txt} geschrieben. Diese enthält die Zeit in Millisekunden, welche Chrome für das Schießen benötigt \cite{ChromiumShutdownMSTxtWebpageDoku}. Dort fanden sich neben der Zeit in Millisekunden keine weiteren Artefakte.
+
+Auch im zweiten Prozessor-Log können schließlich keine Artefakte gefunden werden. Somit werden weder während des Browsings noch beim Schließen des Chrome Browsers Informationen des definierten Browsing-Szenarios in keine Dateien auf die Festplatte geschrieben. 
+
+\subsubsection*{Databases}
+
+Welche Datenbanken sind wann vorhanden? Was verändert sich über die Zeit? Textuell + Tabellarisch zeigen!
+
+\subsection*{Registry}
+
+\subsubsection*{Process Monitor}
+
+Zuerst die im Process Monitor aufgeze
+
+\subsubsection*{Hives-Extraction inklusive Analyse}
+
+Dann Auslesen der bereits in [link] dargestellten Hives + Einlesen in Registry Explorer. Liefert bei allen 3 betrachteten Snapshots keine Ergebnisse
+
+\subsection*{Black-Box Analyse/Uncommon Locations}
+
+\subsubsection*{Analyse mit Autopsy}
+
+\subsubsection*{Analyse mit Volatility}
+
+Jeweils schöne Tabellen hierzu:
+
+Keywords\\
+URL\\
+Mail \\
+HTTP + Vorgehen der Abstraktion inkl. Screenshots hier
+
+\begin{tikzpicture}
+	\begin{axis}[title=RAM-Artifacts,
+		xbar,enlargelimits=0.15,nodes near coords,
+		symbolic y coords={a,b,c},ytick=data,
+		xbar stacked,
+		]
+		\addplot coordinates
+		{(40,a) (50,b) (70,c)};
+		\addplot coordinates
+		{(43,a) (45,b) (65,c)};
+	\legend{Browser, Non Browser}
+	\end{axis}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+	\begin{axis}[xbar stacked,
+		nodes near coords,
+		symbolic y coords={a,b,c,d},
+		]
+		\addplot coordinates
+		{(1,a) (2,b) (2,c) (4,d)};
+		\addplot coordinates
+		{(1,a) (2,b) (2,c) (3,d)};
+		\addplot coordinates
+		{(1,a) (2,b) (2,c) (3,d)};
+	\end{axis}
+\end{tikzpicture}
+
+\begin{bchart}[max=8]
+	\bcbar[text=A,label=1st label,color=yellow]{6}
+	\bcbar[text=B,color=red!50]{3}
+	\bcbar[text=C,color=green!60!blue]{4}
+	\bcskip{15mm}
+	\bcbar[text=D,color=blue]{6}
+\end{bchart}
+
+Image + Summary Tabellen hier am Ende no!
 
 \section{Brave}
+
+Analyse aller Schreiboperationen mittels des ProcessMonitors:
+
+2 Logs aufgezeichnet gemäß [link], Analyse in getrennten Kapiteln
+
+\subsubsection*{Process Monitor Log 1}
+
+Unterschieden in bekannte Browser-Pfade (Browser-Pfad) und andere Pfade (außerhalb des typischen Browser-Pfades)
+
+Bekannt:
+
+Glob gegliedert in Dateiendungen, mit möglichen Erklärungen: \\
+\begin{comment}
+- 000003.log's:  \\
+- tmp \\
+- png \\
+- store\_new \\
+- .Identifier \\
+- .db  \\
+- LOG \\
+- .pb \\
+- .ftlite \\
+- .dbtemp \\
+- others -> Erklärung der Datenbanken + locations
+\end{comment}
+=> Zusammenfassung in Tabelle \\\\
+
+Unbekannter Pfad:\\
+- tmp files, nicht mehr auffindbar\\
+- 
+
+
+Alle Schreiboperationen mit aufnehmen in Anhang evtl.
+
+\subsubsection*{Process Monitor Log 2}
+
+Hier Erklärungen zu 2. mit Tabelle rein
+
+\subsubsection*{Databases}
+
+Welche Datenbanken sind wann vorhanden? Was verändert sich über die Zeit? Textuell + Tabellarisch zeigen!
+
+\subsection*{Registry}
+
+\subsubsection*{Process Monitor}
+
+Zuerst die im Process Monitor aufgeze
+
+\subsubsection*{Hives-Extraction inklusive Analyse}
+
+Dann Auslesen der bereits in [link] dargestellten Hives + Einlesen in Registry Explorer. Liefert bei allen 3 betrachteten Snapshots keine Ergebnisse
+
+\subsection*{Black-Box Analyse/Uncommon Locations}
+
+\subsubsection*{Analyse mit Autopsy}
+
+\subsubsection*{Analyse mit Volatility}
+
+Jeweils schöne Tabellen hierzu:
+
+Keywords\\
+URL\\
+Mail \\
+HTTP inkl. Screenshots hier (Verweis nach oben)
+
+Image + Summary Tabellen hier am Ende no!
+
+%EOF

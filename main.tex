@@ -42,6 +42,15 @@ block=ragged
 \addbibresource{ref/carl.bib}
 \addbibresource{ref/christoph.bib}
 
+%\usepackage{hyperref}
+\usepackage[bookmarks,bookmarksopen,bookmarksnumbered]{hyperref}
+\hypersetup{breaklinks=true, %Zeilenumbruch in den Verzeichnissen
+	colorlinks=true, %false: boxed links; true: colored links
+	citecolor=black,  %color of links to bibliography
+	linkcolor=black,   %color of links to internal links
+	urlcolor=black
+}
+
 % Mathemodus
 \usepackage{amsmath,amssymb}
 
@@ -68,6 +77,18 @@ automark,		% Lebende Kolumnentitel
 
 % Anhang
 \usepackage[toc,page]{appendix}
+
+% Comments
+\usepackage{comment}
+
+% Tables
+% \usepackage[table,xcdraw]{xcolor}
+\usepackage{adjustbox}
+\usepackage{multirow}
+
+% Charts
+\usepackage{pgfplots}
+\usepackage{bchart}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -128,5 +149,4 @@ automark,		% Lebende Kolumnentitel
 	% Literatur anzeigen
 	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 	\printbibliography
-	
 \end{document}
