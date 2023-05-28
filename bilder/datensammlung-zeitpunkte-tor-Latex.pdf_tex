@@ -1,0 +1,104 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'datensammlung-zeitpunkte-tor-Latex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{816.56112671bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.1462555)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.30907213,0.1339207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.01408315,0.03259912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S\end{tabular}}}}%
+    \put(0.03259912,0.03259912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM Snapshot\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.01379405,0.00616741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R\end{tabular}}}}%
+    \put(0.03259912,0.00616741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}RAM Dump\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.18236508,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser im privaten\end{tabular}}}}%
+    \put(0.19271751,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modus geöffnet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.03346641,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
+    \put(0.03199339,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}installiert\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.34829294,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browsing\end{tabular}}}}%
+    \put(0.34916023,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Szenario\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.65810845,0.1339207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 2-2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.70306991,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
+    \put(0.69307541,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geschlossen\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.89073511,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM\end{tabular}}}}%
+    \put(0.85810845,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}heruntergefahren\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.51333974,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Neue Identität\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.48233754,0.1339207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 2-1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.60556165,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3-1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.63434744,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3-1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.78089203,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3-2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.80967783,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3-2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.97943282,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S4\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.43405835,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.46284415,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.11599669,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
+    \put(0.14478249,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R1\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,122 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'sqlite-methodology-Latex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{1017.12002563bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.30674846)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{sqlite-methodology-Latex.pdf}}%
+    \put(0.00811521,0.29261584){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dateiextraktion\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{sqlite-methodology-Latex.pdf}}%
+    \put(0.38427439,0.25021803){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dateianalyse\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{sqlite-methodology-Latex.pdf}}%
+    \put(0.2094938,0.11949142){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{sqlite-methodology-Latex.pdf}}%
+    \put(0.23638992,0.26788378){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{sqlite-methodology-Latex.pdf}}%
+    \put(0.18606459,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}File located in \end{tabular}}}}%
+    \put(0.18959774,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Snapshot 3?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{sqlite-methodology-Latex.pdf}}%
+    \put(0.32118556,0.09122621){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{sqlite-methodology-Latex.pdf}}%
+    \put(0.37201877,0.04600187){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{sqlite-methodology-Latex.pdf}}%
+    \put(0.30359709,0.05589469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}File cached \end{tabular}}}}%
+    \put(0.31138106,0.04600187){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}in RAM \end{tabular}}}}%
+    \put(0.30925013,0.03540241){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dump 3?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{sqlite-methodology-Latex.pdf}}%
+    \put(0.39530445,0.21205999){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sqldiff with most\end{tabular}}}}%
+    \put(0.39899218,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}recent SQLite \end{tabular}}}}%
+    \put(0.3938139,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}file from previous\end{tabular}}}}%
+    \put(0.40817838,0.18167489){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Snapshot\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{sqlite-methodology-Latex.pdf}}%
+    \put(0.30666652,0.2728302){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Extract file\end{tabular}}}}%
+    \put(0.30241569,0.26223074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}with Autopsy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{sqlite-methodology-Latex.pdf}}%
+    \put(0.29677369,0.13574392){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Extract file with \end{tabular}}}}%
+    \put(0.3109063,0.12514446){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Volatility\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{sqlite-methodology-Latex.pdf}}%
+    \put(0.0836032,0.20711358){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Locate file in\end{tabular}}}}%
+    \put(0.07724353,0.19722075){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Snapshot 3 with\end{tabular}}}}%
+    \put(0.09208276,0.1866213){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Autopsy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{sqlite-methodology-Latex.pdf}}%
+    \put(0.17899829,0.05589469){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Locate file in RAM\end{tabular}}}}%
+    \put(0.17310234,0.04600187){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dump 3 with Volatility\end{tabular}}}}%
+    \put(0.2028029,0.03540241){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}filelist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{sqlite-methodology-Latex.pdf}}%
+    \put(0.00835811,0.17107543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}SQLite File\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{sqlite-methodology-Latex.pdf}}%
+    \put(0.49988574,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Note Diff in Excel \end{tabular}}}}%
+    \put(0.50945837,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spreadsheet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{sqlite-methodology-Latex.pdf}}%
+    \put(0.39784391,0.05094828){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Note 'N/A' in Excel \end{tabular}}}}%
+    \put(0.4098235,0.04034883){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spreadsheet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{sqlite-methodology-Latex.pdf}}%
+    \put(0.58895428,0.19722075){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{sqlite-methodology-Latex.pdf}}%
+    \put(0.68792669,0.19722075){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{sqlite-methodology-Latex.pdf}}%
+    \put(0.62042141,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}.sqlite-wal \end{tabular}}}}%
+    \put(0.66046748,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}file\end{tabular}}}}%
+    \put(0.62677004,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}available?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{sqlite-methodology-Latex.pdf}}%
+    \put(0.64124492,0.14775663){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{sqlite-methodology-Latex.pdf}}%
+    \put(0.71439222,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Perform PRAGMA\end{tabular}}}}%
+    \put(0.71760512,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WAL Checkpoint\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{sqlite-methodology-Latex.pdf}}%
+    \put(0.8086832,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Sqldiff with .sqlite file\end{tabular}}}}%
+    \put(0.81354128,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}before Checkpoint\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{sqlite-methodology-Latex.pdf}}%
+    \put(0.91326448,0.20216717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Note Diff in Excel \end{tabular}}}}%
+    \put(0.92283713,0.19156771){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spreadsheet\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

@@ -596,42 +596,42 @@
       \field{pages}{118\bibrangedash 128}
       \range{pages}{11}
     \endentry
-    \entry{Nelson.2020}{article}{}
+    \entry{Nalawade.2016}{inproceedings}{}
       \name{author}{3}{}{%
-        {{hash=f9cf93b60699365ed68c60f8875a1ea7}{%
-           family={Nelson},
+        {{hash=4cf6aa47b06ad50704315171b44094e6}{%
+           family={Nalawade},
            familyi={N\bibinitperiod},
-           given={Rebecca},
-           giveni={R\bibinitperiod}}}%
-        {{hash=67c35e3bda40fb8ebb3c25d1e260d216}{%
-           family={Shukla},
-           familyi={S\bibinitperiod},
-           given={Atul},
+           given={Apurva},
            giveni={A\bibinitperiod}}}%
-        {{hash=9806584db113f694a5eafce6a9057815}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Cory},
-           giveni={C\bibinitperiod}}}%
+        {{hash=70bf8a1cfd7ff3bcd5c724d1397d96ab}{%
+           family={Bharne},
+           familyi={B\bibinitperiod},
+           given={Smita},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e9cd6e35f1df36db4ae13907b3bad42a}{%
+           family={Mane},
+           familyi={M\bibinitperiod},
+           given={Vanita},
+           giveni={V\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer}%
+      \list{organization}{1}{%
+        {IEEE}%
       }
-      \strng{namehash}{d230dbf90df5688ea8c0bac62b33e847}
-      \strng{fullhash}{d230dbf90df5688ea8c0bac62b33e847}
-      \strng{bibnamehash}{d230dbf90df5688ea8c0bac62b33e847}
-      \strng{authorbibnamehash}{d230dbf90df5688ea8c0bac62b33e847}
-      \strng{authornamehash}{d230dbf90df5688ea8c0bac62b33e847}
-      \strng{authorfullhash}{d230dbf90df5688ea8c0bac62b33e847}
+      \strng{namehash}{559caa3cb7a03817af940f8c48f7d0d0}
+      \strng{fullhash}{559caa3cb7a03817af940f8c48f7d0d0}
+      \strng{bibnamehash}{559caa3cb7a03817af940f8c48f7d0d0}
+      \strng{authorbibnamehash}{559caa3cb7a03817af940f8c48f7d0d0}
+      \strng{authornamehash}{559caa3cb7a03817af940f8c48f7d0d0}
+      \strng{authorfullhash}{559caa3cb7a03817af940f8c48f7d0d0}
       \field{sortinit}{N}
       \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Digital Forensic Education: An Experiential Learning Approach}
-      \field{title}{Web browser forensics in google chrome, mozilla firefox, and the tor browser bundle}
-      \field{year}{2020}
-      \field{pages}{219\bibrangedash 241}
-      \range{pages}{23}
+      \field{booktitle}{2016 International Conference on Automatic Control and Dynamic Optimization Techniques (ICACDOT)}
+      \field{title}{Forensic analysis and evidence collection for web browser activity}
+      \field{year}{2016}
+      \field{pages}{518\bibrangedash 522}
+      \range{pages}{5}
     \endentry
     \entry{Ohana.2013}{inproceedings}{}
       \name{author}{2}{}{%

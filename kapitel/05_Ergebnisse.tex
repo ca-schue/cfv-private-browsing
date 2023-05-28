@@ -1,178 +1,130 @@
 \chapter{Ergebnisse}
 
-= LÄNGSTES/AUSFÜHRLICHSTES KAPITEL!!!
-
-Für jedes Unterkapitel gilt: 
-> Erst allgemeines Vorgehen/Methodik definieren
-> Danach spezifisch für jeden Browser: Unterschied zwischen Snapshot-Zeitpunkten, insb. zwischen Live- und Dead-Forensik
+*** TODO ***
 
 \section{Firefox}
 
-\subsection*{White-Box Analyse/Common Locations}
+Im nachfolgenden Abschnitt werden die Ergebnisse der Datenanalyse für den Webbrowser Firefox detailliert beschrieben. Die Analyse ist in drei Hauptkategorien unterteilt: Common Locations, Uncommon Locations und Registry.
 
-Schreiboperationen mit Process Monitor verfolgen:
+\subsection*{Common Locations}
 
-Im Anhang: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
+Zunächst werden die standardmäßigen Speicherorte für Browserartefakte nach potentiellen privaten Browsing Artefakten untersucht. Diese Common Locations beziehen sich ausschließlich auf Dateien, die auf die Festplatte geschrieben werden. In diesem Versuch wird gemäß Methodik in Kapitel X (TODO!) zwischen Schreiboperationen aus den Process Monitor Logfiles und SQLite Datenbänken zur Verwaltung von Nutzerdaten unterschieden.
 
-Aux-Dateien, welche nicht mehr vorhanden waren, aber dafür "richtige" Dateien:
-	- % *\datareporting\glean\db\data.safe
-	- % *\datareporting\archived\2023-05\1683405837882.9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4
-	- % *datareporting\archived\2023-05\1683405837905.86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4
-	- % *datareporting\archived\2023-05\1683405837939.abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4
-	- % *sessionstore-backups\recovery.jsonlz4
-	- % *xulstore.json
+\subsubsection*{Process Monitor WriteFile Operations}
 
-Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Tool mit dem Datei untersucht wurde
-- Dateien, die in beiden Logfiles nicht wiederherstellbar 
+Gemäß Versuchsdurchführung in Abbildung X (TODO!) wurden für Firefox mit dem Process Monitor Tool zwei Logfiles erstellt. Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während und nach dem Browsing Szenario.
+Zunächst werden die beiden Logfiles gemäß Methodik in Kapitel X (TODO!) in Excel aufbereitet. 
+Im Anhang X (TODO!) ist dazu eine Tabelle mit allen in den gefilterten Logfiles identifizierten Dateien aufgeführt.
+Dabei wurde für jede Datei vermerkt
+ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob PB Artefakte enthalten sind.
+
+Abbildung X (TODO!) zeigt diese Tabelle in reduzierter Darstellung.
+Dazu wurden ausschließlich wiederherstellbare Dateien aufgeführt. 
+Die Dateien wurden in die fünf Kategorien "Cache", "datareporting", "Sessionstore-Backup" und "Sonstige Dateien" eingeordnet.
+Für jede Datei wurde vermerkt, ob in der entsprechenden Logfile PB Artefakte geschrieben wurden.
+Dies trifft für keine der identifizierten Dateien zu.
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-tabelle-logfile1vlogfile2-reduced.png}}
 %	\label{...}
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
 
-Allgemein: Artefakte in zwei "Common Pfaden"
--	(Local) %C:\Users\Forensik\AppData\Local\Mozilla\Firefox\Profiles\<Profile>.default-release\
--	(Roaming) %C:\Users\Forensik\AppData\Roaming\Mozilla\Firefox\Profiles\<Profile>.default-release\
+Bei detaillierter Untersuchung der Dateien, können zwei Pfade identifiziert werden, in die Firefox während des Versuchs Dateien schreibt. Nur die Dateien in der Cache Kategorie sind im Local Pfad gespeichert.
+\begin{itemize}
+\item[\textbf{Local}] \texttt{C:$\backslash$Users$\backslash$<User>$\backslash$AppData$\backslash$Local$\backslash$Mozilla$\backslash$Firefox$\backslash$Profiles$\backslash$<Profile>.default-release$\backslash$}
+\item[\textbf{Roaming}] \texttt{C:$\backslash$Users$\backslash$<User>$\backslash$AppData$\backslash$Roaming$\backslash$Mozilla$\backslash$Firefox$\backslash$Profiles$\backslash$<Profile>.default-release$\backslash$}
+\end{itemize}
+In Tabelle X (TODO!) sind die Dateien je nach Speicherort "Local" (Hellblau) oder "Roaming" (Dunkelblau) entsprechend eingefärbt. 
 
-Kategorien der Logs:
-- Cache: 
-	> % \cache2\entries\037778A55E1B7E9BED3390289866D09402D6C913 (Local)
-	> % \cache2\entries\1223A0378B8971FA4CD25EA1731C80B2B1676B42 (Local)
-	> % \cache2\entries\250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E (Local)
-	Zweck:
-		"Firefox verwendet den Cache, um Webseiten und Ressourcen wie Bilder, Stylesheets, Skripte und andere Dateien temporär auf dem lokalen Computer zu speichern. Dadurch können wiederholte Anfragen an den Server vermieden und die Ladezeiten verringert werden, da der Browser die Inhalte aus dem Cache abrufen kann, anstatt sie erneut herunterzuladen.Die tatsächlichen Inhalte dieser Datei sind binär und können je nach Art der Ressource variieren, beispielsweise HTML, Bild- oder Audiodateien."
-		% https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
-	Analyse:
-		- Tool: MozillaCacheView
-		- TODO: Screenshot
-	> % \cache2\index (Local)
-		Zweck:
-			"Die Indexdatei im Cache dient als Datenbank, die Informationen über die gespeicherten Dateien enthält. Sie ermöglicht dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten"
-		Analyse:
-			- Tool: siehe Github und HxD
-	> % \jumpListCache\ZKJGVJPzPe7w4w0KwEY0jw==.ico (Local)
-		- Tool: Windows Foto App
-		- Enthält kleines "m" Icon
+\paragraph*{Cache}
 
-- datareporting:
-	Allgemein: "Dateien im Ordner "/datareporting/glean/db" sind Teil des Glean-Systems, das von Mozilla (dem Entwickler von Firefox) für die Sammlung von Telemetriedaten verwendet wird. Telemetrie-Daten sind anonyme Informationen über die Nutzung des Browsers, die zur Verbesserung der Software und zur Behebung von Problemen verwendet werden können. % https://github.com/mozilla/glean
-	> % \datareporting\glean\db\data.safe (Roaming)	
-	Zweck:
-		" Die "data.safe.bin"-Datei enthält verschlüsselte Telemetrie-Daten, um ihre Integrität und Sicherheit zu gewährleisten."
-	Analyse:
-		- Tool: HxD
-		- keine PB Artefakte
-	> %  \datareporting\glean\db\<Profilname>.new-profile.jsonlz4 (Roaming)
-	Zweck:
-		"Diese Dateien speichern Informationen über das Firefox-Profil, das von Glean verwendet wird, um Telemetriedaten zu sammeln."
-	Analyse:
-		- Mit firefox propreritärem jsonlz4 Algorithmus verschlüsselt
-		- können mit speziellem Tool "dejsonlz4" dekomprimiert werden (Quelle Github)
-		- Dateien enthalten Systeminformationen im Json-Format (Screenshot?)
+Firefox verwendet den Cache, um Webseiten und deren Ressourcen temporär lokal zu speichern. Dadurch können wiederholte Anfragen an den Server vermieden und die Ladezeiten verringert werden. Die Inhalte dieser Dateien sind binär.
+Die Dateien im Format \texttt{$\backslash$cache2$\backslash$entries$\backslash$<ID>} werden dem Cache zugeordnet und im Local Pfad gespeichert.
+% https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
+Wie in Kapitel X beschrieben, können diese Dateien mit dem Tool MZCacheView eingelesen werden.
+Wie in Abbildung X gezeigt, konnten im Cache-Ordner im zweiten Snapshot drei JSON Dateien identifiziert werden. Dabei handelt es sich um Zertifikatsdateien, die von der "One Certificate Revocation List" stammen, ein Mechanismus von Firefox zur Überprüfung von Zertifikaten. In keinem der Zertifikate konnten mit HxD private Browsing Artefakte oder besuchte Seiten gefunden werden.
+Weiterhin befindet sich im Cache das HTML-Dokument der Firefox Datenschutzseite, welche sich beim ersten Start des Browsers automatisch öffnete. % TODO: Siehe Kapitel X
+Weitere Cache Dateien konnten in keinem Snapshot gefunden werden.
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-cache.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
+Die Indexdatei \texttt{$\backslash$cache2$\backslash$index} dient als Datenbank im Cache. Sie ermöglicht dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten. Sowohl mit HxD als auch dem Tool FirefoxCache2 konnten keine PB Artefakte identifiziert werden.
+Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJGVJPzPe7w4w0KwEY0jw==.ico} ein $64x64$ Pixel großes Mozilla Logo. Dieses Logo ist keinem Schritt aus dem Browsing Szenario zuzuordnen
 
-- Sessionstore-Backup:
-	> % \sessionstore-backups\recovery.jsonlz4 (Roaming)
-		Zweck:
-			"Die Datei "recovery.jsonlz4" enthält eine Sicherungskopie der vorherigen Sitzung. Sie wird erstellt, wenn der Firefox-Browser nach einem Absturz oder einem unerwarteten Beenden neu gestartet wird." % https://support.mozilla.org/de/questions/1221836
-		Analyse:
-			- jsolz4 Datei in sessionstore-backup lassen sich mit Online-Tool parsen (https://www.jeffersonscher.com/ffu/scrounger.html)
-			- Ergebnise: 
-				Tab 1:  Willkommen bei Firefox [6.5.2023, 22:25:06, about:welcome;
-				Tab 2:  Firefox Datenschutzhinweis — Mozilla [6.5.2023, 22:24:59], % https://www.mozilla.org/de/privacy/firefox/
-			- Sind Seiten, die sich automatisch geöffnet haben, nachdem Firefox zum ersten Mal geöffnet wurde
-			- keine PB Artefakte
-	> % \sessionstore.jsonlz4
-		Zweck: "Die Datei "sessionstore.jsonlz4" speichert den aktuellen Zustand der Firefox-Sitzung.  Diese Datei wird während der Browsersitzung regelmäßig aktualisiert, um sicherzustellen, dass Änderungen im Zustand der Sitzung erfasst werden."
-		Analyse:
-			- Lässt sich nicht mit Online-Tool aus Logfile 1 parsen
-			- Stattdessen: dejsonlz4, danach Notepad++ mit JSON Plugin
-			- kaum Einträge zu Sitzung, hauptsächlich CSS Daten zu Fenstergröße- und position, insb. keine PB Artefakte
-			- Interessant: image-Eintrag als base64 entdeckt, in PNG umgewandelt (https://base64.guru/converter/decode/image), mit Windows Foto-App: "m" Icon (Mozilla-Logo)
 
-- Sonstige Dateien:
-	> % \prefs-1.js
-		Zweck:
-			"Die Datei "prefs-1.js" enthält benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser. Sie speichert die Präferenzen des Benutzers in Form von JavaScript-Objekten.
+\paragraph*{Datareporting}
+Dateien im Ordner \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db} sind Teil des Glean-Systems, das für die Sammlung von Telemetriedaten und deren Übermittlung an Mozilla verwendet wird. 
+% https://github.com/mozilla/glean
+Die Datei \texttt{data.safe.bin} enthält verschlüsselte und anonyme Informationen über die Nutzung des Browsers. In HxD konnten keine keine PB Artefakte gefunden werden
+Dateien im Foremat \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db$\backslash$<Profilname>.new-profile.jsonlz4} speichern Informationen über das Firefox-Profil, das von Glean verwendet wird. Wie in Kapitel X beschrieben, lassen sich Dateien, im proprietären \textit{jsonlz4}-Format mit dem Tool dejsonlz4 dekomprimieren. Die entstandene JSON Datei wird mit dem Notepad++ JSON Plugin untersucht. Dabei konnten keine PB Artefakte gefunden werden.
 
-			In dieser Datei werden verschiedene Arten von Einstellungen gespeichert, darunter:
-			
-		   Allgemeine Einstellungen: Dies umfasst Optionen wie die Standardsuchmaschine, die Startseite, den Zoomfaktor, die Spracheinstellungen und andere globale Einstellungen, die das Verhalten des Browsers beeinflussen.
-							
-		   Datenschutzeinstellungen: Hier werden Präferenzen bezüglich Cookies, Verlauf, Passwortverwaltung, Standortfreigabe und Tracking-Schutz gespeichert. Diese Einstellungen kontrollieren, wie der Browser mit persönlichen Daten und der Privatsphäre umgeht.
-							
-		   Add-On-Einstellungen: Wenn der Benutzer Erweiterungen oder Add-Ons installiert hat, können in dieser Datei die spezifischen Einstellungen und Konfigurationen für jedes Add-On gespeichert werden."
-					% https://kb.mozillazine.org/Prefs.js_file
+\paragraph*{Sessionstore}
+Die Datei \texttt{$\backslash$sessionstore-backups$\backslash$recovery.jsonlz4} enthält eine Sicherungskopie der vorherigen Sitzung. Sie wird erstellt, wenn der Firefox-Browser nach einem Absturz oder einem unerwarteten Beenden neu gestartet wird." % https://support.mozilla.org/de/questions/1221836
+Jefferson Scher entwickelte ein Online-Tool zur Analyse von \textit{Sessionstore-Backup} Dateien.
+% https://www.jeffersonscher.com/ffu/scrounger.html)
+In der Sitzungswiederherstellung konnten wie in Abbildung X gezeigt lediglich die automatisch geöffnete Seite über Firefox Datenschutzhinweise identifiziert werden.
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sessionstore.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
 
-	> % \xulstore.json
-		Zweck:
-			"Die Datei "xulstore.json" speichert benutzerspezifische Anpassungen und Konfigurationen für den Firefox-Browser."
-			% https://support.mozilla.org/de/kb/firefox-support-troubleshooting-guide
-	Analyse:
-		- Weder JSON-Dateien (Notepad++) noch .tmp Dateien (HxD) enthalten PB Artefakte
-		
-- SQLite: (TODO: Abgleich mit Diffs-Exceltabelle, ob wirklich nur in places.sqlite geschrieben wurde)
-	Dateien haben Sonderstellung:
-		- Diese DBs dienen zur Verwaltung und Speicherung sämtlicher Browser Artefakte, insb. der Browser Historie
-		- Aus diesem Grund: Dateien intensiver betrachtet
-	Siehe Kapitel Methodik:
-		> Entwicklung von Dateiinhalt in allen Snapshots (1, 2, 3 und 4) betrachtet
-		> Für jeden Snapshot: 
-			- SQLite-Datei extrahiert und mit SQLite-Datei aus vorherigem Snapshot verglichen
-			- Untersuchung der SQLite-Dateien mit SQLite-Viewer (GUI-Tools)
-			- Wenn zu SQLite-Datei WAL-Datei existiert: mit sqlite3 Kommandozeilentool PRAGMA wal\_checkpoint durchgeführt, danach neue SQLite-Datei mit ursprünglicher SQLite-Datei verglichen
-		> Dabei gibt es drei Zustände: 
-			- leere Datei
-			- neuer (nicht-leerer) Inhalt
-			- gleichbleibender Inhalt
-	Mit Process Monitor Logfiles festgestellt, dass in folgende SQLite-DBs geschrieben: 
-		% https://mozilla.github.io/firefox-browser-architecture/text/0010-firefox-data-stores.html
-		- places.sqlite
-			"Diese Datenbank enthält Informationen über die Lesezeichen, den Verlauf und die Tags im Firefox-Browser. Sie speichert die URLs der besuchten Websites, die Zeitstempel der Besuche, die Titel der Seiten und andere relevante Daten."
-		- cookies.sqlite						Speichert Webseiten-Cookies
-			"In dieser Datenbank werden die Cookies gespeichert, die von Websites im Firefox-Browser verwendet werden. Cookies sind kleine Textdateien, die von Websites auf dem Computer des Benutzers abgelegt werden und verschiedene Informationen speichern können, z. B. Anmeldeinformationen, Sitzungsdaten oder Präferenzen."
-		- storage.sqlite						Speicher für Webseiten
-			"Diese Datenbank wird von Firefox verwendet, um verschiedene Arten von Webdaten zu speichern, wie z. B. die IndexedDB-Datenbanken von Websites, Offline-Cache-Daten, Webseiten-Skriptdaten und andere lokale Speicherinformationen."
-		- favicons.sqlite						Speichert Icons für Lesezeichen
-			"Diese Datenbank speichert die Favicons, also die kleinen Symbole, die in der Adressleiste und bei den Lesezeichen angezeigt werden, um Websites visuell zu identifizieren. Sie enthält die gespeicherten Favicons für die besuchten Websites."
-		- webappsstore.sqlite					Speicher für Webseiten
-			"Diese Datenbank speichert Informationen über installierte Webanwendungen im Firefox-Browser. Sie enthält Daten wie Berechtigungen, Einstellungen und andere spezifische Informationen für Webanwendungen."
-		- formhistory.sqlite
-			"In dieser Datenbank werden Informationen aus Webformularen gespeichert, die der Benutzer in Firefox ausfüllt. Sie enthält die eingegebenen Daten wie Name, E-Mail-Adresse, Adresse und andere Formulardaten, um das automatische Ausfüllen von Formularen zu ermöglichen."
-		- 1657114595AmcateirvtiSty.sqlite		
-			"Activity Stream for Firefox is a collection of all the things you do in the browser that you care about displayed in a rich and meaningful way" % https://wiki.mozilla.org/Firefox/Activity_Stream
-		- 3870112724rsegmnoittet-es.sqlite		% https://wiki.mozilla.org/Firefox/RemoteSettings
-			"Remote Settings in Firefox sind eine Funktion, die es ermöglicht, Browser-Einstellungen zentral zu verwalten und an die Benutzer zu übertragen, ohne ein vollständiges Browser-Update durchführen zu müssen."
-			SQLite DB ist Datenspeicher dazu
-		
-	Ergebnisse:
-		\begin{figure}[h!]
-			\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sqlite-table.png}}}
-			\label{chart:final-criteria}  
-			\caption{Comparison of found PB artifacts between RAM Dumps}
-		\end{figure}
-		> Nach Browser-Installation noch keine SQLite-Datei angelegt (Snapshot 1)
-		> Während Browsing Szenario alle DBs Initialisiert, außer "webappsstore.sqlite" (Snapshot 2)
-			- Dabei wurden in places.sqlite die Seiten geschrieben, die sich automatisch nach Browserstart im public Modus geöffnet haben (Datenschutzhinweise zu Firefox)
-			- Restliche Dateien ohne Inhalt, nur Spaltennamen
-			- Nach WAL Checkpoints bleiben Dateien unverändert
-		> Nach Schließen des Browsers (Snapshot 3)
-			- in places.sqlite: Indizes bei eingetragenen Seiten aktualisiert
-			- 1657114595AmcateirvtiSty.sqlite erhielt BLOB Eintrag, in HxD keine Muster erkennbar
-			- webappsstore.sqlite: leer initialisiert, nur Spaltennamen
-			- restliche Dateien unverändert
-			- nach WAL Checkpoints bleiben Dateien unverändert
-		> Nach herunterfahren der VM (Snapshot 4)
-			- Alle Dateien unverändert, auch nach WAL Checkpoint
+\paragraph*{Sonstige Dateien}
+In der Datei \texttt{prefs-1.js} werden benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser gespeichert. Die Datei enthält Präferenzen des Benutzers in Form von JavaScript-Objekten. Es konnten mit HxD keine PB Artefakte gefunden werden.
+% https://kb.mozillazine.org/Prefs.js_file
+Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpassungen und Konfigurationen für den Firefox-Browser. In der Datei konnten mit Notepad++ keine PB Artefakte gefunden werden.
+% https://support.mozilla.org/de/kb/firefox-support-troubleshooting-guide
 	
-- Zusammenfassung: in keiner Datei PB Artefakte
+\subsubsection*{SQLite Datenbänke}
+Wie in Kapitel X (Methodik, TODO!) erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten genauer untersucht. Mithilfe der Process Monitor Logfiles wurden die in Tabelle X dargestellten SQLite-Datenbanken für Firefox identifiziert:
+\begin{table}[]
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|l|lll}
+\cline{1-2}
+\textbf{Datenbank}                        & \textbf{Gespeicherte Daten}                                                                                              &  &  &  \\ \cline{1-2}
+\textit{places.sqlite}                    & Informationen über Lesezeichen und Verlauf. Zu jeder besuchten Webseite: URL, Seitentitel, Zeitstempel des Besuchs etc.  &  &  &  \\ \cline{1-2}
+\textit{cookies.sqlite}                   & Von besuchten Webseiten verwendete Cookies.                                                                              &  &  &  \\ \cline{1-2}
+\textit{storage.sqlite}                   & Diverse Webdaten, z. B. Indexed-Datenbanken, Offline-Cache-Daten und andere lokale Speicherinformationen.                &  &  &  \\ \cline{1-2}
+\textit{favicons.sqlite}                  & Enhtält Favicons (kleine Symbole in der Adressleiste) um besuchte Webseiten visuell zu identifizieren.                   &  &  &  \\ \cline{1-2}
+\textit{webappsstore.sqlite}              & Speichert Informationen über installierte Webanwendungen im Firefox-Browser, z.B. Berechtigungen und Einstellungen.      &  &  &  \\ \cline{1-2}
+\textit{1657114595AmcateirvtiSty.sqlite}  & Datenspeicher für Activity Stream, eine personalisierte Übersicht über Browser-Aktivitäten beim Öffnen eines neuen Tabs. &  &  &  \\ \cline{1-2}
+\textit{3870112724rsegmnoittet-es.sqlite} & Datenspeicher für Remote Settings, eine zentrale Verwaltung von benutzerspezifischen Browsereinstellungen.               &  &  &  \\ \cline{1-2}
+\end{tabular}
+}
+\end{table}
 
-Quantitativ: (Diagramme)		
-	> Balkendiagramm: Für jede Logfilekategorie: Anzahl Schreiboperationen Logfile 1 vs Logfile 2
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
+Jede dieser Datenbanken wurde in allen vier Snapshots miteinander verglichen. Die Dateiextraktion und Dateianalyse erfolgte analog zur Methodik in Kapitel X (TODO!).
+Die Ergebnisse wurden in Tabelle X (TODO!) dargestellt.
+
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sqlite-table.png}}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
+Nach Browser-Installation (Snapshot 1) existierte noch keine der SQLite-Dateien.
+
+Nach dem Browsing Szenario (Snapshot 2) wurde festgestellt, dass alle SQLite-Datenbanken 
+initialisiert wurden, außer \texttt{webappsstore.sqlite}. Dabei wurden in \texttt{places.sqlite} die automatisch im normalen Modus geöffnete Datenschutzhinweise Seite eingetragen. 
+In restlichen Datenbanken wurden leer initialisiert, nur die Spaltennamen wurden eingetragen.
+Der Inhalt aller erstellten Datenbanken blieb nach Durchführung von PRAGMA WAL Checkpoints unverändert.
+
+Nach Schließen des Browsers (Snapshot 3) wurden in \texttt{places.sqlite} die Indizes bei eingetragenen Seiten aktualisiert. Die SQLite-Datenbank \texttt{1657114595AmcateirvtiSty.sqlite} erhielt ein binäres Datenobjekt als Eintrag. Bei der Untersuchung mit HxD konnten keine Artefakte gefunden werden. Weiterhin wurde \texttt{webappsstore.sqlite} leer initialisiert. Die restlichen Daten blieben im Vergleich mit Snapshot 2 unverändert. Ebenfalls veränderte sich nicht der Inhalt nach Durchführung von PRAGMA WAL Checkpoints.
+
+Nach herunterfahren der VM (Snapshot 4) gab es keine Änderungen in den SQLite Datenbanken, auch nach Durchführung der PRAGMA WAL Checkpoints.
+	
+Somit wurden in den SQLite Datenbanken von Firefox keine zurückverfolgbaren PB Artefakte im privaten Modus hinterlassen.
+
+
+Mithilfe des Process Monitors wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie zusammenfassend in Abbildung X (TODO!) dargestellt, wurde mit Ausnahme der Datareporting Dateien gab es in Logfile 1 stets mehr oder genauso viele Schreiboperationen wie in Logfile 2.
+Keine Schreiboperation hinterließ jedoch Private Browsing Artefakte.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
+
 
 %Literatur:
 %	o no traces were found in “common locations” \cite{Montasari.2015}
@@ -189,74 +141,20 @@ Quantitativ: (Diagramme)
 %			> Daher: WAL Rollback mit sqlite3	
 %	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
 
+\subsection*{Uncommon Locations}
+= Verzeichnisse oder Orte im Dateisystem, die nicht den gängigen Speicherorten der Browser entsprechen und nur durch forensische Analyse entdeckt werden können.
+- Möglich ohne vorheriges Wissen über das Browserverhalten oder Vorverarbeitung der Dateien. 
+- Forensiker nutzen vordefinierte Funktionen von Forensik-Tools und verlassen sich darauf, dass die Speicherabbilder komplett untersucht werden
+- wichtigster Unterschied zu "Common Locations": Umgekehrte Suchrichtung => PB Artefakt (String) -> Alle Daten nach PB Artefakt durchsuchen
 
-\subsection*{Registry}
-> Process Monitor: SetValue Operationen von Browser 
-TODO: Logfile 1 vs 2?
-	Kategorien Registry Keys:
-	1) PreXULSkeletonUISettings:
-		> Prefix: Absoluter Installationspfad von Firefox
-		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
-			Definition:
-				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
-				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
-			
-		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
-		> Unterschiedliche UI Einstellungen
-			- % ScreenX (DWORD)
-			- % ScreenY (DWORD)
-			- % Width (DWORD)
-			- % Height (DWORD)
-			- % Maximized (DWORD)
-			- % Flags (DWORD)
-			- % CssToDevPixelScaling (REG_BINARY)
-			- % UrlbarCSSSpan (REG_BINARY)
-			- % SearchbarCSSSpan (REG_BINARY)
-			- % SpringsCSSSpan (REG_BINARY)
-		> keine PB Artefakte unter UI Einstellungen	
-	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
-		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
-		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
-		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
-		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
-		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
-		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
-		> Key: %  HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-588412547-2749917301-3803556669-1001\\Device\HarddiskVolume2\Program Files\Mozilla Firefox\firefox.exe (REG_BINARY)
-
-Quantitativ: (Diagramme)
-	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
-	
-> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
-	In allen Hives kein Treffer für alle Suchbegriffe
-
-Literatur: 
-	> angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
-
-%Literatur:
-%	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
-%	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
-%	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
-%	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
-%	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
-%	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
-%	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
-%	- IRP\_MJ\_READ: C:/pagefile.sys
-
-\subsection*{Black-Box Analyse/Uncommon Locations}
+Hier: Analyse mit Autopsy und Volatility
 
 \subsubsection*{Analyse mit Autopsy}
-Bei White-Box Analyse/Common Locations: Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
+Bei Common Locations (Kapitel X): Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
 
-Stichwortsuche:
-- In allen Snapshots keine Treffer (auch innerhalb \$Carved)
-- TODO: Pagefile gefunden?
+1. Stichwortsuche: In allen Snapshots keine Treffer, selbst innerhalb gelöschter Dateien (\$Carved)
 
-Von Autopsy automatisch indexierte Dateien: 
+2. Untersuchung der von Autopsy automatisch indexierte Dateien: 
 In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue dazugekommen
 - Web Bookmarks:
 	\begin{figure}[h!]
@@ -348,15 +246,7 @@ Zusammenfassung:
 
 \subsubsection*{Analyse mit Volatility}
 Vorgehen: Siehe "Methodik" Kapitel
-	- Ausgangslage: Volatility Yarascan Treffer
-	- Für jeden Treffer: virtueller Offset des Strings, PID, getriggerte Yararule, getriggerte Yara Component z(= Variablenname des gesuchten Strings), gefundener String
-	- Neue Spalte: "Prozessname" -> zu jeder PID Prozessnamen
-	- Ergebnisse Aufbereitet nach folgendem Schema:
-		> Für jeden RAM Dump
-		> Für jede Yararule
-		> Für jede Component
-		> Filter: Prozessname = Firefox -> Anzahl zählen
-		> Filter: Prozessname = Alle Prozesse außer Firefox -> Anzahl zählen
+Für jeden Yarascan-Treffer: Prozessnamen und ggf. String-Kontext ermittelt
 
 HTML Artefakte wurden in keinem RAM Dump gefunden => Nicht aufgeführt
 
@@ -369,7 +259,7 @@ Yararule "Keyword":
 	Analyse:
 		> Ausschließlich in RAM Dump 2 Keyword Artefakte gefunden
 		> Hauptsächlich in Firefox Prozess
-		> Mit 1301 Artefakten, am häufigsten pfaffenhofen vertreten. Vermutung: Evtl. weil Google Maps viele zusätzliche Artefakte lädt. 
+		> Mit 1301 Artefakten, am häufigsten "pfaffenhofen" vertreten. Vermutung: Evtl. weil Google Maps viele zusätzliche Artefakte lädt. 
 		
 Yararule "URL":
 	\begin{figure}[h!]
@@ -455,7 +345,6 @@ Yararule "Image":
 	\end{figure}
 	Analyse:
 		> Hex-Wert von Donaukurier Bild wurde im 2. RAM Dump in 3 Firefox Prozessen gefunden
-	
 
 Zusammenfassung = Stacked Bar Chart:
 \begin{figure}[h!]
@@ -465,6 +354,63 @@ Zusammenfassung = Stacked Bar Chart:
 \end{figure}
 
 TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
+
+\subsection*{Registry}
+> Process Monitor: SetValue Operationen von Browser 
+TODO: Logfile 1 vs 2?
+	Kategorien Registry Keys:
+	1) PreXULSkeletonUISettings:
+		> Prefix: Absoluter Installationspfad von Firefox
+		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
+			Definition:
+				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
+				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
+			
+		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
+		> Unterschiedliche UI Einstellungen
+			- % ScreenX (DWORD)
+			- % ScreenY (DWORD)
+			- % Width (DWORD)
+			- % Height (DWORD)
+			- % Maximized (DWORD)
+			- % Flags (DWORD)
+			- % CssToDevPixelScaling (REG_BINARY)
+			- % UrlbarCSSSpan (REG_BINARY)
+			- % SearchbarCSSSpan (REG_BINARY)
+			- % SpringsCSSSpan (REG_BINARY)
+		> keine PB Artefakte unter UI Einstellungen	
+	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
+		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
+		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
+		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
+		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
+		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
+		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
+		> Key: %  HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-588412547-2749917301-3803556669-1001\\Device\HarddiskVolume2\Program Files\Mozilla Firefox\firefox.exe (REG_BINARY)
+
+Quantitativ: (Diagramme)
+	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
+	\begin{figure}[h!]
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
+		\label{chart:final-criteria}  
+		\caption{Comparison of found PB artifacts between RAM Dumps}
+	\end{figure}
+	
+> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
+	In allen Hives kein Treffer für alle Suchbegriffe
+
+Literatur: 
+	> angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+
+%Literatur:
+%	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+%	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
+%	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
+%	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
+%	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
+%	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
+%	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
+%	- IRP\_MJ\_READ: C:/pagefile.sys
 
 \newpage
 

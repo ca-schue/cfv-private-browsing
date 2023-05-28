@@ -1,0 +1,130 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'process_monitor_to_exce-Latexl.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{814.07995605bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.46668632)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.29517729,0.2266393){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.31553054,0.41814739){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.26679857,0.33607249){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}File located in \end{tabular}}}}%
+    \put(0.2712112,0.32283461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Snapshot 3?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.50345337,0.1410343){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.43467152,0.20281111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.41358743,0.15338966){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}File cached \end{tabular}}}}%
+    \put(0.423309,0.1410343){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}in RAM \end{tabular}}}}%
+    \put(0.42064763,0.12779642){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dump 3?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.86534409,0.35195796){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.86705398,0.30783167){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.80072665,0.33607249){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Contains\end{tabular}}}}%
+    \put(0.79366645,0.32283461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PB Artifact?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.60716394,0.24693739){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process file\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.56081754,0.26811801){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.62000192,0.32989481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.55657039,0.33607249){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}File \end{tabular}}}}%
+    \put(0.54301535,0.32283461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}readable?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.90736056,0.33607249){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Noted in Excel \end{tabular}}}}%
+    \put(0.91294536,0.32283461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spreadsheet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.66932685,0.33607249){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}View file with\end{tabular}}}}%
+    \put(0.66422474,0.32283461){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}compatible tool\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.4174209,0.42432507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Extract file\end{tabular}}}}%
+    \put(0.41211195,0.41108718){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}with Autopsy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.40506554,0.25311507){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Extract file with \end{tabular}}}}%
+    \put(0.42271605,0.23987719){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Volatility\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.13883233,0.34225017){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Locate file in\end{tabular}}}}%
+    \put(0.1308896,0.32989481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Snapshot 3 with\end{tabular}}}}%
+    \put(0.14942264,0.31665693){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Autopsy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.25797331,0.15338966){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Locate file in RAM\end{tabular}}}}%
+    \put(0.25060974,0.1410343){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dump 3 with Volatility\end{tabular}}}}%
+    \put(0.2877034,0.12779642){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}filelist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.01140389,0.30341904){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Write Operation \end{tabular}}}}%
+    \put(0.02425567,0.29018116){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}in Logfile 2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.55039271,0.14721198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Is auxillary\end{tabular}}}}%
+    \put(0.56569901,0.1339741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}file?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.62965455,0.14015178){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}No\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.53538977,0.04483899){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mark file with * in\end{tabular}}}}%
+    \put(0.53096335,0.03160111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Excel \end{tabular}}}}%
+    \put(0.55979712,0.03160111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spreadsheet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.5679329,0.08190508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Yes\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.67073337,0.14721198){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Note 'N/A' in Excel \end{tabular}}}}%
+    \put(0.68569494,0.1339741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spreadsheet\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{process_monitor_to_exce-Latexl.pdf}}%
+    \put(0.40859564,0.04483899){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Switch to non-\end{tabular}}}}%
+    \put(0.41448374,0.03160111){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}auxillary file\end{tabular}}}}%
+    \put(0.11162572,0.44903579){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dateiextraktion\end{tabular}}}}%
+    \put(0.51346452,0.39608425){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dateianalyse\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
