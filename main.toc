@@ -17,13 +17,13 @@
 \contentsline {subsection}{\numberline {4.3.3}Registry}{29}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{31}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{31}{}%
-\contentsline {section}{\numberline {5.2}Tor}{42}{}%
-\contentsline {section}{\numberline {5.3}Chrome}{50}{}%
-\contentsline {section}{\numberline {5.4}Brave}{50}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{51}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{52}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{53}{}%
-\contentsline {chapter}{Appendices}{54}{}%
-\contentsline {chapter}{Literaturverzeichnis}{57}{}%
-\contentsline {chapter}{\nonumberline Literatur}{57}{}%
+\contentsline {section}{\numberline {5.2}Tor}{45}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{53}{}%
+\contentsline {section}{\numberline {5.4}Brave}{53}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{54}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{55}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{56}{}%
+\contentsline {chapter}{Appendices}{57}{}%
+\contentsline {chapter}{Literaturverzeichnis}{60}{}%
+\contentsline {chapter}{\nonumberline Literatur}{60}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

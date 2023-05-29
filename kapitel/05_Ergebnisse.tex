@@ -142,86 +142,59 @@ Keine Schreiboperation hinterließ jedoch Private Browsing Artefakte.
 %	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
 
 \subsection*{Uncommon Locations}
-= Verzeichnisse oder Orte im Dateisystem, die nicht den gängigen Speicherorten der Browser entsprechen und nur durch forensische Analyse entdeckt werden können.
-- Möglich ohne vorheriges Wissen über das Browserverhalten oder Vorverarbeitung der Dateien. 
-- Forensiker nutzen vordefinierte Funktionen von Forensik-Tools und verlassen sich darauf, dass die Speicherabbilder komplett untersucht werden
-- wichtigster Unterschied zu "Common Locations": Umgekehrte Suchrichtung => PB Artefakt (String) -> Alle Daten nach PB Artefakt durchsuchen
 
-Hier: Analyse mit Autopsy und Volatility
+Nachfolgend werden die Analyseergebnisse der Firefox Uncommon Locations beschrieben.
+Wie in Kapitel X erläutert, wird im Gegensatz zu Common Locations die Suchrichtung umgekehrt und es werden alle gesammelten Daten nach einem spezifischen PB Artefakt durchsucht.
+Somit benötigt ein Forensiker kein Wissen über das Browserverhalten. Stattdessen wird sich auf die Vollständigkeit der Funktionen von Forensik-Tools verlassen. Im Rahmen dieses Versuchs werden die Tools Autopsy und Volatility verwendet.
 
 \subsubsection*{Analyse mit Autopsy}
-Bei Common Locations (Kapitel X): Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
 
-1. Stichwortsuche: In allen Snapshots keine Treffer, selbst innerhalb gelöschter Dateien (\$Carved)
+Bei den Common Locations in Kapitel X wird Autopsy nur zur Dateiextraktion genutzt. Im Falle der Uncommon Locations dient Autopsy als forensisches Werkzeug zur Datenanalyse.
 
-2. Untersuchung der von Autopsy automatisch indexierte Dateien: 
-In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue dazugekommen
-- Web Bookmarks:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_bookmarks.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web Bookmarks}
-	\end{figure}
-	Snapshot 1:
-		> Bing.url (Unter C:/User/Forensik/Favorites/Links) enthält Bing Startseite
-	Snapshot 2:
-		> 5 Einträge in places.sqlite: (Firefox Standardseiten -> Deckt sich mit Beobachtungen aus Process Monitor Analyse, siehe Kapitel X)
-	Snapshot 3:
-		> unverändert zu 2
-	Snapshot 4:
-		> unverändert zu 3
-- Web Cookies:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_cookies.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web Cookies}
-	\end{figure}
-	Snapshot 1:
-		> 10 Einträge in WebCacheV01.dat (= DB des Internet Explorers zum speichern von Browserdaten): Cookies für bing.com und live.com (= outlook)
-	Snapshot 2:
-		> unverändert zu 1
-	Snapshot 3:
-		> unverändert zu 2
-	Snapshot 4:
-		> unverändert zu 3
-- Web History:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_history.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web History}
-	\end{figure}
-	Snapshot 1:
-		> 2 Einträge in WebCacheV01.dat:
-			- 2x live.com (= outlook)
-	Snapshot 2:
-		> 1 Eintrag in places.sqlite: % https://www.mozilla.org/privacy/firefox/
-			-> Zurückzuführen auf Seite, die sich automatisch geöffnet hat, als Firefox gestartet (bevor privates Fenster geöffnet wurde)
-		> 1 neuer Einträge in WebCacheV01.dat:
-			- file:///Z:/Logfile\_1 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
-	Snapshot 3:
-		> 1 neuer Eintrag in WebCacheV01.dat:
-			- file:///Z:/Logfile\_2 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
-	Snapshot 4:
-		> unverändert zu 3
-- Web Categories:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_categories.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web Categories}
-	\end{figure}
-	Snapshot 1:
-		> 2x WebCacheV01.dat aufgelistet => Mit HxD untersucht, keine PB Artefakte
-	Snapshot 2:
-		> unverändert zu 2
-	Snapshot 3:
-		> unverändert zu 3
-	Snapshot 4:
-		> unverändert zu 4
+Eine Autopsy Stichwortsuche gemäß Methodik in Kapitel X (TODO!) lieferte in allen Snapshots keine Treffer. Es wurde zusätzlich das \texttt{\$Carved} Verzeichnis durchsucht, in dem Autopsy alle wiederhergestellten Dateien speichert.
+
+Anschließend wurden die automatisch von Autopsy kategorisierten Dateien untersucht. Gemäß Methodik in Kapitel X wurden dazu die Dateien der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" analysiert.
+Beim Vergleich der Festplattenabbilder wurde festgestellt, dass ein Snapshot stets die kategoriesierten Dateien des vorherigen Snapshots enthielt. Es sind innerhalb einer Kategorie nur neue Dateien dazugekommen. Somit enthält Snapshot 4 in jeder Kategorie alle Dateien der vorherigen Snapshots.
+
+\paragraph*{Web Bookmarks}
+
+Bereits vor Durchführung des Browsing Szenarios enthielt Firefox im ersten Snapshot die Bing Startseite als gespeichertes Leesezeichen. In den restlichen Snapshots 2 -- 4 blieb diese Kategorie unverändert.
+
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_bookmarks.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web Bookmarks}
+\end{figure}
+
+\paragraph*{Web Cookies}
+Auch diese Kategorie enthält bereits vor Beginn des Browsing Szenarios zehn Cookie-Einträge in der Datei \texttt{WebCacheV01.dat}. Dabei handelt es sich um eine Datenbank des Microsoft Edge Browsers zur Speicherung von Nutzerdaten. Diese Datei verhält sich ähnlich wie die in diesem Versuch relevanten SQLite-Dateien. Die Datei enhält. Bei den Einträgen handelt es sich um Cookies für Bing und die Outlook Webseite, obwohl diese Seiten nie in Microsoft Edge geöffnet wurden. In den Snapshots 2 -- 4 kamen keine weiteren Einträge in dieser Kategorie hinzu.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_cookies.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web Cookies}
+\end{figure}
+
+\paragraph*{Web History}
+Diese Kategorie listet alle Dateien mit gespeichertem Suchverlauf auf. Vor Beginn des Browsing Szenarios (Snapshot 1) enthält die Kategorie ebenfalls zwei Einträge zur Outlook Webseite in der Datei \texttt{WebCacheV01.dat}. Nach Durchführung des Browsing Szenarios (Snapshot 2) wurde ein Eintrag in der \texttt{places.sqlite} Datenbank hinzugefügt. Dabei handelt es sich um die automatisch im normalen Browsingmodus geöffnete Firefox-Standardseite über Datenschutzhinweise. Dies deckt sich mit den Beobachtungen der Common Locations in Kapitel X. Darüber hinaus enthält dieser Snapshot für die Datei \texttt{WebCacheV01.dat} den Eintrag \texttt{file:///Z:/Logfile\_1}. Dabei handelt es sich um das Process Monitor Logfile, das gemäß Methodik in Kapitel X (TODO!) über den gemeinsamen VM-Ordner zum Analyse-Rechner transportiert wurde. Ergänzt wird das in Snapshot 3 durch den Eintrag \texttt{file:///Z:/Logfile\_2}, dem zweiten Process Monitor Logfile. In Snapshot 4 werden in dieser Katgeorie keine neuen Dateien erfasst.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_history.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web History}
+\end{figure}
+
+\paragraph*{Web Categories}
+Diese Kategorie klassifiziert im Speicherabbild gefundene Browsing Artefakte nach Inhalt.
+Vor Beginn des Browsing Szenarios (Snapshot 1) werden hier bereits zwei Einträge aufgelistet. Der Eintrag \texttt{bing.com} wird als "Suchmaschine" klassifiziert und \texttt{live.com} als "Web-Email".
+Wie oben erwähnt, wurden beide Seiten nie aufgerufen. Es gab keine zusätzlichen Einträge in dieser Kategorie in den Snapshots 2 bis 4.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_categories.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web Categories}
+\end{figure}
 		
-Zusammenfassung:
-- keine PB Artefakte
-- Keine neuen Erkenntnisse vgl. mit intensiver Analyse mittels Process Monitor in Kapitel X
-- Eintrag von Datenschutzseite in places.sqlite wurde erkannt.
+
+Somit wurden in allen Kategorien ausschließlich Browsing Artefakte des Edge Browsers in der Datei \texttt{WebCacheV01.dat} gefunden, sowie ein Eintrag in der Firefox SQLite Datenbank \texttt{places.sqlite}. Die eingetragene Firefox-Standardseite deckt sich mit den Ergebnissen der Common Locations in Tabelle X. Die aufgelisteten Einträge in der Datei \texttt{WebCacheV01.dat} sind nicht auf Schritte des Browsing Szenarios zurückzuführen. Die Einträge sind bereits im ersten Snapshot enthalten, obwohl vor Beginn des Browsing Szenarios keine Browseraktivitäten durchgeführt wurden. Weiterhin enthölt diese Datei Einträge über die Process Monitor Logfiles, welche über einen gemeinsamen VM-Ordner zum Rechner transportiert wurde, auf dem die virtuelle Maschine läuft.
+In keiner der Kategorien konnten private Browsing Artefakte identifiziert werden.
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 
@@ -245,162 +218,164 @@ Zusammenfassung:
 %		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsubsection*{Analyse mit Volatility}
-Vorgehen: Siehe "Methodik" Kapitel
-Für jeden Yarascan-Treffer: Prozessnamen und ggf. String-Kontext ermittelt
+Nachdem die Firefox Festplattenabbilder als Uncommon Location mit Autopsy untersucht wurden, werden nachfolgend die Analyseergebnisse des RAMs als Uncommon Location beschrieben. 
+Dazu wurde eine Stringsuche im gesamten RAM nach PB Artefakten durchgeführt.
+Wie in Kapitel X ausführlich beschrieben muss ein gefundener String eindeutig einem Browser zugeordnet werden können. 
+Deshalb wurde dazu das Volatility PlugIn "Yarascan" verwendet, ein Werkzeug um nach bestimmten Mustern im RAM zu suchen. Dazu wurden die in Tabelle X aufgeführten Yara-Regeln verwendet.
+Wie in Kapitel Methodik (TODO!) beschrieben, wird davon ausgehend das PlugIn "pslist" verwendet, um den Prozessnamen anhand PID zu identifizieren.
+Die Ergebnisse dieser Stringsuche sind nachfolgend nach Kategorie geordnet.
 
-HTML Artefakte wurden in keinem RAM Dump gefunden => Nicht aufgeführt
+\paragraph*{Yararule HTML}
+In keinem der Firefox RAM Dumps wurden HTML Fragemente der besuchten Seiten gefunden. Somit wird diese Yara-Regel nicht weiter betrachtet.
 
-Yararule "Keyword":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/keywords.png}}}
-		\label{chart:final-criteria}  
-		\caption{Keywords}
-	\end{figure}
-	Analyse:
-		> Ausschließlich in RAM Dump 2 Keyword Artefakte gefunden
-		> Hauptsächlich in Firefox Prozess
-		> Mit 1301 Artefakten, am häufigsten "pfaffenhofen" vertreten. Vermutung: Evtl. weil Google Maps viele zusätzliche Artefakte lädt. 
-		
-Yararule "URL":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/url.png}}}
-		\label{chart:final-criteria}  
-		\caption{URL}
-	\end{figure}
-	Analyse:
-		> Wie bei anderen Kategorien: Die meisten Artefakte in RAM Dump 2, in Firefox Prozessen
-		> mooserliesl tritt am wenigsten auf, donaukurier am meisten (vmtl. auf Öffnen von Bild zurückzuführen)
-		> Hier bemerkenswert, dass in RAM Dump 3 Artefakte von allen vier URLs zu finden sind
-		> Bei genauerer Analyse des Process Monitor Logfiles herausgefunden: Artefakte alle in svchost.exe Prozess gefunden
-		> Deshalb RAM Dump erneut mit Volatility windows.svcscan Plugin untersucht:
-			"The svcscan plugin allows the analyst to list out the services running. This plugin gives more detail to the running processes in the event that the analyst requires additional details such as the display name, binary path, or service type." % (https://www.oreilly.com/library/view/digital-forensics-and/9781787288683/9ab60586-2b04-45e0-b437-dbfe10ab3be8.xhtml)
-		> Ausgabe aller im RAM gefundener Services
-		> Problem: Volatility svcscan liefert keine PID zu laufenden Services
-		> Deshalb: "White-Box" Analyse: Snapshot 3 erneut aufgetaut, danach mit Process Explorer PID X (TODO!) von SVChost Prozess gesucht, in dem PB Artefakte gefunden wurden
-			Def. Process Explorer:
-				"Prozess Explorer zeigt Ihnen Informationen darüber an, welche Handles und DLLs-Prozesse geöffnet oder geladen wurden." % https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
-				"Process Explorer, from Sysinternals, is a process management program that allows you to see the running processes on your computer and a great deal of information about each process. One of the nice features of Process Explorer is that it also gives you the ability to see what services a particular SVCHOST.EXE process is controlling."
-		> Ergebnis: DNSCache Service mit PID X (TODO!) = DNScache Service
-			TODO: Screenshot
-		> Ausführung von ipconfig /displaydns liefert gecachte URLs
-			TODO: Screenshot
-		> Nach Löschen des DNSCaches mit ipconfig /flushdns + Schließen aller Process Monitor Instanzen + Beenden des DNSCaches Services + Erneuter RAM-Dump -> Keine PB Artefakte mehr gefunden!
-Yararule "Mail":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/mail.png}}}
-		\label{chart:final-criteria}  
-		\caption{Mail}
-	\end{figure}
-	Analyse:
-		> Alle Mail Artefakte gefunden
-		> Ausschließlich in RAM Dump 2 Mail Artefakte gefunden
-		> Am häufigsten Absenderadresse "computerforensikvl@gmail.com" gefunden, als einziges Artefakt auch in anderen Prozessen gefunden.
-		> Bemerkenswert: Passwort wurde 4x als Klartext im RAM gefunden!
-			String Kontext:
-				Offsets:		PIDs:
-				0xb9ce29180c8	7420
-				0x2859f4ffd4e0	7420
-				0x24083b41858	8424
-				0x240840e5b08	8424
+\paragraph*{Yararule Keyword}
+Wie in Abbildung X (TODO!) gezeigt, wurden alle Suchbegriffe "pfaffenhofen", "nanoradar", "mooserliesl" sowie "mallofamerica" identifiziert im zwiten RAM Dump, nach dem Browsing Szenario mit geöffnetem Browser, identifiziert. Die Artefakte befinden sich ausschließlich im zweiten RAM Dump. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in zwölf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff "pfaffenhofen" mit 1301 gefundenen Artefakten im zweiten Firefox RAM Dump gefunden. Dies ist vermutlich auf den Google Maps Kartenbereich zurückzuführen, einen visuellen Ausschnitt der Karte, welcher bei der Google-Suche erscheint und Informationen über die geografische Lage, Straßen, Sehenswürdigkeiten und andere relevante Orte in der gesuchten Stadt zeigt. In den RAM Dumps 1 und 3 konnten Artefakte zu den Suchbegriffen identifiziert werden.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/keywords.png}}}
+	\label{chart:final-criteria}  
+	\caption{Keywords}
+\end{figure}
+
+\paragraph*{Yararule URL}
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/url.png}}}
+	\label{chart:final-criteria}  
+	\caption{URL}
+\end{figure}
+Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs unitree.com, mooserliesl.de, mallofamerica.com sowie donaukurier.de identifiziert werden.
+Dabei wurden die meisten Artefakte nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Alle besuchten URLs wurden in diesem Dump sowohl in Firefox als auch anderen Prozessen gefunden, wobei die meisten Artefakte in Firefox Prozessen zu finden sind. Dabei wurde "mooserliesl.de" mit insgesamt 390 Artefakten am wenigsten gefunden, "donaukurier.de" mit über 3600 Artefakten am häufigsten.
+
+Bemerkenswert ist, dass URL Artefakte gefunden wurden, nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL Artefakte in einem Firefox Prozess gefunden.
+Anhand der PID $2252$ wurde festgestellt, dass sich alle URL Artefakte des dritten RAM Dumps in einem "svchost.exe" Prozess mit der gleichen PID befinden. Unter dem "Service Host" Prozess laufen gruppierte Windows-Dienste, um Ressourcen zu sparen und die Systemleistung zu verbessern.
+Volatility bietet das Plugin "svcscan" an, mit dem alle laufenden Dienste ausgegeben werden können.
+Bei Anwendung auf den dritten RAM Dump wurde jedoch zu keinem Dienst eine PID angegeben, wordurch der Dienst mit den URL Artefakten nicht im RAM identifiziert werden konnte. 
+% https://learn.microsoft.com/de-de/windows/application-management/svchost-service-refactoring
+Stattdessen wurde der dritte Snapshot aufgetaut, um im laufenden Windowsbetrieb den Dienst mithilfe des Process Explorers zu identifizieren.
+Wie in Abbildung X (TODO!) gezeigt, wurde anhand der PID $2252$ der Dienst "DNSCache" ermittelt.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-dnscache.png}}}
+	\label{chart:final-criteria}  
+	\caption{URL}
+\end{figure}
+Der DNSCache-Dienst unter Windows ist ein Teil des Betriebssystems, der für die Übersetzung von Domainnamen in IP-Adressen verantwortlich ist. Der DNSCache-Dienst speichert DNS-Anfragen und Antworten temporär, umd wiederholte DNS-Anfragen zu beschleunigen.
+% https://learn.microsoft.com/en-us/answers/questions/47441/how-to-disable-windows-10-dns-cache-services
+Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flushdns}, dem Schließen aller Process Monitor Instanzen sowie Beenden des DNSCaches Services wurde erneut ein RAM-Dump durchgeführt. Dort wurden keine URL Artefakte mehr gefunden.
+
+\paragraph*{Yararule Mail}
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/mail.png}}}
+	\label{chart:final-criteria}  
+	\caption{Mail}
+\end{figure}
+Es konnten alle E-Mail Artefakte des Browsing Szenarios gefunden werden.
+Die Artefakte befinden sich ausschließlich im zweiten Firefox RAM Dump, nach dem Browsing Szenario mit geöffnetem Browser.
+Unter den gefundenen Artefakten befindet sich mit zwölf Vorkommen am häufigsten die Absenderadresse "computerforensikvl@gmail.com". Dieses Artefakt wurde als einziges Mail-Artefakt in anderen Prozesses außer Firefox gefunden.
+
+Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, vier mal als Klartext im RAM gefunden wurden. Das Passwort wurde in je zwei Firefox Prozessen mit den PIDs 7420 und 8424 zwei mal gefunden. Tabelle X zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
+\begin{table}[]
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c|c|c|ll}
+\cline{1-3}
+\textbf{Virtuelle Speicheradresse} & \textbf{PID} & \textbf{Byte-Offset in extrahierter Speicherseite} &  &  \\ \cline{1-3}
+0xb9ce29180c8                      & 7420         & 0x11dd40c8                                         &  &  \\ \cline{1-3}
+0x2859f4ffd4e0                     & 7420         & 0x12e234e0                                         &  &  \\ \cline{1-3}
+0x24083b41858                      & 8424         & 0x583858                                           &  &  \\ \cline{1-3}
+0x240840e5b08                      & 8424         & 0x96bb08                                           &  &  \\ \cline{1-3}
+\end{tabular}
+}
+\end{table}
+
+Zu diesen Artefakten wurde gemäß Methodik in Kapitel X der String Kontext -- die Zeichen vor und nach dem gefundenen Artefakt im Speicherbereich -- ermittelt. Dazu wurde gemäß Methodik in Kapitel X mithilfe des Volatility memmap-Plugins die Abbildung der virtuellen Speicheradressen auf den Byte-Offset in der extrahierten Speicherseite des Prozesses ermittelt. 
+\begin{figure}[h!]
+	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0xb9ce29180c8_7420.png}}}
+	\label{chart:final-criteria}  
+	\caption{Password in memory page of PID 7420 at Byte-Offset 0x11dd40c8}
+\end{figure}
+Wie in Abbildung X gezeigt, sind in der Speicherseite des Prozesses mit PID $7420$ konnte vor und nach dem gefundenen Passwort am Byte-Offset $0xb9ce29180c8$ neben der Gmail-Url "mail.google.com" Code-Fragmente der "Gecko-Engine" zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video.
+% https://wiki.mozilla.org/GeckoMediaPlugins
+\begin{figure}[h!]
+	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png}}}
+	\label{chart:final-criteria}  
+	\caption{Password in memory page of PID 7420 at Byte-Offset 0x12e234e0}
+\end{figure}
+In der gleichen Datei konnte nach dem gefundenen Passwort am Byte-Offset $0x24083b41858$ die Strings "Passwd" sowie "sessionrestore" (siehe Common Location "Sessionstore" in Kapitel X) identifiziert werden. 
+Wie in den Abbildungen X und Y (TODO!) gezeigt, können in den Byte-Offsets der gefundenen Passwörter in der Speicherseite der PID 8424 konnten kein Kontext ermittelt werden. Im Gegensatz zur Speicherseite der PID 7420 wird das Passwort dort mit 2 Bytes pro Zeichen enkodiert. Das eine Unicode-Zeichenenkodierung vermuten.
+\begin{figure}[h!]
+	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x24083b41858_8424.png}}}
+	\label{chart:final-criteria}  
+	\caption{Password in memory page of PID 8424 at Byte-Offset 0x583858}
+\end{figure}
+\begin{figure}[h!]
+\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x240840e5b08_8424.png}}}
+\label{chart:final-criteria}  
+\caption{Password in memory page of PID 8424 at Byte-Offset 0x96bb08}
+\end{figure}
 				
-			Memmap: Pid 7420
-				virtual			physical	size	offset in file
-				0xb9ce2918000	0xcb20a000	0x1000	0x11dd4000
-					-> 0xb9ce29180c8 = 0x11dd40c8 
-					\begin{figure}[h!]
-						\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0xb9ce29180c8_7420.png}}}
-						\label{chart:final-criteria}  
-						\caption{Password in memory page of PID 7420 at offset 0xb9ce29180c8}
-					\end{figure}
-				0x2859f4ffd000	0x96812000	0x1000	0x12e23000	Disabled				
-					-> 0x2859f4ffd4e0 = 0x12e234e0
-					\begin{figure}[h!]
-						\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png}}}
-						\label{chart:final-criteria}  
-						\caption{Password in memory page of PID 7420 at offset 0x2859f4ffd4e0}
-					\end{figure}
-			Memmap: Pid 8424
-				virtual			physical	size	offset in file
-				0x24083b41000	0xc1d52000	0x1000	0x583000	Disabled
-					-> 0x24083b41858 = 0x583858
-					\begin{figure}[h!]
-						\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x24083b41858_8424.png}}}
-						\label{chart:final-criteria}  
-						\caption{Password in memory page of PID 8424 at offset 0x24083b41858}
-					\end{figure}
-				0x240840e5000	0x2d3fb000	0x1000	0x96b000	Disabled
-					-> 0x240840e5b08 = 0x96bb08
-					\begin{figure}[h!]
-						\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x240840e5b08_8424.png}}}
-						\label{chart:final-criteria}  
-						\caption{Password in memory page of PID 8424 at offset 0x240840e5b08}
-					\end{figure}
-		> In PID 8424: 2 Bytes pro Character, bspw. Unicode
-				
-Yararule "Image":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/image.png}}}
-		\label{chart:final-criteria}  
-		\caption{Image}
-	\end{figure}
-	Analyse:
-		> Hex-Wert von Donaukurier Bild wurde im 2. RAM Dump in 3 Firefox Prozessen gefunden
+\paragraph*{Yararule Image}
+Das im Browsing Szenario geöffnete Donaukurier Logo wurde ausschließlich im zweiten RAM Dump in drei mal in Firefox Prozessen gefunden.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/image.png}}}
+	\label{chart:final-criteria}  
+	\caption{Image}
+\end{figure}
 
-Zusammenfassung = Stacked Bar Chart:
+Wie in Abbildung X zusammenfassend gezeigt wurden vor dem Browsing Szenario, keine private Browsing Artefakte im ersten RAM Dump gefunden.
+Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
+Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/summary.png}}}
 	\label{chart:final-criteria}  
 	\caption{Summary}
 \end{figure}
 
-TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
 
 \subsection*{Registry}
-> Process Monitor: SetValue Operationen von Browser 
-TODO: Logfile 1 vs 2?
-	Kategorien Registry Keys:
-	1) PreXULSkeletonUISettings:
-		> Prefix: Absoluter Installationspfad von Firefox
-		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
-			Definition:
-				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
-				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
-			
-		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
-		> Unterschiedliche UI Einstellungen
-			- % ScreenX (DWORD)
-			- % ScreenY (DWORD)
-			- % Width (DWORD)
-			- % Height (DWORD)
-			- % Maximized (DWORD)
-			- % Flags (DWORD)
-			- % CssToDevPixelScaling (REG_BINARY)
-			- % UrlbarCSSSpan (REG_BINARY)
-			- % SearchbarCSSSpan (REG_BINARY)
-			- % SpringsCSSSpan (REG_BINARY)
-		> keine PB Artefakte unter UI Einstellungen	
-	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
-		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
-		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
-		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
-		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
-		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
-		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
-		> Key: %  HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-588412547-2749917301-3803556669-1001\\Device\HarddiskVolume2\Program Files\Mozilla Firefox\firefox.exe (REG_BINARY)
 
-Quantitativ: (Diagramme)
-	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
-	
-> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
-	In allen Hives kein Treffer für alle Suchbegriffe
+Die Analyse der Registry zählt gemäß Methodik in Kapitel X sowohl zu den Common als auch Uncommon Locations 
 
-Literatur: 
-	> angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+\subsubsection*{Process Monitor SetValue Operations}
+
+Als Teil der Common Locations werden für Firefox alle Registry "SetValue" Schreiboperationen der beiden Process Monitor Logfiles untersucht.
+
+In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: "PreXULSkeletonUISettings" und "Business Activity Monitoring". In Abbildung X ist der Anteil der Schreiboperationen je Kategorie für beide Logfiles gezeigt.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
+
+\paragraph*{PreXULSkeletonUISettings}
+%https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
+Der "PreXULSkeletonUISettings" Registry Key enthält Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI, eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. 
+PreXULSkeletonUISettings Registry Keys haben das Format \texttt{HKCU$\backslash$SOFTWARE$\backslash$Mozilla$\backslash$Firefox$\backslash$PreXULSkeletonUISettings$\backslash$<Absoluter Firefox Installationspfad>$\backslash$firefox.exe|<Skeleton UI Setting>}.
+Somit enthält der Key den absoluten Installationspfad von Firefox gefolgt von einer Skeleton UI Einstellung. Nachfolgend sind alle möglichen UI Einstellungen aufgelistet, gefolgt vom Datentyp des Keys.
+\begin{itemize}
+	\item ScreenX (DWORD)
+	\item ScreenY (DWORD)
+	\item Width (DWORD)
+	\item Height (DWORD)
+	\item Maximized (DWORD)
+	\item Flags (DWORD)
+	\item CssToDevPixelScaling (REG\_BINARY)
+	\item UrlbarCSSSpan (REG\_BINARY)
+	\item SearchbarCSSSpan (REG\_BINARY)
+	\item SpringsCSSSpan (REG\_BINARY)
+\end{itemize}
+Somit enthalten die Keys nur Daten zur Formatierung und Struktur der grafischen Oberfläche. Es wurden keine PB Artefakte geschrieben
+
+\paragraph*{Business Activity Monitoring}
+"Business Activity Monitoring", kurz BAM ist eine weitgehend undokumentierte Windows Funktion, die im Hintergrund ausgeführte Programme steuert.
+Der Registry Key hat das Format \texttt{HKLM$\backslash$System$\backslash$CurrentControlSet$\backslash$Services$\backslash$bam$\backslash$State$\backslash$UserSettings$\backslash$<SID>$\backslash$Device$\backslash$HarddiskVolume2$\backslash$<Absoluter Firefox Installationspfad>$\backslash$firefox.exe} und den Datentyp REG\_BINARY.
+Jeder Schlüssel wird durch die Sicherheits-ID (SID) des Benutzers identifiziert.
+Ein BAM Registry Key schreibt für alle ausgeführten Programme --- hier Firefox --- den Zeitstempel der letzten Ausführung.
+PB Artefakte sind dabei nicht enthalten.
+% https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
+% https://notes.qazeer.io/dfir/windows/_artefacts_overview 
+
+\subsubsection*{Stringsuche in Registry Hives}
+Gemäß Methodik in Kapitel X wird die Firefox Registry als Uncommon Location behandelt, indem über alle auf der Festplatte vorhandenen Registry Datenbanken, den Registry-Hives, eine Stringsuche durchgeführt wird, ohne die Struktur der Hives zu beachten. 
+Dazu wurden sowohl die System-Hives als auch die User-Hives aus Tabelle X (TODO!) aus jedem Snapshot extrahiert und mithilfe des Registry Explorers nach PB Artefakten durchsucht.
+Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
 
 %Literatur:
 %	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
@@ -411,6 +386,10 @@ Literatur:
 %	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
 %	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
 %	- IRP\_MJ\_READ: C:/pagefile.sys
+
+
+*** TODO: Zusammenfassung Firefox ***
+
 
 \newpage
 
