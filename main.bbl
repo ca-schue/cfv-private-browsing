@@ -633,6 +633,44 @@
       \field{pages}{518\bibrangedash 522}
       \range{pages}{5}
     \endentry
+    \entry{Oh.2011}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4dded0835c6b0d9d4a565aaab5eadb52}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Junghoon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4385a31ad52708ffac976dbce01e768}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Seungbong},
+           giveni={S\bibinitperiod}}}%
+        {{hash=71b21875e291560338270c7aa1a529c2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Sangjin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{fullhash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{bibnamehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{authorbibnamehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{authornamehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{authorfullhash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Digital investigation}
+      \field{title}{Advanced evidence collection and analysis of web browser activity}
+      \field{volume}{8}
+      \field{year}{2011}
+      \field{pages}{S62\bibrangedash S70}
+      \range{pages}{-1}
+    \endentry
     \entry{Ohana.2013}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=644d5cb30bd4d92ad4eb68302e085b8a}{%
