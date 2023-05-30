@@ -37,7 +37,6 @@ Bei detaillierter Untersuchung der Dateien, können zwei Pfade identifiziert wer
 In Tabelle X (TODO!) sind die Dateien je nach Speicherort "Local" (Hellblau) oder "Roaming" (Dunkelblau) entsprechend eingefärbt. 
 
 \paragraph*{Cache}
-
 Firefox verwendet den Cache, um Webseiten und deren Ressourcen temporär lokal zu speichern. Dadurch können wiederholte Anfragen an den Server vermieden und die Ladezeiten verringert werden. Die Inhalte dieser Dateien sind binär.
 Die Dateien im Format \texttt{$\backslash$cache2$\backslash$entries$\backslash$<ID>} werden dem Cache zugeordnet und im Local Pfad gespeichert.
 % https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
@@ -51,6 +50,8 @@ Weitere Cache Dateien konnten in keinem Snapshot gefunden werden.
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
 Die Indexdatei \texttt{$\backslash$cache2$\backslash$index} dient als Datenbank im Cache. Sie ermöglicht dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten. Sowohl mit HxD als auch dem Tool FirefoxCache2 konnten keine PB Artefakte identifiziert werden.
+*** TODO: Erst in Logfile 2 geschrieben ***
+
 Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJGVJPzPe7w4w0KwEY0jw==.ico} ein $64x64$ Pixel großes Mozilla Logo. Dieses Logo ist keinem Schritt aus dem Browsing Szenario zuzuordnen
 
 
@@ -58,7 +59,10 @@ Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJ
 Dateien im Ordner \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db} sind Teil des Glean-Systems, das für die Sammlung von Telemetriedaten und deren Übermittlung an Mozilla verwendet wird. 
 % https://github.com/mozilla/glean
 Die Datei \texttt{data.safe.bin} enthält verschlüsselte und anonyme Informationen über die Nutzung des Browsers. In HxD konnten keine keine PB Artefakte gefunden werden
+*** TODO: Vergleich Logfile 1 vs 2 ***
+
 Dateien im Foremat \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db$\backslash$<Profilname>.new-profile.jsonlz4} speichern Informationen über das Firefox-Profil, das von Glean verwendet wird. Wie in Kapitel X beschrieben, lassen sich Dateien, im proprietären \textit{jsonlz4}-Format mit dem Tool dejsonlz4 dekomprimieren. Die entstandene JSON Datei wird mit dem Notepad++ JSON Plugin untersucht. Dabei konnten keine PB Artefakte gefunden werden.
+*** TODO: Nur in Logfile 2 geschrieben ***
 
 \paragraph*{Sessionstore}
 Die Datei \texttt{$\backslash$sessionstore-backups$\backslash$recovery.jsonlz4} enthält eine Sicherungskopie der vorherigen Sitzung. Sie wird erstellt, wenn der Firefox-Browser nach einem Absturz oder einem unerwarteten Beenden neu gestartet wird." % https://support.mozilla.org/de/questions/1221836
@@ -70,15 +74,19 @@ In der Sitzungswiederherstellung konnten wie in Abbildung X gezeigt lediglich di
 %	\label{...}
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
+*** TODO: Logfile 1 vs Logfile 2 ***
 
 \paragraph*{Sonstige Dateien}
 In der Datei \texttt{prefs-1.js} werden benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser gespeichert. Die Datei enthält Präferenzen des Benutzers in Form von JavaScript-Objekten. Es konnten mit HxD keine PB Artefakte gefunden werden.
 % https://kb.mozillazine.org/Prefs.js_file
+*** TODO: Vergleich Logfile 2 ***
+
 Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpassungen und Konfigurationen für den Firefox-Browser. In der Datei konnten mit Notepad++ keine PB Artefakte gefunden werden.
 % https://support.mozilla.org/de/kb/firefox-support-troubleshooting-guide
-	
+*** TODO: Vergleich Logfile 2 ***	
 \subsubsection*{SQLite Datenbänke}
 Wie in Kapitel X (Methodik, TODO!) erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten genauer untersucht. Mithilfe der Process Monitor Logfiles wurden die in Tabelle X dargestellten SQLite-Datenbanken für Firefox identifiziert:
+
 \begin{table}[]
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|l|lll}
@@ -221,6 +229,7 @@ In keiner der Kategorien konnten private Browsing Artefakte identifiziert werden
 Nachdem die Firefox Festplattenabbilder als Uncommon Location mit Autopsy untersucht wurden, werden nachfolgend die Analyseergebnisse des RAMs als Uncommon Location beschrieben. 
 Dazu wurde eine Stringsuche im gesamten RAM nach PB Artefakten durchgeführt.
 Wie in Kapitel X ausführlich beschrieben muss ein gefundener String eindeutig einem Browser zugeordnet werden können. 
+
 Deshalb wurde dazu das Volatility PlugIn "Yarascan" verwendet, ein Werkzeug um nach bestimmten Mustern im RAM zu suchen. Dazu wurden die in Tabelle X aufgeführten Yara-Regeln verwendet.
 Wie in Kapitel Methodik (TODO!) beschrieben, wird davon ausgehend das PlugIn "pslist" verwendet, um den Prozessnamen anhand PID zu identifizieren.
 Die Ergebnisse dieser Stringsuche sind nachfolgend nach Kategorie geordnet.
@@ -373,6 +382,7 @@ PB Artefakte sind dabei nicht enthalten.
 % https://notes.qazeer.io/dfir/windows/_artefacts_overview 
 
 \subsubsection*{Stringsuche in Registry Hives}
+
 Gemäß Methodik in Kapitel X wird die Firefox Registry als Uncommon Location behandelt, indem über alle auf der Festplatte vorhandenen Registry Datenbanken, den Registry-Hives, eine Stringsuche durchgeführt wird, ohne die Struktur der Hives zu beachten. 
 Dazu wurden sowohl die System-Hives als auch die User-Hives aus Tabelle X (TODO!) aus jedem Snapshot extrahiert und mithilfe des Registry Explorers nach PB Artefakten durchsucht.
 Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
@@ -402,107 +412,101 @@ Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
 
 \section{Tor}
 
-\subsection*{White-Box Analyse/Common Locations}
+In diesem Abschnitt werden die Ergebnisse der Datenanalyse der Common Locations, Uncommon Locations sowie der Registry für den Tor-Browser präsentiert.
 
-Schreiboperationen mit Process Monitor verfolgen:
+\subsection*{Common Locations}
 
-Im Anhang: Tabelle mit allen geschriebenen Dateien (markiert, wenn nicht mehr wiederherstellbar + markiert, wenn Datei "verändert" (siehe oben: temp, WAL))
+Als Erstes werden die Common Locations analysiert, um potenzielle Hinweise auf Internetaktivitäten des Browsing Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wird gemäß der im Kapitel X (TODO!) beschriebenen Methodik zwischen Schreibvorgängen in den Protokolldateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden.
 
-Aux-Dateien, welche nicht mehr vorhanden waren, aber dafür "richtige" Dateien:
+\subsubsection*{Process Monitor WriteFile Operations}
 
-Ergebnis: Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2 + Tool mit dem Datei untersucht wurde
-- Dateien, die in beiden Logfiles nicht wiederherstellbar 
+Bei der Versuchsdurchführung für den Tor-Browser gemäß Kapitel X wurden drei Process Monitor Logfiles erstellt.
+Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während des Browsing Szenarios, nach dem Erzeugen einer "Neuen Identität" sowie nach Schließen des Browsers.
+Eine gemäß Methodik in Kapitel X verarbeitete Tabelle mit allen in den Logfiles identifizierten Dateien ist im Anhang X aufgeführt.
+Für jede Datei wurde vermerkt ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob PB Artefakte enthalten sind.
+
+In Tabelle X (TODO!) sind die ausschließlich wiederherstellbaren Dateien aufgeführt.
+Die Dateien wurden in die vier Kategorien "Cache", "datareporting", und "Sonstige Dateien" eingeordnet.
+In keiner der identifizierten Dateien konnten PB Artefakte gefunden werden.
+
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png}}
 %	\label{...}
 	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
 \end{figure}
 
-Allgemein: Tor hat nur einen "Common Pfad"
--	% C:\Users\Forensik\Desktop\Tor Browser\Browser\TorBrowser\Data\Browser\
-- Dateien tauchen in zwei unterschiedlichen Ordnern auf:
-	- % C:\Users\Forensik\Desktop\Tor Browser\Browser\TorBrowser\Data\Browser\Caches\profile.default\ (Caches)
-	- % C:\Users\Forensik\Desktop\Tor Browser\Browser\TorBrowser\Data\Browser\profile.default\ (Profile.Default)
+Ähnlich wie bei der Analyse der Schreiboperationen von Firefox in Kapitel X (TODO!), konnten für den Tor-Browser zwei Pfade identifiziert werden, wo sich Dateien befinden, in die geschrieben wurde.
+\begin{itemize}
+\item[\textbf{Caches}] \texttt{C:$\backslash$Users$\backslash$Forensik$\backslash$Desktop$\backslash$Tor Browser$\backslash$Browser$\backslash$TorBrowser$\backslash$Data$\backslash$Browser$\backslash$Caches$\backslash$profile.default$\backslash$}
+\item[\textbf{Profile.default}] \texttt{C:$\backslash$Users$\backslash$Forensik$\backslash$Desktop$\backslash$Tor Browser$\backslash$Browser$\backslash$TorBrowser$\backslash$Data$\backslash$Browser$\backslash$profile.default$\backslash$}
+\end{itemize}
+In Tabelle X (TODO!) sind die Dateien je nach Speicherort "Caches" (Hellblau) oder "Profile.default" (Dunkelblau)  eingefärbt. 
 
-- Alle Schreibopertationen von Prozess "firefox.exe" durchgeführt, nicht "tor.exe" 
+Bei der Auswertung der Process Monitor Logfiles wurde festgestellt, dass alle Schreibopertationen von "firefox.exe" Prozessen durchgeführt wurde, nicht "tor.exe" 
 
-=> Keine der Dateien enthält PB Artefakte, trotzdem nachfolgende genauere Betrachtung der wichtigsten Dateien im Zusammenhang des Tor Browsers
+Obwohl keine der Dateien PB Artefakte enthält, werden zum vollständigen Browserverständnis im Sinne der White-Box-Forensik die wichtigsten Dateien im Zusammenhang des Tor-Browsers genauer untersucht.
 
-Kategorien der Logs:
-- Cache: 
-	> % \Caches\profile.default\startupCache\startupCache.8.little (Caches Folder)
-	Zweck:
-		"Die Datei "startupCache.8.little" ist eine interne Datei, die von Firefox und dem Tor Browser erstellt wird, um den Startvorgang des Browsers zu beschleunigen. Sie enthält im Wesentlichen eine Zwischenspeicherung von Daten, die beim Starten des Browsers benötigt werden.
 
-		Diese Datei enthält Informationen über bereits geladene Browser-Komponenten wie JavaScript-Code, CSS-Dateien, Bilder und andere Ressourcen. Indem der Browser diese Informationen zwischenspeichert, kann er sie beim erneuten Starten des Browsers wiederverwenden, anstatt sie erneut herunterladen und verarbeiten zu müssen. Dadurch wird die Startzeit des Browsers verkürzt und die allgemeine Leistung verbessert." %https://wiki.mozilla.org/StartupCache
-	Analyse:
-		- Tool: HxD
-		- kein PB Artefakte
+\paragraph*{Cache}
+Der Tor-Browser schreibt eine einzige Cache-Datei \texttt{$\backslash$Caches$\backslash$profile.default$\backslash$startupCache$\backslash$startupCache.8.little} im Caches-Pfad. Alle anderen geschriebenen Dateien befinden sich im "Profile.default"-Pfad.
+Die Datei "startupCache.8.little" ist eine interne Datei, welche erstellt wird, um den Startvorgang des Browsers zu beschleunigen. Sie enthält Informationen über bereits geladene Browser-Komponenten wie JavaScript-Code, CSS-Dateien, Bilder und andere Ressourcen.  %https://wiki.mozilla.org/StartupCache
+Bei Untersuchung mit HxD konnten keine PB Artefakte gefunden werden.
 
-- datareporting:
-	> % *\datareporting\state.json 
-	Zweck: 
-		"Die Datei "state.json" im Ordner "/datareporting" enthält Informationen über den Zustand und die Konfiguration des Firefox- oder Tor Browsers. Diese Datei kann Daten über die Verwendung des Browsers, wie z.B. installierte Add-Ons, zuletzt besuchte Websites, Browser-Einstellungen und andere Informationen enthalten. Sie wird verwendet, um dem Browser bei Bedarf den Zustand und die Einstellungen wiederherzustellen."
-		% https://github.com/mozilla/firefox-data-store-docs/blob/master/README.md
-	Analyse:
-		- Tool Notepad++ mit JSON Plugin
-		- keine PB Artefakte
+\paragraph*{Datareporting}
+Im "Datareporting"-Ordner wird vom Tor-Browser die Datei \texttt{$\backslash$datareporting$\backslash$data.safe.bin} geschrieben. Sie enthält verschlüsselte und anonyme "Glean" Informationen über die Nutzung des Browsers. % https://github.com/mozilla/glean
+In HxD konnten keine keine PB Artefakte gefunden werden.
+Weiterhin wird die Datei \texttt{$\backslash$datareporting$\backslash$state.json} geschrieben
+Sie enthält Informationen über den Zustand und die Konfiguration des Tor-Browsers, beispielsweise installierte Add-Ons, oder Browser-Einstellungen. Sie wird verwendet, um dem Browser bei Bedarf den Zustand und die Einstellungen wiederherzustellen."
+% https://github.com/mozilla/firefox-data-store-docs/blob/master/README.md
+Eine Analyse mit Notepad++ und dem JSON-Plugin brachte keine PB-Artefakte.
 
-- Sonstige Dateien:
-	> % \AlternateServices.txt
-		Zweck:
-			"enthält onion URLs,
-			HTTP Alternative Services is a mechanism that allows servers to tell clients that the service they are accessing is available at another network location or over another protocol.
-			This mapping can be stored in a file in the profile folder. This allows websites that do not support HTTPS to communicate in a secure way via port 443 (Opportunistic Encryption)."
-			% https://support.mozilla.org/en-US/questions/1310302
-	> % \extensions\staged\{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi
-		Zweck:
-			"Ist "NoScript" Extension. Wenn in Firefox geöffnet, kann installiert werden"
-		=> TODO: Screenshot, wenn in Firefox per "drag-and-drop" gezogen
-	> % *\onion-aliases.json
-		Zweck:
-			Enthält SecureDrop Adressen: z.B. sueddeutsche.securedrop.tor.onion (z.B. %https://www.sueddeutsche.de/projekte/kontakt/#securedrop)
-				"SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. SecureDrop nutzt das Tor-Netzwerk und .onion-URLs, um die Anonymität der Kommunikation zu gewährleisten. Whistleblower können über den Tor Browser auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln."
-	> % \security_state\data.safe.bin
-		Zweck: The file containing the updated security data % (https://bbs.archlinux.org/viewtopic.php?pid=1952286#p1952286)
-	> % \SiteSecurityServiceState.txt
-		Entielt früher private Browsing Artefakte (https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589), jetzt aber keine private Browsing Artefakte
-	=> Keine der Dateien enthält PB Artefakte
-				
-- SQLite: 
-	Aus Process Monitor Logfiles erkennbar: Tor verwaltet und beschreibt die exakt gleichen SQLite Datenbanken wie Firefox.
+\paragraph*{Sonstige Dateien}
+Die im ersten Logfile geschriebene Datei \texttt{AlternateServices.txt}
+enthält onion URLs des HTTP Alternative Services ist ein Mechanismus. Dieser ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung.
+% https://support.mozilla.org/en-US/questions/1310302
 
-	Hier ebenfalls gesondert betrachtet: Fokus auf die Entwicklung von Dateiinhalt in allen Snapshots (1, 2, 3-1, 3 und 4) betrachtet
+Weiterhin wird währen des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete "NoScript"-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
+Nach Extraktion dieser Datei, kann diese per Drag-and-Drop in ein geöffnetes Firefox-Fenster gezogen werden und es ist möglich, die Erweiterung zu installieren.
+
+Die geschriebene Datei \texttt{onion-aliases.json} enthält "SecureDrop" Adressen, beispielsweise für die Süddeutsche Zeitung.  %https://www.sueddeutsche.de/projekte/kontakt/#securedrop)
+SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. Whistleblower können über .onion-URLs auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln.
+
+%	> % \security_state\data.safe.bin
+%		Zweck: The file containing the updated security data % (https://bbs.archlinux.org/viewtopic.php?pid=1952286#p1952286)
+
+Schließlich wurde in die Datei \texttt{SiteSecurityServiceState.txt} geschrieben.
+Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und andere Sicherheitsmerkmale, die von den besuchten Websites verwendet werden.
+Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt % https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589
+. In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
 	
-	Ergebnisse:
-		\begin{figure}[h!]
-			\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-sqlite-table.png}}}
-			\label{chart:final-criteria}  
-			\caption{Comparison of found PB artifacts between RAM Dumps}
-		\end{figure}
-		> Nach Browser-Installation noch keine SQLite-Datei angelegt (Snapshot 1)
-		> Während Browsing Szenario alle DBs Initialisiert, außer "webappsstore.sqlite" (Snapshot 2)
-			- Dabei wurden in places.sqlite automatisch .onion URLs geschreiben, die zu Tor Standardseiten führen, wie "The Tor Blog" oder "Tor Browser Manual" bzw. die Tor Spenden-Seite, obwohl keine dieser Seiten aufgerufen wurde
-				TODO: Screenshot von URLs?
-			- in Favicons.sqlite wurden die exakt gleichen Enträge geschrieben, mit dem Präfix "Fake-favicon-uri". Ein tatsächliches Icon wurde nicht in die DB geschrieben
-			- remote settings Datenbank enthielt den gleichen Eintrag wie es bereits bei Firefox der Fall war. Keine PB Artefakte
-			- Restliche Dateien ohne Inhalt, nur Spaltennamen
-			- Nach WAL Checkpoints bleiben Dateien unverändert
-		> Nach Zurücksetzen der Browser-Identität (Snapshot 3-1)
-			- in places.sqlite: Indizes bei eingetragenen Seiten aktualisiert
-			- restliche Dateien unverändert
-		> Nach Schließen des Browsers (Snapshot 3)
-			- in places.sqlite sowie favicons.sqlite: Indizes bei eingetragenen Seiten aktualisiert
-			- restliche Dateien unverändert
-			- nach WAL Checkpoints bleiben Dateien unverändert
-		> Nach herunterfahren der VM (Snapshot 4)
-			- Alle Dateien unverändert, auch nach WAL Checkpoint
-	
-- Zusammenfassung: in keiner Datei PB Artefakte
+\subsubsection*{SQLite Datenbänke}
+			Wie in Kapitel X (Methodik, TODO!) erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten genauer untersucht. Mithilfe der Process Monitor Logfiles wurden die in Tabelle X dargestellten SQLite-Datenbanken für Firefox identifiziert:		
+ 
+Aus Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel X (TODO!) verwaltet und beschreibt.
+			
+Wie bei der Analyse der SQLite-Datenbanken bei Firefox wird die Entwicklung von Dateiinhalt in allen fünf Festplatten-Images der Snapshots 1, 2, 3-1, 3-2 und 4 betrachtet. Die Ergebnisse sind in Tabelle X (TODO!) dargestellt.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-sqlite-table.png}}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
+Nach Browser-Installation wurde noch keine SQLite-Datei angelegt (Snapshot 1).
 
+Während des Browsing Szenarios wurden alle Datenbänkte initialisiert.
+In places.sqlite wurden automatisch .onion URLs geschreiben, die zu Tor Standardseiten führen. Beispielsweise Seiten wie "The Tor Blog" oder "Tor Browser Manual".
+Die gleichen Einträge wurden in der favicons.sqlite Datenbank geschrieben, mit dem Präfix "Fake-favicon-uri". Ein tatsächliches Icon wie bei Firefox in Kapitel X wurde nicht in die Datenbank geschrieben. 
+Weiterhin erhielt die "remote settings" Datenbank den gleichen Eintrag wie es bereits bei Firefox der Fall war. Der Eintrag enthält keine PB Artefakte.
+Die restliche SQLite-Dateien wurden ohne Inhalt angegelt, nur die Spaltennamen wurden definiert.
+Nach Durchführung der WAL Checkpoints bleiben Dateien unverändert.
 
-Quantitativ: (Diagramme)		
-	> Balkendiagramm: Für jede Logfilekategorie: Anzahl Schreiboperationen Logfile 1 vs Logfile 2
+Nachdem dem Tor-Browser eine "Neue Identität" zugewiesen wurde (Snapshot 3-1), wurden in places.sqlite die Indizes bei den eingetragenen Seiten aktualisiert. Die restlichen Dateien blieben unverändert. Das Schreiben der WAL-Dateien in die Hauptdatenbanken veränderte den Inhalt nicht.
+
+Nach Schließen des Browsers (Snapshot 3) wurden in places.sqlite sowie favicons.sqlite erneut Indizes bei eingetragenen Seiten aktualisiert. Die restliche Dateien blieben unverändert, ebenso ergaben die WAL Checkpoints keine Veränderungen.
+
+Nach Herunterfahren der VM (Snapshot 4) blieben alle Datenbanken unverändert. Auch nach Durchführung der WAL Checkpoints gab es keine neuen Inhalte.
+
+Im Balkendiagramm X (TODO!) ist zu erkennen, dass die meisten Schreiboperationen im ersten Logfile stattfinden. Dort werden Dateien jeder Kategorie beschrieben. Das Schließen des Tor-Browsers führt zu mehr oder genauso vielen Schreiboperationen wie das Zuweisen einer "Neuen Identität". Keine der geschriebenen Dateien enthielt private Browsing Artefakte.
+*** TODO: Was noch? ***
 	\begin{figure}[h!]
 		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-bar-chart-logfile1vs2cs3.png}}}
 		\label{chart:final-criteria}  
@@ -524,66 +528,15 @@ Quantitativ: (Diagramme)
 %			> Daher: WAL Rollback mit sqlite3	
 %	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
 
-
-\subsection*{Registry}
-> Process Monitor: SetValue Operationen von Browser 
-	Kategorien Registry Keys: Analog zu Firefox
-	1) PreXULSkeletonUISettings:
-		> Prefix: Absoluter Installationspfad von Firefox
-		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
-			Definition:
-				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
-				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
-			
-		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
-		> Unterschiedliche UI Einstellungen
-			- % ScreenX (DWORD)
-			- % ScreenY (DWORD)
-			- % Width (DWORD)
-			- % Height (DWORD)
-			- % Maximized (DWORD)
-			- % Flags (DWORD)
-			- % CssToDevPixelScaling (REG_BINARY)
-			- % UrlbarCSSSpan (REG_BINARY)
-			- % SearchbarCSSSpan (REG_BINARY)
-			- % SpringsCSSSpan (REG_BINARY)
-		> keine PB Artefakte unter UI Einstellungen	
-	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
-		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
-		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
-		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
-		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
-		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
-		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
-		> Key: %  HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-588412547-2749917301-3803556669-1001\\Device\HarddiskVolume2\Program Files\Mozilla Firefox\firefox.exe (REG_BINARY)
-
-Quantitativ: (Diagramme)
-	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
-	
-> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
-	In allen Hives kein Treffer für alle Suchbegriffe
-
-Literatur: 
-	> Wie bei Firefox: Shellactivities Key existiert nicht mehr --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
-
-%Literatur:
-%	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
-%	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
-%	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
-%	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
-%	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
-%	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
-%	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
-%	- IRP\_MJ\_READ: C:/pagefile.sys
-
-\subsection*{Black-Box Analyse/Uncommon Locations}
+\subsection*{Uncommon Locations}
+			Nachfolgend werden die Analyseergebnisse der Firefox Uncommon Locations beschrieben.
+			Wie in Kapitel X erläutert, wird im Gegensatz zu Common Locations die Suchrichtung umgekehrt und es werden alle gesammelten Daten nach einem spezifischen PB Artefakt durchsucht.
+			Somit benötigt ein Forensiker kein Wissen über das Browserverhalten. Stattdessen wird sich auf die Vollständigkeit der Funktionen von Forensik-Tools verlassen. Im Rahmen dieses Versuchs werden die Tools Autopsy und Volatility verwendet.
 
 \subsubsection*{Analyse mit Autopsy}
+
+			Bei den Common Locations in Kapitel X wird Autopsy nur zur Dateiextraktion genutzt. Im Falle der Uncommon Locations dient Autopsy als forensisches Werkzeug zur Datenanalyse.
+
 Bei White-Box Analyse/Common Locations: Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
 
 Stichwortsuche:
@@ -688,6 +641,15 @@ Zusammenfassung:
 %		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsubsection*{Analyse mit Volatility}
+			Nachdem die Firefox Festplattenabbilder als Uncommon Location mit Autopsy untersucht wurden, werden nachfolgend die Analyseergebnisse des RAMs als Uncommon Location beschrieben. 
+			Dazu wurde eine Stringsuche im gesamten RAM nach PB Artefakten durchgeführt.
+			Wie in Kapitel X ausführlich beschrieben muss ein gefundener String eindeutig einem Browser zugeordnet werden können. 
+			
+			Deshalb wurde dazu das Volatility PlugIn "Yarascan" verwendet, ein Werkzeug um nach bestimmten Mustern im RAM zu suchen. Dazu wurden die in Tabelle X aufgeführten Yara-Regeln verwendet.
+			Wie in Kapitel Methodik (TODO!) beschrieben, wird davon ausgehend das PlugIn "pslist" verwendet, um den Prozessnamen anhand PID zu identifizieren.
+			Die Ergebnisse dieser Stringsuche sind nachfolgend nach Kategorie geordnet.
+
+
 Vorgehen: Siehe "Methodik" Kapitel
 	- Ausgangslage: Volatility Yarascan Treffer
 	- Für jeden Treffer: virtueller Offset des Strings, PID, getriggerte Yararule, getriggerte Yara Component z(= Variablenname des gesuchten Strings), gefundener String
@@ -773,8 +735,6 @@ Zusammenfassung = Stacked Bar Chart:
 
 TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
 
-\subsection*{Uncommon Locations}
-
 Literatur:
 %o Autopsy: \cite{Muir.2019}
 %	•	Configuration files, downloaded files, and browserrelated data are recoverable from the file system.
@@ -805,7 +765,73 @@ Literatur:
 %	> \cite{Nelson.2020} The userassist key is located in the NTUSER.dat hive of the
 %		 -> Registry and indicates the execution path of the program, as well as the number of times the program was executed 
 
+\subsection*{Registry}
 
+			Die Analyse der Registry zählt gemäß Methodik in Kapitel X sowohl zu den Common als auch Uncommon Locations 
+
+\subsubsection*{Process Monitor SetValue Operations}
+
+			Als Teil der Common Locations werden für Firefox alle Registry "SetValue" Schreiboperationen der beiden Process Monitor Logfiles untersucht.
+
+> Process Monitor: SetValue Operationen von Browser 
+	Kategorien Registry Keys: Analog zu Firefox
+	1) PreXULSkeletonUISettings:
+		> Prefix: Absoluter Installationspfad von Firefox
+		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
+			Definition:
+				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
+				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
+			
+		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
+		> Unterschiedliche UI Einstellungen
+			- % ScreenX (DWORD)
+			- % ScreenY (DWORD)
+			- % Width (DWORD)
+			- % Height (DWORD)
+			- % Maximized (DWORD)
+			- % Flags (DWORD)
+			- % CssToDevPixelScaling (REG_BINARY)
+			- % UrlbarCSSSpan (REG_BINARY)
+			- % SearchbarCSSSpan (REG_BINARY)
+			- % SpringsCSSSpan (REG_BINARY)
+		> keine PB Artefakte unter UI Einstellungen	
+	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
+		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
+		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
+		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
+		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
+		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
+		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
+		> Key: %  HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-588412547-2749917301-3803556669-1001\\Device\HarddiskVolume2\Program Files\Mozilla Firefox\firefox.exe (REG_BINARY)
+
+Quantitativ: (Diagramme)
+	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
+	\begin{figure}[h!]
+		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
+		\label{chart:final-criteria}  
+		\caption{Comparison of found PB artifacts between RAM Dumps}
+	\end{figure}
+
+\subsubsection*{Stringsuche in Registry Hives}
+
+		Gemäß Methodik in Kapitel X wird die Firefox Registry als Uncommon Location behandelt, indem über alle auf der Festplatte vorhandenen Registry Datenbanken, den Registry-Hives, eine Stringsuche durchgeführt wird, ohne die Struktur der Hives zu beachten. 
+		Dazu wurden sowohl die System-Hives als auch die User-Hives aus Tabelle X (TODO!) aus jedem Snapshot extrahiert und mithilfe des Registry Explorers nach PB Artefakten durchsucht.
+		Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
+			
+		> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
+		In allen Hives kein Treffer für alle Suchbegriffe
+
+
+
+%Literatur:
+%	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
+%	>	Process Monitor/Regshot zeigen keine relevanten Key-Änderungen
+%	> \cite{Muir.2019}: Autopsy Keyword Suche nach Suchbegriffen: Ergebnisse in \%SystemRoot\%Minidump NTUSER.DAT, ntuser.dat.LOG1 (a log of changes to NTUSER.DAT)
+%	> Zentral: shellactivites Key:	NTUSER.DAT --> “shellactivities” key \cite{Muir.2019}
+%	> \cite{Rochmadi.2017} Detection of registry changes helps to determine what the appropriate plugin is used to search for digital evidence using volatility memory forensic:
+%	- RegQueryValue:	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections/DefaultConnectionSettings
+%	- RegCloseValue: 	HKCU/Software/Microsoft/Windows/CurrentVersion/InternetSettings/Connections
+%	- IRP\_MJ\_READ: C:/pagefile.sys
 
 
 \section{Chrome}

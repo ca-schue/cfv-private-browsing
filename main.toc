@@ -18,12 +18,12 @@
 \contentsline {chapter}{\numberline {5}Ergebnisse}{41}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{41}{}%
 \contentsline {section}{\numberline {5.2}Tor}{55}{}%
-\contentsline {section}{\numberline {5.3}Chrome}{63}{}%
-\contentsline {section}{\numberline {5.4}Brave}{63}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{64}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{65}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{67}{}%
-\contentsline {chapter}{Appendices}{68}{}%
-\contentsline {chapter}{Literaturverzeichnis}{71}{}%
-\contentsline {chapter}{\nonumberline Literatur}{71}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{64}{}%
+\contentsline {section}{\numberline {5.4}Brave}{64}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{65}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{66}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{68}{}%
+\contentsline {chapter}{Appendices}{69}{}%
+\contentsline {chapter}{Literaturverzeichnis}{72}{}%
+\contentsline {chapter}{\nonumberline Literatur}{72}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
