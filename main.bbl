@@ -135,30 +135,6 @@
       \field{pages}{20\bibrangedash 29}
       \range{pages}{10}
     \endentry
-    \entry{Dayalamurthy.2013}{article}{}
-      \name{author}{1}{}{%
-        {{hash=ff6296c26b18bf9c6491e01f20c9856b}{%
-           family={Dayalamurthy},
-           familyi={D\bibinitperiod},
-           given={Divya},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {SRI Security Research Institute, Edith Cowan University, Perth, Western~…}%
-      }
-      \strng{namehash}{ff6296c26b18bf9c6491e01f20c9856b}
-      \strng{fullhash}{ff6296c26b18bf9c6491e01f20c9856b}
-      \strng{bibnamehash}{ff6296c26b18bf9c6491e01f20c9856b}
-      \strng{authorbibnamehash}{ff6296c26b18bf9c6491e01f20c9856b}
-      \strng{authornamehash}{ff6296c26b18bf9c6491e01f20c9856b}
-      \strng{authorfullhash}{ff6296c26b18bf9c6491e01f20c9856b}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Forensic memory dump analysis and recovery of the artefacts of using tor bundle browser--the need}
-      \field{year}{2013}
-    \endentry
     \entry{Fayyad.2021}{article}{}
       \name{author}{4}{}{%
         {{hash=569aa589ec89dbff6b88dca0287cff66}{%
@@ -963,7 +939,6 @@
       \range{pages}{15}
     \endentry
   \enddatalist
-  \missing{Hariharan}
 \endrefsection
 \endinput
 

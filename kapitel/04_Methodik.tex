@@ -280,6 +280,8 @@ Für diesen Versuch verwendet: Version 17.04
 \subsection{Analysewerkzeuge}
 
 Neben Konfiguration der VM muss Analyseumgebung vorbereitet werden.
+Als Analyseumgebung dient der Rechner, auf dem die VM läuft.
+Spezifikationen: *** TODO ***
 Dazu: Diverse Tools zur Analyse installieren
 
 \subsubsection*{Autopsy}
@@ -357,100 +359,107 @@ dejsonlz4                               & Dekomprimierung von .jsonlz4-Dateien  
 
 \section{Datensammlung}
 
-\cite{Izzati.2022}
-In der Identifikations- und Sammelphase werden alle potenziellen Beweismittel identifiziert, gekennzeichnet und gesammelt, um sie in der nächsten Phase zu verwenden.
-> Browsing Szenario durchfüren
 
-Gesammelte Daten:
-> Process Monitor Logfiles:
-	- siehe Ziel der Arbeit: "White-Box"-Ansatz: Versuch wird nicht aus Sicht von Forensiker durchgeführt, der nur begrenzten Zugriff auf Beweismittel hat. 
-	- Sondern: Ziel ist das Verhalten von privaten Browsing möglichst vollständig zu untersuchen, um so viele Artefakte wie möglich zu identifizieren.
-	- Deshalb: von Fayyad-Kazan et al. vorgeschlagen \cite{Fayyad.2021} Aktivitäten während Browsing-Szenario aufzeichnen mit "Process Monitor".
-		> Während Browsing Szenario Filechanges untersuchen: DaemonFS set to monitor all activity within local hard drive\cite{Ohana.2013}
-	- Aufgezeichnet werden Aktivitäten in beispielsweise der Registry, im Dateisystem und Netzwerkaktivitäten.
-	- Mit grafischer Oberfläche: Start, Stopp und Sicherung der Aufzeichnung als PML Datei (Process Monitor Logfile) -> Kann in CSV Umgewandelt werden
-	- Danach: Präzise Filterung der Ergebnisse. Fokus hier nach Esmpfehlung von Autoren in \cite{Fayyad.2021}: Schreibaktivitäten auf Dateien und in Registry. 
-		- Registry: \cite{Rochmadi.2017}
-			•	Das Windows-Registrierungsverzeichnis enthält viele Informationen zur Nutzung des Computers, Benutzerkonfigurationen, Anwendungen und Hardwaregeräte
-			•	Informationen im Registrierungsverzeichnis werden nach Ausführungsreihenfolge, Suchschlüsselwörtern, zuletzt aufgerufenen Ordnern, Anwendungsprotokollen und anderen Kategorien sortiert.
-	*** TODO: Shared Folder ***
+In der Phase der Datensammlung werden alle potenziellen Beweismittel identifiziert, gesammelt. Ziel ist es, die Daten in einem Format zu sammeln, in dem sie in der nächsten Phase analysiert werden können. \cite{Izzati.2022}
 
-> Speicherabbilder:
-	> Hauptaufgabe eines Computer-Forensik-Ermittlers: Erwerb und Analyse von Speicherabbildern von Computervorrichtungen. \cite{Hassan.2019}
-    > Speicherabbild = statischer Schnappschuss der Daten auf sekundärem Speicher (HDD, SSD), angeschlossenen Speichergeräten (USB-Stick, externe Festplatte, Magnetband) oder RAM-Speicher (bei Live-Erfassung auf laufenden Systemen). \cite{Hassan.2019}
-    > Speicherabbild ist Container für Daten, der individuelle Dateien oder das gesamte Laufwerk/Live-Speicherdateien in einer Image-Datei speichern kann. \cite{Hassan.2019}
-	> Forensische Abbilder enthalten digitale Beweise, die zur Identifizierung von Sicherheitsvorfällen, Betrug und anderen illegalen Praktiken, die auf Informationssysteme abzielen, wiederhergestellt und analysiert werden müssen. \cite{Hassan.2019}
-	> Forensische Abbilder können vor Gericht verwendet werden, daher müssen die verwendeten Tools und Techniken zur Erwerbung und Analyse rechtlich akzeptiert sein. \cite{Hassan.2019}
-	> Für diesen Versuch relevant und in Literatur viel verwendet: Festplatten-Abbilder (TODO: Alle Quellen) und RAM-Abbilder (TODO: Alle Quellen)
-		> Um Festplatten-Image zu sichern gibt es diverse Software- und Hardware Lösungen. 
-		> Da hier Virtualisierung verwendet: Festplatten Abbild entspricht einem "VM-Snapshot"
-			"Ein VM-Snapshot, auch virtueller Maschinensnapshot genannt, ist ein Zustandssnapshot einer virtuellen Maschine (VM). Ein Snapshot erfasst den genauen Zustand der VM zu einem bestimmten Zeitpunkt, einschließlich des Arbeitsspeichers, des Prozessorzustands und des Festplatteninhalts. Im Wesentlichen ist es eine Momentaufnahme des virtuellen Systems." % https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html
-			VM Snapshot kann über grafische Oberfläche von VirtualBox durchgeführt werden:
-				> Ausgehend vom letzten Zustand der VM > Menü "Sicherungspunkte" > Option "Erzeugen"
-				> Kann sowohl in an- und ausgeschaltetem Zustand durchgeführt werden. 
-					*** ===> Das heißt, ein VM-Snapshot kann sowohl in Live- als auch Post-Mortem-Forensik verwendet werden <=== ***
-				> Wichtig: es wird zwar .vdi Datei in Snapshot-Ordner erzeugt, Datei enthält aber nur differentielle Daten zum aktuellen Zustand bzw. zum vorherigen Snapshot, wenige KB groß.
-				> Um vollständige Festplatte zum gesicherten Zeitpunkt zu erzeugen: Snapshot über Option "Klonen" als eigenständige VM erzeugen. Wichtig: "vollständiger Klon" auswählen
-				> VDI Festplatte des vollständig geklonten Snapshots: enthält alle Festplatten-Daten
-		> Problem: 
-			- Um Festplatten-Abbild später in Datenanalyse zu untersuchen: muss in Autopsy eingelesen werden. 
-			- Autopsy unterstützt jedoch nicht VDI Format.	
-			> Deshalb: Umwandlung in .img Format
-				"Das Image-Format (.img) ist ein generisches Dateiformat, das verwendet wird, um ein binäres Abbild eines gesamten Datenträgers zu speichern. Es erfasst den Inhalt des Datenträgers, einschließlich des MBR (Master Boot Record), der Partitionstabellen, der Dateisysteme und aller Dateien und Ordner."
-			> Dazu "vboxmanage" verwendet = Kommandozeilen-Tool, das bei Installation von VirtualBox enthalten ist.	
-				% vboxmanage clonehd <VDI_File>.vdi <IMG_File>.img --format raw
-			  	Wobei: .vdi Datei das zu konvertierende VirtualBox Disk Image und .img die neue Image-Datei
-			> *** TODO: Einlesen in Autopsy -> Zeitaufwändig! ***			
+Für diesen Versuch umfasst dies die Durchführung des Browsing Szenarios sowie die Sammlung von Ressoucen, die potentielle private Browsing Artefakte enthalten.
 
-	> Im großen Unterschied zu VM Snapshots: Abbilder des Arbeitsspeichers nur in angeschaltetem Zustand möglich (Zumindest bei virtueller Maschine, ohne speziele HW-Wertkzeuge)
-		"Auch als Ein RAM-Dump bezeichnet, ist eine Momentaufnahme des aktuellen Inhalts des Arbeitsspeichers (RAM) eines Computers zu einem bestimmten Zeitpunkt. Ein RAM-Dump erfasst den genauen Zustand des RAMs, einschließlich der im Speicher befindlichen Daten, Programme und Prozesse."
-		> Um RAM-Dump einer laufenden virtuellen Maschine durchzuführen: 
-			% vboxmanage debugvm <VM Name> dumpvmcore --filename "<RAM Dump Dateiname>.elf"
-		> Keine weitere Verarbeitung des RAM-Abbilds notwendig, kann direkt von Analysetool "Volatility" eingelesen werden.		
+\subsection*{Process Monitor Logfiles}
+Gemäß dem in Kapitel X definierten Ziel der Arbeit wird der Versuch wird nicht aus Sicht eines Forensikers durchgeführt, der nur begrenzten Zugriff auf Beweismittel hat. 
+Stattdessen soll mit diesem Versuch das Verhalten von privaten Browsingmodi möglichst vollständig untersucht werden, mit dem Ziel alle auf der VM hinterlassenen privaten Browsing Artefakte zu identifizieren.
+Den gleichen Ansatz verfolgten Fayyad-Kazan et al. \cite{Fayyad.2021} Sie schlagen deshalb vor, alle Aktivitäten des Browsers während Browsing-Szenarios aufzeichnen.
+Sie empfehlen dazu das oben in Kapitel X beschriebene Tool "Process Monitor".
+Mithilfe einer grafischen Oberfläche können die aufgezeichneten Aktivitäten als Process Monitor Logfile sowie CSV Datei gespeichert werden.
+Nach Empfehlung der Autoren liegt bei den Browseraktivitäten der Fokus auf Schreibaktivitäten im Dateisystem sowie geänderte Werte in der Registry. \cite{Fayyad.2021, Rochmadi.2017}
+Um die aufgezeichneten PML-Dateien auf den Analyserechner zu transportieren, wird der bereits in Kapitel X zur Installation von Programmen verwendete gemeinsame Ordner verwendet.
 
-> Kritisch für Versuch ist die Definition der Zeitpunkte, zum Sammeln der Daten:
-	- In Literatur kaum thematisiert:
-		- Häufigster Fall: RAM-Dump nach Durchführung von Browsing Szenario für Live-Forensik \cite{Hariharan.2022, Izzati.2022, Md.2018, Ohana.2013} und Festplattenabbild gesichert nach herunterfahren der VM für Post-Mortem-Forensik \cite{Fayyad.2021, Mahlous.2020, Horsman.2019, Md.2018, Gabet.2018, Montasari.2015, Chivers.2014, Ohana.2013}
-		- Sonderfälle: 
-			> RAM-Dump nur wenn Browser noch offen ist, nach Szenario, aber kein Dump nach Schließen \cite{Mahlous.2020}
-			> Mehrere RAM-Dumps zu unterschiedlichen Zeitpunkten: Vor Schließen von Browser, nach Schließen von Browser, nach Löschen der Registry \cite{Rochmadi.2017}
-		- Teilweise auch gar keine Zeitpunkte definiert \cite{Sajan.2021, Nalawade.2016, Montasari.2015, Satvat.2014, Said.2011, Aggarwal.2010}
-	- Problem haben Muir, Leimich und Buchanan erkannt und Zeitpunkte zur Datensammlung vorgeschlagen, um gesamtes Browserverhalten während des Szenarios zu überwachen und zu analysieren.
-	- An diesen Zeitpunkten für diesen Versuch orientiert:
-		\begin{figure}[h!]
-			\centering
-			\small
-			\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-Latex.pdf_tex}}}
-			\caption{Datensammlung Zeitpunkte}
-			\label{fig:jes}
-		\end{figure}
-	Wichtigste Zeitpunkte:
-		- Nach Browser-Installation, vor Browsing-Szenario: RAM-Dump 1, VM-Snapshot 1 
-			=> Dient als Benchmark für die Analyse: In diesen Speicherabbildern darf kein PB Artefakt gefunden werden
-		- Öffnen des Privaten Modus, vor Browsing Szenario: Start Logfile 1
-			=> Bekannt: Während erstmaligem Öffnen von Browser viele Dateien initial angelegt. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf private Browsing zurückzuführen sind: Start erst, nachdem Browser erstmalig im privaten Modus geöffnet wurde
-		- Nach Durchführung des Browsing-Szenarios, Browser geöffnet: Ende Logfile 1, RAM-Dump 2, VM-Snapshot 2, Start Logfile 2
-			*** TODO: Automatisch geöffnete Firefox Seiten erwähnen ***
-			=> Logfile 1 enthält nun Schreiboperationen während Browsing Szenario
-			=> Wichtig: Zweites Logfile nach sichern der Speicherabbildern gestartet, um Dateiänderungen beim Schließen der Browsers aufzuzeichnen
-		- Nach Schließen des Browsers: Ende Logfile 2, RAM-Dump 3, VM-Snapshot 3
-		- Nach Herunterfahren der VM: VM Snapshot 4
-			=> Relevant für Post-Mortem Analyse
+\subsection*{Speicherabbilder}
+Eine der Hauptaufgaben eines Computer-Forensischen-Ermittlers ist die Erstellung und Analyse von Speicherabbildern. \cite{Hassan.2019}
+Dabei handelt es sich um eine direkte Kopie der Daten auf den Speichermedien des Rechners. \cite{Hassan.2019}
+Dazu zählen beispielsweise Festplatten, der Arbeitsspeicher sowie angeschlossene Speichermedien wie USB-Sticks.
+Zur Identifikation von Artefakten auf dem untersuchten Rechner muss vermieden werden, auf den originalen Speichermedien zu arbeiten.
+Dadurch können Beweise verfälscht werden und nicht mehr vor Gericht verwendet werden. \cite{Hassan.2019}
+Aus diesem Grund muss es sich bei den analysierten Speichermedien stets um Abbilder ("Images"), also Kopien des originalen Mediums handeln.
 
-	Sonderfall Tor:
-		Siehe Kapitel X: Tor hat die Funktion der "Neuen Identität" % https://support.torproject.org/de/glossary/new-identity/
-			"Im Tor-Browser ermöglicht die "Neue Identität" eine schnelle und einfache Möglichkeit, Ihre Online-Identität zu ändern und Ihre Privatsphäre zu wahren. Wenn Sie den "Identitäts-Reset" im Tor-Browser durchführen, werden bestimmte Informationen und Daten gelöscht oder zurückgesetzt, um potenziell die Rückverfolgbarkeit Ihrer Online-Aktivitäten zu verringern."
-			> Von Tor angegebene Auswirkungen:  alle deine geöffneten Tabs und Fenster geschlossen, alle privaten Informationen wie Cookies und Browserverlauf.
-		- Deshalb: Bei Tor Daten zusätzlich vor und nach Neuer Identiät sammeln.
-		\begin{figure}[h!]
-			\centering
-			\small
-			\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-tor-Latex.pdf_tex}}}
-			\caption{Datensammlung Zeitpunkte Tor}
-			\label{fig:jes}
-		\end{figure}
+Im Falle der Browser Forensik werden in der Literatur zwei Arten von Speichermedien untersucht: Festplatten (TODO: Alle Quellen) und der Arbeitsspeicher (TODO: Alle Quellen)
+
+\paragraph*{Festplatten-Image}
+Um ein Abbild einer phsysikalische Festplatten zu erstellen gibt es diverse Software- und Hardware Lösungen. 
+Da in diesem Versuch die Festplatten virtualisiert wurden, entspricht ein Festplatten-Abbild einem sogenannten "VM-Snapshot".
+Dabei handelt es sich um eine Momentaufnahme von einer virtuellen Maschine. Ein Snapshot erfasst den Arbeitsspeicher, den Prozessorzustand sowie den Festplatteninhalt zu einem bestimmten Zeitpunkt. % https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html
+Bei Oracle VirutalBox kann eine VM Snapshot über die grafische Oberfläche durchgeführt werden.
+Dazu wird ausgehend vom letzten beziehungsweise aktuellen Zustand der VM im Menü "Sicherungspunkte" die Option "Erzeugen" ausgewählt.
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/snapshot2.png}}
+%	\label{...}
+	\caption{TODO}
+\end{figure}
+Dies kann sowohl im an- und ausgeschaltetem Zustand der virutellen Maschine durchgeführt werden. Somit kann ein VM-Snapshot sowohl zur Live- als auch Post-Mortem-Forensik verwendet werden.
+Durch den Snapshot wird ein "Virtual Disk Image", eine VDI-Datei, im Snapshot-Ordner der VM erzeugt. Diese Laufwerksdatei enthält nur differentielle Daten zum vorherigen Snapshot bzw. zum aktuellen Zustand, wenn es sich um den ersten Snapshot handelt. Die Datei ist meist wenige KiloByte groß.
+Um aus den differentiellen Daten ein vollständiges Festplatten-Image zu erzeugen muss aus dem Snapshot über die Option "Klonen" eine eigenständige VM erstellt werden. 
+Dabei muss die Option "vollständiger Klon" ausgewählt werden. Die VDI-Datei der geklonten VM enthält alle Festplatten-Daten zum Zeitpunkt des durchgeführten Snapshots.
+
+Wie einleitend beschrieben, müssen die in dieser Phase gesammelten Daten in einem Format vorliegen, das in der Analysephase verwendet werden kann.
+Wie im nächsten Kapitel beschrieben, werden die Festplatten-Images mit dem Tool Autopsy analysiert.
+Da Autopsy kein VDI-Format unterstützt, müssen die Laufwerksdateien der geklonten Snapshots in ein das Image-Format (.img) umgewandelt werden.
+Dabei handelt es sich um ein generisches Dateiformat, welches ein binäres Abbild des Speichermediums speichert. 
+Oracle VirtualBox bietet das in der Installation enthaltene Befehlszeilen-Tool "vboxmanage" für diese Dateiumwandlung an. Mit dem Befehl \texttt{vboxmanage clonehd <VDI\_File>.vdi <IMG\_File>.img --format raw} wird das VirtualBox Disk Image "VDI\_File" in die Image-Datei "IMG\_File" umgewandelt.
+			
+\paragraph*{RAM-Dump}
+
+Wie oben beschrieben, enthält ein VM-Snapshot neben dem Festplatteninhalt den Inhalt des Arbeitsspeichers zum Zeitpunkt der Momentaufnahme.
+Ein sogenannter "RAM-Dump" erfasst den genauen Zustand des Arbeitsspeichers, einschließlich der im Speicher befindlichen Daten, Programme und Prozesse.
+Der RAM-Dump eines Snapshots wird neben weiteren Daten in .sav Dateien gespeichert. 
+VirtualBox bietet aktuell keine Möglichkeit aus diesen Dateien den RAM in einem analysierbaren Format zu extrahieren.
+% https://kollee.github.io/posts/memory-forensics-of-a-virtualbox-vm/
+Stattdessen wird von VirtualBox empfohlen, Abbilder des Arbeitsspeichers ebenfalls über das "vboxmanage" Befehlszeilen-Tool durchzuführen.
+Im Unterschied zu Festplatten-Images, können RAM-Dumps ohne zusätzliche Hardware damit nur in angeschaltetem Zustand der virtellen Maschine durchgeführt werden. 
+Um ein Abbild des Arbeitsspeichers einer laufenden virtuellen Maschine zu erstellen wird folgender Befehl ausgeführt: \texttt{vboxmanage debugvm <VM Name> dumpvmcore --filename "<RAM Dump Dateiname>.elf}. Zur Analyse des RAM-Dumps ist keine weitere Verarbeitung notwendig. RAM-Dumps im .elf Format können direkt vom Analysetool Volatility eingelesen werden.		
+
+\paragraph*{Zeitpunkte zur Datensammlung}
+Wichtig für die qualität der Versuchsergebnisse ist das Festlegen der Zeitpunkte im Browsing Szenario zum Sammeln der Daten.
+Dieses Thema wird in der Literatur kaum thematisiert. Die Autoren wählen die Zeitpunkte meist ohne Begründung.
+Ausschließlich Fayyad et al. geben an, dass sie die Process Monitor Logfiles während des Browsing Szenarios erstellten. Einen präzisen Start- und Endzeitpunkt der Aufnahme nennen sie nicht.
+Abbilder des Arbeitsspeichers werden bei 23 Untersuchten Papern am häufigsten nach Durchführung des Browsing Szenarios und Schließen des Browsers durchgeführt \cite{Hariharan.2022, Izzati.2022, Md.2018, Ohana.2013}. Mahlous et al. erstellen einen RAM-Dump mit geöffnetem Browser, jedoch keinen nach Schließen des Browsers \cite{Mahlous.2020}.
+Rochmadi et al. erstellen mehrere RAM-Dumps zu unterschiedlichen Zeitpunkten: Vor dem Schließen des Browser, nach dem Schließen des Browsers sowie nach dem Löschen der Registry \cite{Rochmadi.2017}
+Festplattenabbilder werden am häufigsten im Zuge der Post-Mortem-Forensik analysiert und nach Herunterfahren der VM gesichert \cite{Fayyad.2021, Mahlous.2020, Horsman.2019, Md.2018, Gabet.2018, Montasari.2015, Chivers.2014, Ohana.2013}.
+In einigen Fällen wurde gar nicht erwähnt, zu welchen Zeitpunkten im Browsing Szenario die Daten gesammelt wurden \cite{Sajan.2021, Nalawade.2016, Montasari.2015, Satvat.2014, Said.2011, Aggarwal.2010}.
+
+Dieses Problem haben Muir, Leimich und Buchanan erkannt und Zeitpunkte zur Datensammlung vorgeschlagen, um das Browserverhalten während des Browsing-Szenarios vollständig zu überwachen und zu analysieren. Wie in Abbildung X (TODO!) dargestellt, wurde sich an diesen Zeitpunkten für diesen Versuch orientiert.
+\begin{figure}[h!]
+	\centering
+	\small
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-Latex.pdf_tex}}}
+	\caption{Datensammlung Zeitpunkte}
+	\label{fig:jes}
+\end{figure}
+Nach der Browser-Installation, vor Beginn des Browsing-Szenarios wird der erste RAM-Dump sowie der erste VM-Snapshot erstellt.
+Diese Speicherabbilder dienen als Benchmark für die Analyse, da in diesen Speicherabbildern kein PB Artefakt gefunden werden darf.
+
+Nachdem der Private Modus im Browser geöffnet wird, bevor das Browsing Szenario beinnt wird die Aufnahme des ersten Process Monitor Logfiles gestartet.
+Die Aufzeichnung beginnt erst zu diesem Zeitpunkt, da beim erstmaligem Öffnen der Browser einige Dateien initial angelegt werden. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf das private Browsing zurückzuführen sind, wird die Aufzeichnung erst nach dem erstmaligen Öffnen des Browsers im privaten Modus gestartet.
+
+Nach Durchführung des Browsing-Szenarios, während der Browser noch geöffnet ist, wird die Aufnahme des ersten Process Monitor Logfiles beendet. Weiterhin wird ein zweiter RAM-Dump sowie VM-Snapshot erstellt. Anschließend wird das eine zweite Process Monitor Aufzeichnung gestartet. 
+Somit enthält das erste Logfile zu diesem Zeitpunkt die Prozessaktivitäten während des Browsing Szenarios. 
+
+Nachdem der Browser geschlossen wurde, wird die Aufzeichnung des zweiten Process Monitor Logfiles beendet. Zusätzlich wird ein dritter RAM-Dump sowie  VM-Snapshot erstellt. Somit enthält das zweite Logfile wird alle Prozessaktivitäten vom Schließen der Browsers.
+
+Nach Herunterfahren der VM wird ein vierter VM-Snapshot erstellt, der für die für Post-Mortem Analyse relevant ist.
+
+\paragraph*{Sonderfälle}
+
+Dieses Vorgehen zur Datensammlung wird bei allen Browsern durchgeführt. Einzig der Tor-Browser weicht davon ab. Wie in Kapitel X beschrieben, besitzt der Tor-Browser die Funktion der "Neuen Identität", eine Funktion um bestimmte Nutzerdaten zu löschen und zurückzusetzen.
+% https://support.torproject.org/de/glossary/new-identity/
+Um diese Funktion in das Browsing Szenario aufzunehmen, werden beim Tor-Browser zusätzlich Daten vor und nach der Erstellung einer "Neuen Identiät" gesammelt. Wie in Abbildung X (TODO!) dargestellt, umfasst dies einen zusätzlichen RAM-Dump sowie VM-Snapshot und ein weiteres Process Monitor Logfile.
+\begin{figure}[h!]
+	\centering
+	\small
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-tor-Latex.pdf_tex}}}
+	\caption{Datensammlung Zeitpunkte Tor}
+	\label{fig:jes}
+\end{figure}
 	
-	
+Bei Durchführung des Browsing-Szenarios für den Firefox-Browser wurde nach erstmaligem Öffnen des Browsers automatisch die Webseite \texttt{https://www.mozilla.org/de/privacy/firefox/} geöffnet. Zu diesem Zeitpunkt befand sich Firefox nicht im privaten Modus. Bei der automatisch geöffneten Seite handelt es sich um Hinweise zum Datenschutz beim Firefox- Browser.
 
 \section{Datenanalyse}
 
