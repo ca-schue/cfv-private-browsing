@@ -131,6 +131,8 @@ Für diesen Versuch: Tor Version 12.0.4 (64 Bit)
 
 \subsection{Browsing Szenario}
 
+% > Image als Hex: \cite{Ohana.2013}
+
 Siehe Ziel der Arbeit: Versuch soll nicht Situation eines Ermittlers simulieren, der eine unbekannte Datenlage hat.
 Stattdessen: Bereits vor Analyse bekannt, nach welchen Daten gesucht werden muss.
 
@@ -359,6 +361,7 @@ dejsonlz4                               & Dekomprimierung von .jsonlz4-Dateien  
 
 \section{Datensammlung}
 
+*** TODO: Schreiben, dass für diesen Versuch auch VM-Snapshots zu bestimmten Zeitpunkten aufgetaut werden können ***
 
 In der Phase der Datensammlung werden alle potenziellen Beweismittel identifiziert, gesammelt. Ziel ist es, die Daten in einem Format zu sammeln, in dem sie in der nächsten Phase analysiert werden können. \cite{Izzati.2022}
 
@@ -404,7 +407,9 @@ Wie im nächsten Kapitel beschrieben, werden die Festplatten-Images mit dem Tool
 Da Autopsy kein VDI-Format unterstützt, müssen die Laufwerksdateien der geklonten Snapshots in ein das Image-Format (.img) umgewandelt werden.
 Dabei handelt es sich um ein generisches Dateiformat, welches ein binäres Abbild des Speichermediums speichert. 
 Oracle VirtualBox bietet das in der Installation enthaltene Befehlszeilen-Tool "vboxmanage" für diese Dateiumwandlung an. Mit dem Befehl \texttt{vboxmanage clonehd <VDI\_File>.vdi <IMG\_File>.img --format raw} wird das VirtualBox Disk Image "VDI\_File" in die Image-Datei "IMG\_File" umgewandelt.
-			
+
+*** TODO: Hier Einlesen der Festplatten-Images => Zeitaufwändig! ***
+
 \paragraph*{RAM-Dump}
 
 Wie oben beschrieben, enthält ein VM-Snapshot neben dem Festplatteninhalt den Inhalt des Arbeitsspeichers zum Zeitpunkt der Momentaufnahme.
@@ -463,120 +468,149 @@ Bei Durchführung des Browsing-Szenarios für den Firefox-Browser wurde nach ers
 
 \section{Datenanalyse}
 
-> Analysis Stage (= Kapitel „Results“)
-- Analyse der gesammelten Daten der vorherigen Phase: 
-	> Process Monitor Logfiles	
-	> Speicherabbilder: VM-Snapshots, RAM-Dumps
-- Analyse heißt hier: Suchen nach PB Artefakten in gesammelten Daten
-= Suchen Nach Strings, die einem Schritt im Browsing Szenario zugeordnet werden können
-*** TODO: Liste von Strings ***
+Nachdem Daten in Form von Process Monitor Logfiles und Festplatten- sowie RAM-Speicherabbildern gesammelt: Daten analysieren.
 
-Wichtig dabei: (siehe Ziel der Arbeit): gefundenes Artefakt muss eindeutig Browser zugeordnet werden können.
-Oft kritisiert: Viele Autoren verlassen sich beispielsweise bei der Analyse der RAM-Dumps auf eine einfache Stringsuche in einem Hexadezimal-Editor.
+Analyse heißt bei Browser Forensik: Suchen nach PB Artefakten aus Browsing Szenario in gesammelten Daten
+ = Suchen nach Strings in Tabelle X aus Kapitel X (TODO!), der einem konkreten Schritt im Browsing Szenario entspricht.
+
+Wichtig dabei: gefundenes Artefakt muss eindeutig Browser zugeordnet werden können.
+Oft kritisiert: Viele Autoren (TODO: Quellen) verlassen sich beispielsweise bei der Analyse der RAM-Dumps auf eine einfache Stringsuche in einem Hexadezimal-Editor.
 Sagt jedoch nichts darüber aus, ob gefundener String tatsächich auf privates Browsen zurückzuführen ist.
 *** TODO: String in Editor Beispiel ***
 
-Die gesammelten Daten dieses Versuchs lassen sich in drei Kategorien aufteilen:
+Mit dieser Anforderung lassen sich die gesammelten Daten des Versuchs in drei Kategorien aufteilen:
 > Common Locations
 > Uncommon Locations	
 > Registry
 
 \subsection{Common Locations}
 
-"Gängige Speicherorte beziehen sich auf die standardmäßigen Verzeichnisse oder Pfade, in denen bestimmte Dateien oder Informationen typischerweise in einem Betriebssystem oder einer Anwendung gespeichert werden."	
-- auch "Vor-Ort-Triage" \cite{Horsman.2019} genannt, um bekannte Speicherorte nach PB Artefakte zu überprüfen
-- z.B. Profile-Ordner von Browsern, wo Nutzerdaten gespeichert werden
-- Befasst sich ausschließlich mit Dateien, die auf Festplatte geschrieben werden
-- "Suchrichtung": Bekannte Browser-Speicherorte und Dateien -> Prüfen ob Dateien PB Artefakte enthalten
-- Hier: Browser Speicherorte werden über die Schreiboperationen der Process Monitor Logfiles identifiziert 
+*** TODO: Wichtig: NUR FESTPLATTE, NICHT RAM ***
 
-Eng verwandt mit den "Common Locations" ist die "Whitebox-Analyse": (gezieltes Suchen nach Dateien) \cite{Bonetti.2014}
-> Definition: "White-Box" Computer Forensik bezieht sich auf eine forensische Untersuchungsmethode, bei der der forensische Analyst über umfassende Kenntnisse und Zugriff auf das untersuchte System verfügt. Im Kontext der Computerforensik bezieht sich "White-Box" darauf, dass der Analyst über volle Transparenz und Zugriff auf alle Informationen, Ressourcen und Artefakte des Systems verfügt.
-> Die "White-Box" Forensik kann verschiedene Techniken und Tools umfassen (z.B. Process Monitor, Regshot, Registry Explorer, Dekomprimierungstools), um Daten wiederherzustellen, gelöschte Informationen wiederherzustellen, Metadaten zu analysieren, Netzwerkaktivitäten zu überwachen und weitere forensische Analysen durchzuführen. Der Fokus liegt darauf, das System vollständig zu verstehen und alle relevanten Beweise zu sammeln.
+Die sogenannten "Common Locations", (dt. "gängige Speicherorte") beziehen im Zusammenhang der Browserforensik auf die standardmäßigen Verzeichnisse eines Browsers. 
+Dazu zählen beispielsweise Ordner von Browsern zur Verwaltung von Nutzerdaten.
+
+Untersucht werden Common Locations mittels "Whitebox-Analyse" \cite{Bonetti.2014}
+Der forensische Analyst besitzt dabei über umfassende Kenntnisse über den Browser und hat vollständigen Zugriff auf das untersuchte System. 
+Der Fokus liegt darauf, das System vollständig zu verstehen und alle relevanten Beweise zu sammeln.
+Dazu werden zuerst die gängigen Browser-Speicherorte identifiziert. 
+Im Falle dieses Versuchs werden die Browser Speicherorte über die Schreiboperationen der Process Monitor Logfiles identifiziert.
+Anschließend wird für jede Datei in den Speicherorten geprüft, ob PB Artefakte enthalten sind.
+Dazu sind zwei Schritte notwendig:
+\begin{enumerate}
+\item Dateiextraktion: Extrakion der Datei aus dem Speicherabbild. Wenn die Datei nicht mehr vorhanden ist, werden dazu ggf. Tools zur Dateiwiederherstellung benötigt.
+\item Dateianalyse: Um zu überprüfen ob die Datei PB Artefakte enthält, werden ggf. Tools für spezielle Dateiformate benötigt, beispielsweise Dekomprimierungstools.
+\end{enumerate}
+
+Die Untersuchung der Common Locations wird im Zusammenhang der Browser-Forensik auch "Triage" genannt \cite{Horsman.2019}. Wenn für den vorliegenden Browser die gängingen Speicherorte bekannt sind, kann im ersten Analyeschritt gezielt nach Dateien gesucht werden, die aus Erfahrungswerte PB Artefakte beinhalten.
 
 \subsubsection*{Process Monitor Logfiles}
 
-Grundlage für Common Locations = Process Monitor Logfiles
+\paragraph*{Identifikation der Common Locations}
+Um die gängigen Browserpfade und -dateien zu identifizieren, werden die in den Process Monitor Logfiles aufgezeichneten Schreibaktivitäten der Browserprozesse ausgewertet.
 
-Datenaufbereitung für jede Logfile:
-- Für Common Locations Filter setzen: 
-	\begin{figure}[h!]
-		\resizebox{\linewidth}{!}{\includegraphics{bilder/process-monitor-filter.png}}
-	%	\label{...}
-		\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
-	\end{figure}
-	> Nur "File System Activity"
-	> Process Name: contains "Browser-Prozess".exe
-		- Firefox = firefox.exe
-		- Tor = firefox.exe und tor.exe
-		- Chrome = chrome.exe
-		- Brave = brave.exe
-	> Operation: contains "WriteFile"
-- Gefiltertes Logfile als CSV exportieren, dann in Excel öffnen
-- Irrelevante Spalten löschen: 
-	> Time of Day
-	> Process Name (Da in Process Monitor bereits nach Namen gefiltert wurde -> Alle Prozesse haben gleichen Namen)
-	> Operation (Da in Process Monitor bereits nach Operation gefiltert wurde -> Alle Prozesse haben gleiche Operation „WriteFile“)
-	> Result
-	> Detail
-- Gleiche Operationen (Duplikate) löschen
-- Gruppieren nach browserspezifischen Speicherorten
+Dazu wird jede Process Logfile mit dem Process Explorer eingelesen. Anschließend werden die Aktivitäten gefiltert.
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/process-monitor-filter.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
+Wie in Abbildung X dargestellt werden dazu ausschließlich die Option "File System Activity" ausgewählt.
+Anschließend wird als Prozessname der Browserprozess gesetzt:
+\begin{itemize}
+\item[\textbf{Firefox}] firefox.exe
+\item[\textbf{Tor-Browser}] firefox.exe und tor.exe
+\item[\textbf{Chrome}] chrome.exe
+\item[\textbf{Brave}] brave.exe
+\end{itemize}
+Weiterhin wird als Prozessoperation "WriteFile" gesetzt, um ausschließlich Schreibaktivitäten zu filtern. Hintergrund ist, dass PB Artefakte nur über "WriteFile" Operationen entstehen können, nicht über beispielsweise Löschoperationen.
 
-Datenanalyse für jede geschriebene Datei:
-I) Dateiextraktion
-	1.	In Autopsy prüfen, ob Datei in Image von entsprechendem Snapshot vorhanden. Siehe Abbildung X: 
-			> Logfile 1 -> Snapshot 2
-			> Logfile 2 -> Snapshot 3
-		Tor:
-			> Logfile 1 -> Snapshot 2
-			> Logfile 2-1 -> Snapshot 3-1
-			> Logfile 2-2 -> Snapshot 3-2
-	2.	Wenn ja, Dateien mit Autopsy extrahieren 
-	3.	Wenn nein, prüfen, ob Datei in RAM gecacht:
-		> Dazu Ausgabe von Volatiltiy Plugin "filescan" in entsprechendem RAM-Dump prüfen.
-			> filescan: Das filescan-Plugin von Volatility durchsucht den Arbeitsspeicher nach Speicherbereichen, die Informationen über Dateien enthalten. Die Ausgabe des Plugins enthält eine Liste von Dateinamen, die im Speicher gefunden wurden. Können sein: Ausführbare Dateien, Bibliotheksdateien oder Konfigurationsdateien.
-				% vol.py -f ram_dump.img windows.filescan > filescan.txt
-		Welchen Dump bei welcher Logfile?
-			> Logfile 1 -> RAM-Dump 2
-			> Logfile 2 -> RAM-Dump 3
-		Tor:
-			> Logfile 1 -> RAM-Dump 2
-			> Logfile 2-1 -> RAM-Dump 3-1
-			> Logfile 2-2 -> RAM-Dump 3-2
-		> Wenn Datei gefunden wurde: Datei mit dumpfiles und entsprechender virtueller Dateispeicheradresse extrahieren.
+Anschließend wird die gefilterte Logfile als CSV exportiert, um sie dann in Excel zu öffnen.
+In Excel werden nun folgende für den Versuch irrelevante Spalten gelöscht:
+\begin{itemize}
+\item Time of Day: Die zeitliche Reihenfolge innerhalb einer Logfile wird nicht berücksichtigt
+\item Process Name: Im Process Monitor wurde bereits nach Prozessnamen gefiltert, wordurch alle Prozesse den gleichen Prozessnamen haben.
+\item Operation: Im Process Monitor bereits nach der Operation „WriteFile“ gefiltert, wodruch alle Prozesse die gleiche Operation haben
+\item Result
+\item Detail
+\end{itemize}
+Danach werden gleiche mehrfache, gleiche Operationen gelöscht.
+Abschließend werden alle geschriebenen Dateien nach nach browserspezifischen Speicherorten gruppiert.
+
+\paragraph*{Prüfung auf PB Artefakte}
+
+Nachdem die geschriebenen Browserdateien identifiziert und kategorisiert wurden, wird für jede Datei geprüft, ob PB Artefakte enthalten sind. Die zur Dateiextraktion sowie Dateianalyse notwendigen Schritte sind in Abbildung X (TODO!) dargestellt.
+\begin{figure}[h!]
+	\centering
+	\small
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/process_monitor_to_exce-Latexl.pdf_tex}}}
+	\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
+	\label{fig:jes}
+\end{figure}
+
+Zur Dateiextraktion sind werden folgende Schritte durchgeführt.
+\begin{enumerate}
+\item In Autopsy prüfen, ob Datei in Festplatten-Image des entsprechenden VM-Snapshots vorhanden ist. Welcher Snapshot bei welchem Logfile untersucht wird ergibt sich aus dem Browsing Szenario in Kapitel X und ist in Tabelle X dargestellt. Hier werden nur VM-Snapshots der Live-Forensik untersucht. Der vierte VM-Snapshot zählt zur Post-Mortem-Forensik und ist erst in späteren Analyseschritten relevant (siehe Kapitel X, Y, Z TODO!)
+		\begin{table}[h!]
+		\centering
+		\begin{tabular}{l|l|l|}
+		\cline{2-3}
+        & Logfile     & Untersuchter Snapshot \\ \hline
+		\multicolumn{1}{|l|}{\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Firefox,\\ Chrome,\\ Brave\end{tabular}}} & Logfile 1   & Snapshot 2            \\ \cline{2-3} 
+		\multicolumn{1}{|l|}{}                                                                                    & Logfile 2   & Snapshot 3            \\ \hline
+		\multicolumn{1}{|l|}{\multirow{3}{*}{Tor}}                                                                & Logfile 1   & Snapshot 2            \\ \cline{2-3} 
+		\multicolumn{1}{|l|}{}                                                                                    & Logfile 2-1 & Snapshot 3-1          \\ \cline{2-3} 
+		\multicolumn{1}{|l|}{}                                                                                    & Logfile 2-2 & Snapshot 3-2          \\ \hline
+		\end{tabular}
+		\end{table}
+\item Wenn ja, Datei mit Autopsy extrahieren.
+\item Wenn nein, prüfen, ob Datei in Arbeitsspeicher vorhanden. Dazu wird die Ausgabe des Volatiltiy Plugins "filescan" angewendet auf den entsprechenden RAM-Dump überprüft. Dazu wird der Befehl \texttt{vol.py -f ram\_dump.img windows.filescan > filescan.txt} ausgeführt. Die Ausgabe von Filescan enthält eine Liste von Dateinamen, die im Speicher gefunden wurden. Welcher RAM-Dump bei welchem Logfile untersucht wird, ergibt sich aus dem Browsing Szenario in Kapitel X und ist in Tabelle X dargestellt.
+		\begin{table}[h!]
+		\centering
+		\begin{tabular}{l|l|l|}
+		\cline{2-3}
+		                                                                                                          & Logfile     & Untersuchter RAM-Dump \\ \hline
+		\multicolumn{1}{|l|}{\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Firefox,\\ Chrome,\\ Brave\end{tabular}}} & Logfile 1   & RAM-Dump 2            \\ \cline{2-3} 
+		\multicolumn{1}{|l|}{}                                                                                    & Logfile 2   & RAM-Dump 3            \\ \hline
+		\multicolumn{1}{|l|}{\multirow{3}{*}{Tor}}                                                                & Logfile 1   & RAM-Dump 2            \\ \cline{2-3} 
+		\multicolumn{1}{|l|}{}                                                                                    & Logfile 2-1 & RAM-Dump 3-1          \\ \cline{2-3} 
+		\multicolumn{1}{|l|}{}                                                                                    & Logfile 2-2 & RAM-Dump 3-2          \\ \hline
+		\end{tabular}
+		\end{table}
+Wenn eine Datei in der Ausgabe gefunden wurde, wird sie mithilfe des Volatility "dumpfiles" Plugins anhand der virtuellen Dateispeicheradresse extrahiert. Diese Abhängigkeiten zwischen den beiden Plugins ist in Abbildung X dargestellt.
 		\begin{figure}[h!]
 			\centering
 			\small
-			\centerline{\resizebox{\linewidth}{!}{\input{bilder/volatility-filescan-dumpfiles-Latex.pdf_tex}}}
+			\centerline{\resizebox{0.8\linewidth}{!}{\input{bilder/volatility-filescan-dumpfiles-Latex.pdf_tex}}}
 			\caption{Datensammlung Zeitpunkte Tor}
 			\label{fig:jes}
 		\end{figure}
-	4. Wenn Datei auch nicht im RAM gecacht ist: Prüfen, ob es sich bei Datei um Hilfsdatei handelt. Dabei handelt es sich meistens um temporäre Dateien mit zusätzlicher Dateiendung (meistens .tmp)
-	5. Wenn ja: Zur die Dateiendung der Hilfsdatei weglassen und bei Schritt 1 beginnen. z.B: Wenn Datei "some-file.json.tmp" nicht existiert, prüfen, ob Datei "some-file.json" existiert
-	6. Wenn nein: Datei als "nicht wiederherstellbar" markieren
-II) Dateianalsye (nachdem Datei extrahiert wurde)
-	7. Datei mit entsprechdem Tool untersuchen 
-	8. Wenn Datei nicht direkt untersuchbar ist: ggf. Mit zusätzlichem Tool Datei vorberarbeiten. z.B. Wenn es sich um komprimierte Dateien handelt
-	9. In Excel-Tabelle markieren, ob Datei PB Artefakte enthält. Dabei gibt es drei Zustände: 
-		- leere Datei
-		- neuer (nicht-leerer) Inhalt
-		- gleichbleibender Inhalt
-	\begin{figure}[h!]
-		\centering
-		\small
-		\centerline{\resizebox{\linewidth}{!}{\input{bilder/process_monitor_to_exce-Latexl.pdf_tex}}}
-		\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
-		\label{fig:jes}
-	\end{figure}
+\item Wenn Datei auch nicht im RAM gecacht ist: Prüfen, ob es um eine temporäre Datei (meistens Endung ".tmp") handelt.
+\item Wenn es sich um eine temporäre Datei handelt: Wird die entsprechende Nicht-temporäre gewählt und und erneute bei Schritt 1 begonnen. Wenn beispielsweise die Datei "some-file.json.tmp" nicht existiert wird geprüft prüfen, ob die Datei "some-file.json" existiert.
+\item Wenn es sich um keine temporäre Datei handelt: Datei als "nicht wiederherstellbar" markieren
+\end{enumerate}
+
+Nachdem eine Datei extrahiert werden konnte, werden folgende Schritte zur Dateianalsye durchgeführt.
+\begin{enumerate}
+	\setcounter{enumi}{7}
+	\item Datei mit entsprechdem Tool untersuchen 
+	\item Wenn Datei nicht lesbar ist: Datei mir zusätzlichem Tool vorverarbeiten. Beispielsweise werden komprimierte Dateien dekomprimiert. 
+	\item In Excel-Tabelle markieren, ob die Datei private Browsing Artefakte enthält. Dabei gibt es drei Zustände: 
+	\begin{itemize}
+	\item leere Datei
+	\item neuer (nicht-leerer) Inhalt
+	\item gleichbleibender Inhalt
+	\end{itemize}		
+\end{enumerate}
+
 
 \subsubsection*{SQLite-Datenbänke}
-- Besondere Rolle nehmen bei den ausgewählten Browsern SQLite Datenbänke ein.
 
-"SQLite-Datenbanken sind besonders wichtig bei Webbrowsern wie Firefox, Tor, Chrome und Brave, da sie Informationen wie Lesezeichen, Browserverlauf, Caches, Cookies und Erweiterungsdaten speichern. Diese Datenbanken bieten Benutzern eine personalisierte Browsererfahrung und sind für Forensiker und Sicherheitsexperten von Bedeutung, um relevante Informationen über die Online-Aktivitäten eines Benutzers zu analysieren."
+Eine besondere Rolle unter den Common Locations bei Browsern nehmen SQLite Datenbänke ein. 
+SQLite ist eine relationale Datenbank-Engine. Sie ermöglicht das Speichern und Verwalten von Daten in einer einzigen Datei, ohne einen separaten Datenbankserver zu benötigen.
+Diese Datenbänke speichern bei Browsern Nutzerinformationen wie Lesezeichen, Browserverlauf, Caches, Cookies und Erweiterungsdaten. Sie bieten einerseits Benutzern eine personalisierte Browsererfahrung und sind andereseits von forensischer Bedeutung, um Benutzeraktivitäten zu analysieren.
 
-"Die Verwendung von SQLite-Datenbanken in diesen Webbrowsern bietet Effizienz, Flexibilität und eine einfache Möglichkeit, Daten zu organisieren und abzurufen. Für Forensiker und Sicherheitsexperten sind diese Datenbanken von Bedeutung, da sie wertvolle Informationen über die Online-Aktivitäten eines Benutzers enthalten können, die bei Untersuchungen, Sicherheitsanalysen oder forensischen Untersuchungen relevant sein können."
-
-> Deshalb: Für jeden Browser werden die SQLite Datenbanken in allen Snapshots miteinander verglichen.
+Aus diesem Grund werden für jeden Browser die SQLite Datenbanken aller Snapshots miteinander verglichen. 
 \begin{figure}[h!]
 	\centering
 	\small
@@ -584,82 +618,82 @@ II) Dateianalsye (nachdem Datei extrahiert wurde)
 	\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
 	\label{fig:jes}
 \end{figure}
-I) Dateiextraktion analog zu Dateien im Process Monitor
-II) Dateianalyse:
-	- SQLite Datenbank wird mit gleicher SQLite Datenbank aus vorherigem Snapshot verglichen (wenn vorhanden) -> Unterschiede in Excel-Tabelle festgehalten
-	- Wichtig: Zu jeder SQLite Datenbank gibt es normalerweise eine .sqlite-wal Datei. 
-		"Die Dateien mit der Erweiterung ".sqlite-wal" sind WAL-Dateien (Write-Ahead Log) in Verbindung mit SQLite-Datenbanken. Sie werden von SQLite verwendet, um Änderungen an einer Datenbank vorübergehend zu protokollieren, bevor sie dauerhaft in die Hauptdatenbankdatei geschrieben werden. Die WAL-Dateien dienen als Transaktions-Log und ermöglichen eine effiziente und sichere Aktualisierung der SQLite-Datenbanken, insbesondere in Situationen mit gleichzeitigen Schreibvorgängen."
-		> Inhalte werden erst in WAL Datei geschrieben, dann in SQLite Datei
-	- Deshalb: WAL Änderungen in SQLite Datei schreiben, danach sqldiff mit gleicher Datenbank ohne WAL Änderungen -> Unterschiede in Excel-Tabelle
-		1) über sqlite3 Kommandozeile .sqlite Datenbank öffnen: % sqlite3 <Datenbank>.sqlite
-		2) Über Pragma Befehl WAL Checkpoint durchführen: % sqlite3> PRAGMA wal_checkpoint;
+Wie in Abbildung X dategestellt erfolt die Dateiextraktion analog zur Vorgehensweise bei den Schreiboperationen der Process Monitor Logfiles.
+
+Um die SQLite Datenbänke zu analysieren wird jede Datenbank mit der gleichen Datenbank aus dem vorherigem Snapshot verglichen. Dazu wird das Befehlszeilentool "sqldiff.exe" verwendet, das über den Befehl \texttt{sqldiff.exe database1.sqlite database2.sqlite} Inhaltsunterschiede zwischen SQLite-Datenbanken anzeigt. Diese Unterschiede werden für jede Datei in jedem Snapshot untersucht und in einer Excel Tabelle festgehalten.
+
+Zu jeder SQLite Datenbank gibt es normalerweise eine .sqlite-wal Datei. Dabei handelt es sich um den sogenannten "Write-Ahead Log", kurz WAL. Dort werden Datenbankänderungen vorübergehend protokollieren, bevor sie dauerhaft in die Hauptdatenbankdatei geschrieben werden. 
+Um potentielle PB Artefakte im WAL zu berücksichtigen, werden die Inhalte des WAL in die SQLite Datei geschrieben. Dazu wird die .sqlite Datei mit dem Befehl \texttt{sqlite3 <Datenbank>.sqlite} über die sqlite3 Kommandozeile geöffnet, um anschließend den WAL in die Hauptdatenbank zu übertragen: \texttt{ sqlite3> PRAGMA wal\_checkpoint;}
 
 \subsection{Uncommon Locations}
 
-"Ungewöhnliche Speicherorte beziehen sich auf Verzeichnisse oder Orte, die nicht zu den gängigen oder standardmäßigen Speicherorten gehören."
-= „Unbekannte Speicherorte“, nur durch tiefgehende forensische Analyse entdeckt
-Blackbox-Analyse: \cite{Bonetti.2014} (Stringsuchen im gesamten Image mithilfe von Tool) 
-= Durchsuchung des Beweismaterials ohne Vorwissen über Browserverhalten (d.h. welche Dateien geschrieben wurden) sowie ohne Vorverarbeitung der Dateien (z.B. Entpacken von Dateien).
-Stattdessen: Untersuchen der Images nur mittels vordefinierter Funktionen von Forensik-Tools, da dies schnelles erstes Mittel von Forensikern, um nach Acquisition Phase Ergebnisse zu erhalten
-- wichtigster Unterschied zu "Common Locations": Umgekehrte Suchrichtung => PB Artefakt (String) -> Alle Daten nach PB Artefakt durchsuchen
-- Eigenschaften:
-	> Wenn manuell durchgeführt, deutlich Zeitaufwändiger
-	> Deshalb: Unterstützung durch Forensik-Tools. 
-	> Vertrauen in die Vollständigkeit der Tools
-- Beispiele in der Literatur:
-	> “\$MFT”, “\$LogFile”, “Favicons”, “etilqs”, “Manifest.json”, “pagefile.sys.”, “unallocated space” and “slack space” \cite{Montasari.2015}	
+Ungewöhnliche Speicherorte beziehen sich auf Verzeichnisse, die nicht zu den gängigen Speicherorten gehören. 
+Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche.
+Im Unterschied zu den "Common Locations" zählt zu den "Uncommon Locations" der Arbeitsspeicher.
 
-Bei Browser Forensik hier oft verwendet: Stichwortsuchen über gesamtes Speicherabbild
+Uncommon Locations werden mithilfe der "Blackbox-Analyse" untersucht \cite{Bonetti.2014}:
+Dies umfasst die Durchsuchung des Beweismaterials ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien.
+Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB Artefakten über die gesamten Speicherabbilder durchgeführt.
+Somit wird im die Suchrichtung der "Common Locations" umgekehrt: 
+Ausgangspunkt ist nicht eine Datei, die nach allen PB Artefakten durchsucht wird. 
+Stattdessend wird das gesamte Speicherabbild nach einem konkreten PB Artefakt durchsucht.
 
-Wichtig: String-Treffer muss Browser zugeordnet werden können
-> Oft wiederkehrende Negativbeispiele in Literatur: gesamten RAM-Dump in Hexadezimaleditor geöffnet, danach: Stringsuche nach PB Artefakten. \cite{Rochmadi.2017, Md.2018, Montasari.2015}
-> Problem: Gefundener String kein Indiz, dass tatsächlich Artefakt in Zusammenhang mit PB aufgetaucht ist.
-> Gegenbeispiel: String in Textdatei in Desktop speichern. RAM Dump enthält String.
+Dies ist nur durch Unterstützung mit Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations in die Vollständigkeit der Tools vertraut.
+
 
 \subsubsection*{Analyse mit Autopsy}
 
-Bei White-Box Analyse: Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
+Bei den Common Locations wurde Autopsy ausschließlich zur Dateiextraktion genutzt. Bei den Uncommon Locations wird Autopsy als forensisches Werkzeug zur analyse der Festplatten-Images verwendet.
+Dazu wird eine Stichwortsuche mit den in Tabelle X definierten PB Artefakten über das gesamte Festplatten-Image durchgeführt.
 
-> Stichwortsuche über gesamtes Festplatten-Image
-	*** TODO: Screenshot von Suchfunktion ***
-> Zusätzlich: Autopsy PlugIns indexieren und kategoriesieren bereits Dateien
-	- Web Bookmarks
-	- Web Cookies
-	- Web History
-	- Web Categories
+Autopsy bietet dazu eine Suchfunktion an. Wie in Abbildung X dargestellt, kann damit nach exakten Strings, Teilstrings oder regulären Ausdrücken in Dateinamen und Dateiinhalten gesucht werden kann.
+
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/autopsy-search.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
+
+Zusätzlich kategorisiert Autopsy beim Einlesen eines Festplatten-Images automatisch die Dateien. Für jede Kategorie werden die kategorisierten Dateien nach PB Artefakten untersucht. Für diesen Versuch sind folgende Dateikategorien von Interesse:
+\begin{itemize}
+\item Web Bookmarks
+\item Web Cookies
+\item Web History
+\item Web Categories
+\end{itemize}
+
+Sowohl die Stichwortsuche als auch die Analyse der kategorisierten Dateien wird für jedes Festplatten-Image durchgeführt.
 
 \subsubsection*{Analyse mit Volatility}
 
-Bei White-Box Analyse: Volatility nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
+Bei der Analyse des Arbeitsspeichers als Uncommon Location ist es kritisch, dass ein gefundener String eindeutig einem Browserprozess zugeordnet werden kann. 
 
-Wie oben ausführlich beschrieben: gefundener String im RAM muss Browser zugeordnet werden können -> Passendes Werkzeug = Volatility PlugIn "Yarascan". (siehe Kapitel Analysewerkzeuge)
+In der Literatur wird der Arbeitsspeicher oft analysiert, indem der vollständige RAM-Dump als Binärdatei in einem Hexadezimaleditor wie HxD geöffnet wird, um danach eine Stringsuche durchzuführen. \cite{Rochmadi.2017, Md.2018, Montasari.2015}
+Ein in der Binärdatei gefundener String ist jedoch kein Indiz, dass das Artefakt tatsächlich im Zusammenhang mit dem Browsing Szenario steht.
+Wie in Abbildung X und Y gezeigt, wird ein String, der in einer Textdatei auf dem Desktop gespeichert ist ebenfalls im Hexadezimaleditor HxD angezeigt, obwohl kein Browsing Szenario durchgeführt wurde.
+\begin{figure}[h!]
+	\resizebox{0.5\linewidth}{!}{\includegraphics{bilder/ram-editor1.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/ram-editor2.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
 
-*** TODO: konkrete Yara-Rules hier einfügen ***
-> HTML-Fragmente: \cite{Said.2011} 
-> Image als Hex: \cite{Ohana.2013}
+Aus diesem Grund wird das forensische Tool "Volatility" zur Analyse des Arbeitsspeichers verwendet. 
+Bei den Common Locations wurde Volatility ausschließlich zur Dateiextraktion genutzt.
+Um einen im RAM gefundenen String einem Browserprozess zuordnen zu können, wird das Volatility PlugIn "Yarascan" verwendet.
 
-> yarascan: Das Plugin "yarascan" ermöglicht die Durchführung einer YARA-basierten Malware-Erkennung im Arbeitsspeicherabbild. YARA ist eine flexible Regel-Engine, die verwendet werden kann, um nach bestimmten Mustern, Signaturen oder Verhaltensmerkmalen von Malware zu suchen. Das Plugin wendet YARA-Regeln auf den Arbeitsspeicher an und gibt potenzielle Treffer aus.
-		% vol.py -f ram_dump.img windows.vadyarascan --yara-file yara_rules.yara > yarascan.txt
-		Wichtig: yara\_rules.yara = In domainspecific Yara-Skriptsprache geschriebene Regeln, nach welchen RAM durchsucht wird.
-		Hier: Einfache String-Pattern, die jeden Schritt des Browsing-Szenarios abdecken:
-		*** TODO Beispielhafte Yara-Rules einfügen ***
-		*** TODO: Erklärung Yara-Ausgaben, mit Screenshot ***
-	=> Wichtig hier: Gibt PID des Prozesses und virtuelle Adresse des gefundenen Strings im Speicherbereich des Prozesses an
-
-> Davon ausgehend: pslist: 
-Das Plugin "pslist" wird verwendet, um eine Liste der aktiven Prozesse im Arbeitsspeicherabbild zu erstellen. Es extrahiert Informationen wie Prozessnamen, PID (Prozess-ID), Elternprozess, Startzeitpunkt, Priorität und andere Attribute für jeden laufenden Prozess.
-		% vol.py -f ram_dump.img windows.pslist > pslist.txt
-	=> Wichtig hier: Prozessname 	
-
-> "String Kontext" herausfinden = Prüfen, ob in Speicherseite  über und unter gefundenen String weitere Zusammenhänge zu erkennen sind.
-> Dazu: memmap: 
-Das Plugin "memmap" dient dazu, eine detaillierte Karte des physischen Speichers des Systems zu erstellen. Es gibt Informationen über die physischen Speicherbereiche, deren Startadressen, Größen, Schutzattribute und andere relevante Details. Dieses Plugin kann bei der Analyse von Speicherlayout und -nutzung hilfreich sein.
-		1) % vol.py -f ram_dump.img windows.memmap --pid <PID> > memmap.txt
-			gibt Abbildung der Adressen des virtuellen Speichers auf die physikalische Adresse des Speicherbereichs des Prozesses mit der PID <PID>.
-			Weiterhin und hier relevant: gibt Abbildung von virtuellen Adresse auf einen Datei-Offset an. Dieser bezieht sich auf die Datei, die erzeugt wird, wenn der Befehl mit dem --dump Flag ausgeführt wird:
-		2) % vol.py -f ram_dump.img -o \dump_dir\ windows.memmap --pid <PID> --dump
-			führt dies zur physischen Extraktion des Speicherbereichs des Prozesses mit der PID <PID> in eine separate Datei.		
- => Extrahierte Seite mit Hexeditor HxD untersuchen
+YARA ist eine flexibles regelbasiertes Tool, das verwendet werden kann, um nach bestimmten Mustern, Signaturen oder Verhaltensmerkmalen im Arbeitsspeicher zu suchen. Dazu werden sogenannte "YARA-Regeln" verwendet. Dabei handelt es sich um eine domänenspezifische Skriptsprache, mithilfe dieser zu suchende Strings und Muster definiert werden.
+Die für diesen Versuch verwendeten Yara-Regeln sind einfache String-Pattern, die jeden Schritt des Browsing-Szenarios abdecken. 
+Neben den in Tabelle X in Kapitel X definierten Strings der PB Artefakte, wurde eine zusätzliche "HTML-Regel" eingeführt \cite{Said.2011}. Diese Regel sucht nach HTML-Fragmenten, die eindeutig zu einer besuchten Seite des Browsing-Szenarios zuzuordnen sind
+Die für diesen versuch verwendeten Yara-Regeln sind im Anhang X (TODO!) gezeigt.
+Um den RAM-Dump nach den Yara-Regeln zu durchsuchen wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.vadyarascan --yara-file yara\_rules.yara > yarascan.txt}
+Nachdem der RAM-Dump nach den Regeln durchsucht wurde, liefert Yarascan eine Ausgabe mit allen gefundenen Strings.
+%	*** TODO: Erklärung Yara-Ausgaben, mit Screenshot ***
+Für jeden Treffer liefert Yarascan die PID des Prozesses, in dem der String gefunden wurde sowie virtuelle Adresse des gefundenen Strings.
 
 \begin{figure}[h!]
 	\centering
@@ -668,50 +702,59 @@ Das Plugin "memmap" dient dazu, eine detaillierte Karte des physischen Speichers
 	\caption{TODO: Process Monitor Write Operation to Excel Spreadsheet}
 	\label{fig:jes}
 \end{figure}
+Wie in Abbildung X dargestellt, bildet Yarascan die Grundlage der RAM-Analyse.
+Davon ausgehend weden mit dem Plugin "pslist" der Prozessname zur PID des Prozesses ermittelt, in dem der String gefunden wurde. Dazu wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.pslist > pslist.txt}
+
+Oft ist für bei einem gefundenen String von Interesse, ob in den Speicheradressen vor und nach dem Treffer weitere Zusammenhänge erkennbar sind.
+Dazu wird mithilfe des Plugins "memmap" zunächst die Abbildung der virtuellen Speicheradressen eines Prozesses auf den Byte-Offset in der Speicherseite des Prozesses:
+\texttt{vol.py -f ram\_dump.img windows.memmap --pid <PID> > memmap.txt}
+Diese Seite kann mithilfe des "--dump" Flags extrahiert werden: \texttt{vol.py -f ram\_dump.img -o \\dump\_dir\\ windows.memmap --pid <PID> --dump}
+Wenn die extrahierte Seite mit einem Hexadezimaleditor wie HxD geöffnet wird, kann der String-Treffer anhand des ermittelten Byte-Offsets gefunden werden.
 
 
 \subsection{Registry}
-- zählt sowohl Common als auch Uncommon Location -> Deshalb eigene Kategorie
-- Common: Analyse der Process Monitor Schreiboperationen in Registry
-	Datenaufbereitung für jede Logfile:
-	- Grundlage = Process Monitor Logfiles
-	- Für Common Locations Filter setzen: 
-		\begin{figure}[h!]
-			\resizebox{\linewidth}{!}{\includegraphics{bilder/process-monitor-filter-registry.png}}
-		%	\label{...}
-			\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
-		\end{figure}	
-		> Nur "Registry Activity"
-		> Process Name: contains "Browser-Prozess".exe
-			- Firefox = firefox.exe
-			- Tor = firefox.exe und tor.exe
-			- Chrome = chrome.exe
-			- Brave = brave.exe
-		> Operation: contains "SetValue"
-	- Gefiltertes Logfile als CSV exportieren, dann in Excel öffnen
-	- Gleiche Operationen (Duplikate) löschen
-	- Browserspezifisches Gruppieren 
-	Datenanalyse für jeden geschriebenen Registry Key: Value untersuchen (steht in CSV hinter jeder Key Schreiboperation)
+
+Die letzte Kategorie analysierter Daten umfasst die Artefakte der Registry.
+Diese zählen sowohl zu den Common als auch Uncommon Locations und werden deshalb eigene Kategorie aufgeführt.
+
+\paragraph*{Common Locations}
+Als Teil der Common Locations werden die Registry-Aktivitäten in den Process Monitor Logfiles analysiert.
+Dazu wird jede Logfile in Process Monitor eingelesen und wie in Abbildung X gezeigt gefiltert.
+\begin{figure}[h!]
+	\resizebox{\linewidth}{!}{\includegraphics{bilder/process-monitor-filter-registry.png}}
+%	\label{...}
+	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+\end{figure}
+Zunächst wird ausschließlich die Option "Registry Activity" ausgewählt.
+Anschließend wird nach Browser-Prozessnamen analog zu den Schreiboperationen in Kapitel X gefiltert.
+Das gefilterte Logfile wird als CSV Datei exportiert und in Excel weiter verarbeitet.
+Zunächst werden gleiche Schreiboperationen gelöscht.
+Anschließend werden die geschriebenen Registry Keys browserspezifisch gruppiert.
 	
+\paragraph*{Uncommon Locations}
+Als Uncommon Location werden alle Registry Hives in jedem Festplatten-Image mit dem "Registry Explorer" untersucht.
+Jedes Hive hat eine bestimmte Funktion, wie die Speicherung von Systemeinstellungen (System-Hives) oder individuellen Benutzerkonfigurationen (User-Hives). Diese in Tabelle X dargestellten Hives werden von Windows beim Start geladen und dienen als Quelle für Einstellungen und Informationen, die von verschiedenen Systemkomponenten und Anwendungen genutzt werden.	
+ % https://medium.com/@haircutfish/tryhackme-windows-forensics-1-task-3-accessing-registry-hives-offline-task-4-data-acquisition-b440f5be2a13
+Zur Analyse wird jeder Hive aus einem VM-Snapshot extrahiert und in eine Registry Explorer Sitzung geladen, anschließend wird eine Stringsuche nach PB Artefakten in allen geladenen Hives gleichzeitig durchgeführt.
 
-- Uncommon: Stringsuche in bekannten Registry Hives mit Registry Explorer
-
-	"Ein Registry Hive ist eine Datei in der Windows-Registry, die als Container für spezifische Arten von Konfigurations- und Nutzerdaten dient. Jedes Hive hat eine bestimmte Funktion, wie die Speicherung von Systemeinstellungen (System-Hives) oder individuellen Benutzerkonfigurationen (User-Hives). Die Hives im System32\\Config-Verzeichnis enthalten wichtige Informationen für das Betriebssystem, während die User-Hives unter dem jeweiligen Benutzerverzeichnis gespeichert werden. Diese Hives werden von Windows beim Start geladen und dienen als Quelle für Einstellungen und Informationen, die von verschiedenen Systemkomponenten und Anwendungen genutzt werden."	
-
-	Quelle für Hives: % https://medium.com/@haircutfish/tryhackme-windows-forensics-1-task-3-accessing-registry-hives-offline-task-4-data-acquisition-b440f5be2a13
+\begin{table}[h!]
+%\resizebox{\linewidth}{!}{
+\begin{tabular}{lllll}
+\cline{1-2}
+\multicolumn{2}{|c|}{\textbf{System-Hives (C:\textbackslash{}\textbackslash{}Windows\textbackslash{}\textbackslash{}System32\textbackslash{}\textbackslash{}Config)}} &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textbf{Dateiname}}             & \multicolumn{1}{l|}{\textbf{Inhalt}}                                                                           &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{DEFAULT}}               & \multicolumn{1}{l|}{Standardkonfigurationseinstellungen für neue Benutzerprofile.}                             &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{SAM}}                   & \multicolumn{1}{l|}{Sicherheitskontensdaten, einschließlich der Benutzerkonten und deren Kennwörter.}          &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{SECURITY}}              & \multicolumn{1}{l|}{Sicherheitsinformationen für die Zugriffssteuerung und Authentifizierung.}                 &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{SOFTWARE}}              & \multicolumn{1}{l|}{Konfigurationsdaten für installierte Software und Anwendungen.}                            &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{SYSTEM}}                & \multicolumn{1}{l|}{Systemkonfigurationseinstellungen und Gerätetreiberinformationen.}                         &  &  &  \\ \cline{1-2}
+                                                     &                                                                                                                &  &  &  \\ \cline{1-2}
+\multicolumn{2}{|c|}{\textbf{User-Hives (C:\textbackslash{}\textbackslash{}Users\textbackslash{}\textbackslash{}\textless{}username\textgreater{})}}                  &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textbf{Dateiname}}             & \multicolumn{1}{l|}{\textbf{Inhalt}}                                                                           &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{NTUSER.DAT}}            & \multicolumn{1}{l|}{Individuelle Einstellungen und Konfigurationen für den angemeldeten Benutzer}              &  &  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{\textit{USRCLASS.DAT}}          & \multicolumn{1}{l|}{Dateizuordnungen und Registrierungseinstellungen für den angemeldeten Benutzer}            &  &  &  \\ \cline{1-2}
+\end{tabular}
+%}
+\end{table}
 	
-	System-Hives im Verzeichnis "% C:\Windows\System32\Config":
-	===========================
-    DEFAULT: Enthält die Standardkonfigurationseinstellungen für neue Benutzerprofile.
-    SAM: Enthält die Sicherheitskontenverwaltungsdaten, einschließlich der Benutzerkonten und deren Kennwörter.
-    SECURITY: Enthält Sicherheitsinformationen, die für die Zugriffssteuerung und Authentifizierung verwendet werden.
-    SOFTWARE: Enthält Konfigurationsdaten für installierte Software und Anwendungen.
-    SYSTEM: Enthält Systemkonfigurationseinstellungen und Gerätetreiberinformationen.
-
-	User-Hives im Verzeichnis "% C:\Users<username>":
-	=========================
-    NTUSER.DAT: Enthält die individuellen Einstellungen und Konfigurationen für den angemeldeten Benutzer. 
-    USRCLASS.DAT: Enthält Informationen über die Dateizuordnungen und Registrierungseinstellungen für den angemeldeten Benutzer im Zusammenhang mit seinen benutzerdefinierten Klassen. 
-
-	Analyse der Hives für jeden VM-Snapshot: Alle Hives in eine Registry Explorer Sitzung, danach Stringsuche nach PB Artefakten	
 

@@ -1,20 +1,20 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'main.blg'
-[183] biber-MSWIN64:340> INFO - === 
-[259] Biber.pm:418> INFO - Reading 'main.bcf'
-[436] Biber.pm:978> INFO - Found 25 citekeys in bib section 0
-[455] Biber.pm:4401> INFO - Processing section 0
-[472] Biber.pm:4592> INFO - Looking for bibtex file 'ref/citavi.bib' for section 0
-[548] bibtex.pm:1713> INFO - LaTeX decoding ...
-[567] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/citavi.bib'
-[569] Biber.pm:4592> INFO - Looking for bibtex file 'ref/manual.bib' for section 0
-[638] bibtex.pm:1713> INFO - LaTeX decoding ...
-[721] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/manual.bib'
-[942] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[942] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[942] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[942] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[974] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[991] bbl.pm:757> INFO - Output to main.bbl
-[991] Biber.pm:130> WARN - Duplicate entry key: 'Hariharan.2022' in file 'ref/manual.bib', skipping ...
-[992] Biber.pm:132> INFO - WARNINGS: 1
+[133] biber-MSWIN64:340> INFO - === 
+[178] Biber.pm:418> INFO - Reading 'main.bcf'
+[343] Biber.pm:978> INFO - Found 25 citekeys in bib section 0
+[361] Biber.pm:4401> INFO - Processing section 0
+[377] Biber.pm:4592> INFO - Looking for bibtex file 'ref/citavi.bib' for section 0
+[449] bibtex.pm:1713> INFO - LaTeX decoding ...
+[468] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/citavi.bib'
+[470] Biber.pm:4592> INFO - Looking for bibtex file 'ref/manual.bib' for section 0
+[534] bibtex.pm:1713> INFO - LaTeX decoding ...
+[581] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/manual.bib'
+[771] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[771] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[771] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[771] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[799] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[815] bbl.pm:757> INFO - Output to main.bbl
+[815] Biber.pm:130> WARN - Duplicate entry key: 'Hariharan.2022' in file 'ref/manual.bib', skipping ...
+[816] Biber.pm:132> INFO - WARNINGS: 1

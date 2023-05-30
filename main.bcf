@@ -2507,23 +2507,21 @@
     <bcf:citekey order="118" intorder="4">Satvat.2014</bcf:citekey>
     <bcf:citekey order="118" intorder="5">Said.2011</bcf:citekey>
     <bcf:citekey order="118" intorder="6">Aggarwal.2010</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">Horsman.2019</bcf:citekey>
-    <bcf:citekey order="120" intorder="1">Bonetti.2014</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">Bonetti.2014</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">Horsman.2019</bcf:citekey>
     <bcf:citekey order="121" intorder="1">Bonetti.2014</bcf:citekey>
-    <bcf:citekey order="122" intorder="1">Montasari.2015</bcf:citekey>
-    <bcf:citekey order="123" intorder="1">Rochmadi.2017</bcf:citekey>
-    <bcf:citekey order="123" intorder="2">Md.2018</bcf:citekey>
-    <bcf:citekey order="123" intorder="3">Montasari.2015</bcf:citekey>
-    <bcf:citekey order="124" intorder="1">Said.2011</bcf:citekey>
-    <bcf:citekey order="125" intorder="1">Ohana.2013</bcf:citekey>
-    <bcf:citekey order="126" intorder="1">Gabet.2018</bcf:citekey>
-    <bcf:citekey order="127" intorder="1">Fayyad.2021</bcf:citekey>
-    <bcf:citekey order="128" intorder="1">Said.2011</bcf:citekey>
-    <bcf:citekey order="129" intorder="1">Satvat.2014</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">Rochmadi.2017</bcf:citekey>
+    <bcf:citekey order="122" intorder="2">Md.2018</bcf:citekey>
+    <bcf:citekey order="122" intorder="3">Montasari.2015</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">Said.2011</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">Gabet.2018</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">Fayyad.2021</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">Said.2011</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">Satvat.2014</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">Muir.2019</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">Md.2018</bcf:citekey>
     <bcf:citekey order="130" intorder="1">Muir.2019</bcf:citekey>
-    <bcf:citekey order="131" intorder="1">Md.2018</bcf:citekey>
-    <bcf:citekey order="132" intorder="1">Muir.2019</bcf:citekey>
-    <bcf:citekey order="133" intorder="1">Hedberg.2013</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">Hedberg.2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
