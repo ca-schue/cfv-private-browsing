@@ -164,6 +164,8 @@ Eine Autopsy Stichwortsuche gemäß Methodik in Kapitel X (TODO!) lieferte in al
 Anschließend wurden die automatisch von Autopsy kategorisierten Dateien untersucht. Gemäß Methodik in Kapitel X wurden dazu die Dateien der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" analysiert.
 Beim Vergleich der Festplattenabbilder wurde festgestellt, dass ein Snapshot stets die kategoriesierten Dateien des vorherigen Snapshots enthielt. Es sind innerhalb einer Kategorie nur neue Dateien dazugekommen. Somit enthält Snapshot 4 in jeder Kategorie alle Dateien der vorherigen Snapshots.
 
+*** TODO: Edge vorinstalliert erwähnen ***
+
 \paragraph*{Web Bookmarks}
 
 Bereits vor Durchführung des Browsing Szenarios enthielt Firefox im ersten Snapshot die Bing Startseite als gespeichertes Leesezeichen. In den restlichen Snapshots 2 -- 4 blieb diese Kategorie unverändert.
@@ -532,89 +534,46 @@ Dazu werden die vollständigen Speicherabbilder nach PB Artefakten untersucht oh
 
 \subsubsection*{Analyse mit Autopsy}
 
-			Bei den Common Locations in Kapitel X wird Autopsy nur zur Dateiextraktion genutzt. Im Falle der Uncommon Locations dient Autopsy als forensisches Werkzeug zur Datenanalyse.
+Im ersten Schritt wird Autopsy als konkretes forensisches Werkzeug verwendet, statt nur nur zur Dateiextraktion, wie es bei den Common Locations der Fall war.
 
-Bei White-Box Analyse/Common Locations: Autopsy nur zur Dateiextraktion genutzt, hier: als konkretes forensisches Werkzeug
+Eine Stichwortsuche in Autopsy in allen fünft Festplatten-Images nach PB Artefakten ergab keine Treffer.
 
-Stichwortsuche:
-- In allen Snapshots keine Treffer (auch innerhalb \$Carved)
-- TODO: Pagefile gefunden?
+Anschließend werden die von Autopsy automatisch kategorisierten Dateien untersucht. Wie bei Firefox in Kapitel X wurden keine der kategorisierten Dateien gelöscht. Somit befanden sich im letzten Festplatten-Image des Snapshots 4 alle kategorisierten Dateien der vorherigen Festplatten-Images
 
-Von Autopsy automatisch indexierte Dateien: 
-In allen Fällen: keine Dateien gelöscht, nur über Zeitraum der Snapshots neue dazugekommen
-- Web Bookmarks:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_bookmarks.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web Bookmarks}
-	\end{figure}
-	Snapshot 1:
-		> Bing.url (Unter C:/User/Forensik/Favorites/Links) enthält Bing Startseite
-	Snapshot 2:
-		> unverändert zu 1
-	Snapshot 3-1:
-		> unverändert zu 2
-	Snapshot 3-2:	
-		> unverändert zu 3-1
-	Snapshot 4:
-		> unverändert zu 3-2
-- Web Cookies:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_cookies.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web Cookies}
-	\end{figure}
-	Snapshot 1:
-		> 9 Einträge in WebCacheV01.dat (= DB des Internet Explorers zum speichern von Browserdaten): Cookies für bing.com und live.com (= outlook)
-	Snapshot 2:
-		> unverändert zu 1
-	Snapshot 3-1:
-		> unverändert zu 2
-	Snapshot 3-2:
-		> unverändert zu 3-1
-	Snapshot 4:
-		> unverändert zu 3-2
-- Web History:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_history.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web History}
-	\end{figure}
-	Snapshot 1:
-		> 2 Einträge in WebCacheV01.dat:
-			- 2x live.com (= outlook)
-	Snapshot 2:
-		> 1 neuer Einträge in WebCacheV01.dat:
-			- file:///Z:/Logfile\_1 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
-	Snapshot 3-1:
-		> 1 neuer Eintrag in WebCacheV01.dat:
-			- file:///Z:/Logfile\_2-1 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
-	Snapshot 3-2:
-		> 1 neuer Eintrag in WebCacheV01.dat:
-			- file:///Z:/Logfile\_2-2 (= Process Monitor Logfile, die in shared-Folder geladen wurde) -> Erklärung?
-	Snapshot 4:
-		> unverändert zu 3-2
-- Web Categories:
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_categories.png}}}
-		\label{chart:final-criteria}  
-		\caption{Autopsy Web Categories}
-	\end{figure}
-	Snapshot 1:
-		> 2x WebCacheV01.dat aufgelistet => Mit HxD untersucht, keine PB Artefakte
-	Snapshot 2:
-		> unverändert zu 2
-	Snapshot 3-1:
-		> unverändert zu 3
-	Snapshot 3-2:
-		> unverändert zu 3-1
-	Snapshot 4:
-		> unverändert zu 3-2
+\paragraph*{Web Bookmarks}
+Wie in Abbildung X (TODO!) gezeigt, wurden nur in der Datei \texttt{Bing.url} ein Leesezeichen zur Bing-Startseite gefunden. Diese Datei wurde im Festplatten-Image des ersten Snapshots geschrieben.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_bookmarks.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web Bookmarks}
+\end{figure}
+
+\paragraph*{Web Cookies}
+Im Festplatte-Image des ersten VM-Snapshots wurden neun Cookies-Einträge in die Datenbank von des vorinstallierten Edge Browsers geschrieben. Dabei handelt es sich um Cookies für die Bing- und Outlook-Startseite.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_cookies.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web Cookies}
+\end{figure}
+
+\paragraph*{Web History}
+Zwei Einträge mit Browsingverläufen wurden im Festplatten-Image des ersten VM-Snapshots in der Datei \texttt{WebCacheV01.dat} geschrieben. Dabei handelt es sich zweimal um die Outlook-Startseite, obwohl diese nie bei der Versuchsdurchführung geöffnet wurde. Wie bei Firefox in Kapitel X (TODO!) wurden in der Datei ebenfalls die zum Analyserechner über den gemeinsamen Ordner transportierten Process Monitor Logfiles gespeichert.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_history.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web History}
+\end{figure}
+
+\paragraph*{Web Categories}
+Autopsy klassifizierte im Festplatten-Image des ersten VM-Snapshots den Eintrag \texttt{bing.com} als "Suchmaschine"  und \texttt{live.com} als "Web-Email".
+Es gab keine zusätzlichen Einträge in dieser Kategorie in den Festplatten-Images der restlichen Snapshots.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_categories.png}}}
+	\label{chart:final-criteria}  
+	\caption{Autopsy Web Categories}
+\end{figure}
 		
-Zusammenfassung:
-- keine PB Artefakte
-- Keine neuen Erkenntnisse vgl. mit intensiver Analyse mittels Process Monitor in Kapitel X
-- .onion URL Einträge in places.sql nicht erkannt
+Somit wurden in den von Autopsy kategorisierten Dateien keine PB Artefakte entdeckt. Weiterhin gab es verglichen mit der Analyse der Common Locations keine neuen Erkenntnisse. Autopsy registrierte nicht die in der places.sqlite Datenbank geschriebenen .onion-URLs der Tor-Standardseiten.
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 
@@ -638,101 +597,90 @@ Zusammenfassung:
 %		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsubsection*{Analyse mit Volatility}
-			Nachdem die Firefox Festplattenabbilder als Uncommon Location mit Autopsy untersucht wurden, werden nachfolgend die Analyseergebnisse des RAMs als Uncommon Location beschrieben. 
-			Dazu wurde eine Stringsuche im gesamten RAM nach PB Artefakten durchgeführt.
-			Wie in Kapitel X ausführlich beschrieben muss ein gefundener String eindeutig einem Browser zugeordnet werden können. 
-			
-			Deshalb wurde dazu das Volatility PlugIn "Yarascan" verwendet, ein Werkzeug um nach bestimmten Mustern im RAM zu suchen. Dazu wurden die in Tabelle X aufgeführten Yara-Regeln verwendet.
-			Wie in Kapitel Methodik (TODO!) beschrieben, wird davon ausgehend das PlugIn "pslist" verwendet, um den Prozessnamen anhand PID zu identifizieren.
-			Die Ergebnisse dieser Stringsuche sind nachfolgend nach Kategorie geordnet.
 
+Nachfolgend werden die Ergebnisse der Analyse des RAMs mithilfe Volatility beschrieben. 
 
-Vorgehen: Siehe "Methodik" Kapitel
-	- Ausgangslage: Volatility Yarascan Treffer
-	- Für jeden Treffer: virtueller Offset des Strings, PID, getriggerte Yararule, getriggerte Yara Component z(= Variablenname des gesuchten Strings), gefundener String
-	- Neue Spalte: "Prozessname" -> zu jeder PID Prozessnamen
-	- Ergebnisse Aufbereitet nach folgendem Schema:
-		> Für jeden RAM Dump
-		> Für jede Yararule
-		> Für jede Component
-		> Filter: Prozessname = Firefox -> Anzahl zählen
-		> Filter: Prozessname = Alle Prozesse außer Firefox -> Anzahl zählen
+\paragraph*{Yararule HTML}
+Wie bei Firefox in Kapitel X (TODO!) konnten keine HTML Artefakte im RAM gefunden werden. Deshalb wird diese Kategorie nicht aufgeführt.
 
-Wie bei Firefox: HTML Artefakte wurden in keinem RAM Dump gefunden => Nicht aufgeführt
+\paragraph*{Yararule Keyword}
+Wie in Abbildung X gezeigt, wurden ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Erstellen einer "Neuen Identität" (RAM Dump 3-1) Keyword Artefakte gefunden.
+Nachdem eine "Neue Identität" erstellt wurde reduzierten sich die gefundenen Artefakte deutlich. 
+Die Keyword-Artefakte wurden hauptsächlich in Firefox Prozessen gefunden. Kein Artefakt war im Tor.exe Prozess zu finden.
+Mit 4833 Artefakten wurden am häufigsten "pfaffenhofen" nach dem Browsing Szenario im zweiten RAM-Dump gefunden. 
+Nach dem Schließen des Tor-Browsers wurde keine Keyword Artefakte mehr im RAM identifiziert.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/keywords.png}}}
+	\label{chart:final-criteria}  
+	\caption{Keywords}
+\end{figure}
 
-Yararule "Keyword":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/keywords.png}}}
-		\label{chart:final-criteria}  
-		\caption{Keywords}
-	\end{figure}
-	Analyse:
-		> Ausschließlich in RAM Dump 2 und RAM Dump 3-1 Keyword Artefakte gefunden
-		> In RAM Dump 3-1 bei jedem Keyword deutlich weniger Artefakte als in RAM Dump 2 => Identitäts-Reset reduziert Keyword Artefakte deutlich
-		> Hauptsächlich in Firefox Prozess, kein Artefakt in Tor.exe Prozess
-		> Mit 4833 Artefakten in RAM Dump 2 am häufigsten "pfaffenhofen" vertreten. Vermutung: Evtl. weil Google Maps viele zusätzliche Artefakte lädt. 
-		> Nach Schließen von Tor Browser: keine Keyword Artefakte mehr in RAM
-		
-Yararule "URL":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/url.png}}}
-		\label{chart:final-criteria}  
-		\caption{URL}
-	\end{figure}
-	Analyse:
-		> Wie bei Yararule "Keyword": Ausschließlich in RAM Dump 2 und RAM Dump 3-1 Keyword Artefakte gefunden
-		> In RAM Dump 3-1 bei jedem Keyword deutlich weniger Artefakte als in RAM Dump 2 => Identitäts-Reset reduziert URL Artefakte deutlich
-		> Hauptsächlich in Firefox Prozess, danach am häufigsten Tor.exe Prozess und am wenigsten Artefakte in anderen Prozessen
-		> Bemerkenswert: "mallofamerica.com" ist mit 26.505 mal in RAM Dump 2 am häufigsten als Artefakt gefunden worden. Vergleich: "mooserliesl.de" wurde nur 508 mal in RAM Dump 2 gefunden
-		> Nach Schließen von Tor Browser: keine URL Artefakte mehr in RAM
-		
-		> TODO: DNSCache?
+\paragraph*{Yararule URL}
+Wie bei der "Keyword" Yararule wurden ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Ebenso wurden im RAM Dump 3-1 bei deutlich weniger Artefakte URLs als in RAM Dump 2 gefunden. 
+Für diese Yara-Regel wurden nach Firefox-Prozessen hauptsächlich Artefakt in Tor-Prozessen gefunden. Am wenigsten Artefakte waren in anderen Prozessen zu finden.
+Auffällig ist, dass die URL "mallofamerica.com" 26.505 mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde "mooserliesl.de" nur 508 mal im zweiten RAM Dump  gefunden. Nach Schließen des Tor-Browsers wurden keine URL Artefakte mehr im RAM gefunden.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/url.png}}}
+	\label{chart:final-criteria}  
+	\caption{URL}
+\end{figure}
 
-Yararule "Mail":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/mail.png}}}
-		\label{chart:final-criteria}  
-		\caption{Mail}
-	\end{figure}
-	Analyse:
-		> Alle Mail Artefakte gefunden
-		> Artefakte ausschließlich in Firefox Prozess gefunden
-		> Artefakte fast ausschließlich in RAM Dump 2 Mail gefunden
-		> Nur die Absenderadresse "computerforensikvl@gmail.com" wurde nach Identitäts-Reset in RAM Dump 3-1 gefunden
-		> Absenderadresse ist häufigstes Mail Artefakt
-		> Bemerkenswert: Passwort wurde 2x als Klartext im RAM gefunden!
-			String Kontext:
-				Offsets:		PIDs:
-				0xb9ce29180c8	7420
-				0x2859f4ffd4e0	7420
-				0x24083b41858	8424
-				0x240840e5b08	8424
-				
-Yararule "Image":
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/image.png}}}
-		\label{chart:final-criteria}  
-		\caption{Image}
-	\end{figure}
-	Analyse:
-		> Hex-Wert von Donaukurier Bild wurde ein einzigees mal im 2. RAM Dump in einem Firefox Prozess gefunden
+\paragraph*{Yararule Mail}
+Nach dem Browsing-Szenario, vor Zuweisung einer "Neuen Identität" (RAM-Dump 2) konnten alle Mail Artefakte gefunden werden.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/mail.png}}}
+	\label{chart:final-criteria}  
+	\caption{Mail}
+\end{figure}
+Wie in Abbildung X zu sehen ist, wurden die Artefakte ausschließlich in Firefox Prozess gefunden.
+Nur die Absenderadresse "computerforensikvl@gmail.com" wurde nach Erstellen der neuen Identität in RAM-Dump 3-1 gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene Mail Artefakt.
+Wie bei Firefox in Kapitel X (TODO!) wurde das Passwort als Klartext nach dem Browsing-Szenario im zweiten RAM-Dump gefunden.
+Das Passwort wurde in zwei Mal im Firefox Prozess mit der PID 708 gefunden. Tabelle X zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe sowie deren Abbildung auf die mittels "memmap" identifizierten Byte-Offsets der extrahierten Speicherseiten.
+\begin{table}[]
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|c|c|c|ll}
+\cline{1-3}
+\textbf{Virtuelle Speicheradresse} & \textbf{PID} & \textbf{Byte-Offset in extrahierter Speicherseite} &  &  \\ \cline{1-3}
+0x2b1e2c22318                      & 708         & 0xea0318                                         &  &  \\ \cline{1-3}
+0x2b1e2ecb748                     & 708         & 0x10f7748                                         &  &  \\ \cline{1-3}
+\end{tabular}
+}
+\end{table}
+Bei Untersuchung des String-Kontexts wurden für das Passwort am Byte-Offset \texttt{0xea0318} wie in Abbildung X gezeigt keine Auffällige Artefakte entdeckt.
+\begin{figure}[h!]
+	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/tor/password_0xea0318.png}}}
+	\label{chart:final-criteria}  
+	\caption{Password in memory page of PID 708 at Byte-Offset 0xea0318}
+\end{figure}
+Wie in Abbildung X gezeigt, wurde im Bereich des gefundenen Passworts am Byte-Offset \texttt{0x10f7748} der String "CSP\_ignoringSrcForStrictDynamic", dessen Bedeutung nicht bestimmt werden konnte.
+Weiterhin wurde die Zeichenkette "invalidation/lcs/client" in der Nähe des Passworts gefunden. Dieser String wird in einem Firefox Bug-Ticket verwendet, welches vor 2017 geschlossen wurde. Der Bug betraf ein Speicher-Leck.
+% https://bugzilla.mozilla.org/show_bug.cgi?id=1452114
+\begin{figure}[h!]
+	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/tor/password_0x10f7748.png}}}
+	\label{chart:final-criteria}  
+	\caption{Password in memory page of PID 708 at Byte-Offset 0x10f7748}
+\end{figure}
 	
+\paragraph*{Yararule Image}
+Wie in Abbildung X dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos  ein einziges Mal nach dem Browsing Szenario, vor Erstellen der "Neuen Identität" im zweiten RAM-Dump in einem Firefox Prozess gefunden.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/image.png}}}
+	\label{chart:final-criteria}  
+	\caption{Image}
+\end{figure}
 
-Zusammenfassung = Stacked Bar Chart:
+
+Wie in Abbildung X zusammenfassend gezeigt ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach (RAM-Dump 3-1) Zuweisung einer "Neuen Identität" Brwosing Artefakte im Arbeitsspeicher gefunden.
+Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
+Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
+Die Erstellung einer "Neuen Identität" reduzierte dabei deutlich die gefundenen Artefakte im RAM.
+In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario besuchten Seiten identifiziert werden. Weiterhin wurde zwei Mal das Passwort des Google-Accounts im Klartext gefunden.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/summary.png}}}
 	\label{chart:final-criteria}  
 	\caption{Summary}
 \end{figure}
-- PB Artefakte ausschließlich in RAM Dump 2 und 3-1 gefunden
-- Nach Identitäts-Reset deutlich weniger Artefakte in vorhanden
-- Am meisten URL-Artefakte gefunden, wobei mallofamerica.com dominant 
-- HTML Artefakte wurden in keinem RAM Dump gefunden
-
-
-TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
-
-Literatur:
+%Literatur:
 %o Autopsy: \cite{Muir.2019}
 %	•	Configuration files, downloaded files, and browserrelated data are recoverable from the file system.
 %	•	Significant data-leakage from the browsing session occurred: HTTP header information, titles of web pages and an instance of a URL were found in registry files, system files, and unallocated space.
@@ -764,60 +712,23 @@ Literatur:
 
 \subsection*{Registry}
 
-			Die Analyse der Registry zählt gemäß Methodik in Kapitel X sowohl zu den Common als auch Uncommon Locations 
+Wie in der Methodik in Kapitel X beschrieben, teilt sich die Analyse der Registry sowohl Common als auch Uncommon Locations. 
 
 \subsubsection*{Process Monitor SetValue Operations}
 
-			Als Teil der Common Locations werden für Firefox alle Registry "SetValue" Schreiboperationen der beiden Process Monitor Logfiles untersucht.
+Bei Betrachtung als Common Locations werden gemäß Methodik in Kapitel X alle "SetValue" Schreiboperationen in den Process Monitor Logfiles für die Prozesse "tor.exe" und "firefox.exe" untersucht. 
 
-> Process Monitor: SetValue Operationen von Browser 
-	Kategorien Registry Keys: Analog zu Firefox
-	1) PreXULSkeletonUISettings:
-		> Prefix: Absoluter Installationspfad von Firefox
-		> Skeleton UI Einstellungen von Firefox % https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
-			Definition:
-				> Der "PreXULSkeletonUISettings" Registry Key enthielt Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte "Skeleton UI". Das Skeleton UI ist eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. Es besteht aus grundlegenden Steuerelementen und Elementen, die dem Benutzer die Interaktion ermöglichen, während der Rest der Benutzeroberfläche noch geladen wird.
-				> Der "PreXULSkeletonUISettings"-Schlüssel enthielt Konfigurationsoptionen wie Farben, Positionen und andere Einstellungen für das Skeleton UI. Durch das Bearbeiten dieses Schlüssels konnten Benutzer die Darstellung des Skeleton UI anpassen. Es ist jedoch wichtig zu beachten, dass das Ändern der Registrierungseinträge ein fortgeschrittenes Verfahren ist und Fehler zu Problemen mit dem Browser führen kann.
-			
-		> Struktur der Keys: % HKCU\SOFTWARE\Mozilla\Firefox\PreXULSkeletonUISettings\C:\Program Files\Mozilla Firefox\firefox.exe|<UI Einstellung>
-		> Unterschiedliche UI Einstellungen
-			- % ScreenX (DWORD)
-			- % ScreenY (DWORD)
-			- % Width (DWORD)
-			- % Height (DWORD)
-			- % Maximized (DWORD)
-			- % Flags (DWORD)
-			- % CssToDevPixelScaling (REG_BINARY)
-			- % UrlbarCSSSpan (REG_BINARY)
-			- % SearchbarCSSSpan (REG_BINARY)
-			- % SpringsCSSSpan (REG_BINARY)
-		> keine PB Artefakte unter UI Einstellungen	
-	2) Business Activity Monitoring % https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
-		> Quelle: % https://notes.qazeer.io/dfir/windows/_artefacts_overview
-		> BAM is a mostly undocumented feature that controls the programs executed in the background. DAM is a feature for devices supporting the "Connected Standby" mode (i.e when a device is turned on, but its display will be turned off). As a result, the BAM registry keys will contain data on any devices, while DAM registry keys will only contain data on mobile devices.
-		> The BAM registry key contains multiple subkeys under bam\\State\\UserSettings, with one subkey per user, identified with the user SID. While the key is in the SYSTEM registry hive, program executions can thus still be tied to a specific user using this SID.
-		> Each user-specific key contains a list of executed programs, with their full path and timestamp of last execution.
-		> If a file is deleted, the eventual associated entry in the BAM is deleted as well after the system reboot. Additionally, BAM entries older than 7 days are deleted upon system boot. The BAM thus provides limited information on historic execution of programs
-		> No entries are created in the BAM keys for executables on removable media and/or on network shares.
-		> Key: %  HKLM\System\CurrentControlSet\Services\bam\State\UserSettings\S-1-5-21-588412547-2749917301-3803556669-1001\\Device\HarddiskVolume2\Program Files\Mozilla Firefox\firefox.exe (REG_BINARY)
-
-Quantitativ: (Diagramme)
-	- Stacked Balkendiagramm jeweils für Logfile 1 und Logfile2: Anteil Kategorie 1 bzw.2 an allen Registry-Schreiboperationen
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
+Dabei wurden die gleichen beiden Registry Keys identifiziert, wie es bereits bei Untersuchung der Firefox Registry in Kapitel X (TODO!) der Fall war: \texttt{PreXULSkeletonUISettings} und \texttt{Business Activity Monitoring}. In keinem Registry-Key befinden sich PB Artefakte.
+Wie in Abbildung X dargestellt, wurden beide Registry Keys annähernd gleich oft geschrieben. Bei Vergleich der drei Process Monitor Logfiles 1, 2 und 3 nimmt Anzahl der Registry "SetValue"-Operationen bei Logfile 2 und 3 kontinuierlich ab.
+\begin{figure}[h!]
+	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
+	\label{chart:final-criteria}  
+	\caption{Comparison of found PB artifacts between RAM Dumps}
+\end{figure}
 
 \subsubsection*{Stringsuche in Registry Hives}
-
-		Gemäß Methodik in Kapitel X wird die Firefox Registry als Uncommon Location behandelt, indem über alle auf der Festplatte vorhandenen Registry Datenbanken, den Registry-Hives, eine Stringsuche durchgeführt wird, ohne die Struktur der Hives zu beachten. 
-		Dazu wurden sowohl die System-Hives als auch die User-Hives aus Tabelle X (TODO!) aus jedem Snapshot extrahiert und mithilfe des Registry Explorers nach PB Artefakten durchsucht.
-		Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
-			
-		> Stringsuche in Registry Hives mit Registry Explorer (Siehe Liste)
-		In allen Hives kein Treffer für alle Suchbegriffe
-
+Bei Betrachtung der Registry als Uncommon Locations, wurden die in Tabelle X im Kapitel der Methodik X aufgelisteten Registry-Hives mithilfe des Registry Explorers untersucht. 
+Weder in den System-Hives noch in den User-Hives konnte in keinem Festplatten-Image PB Artefakte identifiziert werden. 
 
 
 %Literatur:
