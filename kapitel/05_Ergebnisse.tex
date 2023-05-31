@@ -479,10 +479,8 @@ Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und 
 Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt % https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589
 . In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
 	
-\subsubsection*{SQLite Datenbänke}
-			Wie in Kapitel X (Methodik, TODO!) erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten genauer untersucht. Mithilfe der Process Monitor Logfiles wurden die in Tabelle X dargestellten SQLite-Datenbanken für Firefox identifiziert:		
- 
-Aus Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel X (TODO!) verwaltet und beschreibt.
+\subsubsection*{SQLite Datenbänke} 
+Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel X (TODO!) verwaltet und beschreibt.
 			
 Wie bei der Analyse der SQLite-Datenbanken bei Firefox wird die Entwicklung von Dateiinhalt in allen fünf Festplatten-Images der Snapshots 1, 2, 3-1, 3-2 und 4 betrachtet. Die Ergebnisse sind in Tabelle X (TODO!) dargestellt.
 \begin{figure}[h!]
@@ -529,9 +527,8 @@ Im Balkendiagramm X (TODO!) ist zu erkennen, dass die meisten Schreiboperationen
 %	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
 
 \subsection*{Uncommon Locations}
-			Nachfolgend werden die Analyseergebnisse der Firefox Uncommon Locations beschrieben.
-			Wie in Kapitel X erläutert, wird im Gegensatz zu Common Locations die Suchrichtung umgekehrt und es werden alle gesammelten Daten nach einem spezifischen PB Artefakt durchsucht.
-			Somit benötigt ein Forensiker kein Wissen über das Browserverhalten. Stattdessen wird sich auf die Vollständigkeit der Funktionen von Forensik-Tools verlassen. Im Rahmen dieses Versuchs werden die Tools Autopsy und Volatility verwendet.
+Nachfolgend werden die Analyseergebnisse der Tor Uncommon Locations beschrieben.
+Dazu werden die vollständigen Speicherabbilder nach PB Artefakten untersucht ohne das genaue Browserverhalten zu berücksichtigen. Stattdessen wird sich auf die Vollständigkeit der Funktionen der Forensik-Tools Autopsy und Volatility verlassen.
 
 \subsubsection*{Analyse mit Autopsy}
 
