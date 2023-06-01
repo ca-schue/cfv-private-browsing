@@ -2,28 +2,27 @@
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{}%
 \contentsline {chapter}{\numberline {2}Theoretischer Hintergrund}{4}{}%
 \contentsline {section}{\numberline {2.1}Private Browsing}{4}{}%
-\contentsline {section}{\numberline {2.2}Angreifermodell}{6}{}%
-\contentsline {section}{\numberline {2.3}Private Browsing Artefakte}{8}{}%
-\contentsline {chapter}{\numberline {3}Ziel der Arbeit}{13}{}%
-\contentsline {chapter}{\numberline {4}Methodik}{16}{}%
-\contentsline {section}{\numberline {4.1}Vorbereitung}{16}{}%
-\contentsline {subsection}{\numberline {4.1.1}Browserauswahl}{16}{}%
-\contentsline {subsection}{\numberline {4.1.2}Browsing Szenario}{18}{}%
-\contentsline {subsection}{\numberline {4.1.3}Analysewerkzeuge}{20}{}%
-\contentsline {section}{\numberline {4.2}Datensammlung}{22}{}%
-\contentsline {section}{\numberline {4.3}Datenanalyse}{24}{}%
-\contentsline {subsection}{\numberline {4.3.1}Common Locations}{24}{}%
-\contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{28}{}%
-\contentsline {subsection}{\numberline {4.3.3}Registry}{30}{}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{33}{}%
-\contentsline {section}{\numberline {5.1}Firefox}{33}{}%
-\contentsline {section}{\numberline {5.2}Tor}{47}{}%
-\contentsline {section}{\numberline {5.3}Chrome}{56}{}%
-\contentsline {section}{\numberline {5.4}Brave}{56}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{57}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{58}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{60}{}%
-\contentsline {chapter}{Appendices}{61}{}%
-\contentsline {chapter}{Literaturverzeichnis}{64}{}%
-\contentsline {chapter}{\nonumberline Literatur}{64}{}%
+\contentsline {section}{\numberline {2.2}Angreifermodell}{4}{}%
+\contentsline {section}{\numberline {2.3}Private Browsing Artefakte}{4}{}%
+\contentsline {chapter}{\numberline {3}Ziel der Arbeit}{5}{}%
+\contentsline {chapter}{\numberline {4}Methodik}{6}{}%
+\contentsline {section}{\numberline {4.1}Vorbereitung}{6}{}%
+\contentsline {subsection}{\numberline {4.1.1}Browserauswahl}{6}{}%
+\contentsline {subsection}{\numberline {4.1.2}Browsing Szenario}{7}{}%
+\contentsline {section}{\numberline {4.2}Datensammlung}{11}{}%
+\contentsline {section}{\numberline {4.3}Datenanalyse}{13}{}%
+\contentsline {subsection}{\numberline {4.3.1}Common Locations}{13}{}%
+\contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{15}{}%
+\contentsline {subsection}{\numberline {4.3.3}Registry}{16}{}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{18}{}%
+\contentsline {section}{\numberline {5.1}Firefox}{18}{}%
+\contentsline {section}{\numberline {5.2}Tor}{25}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{30}{}%
+\contentsline {section}{\numberline {5.4}Brave}{30}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{31}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{32}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{34}{}%
+\contentsline {chapter}{Appendices}{35}{}%
+\contentsline {chapter}{Literaturverzeichnis}{49}{}%
+\contentsline {chapter}{\nonumberline Literatur}{49}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
