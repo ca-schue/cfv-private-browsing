@@ -1,5 +1,5 @@
 \chapter{Methodik}
-
+\label{chapter:methodik}
 In der Browserforensik ist eine definierte Methodik notwendig, um die Komplexität moderner Browser zu bewältigen. Sie bildet bildet eine wissenschaftliche Basis für den durchgeführten Versuch sowie einen Leitfaden für Ermittler bei zukünftigen Untersuchungen. \cite{Aggarwal.2010, Izzati.2022, Horsman.2019}	
 Ein oft verwendetes Vorgehensmodell in der Computer Forensik ist das "Generic Model Computer Forensics Investigations", kurz GCFIM. \cite{Yusoff.2011}
 %Ähnlich zum "abschnittsbasierter Verlauf einer forensischen Untersuchung" des Bundesamt für Sicherheit in der Informationstechnik ist es in Phasen mit definierten Abläufen gegliedert.
@@ -16,11 +16,11 @@ Izzati et al. haben diese Phasen auf Browserforensik abgebildet: \cite{Izzati.20
 Die Dokumentationsphase entspricht in dieser Arbeit dem Kapitel "Vergleich der Browser" (TODO!). Die Methodik der anderen Phasen wird nachfolgend beschrieben.
 
 \section{Vorbereitung}
-
+\label{section:methodik-vorbereitung}
 In der Vorbereitungsphase wird der durchgeführte Versuch geplant sowie die Versuchsumgebung konfiguriert. \cite{Izzati.2022} Die Versuchsplanung umfasst die Auswahl von Browsern und Tools sowie die Definition der durchzuführenden Schritte zur Kontaminierung des Rechners. Die Konfiguration der Versuchsumgebung umfasst die Installation und Konfiguration der notwendigen Software und Hardware.
 
 \subsection{Browserauswahl}
-
+\label{section:methodik-vorbereitung-browserauswahl}
 Für diese Arbeit dazu entschieden: zwei weit verbreitete Brower verwenden + zwei Browser mit verstärkem Schutz der Privatsphäre.
 
 Dazu: Google Chrome und Mozilla Firefox ausgewählt.
@@ -30,7 +30,7 @@ Basierend auf Chromium wird der Browser "Brave" gewählt.
 Für Firefox wird der Tor-Browser gewählt, eine modifizierte Version von Firefox.
 
 \subsubsection*{Firefox}
-
+\label{subsubsection:methodik-vorbereitung-browserauswahl-firefox}
 Der Browser Mozilla Firefox, kurz Firefox, ist ein open-source Webbrowser der gemeinnützigen Organisation Mozilla. 
 *** TODO: Hier Verweis auf Literatur **
 Firefox hat die Funktion des "privaten Modus". Diese ermöglicht es, ohne Speicherung von Verlaufsdaten und Cookies zu im Internet zu Browsen.
@@ -42,7 +42,7 @@ Es wird ausdrücklich darauf hingewiesen, dass die besuchten Webseiten und Ihr I
 % Für diesen Versuch: Firefox Version 112.0.2 (64 Bit)
 
 \subsubsection*{Tor}
-
+\label{subsubsection:methodik-vorbereitung-browserauswahl-tor}
 Der Tor Browser, ist ein auf Firefox basierender Webbrowser, der das Tor-Netzwerk nutzt.
 Im Gegensatz zu Firefox wird hier mit Schutzmaßnahmen gegen den Webangreifer geworben.
 Internetaktivitäten aufgrund des Tor-Netzwerks nicht verfolgt werden.
@@ -58,11 +58,14 @@ Die Funktion "Neue Identität" im Tor Browser ermöglicht es, alle aktuellen Tab
 %Für diesen Versuch: Tor Version 12.0.4 (64 Bit)
 
 \subsubsection*{Chrome}
+\label{subsubsection:methodik-vorbereitung-browserauswahl-chrome}
 
 \subsubsection*{Brave}
+\label{subsubsection:methodik-vorbereitung-browserauswahl-brave}
 
 \subsection{Browsing Szenario}
-
+\label{subsection:methodik-vorbereitung-browsing-szenario}
+%*** TODO: Edge vorinstalliert erwähnen ***
 % > Image als Hex: \cite{Ohana.2013}
 Im Falle der Browser-Forensik werden eine Reihe von Aktivitäten definiert, die für jeden zu untersuchenden Browser durchgeführt werden, das sog. "Browsing Szenario".
 Es wird somit definiert, mit welchen Daten der Rechner kontaminiert werden soll.
@@ -140,7 +143,7 @@ Bild                         & \begin{tabular}[c]{@{}l@{}}0x89 0x50 0x4E 0x47 ..
 
 
 \subsection*{VM Konfiguration}
-
+\label{subsection:methodik-vorbereitung-vmkonfiguration}
 Best Practice in Browser Forensik: Versuche sowie Analysen in virtualisierter Umgebung durchführen. (TODO: Quellen)
 - Dadurch Reproduzierbarkeit der Ergebnisse sichergestellt
 - Keine Vermischung der PB Artefakte, wenn gleicher Rechner zur Analyse verwendet
@@ -180,13 +183,14 @@ Nachdem OVA mit Standardkonfiguration erstellt: Für jeden Browser dupliziert un
 \end{enumerate}
 
 \subsection*{Verwendete Software}
-
+\label{subsection:methodik-vorbereitung-verwendetesoftware}
 Neben Konfiguration der VM muss Analyseumgebung vorbereitet werden.
 Als Analyseumgebung dient der Rechner, auf dem die VM läuft.
 Spezifikationen: *** TODO ***
 Dazu: Diverse Tools zur Analyse installieren
 
 \subsubsection*{Autopsy}
+\label{subsubsection:methodik-vorbereitung-verwendetesoftware-autopsy}
 Um erstellte Festplattenabbilder zu untersuchen: Tool "Autopsy" verwendet.
 = Source-Digital-Forensik-Tool, das auf der Sleuthkit-Bibliothek basiert, diese mit zusätzlichen Funktionen erweitert und eine grafische Benutzeroberfläche für die forensische Analyse bietet.  
 = Sammlung Befehlszeilen-Tools für die forensische Analyse von Dateisystemen. 
@@ -194,6 +198,7 @@ Um erstellte Festplattenabbilder zu untersuchen: Tool "Autopsy" verwendet.
 %Für diesen Versuch verwendet: Version 4.20.0
 
 \subsubsection*{Volatility}
+\label{subsubsection:methodik-vorbereitung-verwendetesoftware-volatility}
 Um Abbilder des Arbeitsspeichers zu untersuchen: "Volatility"-Framework verwendet.
 = Open-Source-Tool, das speziell darauf ausgerichtet ist, Informationen und Artefakte aus dem physischen oder virtuellen Arbeitsspeicher eines Computers zu extrahieren.
 Geschrieben in Python, frei auf GitHub verfügbar:	
@@ -217,7 +222,7 @@ Volatility basiert auf Plugins, welche spezifische Funktionen und Analysen für 
 Genaue Beschreibung der PlugIns und deren Zusammenhang: Siehe Analysephase in Kapitel X (TODO!).
 
 \subsubsection*{Sonstige Tools}
-
+\label{subsubsection:methodik-vorbereitung-verwendetesoftware-sonstigetools}
 Tabelle X listet zusammenfassend alle in diesem Versuch verwendeten Software-Programme, deren Zweck sowie Version auf.
 Darunter diverse zusätzliche unterstützende Tools, welche zur vollständigen Analyse benötigt werden
 
@@ -247,16 +252,19 @@ dejsonlz4                               & Dekomprimierung von .jsonlz4-Dateien  
 
 
 \section{Datensammlung}
+\label{section:methodik-datensammlung}
 In der Phase der Datensammlung werden alle potenziellen Beweismittel identifiziert und in einem analysierbaren Format gesichert.\cite{Izzati.2022}
 
 Für diesen Versuch umfasst dies die Durchführung des Browsing Szenarios sowie die Sammlung von Ressoucen, die potentielle private Browsing Artefakte enthalten.
 
 \subsection*{Process Monitor Logfiles}
+\label{subsection:methodik-datensammlung-processmonitorlogfiles}
 Um das Verhalten von privaten Browsingmodi möglichst vollständig zu untersuchen, schlagen Fayyad-Kazan et al. \cite{Fayyad.2021} vor, alle Aktivitäten des Browsers während Browsing-Szenarios aufzeichnen.
 Dazu werden mit dem Tool "Process Monitor" alle Prozess-Aktivitäten zwischen zwei Zeitpunkten als "Process Monitor Logfile" (PML) oder CSV-Datei gespeichert. \cite{Fayyad.2021, Rochmadi.2017}
 Die PML-Dateien werden mithilfe des gemeinsamen Ordners auf den Analyserechner transportiert.
 
-\subsection*{Erstellen der Speicherabbilder}
+\subsection*{Speicherabbilder}
+\label{subsection:methodik-datensammlung-speicherabbilder}
 Eine der Hauptaufgaben eines Computer-Forensischen-Ermittlers ist die Erstellung und Analyse von direkten Kopien der Speichermedien des untersuchten Rechners. \cite{Hassan.2019}
 Im Falle der Browser Forensik werden Abbilder der Festplatten und des Arbeitsspeicher erstellt und analysiert.
 
@@ -316,6 +324,7 @@ Dieses Vorgehen zur Datensammlung wird bei allen Browsern durchgeführt. Einzig 
 Bei Durchführung des Browsing-Szenarios für den Firefox-Browser wurde nach erstmaligem Öffnen des Browsers automatisch die Firefox Datenschutz-Webseite \texttt{https://www.mozilla.org/de/privacy/firefox/} im nicht-privaten Modus geöffnet. 
 
 \section{Datenanalyse}
+\label{section:methodik-datenanalyse}
 Nachdem Daten in Form von Process Monitor Logfiles und Festplatten- sowie RAM-Speicherabbildern gesammelt: in gesammelten Daten nach Strings in Tabelle X aus Kapitel X (TODO!) suchen. 
 
 Um die Analyse zu vereinfachen: die gesammelten Daten des Versuchs lassen sich in drei Kategorien aufteilen:
@@ -324,9 +333,8 @@ Um die Analyse zu vereinfachen: die gesammelten Daten des Versuchs lassen sich i
 > Registry
 
 \subsection{Common Locations}
-
+\label{subsection:methodik-datenanalyse-commonlocations}
 *** TODO: Wichtig: NUR FESTPLATTE, NICHT RAM ***
-
 Die sogenannten "Common Locations", (dt. "gängige Speicherorte") beziehen im Zusammenhang der Browserforensik auf die standardmäßigen Verzeichnisse eines Browsers, beispielsweise Ordner von Browsern zur Verwaltung von Nutzerdaten.
 Untersucht werden Common Locations mittels "Whitebox-Analyse" \cite{Bonetti.2014}
 Der Fokus liegt darauf, das System vollständig zu verstehen und alle relevanten Beweise zu sammeln.
@@ -340,8 +348,7 @@ Dazu sind zwei Schritte notwendig:
 \end{enumerate}
 
 \subsubsection*{Process Monitor Logfiles}
-
-
+\label{subsubsection:methodik-datenanalyse-commonlocations-processmonitorlogfiles}
 \paragraph*{Identifikation der Common Locations}
 Um die gängigen Browserpfade und -dateien zu identifizieren, werden die in den Process Monitor Logfiles aufgezeichneten Schreibaktivitäten der Browserprozesse ausgewertet.
 
@@ -379,7 +386,7 @@ Nachdem die Datei extrahiert wurde und ggf. mit einem Tool zu Analyse vorberarbe
 \end{figure}
 
 \subsubsection*{SQLite-Datenbänke}
-
+\label{subsubsection:methodik-datenanalyse-commonlocations-sqlitedbs}
 Eine besondere Rolle unter den Common Locations bei Browsern nehmen SQLite Datenbänke ein. 
 Sie ermöglichen Browsern das Speichern und Verwalten von Nutzerinformationen, wie Lesezeichen, Browserverlauf, Caches, Cookies in Datenbankdateien zu speichern, ohne einen separaten Datenbankserver zu benötigen.
 
@@ -398,6 +405,7 @@ Um potentielle PB Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 \end{figure}
 
 \subsection{Uncommon Locations}
+\label{subsection:methodik-datenanalyse-uncommonlocations}
 Ungewöhnliche Speicherorte beziehen sich auf Verzeichnisse, die nicht zu den gängigen Speicherorten gehören. 
 Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
 Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der "Blackbox-Analyse" untersucht \cite{Bonetti.2014}:
@@ -405,6 +413,7 @@ Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB Artefakten übe
 Dies ist nur durch Unterstützung mit Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations in die Vollständigkeit der Tools vertraut.
 
 \subsubsection*{Analyse mit Autopsy}
+\label{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy}
 Bei den Uncommon Locations wird Autopsy als forensisches Werkzeug zur Analyse der Festplatten-Images verwendet.
 Dazu wird eine Stichwortsuche mit den in Tabelle X definierten PB Artefakten über das gesamte eingelesene Festplatten-Image durchgeführt.
 
@@ -425,6 +434,7 @@ Zusätzlich kategorisiert Autopsy automatisch die Dateien eines Festplatten-Imag
 
 
 \subsubsection*{Analyse mit Volatility}
+\label{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility}
 Bei der Analyse des Arbeitsspeichers als Uncommon Location ist es kritisch, dass ein gefundener String eindeutig einem Browserprozess zugeordnet werden kann. 
 
 In der Literatur wird der Arbeitsspeicher oft unzureichend analysiert, indem eine Stringsuche im RAM-Dump durchgeführt ist, der als Binärdatei in einem Hexadezimaleditor geöffnet ist. \cite{Rochmadi.2017, Md.2018, Montasari.2015}
@@ -464,6 +474,7 @@ Diese Seite kann mithilfe des "--dump" Flags extrahiert werden: \texttt{vol.py -
 In einem Hexadezimaleditor, wie HxD, kann der String-Treffer anhand des ermittelten Byte-Offsets in der Speicherseite untersucht werden.
 
 \subsection{Registry}
+\label{subsection:methodik-datenanalyse-registry}
 Die letzte Kategorie analysierter Daten umfasst die Artefakte der Registry.
 Diese zählen sowohl zu den Common als auch Uncommon Locations und werden deshalb eigene Kategorie aufgeführt.
 
@@ -487,7 +498,7 @@ Dabei wird zwischen Hives zur Speicherung von Systemeinstellungen (System-Hives)
 Zur Analyse wird jeder Hive aus den Fesplatten-Images extrahiert und in eine Registry Explorer Sitzung geladen und eine Stringsuche nach PB Artefakten durchgeführt.
 
 \begin{table}[h!]
-%\resizebox{\linewidth}{!}{
+\resizebox{\linewidth}{!}{
 \begin{tabular}{lllll}
 \cline{1-2}
 \multicolumn{2}{|c|}{\textbf{System-Hives (C:\textbackslash{}\textbackslash{}Windows\textbackslash{}\textbackslash{}System32\textbackslash{}\textbackslash{}Config)}} &  &  &  \\ \cline{1-2}
@@ -503,7 +514,9 @@ Zur Analyse wird jeder Hive aus den Fesplatten-Images extrahiert und in eine Reg
 \multicolumn{1}{|l|}{\textit{NTUSER.DAT}}            & \multicolumn{1}{l|}{Individuelle Einstellungen und Konfigurationen für den angemeldeten Benutzer}              &  &  &  \\ \cline{1-2}
 \multicolumn{1}{|l|}{\textit{USRCLASS.DAT}}          & \multicolumn{1}{l|}{Dateizuordnungen und Registrierungseinstellungen für den angemeldeten Benutzer}            &  &  &  \\ \cline{1-2}
 \end{tabular}
-%}
+}
+\label{tab:windows-registry-hives}
+\caption{Windows Registry Hives}
 \end{table}
 	
 

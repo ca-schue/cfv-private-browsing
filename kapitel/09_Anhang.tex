@@ -13,11 +13,7 @@
 		
 %		\huge{\textbf{All File Operations Firefox}}
 %%		\enlargethispage{6cm}
-%		\begin{figure}[h!]
-%			\centerline{\resizebox{!}{0.9\textheight}{\includegraphics{bilder/firefox-all-write-operations.png}}}
-%			%	\label{...}
-%			\caption{All File Operations Firefox: Logfile 1 vs. Logfile 2}
-%		\end{figure}
+
 %		
 %		\huge{\textbf{All File Operations Tor}}
 %%		\enlargethispage{6cm}
@@ -27,86 +23,130 @@
 %			\caption{All File Operations Firefox: Logfile 1 vs. Logfile 2 vs. Logfile 3}
 %		\end{figure}
 
-\subsection*{Firefox Common Locations}
-
+\subsection{Firefox Common Locations}
+\label{subsection:appendix-firefox-common-locations}
 \subsubsection*{Process Monitor WriteFile Operations}
+\label{subsubsection:appendix-firefox-common-locations-writefile-operations}
+Gemäß Versuchsdurchführung wurden für Firefox mit dem Process Monitor Tool zwei Logfiles erstellt. Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während und nach dem Browsing Szenario.
+Zunächst wurden die beiden Logfiles gemäß Methodik in Kapitel \ref{subsection:methodik-datensammlung-processmonitorlogfiles} (TODO!) in Excel aufbereitet. Tabelle \ref{tab:firefox-writefile-operations} listet alle in den gefilterten Logfiles identifizierten Dateien auf. Dabei wurde für jede Datei vermerkt, ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob in der Datei PB Artefakte enthalten sind. Die wiederherstellbaren Dateien wurden in die fünf Kategorien \textit{Cache}, \textit{Datareporting}, \textit{Sessionstore-Backup} und \textit{Sonstige Dateien} eingeordnet. In keiner der Dateien wurden PB Artefakte identifiziert.
 
-Gemäß Versuchsdurchführung in Abbildung X (TODO!) wurden für Firefox mit dem Process Monitor Tool zwei Logfiles erstellt. Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während und nach dem Browsing Szenario.
-Zunächst werden die beiden Logfiles gemäß Methodik in Kapitel X (TODO!) in Excel aufbereitet. 
-Im Anhang X (TODO!) ist dazu eine Tabelle mit allen in den gefilterten Logfiles identifizierten Dateien aufgeführt.
-Dabei wurde für jede Datei vermerkt
-ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob PB Artefakte enthalten sind.
+%\newpage
+\newgeometry{bottom=2cm,top=0.5cm}
+\afterpage{
+\begin{landscape}% Landscape page
+	\setcounter{page}{43}
+%	\thispagestyle{empty}
+	\vspace*{1.5cm}
+	\hspace*{-1cm}
+	\begin{table}[h!]
+%	\centering
+	\label{tab:firefox-writefile-operations}
+	\caption{Firefox alle "WriteFile"-Operationen der Logfiles 1 und 2}
+	\vspace{0.5cm}
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{cllll}
+	\multicolumn{5}{c}{\textbf{LOGFILE 1:}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Kategorie}}                                                                     & \multicolumn{1}{c|}{\textbf{Dateiname}}                                                                                                                                                                             & \multicolumn{1}{c|}{\textbf{Dateistatus}}                                                         & \multicolumn{1}{c|}{\textbf{Tool für Analyse}}   & \multicolumn{1}{l|}{\textbf{Enthaltene Artefakte}}              \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}entries\textbackslash{}037778A55E1B7E9BED3390289866D09402D6C913}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}entries\textbackslash{}1223A0378B8971FA4CD25EA1731C80B2B1676B42}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}entries\textbackslash{}250EE2BC03AFF526F1A1C3DB212A79DE3EB60D5E}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}jumpListCache\textbackslash{}ZKJGVJPzPe7w4w0KwEY0jw==.ico}                                                                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{Windows Foto App}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}entries\textbackslash{}D16E4E5DFB15B4C8DE88842C05A47A07C611E01D}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-6}{*}{\textit{Cache}}}                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}entries\textbackslash{}2F040683A85A4372A73572713C6C52B510854566}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}events\textbackslash{}pageload}                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{HxD}                         & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}db\textbackslash{}data.safe.tmp}                                                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{HxD}                         & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}tmp\textbackslash{}95ea3e10-e732-4642-8e92-515f4c4e090c}                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{963400}{\color[HTML]{FFFFFF} Datei nicht wiederherstellbar}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-4}{*}{\textit{Datareporting}}}                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}tmp\textbackslash{}16ab2ae2-c7b8-4390-a26e-7dcd95f5ff24}                                              & \multicolumn{1}{l|}{\cellcolor[HTML]{963400}{\color[HTML]{FFFFFF} Datei nicht wiederherstellbar}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \hline
+	\multicolumn{1}{|c|}{\textit{Sessionstore}}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}sessionstore-backups\textbackslash{}recovery.jsonlz4.tmp}                                                                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{dejsonlz4 + Notepad++}       & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}prefs-1.js}                                                                                                                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{HxD}                         & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-2}{*}{\textit{\begin{tabular}[c]{@{}c@{}}Sonstige \\ Dateien\end{tabular}}}} & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}xulstore.json.tmp}                                                                                                                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{Notepad++}                   & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{l}{}                                                                                         &                                                                                                                                                                                                                     &                                                                                                   &                                                  &                                                                 \\
+	\multicolumn{1}{l}{}                                                                                         &                                                                                                                                                                                                                     &                                                                                                   &                                                  &                                                                 \\
+	\multicolumn{1}{l}{}                                                                                         &                                                                                                                                                                                                                     &                                                                                                   &                                                  &                                                                 \\
+	\multicolumn{5}{c}{\textbf{LOGFILE 2:}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Kategorie}}                                                                     & \multicolumn{1}{c|}{\textbf{Dateiname}}                                                                                                                                                                             & \multicolumn{1}{c|}{\textbf{Dateistatus}}                                                         & \multicolumn{1}{c|}{\textbf{Tool für Analyse}}   & \multicolumn{1}{l|}{\textbf{Enthaltene Artefakte}}              \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}index.log}                                                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-2}{*}{\textit{Cache}}}                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}cache2\textbackslash{}index}                                                                                                                            & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{MozillaCacheView}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}db\textbackslash{}data.safe.tmp}                                                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{HxD}                         & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}archived\textbackslash{}2023-05\textbackslash{}1683405837882.9102466b-e465-4ecb-810f-74ae90c64c63.new-profile.jsonlz4.tmp} & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{Session History Scrounger}   & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}archived\textbackslash{}2023-05\textbackslash{}1683405837905.86f4c992-6329-415b-8c29-911a2d4b7f9d.event.jsonlz4.tmp}       & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{Session History Scrounger}   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-4}{*}{\textit{Datareporting}}}                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}archived\textbackslash{}2023-05\textbackslash{}1683405837939.abf8b065-41a4-4e94-a044-1cead61e396a.main.jsonlz4.tmp}        & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{Session History Scrounger}   & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \hline
+	\multicolumn{1}{|c|}{\textit{Sessionstore}}                                                                  & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}sessionstore.jsonlz4.tmp}                                                                                                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{dejsonlz4 + Notepad++}       & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}sessionCheckpoints.json.tmp}                                                                                                                            & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{HxD}                         & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}prefs-1.js}                                                                                                                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}                                      & \multicolumn{1}{l|}{HxD}                         & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}xulstore.json.tmp}                                                                                                                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet}                           & \multicolumn{1}{l|}{Notepad++}                   & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}saved-telemetry-pings\textbackslash{}9102466b-e465-4ecb-810f-74ae90c64c63.tmp}                                                                          & \multicolumn{1}{l|}{\cellcolor[HTML]{963400}{\color[HTML]{FFFFFF} Datei nicht wiederherstellbar}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}saved-telemetry-pings\textbackslash{}86f4c992-6329-415b-8c29-911a2d4b7f9d.tmp}                                                                          & \multicolumn{1}{l|}{\cellcolor[HTML]{963400}{\color[HTML]{FFFFFF} Datei nicht wiederherstellbar}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}saved-telemetry-pings\textbackslash{}abf8b065-41a4-4e94-a044-1cead61e396a.tmp}                                                                          & \multicolumn{1}{l|}{\cellcolor[HTML]{963400}{\color[HTML]{FFFFFF} Datei nicht wiederherstellbar}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-7}{*}{\textit{\begin{tabular}[c]{@{}c@{}}Sonstige\\ Dateien\end{tabular}}}}  & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}saved-telemetry-pings\textbackslash{}a35decee-d7c6-4820-a381-2dc89ff33c76.tmp}                                                                          & \multicolumn{1}{l|}{\cellcolor[HTML]{963400}{\color[HTML]{FFFFFF} Datei nicht wiederherstellbar}} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A} & \multicolumn{1}{l|}{\cellcolor[HTML]{C0C0C0}N/A}                \\ \hline
+	\end{tabular}
+	}
+	\end{table}
+\end{landscape}
+}
+\restoregeometry
+%\newpage
+%\begin{figure}[h!]
+%	\centerline{\resizebox{!}{0.9\textheight}{\includegraphics{bilder/firefox-all-write-operations.png}}}
+%
+%\end{figure}
 
-Abbildung X (TODO!) zeigt diese Tabelle in reduzierter Darstellung.
-Dazu wurden ausschließlich wiederherstellbare Dateien aufgeführt. 
-Die Dateien wurden in die fünf Kategorien "Cache", "datareporting", "Sessionstore-Backup" und "Sonstige Dateien" eingeordnet.
-Für jede Datei wurde vermerkt, ob in der entsprechenden Logfile PB Artefakte geschrieben wurden.
-Dies trifft für keine der identifizierten Dateien zu.
-\begin{figure}[h!]
-	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-tabelle-logfile1vlogfile2-reduced.png}}
-%	\label{...}
-	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
-\end{figure}
-
-Bei detaillierter Untersuchung der Dateien, können zwei Pfade identifiziert werden, in die Firefox während des Versuchs Dateien schreibt. Nur die Dateien in der Cache Kategorie sind im Local Pfad gespeichert.
+Bei detaillierter Untersuchung der wiederherstellbaren Dateien konnten zwei Pfade identifiziert werden, in die Firefox während des Versuchs Dateien schreibt. 
 \begin{itemize}
 \item[\textbf{Local}] \texttt{C:$\backslash$Users$\backslash$<User>$\backslash$AppData$\backslash$Local$\backslash$Mozilla$\backslash$Firefox$\backslash$Profiles$\backslash$<Profile>.default-release$\backslash$}
 \item[\textbf{Roaming}] \texttt{C:$\backslash$Users$\backslash$<User>$\backslash$AppData$\backslash$Roaming$\backslash$Mozilla$\backslash$Firefox$\backslash$Profiles$\backslash$<Profile>.default-release$\backslash$}
 \end{itemize}
-In Tabelle X (TODO!) sind die Dateien je nach Speicherort "Local" (Hellblau) oder "Roaming" (Dunkelblau) entsprechend eingefärbt. 
+In Tabelle X (TODO!) sind die Dateien je nach Speicherort "Local" (Hellblau) oder "Roaming" (Dunkelblau) entsprechend eingefärbt. Ausschließlich Dateien der Kategorie ``Cache`` sind im Local Pfad gespeichert.
 
 \paragraph*{Cache}
 Firefox verwendet den Cache, um Webseiten und deren Ressourcen temporär lokal zu speichern. Dadurch können wiederholte Anfragen an den Server vermieden und die Ladezeiten verringert werden. Die Inhalte dieser Dateien sind binär.
-Die Dateien im Format \texttt{$\backslash$cache2$\backslash$entries$\backslash$<ID>} werden dem Cache zugeordnet und im Local Pfad gespeichert.
+Die Cache-Dateien im Format \texttt{$\backslash$cache2$\backslash$entries$\backslash$<ID>} werden im Local Pfad gespeichert.
 % https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
-Wie in Kapitel X beschrieben, können diese Dateien mit dem Tool MZCacheView eingelesen werden.
-Wie in Abbildung X gezeigt, konnten im Cache-Ordner im zweiten Snapshot drei JSON Dateien identifiziert werden. Dabei handelt es sich um Zertifikatsdateien, die von der "One Certificate Revocation List" stammen, ein Mechanismus von Firefox zur Überprüfung von Zertifikaten. In keinem der Zertifikate konnten mit HxD private Browsing Artefakte oder besuchte Seiten gefunden werden.
-Weiterhin befindet sich im Cache das HTML-Dokument der Firefox Datenschutzseite, welche sich beim ersten Start des Browsers automatisch öffnete. % TODO: Siehe Kapitel X
-Weitere Cache Dateien konnten in keinem Snapshot gefunden werden.
+Diese Dateien können mit dem Tool MZCacheView eingelesen werden.
+Wie in Abbildung \ref{img:mzcacheview} gezeigt, konnten im Firefox Cache-Ordner des Festplatten-Images vom zweiten Snapshot drei JSON Dateien identifiziert werden. Dabei handelt es sich um Zertifikatsdateien, die von der "One Certificate Revocation List" stammen, ein Mechanismus von Firefox zur Überprüfung von Zertifikaten. In keinem der Zertifikate konnten mit HxD private Browsing Artefakte oder besuchte Seiten gefunden werden.
+Weiterhin befindet sich im Cache das HTML-Dokument der Firefox Datenschutzseite, welche sich beim ersten Start des Browsers automatisch öffnete, siehe Kapitel \ref{subsection:methodik-vorbereitung-browsing-szenario}
+Weitere Cache Dateien konnten in keinem Festplatten-Image gefunden werden.
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-cache.png}}
-%	\label{...}
-	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+	\label{img:mzcacheview}
+	\caption{MZCacheView eingelesene Firefox Cache-Dateien}
 \end{figure}
-Die Indexdatei \texttt{$\backslash$cache2$\backslash$index} dient als Datenbank im Cache. Sie ermöglicht dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten. Sowohl mit HxD als auch dem Tool FirefoxCache2 konnten keine PB Artefakte identifiziert werden.
-*** TODO: Erst in Logfile 2 geschrieben ***
+Die Indexdatei \texttt{$\backslash$cache2$\backslash$index} dient als Datenbank im Cache. Sie ermöglicht es dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten. In diese Datei wurde beim Schließen des Browsers geschrieben. Sowohl mit HxD als auch dem Tool FirefoxCache2 konnten keine PB Artefakte identifiziert werden.
 
-Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJGVJPzPe7w4w0KwEY0jw==.ico} ein $64x64$ Pixel großes Mozilla Logo. Dieses Logo ist keinem Schritt aus dem Browsing Szenario zuzuordnen
+Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJGVJPzPe7w4w0KwEY0jw==.ico} ein $64x64$ Pixel großes Mozilla Logo. Dieses Logo ist keinem Schritt des Browsing Szenarios zuzuordnen.
 
 
 \paragraph*{Datareporting}
 Dateien im Ordner \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db} sind Teil des Glean-Systems, das für die Sammlung von Telemetriedaten und deren Übermittlung an Mozilla verwendet wird. 
 % https://github.com/mozilla/glean
-Die Datei \texttt{data.safe.bin} enthält verschlüsselte und anonyme Informationen über die Nutzung des Browsers. In HxD konnten keine keine PB Artefakte gefunden werden
-*** TODO: Vergleich Logfile 1 vs 2 ***
+Die Datei \texttt{data.safe.bin} enthält verschlüsselte und anonyme Informationen über die Nutzung des Browsers. In HxD konnten keine keine PB Artefakte gefunden werden. 
+%*** TODO: Vergleich Logfile 1 vs 2 ***
 
-Dateien im Foremat \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db$\backslash$<Profilname>.new-profile.jsonlz4} speichern Informationen über das Firefox-Profil, das von Glean verwendet wird. Wie in Kapitel X beschrieben, lassen sich Dateien, im proprietären \textit{jsonlz4}-Format mit dem Tool dejsonlz4 dekomprimieren. Die entstandene JSON Datei wird mit dem Notepad++ JSON Plugin untersucht. Dabei konnten keine PB Artefakte gefunden werden.
-*** TODO: Nur in Logfile 2 geschrieben ***
+Dateien im Format \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db$\backslash$<Profilname>.new-profile.jsonlz4} speichern Informationen über das Firefox-Profil, das von Glean verwendet wird. In diese Dateien wurde erst nach dem Browsing-Szanrio, beim Schließen des Browser geschrieben. Diese Dateien im proprietären \textit{jsonlz4}-Format lassen sich mit dem Tool dejsonlz4 dekomprimieren. Die entstandene JSON Datei wurde mit dem Notepad++ JSON Plugin untersucht. Dabei konnten keine PB Artefakte gefunden werden.
 
 \paragraph*{Sessionstore}
 Die Datei \texttt{$\backslash$sessionstore-backups$\backslash$recovery.jsonlz4} enthält eine Sicherungskopie der vorherigen Sitzung. Sie wird erstellt, wenn der Firefox-Browser nach einem Absturz oder einem unerwarteten Beenden neu gestartet wird." % https://support.mozilla.org/de/questions/1221836
-Jefferson Scher entwickelte ein Online-Tool zur Analyse von \textit{Sessionstore-Backup} Dateien.
+Jefferson Scher entwickelte das Online-Tool \textit{Session History Scrounger for Firefox} zur Analyse dieser ``Sessionstore-Backup`` Dateien.
 % https://www.jeffersonscher.com/ffu/scrounger.html)
-In der Sitzungswiederherstellung konnten wie in Abbildung X gezeigt lediglich die automatisch geöffnete Seite über Firefox Datenschutzhinweise identifiziert werden.
+Wie Abbildung \ref{img:firefox-session-history-scrounger} gezeigt, enthielt die Datei sowohl im Festplatten-Image 2 (Logfile 1) und 3 (Logfile 2) nur die automatisch geöffnete Seite der Firefox Datenschutzhinweise.
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sessionstore.png}}
-%	\label{...}
-	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
+	\label{img:firefox-session-history-scrounger}
+	\caption{Firefox Sitzungsdatei \texttt{recovery.jsonlz4} geöffnet mit dem ``Session History Scrounger for Firefox``}
 \end{figure}
-*** TODO: Logfile 1 vs Logfile 2 ***
 
 \paragraph*{Sonstige Dateien}
-In der Datei \texttt{prefs-1.js} werden benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser gespeichert. Die Datei enthält Präferenzen des Benutzers in Form von JavaScript-Objekten. Es konnten mit HxD keine PB Artefakte gefunden werden.
+In der Datei \texttt{prefs-1.js} werden benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser gespeichert. Die Datei enthält Präferenzen des Benutzers in Form von JavaScript-Objekten. Es konnten in den Dateien beider Logfiles mit HxD keine PB Artefakte gefunden werden.
 % https://kb.mozillazine.org/Prefs.js_file
-*** TODO: Vergleich Logfile 2 ***
 
-Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpassungen und Konfigurationen für den Firefox-Browser. In der Datei konnten mit Notepad++ keine PB Artefakte gefunden werden.
+Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpassungen und Konfigurationen des Firefox-Browsers. In der Datei konnten in den Festplatten-Images beider Logfiles mit Notepad++ keine PB Artefakte gefunden werden.
 % https://support.mozilla.org/de/kb/firefox-support-troubleshooting-guide
-*** TODO: Vergleich Logfile 2 ***	
-\subsubsection*{SQLite Datenbänke}
-Wie in Kapitel X (Methodik, TODO!) erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten genauer untersucht. Mithilfe der Process Monitor Logfiles wurden die in Tabelle X dargestellten SQLite-Datenbanken für Firefox identifiziert:
 
-\begin{table}[]
+\subsubsection*{SQLite Datenbänke}
+Wie in Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten detaillierter und getrennt von den Schreiboperationen der Process Logfiles untersucht. Mithilfe der Process Monitor Logfiles wurden zunächst die in Tabelle \ref{tab:firefox-sqlite-dbs-explained} dargestellten SQLite-Datenbanken für Firefox identifiziert:
+\begin{table}[h!]
+\label{tab:firefox-sqlite-dbs-explained}
+\caption{Veränderte Firefox SQLite-Datenbänke und deren Verwendungszwecke}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|l|lll}
 \cline{1-2}
@@ -122,35 +162,76 @@ Wie in Kapitel X (Methodik, TODO!) erwähnt, werden SQLite Datenbanken als Daten
 }
 \end{table}
 
-Jede dieser Datenbanken wurde in allen vier Snapshots miteinander verglichen. Die Dateiextraktion und Dateianalyse erfolgte analog zur Methodik in Kapitel X (TODO!).
-Die Ergebnisse wurden in Tabelle X (TODO!) dargestellt.
+Entsprechend der Methodik in Kapitel \ref{subsubsection:methodik-datenanalyse-commonlocations-sqlitedbs} wurde jede SQLite-Datenbank aus allen vier Snapshots extrahiert und verglichen.
+Die Ergebnisse sind in Tabelle \ref{tab:firefox-veraenderte-sqlitedbs} dargestellt.
 
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-sqlite-table.png}}}
-	\label{chart:final-criteria}  
-	\caption{Comparison of found PB artifacts between RAM Dumps}
-\end{figure}
-Nach Browser-Installation (Snapshot 1) existierte noch keine der SQLite-Dateien.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h!]
+\centering
+\label{tab:firefox-veraenderte-sqlitedbs}  
+\caption{Veränderung der Firefox SQLite-Datenbänke während der Versuchsdurchführung}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|c|cc|cc|cc|}
+\hline
+\multicolumn{1}{|c|}{}                                     &                                                                                                    & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Browser geöffnet (S2)\end{tabular}}}                                                                                                                              & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Browser geschlossen (S3)\end{tabular}}}                                                                                                            & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}VM \\ heruntergefahren (S4)\end{tabular}}} \\ \cline{3-8} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Dateiname}}} & \multirow{-2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Vor Browsing \\ Szenario\\ (S1)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                                      & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                     & \textbf{Nach WAL}                     \\ \hline
+places.sqlite                                              & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Datenschutz-Seite)\end{tabular}}                  & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}Indizes aktualisiert}                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-3} \cline{5-5}
+cookies.sqlite                                             & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}}                                                                                              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-2}
+storage.sqlite                                             & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}}                                                                                              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-2}
+favicons.sqlite                                            & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{FFCE93}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Nur Spaltennamen)\end{tabular}}} & \multirow{-4}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}} & \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}}} & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-5}
+webappsstore.sqlite                                        & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}N/A}                                                                                           & \cellcolor[HTML]{C0C0C0}N/A                                                                            & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Nur Spaltennamen)\end{tabular}}    & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-5}
+formhistory.sqlite                                         & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Nur Spaltennamen)\end{tabular}}                   & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}keine Veränderung}                                                              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-3} \cline{5-5}
+1657114595AmcateirvtiSty.sqlite                            & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{CE6301}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ ("origin": "chrome")\end{tabular}}                 & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Binärdaten, \\ keine PB Artefakte\end{tabular}}      & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                     \\ \cline{1-3} \cline{5-5}
+3870112724rsegmnoittet-es.sqlite                           & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{CE6301}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ ("origin": "chrome")\end{tabular}}                 & \multirow{-3}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}keine Veränderung}                                                              & \multirow{-12}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}} & \multicolumn{2}{c|}{\multirow{-12}{*}{\cellcolor[HTML]{FE996B}keine Veränderung}}                  \\ \hline
+\end{tabular}
+}
+\end{table}
 
-Nach dem Browsing Szenario (Snapshot 2) wurde festgestellt, dass alle SQLite-Datenbanken 
-initialisiert wurden, außer \texttt{webappsstore.sqlite}. Dabei wurden in \texttt{places.sqlite} die automatisch im normalen Modus geöffnete Datenschutzhinweise Seite eingetragen. 
-In restlichen Datenbanken wurden leer initialisiert, nur die Spaltennamen wurden eingetragen.
-Der Inhalt aller erstellten Datenbanken blieb nach Durchführung von PRAGMA WAL Checkpoints unverändert.
-
-Nach Schließen des Browsers (Snapshot 3) wurden in \texttt{places.sqlite} die Indizes bei eingetragenen Seiten aktualisiert. Die SQLite-Datenbank \texttt{1657114595AmcateirvtiSty.sqlite} erhielt ein binäres Datenobjekt als Eintrag. Bei der Untersuchung mit HxD konnten keine Artefakte gefunden werden. Weiterhin wurde \texttt{webappsstore.sqlite} leer initialisiert. Die restlichen Daten blieben im Vergleich mit Snapshot 2 unverändert. Ebenfalls veränderte sich nicht der Inhalt nach Durchführung von PRAGMA WAL Checkpoints.
-
-Nach herunterfahren der VM (Snapshot 4) gab es keine Änderungen in den SQLite Datenbanken, auch nach Durchführung der PRAGMA WAL Checkpoints.
-	
+Unmittelbar nach der Installation von Firefox (Snapshot 1) existierte noch keine der SQLite-Dateien.
+Nach dem Browsing Szenario (Snapshot 2) wurden alle SQLite-Datenbanken außer \texttt{webappsstore.sqlite} 
+initialisiert. Dabei wurden in \texttt{places.sqlite} die automatisch im normalen Modus geöffnete Firefoxseite der Datenschutzhinweise eingetragen. 
+Die restlichen Datenbanken wurden leer initialisiert, nur die Spaltennamen wurden definiert.
+Der Inhalt aller initialisierten Datenbanken blieb nach Durchführung von PRAGMA WAL Checkpoints unverändert.
+Nach Schließen des Browsers (Snapshot 3) wurden in \texttt{places.sqlite} die Indizes der eingetragenen Seiten aktualisiert. Die SQLite-Datenbank \texttt{1657114595AmcateirvtiSty.sqlite} erhielt ein binäres Datenobjekt als Eintrag. Bei der Untersuchung mit HxD konnten keine Artefakte gefunden werden. Weiterhin wurde \texttt{webappsstore.sqlite} leer initialisiert. Die restlichen Daten blieben im Vergleich mit Snapshot 2 unverändert. Ebenfalls veränderte sich nicht der Inhalt nach Durchführung von PRAGMA WAL Checkpoints.
+Sowohl nachdem die VM herunterfahren wurde, (Snapshot 4) als auch nach Durchführung der PRAGMA WAL Checkpoints, entstanden keine Änderungen in den SQLite Datenbanken.	
 Somit wurden in den SQLite Datenbanken von Firefox keine zurückverfolgbaren PB Artefakte im privaten Modus hinterlassen.
 
+\subsubsection*{Zusammenfassung Firefox Common Locations}
+Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie in Abbildung \ref{chart:firefox-writefile-logfile1v2} dargestellt, gab es mit Ausnahme der Datareporting Dateien in Logfile 1 stets mehr oder gleich viele Schreiboperationen wie in Logfile 2. Keine der Schreiboperation hinterließ Private Browsing Artefakte.
 
-Mithilfe des Process Monitors wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie zusammenfassend in Abbildung X (TODO!) dargestellt, wurde mit Ausnahme der Datareporting Dateien gab es in Logfile 1 stets mehr oder genauso viele Schreiboperationen wie in Logfile 2.
-Keine Schreiboperation hinterließ jedoch Private Browsing Artefakte.
 \begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/bar-chart-logfile1vs2-test.png}}}
-	\label{chart:final-criteria}  
-	\caption{Comparison of found PB artifacts between RAM Dumps}
+	\begin{tikzpicture}
+	\begin{axis}[
+	xbar, 
+	xmin=0,
+	width=12cm, 
+	height=12cm, 
+	xlabel={Anzahl Schreiboperationen},
+	y=1.2cm,
+	%					0  					1			   2 		  3			 4
+	%yticklabels={Sonstige Dateien, Sessionstore-Backup, SQLite, Datareporting, Cache},
+	%ytick=data,
+	symbolic y coords={Sonstige Dateien,Sessionstore-Backup,SQLite,Datareporting,Cache},
+	ytick=data,
+	%symbolic y coords={Sonstige-Dateien,Sessionstore-Backup,SQLite,Datareporting,Cache},
+	%ytick=data,
+	nodes near coords, nodes near coords align={horizontal},
+	]
+	\addplot coordinates {(2,Sonstige Dateien) (1,Sessionstore-Backup) (7,SQLite) (2,Datareporting) (4,Cache)};
+	\addplot coordinates {(2,Sonstige Dateien) (1,Sessionstore-Backup) (3,SQLite) (4,Datareporting) (2,Cache)};
+	
+	\legend{Logfile 1, Logfile 2}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Firefox Anzahl Schreiboperationen Logfile 1 vs Logfile 2, geordnet nach Kategorie}
+	\label{chart:firefox-writefile-logfile1v2}
 \end{figure}
+
+
+
 
 
 %Literatur:
@@ -168,54 +249,47 @@ Keine Schreiboperation hinterließ jedoch Private Browsing Artefakte.
 %			> Daher: WAL Rollback mit sqlite3	
 %	o	Jsonlz4 \& balkz4: Enthalten komprimierte Firefox-Sessions, jsonlz4 Dateien können mit Tool "entkomprimiert" werden: https://www.jeffersonscher.com/ffu/scrounger.html
 
-\subsection*{Firefox Uncommon Locations}
-
-\subsubsection*{Analyse mit Autopsy}
-
-Gemäß Methodik in Kapitel X wurden die Dateien der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" analysiert.
-Beim Vergleich der Festplattenabbilder wurde festgestellt, dass ein Snapshot stets die kategoriesierten Dateien des vorherigen Snapshots enthielt. Es sind innerhalb einer Kategorie nur neue Dateien dazugekommen. Somit enthält Snapshot 4 in jeder Kategorie alle Dateien der vorherigen Snapshots.
-
-*** TODO: Edge vorinstalliert erwähnen ***
+\subsection{Firefox Uncommon Locations}
+\label{subsection:appendix-firefox-uncommon-locations}
+\subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}
+\label{subsubsection:appendix-firefox-uncommon-locations-autopsy}
+Beim Vergleich der Festplattenabbilder wurde festgestellt, dass ein Festplatten-Image stets die kategoriesierten Dateien des Festplatten-Images des vorherigen Snapshots enthielt. Somit enthält das Festplatten-Image von Snapshot 4 alle kategorisierten Dateien der vorherigen Snapshots.
 
 \paragraph*{Web Bookmarks}
-
-Bereits vor Durchführung des Browsing Szenarios enthielt Firefox im ersten Snapshot die Bing Startseite als gespeichertes Leesezeichen. In den restlichen Snapshots 2 -- 4 blieb diese Kategorie unverändert.
-
+Bereits vor Durchführung des Browsing Szenarios enthielt Firefox im ersten Snapshot die in Abbildung \ref{img:firefox-web-bookmarks} dargestellte Bing Startseite als gespeichertes Leesezeichen. In den restlichen Snapshots 2 -- 4 blieb diese Kategorie unverändert.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_bookmarks.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web Bookmarks}
+	\label{img:firefox-web-bookmarks}  
+	\caption{Firefox: Von Autopsy als "Web Bookmarks" kategorisierte Dateien}
 \end{figure}
 
 \paragraph*{Web Cookies}
-Auch diese Kategorie enthält bereits vor Beginn des Browsing Szenarios zehn Cookie-Einträge in der Datei \texttt{WebCacheV01.dat}. Dabei handelt es sich um eine Datenbank des Microsoft Edge Browsers zur Speicherung von Nutzerdaten. Diese Datei verhält sich ähnlich wie die in diesem Versuch relevanten SQLite-Dateien. Die Datei enhält. Bei den Einträgen handelt es sich um Cookies für Bing und die Outlook Webseite, obwohl diese Seiten nie in Microsoft Edge geöffnet wurden. In den Snapshots 2 -- 4 kamen keine weiteren Einträge in dieser Kategorie hinzu.
+Die Kategorie ``Web Cookies`` enthält bereits vor Beginn des Browsing Szenarios zehn in Abbildung \ref{img:firefox-web-cookies} gezeigte Cookie-Einträge in der Datei \texttt{WebCacheV01.dat}. Dabei handelt es sich um eine Datenbank des Microsoft Edge Browsers zur Speicherung von Nutzerdaten. Diese Datei verhält sich ähnlich wie die in diesem Versuch relevanten SQLite-Dateien. Bei den Einträgen handelt es sich um Cookies für Bing und die Outlook Webseite, obwohl diese Seiten nie in Microsoft Edge geöffnet wurden. In den Snapshots 2 -- 4 kamen keine weiteren Einträge in dieser Kategorie hinzu.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_cookies.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web Cookies}
+	\label{img:firefox-web-cookies}  
+	\caption{Firefox: Von Autopsy als "Web Cookies" kategorisierte Dateien}
 \end{figure}
 
 \paragraph*{Web History}
-Diese Kategorie listet alle Dateien mit gespeichertem Suchverlauf auf. Vor Beginn des Browsing Szenarios (Snapshot 1) enthält die Kategorie ebenfalls zwei Einträge zur Outlook Webseite in der Datei \texttt{WebCacheV01.dat}. Nach Durchführung des Browsing Szenarios (Snapshot 2) wurde ein Eintrag in der \texttt{places.sqlite} Datenbank hinzugefügt. Dabei handelt es sich um die automatisch im normalen Browsingmodus geöffnete Firefox-Standardseite über Datenschutzhinweise. Dies deckt sich mit den Beobachtungen der Common Locations in Kapitel X. Darüber hinaus enthält dieser Snapshot für die Datei \texttt{WebCacheV01.dat} den Eintrag \texttt{file:///Z:/Logfile\_1}. Dabei handelt es sich um das Process Monitor Logfile, das gemäß Methodik in Kapitel X (TODO!) über den gemeinsamen VM-Ordner zum Analyse-Rechner transportiert wurde. Ergänzt wird das in Snapshot 3 durch den Eintrag \texttt{file:///Z:/Logfile\_2}, dem zweiten Process Monitor Logfile. In Snapshot 4 werden in dieser Katgeorie keine neuen Dateien erfasst.
+Die Kategorie ``Web History`` listet alle Dateien mit gespeichertem Suchverlauf auf. Vor Beginn des Browsing Szenarios (Snapshot 1) enthält die Kategorie zwei Einträge zur Outlook Webseite in der Datei \texttt{WebCacheV01.dat}. Nach Durchführung des Browsing Szenarios (Snapshot 2) wurde ein Eintrag in der \texttt{places.sqlite} Datenbank hinzugefügt. Dabei handelt es sich um die automatisch im normalen Browsingmodus geöffnete Firefox-Standardseite über Datenschutzhinweise. Dies deckt sich mit den Beobachtungen der Common Locations in Anhang \ref{subsection:appendix-firefox-common-locations}. Darüber hinaus enthält dieser Snapshot für die Datei \texttt{WebCacheV01.dat} den Eintrag \texttt{file:///Z:/Logfile\_1}. Dabei handelt es sich um das Process Monitor Logfile, das gemäß Methodik in Kapitel \ref{section:methodik-vorbereitung} über den gemeinsamen VM-Ordner zum Analyse-Rechner transportiert wurde. Ergänzt wird die Kategorie in Snapshot 3 durch den Eintrag \texttt{file:///Z:/Logfile\_2}, dem zweiten Process Monitor Logfile. In Snapshot 4 werden in dieser Katgeorie keine neuen Dateien erfasst. Die kategorisierten Dateien sind in Abbildung \ref{img:firefox-web-history} dargestellt.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_history.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web History}
+	\label{img:firefox-web-history}  
+	\caption{Firefox: Von Autopsy als "Web History" kategorisierte Dateien}
 \end{figure}
 
 \paragraph*{Web Categories}
 Diese Kategorie klassifiziert im Speicherabbild gefundene Browsing Artefakte nach Inhalt.
-Vor Beginn des Browsing Szenarios (Snapshot 1) werden hier bereits zwei Einträge aufgelistet. Der Eintrag \texttt{bing.com} wird als "Suchmaschine" klassifiziert und \texttt{live.com} als "Web-Email".
+Vor Beginn des Browsing Szenarios (Snapshot 1) werden hier bereits zwei in Abbildung \ref{img:firefox-web-categories} dargestellte Einträge aufgelistet. Der Eintrag \texttt{bing.com} wird als "Suchmaschine" klassifiziert und \texttt{live.com} als "Web-Email".
 Wie oben erwähnt, wurden beide Seiten nie aufgerufen. Es gab keine zusätzlichen Einträge in dieser Kategorie in den Snapshots 2 bis 4.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_categories.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web Categories}
+	\label{img:firefox-web-categories}  
+	\caption{Firefox: Von Autopsy als "Web Categories" kategorisierte Dateien}
 \end{figure}
-		
 
-Somit wurden in allen Kategorien ausschließlich Browsing Artefakte des Edge Browsers in der Datei \texttt{WebCacheV01.dat} gefunden, sowie ein Eintrag in der Firefox SQLite Datenbank \texttt{places.sqlite}. Die eingetragene Firefox-Standardseite deckt sich mit den Ergebnissen der Common Locations in Tabelle X. Die aufgelisteten Einträge in der Datei \texttt{WebCacheV01.dat} sind nicht auf Schritte des Browsing Szenarios zurückzuführen. Die Einträge sind bereits im ersten Snapshot enthalten, obwohl vor Beginn des Browsing Szenarios keine Browseraktivitäten durchgeführt wurden. Weiterhin enthölt diese Datei Einträge über die Process Monitor Logfiles, welche über einen gemeinsamen VM-Ordner zum Rechner transportiert wurde, auf dem die virtuelle Maschine läuft.
-In keiner der Kategorien konnten private Browsing Artefakte identifiziert werden.
+Somit wurden in allen Kategorien ausschließlich Browsing Artefakte des Edge Browsers in der Datei \texttt{WebCacheV01.dat} gefunden, sowie ein Eintrag in der Firefox SQLite Datenbank \texttt{places.sqlite}. In keiner der Kategorien konnten private Browsing Artefakte identifiziert werden. Die von Autopsy erkannte Firefox-Standardseite deckt sich mit den Ergebnissen der Common Locations. Die aufgelisteten Einträge in der Datei \texttt{WebCacheV01.dat} sind nicht auf Schritte des Browsing Szenarios zurückzuführen. Die Einträge sind bereits im ersten Snapshot enthalten, obwohl vor Beginn des Browsing Szenarios keine Browseraktivitäten durchgeführt wurden. Weiterhin enthält diese Datei Einträge über die Process Monitor Logfiles, welche über einen gemeinsamen VM-Ordner zum Rechner transportiert wurde, auf dem die virtuelle Maschine läuft.
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 
@@ -244,12 +318,49 @@ In keiner der Kategorien konnten private Browsing Artefakte identifiziert werden
 
 Als Teil der Common Locations werden für Firefox alle Registry "SetValue" Schreiboperationen der beiden Process Monitor Logfiles untersucht.
 
-In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: "PreXULSkeletonUISettings" und "Business Activity Monitoring". In Abbildung X ist der Anteil der Schreiboperationen je Kategorie für beide Logfiles gezeigt.
+In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: "PreXULSkeletonUISettings" und "Business Activity Monitoring". In Abbildung \ref{chart:firefox-registy-css-vs-bam} ist der Anteil der Schreiboperationen je Kategorie für beide Logfiles gezeigt.
 \begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
-	\label{chart:final-criteria}  
-	\caption{Comparison of found PB artifacts between RAM Dumps}
+	\resizebox{\linewidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}[
+		xbar stacked,
+		width=18cm, 
+		height=12cm, 
+%		ylabel style={align=center}, ylabel=RAM-Dump 1,
+		y=1cm,
+		symbolic y coords={Logfile 2,Logfile 1},
+		ytick=data,
+		xticklabels={,,},
+        xmin = 0,
+        xmax = 40,
+		nodes near coords, 
+		nodes near coords align={horizontal},
+		legend style={
+			at={(0.5,-0.1)},
+			anchor=north
+		},
+		legend columns=2,
+		scaled x ticks=false
+		]
+			\addplot coordinates {
+			(10,Logfile 2) (10,Logfile 1)
+			};
+			\addplot coordinates {
+			(1,Logfile 2) (27,Logfile 1)
+			};
+			\legend{PreXULSkeletonUISettings (CSS), Business Activity Monitoring (BAM)}
+		\end{axis}
+	\end{tikzpicture}
+	}	
+	\caption{Firefox Registry "SetValue" Operationen im Process Monitor Logfile 1 und 2}
+	\label{chart:firefox-registy-css-vs-bam}
 \end{figure}
+
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-registry-stacked-bar-chart.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Comparison of found PB artifacts between RAM Dumps}
+%\end{figure}
 
 \paragraph*{PreXULSkeletonUISettings}
 %https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette
@@ -280,9 +391,8 @@ PB Artefakte sind dabei nicht enthalten.
 % https://notes.qazeer.io/dfir/windows/_artefacts_overview 
 
 \subsubsection*{Stringsuche in Registry Hives}
-
-Gemäß Methodik in Kapitel X wird die Firefox Registry als Uncommon Location behandelt, indem über alle auf der Festplatte vorhandenen Registry Datenbanken, den Registry-Hives, eine Stringsuche durchgeführt wird, ohne die Struktur der Hives zu beachten. 
-Dazu wurden sowohl die System-Hives als auch die User-Hives aus Tabelle X (TODO!) aus jedem Snapshot extrahiert und mithilfe des Registry Explorers nach PB Artefakten durchsucht.
+Gemäß Methodik in Kapitel \ref{subsection:methodik-datenanalyse-registry} wird die Firefox Registry als Uncommon Location behandelt, indem über alle auf der Festplatte vorhandenen Registry Datenbanken, den Registry-Hives, eine Stringsuche durchgeführt wird, ohne die Struktur der Hives zu beachten. 
+Dazu wurden sowohl die System-Hives als auch die User-Hives aus Tabelle \ref{tab:windows-registry-hives} aus jedem Festplatten-Image extrahiert und mithilfe des Registry Explorers nach PB Artefakten durchsucht.
 Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
 
 %Literatur:
@@ -312,7 +422,7 @@ Für jede Datei wurde vermerkt ob und wie sie wiederherstellbar war, mit welchem
 
 In Tabelle X (TODO!) sind die ausschließlich wiederherstellbaren Dateien aufgeführt.
 Die Dateien wurden in die vier Kategorien "Cache", "datareporting", und "Sonstige Dateien" eingeordnet.
-In keiner der identifizierten Dateien konnten PB Artefakte gefunden werden.
+In keiner der identifizierten Dateien konnten PB Artefakte gefunden werden. 
 
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png}}

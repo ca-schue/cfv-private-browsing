@@ -1,84 +1,451 @@
 \chapter{Ergebnisse}
-
+\label{chapter:ergebnisse}
 *** TODO ***
 
 \section{Firefox}
-
+\label{section:ergebnisse-firefox}
 Im nachfolgenden Abschnitt werden die Ergebnisse der Datenanalyse für den Webbrowser Firefox detailliert beschrieben. Die Analyse ist in drei Hauptkategorien unterteilt: Common Locations, Uncommon Locations und Registry.
 
 \subsection*{Common Locations}
-Zunächst werden die standardmäßigen Speicherorte für Browserartefakte nach potentiellen privaten Browsing Artefakten untersucht. Diese Common Locations beziehen sich ausschließlich auf Dateien, die auf die Festplatte geschrieben werden. In diesem Versuch wird gemäß Methodik in Kapitel X (TODO!) zwischen Schreiboperationen aus den Process Monitor Logfiles und SQLite Datenbänken zur Verwaltung von Nutzerdaten unterschieden. Weder in den Schreiboperationen der Process Monitor Logfiles noch in den SQLite-Datenbänken konnten PB Artefakte gefunden werden. 
+\label{subsection:ergebnisse-firefox-commonlocations}
+Zunächst werden die Common Locations nach potentiellen privaten Browsing Artefakten untersucht. Diese standardmäßigen Speicherorte für Browserartefakte beziehen sich ausschließlich auf die Festplatte geschriebene Dateien. In diesem Versuch wurde gemäß Methodik in Kapitel X (TODO!) zwischen Schreiboperationen aus den Process Monitor Logfiles und SQLite Datenbänken zur Verwaltung von Nutzerdaten unterschieden. Weder in den Schreiboperationen der Process Monitor Logfiles noch in den SQLite-Datenbänken konnten PB Artefakte gefunden werden. 
 
 Eine detaillierte Analyse der untersuchten Datein im Anhang X beschrieben.
 
 \subsection*{Uncommon Locations}
+\label{subsection:ergebnisse-firefox-uncommonlocations}
 Nachfolgend werden die Analyseergebnisse der Firefox Uncommon Locations beschrieben.
-Wie in Kapitel X erläutert, wird im Gegensatz zu Common Locations die Suchrichtung umgekehrt und es werden alle gesammelten Daten nach einem spezifischen PB Artefakt durchsucht.
-Somit benötigt ein Forensiker kein Wissen über das Browserverhalten. Stattdessen wird sich auf die Vollständigkeit der Funktionen von Forensik-Tools verlassen. Im Rahmen dieses Versuchs werden die Tools Autopsy und Volatility verwendet.
+Im Gegensatz zu den Common Locations benötigt ein Forensiker dabei kein Wissen über das Browserverhalten. Stattdessen wird sich auf die Vollständigkeit der Funktionen von Forensik-Tools verlassen. Im Rahmen dieses Versuchs werden die Tools Autopsy und Volatility verwendet.
 
 \subsubsection*{Analyse mit Autopsy}
-Bei den Common Locations in Kapitel X wird Autopsy nur zur Dateiextraktion genutzt. Im Falle der Uncommon Locations dient Autopsy als forensisches Werkzeug zur Datenanalyse.
+\label{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitautopsy}
+Zur Analyse der Common Locations in Kapitel \ref{subsection:ergebnisse-firefox-commonlocations} wird Autopsy zur Dateiextraktion genutzt. Im Falle der Uncommon Locations dient Autopsy zusätzlich als forensisches Werkzeug zur Datenanalyse.
 
-Eine Autopsy Stichwortsuche gemäß Methodik in Kapitel X (TODO!) lieferte in allen Snapshots keine Treffer. Es wurde zusätzlich das \texttt{\$Carved} Verzeichnis durchsucht, in dem Autopsy alle wiederhergestellten Dateien speichert.
+Eine Autopsy Stichwortsuche gemäß Methodik in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy} lieferte in allen Snapshots keine Treffer. Es wurde zusätzlich das \texttt{\$Carved} Verzeichnis durchsucht, in dem Autopsy alle wiederhergestellten Dateien speichert.
 
-Ebenso wurden in den von Autopsy automatisch kategorisierten Dateien keine PB Artefakte gefunden. Eine detaillierte Analyse der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" ist im Anhang X beschrieben.
+Ebenso wurden in den von Autopsy automatisch kategorisierten Dateien keine PB Artefakte gefunden. Eine detaillierte Analyse der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" ist im Anhang \label{subsubsection:appendix-firefox-uncommon-locations-autopsy} beschrieben.
 
 \subsubsection*{Analyse mit Volatility}
-Nachdem die Firefox Festplattenabbilder als Uncommon Location mit Autopsy untersucht wurden, werden nachfolgend die Analyseergebnisse des RAMs als Uncommon Location beschrieben. 
-Dazu wurde eine Stringsuche im gesamten RAM nach PB Artefakten durchgeführt.
-Wie in Kapitel X ausführlich beschrieben muss ein gefundener String eindeutig einem Browser zugeordnet werden können. 
-
-Deshalb wurde dazu das Volatility PlugIn "Yarascan" verwendet, ein Werkzeug um nach bestimmten Mustern im RAM zu suchen. Dazu wurden die in Tabelle X aufgeführten Yara-Regeln verwendet.
-Wie in Kapitel Methodik (TODO!) beschrieben, wird davon ausgehend das PlugIn "pslist" verwendet, um den Prozessnamen anhand PID zu identifizieren.
-Die Ergebnisse dieser Stringsuche sind nachfolgend nach Kategorie geordnet.
+\label{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}
+Zur Untersuchung des RAMs als Uncommon Location wurde eine Stringsuche im gesamten RAM nach PB Artefakten durchgeführt.
+Wie in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility} ausführlich beschrieben wurde, muss ein gefundener String eindeutig einem Browser zugeordnet werden können. 
+Dazu wird mit dem Volatility PlugIn "Yarascan" nach den in Tabelle X aufgeführten Yara-Regeln im RAM gesucht. Davon ausgehend wird das PlugIn "pslist" verwendet, um den Prozessnamen anhand PID zu identifizieren.
+Die Ergebnisse dieser Stringsuche sind nachfolgend nach den Yara-Regeln geordnet.
 
 \paragraph*{Yararule HTML}
 In keinem der Firefox RAM Dumps wurden HTML Fragemente der besuchten Seiten gefunden. Somit wird diese Yara-Regel nicht weiter betrachtet.
 
 \paragraph*{Yararule Keyword}
-Wie in Abbildung X (TODO!) gezeigt, wurden alle Suchbegriffe "pfaffenhofen", "nanoradar", "mooserliesl" sowie "mallofamerica" identifiziert im zwiten RAM Dump, nach dem Browsing Szenario mit geöffnetem Browser, identifiziert. Die Artefakte befinden sich ausschließlich im zweiten RAM Dump. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in zwölf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff "pfaffenhofen" mit 1301 gefundenen Artefakten im zweiten Firefox RAM Dump gefunden. Dies ist vermutlich auf den Google Maps Kartenbereich zurückzuführen, einen visuellen Ausschnitt der Karte, welcher bei der Google-Suche erscheint und Informationen über die geografische Lage, Straßen, Sehenswürdigkeiten und andere relevante Orte in der gesuchten Stadt zeigt. In den RAM Dumps 1 und 3 konnten Artefakte zu den Suchbegriffen identifiziert werden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/keywords.png}}}
-	\label{chart:final-criteria}  
-	\caption{Keywords}
-\end{figure}
+Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Suchbegriffe "pfaffenhofen", "nanoradar", "mooserliesl" sowie "mallofamerica" ausschließlich nach dem Browsing Szenario mit geöffnetem Browser identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in zwölf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff "pfaffenhofen" mit 1301 gefundenen Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchten Stadt zeigt. 
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{l}	
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={paffenhofen},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 1400,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (1301,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={nanoradar},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 1400,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3)  (541,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3)  (11,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={mooserliesl},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 1400,
+			nodes near coords,
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3)  (25,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={mallofamerica},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 1400,
+			nodes near coords,
+			nodes near coords align={horizontal},
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3)  (104,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+		\end{tikzpicture}
+	\end{tabular}
+	}
+	\caption{Gefundene Suchbegriffe im Firefox RAM}
+	\label{chart:firefox-volatility-keywords}
+\end{table}
+				
+
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/keywords.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Keywords}
+%\end{figure}
 
 \paragraph*{Yararule URL}
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/url.png}}}
-	\label{chart:final-criteria}  
-	\caption{URL}
-\end{figure}
-Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs unitree.com, mooserliesl.de, mallofamerica.com sowie donaukurier.de identifiziert werden.
-Dabei wurden die meisten Artefakte nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Alle besuchten URLs wurden in diesem Dump sowohl in Firefox als auch anderen Prozessen gefunden, wobei die meisten Artefakte in Firefox Prozessen zu finden sind. Dabei wurde "mooserliesl.de" mit insgesamt 390 Artefakten am wenigsten gefunden, "donaukurier.de" mit über 3600 Artefakten am häufigsten.
 
-Bemerkenswert ist, dass URL Artefakte gefunden wurden, nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL Artefakte in einem Firefox Prozess gefunden.
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{l}	
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={unitree.com},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 4000,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (1900,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(32,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={mooserliesl.de},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 4000,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (382,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(8,RAM-Dump 3) (8,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}	
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={mallofamerica.com},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 4000,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (2272,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(15,RAM-Dump 3) (364,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={donaukurier.de},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 4000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (3657,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(36,RAM-Dump 3) (38,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}		
+	\end{tabular}
+	}
+	\caption{Gefundene URLs im Firefox RAM}
+	\label{chart:firefox-volatility-urls}
+\end{table}
+
+Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs unitree.com, mooserliesl.de, mallofamerica.com sowie donaukurier.de identifiziert werden.
+Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Alle besuchten URLs wurden in diesem Dump sowohl in Firefox als auch anderen Prozessen gefunden, wobei die meisten Artefakte in Firefox Prozessen zu finden sind. Dabei wurde "mooserliesl.de" mit insgesamt 390 Artefakten am wenigsten gefunden, "donaukurier.de" mit über 3600 Artefakten am häufigsten.
+
+Bemerkenswert ist, dass selbst URL Artefakte gefunden wurden nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL Artefakte in einem Firefox Prozess gefunden.
 Anhand der PID $2252$ wurde festgestellt, dass sich alle URL Artefakte des dritten RAM Dumps in einem "svchost.exe" Prozess mit der gleichen PID befinden. Unter dem "Service Host" Prozess laufen gruppierte Windows-Dienste, um Ressourcen zu sparen und die Systemleistung zu verbessern.
 Volatility bietet das Plugin "svcscan" an, mit dem alle laufenden Dienste ausgegeben werden können.
 Bei Anwendung auf den dritten RAM Dump wurde jedoch zu keinem Dienst eine PID angegeben, wordurch der Dienst mit den URL Artefakten nicht im RAM identifiziert werden konnte. 
 % https://learn.microsoft.com/de-de/windows/application-management/svchost-service-refactoring
 Stattdessen wurde der dritte Snapshot aufgetaut, um im laufenden Windowsbetrieb den Dienst mithilfe des Process Explorers zu identifizieren.
-Wie in Abbildung X (TODO!) gezeigt, wurde anhand der PID $2252$ der Dienst "DNSCache" ermittelt.
+Wie in Abbildung \ref{chart:svchost-dnscache} gezeigt, wurde anhand der PID $2252$ der Dienst "DNSCache" ermittelt.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-dnscache.png}}}
-	\label{chart:final-criteria}  
-	\caption{URL}
+	\label{chart:svchost-dnscache}  
+	\caption{Unter dem SVChost-Prozess PID $2252$ läuft der DNSCache-Dienst.}
 \end{figure}
 Der DNSCache-Dienst unter Windows ist ein Teil des Betriebssystems, der für die Übersetzung von Domainnamen in IP-Adressen verantwortlich ist. Der DNSCache-Dienst speichert DNS-Anfragen und Antworten temporär, umd wiederholte DNS-Anfragen zu beschleunigen.
 % https://learn.microsoft.com/en-us/answers/questions/47441/how-to-disable-windows-10-dns-cache-services
 Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flushdns}, dem Schließen aller Process Monitor Instanzen sowie Beenden des DNSCaches Services wurde erneut ein RAM-Dump durchgeführt. Dort wurden keine URL Artefakte mehr gefunden.
 
 \paragraph*{Yararule Mail}
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/mail.png}}}
-	\label{chart:final-criteria}  
-	\caption{Mail}
-\end{figure}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{r}	
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={Betrefftext},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 80,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (22,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={Mailtext},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 80,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (24,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}	
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=Vorlesung23!\\(Passwort),
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 80,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (4,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=computerforensik\\@gmail.com,
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 80,
+			nodes near coords, 
+			nodes near coords align={horizontal}
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (66,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(36,RAM-Dump 3) (6,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}	
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={chs3702@thi.de},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 80,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel={cas0597@thi.de},
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 80,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (28,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+				%	\begin{axis}[]
+		%	\legend{Logfile 1, Logfile 2}
+		%	\end{axis}
+
+	\end{tabular}
+	}
+	\caption{Gefundene E-Mail Artefakte im Firefox RAM}
+	\label{chart:firefox-volatility-mail}
+\end{table}
+
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/mail.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Mail}
+%\end{figure}
 Es konnten alle E-Mail Artefakte des Browsing Szenarios gefunden werden.
-Die Artefakte befinden sich ausschließlich im zweiten Firefox RAM Dump, nach dem Browsing Szenario mit geöffnetem Browser.
+Wie in Abbildung \ref{chart:firefox-volatility-mail} gezeigt, befindensich die Artefakte ausschließlich im zweiten Firefox RAM Dump, nach dem Browsing Szenario mit geöffnetem Browser.
 Unter den gefundenen Artefakten befindet sich mit zwölf Vorkommen am häufigsten die Absenderadresse "computerforensikvl@gmail.com". Dieses Artefakt wurde als einziges Mail-Artefakt in anderen Prozesses außer Firefox gefunden.
 
-Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, vier mal als Klartext im RAM gefunden wurden. Das Passwort wurde in je zwei Firefox Prozessen mit den PIDs 7420 und 8424 zwei mal gefunden. Tabelle X zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
+Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, vier mal als Klartext im RAM gefunden wurden. Das Passwort wurde in je zwei Firefox Prozessen mit den PIDs 7420 und 8424 zwei mal gefunden. Tabelle \ref{tab:firefox-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
 \begin{table}[]
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|c|c|c|ll}
@@ -90,55 +457,183 @@ Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails ve
 0x240840e5b08                      & 8424         & 0x96bb08                                           &  &  \\ \cline{1-3}
 \end{tabular}
 }
+\label{tab:firefox-mapping-virtaddr-to-byteoffset}
+\caption{Abbildung der virtellen Speicheradressen der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten}
 \end{table}
 
-Zu diesen Artefakten wurde gemäß Methodik in Kapitel X der String Kontext -- die Zeichen vor und nach dem gefundenen Artefakt im Speicherbereich -- ermittelt. Dazu wurde gemäß Methodik in Kapitel X mithilfe des Volatility memmap-Plugins die Abbildung der virtuellen Speicheradressen auf den Byte-Offset in der extrahierten Speicherseite des Prozesses ermittelt. 
+Zu diesen Artefakten wurde gemäß Methodik in Kapitel \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility} der String Kontext -- also die Zeichen vor und nach dem gefundenen Artefakt im Speicherbereich -- ermittelt. Dazu wurde mithilfe des Volatility memmap-Plugins die Abbildung der virtuellen Speicheradressen auf den Byte-Offset in der extrahierten Speicherseite des Prozesses ermittelt. 
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0xb9ce29180c8_7420.png}}}
-	\label{chart:final-criteria}  
-	\caption{Password in memory page of PID 7420 at Byte-Offset 0x11dd40c8}
+	\label{img:firefox-pw-offset-0x11dd40c8}  
+	\caption{Passwort-Klartext in Speicherseite von PID 7420 an Byte-Offset 0x11dd40c8}
 \end{figure}
-Wie in Abbildung X gezeigt, sind in der Speicherseite des Prozesses mit PID $7420$ konnte vor und nach dem gefundenen Passwort am Byte-Offset $0xb9ce29180c8$ neben der Gmail-Url "mail.google.com" Code-Fragmente der "Gecko-Engine" zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video.
+
+Wie in Abbildung \ref{img:firefox-pw-offset-0x11dd40c8} gezeigt, sind in der Speicherseite des Prozesses mit PID $7420$ konnte vor und nach dem gefundenen Passwort am Byte-Offset $0xb9ce29180c8$ neben der Gmail-Url "mail.google.com" Code-Fragmente der "Gecko-Engine" zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video.
 % https://wiki.mozilla.org/GeckoMediaPlugins
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png}}}
-	\label{chart:final-criteria}  
-	\caption{Password in memory page of PID 7420 at Byte-Offset 0x12e234e0}
+	\label{img:firefox-pw-offset-pid-7420-0x12e234e0}  
+	\caption{Passwort-Klartext in Speicherseite von PID 7420 an Byte-Offset 0x12e234e0}
 \end{figure}
-In der gleichen Datei konnte nach dem gefundenen Passwort am Byte-Offset $0x24083b41858$ die Strings "Passwd" sowie "sessionrestore" (siehe Common Location "Sessionstore" in Kapitel X) identifiziert werden. 
-Wie in den Abbildungen X und Y (TODO!) gezeigt, können in den Byte-Offsets der gefundenen Passwörter in der Speicherseite der PID 8424 konnten kein Kontext ermittelt werden. Im Gegensatz zur Speicherseite der PID 7420 wird das Passwort dort mit 2 Bytes pro Zeichen enkodiert. Das eine Unicode-Zeichenenkodierung vermuten.
-\begin{figure}[h!]
-	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x24083b41858_8424.png}}}
-	\label{chart:final-criteria}  
-	\caption{Password in memory page of PID 8424 at Byte-Offset 0x583858}
-\end{figure}
-\begin{figure}[h!]
-\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x240840e5b08_8424.png}}}
-\label{chart:final-criteria}  
-\caption{Password in memory page of PID 8424 at Byte-Offset 0x96bb08}
-\end{figure}
-				
-\paragraph*{Yararule Image}
-Das im Browsing Szenario geöffnete Donaukurier Logo wurde ausschließlich im zweiten RAM Dump in drei mal in Firefox Prozessen gefunden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/image.png}}}
-	\label{chart:final-criteria}  
-	\caption{Image}
+In der gleichen Datei konnte wie in Abbildung \ref{img:firefox-pw-offset-pid-7420-0x12e234e0} nach dem gefundenen Passwort am Byte-Offset $0x12e234e0$ die Strings "Passwd" sowie "sessionrestore" (siehe Common Location "Sessionstore" in Kapitel X) identifiziert werden. 
+
+Wie in den Abbildungen \ref{img:firefox-pw-offset-pid-8424} gezeigt, können in den Byte-Offsets der gefundenen Passwörter in der Speicherseite der PID 8424 konnten kein Kontext ermittelt werden. Im Gegensatz zur Speicherseite der PID 7420 wird das Passwort dort mit 2 Bytes pro Zeichen enkodiert. Das eine Unicode-Zeichenenkodierung vermuten.
+\begin{figure}
+	\centering
+	\subcaptionbox{Byte-Offset 0x583858}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0x24083b41858_8424.png}}%
+	\hfill
+	\subcaptionbox{Byte-Offset 0x96bb08}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0x240840e5b08_8424.png}}%
+	\label{img:firefox-pw-offset-pid-8424}  
+	\caption{Passwords in memory page of PID 8424}
 \end{figure}
 
-Wie in Abbildung X zusammenfassend gezeigt wurden vor dem Browsing Szenario, keine private Browsing Artefakte im ersten RAM Dump gefunden.
+\paragraph*{Yararule Image}
+Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Browsing Szenario geöffnete Donaukurier Logo ausschließlich im zweiten RAM Dump in drei mal in Firefox Prozessen gefunden.
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{r}
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=Donaukurier Logo\\(Hexadezimal),
+			y=1cm,
+			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 4,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3) (3,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+	\end{tabular}
+	}
+	\caption{Gefundener Hexadezimalwert des Donaukurier-Logos im Firefox RAM}
+	\label{chart:firefox-volatility-image}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/image.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Image}
+%\end{figure}
+
+Wie in Abbildung \ref{chart:firefox-volatility-summary} zusammenfassend gezeigt wurden vor dem Browsing Szenario, keine private Browsing Artefakte im ersten RAM Dump gefunden.
 Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
 Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/summary.png}}}
-	\label{chart:final-criteria}  
-	\caption{Summary}
-\end{figure}
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{r}
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 3,
+			y=1cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 10000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			scaled x ticks=false
+			]
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (91,URLs) (0,Suchbegriffe)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+%		\pgfplotsset{scaled x ticks=false}
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 2,
+			y=1cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 10000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			scaled x ticks=false
+			]
+				\addplot coordinates {
+				(3,DK-Logo) (184,E-Mail) (8211,URLs) (1974,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (6,E-Mail) (444,URLs) (12,Suchbegriffe)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 1,
+			y=1cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 10000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+			scaled x ticks=false
+			]
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				};
+				\legend{firefox.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}	
+	\end{tabular}
+	}
+	\caption{Zusammenfassung gefundener Artefakte in den Firefox RAM-Dumps}
+	\label{chart:firefox-volatility-summary}
+\end{table}
 
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/firefox/summary.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Summary}
+%\end{figure}
 
 \subsection*{Registry}
-
-Die Analyse der Registry zählt gemäß Methodik in Kapitel X sowohl zu den Common als auch Uncommon Locations. Weder in den Process Monitor "SetValue" Operations noch in den System- und User-Hives konnten PB Artefakte gefunden werden. Eine detaillierte Analyse dieser Common- und Uncommon Locations der Registry ist im Anhang X beschrieben.
+\label{subsection:ergebnisse-firefox-registry}
+Die Analyse der Registry zählt gemäß Methodik in Kapitel \ref{subsection:methodik-datenanalyse-registry} sowohl zu den Common als auch Uncommon Locations. Weder in den Process Monitor "SetValue" Operations noch in den System- und User-Hives konnten PB Artefakte gefunden werden. Eine detaillierte Analyse dieser Common- und Uncommon Locations der Registry ist im Anhang X beschrieben.
 
 
 *** TODO: Zusammenfassung Firefox ***

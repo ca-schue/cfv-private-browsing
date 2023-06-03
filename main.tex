@@ -9,6 +9,8 @@ bibtotoc,				% Literaturverzeichis in Inhaltsverzeichnis
 headsepline,			% Kopfzeilentrennlinie
 headings,	
 %  draft,				% Korrekturfassung
+table,
+xcdraw
 ]{scrreprt}		% scrartcl	
 
 % Eingabecodierung
@@ -53,10 +55,6 @@ block=ragged
 \graphicspath{{bilder/}}
 \usepackage{svg}
 
-% Abbildungen nebeneinander
-\usepackage{subfig}
-\usepackage{booktabs}
-
 % Kopf- und Fußzeile
 \usepackage[
 headsepline,	% Kopfzeilen-Sepparationslinie
@@ -72,9 +70,34 @@ automark,		% Lebende Kolumnentitel
 % Zellen verbinden
 \usepackage{multirow}
 
+% Farbige Zellen
+\usepackage{xcolor}
+
 % Aufzählungen
 \usepackage{enumitem}
 
+% Tabelle im Querformat
+\usepackage{pdflscape}
+\usepackage{afterpage}
+
+% Margins ändern
+\usepackage{geometry}
+
+% Zellkonturen
+\usepackage{hhline}
+
+% Balkendiagramme
+\usepackage{pgfplots, pgfplotstable}
+
+% Für zurätzliche pgfplot Features
+\pgfplotsset{compat=1.9}
+
+% Abbildungen nebeneinander
+\usepackage{subcaption}
+
+% Diagramme
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
