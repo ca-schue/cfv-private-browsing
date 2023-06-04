@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  4 JUN 2023 19:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  4 JUN 2023 22:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3034,11 +3034,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [37] [38]
+] [37]) [38]
 \openout2 = `kapitel/07_Diskussion.aux'.
 
  (kapitel/07_Diskussion.tex
@@ -3153,7 +3149,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:mzcacheview' on page 45 undefined on input line 1
 06.
 
-<bilder/firefox-cache.png, id=613, 886.81313pt x 136.25906pt>
+<bilder/firefox-cache.png, id=614, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
 Package pdftex.def Info: bilder/firefox-cache.png  used on input line 110.
@@ -3177,7 +3173,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-session-history-scrounger' on page 46 und
 efined on input line 131.
 
-<bilder/firefox-sessionstore.png, id=619, 534.49687pt x 95.6072pt>
+<bilder/firefox-sessionstore.png, id=620, 534.49687pt x 95.6072pt>
 File: bilder/firefox-sessionstore.png Graphic file (type png)
 <use bilder/firefox-sessionstore.png>
 Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 13
@@ -3215,7 +3211,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-bookmarks' on page 48 undefined on in
 put line 262.
 
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=627, 739.26187pt x 27.85406pt
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=628, 739.26187pt x 27.85406pt
 >
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
@@ -3233,7 +3229,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-cookies' on page 48 undefined on inpu
 t line 270.
 
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=628, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=629, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
@@ -3249,7 +3245,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-history' on page 49 undefined on inpu
 t line 278.
 
-<bilder/cfv_firefox_autopsy_web_history.png, id=632, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=633, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
@@ -3264,7 +3260,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-categories' on page 49 undefined on i
 nput line 287.
 
-<bilder/cfv_firefox_autopsy_web_categories.png, id=633, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=634, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
@@ -3427,7 +3423,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-bookmarks' on page 56 undefined on input 
 line 633.
 
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=663, 660.96938pt x 32.37094pt>
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=664, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
@@ -3441,7 +3437,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-cookies' on page 56 undefined on input li
 ne 641.
 
-<bilder/cfv_tor_autopsy_web_cookies.png, id=664, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=665, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
@@ -3456,7 +3452,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-history' on page 57 undefined on input li
 ne 649.
 
-<bilder/cfv_tor_autopsy_web_history.png, id=670, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=671, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
@@ -3470,7 +3466,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-categories' on page 57 undefined on input
  line 657.
 
-<bilder/cfv_tor_autopsy_web_categories.png, id=671, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=672, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
@@ -3510,15 +3506,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45143 strings out of 475281
- 1115708 string characters out of 2774064
- 2186741 words of memory out of 3000000
- 65557 multiletter control sequences out of 15000+600000
- 597237 words of font info for 241 fonts, out of 8000000 for 9000
+ 45144 strings out of 475281
+ 1115714 string characters out of 2774064
+ 2186730 words of memory out of 3000000
+ 65554 multiletter control sequences out of 15000+600000
+ 597439 words of font info for 243 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,29n,106p,10601b,2782s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
-:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
+ 108i,29n,106p,10601b,2784s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
+:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
 ers/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
 /carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb>
@@ -3528,9 +3524,9 @@ C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
 ><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pf
 b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
 b>
-Output written on main.pdf (66 pages, 858590 bytes).
+Output written on main.pdf (66 pages, 858331 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
+ 734 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  60532 words of extra memory for PDF output out of 61914 (max. 10000000)
 

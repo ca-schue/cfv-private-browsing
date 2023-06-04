@@ -12,18 +12,19 @@
 	> Gleiche Datenbänke: Evtl. hervorheben, bei welchen Browser mehr geschrieben wurde, ODER: Diagramm mit Anazhl Schreiboperationen pro SQLite DB verglichen zwischen Browsern
 		(Gestacktes Balkendiagramm zu veränderten SQLite DBs => Erst bei Vergleich mit Tor!)
 
+\subsection*{Registry}
+ "Sessionstore-Backup" fehlt in Tor
+
+TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
+- Firefox v. Chrome ("Standardbrowser")
+- Tor v. Brave ("Sichere Browser")
+- Zum Schluss: "Eine große Tabelle" mit den wichtigsten Kategorien?
+
 \subsection*{Uncommon Locations}
 - Autopsy Stichwortsuche: keine Suchergebnisse bei beiden Browsern
 - Autopsy Kategorien: keine PB Artefakten in kategorisierten Dateien, evtl. unterschiedlich Kategorisierte Dateien hervorheben
 - Volatility Artefakte:
 
-
-
-
-\paragraph*{Firefox Zusammenfassung Yarascan}
-Wie in Abbildung \ref{chart:firefox-volatility-summary} zusammenfassend gezeigt wurden vor dem Browsing Szenario, keine private Browsing Artefakte im ersten RAM Dump gefunden.
-Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
-Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{r}
@@ -32,196 +33,41 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
 			xbar,
 			width=12cm, 
 			height=3cm, 
-			ylabel style={align=center}, ylabel=RAM-Dump 3,
-			y=0.8cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ylabel style={align=center}, ylabel=\textbf{RAM-Dump 3},
+			y=1.2cm,
+			symbolic y coords={Suchbegriffe, URLs, E-Mail, DK-Logo},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
-            xmax = 10000,
+            xmax = 42000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
 			nodes near coords style={font=\tiny},
    			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
 			bar width=.2cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
+			enlarge y limits={abs=3*\pgfplotbarwidth},
 			scaled x ticks=false,
-    		yminorgrids = true,minor tick num=1
-			]
-				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-				};
-				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (91,URLs) (0,Suchbegriffe)
-				};
-			\end{axis}
-		\end{tikzpicture}
-		\\
-		\begin{tikzpicture}
-			\begin{axis}[
-			xbar,
-			width=12cm, 
-			height=3cm, 
-			ylabel style={align=center}, ylabel=RAM-Dump 2,
-			y=0.8cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
-			ytick=data,
-			xticklabels={,,},
-            xmin = 0,
-            xmax = 10000,
-			nodes near coords, 
-			nodes near coords align={horizontal},
-			nodes near coords style={font=\tiny},
-   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-			bar width=.2cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
-			scaled x ticks=false,
-    		yminorgrids = true,minor tick num=1
-			]
-				\addplot coordinates {
-				(3,DK-Logo) (184,E-Mail) (8211,URLs) (1974,Suchbegriffe)
-				};
-				\addplot coordinates {
-				(0,DK-Logo) (6,E-Mail) (444,URLs) (12,Suchbegriffe)
-				};
-			\end{axis}
-		\end{tikzpicture}
-		\\
-		\begin{tikzpicture}
-			\begin{axis}[
-			xbar,
-			width=12cm, 
-			height=3cm, 
-			ylabel style={align=center}, ylabel=RAM-Dump 1,
-			y=0.8cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
-			ytick=data,
-			xticklabels={,,},
-            xmin = 0,
-            xmax = 10000,
-			nodes near coords, 
-			nodes near coords align={horizontal},
-			nodes near coords style={font=\small},
-   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-			bar width=.2cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
+    		yminorgrids = true,minor tick num=1,
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
 			},
-			legend columns=2,
-			scaled x ticks=false,
-    		yminorgrids = true,minor tick num=1
-			]
-			\addplot coordinates {
-			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-			};
-			\addplot coordinates {
-			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-			};
-			\legend{firefox.exe, Andere Prozesse}
-			\end{axis}
-		\end{tikzpicture}	
-	\end{tabular}
-	}
-	\caption{Zusammenfassung gefundener Artefakte in den Firefox RAM-Dumps}
-	\label{chart:firefox-volatility-summary}
-\end{table}
-
-
-
-
-
-
-\paragraph*{Tor: Zusammenfassung Yarascan}
-Wie in Abbildung \ref{chart:tor-volatility-summary} zusammenfassend gezeigt, wurden ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach (RAM-Dump 3-1) Zuweisung einer "Neuen Identität" Brwosing Artefakte im Arbeitsspeicher gefunden.
-Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
-Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
-Die Erstellung einer "Neuen Identität" reduzierte dabei deutlich die gefundenen Artefakte im RAM.
-In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario besuchten Seiten identifiziert werden. Weiterhin wurde zwei Mal das Passwort des Google-Accounts im Klartext gefunden.
-
-\begin{table}[h!]
-	\renewcommand{\arraystretch}{0.4}
-	\resizebox{\linewidth}{!}{
-	\begin{tabular}{r}
-		\begin{tikzpicture}
-			\begin{axis}[
-			xbar,
-			width=12cm, 
-			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{RAM-Dump 3-2},
-			y=0.75cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
-			label style={font=\small},
-			tick label style={font=\small},
-			ytick=data,
-			xticklabels={,,},
-            xmin = 0,
-            xmax = 40000,
-			nodes near coords, 
-			nodes near coords align={horizontal},
-			nodes near coords style={font=\tiny},
-   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-			bar width=.17cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
-			scaled x ticks=false,
-			legend style={
-				at={(0.5,-0.1)},
-				anchor=north
-			},
-			legend columns=3,
-    		yminorgrids = true,minor tick num=1
+			legend columns=4
 			]
 				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				(0,Suchbegriffe) (91,URLs) (0,E-Mail) (0,DK-Logo)
 				};
 				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				(0,Suchbegriffe) (0,URLs) (0,E-Mail) (0,DK-Logo)
 				};
-								\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				\addplot coordinates {
+				(0,Suchbegriffe) (5,URLs) (1,E-Mail) (0,DK-Logo)
+				};
+				\addplot coordinates {
+				(0,Suchbegriffe) (0,URLs) (1,E-Mail) (0,DK-Logo)
 				};
 			\end{axis}
-		\end{tikzpicture}
-		\\[-7pt]
-		\begin{tikzpicture}
-			\begin{axis}[
-			xbar,
-			width=12cm, 
-			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{RAM-Dump 3-1},
-			y=0.75cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
-			label style={font=\small},
-			tick label style={font=\small},
-			ytick=data,
-			xticklabels={,,},
-            xmin = 0,
-            xmax = 40000,
-			nodes near coords, 
-			nodes near coords align={horizontal},
-			nodes near coords style={font=\tiny},
-   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-			bar width=.17cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
-			scaled x ticks=false,
-			legend style={
-				at={(0.5,-0.1)},
-				anchor=north
-			},
-			legend columns=3,
-    		yminorgrids = true,minor tick num=1
-			]
-				\addplot coordinates {
-				(0,DK-Logo) (8,E-Mail) (4077,URLs) (1849,Suchbegriffe)
-				};
-				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (1297,URLs) (0,Suchbegriffe)
-				};
-				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (5,URLs) (21,Suchbegriffe)
-				};
-			\end{axis}
+%			\legend{Firefox, Tor, Chrome, Brave}
 		\end{tikzpicture}
 		\\[-7pt]
 		\begin{tikzpicture}
@@ -230,38 +76,46 @@ In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario bes
 			width=12cm, 
 			height=3cm, 
 			ylabel style={align=center}, ylabel=\textbf{RAM-Dump 2},
-			y=0.75cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
-			label style={font=\small},
-			tick label style={font=\small},
+			y=1.2cm,
+%			symbolic y coords={Suchbegriffe, URLs, E-Mail, DK-Logo},
+			ytick = {1,...,4},
+			yticklabels={Suchbegriffe, URLs, E-Mail, DK-Logo},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
-            xmax = 40000,
+            xmax = 42000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
 			nodes near coords style={font=\tiny},
    			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-			bar width=.17cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
+			bar width=.2cm,
+			enlarge y limits={abs=3*\pgfplotbarwidth},
 			scaled x ticks=false,
+    		yminorgrids = true,minor tick num=1,
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
 			},
-			legend columns=3,
-    		yminorgrids = true,minor tick num=1
+			legend columns=4
 			]
 				\addplot coordinates {
-				(1,DK-Logo) (158,E-Mail) (36013,URLs) (7134,Suchbegriffe)
+				(1983,1) (8655,2) (184,3) (3,4)
 				};
 				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (1388,URLs) (0,Suchbegriffe)
+				(7163,1) (37414,2) (158,3) (1,4)
 				};
+				\draw [red,line width=0.5pt] (axis cs: 5379,1.977) -- (axis cs: 5379,1.8)
+				node[pos = 0.5,right] {\tiny*5,379};
 				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (13,URLs) (19,Suchbegriffe)
+				(3301,1) (17048,2) (590,3) (3,4)
+				};
+				\draw [red,line width=0.5pt] (axis cs: 1870,0.977) -- (axis cs: 1870,0.8)
+				node[pos = 0.5,right] {\tiny*1,870};
+				\addplot coordinates {
+				(2124,1) (10132,2) (408,3) (3,4)
 				};
 			\end{axis}
+%			\legend{Firefox, Tor, Chrome, Brave}
 		\end{tikzpicture}
 		\\[-7pt]
 		\begin{tikzpicture}
@@ -270,46 +124,76 @@ In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario bes
 			width=12cm, 
 			height=3cm, 
 			ylabel style={align=center}, ylabel=\textbf{RAM-Dump 1},
-			y=0.75cm,
-			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
-			label style={font=\small},
-			tick label style={font=\small},
-			ytick=data,
+			y=1.2cm,
+%			symbolic y coords={Suchbegriffe, URLs, E-Mail, DK-Logo},
+			ytick = {1,...,4},
+			yticklabels={Suchbegriffe, URLs, E-Mail, DK-Logo},
+%			ytick=data,
 			xticklabels={,,},
             xmin = 0,
-            xmax = 40000,
+            xmax = 42000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
 			nodes near coords style={font=\tiny},
    			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-			bar width=.17cm,
-			enlarge y limits={abs=2*\pgfplotbarwidth},
+			bar width=.2cm,
+			enlarge y limits={abs=3*\pgfplotbarwidth},
 			scaled x ticks=false,
+    		yminorgrids = true,minor tick num=1,
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
 			},
-			legend columns=3,
-    		yminorgrids = true,minor tick num=1
+			legend columns=4
 			]
-			\addplot coordinates {
-			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-			};
-			\addplot coordinates {
-			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-			};
-						\addplot coordinates {
-			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-			};
-			\legend{firefox.exe, tor.exe, Andere Prozesse}
+				\addplot coordinates {
+				(0,1) (0,2) (0,3) (0,4)
+				};
+				\addplot coordinates {
+				(0,1) (0,2) (0,3) (0,4)
+				};
+				\addplot coordinates {
+				(0,1) (0,2) (0,3) (0,4)
+				};
+				\addplot coordinates {
+				(0,1) (0,2) (0,3) (0,4)
+				};
+			\legend{Firefox, Tor, Chrome, Brave}
 			\end{axis}
 		\end{tikzpicture}	
 	\end{tabular}
 	}
-	\caption{Zusammenfassung gefundener Artefakte in den Tor-Browser RAM-Dumps}
-	\label{chart:tor-volatility-summary}
+	\caption{Zusammenfassung gefundener Artefakte in den Firefox RAM-Dumps}
+	\label{chart:firefox-volatility-summary}
 \end{table}
 
+> In keinem Browser in RAM-Dump 1 (vor dem Browsing Szenario) PB Artefakte gefunden
+
+\paragraph*{Firefox vs Tor}
+> RAM-Dump 2: 
+ - Tor hinterlässt nach Browsing Szenario mit geöffnetem Browser (erstaunlicherweise) mehr URL-Artefake und Suchbegriffe im zweiten RAM-Dump als Firefox. Wert reduziert sich jedoch deutlich nach Zuweisung von "Neuer Identität" in Tor => Danach weniger Artefake in RAM hinterlassen als Firefox (Werte mit * gekennzeichnet)
+ - Sowohl Tor als auch Firefox hinterlassen Gmail-Passwort als Klartext im RAM
+> RAM-Dump 3:
+- Nach Schließen des Browsers konnten im dritten Firefox RAM-Dump URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden
+- Tor hinterlässt keine Artefakte nach Schließen des Browsers => .onion-URLs nicht im DNScache
+
+=> Tor hinterlässt in RAM-2 nach Neuer Identität und in RAM-3 nach geschlossenem Browser weniger Artefakte als Firefox
+
+\paragraph*{Chrome vs Brave}
+> ... *** TODO: Christoph ***
+=> Brave hinterlässt weniger Artefakte als Chrome
+
+\paragraph*{Firefox vs Chrome}
+> In RAM-Dump 2: Firefox hinterlässt in jeder Kategorie gleich viele (DK-Logo) oder weniger (E-Mail, URLs, Suchbegriffe) Artefakte als Chrome
+> Durchschnittliche Differenz: 2.529 Artefakte weniger als in Chrome, größter Unterschied bei URLs
+> In Ram-Dump 3: Firefox hinterlässt mehr URLs als Chrome, In Chrome zusätzlich 1x Absender-Adresse gefunden.
+
+\paragraph*{Tor vs Brave}
+> Vor "Neuer Identität" hinterlässt Tor deutlich mehr URL- und Suchbegriff-Artefakte als Brave
+	=> Insbesondere hinterlässt Tor 2x das Gmail-Passwort als Klartext im RAM
+> Nach "Neuer Identiät" hinterlässt Tor in RAM-Dump 2 weniger Artefakte als Brave (Durchschnittliche Differenz = 1315 Artefakte weniger als Brave), wobei größter Unterschied bei URLs, Passwort nicht mehr im RAM
+
+> In RAM-Dump 3 hinterlässt Tor kein Artefakt, Brave 1x die Absender-Mail
 
 
 
@@ -324,13 +208,5 @@ In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario bes
 
 
 
-\subsection*{Registry}
 
 
-	
- "Sessionstore-Backup" fehlt in Tor
-
-TODO: Kreisdiagramme/Balkendiagramme mit Gesamtzahl an (Non-)Firefox Yarascan-Treffer erst im Vergleich mit Tor
-- Firefox v. Chrome ("Standardbrowser")
-- Tor v. Brave ("Sichere Browser")
-- Zum Schluss: "Eine große Tabelle" mit den wichtigsten Kategorien?
