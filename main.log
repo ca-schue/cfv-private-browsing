@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  3 JUN 2023 23:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  4 JUN 2023 11:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1401,33 +1401,7 @@ LaTeX Warning: Label `chart:final-criteria' multiply defined.
 LaTeX Warning: Label `chart:final-criteria' multiply defined.
 
 ) (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
-(kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux
-
-LaTeX Warning: Label `subsubsection:appendix-firefox-uncommon-locations-autopsy
-' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-
-LaTeX Warning: Label `chart:final-criteria' multiply defined.
-
-))
+(kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
@@ -2832,195 +2806,184 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [25]
 
-Package caption Warning: \label without proper reference on input line 279.
+Package caption Warning: \label without proper reference on input line 514.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `chart:svchost-dnscache' on page 26 undefined on input
- line 276.
+ line 511.
 
 <bilder/firefox-dnscache.png, id=533, 903.375pt x 192.72pt>
 File: bilder/firefox-dnscache.png Graphic file (type png)
 <use bilder/firefox-dnscache.png>
-Package pdftex.def Info: bilder/firefox-dnscache.png  used on input line 278.
+Package pdftex.def Info: bilder/firefox-dnscache.png  used on input line 513.
 (pdftex.def)             Requested size: 903.3728pt x 192.71951pt.
+[26] [27 <./bilder/firefox-dnscache.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[26]
-
-Package caption Warning: \label without proper reference on input line 460.
+Package caption Warning: \label without proper reference on input line 884.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:firefox-mapping-virtaddr-to-byteoffset' on page 2
-7 undefined on input line 448.
+8 undefined on input line 872.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 449.
+               Default added (so using `tbp') on input line 873.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 450--461
+Underfull \hbox (badness 10000) in paragraph at lines 874--885
 [][]
  []
 
-<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=538, 462.22687pt
+<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=543, 462.22687pt
  x 203.25937pt>
 File: bilder/volatility/firefox/password_0xb9ce29180c8_7420.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0xb9ce29180c8_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0xb9ce29180c8_7420.
-png  used on input line 466.
+png  used on input line 890.
 (pdftex.def)             Requested size: 462.22574pt x 203.25887pt.
-[27 <./bilder/firefox-dnscache.png>]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package caption Warning: \label without proper reference on input line 467.
+Package caption Warning: \label without proper reference on input line 891.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-pw-offset-0x11dd40c8' on page 28 undefine
-d on input line 471.
+d on input line 895.
 
-<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=543, 453.94594p
+<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=544, 453.94594p
 t x 179.92218pt>
 File: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png Graphic file (
 type png)
 <use bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420
-.png  used on input line 474.
+.png  used on input line 898.
 (pdftex.def)             Requested size: 453.94482pt x 179.92174pt.
 
-Package caption Warning: \label without proper reference on input line 475.
+Package caption Warning: \label without proper reference on input line 899.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-pw-offset-pid-7420-0x12e234e0' on page 28
- undefined on input line 478.
+ undefined on input line 902.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Package caption Warning: \label without proper reference on input line 486.
+Package caption Warning: \label without proper reference on input line 910.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-pw-offset-pid-8424' on page 28 undefined 
-on input line 480.
+on input line 904.
 
-<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=544, 456.95718pt
+<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=545, 456.95718pt
  x 170.13562pt>
 File: bilder/volatility/firefox/password_0x24083b41858_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x24083b41858_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x24083b41858_8424.
-png  used on input line 483.
+png  used on input line 907.
 (pdftex.def)             Requested size: 196.57976pt x 73.19063pt.
-<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=545, 458.46281pt
+<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=546, 458.46281pt
  x 231.11343pt>
 File: bilder/volatility/firefox/password_0x240840e5b08_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x240840e5b08_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x240840e5b08_8424.
-png  used on input line 485.
+png  used on input line 909.
 (pdftex.def)             Requested size: 196.57976pt x 99.09824pt.
-[28]
+[28 <./bilder/volatility/firefox/password_0xb9ce29180c8_7420.png>]
+
+LaTeX Warning: Text page 29 contains only floats.
+
+[29]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./bilder/volatility/firefox/password_0xb9ce29180c8_7420.png> <./bilder/vol
-atility/firefox/password_0x2859f4ffd4e0_7420.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[30 <./bilder/volatility/firefox/password_0x24083b41858_8424.png> <./bilder/vol
-atility/firefox/password_0x240840e5b08_8424.png>] [31]
-<bilder/volatility/tor/keywords.png, id=564, 1533.657pt x 713.721pt>
+[30 <./bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png> <./bilder/vo
+latility/firefox/password_0x24083b41858_8424.png> <./bilder/volatility/firefox/
+password_0x240840e5b08_8424.png>] [31] [32]
+<bilder/volatility/tor/keywords.png, id=568, 1533.657pt x 713.721pt>
 File: bilder/volatility/tor/keywords.png Graphic file (type png)
 <use bilder/volatility/tor/keywords.png>
 Package pdftex.def Info: bilder/volatility/tor/keywords.png  used on input line
- 687.
+ 1121.
 (pdftex.def)             Requested size: 1533.65327pt x 713.71925pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<bilder/volatility/tor/url.png, id=565, 1539.789pt x 751.608pt>
+ [33]
+<bilder/volatility/tor/url.png, id=572, 1539.789pt x 751.608pt>
 File: bilder/volatility/tor/url.png Graphic file (type png)
 <use bilder/volatility/tor/url.png>
-Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 697.
-
+Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 1131
+.
 (pdftex.def)             Requested size: 1539.78525pt x 751.60617pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/mail.png, id=566, 1473.87pt x 952.869pt>
+<bilder/volatility/tor/mail.png, id=573, 1473.87pt x 952.869pt>
 File: bilder/volatility/tor/mail.png Graphic file (type png)
 <use bilder/volatility/tor/mail.png>
-Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 705
-.
+Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 113
+9.
 (pdftex.def)             Requested size: 1473.86641pt x 952.86668pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 713.
+               Default added (so using `tbp') on input line 1147.
 
-<bilder/volatility/tor/password_0xea0318.png, id=567, 454.69875pt x 122.70844pt
+<bilder/volatility/tor/password_0xea0318.png, id=574, 454.69875pt x 122.70844pt
 >
 File: bilder/volatility/tor/password_0xea0318.png Graphic file (type png)
 <use bilder/volatility/tor/password_0xea0318.png>
 Package pdftex.def Info: bilder/volatility/tor/password_0xea0318.png  used on i
-nput line 725.
+nput line 1159.
 (pdftex.def)             Requested size: 454.69763pt x 122.70813pt.
-<bilder/volatility/tor/password_0x10f7748.png, id=568, 458.46281pt x 243.15843p
+<bilder/volatility/tor/password_0x10f7748.png, id=575, 458.46281pt x 243.15843p
 t>
 File: bilder/volatility/tor/password_0x10f7748.png Graphic file (type png)
 <use bilder/volatility/tor/password_0x10f7748.png>
 Package pdftex.def Info: bilder/volatility/tor/password_0x10f7748.png  used on 
-input line 733.
+input line 1167.
 (pdftex.def)             Requested size: 458.46169pt x 243.15784pt.
-[32]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33 <./bilder/volatility/tor/keywords.png> <./bilder/volatility/tor/url.png>]
-[34 <./bilder/volatility/tor/mail.png> <./bilder/volatility/tor/password_0xea03
-18.png>]
-<bilder/volatility/tor/image.png, id=583, 1473.87pt x 242.652pt>
+[34 <./bilder/volatility/tor/keywords.png>] [35 <./bilder/volatility/tor/url.pn
+g> <./bilder/volatility/tor/mail.png>]
+<bilder/volatility/tor/image.png, id=586, 1473.87pt x 242.652pt>
 File: bilder/volatility/tor/image.png Graphic file (type png)
 <use bilder/volatility/tor/image.png>
-Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 74
-1.
+Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 11
+75.
 (pdftex.def)             Requested size: 1473.86641pt x 242.6514pt.
 
-Overfull \hbox (7.68999pt too wide) in paragraph at lines 739--745
+Overfull \hbox (7.68999pt too wide) in paragraph at lines 1173--1179
 [] \T1/lmss/bx/n/10.95 (-20) Ya-ra-ru-le Image[] \T1/lmss/m/n/10.95 (-20) Wie i
 n Ab-bil-dung X dar-ge-stellt, wur-de der Hexadezimal-Wert des Donaukurier-
  []
 
-<bilder/volatility/tor/summary.png, id=584, 1537.38pt x 628.092pt>
-File: bilder/volatility/tor/summary.png Graphic file (type png)
-<use bilder/volatility/tor/summary.png>
-Package pdftex.def Info: bilder/volatility/tor/summary.png  used on input line 
-753.
-(pdftex.def)             Requested size: 1537.37627pt x 628.09045pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[35 <./bilder/volatility/tor/password_0x10f7748.png> <./bilder/volatility/tor/i
-mage.png>]) [36 <./bilder/volatility/tor/summary.png>]
+<bilder/volatility/tor/summary.png, id=587, 1537.38pt x 628.092pt>
+File: bilder/volatility/tor/summary.png Graphic file (type png)
+<use bilder/volatility/tor/summary.png>
+Package pdftex.def Info: bilder/volatility/tor/summary.png  used on input line 
+1187.
+(pdftex.def)             Requested size: 1537.37627pt x 628.09045pt.
+[36 <./bilder/volatility/tor/password_0xea0318.png> <./bilder/volatility/tor/pa
+ssword_0x10f7748.png>] [37 <./bilder/volatility/tor/image.png> <./bilder/volati
+lity/tor/summary.png>]) [38]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
-
-(kapitel/06_Vergleich der Browser.tex
+ (kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [37
+) [39
 
 
 
@@ -3030,17 +2993,17 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-[38
+[40
 
 
 
 
-]) [39]
+]) [41]
 \openout2 = `kapitel/08_Fazit.aux'.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [40
+) [42
 
 
 
@@ -3048,7 +3011,7 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [41
+ (kapitel/09_Anhang.tex [43
 
 
 
@@ -3060,10 +3023,10 @@ Package caption Warning: \label without proper reference on input line 87.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:firefox-writefile-operations' on page 42 undefine
+LaTeX Warning: Reference `tab:firefox-writefile-operations' on page 44 undefine
 d on input line 31.
 
-[42]
+[44]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -3140,7 +3103,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:mzcacheview' on page 45 undefined on input line 1
 06.
 
-<bilder/firefox-cache.png, id=619, 886.81313pt x 136.25906pt>
+<bilder/firefox-cache.png, id=627, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
 Package pdftex.def Info: bilder/firefox-cache.png  used on input line 110.
@@ -3164,103 +3127,103 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-session-history-scrounger' on page 46 und
 efined on input line 131.
 
-<bilder/firefox-sessionstore.png, id=624, 534.49687pt x 95.6072pt>
+<bilder/firefox-sessionstore.png, id=632, 534.49687pt x 95.6072pt>
 File: bilder/firefox-sessionstore.png Graphic file (type png)
 <use bilder/firefox-sessionstore.png>
 Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 13
 3.
 (pdftex.def)             Requested size: 534.49556pt x 95.60695pt.
 
-Package caption Warning: \label without proper reference on input line 148.
+Package caption Warning: \label without proper reference on input line 149.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:firefox-sqlite-dbs-explained' on page 46 undefine
-d on input line 146.
+d on input line 147.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Package caption Warning: \label without proper reference on input line 174.
+Package caption Warning: \label without proper reference on input line 175.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:firefox-veraenderte-sqlitedbs' on page 46 undefin
-ed on input line 166.
+ed on input line 167.
 
 [46 <./bilder/firefox-sessionstore.png>]
-Overfull \vbox (13.59999pt too high) detected at line 190
+Overfull \vbox (13.59999pt too high) detected at line 191
  []
 
 [47]
 
-Package caption Warning: \label without proper reference on input line 262.
+Package caption Warning: \label without proper reference on input line 265.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-web-bookmarks' on page 48 undefined on in
-put line 259.
+put line 262.
 
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=633, 739.26187pt x 27.85406pt
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=640, 739.26187pt x 27.85406pt
 >
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
-input line 261.
+input line 264.
 (pdftex.def)             Requested size: 739.26006pt x 27.85397pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Package caption Warning: \label without proper reference on input line 270.
+Package caption Warning: \label without proper reference on input line 273.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-web-cookies' on page 48 undefined on inpu
-t line 267.
+t line 270.
 
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=634, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=641, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
-put line 269.
+put line 272.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
 [48]
 
-Package caption Warning: \label without proper reference on input line 278.
+Package caption Warning: \label without proper reference on input line 281.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-web-history' on page 49 undefined on inpu
-t line 275.
+t line 278.
 
-<bilder/cfv_firefox_autopsy_web_history.png, id=638, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=645, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
-put line 277.
+put line 280.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
 
-Package caption Warning: \label without proper reference on input line 288.
+Package caption Warning: \label without proper reference on input line 291.
 See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `img:firefox-web-categories' on page 49 undefined on i
-nput line 284.
+nput line 287.
 
-<bilder/cfv_firefox_autopsy_web_categories.png, id=639, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=646, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
- input line 287.
+ input line 290.
 (pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
 [49 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_auto
 psy_web_cookies.png> <./bilder/cfv_firefox_autopsy_web_history.png>]
-Overfull \hbox (97.2085pt too wide) in paragraph at lines 367--371
+Overfull \hbox (97.2085pt too wide) in paragraph at lines 372--376
 \T1/lmss/m/n/10.95 (-20) Re-gis-try Keys ha-ben das For-mat \T1/lmtt/m/n/10.95 
 HKCU$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 SOFTWARE$\OMS/cmsy/m/n/10.95 n$\T
 1/lmtt/m/n/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Firefox$\OMS/
@@ -3269,7 +3232,7 @@ cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 PreXULSkeletonUISettings$\OMS/cmsy/m/n/10.9
  []
 
 [50 <./bilder/cfv_firefox_autopsy_web_categories.png>]
-Overfull \hbox (305.01245pt too wide) in paragraph at lines 385--392
+Overfull \hbox (305.01245pt too wide) in paragraph at lines 390--397
 \T1/lmss/m/n/10.95 (-20) Der Re-gis-try Key hat das For-mat \T1/lmtt/m/n/10.95 
 HKLM$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 System$\OMS/cmsy/m/n/10.95 n$\T1/
 lmtt/m/n/10.95 CurrentControlSet$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Servi
@@ -3286,19 +3249,19 @@ See the caption package documentation for explanation.
 
 
 LaTeX Warning: Reference `tab:windows-registry-hives' on page 51 undefined on i
-nput line 395.
+nput line 400.
 
 [51]
-<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=653, 823.57687pt
- x 331.2375pt>
-File: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png Graphic file (t
-ype png)
-<use bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>
-Package pdftex.def Info: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.
-png  used on input line 428.
-(pdftex.def)             Requested size: 823.57486pt x 331.23668pt.
 
-Overfull \hbox (140.74255pt too wide) in paragraph at lines 435--436
+Package caption Warning: \label without proper reference on input line 489.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:tor-writefile-operations' on page 52 undefined on
+ input line 425.
+
+
+Overfull \hbox (140.74255pt too wide) in paragraph at lines 432--433
 []\T1/lmtt/m/n/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Users$\OMS/cms
 y/m/n/10.95 n$\T1/lmtt/m/n/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10
 .95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Tor Browser$\OMS/cmsy/m/n/
@@ -3308,8 +3271,8 @@ Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Data$\OMS/cmsy/m/n/10.95 n$\T1
 sy/m/n/10.95 n$\T1/lmtt/m/n/10.95 profile.default$\OMS/cmsy/m/n/10.95 n$ 
  []
 
-[52 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
-Overfull \hbox (100.77515pt too wide) in paragraph at lines 436--437
+
+Overfull \hbox (100.77515pt too wide) in paragraph at lines 433--434
 []\T1/lmtt/m/n/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Users$\OMS/cms
 y/m/n/10.95 n$\T1/lmtt/m/n/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10
 .95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Tor Browser$\OMS/cmsy/m/n/
@@ -3320,7 +3283,57 @@ t$\OMS/cmsy/m/n/10.95 n$
  []
 
 
-Overfull \hbox (177.72139pt too wide) in paragraph at lines 446--449
+Overfull \hbox (41.52818pt too wide) in paragraph at lines 435--436
+\T1/lmss/m/n/10.95 (-20) In der Ta-bel-le sind die Da-tei-en je nach Spei-cher-
+ort "Ca-ches"(Hellblau) oder "Pro-fi-le.default"(Dunkelblau)
+ []
+
+[52]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=773.91507pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+LaTeX Warning: Float too large for page by 11.29208pt on input line 489.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[52
+
+
+
+] [53]
+Overfull \hbox (177.72139pt too wide) in paragraph at lines 494--497
 [] \T1/lmss/bx/n/10.95 (-20) Ca-che[] \T1/lmss/m/n/10.95 (-20) Der Tor-Browser 
 schreibt ei-ne ein-zi-ge Cache-Datei $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 
 Caches$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 profile.default$\OMS/cmsy/m/n/1
@@ -3329,7 +3342,7 @@ Caches$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 profile.default$\OMS/cmsy/m/n/1
  []
 
 
-Overfull \hbox (76.98364pt too wide) in paragraph at lines 451--457
+Overfull \hbox (76.98364pt too wide) in paragraph at lines 499--505
 [] \T1/lmss/bx/n/10.95 (-20) Da-ta-re-por-ting[] \T1/lmss/m/n/10.95 (-20) Im "D
 a-ta-re-por-ting-Ord-ner wird vom Tor-Browser die Da-tei $\OMS/cmsy/m/n/10.95 n
 $\T1/lmtt/m/n/10.95 datareporting$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 data
@@ -3337,71 +3350,99 @@ $\T1/lmtt/m/n/10.95 datareporting$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 data
  []
 
 
-Overfull \hbox (166.71777pt too wide) in paragraph at lines 463--465
-[]\T1/lmss/m/n/10.95 (-20) Weiterhin wird wäh-ren des Brow-sing Sze-na-ri-os di
-e Da-tei $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 extensions$\OMS/cmsy/m/n/10.
-95 n$\T1/lmtt/m/n/10.95 staged$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 73a6fe3
-1-595d-460b-a920-fcc0f8843232.xpi
+Overfull \hbox (172.26213pt too wide) in paragraph at lines 511--513
+[]\T1/lmss/m/n/10.95 (-20) Weiterhin wird wäh-rend des Brow-sing Sze-na-ri-os d
+ie Da-tei $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 extensions$\OMS/cmsy/m/n/10
+.95 n$\T1/lmtt/m/n/10.95 staged$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 73a6fe
+31-595d-460b-a920-fcc0f8843232.xpi
  []
 
-[53]
-<bilder/tor-sqlite-table.png, id=662, 925.95938pt x 185.94469pt>
-File: bilder/tor-sqlite-table.png Graphic file (type png)
-<use bilder/tor-sqlite-table.png>
-Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 482.
-(pdftex.def)             Requested size: 925.95712pt x 185.94421pt.
- [54 <./bilder/tor-sqlite-table.png>]
-<bilder/tor-bar-chart-logfile1vs2cs3.png, id=667, 777.231pt x 336.165pt>
-File: bilder/tor-bar-chart-logfile1vs2cs3.png Graphic file (type png)
-<use bilder/tor-bar-chart-logfile1vs2cs3.png>
-Package pdftex.def Info: bilder/tor-bar-chart-logfile1vs2cs3.png  used on input
- line 504.
-(pdftex.def)             Requested size: 777.22911pt x 336.16417pt.
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=668, 660.96938pt x 32.37094pt>
+[54
+
+]
+
+Package caption Warning: \label without proper reference on input line 530.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:tor-veraenderte-sqlitedbs' on page 55 undefined o
+n input line 527.
+
+[55]
+
+Package caption Warning: \label without proper reference on input line 636.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `img:tor-web-bookmarks' on page 56 undefined on input 
+line 633.
+
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=677, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
-t line 534.
+t line 635.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
- [55 <./bilder/tor-bar-chart-logfile1vs2cs3.png>]
-<bilder/cfv_tor_autopsy_web_cookies.png, id=673, 810.77907pt x 166.37157pt>
+
+Package caption Warning: \label without proper reference on input line 644.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `img:tor-web-cookies' on page 56 undefined on input li
+ne 641.
+
+<bilder/cfv_tor_autopsy_web_cookies.png, id=678, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
-line 542.
+line 643.
 (pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
-<bilder/cfv_tor_autopsy_web_history.png, id=674, 712.91344pt x 98.61844pt>
+[56 <./bilder/cfv_tor_autopsy_web_bookmarks.png>]
+
+Package caption Warning: \label without proper reference on input line 652.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `img:tor-web-history' on page 57 undefined on input li
+ne 649.
+
+<bilder/cfv_tor_autopsy_web_history.png, id=683, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
-line 550.
+line 651.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
-<bilder/cfv_tor_autopsy_web_categories.png, id=675, 654.94687pt x 51.19125pt>
+
+Package caption Warning: \label without proper reference on input line 661.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `img:tor-web-categories' on page 57 undefined on input
+ line 657.
+
+<bilder/cfv_tor_autopsy_web_categories.png, id=684, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
-ut line 559.
+ut line 660.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
+[57 <./bilder/cfv_tor_autopsy_web_cookies.png> <./bilder/cfv_tor_autopsy_web_hi
+story.png> <./bilder/cfv_tor_autopsy_web_categories.png>]
+
+Package caption Warning: \label without proper reference on input line 518.
+See the caption package documentation for explanation.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `tab:windows-registry-hives' on page 58 undefined on i
+nput line 742.
 
-[56 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web_
-cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
-<bilder/tor-registry-stacked-bar-chart.png, id=682, 698.391pt x 150.891pt>
-File: bilder/tor-registry-stacked-bar-chart.png Graphic file (type png)
-<use bilder/tor-registry-stacked-bar-chart.png>
-Package pdftex.def Info: bilder/tor-registry-stacked-bar-chart.png  used on inp
-ut line 596.
-(pdftex.def)             Requested size: 698.3893pt x 150.89063pt.
-) [57 <./bilder/cfv_tor_autopsy_web_categories.png> <./bilder/tor-registry-stac
-ked-bar-chart.png>]
+) [58]
 chapter without number
-[58
+[59
 
 
 
-] [59] [60] (main.aux (kapitel/01_Einfuehrung.aux)
+] [60] [61] (main.aux (kapitel/01_Einfuehrung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -3412,31 +3453,37 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44954 strings out of 475281
- 1113095 string characters out of 2774064
- 2207849 words of memory out of 3000000
- 65387 multiletter control sequences out of 15000+600000
- 590100 words of font info for 226 fonts, out of 8000000 for 9000
+ 44989 strings out of 475281
+ 1113225 string characters out of 2774064
+ 2157255 words of memory out of 3000000
+ 65419 multiletter control sequences out of 15000+600000
+ 593176 words of font info for 230 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,29n,106p,10601b,2755s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 108i,29n,106p,10601b,2778s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C
 :/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
 ers/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
 /carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 <C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb>
 <C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb>
-<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pf
-b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.p
-fb><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.p
-fb>
-Output written on main.pdf (63 pages, 2330930 bytes).
+<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><
+C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
+><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pf
+b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
+b>
+Output written on main.pdf (67 pages, 2197492 bytes).
 PDF statistics:
- 735 PDF objects out of 1000 (max. 8388607)
+ 745 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56481 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 58509 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -23,7 +23,7 @@ Zur Analyse der Common Locations in Kapitel \ref{subsection:ergebnisse-firefox-c
 
 Eine Autopsy Stichwortsuche gemäß Methodik in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy} lieferte in allen Snapshots keine Treffer. Es wurde zusätzlich das \texttt{\$Carved} Verzeichnis durchsucht, in dem Autopsy alle wiederhergestellten Dateien speichert.
 
-Ebenso wurden in den von Autopsy automatisch kategorisierten Dateien keine PB Artefakte gefunden. Eine detaillierte Analyse der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" ist im Anhang \label{subsubsection:appendix-firefox-uncommon-locations-autopsy} beschrieben.
+Ebenso wurden in den von Autopsy automatisch kategorisierten Dateien keine PB Artefakte gefunden. Eine detaillierte Analyse der Kategorien "Web Bookmarks", "Web Cookies", "Web History" sowie "Web Categories" ist im Anhang \ref{subsubsection:appendix-firefox-uncommon-locations-autopsy} beschrieben.
 
 \subsubsection*{Analyse mit Volatility}
 \label{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}
@@ -43,39 +43,70 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 	\begin{tabular}{l}	
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={paffenhofen},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=paffenhofen,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 1400,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (1301,RAM-Dump 2) (0,RAM-Dump 1)
 				};
+				\addplot coordinates {
+				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={paffenhofen},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 1400,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (1301,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={nanoradar},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=nanoradar,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 1400,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3)  (541,RAM-Dump 2) (0,RAM-Dump 1)
@@ -84,22 +115,48 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 				(0,RAM-Dump 3)  (11,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={nanoradar},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 1400,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3)  (541,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3)  (11,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={mooserliesl},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=mooserliesl,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 1400,
-			nodes near coords,
-			nodes near coords align={horizontal}
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3)  (25,RAM-Dump 2) (0,RAM-Dump 1)
@@ -108,22 +165,48 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 				(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={mooserliesl},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 1400,
+%			nodes near coords,
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3)  (25,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={mallofamerica},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=mallofamerica,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 1400,
-			nodes near coords,
+			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
@@ -137,7 +220,34 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 				(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 				\legend{firefox.exe, Andere Prozesse}
-				\end{axis}
+			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={mallofamerica},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 1400,
+%			nodes near coords,
+%			nodes near coords align={horizontal},
+%			legend style={
+%				at={(0.5,-0.1)},
+%				anchor=north
+%			},
+%			legend columns=2
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3)  (104,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, Andere Prozesse}
+%				\end{axis}
 		\end{tikzpicture}
 	\end{tabular}
 	}
@@ -159,18 +269,28 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 	\begin{tabular}{l}	
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={unitree.com},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel={unitree.com},
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 4000,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (1900,RAM-Dump 2) (0,RAM-Dump 1)
@@ -179,46 +299,108 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 				(32,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={unitree.com},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 4000,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (1900,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(32,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={mooserliesl.de},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel={mooserliesl.de},
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 4000,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
-				(0,RAM-Dump 3) (382,RAM-Dump 2) (0,RAM-Dump 1)
+				(0,RAM-Dump 3) (1900,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 				\addplot coordinates {
-				(8,RAM-Dump 3) (8,RAM-Dump 2) (0,RAM-Dump 1)
+				(32,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={mooserliesl.de},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 4000,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (382,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(8,RAM-Dump 3) (8,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}	
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={mallofamerica.com},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel={mallofamerica.com},
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 4000,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (2272,RAM-Dump 2) (0,RAM-Dump 1)
@@ -227,15 +409,36 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 				(15,RAM-Dump 3) (364,RAM-Dump 2) (0,RAM-Dump 1)
 				};
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={mallofamerica.com},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 4000,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (2272,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(15,RAM-Dump 3) (364,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={donaukurier.de},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel={donaukurier.de},
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
@@ -243,6 +446,11 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
             xmax = 4000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
@@ -257,6 +465,33 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 				};
 				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={donaukurier.de},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 4000,
+%			nodes near coords, 
+%			nodes near coords align={horizontal},
+%			legend style={
+%				at={(0.5,-0.1)},
+%				anchor=north
+%			},
+%			legend columns=2
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (3657,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(36,RAM-Dump 3) (38,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, Andere Prozesse}
+%			\end{axis}
 		\end{tikzpicture}		
 	\end{tabular}
 	}
@@ -290,81 +525,187 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 	\begin{tabular}{r}	
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={Betrefftext},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel={Betrefftext},
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 80,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (22,RAM-Dump 2) (0,RAM-Dump 1)
 				};
+				\addplot coordinates {
+				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={Betrefftext},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 80,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (22,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={Mailtext},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel={Mailtext},
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 80,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (24,RAM-Dump 2) (0,RAM-Dump 1)
 				};
+				\addplot coordinates {
+				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={Mailtext},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 80,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (24,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}	
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
+			xbar,
+			width=12cm, 
+			height=3cm, 
 			ylabel style={align=center}, ylabel=Vorlesung23!\\(Passwort),
-			y=1cm,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 80,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (4,RAM-Dump 2) (0,RAM-Dump 1)
 				};
+				\addplot coordinates {
+				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel style={align=center}, ylabel=Vorlesung23!\\(Passwort),
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 80,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (4,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
+			xbar,
+			width=12cm, 
+			height=3cm, 
 			ylabel style={align=center}, ylabel=computerforensik\\@gmail.com,
-			y=1cm,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
             xmin = 0,
             xmax = 80,
 			nodes near coords, 
-			nodes near coords align={horizontal}
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (66,RAM-Dump 2) (0,RAM-Dump 1)
@@ -372,16 +713,38 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 				\addplot coordinates {
 				(36,RAM-Dump 3) (6,RAM-Dump 2) (0,RAM-Dump 1)
 				};
+%				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel style={align=center}, ylabel=computerforensik\\@gmail.com,
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 80,
+%			nodes near coords, 
+%			nodes near coords align={horizontal}
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (66,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(36,RAM-Dump 3) (6,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}	
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={chs3702@thi.de},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=chs3702@thi.de,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
@@ -389,21 +752,50 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
             xmax = 80,
 			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
 			legend columns=2
 			]
 				\addplot coordinates {
 				(0,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
 				};
+%				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={chs3702@thi.de},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 80,
+%			nodes near coords, 
+%			nodes near coords align={horizontal},
+%			legend columns=2
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (34,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%			\end{axis}
 		\end{tikzpicture}
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
-			ylabel={cas0597@thi.de},
-			y=1cm,
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=cas0597@thi.de,
+			y=0.8cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
 			xticklabels={,,},
@@ -411,6 +803,11 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
             xmax = 80,
 			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
@@ -425,6 +822,33 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 				};
 				\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
+%			\begin{axis}[
+%			xbar stacked,
+%			width=18cm, 
+%			height=12cm, 
+%			ylabel={cas0597@thi.de},
+%			y=1cm,
+%			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%			ytick=data,
+%			xticklabels={,,},
+%            xmin = 0,
+%            xmax = 80,
+%			nodes near coords, 
+%			nodes near coords align={horizontal},
+%			legend style={
+%				at={(0.5,-0.1)},
+%				anchor=north
+%			},
+%			legend columns=2
+%			]
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (28,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, Andere Prozesse}
+%			\end{axis}
 		\end{tikzpicture}
 				%	\begin{axis}[]
 		%	\legend{Logfile 1, Logfile 2}
@@ -540,11 +964,11 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
 	\begin{tabular}{r}
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
+			xbar,
+			width=12cm, 
+			height=3cm, 
 			ylabel style={align=center}, ylabel=RAM-Dump 3,
-			y=1cm,
+			y=0.8cm,
 			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
 			ytick=data,
 			xticklabels={,,},
@@ -552,6 +976,10 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
             xmax = 10000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
 			scaled x ticks=false
 			]
 				\addplot coordinates {
@@ -563,14 +991,13 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
 			\end{axis}
 		\end{tikzpicture}
 		\\
-%		\pgfplotsset{scaled x ticks=false}
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
+			xbar,
+			width=12cm, 
+			height=3cm, 
 			ylabel style={align=center}, ylabel=RAM-Dump 2,
-			y=1cm,
+			y=0.8cm,
 			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
 			ytick=data,
 			xticklabels={,,},
@@ -578,6 +1005,10 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
             xmax = 10000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
 			scaled x ticks=false
 			]
 				\addplot coordinates {
@@ -591,11 +1022,11 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
 		\\
 		\begin{tikzpicture}
 			\begin{axis}[
-			xbar stacked,
-			width=18cm, 
-			height=12cm, 
+			xbar,
+			width=12cm, 
+			height=3cm, 
 			ylabel style={align=center}, ylabel=RAM-Dump 1,
-			y=1cm,
+			y=0.8cm,
 			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
 			ytick=data,
 			xticklabels={,,},
@@ -603,6 +1034,10 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
             xmax = 10000,
 			nodes near coords, 
 			nodes near coords align={horizontal},
+			nodes near coords style={font=\small},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
 			legend style={
 				at={(0.5,-0.1)},
 				anchor=north
@@ -610,13 +1045,13 @@ Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windo
 			legend columns=2,
 			scaled x ticks=false
 			]
-				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-				};
-				\addplot coordinates {
-				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
-				};
-				\legend{firefox.exe, Andere Prozesse}
+			\addplot coordinates {
+			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+			};
+			\addplot coordinates {
+			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+			};
+			\legend{firefox.exe, Andere Prozesse}
 			\end{axis}
 		\end{tikzpicture}	
 	\end{tabular}
@@ -653,8 +1088,7 @@ Die Analyse der Registry zählt gemäß Methodik in Kapitel \ref{subsection:meth
 In diesem Abschnitt werden die Ergebnisse der Datenanalyse der Common Locations, Uncommon Locations sowie der Registry für den Tor-Browser präsentiert.
 
 \subsection*{Common Locations}
-
-Als Erstes werden die Common Locations analysiert, um potenzielle Hinweise auf Internetaktivitäten des Browsing Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wurde gemäß der im Kapitel X (TODO!) beschriebenen Methodik zwischen Schreibvorgängen in den Protokolldateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden. Dabei konnten in keiner Datei PB Artefakte gefunden werden. Eine detaillierte Analyse der Process Monitor "WriteFile" Operations sowie SQLite-Datenbänken ist im Anhang X beschrieben.
+Als Erstes werden die Common Locations analysiert, um potenzielle Hinweise auf Internetaktivitäten des Browsing Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wurde gemäß der im Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} beschriebenen Methodik zwischen Schreibvorgängen in den Protokolldateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden. Dabei konnten in keiner Datei PB Artefakte gefunden werden. Eine detaillierte Analyse der Process Monitor "WriteFile" Operations sowie SQLite-Datenbänken ist im Anhang X beschrieben.
 
 \subsection*{Uncommon Locations}
 Nachfolgend werden die Analyseergebnisse der Tor Uncommon Locations beschrieben.

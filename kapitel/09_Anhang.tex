@@ -143,6 +143,7 @@ Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpa
 % https://support.mozilla.org/de/kb/firefox-support-troubleshooting-guide
 
 \subsubsection*{SQLite Datenbänke}
+\label{appendix:firefox-sqlite}
 Wie in Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten detaillierter und getrennt von den Schreiboperationen der Process Logfiles untersucht. Mithilfe der Process Monitor Logfiles wurden zunächst die in Tabelle \ref{tab:firefox-sqlite-dbs-explained} dargestellten SQLite-Datenbanken für Firefox identifiziert:
 \begin{table}[h!]
 \label{tab:firefox-sqlite-dbs-explained}
@@ -251,8 +252,10 @@ Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während d
 
 \subsection{Firefox Uncommon Locations}
 \label{subsection:appendix-firefox-uncommon-locations}
+
 \subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}
 \label{subsubsection:appendix-firefox-uncommon-locations-autopsy}
+
 Beim Vergleich der Festplattenabbilder wurde festgestellt, dass ein Festplatten-Image stets die kategoriesierten Dateien des Festplatten-Images des vorherigen Snapshots enthielt. Somit enthält das Festplatten-Image von Snapshot 4 alle kategorisierten Dateien der vorherigen Snapshots.
 
 \paragraph*{Web Bookmarks}
@@ -313,9 +316,10 @@ Somit wurden in allen Kategorien ausschließlich Browsing Artefakte des Edge Bro
 %		>	*** TODO: Hier Liste mit PlugIns ***
 
 \subsection*{Firefox Registry}
+\label{subsection:appendix-firefox-registry}
 
 \subsubsection*{Process Monitor SetValue Operations}
-
+\label{subsubsection:appendix-firefox-registry-processmonitorsetvalue}
 Als Teil der Common Locations werden für Firefox alle Registry "SetValue" Schreiboperationen der beiden Process Monitor Logfiles untersucht.
 
 In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: "PreXULSkeletonUISettings" und "Business Activity Monitoring". In Abbildung \ref{chart:firefox-registy-css-vs-bam} ist der Anteil der Schreiboperationen je Kategorie für beide Logfiles gezeigt.
@@ -328,6 +332,7 @@ In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: "PreXUL
 		height=12cm, 
 %		ylabel style={align=center}, ylabel=RAM-Dump 1,
 		y=1cm,
+		enlarge y limits={abs=2*\pgfplotbarwidth},
 		symbolic y coords={Logfile 2,Logfile 1},
 		ytick=data,
 		xticklabels={,,},
@@ -352,7 +357,7 @@ In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: "PreXUL
 		\end{axis}
 	\end{tikzpicture}
 	}	
-	\caption{Firefox Registry "SetValue" Operationen im Process Monitor Logfile 1 und 2}
+	\caption{Firefox Registry "SetValue" Operationen in den Process Monitor Logfiles 1 und 2}
 	\label{chart:firefox-registy-css-vs-bam}
 \end{figure}
 
@@ -415,32 +420,75 @@ Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
 
 \subsubsection*{Process Monitor WriteFile Operations}
 
-Bei der Versuchsdurchführung für den Tor-Browser gemäß Kapitel X wurden drei Process Monitor Logfiles erstellt.
+Bei der Versuchsdurchführung für den Tor-Browser gemäß Kapitel \ref{section:methodik-datensammlung} wurden drei Process Monitor Logfiles erstellt.
 Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während des Browsing Szenarios, nach dem Erzeugen einer "Neuen Identität" sowie nach Schließen des Browsers.
-Eine gemäß Methodik in Kapitel X verarbeitete Tabelle mit allen in den Logfiles identifizierten Dateien ist im Anhang X aufgeführt.
+Tabelle \ref{tab:tor-writefile-operations} enthält alle in den Logfiles identifizierten Dateien.
 Für jede Datei wurde vermerkt ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob PB Artefakte enthalten sind.
-
-In Tabelle X (TODO!) sind die ausschließlich wiederherstellbaren Dateien aufgeführt.
-Die Dateien wurden in die vier Kategorien "Cache", "datareporting", und "Sonstige Dateien" eingeordnet.
+Die Dateien wurden in die Kategorien "Cache", "datareporting", und "Sonstige Dateien" eingeordnet.
 In keiner der identifizierten Dateien konnten PB Artefakte gefunden werden. 
 
-\begin{figure}[h!]
-	\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png}}
-%	\label{...}
-	\caption{Tabelle mit wiederherstellbaren Dateien: Logfile 1 vs. Logfile 2}
-\end{figure}
-
-Ähnlich wie bei der Analyse der Schreiboperationen von Firefox in Kapitel X (TODO!), konnten für den Tor-Browser zwei Pfade identifiziert werden, wo sich Dateien befinden, in die geschrieben wurde.
+Es konnten zwei Datei-Pfade identifiziert werden:
 \begin{itemize}
 \item[\textbf{Caches}] \texttt{C:$\backslash$Users$\backslash$Forensik$\backslash$Desktop$\backslash$Tor Browser$\backslash$Browser$\backslash$TorBrowser$\backslash$Data$\backslash$Browser$\backslash$Caches$\backslash$profile.default$\backslash$}
 \item[\textbf{Profile.default}] \texttt{C:$\backslash$Users$\backslash$Forensik$\backslash$Desktop$\backslash$Tor Browser$\backslash$Browser$\backslash$TorBrowser$\backslash$Data$\backslash$Browser$\backslash$profile.default$\backslash$}
 \end{itemize}
-In Tabelle X (TODO!) sind die Dateien je nach Speicherort "Caches" (Hellblau) oder "Profile.default" (Dunkelblau)  eingefärbt. 
+In der Tabelle sind die Dateien je nach Speicherort "Caches" (Hellblau) oder "Profile.default" (Dunkelblau) eingefärbt. 
 
 Bei der Auswertung der Process Monitor Logfiles wurde festgestellt, dass alle Schreibopertationen von "firefox.exe" Prozessen durchgeführt wurde, nicht "tor.exe" 
 
-Obwohl keine der Dateien PB Artefakte enthält, werden zum vollständigen Browserverständnis im Sinne der White-Box-Forensik die wichtigsten Dateien im Zusammenhang des Tor-Browsers genauer untersucht.
+%\newpage
+\newgeometry{bottom=2cm,top=0.5cm}
+\afterpage{
+\begin{landscape}% Landscape page
+	\setcounter{page}{52}
+%	\thispagestyle{empty}
+	\vspace*{1.5cm}
+	\hspace*{-1cm}
+	\begin{table}[h!]
+%	\centering
+	\label{tab:tor-writefile-operations}
+	\caption{Tor alle "WriteFile"-Operationen der Logfiles 1, 2-1 und 2-2}
+	\vspace{0.5cm}
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{cllll}
+	\multicolumn{5}{c}{\textbf{LOGFILE 1:}}                                                                                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
+	\multicolumn{1}{|c|}{\textbf{Kategorie}}                                                                      & \multicolumn{1}{c|}{\textbf{Dateiname}}                                                                                                        & \multicolumn{1}{c|}{\textbf{Dateistatus}}                               & \multicolumn{1}{c|}{\textbf{Verwendetes Tool zur Analyse}}        & \multicolumn{1}{l|}{\textbf{Enthaltene Artefakte}}              \\ \hline
+	\multicolumn{1}{|c|}{\textit{Cache}}                                                                          & \multicolumn{1}{l|}{\cellcolor[HTML]{34CDF9}\textbackslash{}startupCache\textbackslash{}startupCache.8.little}                                 & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}HxD}                  & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}db\textbackslash{}data.safe.bin} & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}HxD}                  & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-2}{*}{\textit{Datareporting}}}                                                & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}state.json.tmp}                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}addonStartup.json.lz4.tmp}                                                         & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}dejsonlz4, Notepad++} & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}AlternateServices.txt}                                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}broadcast-listeners.json.tmp}                                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}extensions.json.tmp}                                                               & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}extensions\textbackslash{}staged\{73a6fe31-595d-460b-a920-fcc0f8843232\}.xpi}      & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}HxD}                  & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}onion-aliases.json.tmp}                                                            & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}prefs-1.js}                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}security\_state\textbackslash{}data.safe.bin}                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}HxD}                  & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}settings\textbackslash{}data.safe.bin}                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}HxD}                  & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}SiteSecurityServiceState.txt}                                                      & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}SiteSecurityServiceState-1.txt}                                                    & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-12}{*}{\textit{\begin{tabular}[c]{@{}c@{}}Sonstige \\ Dateien\end{tabular}}}} & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}xulstore.json.tmp}                                                                 & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{l}{}                                                                                          &                                                                                                                                                &                                                                         & \cellcolor[HTML]{FFFFFF}                                          &                                                                 \\
+	\multicolumn{1}{l}{}                                                                                          &                                                                                                                                                &                                                                         &                                                                   &                                                                 \\
+	\multicolumn{5}{c}{\textbf{LOGFILE 2-1}}                                                                                                                                                                                                                                                                                                                                                                                                                                       \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}prefs-1.js}                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}dejsonlz4, Notepad++} & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}cert\_override.txt}                                                                & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-3}{*}{\begin{tabular}[c]{@{}c@{}}Sonstige\\ Dateien\end{tabular}}}            & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}enumerate\_devices.txt}                                                            & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	                                                                                                              &                                                                                                                                                & \cellcolor[HTML]{FFFFFF}                                                & \cellcolor[HTML]{FFFFFF}                                          & \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}}                    \\
+	                                                                                                              &                                                                                                                                                & \cellcolor[HTML]{FFFFFF}                                                & \cellcolor[HTML]{FFFFFF}                                          & \multicolumn{1}{c}{\cellcolor[HTML]{FFFFFF}}                    \\
+	\multicolumn{5}{c}{\textbf{LOGFILE 2-2}}                                                                                                                                                                                                                                                                                                                                                                                                                                       \\ \hline
+	\multicolumn{1}{|l|}{Datareporting}                                                                           & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}datareporting\textbackslash{}glean\textbackslash{}db\textbackslash{}data.safe.bin} & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}HxD}                  & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}prefs-1.js}                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{009901}Datei vorhanden}            & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{}                                                                                        & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}sessionCheckpoints.json.tmp}                                                       & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \cline{2-5} 
+	\multicolumn{1}{|c|}{\multirow{-3}{*}{\begin{tabular}[c]{@{}c@{}}Sonstige\\  Dateien\end{tabular}}}           & \multicolumn{1}{l|}{\cellcolor[HTML]{3190FF}\textbackslash{}xulstore.json.tmp}                                                                 & \multicolumn{1}{l|}{\cellcolor[HTML]{FCFF2F}Nicht-temp-Datei verwendet} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}Notepad++}            & \multicolumn{1}{l|}{\cellcolor[HTML]{F8A102}Keine PB Artefakte} \\ \hline
+	\end{tabular}
+	}
+	\end{table}
+\end{landscape}
+}
+\restoregeometry
 
+Obwohl keine der Dateien PB Artefakte enthält, werden zum vollständigen Browserverständnis im Sinne der White-Box-Forensik die wichtigsten Dateien im Zusammenhang des Tor-Browsers genauer untersucht.
 
 \paragraph*{Cache}
 Der Tor-Browser schreibt eine einzige Cache-Datei \texttt{$\backslash$Caches$\backslash$profile.default$\backslash$startupCache$\backslash$startupCache.8.little} im Caches-Pfad. Alle anderen geschriebenen Dateien befinden sich im "Profile.default"-Pfad.
@@ -457,15 +505,14 @@ Eine Analyse mit Notepad++ und dem JSON-Plugin brachte keine PB-Artefakte.
 
 \paragraph*{Sonstige Dateien}
 Die im ersten Logfile geschriebene Datei \texttt{AlternateServices.txt}
-enthält onion URLs des HTTP Alternative Services ist ein Mechanismus. Dieser ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung.
+enthält .onion-URLs des HTTP Alternative Services. Dieser Mechanismus ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung.
 % https://support.mozilla.org/en-US/questions/1310302
 
-Weiterhin wird währen des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete "NoScript"-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
+Weiterhin wird während des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete "NoScript"-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
 Nach Extraktion dieser Datei, kann diese per Drag-and-Drop in ein geöffnetes Firefox-Fenster gezogen werden und es ist möglich, die Erweiterung zu installieren.
 
 Die geschriebene Datei \texttt{onion-aliases.json} enthält "SecureDrop" Adressen, beispielsweise für die Süddeutsche Zeitung.  %https://www.sueddeutsche.de/projekte/kontakt/#securedrop)
 SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. Whistleblower können über .onion-URLs auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln.
-
 %	> % \security_state\data.safe.bin
 %		Zweck: The file containing the updated security data % (https://bbs.archlinux.org/viewtopic.php?pid=1952286#p1952286)
 
@@ -475,36 +522,88 @@ Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt 
 . In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
 	
 \subsubsection*{SQLite Datenbänke} 
-Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel X (TODO!) verwaltet und beschreibt.
+Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel \ref{appendix:firefox-sqlite} verwaltet und schreibt.
 			
-Wie bei der Analyse der SQLite-Datenbanken bei Firefox wird die Entwicklung von Dateiinhalt in allen fünf Festplatten-Images der Snapshots 1, 2, 3-1, 3-2 und 4 betrachtet. Die Ergebnisse sind in Tabelle X (TODO!) dargestellt.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-sqlite-table.png}}}
-	\label{chart:final-criteria}  
-	\caption{Comparison of found PB artifacts between RAM Dumps}
-\end{figure}
+Wie bei der Analyse der SQLite-Datenbanken bei Firefox wird die Entwicklung der Datenbankeninhalte aller fünf Festplatten-Images der Snapshots 1, 2, 3-1, 3-2 und 4 betrachtet. Die Ergebnisse sind in Tabelle \ref{tab:tor-veraenderte-sqlitedbs} dargestellt.
+\begin{table}[h!]
+\centering
+\label{tab:tor-veraenderte-sqlitedbs}  
+\caption{Veränderung der Tor-Browser SQLite-Datenbänke während der Versuchsdurchführung}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{|l|c|cc|cc|cc|cc|}
+\hline
+\multicolumn{1}{|c|}{}                                     &                                                                                                    & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Browser geöffnet (S2)\end{tabular}}}                                                                                                                                           & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Neue Identität (S3-1)\end{tabular}}}                                                                                                               & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Browser geschlossen (S3-2)\end{tabular}}}                                                                                                          & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}VM \\ heruntergefahren (S4)\end{tabular}}}                           \\ \cline{3-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Dateiname}}} & \multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Vor Browsing \\ Szenario\\ (S1)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                                                   & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                  & \textbf{Nach WAL}                                  \\ \hline
+places.sqlite                                              & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Tor-Standardseiten)\end{tabular}}                              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}Indizes aktualisiert}                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Indizes \\ aktualisiert\end{tabular}}                & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-3} \cline{5-5} \cline{7-7}
+cookies.sqlite                                             & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}}                                                                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-2}
+storage.sqlite                                             & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFCE93}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Nur Spaltennamen)\end{tabular}}}              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}}} & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-3} \cline{7-7}
+favicons.sqlite                                            & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Tor-Standardseiten,\\ Präfix: fake-favicon-uri*)\end{tabular}} & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Indizes \\ aktualisiert\end{tabular}}                & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-3} \cline{7-7}
+webappsstore.sqlite                                        & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}}                                                                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-2}
+formhistory.sqlite                                         & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}}                                                                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-2}
+1657114595AmcateirvtiSty.sqlite                            & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\multirow{-3}{*}{\cellcolor[HTML]{FFCE93}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Nur Spaltennamen)\end{tabular}}}              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-3}
+3870112724rsegmnoittet-es.sqlite                           & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{CE6301}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ ("origin": "chrome")\end{tabular}}                              & \multirow{-8}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}} & \multicolumn{1}{c|}{\multirow{-7}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}}} & \multirow{-8}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}} & \multicolumn{1}{c|}{\multirow{-4}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}}} & \multirow{-8}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}} & \multicolumn{2}{c|}{\multirow{-8}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}}} \\ \hline
+\end{tabular}
+}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-sqlite-table.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Comparison of found PB artifacts between RAM Dumps}
+%\end{figure}
 Nach Browser-Installation wurde noch keine SQLite-Datei angelegt (Snapshot 1).
 
 Während des Browsing Szenarios wurden alle Datenbänkte initialisiert.
-In places.sqlite wurden automatisch .onion URLs geschreiben, die zu Tor Standardseiten führen. Beispielsweise Seiten wie "The Tor Blog" oder "Tor Browser Manual".
-Die gleichen Einträge wurden in der favicons.sqlite Datenbank geschrieben, mit dem Präfix "Fake-favicon-uri". Ein tatsächliches Icon wie bei Firefox in Kapitel X wurde nicht in die Datenbank geschrieben. 
+In places.sqlite wurden automatisch .onion URLs geschrieben, die zu Tor Standardseiten führen. Beispielsweise Seiten wie "The Tor Blog" oder "Tor Browser Manual".
+Die gleichen Einträge wurden in der favicons.sqlite Datenbank geschrieben, mit dem Präfix "Fake-favicon-uri". Ein tatsächliches Icon wurde nicht in die Datenbank geschrieben. 
 Weiterhin erhielt die "remote settings" Datenbank den gleichen Eintrag wie es bereits bei Firefox der Fall war. Der Eintrag enthält keine PB Artefakte.
-Die restliche SQLite-Dateien wurden ohne Inhalt angegelt, nur die Spaltennamen wurden definiert.
+Die restliche SQLite-Dateien wurden ohne Inhalt angelegt, nur die Spaltennamen wurden definiert.
 Nach Durchführung der WAL Checkpoints bleiben Dateien unverändert.
 
 Nachdem dem Tor-Browser eine "Neue Identität" zugewiesen wurde (Snapshot 3-1), wurden in places.sqlite die Indizes bei den eingetragenen Seiten aktualisiert. Die restlichen Dateien blieben unverändert. Das Schreiben der WAL-Dateien in die Hauptdatenbanken veränderte den Inhalt nicht.
 
-Nach Schließen des Browsers (Snapshot 3) wurden in places.sqlite sowie favicons.sqlite erneut Indizes bei eingetragenen Seiten aktualisiert. Die restliche Dateien blieben unverändert, ebenso ergaben die WAL Checkpoints keine Veränderungen.
+Nach Schließen des Browsers (Snapshot 3-2) wurden in places.sqlite sowie favicons.sqlite erneut Indizes bei eingetragenen Seiten aktualisiert. Die restliche Dateien blieben unverändert, ebenso ergaben die WAL Checkpoints keine Veränderungen.
 
 Nach Herunterfahren der VM (Snapshot 4) blieben alle Datenbanken unverändert. Auch nach Durchführung der WAL Checkpoints gab es keine neuen Inhalte.
 
-Im Balkendiagramm X (TODO!) ist zu erkennen, dass die meisten Schreiboperationen im ersten Logfile stattfinden. Dort werden Dateien jeder Kategorie beschrieben. Das Schließen des Tor-Browsers führt zu mehr oder genauso vielen Schreiboperationen wie das Zuweisen einer "Neuen Identität". Keine der geschriebenen Dateien enthielt private Browsing Artefakte.
-*** TODO: Was noch? ***
-	\begin{figure}[h!]
-		\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-bar-chart-logfile1vs2cs3.png}}}
-		\label{chart:final-criteria}  
-		\caption{Comparison of found PB artifacts between RAM Dumps}
-	\end{figure}
+Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen, dass die meisten Schreiboperationen im ersten Logfile stattfinden. Dort werden Dateien jeder Kategorie beschrieben. Das Schließen des Tor-Browsers führt zu mehr oder genauso vielen Schreiboperationen wie das Zuweisen einer "Neuen Identität". Keine der geschriebenen Dateien enthielt private Browsing Artefakte.
+%*** TODO: Was noch? ***
+\begin{figure}[h!]
+	\begin{tikzpicture}
+	\begin{axis}[
+	xbar, 
+	xmin=0,
+	width=12cm, 
+	height=12cm, 
+	xlabel={Anzahl Schreiboperationen},
+	y=1.4cm,
+	symbolic y coords={Sonstige Dateien,Datareporting,SQLite,Cache},
+	ytick=data,
+	xticklabels={,,},
+	nodes near coords style={font=\small},
+	nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+	bar width=.25cm,
+	enlarge y limits={abs=3*\pgfplotbarwidth},
+	legend style={
+		at={(1,1)},
+		anchor=north east
+	},
+	legend columns=2,
+	scaled x ticks=false
+	]
+	\addplot coordinates {(12,Sonstige Dateien) (2,Datareporting) (8,SQLite) (1,Cache)};
+	\addplot coordinates {(3,Sonstige Dateien) (0,Datareporting) (1,SQLite) (0,Cache)};
+	\addplot coordinates {(3,Sonstige Dateien) (1,Datareporting) (2,SQLite) (0,Cache)};	
+	\legend{Logfile 1, Logfile 2-1, Logfile 2-2}
+	\end{axis}
+	\end{tikzpicture}
+	\caption{Tor Anzahl Schreiboperationen Logfile 1 vs Logfile 2-1 vs Logfile 2-2, geordnet nach Kategorie}
+	\label{chart:firefox-writefile-logfile1v21vs22}
+\end{figure}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-bar-chart-logfile1vs2cs3.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Comparison of found PB artifacts between RAM Dumps}
+%\end{figure}
 
 %Literatur:
 %	o no traces were found in “common locations” \cite{Montasari.2015}
@@ -523,45 +622,47 @@ Im Balkendiagramm X (TODO!) ist zu erkennen, dass die meisten Schreiboperationen
 
 
 \subsection*{Tor Uncommon Locations}
+\label{subsection:appendix-tor-uncommon-locations}
 
-\subsubsection*{Analyse mit Autopsy}
+\subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}
+\label{subsubsection:appendix-tor-uncommon-locations-autopsy}
 
-Wie bei Firefox in Kapitel X wurden keine der kategorisierten Dateien gelöscht. Somit befanden sich im letzten Festplatten-Image des Snapshots 4 alle kategorisierten Dateien der vorherigen Festplatten-Images
+Wie bei Firefox in Kapitel \ref{subsubsection:appendix-firefox-uncommon-locations-autopsy} wurde keine der kategorisierten Dateien gelöscht. Somit befanden sich im letzten Festplatten-Image des Snapshots 4 alle kategorisierten Dateien der vorherigen Festplatten-Images
 
 \paragraph*{Web Bookmarks}
-Wie in Abbildung X (TODO!) gezeigt, wurden nur in der Datei \texttt{Bing.url} ein Leesezeichen zur Bing-Startseite gefunden. Diese Datei wurde im Festplatten-Image des ersten Snapshots geschrieben.
+Wie in Abbildung \ref{img:tor-web-bookmarks} gezeigt, wurden nur in der Datei \texttt{Bing.url} ein Leesezeichen zur Bing-Startseite gefunden. Diese Datei wurde im Festplatten-Image des ersten Snapshots geschrieben.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_bookmarks.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web Bookmarks}
+	\label{img:tor-web-bookmarks}  
+	\caption{Tor: Von Autopsy als "Web Bookmarks" kategorisierte Dateien}
 \end{figure}
 
 \paragraph*{Web Cookies}
-Im Festplatte-Image des ersten VM-Snapshots wurden neun Cookies-Einträge in die Datenbank von des vorinstallierten Edge Browsers geschrieben. Dabei handelt es sich um Cookies für die Bing- und Outlook-Startseite.
+Im Festplatte-Image des ersten VM-Snapshots wurden die in Abbildung \ref{img:tor-web-cookies} gezeigten neun Cookies-Einträge in die Datenbank des vorinstallierten Edge Browsers geschrieben. Dabei handelt es sich um Cookies für die Bing- und Outlook-Startseite.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_cookies.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web Cookies}
+	\label{img:tor-web-cookies}  
+	\caption{Tor: Von Autopsy als "Web Cookies" kategorisierte Dateien}
 \end{figure}
 
 \paragraph*{Web History}
-Zwei Einträge mit Browsingverläufen wurden im Festplatten-Image des ersten VM-Snapshots in der Datei \texttt{WebCacheV01.dat} geschrieben. Dabei handelt es sich zweimal um die Outlook-Startseite, obwohl diese nie bei der Versuchsdurchführung geöffnet wurde. Wie bei Firefox in Kapitel X (TODO!) wurden in der Datei ebenfalls die zum Analyserechner über den gemeinsamen Ordner transportierten Process Monitor Logfiles gespeichert.
+Zwei Einträge mit Browsingverläufen wurden im Festplatten-Image des ersten VM-Snapshots in der Datei \texttt{WebCacheV01.dat} geschrieben. Wie in Abbildung \ref{img:tor-web-history} gezeigt, handelt es sich dabei zweimal um die Outlook-Startseite, obwohl diese nie bei der Versuchsdurchführung geöffnet wurde. Wie bei Firefox wurden in der Datei ebenfalls die zum Analyserechner über den gemeinsamen Ordner transportierten Process Monitor Logfiles gespeichert.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_history.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web History}
+	\label{img:tor-web-history}  
+	\caption{Tor: Von Autopsy als "Web History" kategorisierte Dateien}
 \end{figure}
 
 \paragraph*{Web Categories}
-Autopsy klassifizierte im Festplatten-Image des ersten VM-Snapshots den Eintrag \texttt{bing.com} als "Suchmaschine"  und \texttt{live.com} als "Web-Email".
+Autopsy klassifizierte im Festplatten-Image des ersten VM-Snapshots den Eintrag \texttt{bing.com} als "Suchmaschine"  und \texttt{live.com} als "Web-Email", gezeigt in Abbildung \ref{img:tor-web-categories}.
 Es gab keine zusätzlichen Einträge in dieser Kategorie in den Festplatten-Images der restlichen Snapshots.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_tor_autopsy_web_categories.png}}}
-	\label{chart:final-criteria}  
-	\caption{Autopsy Web Categories}
+	\label{img:tor-web-categories}  
+	\caption{Tor: Von Autopsy als "Web Categories" kategorisierte Dateien}
 \end{figure}
 		
-Somit wurden in den von Autopsy kategorisierten Dateien keine PB Artefakte entdeckt. Weiterhin gab es verglichen mit der Analyse der Common Locations keine neuen Erkenntnisse. Autopsy registrierte nicht die in der places.sqlite Datenbank geschriebenen .onion-URLs der Tor-Standardseiten.
+Somit wurden in den von Autopsy kategorisierten Dateien keine PB Artefakte entdeckt. Weiterhin gab es verglichen mit der Analyse der Common Locations keine neuen Erkenntnisse. Autopsy erkannte nicht die in der places.sqlite Datenbank geschriebenen .onion-URLs der Tor-Standardseiten.
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 
@@ -588,20 +689,58 @@ Somit wurden in den von Autopsy kategorisierten Dateien keine PB Artefakte entde
 
 \subsubsection*{Process Monitor SetValue Operations}
 
-Bei Betrachtung als Common Locations werden gemäß Methodik in Kapitel X alle "SetValue" Schreiboperationen in den Process Monitor Logfiles für die Prozesse "tor.exe" und "firefox.exe" untersucht. 
+Bei Betrachtung als Common Locations werden gemäß Methodik in Kapitel \ref{subsection:methodik-datenanalyse-registry} alle "SetValue" Schreiboperationen in den Process Monitor Logfiles für die Prozesse "tor.exe" und "firefox.exe" untersucht. 
 
-Dabei wurden die gleichen beiden Registry Keys identifiziert, wie es bereits bei Untersuchung der Firefox Registry in Kapitel X (TODO!) der Fall war: \texttt{PreXULSkeletonUISettings} und \texttt{Business Activity Monitoring}. In keinem Registry-Key befinden sich PB Artefakte.
-Wie in Abbildung X dargestellt, wurden beide Registry Keys annähernd gleich oft geschrieben. Bei Vergleich der drei Process Monitor Logfiles 1, 2 und 3 nimmt Anzahl der Registry "SetValue"-Operationen bei Logfile 2 und 3 kontinuierlich ab.
+Dabei wurden die gleichen beiden Registry Keys identifiziert, wie bei der Untersuchung der Firefox Registry in Kapitel \ref{subsubsection:appendix-firefox-registry-processmonitorsetvalue}: \texttt{PreXULSkeletonUISettings} und \texttt{Business Activity Monitoring}. In keinem Registry-Key befinden sich PB Artefakte.
+Wie in Abbildung \ref{chart:tor-registy-css-vs-bam} dargestellt, wurden beide Registry Keys annähernd gleich oft geschrieben. Bei Vergleich der drei Process Monitor Logfiles 1, 2 und 3 nimmt Anzahl der Registry "SetValue"-Operationen bei Logfile 2 und 3 kontinuierlich ab.
+
 \begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
-	\label{chart:final-criteria}  
-	\caption{Comparison of found PB artifacts between RAM Dumps}
+	\resizebox{\linewidth}{!}{
+	\begin{tikzpicture}
+		\begin{axis}[
+		xbar stacked,
+		width=18cm, 
+		height=12cm, 
+%		ylabel style={align=center}, ylabel=RAM-Dump 1,
+		y=1cm,
+		enlarge y limits={abs=2*\pgfplotbarwidth},
+		symbolic y coords={Logfile 2-2,Logfile 2-1,Logfile 1},
+		ytick=data,
+		xticklabels={,,},
+        xmin = 0,
+        xmax = 70,
+		nodes near coords, 
+		nodes near coords align={horizontal},
+		legend style={
+			at={(0.5,-0.1)},
+			anchor=north
+		},
+		legend columns=2,
+		scaled x ticks=false
+		]
+			\addplot coordinates {
+			(10,Logfile 2-2) (14,Logfile 2-1) (27,Logfile 1)
+			};
+			\addplot coordinates {
+			 (10,Logfile 2-2) (8,Logfile 2-1) (36,Logfile 1)
+			};
+			\legend{PreXULSkeletonUISettings (CSS), Business Activity Monitoring (BAM)}
+		\end{axis}
+	\end{tikzpicture}
+	}	
+	\caption{Tor Registry "SetValue" Operationen in den Process Monitor Logfiles 1, 2-1 und 2-2}
+	\label{chart:tor-registy-css-vs-bam}
 \end{figure}
 
-\subsubsection*{Stringsuche in Registry Hives}
-Bei Betrachtung der Registry als Uncommon Locations, wurden die in Tabelle X im Kapitel der Methodik X aufgelisteten Registry-Hives mithilfe des Registry Explorers untersucht. 
-Weder in den System-Hives noch in den User-Hives konnte in keinem Festplatten-Image PB Artefakte identifiziert werden. 
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-registry-stacked-bar-chart.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Comparison of found PB artifacts between RAM Dumps}
+%\end{figure}
 
+\subsubsection*{Stringsuche in Registry Hives}
+Bei Betrachtung der Registry als Uncommon Locations, wurden die in Tabelle \ref{tab:windows-registry-hives} im Kapitel \ref{subsection:methodik-datenanalyse-registry} aufgelisteten Registry-Hives mithilfe des Registry Explorers untersucht. 
+Weder in den System-Hives noch in den User-Hives konnte in keinem Festplatten-Image PB Artefakte identifiziert werden. 
 
 %Literatur:
 %	>	Auf Autor verweisen: angeblich in Shellactivities Ergebnisse. --> Nicht mehr vorhanden in aktueller Version (Verweis auf E-Mail)
