@@ -16,14 +16,14 @@
 \contentsline {subsection}{\numberline {4.3.3}Registry}{22}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{24}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{24}{}%
-\contentsline {section}{\numberline {5.2}Tor}{33}{}%
-\contentsline {section}{\numberline {5.3}Chrome}{38}{}%
-\contentsline {section}{\numberline {5.4}Brave}{38}{}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{39}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{40}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{42}{}%
-\contentsline {chapter}{Appendices}{43}{}%
-\contentsline {subsection}{\numberline {.0.1}Firefox Common Locations}{44}{}%
+\contentsline {section}{\numberline {5.2}Tor}{32}{}%
+\contentsline {section}{\numberline {5.3}Chrome}{40}{}%
+\contentsline {section}{\numberline {5.4}Brave}{40}{}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{41}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{42}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{44}{}%
+\contentsline {chapter}{Appendices}{45}{}%
+\contentsline {subsection}{\numberline {.0.1}Firefox Common Locations}{46}{}%
 \contentsline {subsection}{\numberline {.0.2}Firefox Uncommon Locations}{48}{}%
 \contentsline {chapter}{Literaturverzeichnis}{59}{}%
 \contentsline {chapter}{\nonumberline Literatur}{59}{}%

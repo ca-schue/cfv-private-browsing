@@ -882,14 +882,14 @@ Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails ve
 \end{tabular}
 }
 \label{tab:firefox-mapping-virtaddr-to-byteoffset}
-\caption{Abbildung der virtellen Speicheradressen der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten}
+\caption{Abbildung der virtellen Speicheradressen im Firefox-RAM der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten}
 \end{table}
 
 Zu diesen Artefakten wurde gemäß Methodik in Kapitel \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility} der String Kontext -- also die Zeichen vor und nach dem gefundenen Artefakt im Speicherbereich -- ermittelt. Dazu wurde mithilfe des Volatility memmap-Plugins die Abbildung der virtuellen Speicheradressen auf den Byte-Offset in der extrahierten Speicherseite des Prozesses ermittelt. 
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0xb9ce29180c8_7420.png}}}
 	\label{img:firefox-pw-offset-0x11dd40c8}  
-	\caption{Passwort-Klartext in Speicherseite von PID 7420 an Byte-Offset 0x11dd40c8}
+	\caption{Passwort-Klartext in Firefox Speicherseite von PID 7420 an Byte-Offset 0x11dd40c8}
 \end{figure}
 
 Wie in Abbildung \ref{img:firefox-pw-offset-0x11dd40c8} gezeigt, sind in der Speicherseite des Prozesses mit PID $7420$ konnte vor und nach dem gefundenen Passwort am Byte-Offset $0xb9ce29180c8$ neben der Gmail-Url "mail.google.com" Code-Fragmente der "Gecko-Engine" zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video.
@@ -897,7 +897,7 @@ Wie in Abbildung \ref{img:firefox-pw-offset-0x11dd40c8} gezeigt, sind in der Spe
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png}}}
 	\label{img:firefox-pw-offset-pid-7420-0x12e234e0}  
-	\caption{Passwort-Klartext in Speicherseite von PID 7420 an Byte-Offset 0x12e234e0}
+	\caption{Passwort-Klartext in Firefox Speicherseite von PID 7420 an Byte-Offset 0x12e234e0}
 \end{figure}
 In der gleichen Datei konnte wie in Abbildung \ref{img:firefox-pw-offset-pid-7420-0x12e234e0} nach dem gefundenen Passwort am Byte-Offset $0x12e234e0$ die Strings "Passwd" sowie "sessionrestore" (siehe Common Location "Sessionstore" in Kapitel X) identifiziert werden. 
 
@@ -908,7 +908,7 @@ Wie in den Abbildungen \ref{img:firefox-pw-offset-pid-8424} gezeigt, können in 
 	\hfill
 	\subcaptionbox{Byte-Offset 0x96bb08}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0x240840e5b08_8424.png}}%
 	\label{img:firefox-pw-offset-pid-8424}  
-	\caption{Passwords in memory page of PID 8424}
+	\caption{Passwort-Klartext in Firefox Speicherseiten von PID 8424}
 \end{figure}
 
 \paragraph*{Yararule Image}
@@ -956,6 +956,7 @@ Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Brow
 %	\caption{Image}
 %\end{figure}
 
+\paragraph*{Zusammenfassung Yarascan}
 Wie in Abbildung \ref{chart:firefox-volatility-summary} zusammenfassend gezeigt wurden vor dem Browsing Szenario, keine private Browsing Artefakte im ersten RAM Dump gefunden.
 Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
 Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
@@ -1101,7 +1102,7 @@ Im ersten Schritt wird Autopsy als konkretes forensisches Werkzeug verwendet, st
 Eine Stichwortsuche in Autopsy in allen fünft Festplatten-Images nach PB Artefakten ergab keine Treffer.
 
 Ebenso wurden in den von automatisch kategorisierten Dateien kein PB Artefakte gefunden. 
-Im Anhang X ist eine detaillierte Analyse der kategorisierten Dateien beschrieben.
+Im Anhang \ref{subsubsection:appendix-tor-uncommon-locations-autopsy} ist eine detaillierte Analyse der kategorisierten Dateien beschrieben.
 
 
 \subsubsection*{Analyse mit Volatility}
@@ -1109,41 +1110,598 @@ Im Anhang X ist eine detaillierte Analyse der kategorisierten Dateien beschriebe
 Nachfolgend werden die Ergebnisse der Analyse des RAMs mithilfe Volatility beschrieben. 
 
 \paragraph*{Yararule HTML}
-Wie bei Firefox in Kapitel X (TODO!) konnten keine HTML Artefakte im RAM gefunden werden. Deshalb wird diese Kategorie nicht aufgeführt.
+Wie bei Firefox konnten keine HTML Artefakte im RAM gefunden werden. Deshalb wird diese Kategorie nicht aufgeführt.
 
 \paragraph*{Yararule Keyword}
-Wie in Abbildung X gezeigt, wurden ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Erstellen einer "Neuen Identität" (RAM Dump 3-1) Keyword Artefakte gefunden.
+Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Erstellen einer "Neuen Identität" (RAM Dump 3-1) Keyword Artefakte gefunden.
 Nachdem eine "Neue Identität" erstellt wurde reduzierten sich die gefundenen Artefakte deutlich. 
 Die Keyword-Artefakte wurden hauptsächlich in Firefox Prozessen gefunden. Kein Artefakt war im Tor.exe Prozess zu finden.
 Mit 4833 Artefakten wurden am häufigsten "pfaffenhofen" nach dem Browsing Szenario im zweiten RAM-Dump gefunden. 
 Nach dem Schließen des Tor-Browsers wurde keine Keyword Artefakte mehr im RAM identifiziert.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/keywords.png}}}
-	\label{chart:final-criteria}  
-	\caption{Keywords}
-\end{figure}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{l}	
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=paffenhofen,
+			y=0.8cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 6000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (780,RAM-Dump 3-1) (4833,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (9,RAM-Dump 3-1) (23,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=nanoradar,
+			y=0.8cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 6000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (9,RAM-Dump 3-1) (439,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (1,RAM-Dump 3-1) (3,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=mooserliesl,
+			y=0.8cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 6000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.25cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (4,RAM-Dump 3-1) (11,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=mallofamerica,
+			y=0.8cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 6000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (1056,RAM-Dump 3-1) (1851,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (11,RAM-Dump 3-1) (3,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+	\end{tabular}
+	}
+	\caption{Gefundene Suchbegriffe im Tor RAM}
+	\label{chart:tor-volatility-keywords}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/keywords.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Keywords}
+%\end{figure}
 
 \paragraph*{Yararule URL}
-Wie bei der "Keyword" Yararule wurden ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Ebenso wurden im RAM Dump 3-1 bei deutlich weniger Artefakte URLs als in RAM Dump 2 gefunden. 
+Wie bei der "Keyword" Yararule wurden wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Ebenso wurden im RAM Dump 3-1 bei deutlich weniger Artefakte URLs als in RAM Dump 2 gefunden. 
 Für diese Yara-Regel wurden nach Firefox-Prozessen hauptsächlich Artefakt in Tor-Prozessen gefunden. Am wenigsten Artefakte waren in anderen Prozessen zu finden.
 Auffällig ist, dass die URL "mallofamerica.com" 26.505 mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde "mooserliesl.de" nur 508 mal im zweiten RAM Dump  gefunden. Nach Schließen des Tor-Browsers wurden keine URL Artefakte mehr im RAM gefunden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/url.png}}}
-	\label{chart:final-criteria}  
-	\caption{URL}
-\end{figure}
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{l}	
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=unitree.com,
+			y=0.9cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 30000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (208,RAM-Dump 3-1) (1549,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (7,RAM-Dump 3-1) (7,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=mooserliesl.de,
+			y=0.9cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 30000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (29,RAM-Dump 3-1) (508,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (6,RAM-Dump 3-1) (6,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (4,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=mallofamerica.com,
+			y=0.9cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 30000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (3371,RAM-Dump 3-1) (26505,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (90,RAM-Dump 3-1) (136,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (3,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=donaukurier.de,
+			y=0.9cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 30000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=3,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (1194,RAM-Dump 3-1) (7451,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (2,RAM-Dump 3-1) (1239,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (9,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+	\end{tabular}
+	}
+	\caption{Gefundene URLs im Tor RAM}
+	\label{chart:tor-volatility-urls}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/url.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{URL}
+%\end{figure}
 
 \paragraph*{Yararule Mail}
 Nach dem Browsing-Szenario, vor Zuweisung einer "Neuen Identität" (RAM-Dump 2) konnten alle Mail Artefakte gefunden werden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/mail.png}}}
-	\label{chart:final-criteria}  
-	\caption{Mail}
-\end{figure}
-Wie in Abbildung X zu sehen ist, wurden die Artefakte ausschließlich in Firefox Prozess gefunden.
-Nur die Absenderadresse "computerforensikvl@gmail.com" wurde nach Erstellen der neuen Identität in RAM-Dump 3-1 gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene Mail Artefakt.
-Wie bei Firefox in Kapitel X (TODO!) wurde das Passwort als Klartext nach dem Browsing-Szenario im zweiten RAM-Dump gefunden.
-Das Passwort wurde in zwei Mal im Firefox Prozess mit der PID 708 gefunden. Tabelle X zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe sowie deren Abbildung auf die mittels "memmap" identifizierten Byte-Offsets der extrahierten Speicherseiten.
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{r}	
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=Betrefftext,
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 110,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (8,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=Mailinhalt,
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 110,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (12,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=Vorlesung23!,
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 110,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (2,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=computerforensikvl\\@gmail.com,
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 110,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (96,RAM-Dump 3-1) (8,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=chs3702\\@gmail.com,
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 110,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (18,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=cas0597\\@thi.de,
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 110,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (22,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+%				\addplot coordinates {
+%				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%				};
+				\legend{firefox.exe}
+			\end{axis}
+		\end{tikzpicture}
+	\end{tabular}
+	}
+	\caption{Gefundene E-Mail Artefakte im Tor RAM}
+	\label{chart:tor-volatility-mail}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/mail.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Mail}
+%\end{figure}
+Wie in Abbildung \ref{chart:tor-volatility-mail} zu sehen ist, wurden die Artefakte ausschließlich in Firefox Prozess gefunden.
+Nur die Absenderadresse "computerforensikvl@gmail.com" wurde nach Erstellen der neuen Identität in RAM-Dump 3-1 gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene E-Mail Artefakt.
+Wie bei Firefox in Kapitel \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility} wurde das Passwort als Klartext nach dem Browsing-Szenario im zweiten RAM-Dump gefunden.
+Das Passwort wurde in zwei Mal im Firefox Prozess mit der PID 708 gefunden. Tabelle \ref{tab:tor-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe sowie deren Abbildung auf die mittels "memmap" identifizierten Byte-Offsets der extrahierten Speicherseiten.
 \begin{table}[]
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|c|c|c|ll}
@@ -1153,41 +1711,242 @@ Das Passwort wurde in zwei Mal im Firefox Prozess mit der PID 708 gefunden. Tabe
 0x2b1e2ecb748                     & 708         & 0x10f7748                                         &  &  \\ \cline{1-3}
 \end{tabular}
 }
+\label{tab:tor-mapping-virtaddr-to-byteoffset}
+\caption{Abbildung der virtellen Speicheradressen der gefundenen Strings im Tor-RAM auf Byte-Offsets der entsprechenden Speicherseiten}
 \end{table}
-Bei Untersuchung des String-Kontexts wurden für das Passwort am Byte-Offset \texttt{0xea0318} wie in Abbildung X gezeigt keine Auffällige Artefakte entdeckt.
+
+Bei Untersuchung des String-Kontexts wurden für das Passwort am Byte-Offset \texttt{0xea0318} wie in Abbildung \ref{img:tor-pw-offset-pid-708-0xea0318} gezeigt keine Auffällige Artefakte entdeckt.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/tor/password_0xea0318.png}}}
-	\label{chart:final-criteria}  
-	\caption{Password in memory page of PID 708 at Byte-Offset 0xea0318}
+	\label{img:tor-pw-offset-pid-708-0xea0318}  
+	\caption{Passwort-Klartext in Tor Speicherseite von PID 708 an Byte-Offset 0xea0318}
 \end{figure}
-Wie in Abbildung X gezeigt, wurde im Bereich des gefundenen Passworts am Byte-Offset \texttt{0x10f7748} der String "CSP\_ignoringSrcForStrictDynamic", dessen Bedeutung nicht bestimmt werden konnte.
+
+Wie in Abbildung \ref{img:tor-pw-offset-pid-708-0x10f7748} gezeigt, wurde im Bereich des gefundenen Passworts am Byte-Offset \texttt{0x10f7748} der String "CSP\_ignoringSrcForStrictDynamic", dessen Bedeutung nicht bestimmt werden konnte.
 Weiterhin wurde die Zeichenkette "invalidation/lcs/client" in der Nähe des Passworts gefunden. Dieser String wird in einem Firefox Bug-Ticket verwendet, welches vor 2017 geschlossen wurde. Der Bug betraf ein Speicher-Leck.
 % https://bugzilla.mozilla.org/show_bug.cgi?id=1452114
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/volatility/tor/password_0x10f7748.png}}}
-	\label{chart:final-criteria}  
-	\caption{Password in memory page of PID 708 at Byte-Offset 0x10f7748}
+	\label{img:tor-pw-offset-pid-708-0x10f7748}  
+	\caption{Passwort-Klartext in Tor Speicherseite von PID 708 an Byte-Offset 0x10f7748}
 \end{figure}
 	
 \paragraph*{Yararule Image}
-Wie in Abbildung X dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos  ein einziges Mal nach dem Browsing Szenario, vor Erstellen der "Neuen Identität" im zweiten RAM-Dump in einem Firefox Prozess gefunden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/image.png}}}
-	\label{chart:final-criteria}  
-	\caption{Image}
-\end{figure}
+Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos  ein einziges Mal nach dem Browsing Szenario, vor Erstellen der "Neuen Identität" im zweiten RAM-Dump in einem Firefox Prozess gefunden.
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{r}
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar stacked,
+			width=18cm, 
+			height=12cm, 
+			ylabel style={align=center}, ylabel=Donaukurier Logo\\(Hexadezimal),
+			y=0.65cm,
+			symbolic y coords={RAM-Dump 3-2, RAM-Dump 3-1, RAM-Dump 2, RAM-Dump 1},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 3,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=2,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,RAM-Dump 3-2)  (0,RAM-Dump 3-1) (2,RAM-Dump 2) (0,RAM-Dump 1)
+				};
+				\legend{firefox.exe}
+			\end{axis}
+		\end{tikzpicture}
+	\end{tabular}
+	}
+	\caption{Gefundener Hexadezimalwert des Donaukurier-Logos im Tor RAM}
+	\label{chart:tor-volatility-image}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/image.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Image}
+%\end{figure}
 
-
-Wie in Abbildung X zusammenfassend gezeigt ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach (RAM-Dump 3-1) Zuweisung einer "Neuen Identität" Brwosing Artefakte im Arbeitsspeicher gefunden.
+\paragraph*{Zusammenfassung Yarascan}
+Wie in Abbildung \ref{chart:tor-volatility-summary} zusammenfassend gezeigt, wurden ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach (RAM-Dump 3-1) Zuweisung einer "Neuen Identität" Brwosing Artefakte im Arbeitsspeicher gefunden.
 Nach dem Browsing Szenario mit geöffnetem Browser konnten die meisten Artefakte identifiziert werden. Dabei wurden am häufigsten URL Artefakte in Firefox Prozessen gefunden. Zudem konnte hier das E-Mail Passwort im Klartext lokalisiert werden.
 Nach Schließen des Browsers konnten im dritten Snapshots URLs im DNSCache Windows Service gefunden werden. Nach leeren des Caches und Beenden des DNSCache Services konnten wurden keine Artefakte gefunden.
 Die Erstellung einer "Neuen Identität" reduzierte dabei deutlich die gefundenen Artefakte im RAM.
 In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario besuchten Seiten identifiziert werden. Weiterhin wurde zwei Mal das Passwort des Google-Accounts im Klartext gefunden.
-\begin{figure}[h!]
-	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/summary.png}}}
-	\label{chart:final-criteria}  
-	\caption{Summary}
-\end{figure}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+	\begin{tabular}{r}
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 3-2,
+			y=0.9cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 40000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2.3*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=3,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				};
+								\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 3-1,
+			y=0.9cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 40000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2.3*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=3,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(0,DK-Logo) (8,E-Mail) (4077,URLs) (1849,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (1297,URLs) (0,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (5,URLs) (21,Suchbegriffe)
+				};
+			\end{axis}
+		\end{tikzpicture}
+
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 2,
+			y=0.9cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 40000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2.3*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=3,
+    		yminorgrids = true,minor tick num=1
+			]
+				\addplot coordinates {
+				(1,DK-Logo) (158,E-Mail) (36013,URLs) (7134,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (1388,URLs) (0,Suchbegriffe)
+				};
+				\addplot coordinates {
+				(0,DK-Logo) (0,E-Mail) (13,URLs) (19,Suchbegriffe)
+				};
+			\end{axis}
+		\end{tikzpicture}
+		\\
+		\begin{tikzpicture}
+			\begin{axis}[
+			xbar,
+			width=12cm, 
+			height=3cm, 
+			ylabel style={align=center}, ylabel=RAM-Dump 1,
+			y=0.9cm,
+			symbolic y coords={DK-Logo, E-Mail, URLs, Suchbegriffe},
+			ytick=data,
+			xticklabels={,,},
+            xmin = 0,
+            xmax = 40000,
+			nodes near coords, 
+			nodes near coords align={horizontal},
+			nodes near coords style={font=\tiny},
+   			nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+			bar width=.2cm,
+			enlarge y limits={abs=2.3*\pgfplotbarwidth},
+			scaled x ticks=false,
+			legend style={
+				at={(0.5,-0.1)},
+				anchor=north
+			},
+			legend columns=3,
+    		yminorgrids = true,minor tick num=1
+			]
+			\addplot coordinates {
+			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+			};
+			\addplot coordinates {
+			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+			};
+						\addplot coordinates {
+			(0,DK-Logo) (0,E-Mail) (0,URLs) (0,Suchbegriffe)
+			};
+			\legend{firefox.exe, tor.exe, Andere Prozesse}
+			\end{axis}
+		\end{tikzpicture}	
+	\end{tabular}
+	}
+	\caption{Zusammenfassung gefundener Artefakte in den Tor-Browser RAM-Dumps}
+	\label{chart:tor-volatility-summary}
+\end{table}
+%\begin{figure}[h!]
+%	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/volatility/tor/summary.png}}}
+%	\label{chart:final-criteria}  
+%	\caption{Summary}
+%\end{figure}
 %Literatur:
 %o Autopsy: \cite{Muir.2019}
 %	•	Configuration files, downloaded files, and browserrelated data are recoverable from the file system.
@@ -1219,8 +1978,7 @@ In keinem RAM-Speicherabbild konnten HTML-Fragmente der im Browsing-Szenario bes
 %		 -> Registry and indicates the execution path of the program, as well as the number of times the program was executed 
 
 \subsection*{Registry}
-
-Wie in der Methodik in Kapitel X beschrieben, teilt sich die Analyse der Registry sowohl Common als auch Uncommon Locations. Weder in den Process Monitor "SetValue" Operations noch über die Stringsuche in den System- und User-Hives konnten PB Artefakte gefunden werden. Eine detaillierte Analyse der Registry ist im Anhang X beschrieben. 
+Wie in der Methodik in Kapitel \ref{subsection:methodik-datenanalyse-registry} beschrieben, teilt sich die Analyse der Registry sowohl Common als auch Uncommon Locations. Weder in den Process Monitor "SetValue" Operations noch über die Stringsuche in den System- und User-Hives konnten PB Artefakte gefunden werden. Eine detaillierte Analyse der Registry ist im Anhang \ref{subsection:appendix-firefox-registry} beschrieben. 
 
 \section{Chrome}
 
