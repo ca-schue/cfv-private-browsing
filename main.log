@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  4 JUN 2023 22:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  5 JUN 2023 12:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1351,14 +1351,41 @@ KOMA-Script document classes (AR)
 \c@subfigure=\count470
 \c@subtable=\count471
 )
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/tablefootnote\tablefoot
+note.sty
+Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count472
+\calc@Bcount=\count473
+\calc@Adimen=\dimen294
+\calc@Bdimen=\dimen295
+\calc@Askip=\skip97
+\calc@Bskip=\skip98
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count474
+\calc@Cskip=\skip99
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)))
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count472
-\@quotereset=\count473
+\@quotelevel=\count475
+\@quotereset=\count476
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-27.
+30.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1373,32 +1400,32 @@ LaTeX Warning: Unused global option(s):
 (kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Info: Redefining \microtypecontext on input line 127.
-Package microtype Info: Applying patch `item' on input line 127.
-Package microtype Info: Applying patch `toc' on input line 127.
-Package microtype Info: Applying patch `eqnum' on input line 127.
-Package microtype Info: Applying patch `footnote' on input line 127.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
+LaTeX Font Info:    ... okay on input line 130.
+LaTeX Info: Redefining \microtypecontext on input line 130.
+Package microtype Info: Applying patch `item' on input line 130.
+Package microtype Info: Applying patch `toc' on input line 130.
+Package microtype Info: Applying patch `eqnum' on input line 130.
+Package microtype Info: Applying patch `footnote' on input line 130.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 127.
+LaTeX Info: Redefining \showhyphens on input line 130.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1432,22 +1459,22 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 127.
-Package biblatex Info: Reference segment=0 on input line 127.
+Package biblatex Info: Reference section=0 on input line 130.
+Package biblatex Info: Reference segment=0 on input line 130.
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count474
-\scratchdimen=\dimen294
+\scratchcounter=\count477
+\scratchdimen=\dimen296
 \scratchbox=\box75
-\nofMPsegments=\count475
-\nofMParguments=\count476
+\nofMPsegments=\count478
+\nofMParguments=\count479
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count477
-\MPscratchDim=\dimen295
-\MPnumerator=\count478
-\makeMPintoPDFobject=\count479
+\MPscratchCnt=\count480
+\MPscratchDim=\dimen297
+\MPnumerator=\count481
+\makeMPintoPDFobject=\count482
 \everyMPtoPDFconversion=\toks47
 )
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -1502,10 +1529,10 @@ Package caption Info: End \AtBeginDocument code.
 <bilder//thi_logo.pdf, id=4, 165.87971pt x 73.25368pt>
 File: bilder//thi_logo.pdf Graphic file (type pdf)
 <use bilder//thi_logo.pdf>
-Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 131.
+Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 134.
 (pdftex.def)             Requested size: 125.47739pt x 55.41292pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-131.
+134.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1513,7 +1540,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131
+LaTeX Font Info:    Trying to load font information for U+msa on input line 134
 .
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1522,7 +1549,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131
+LaTeX Font Info:    Trying to load font information for U+msb on input line 134
 .
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1537,7 +1564,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 {C:/Users/carls/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./bilder//th
 i_logo.pdf>]
 Package tocbasic Info: character protrusion at toc deactivated on input line 13
-6.
+9.
  (main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -3034,22 +3061,40 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-] [37]) [38]
+] [37]
+
+Package caption Warning: \label without proper reference on input line 225.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:gewinner-tabelle' on page 38 undefined on input l
+ine 222.
+
+[38]
+
+Package caption Warning: \label without proper reference on input line 253.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:gewinner' on page 39 undefined on input line 249.
+
+
+) [39]
 \openout2 = `kapitel/07_Diskussion.aux'.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-[39
+[40
 
 
 
 
-]) [40]
+]) [41]
 \openout2 = `kapitel/08_Fazit.aux'.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [41
+) [42
 
 
 
@@ -3057,7 +3102,7 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [42
+ (kapitel/09_Anhang.tex [43
 
 
 
@@ -3069,10 +3114,10 @@ Package caption Warning: \label without proper reference on input line 87.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:firefox-writefile-operations' on page 43 undefine
+LaTeX Warning: Reference `tab:firefox-writefile-operations' on page 44 undefine
 d on input line 31.
 
-[43]
+[44]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -3149,7 +3194,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:mzcacheview' on page 45 undefined on input line 1
 06.
 
-<bilder/firefox-cache.png, id=614, 886.81313pt x 136.25906pt>
+<bilder/firefox-cache.png, id=619, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
 Package pdftex.def Info: bilder/firefox-cache.png  used on input line 110.
@@ -3173,7 +3218,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-session-history-scrounger' on page 46 und
 efined on input line 131.
 
-<bilder/firefox-sessionstore.png, id=620, 534.49687pt x 95.6072pt>
+<bilder/firefox-sessionstore.png, id=624, 534.49687pt x 95.6072pt>
 File: bilder/firefox-sessionstore.png Graphic file (type png)
 <use bilder/firefox-sessionstore.png>
 Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 13
@@ -3211,7 +3256,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-bookmarks' on page 48 undefined on in
 put line 262.
 
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=628, 739.26187pt x 27.85406pt
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=632, 739.26187pt x 27.85406pt
 >
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
@@ -3229,7 +3274,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-cookies' on page 48 undefined on inpu
 t line 270.
 
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=629, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=633, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
@@ -3245,7 +3290,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-history' on page 49 undefined on inpu
 t line 278.
 
-<bilder/cfv_firefox_autopsy_web_history.png, id=633, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=637, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
@@ -3260,7 +3305,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:firefox-web-categories' on page 49 undefined on i
 nput line 287.
 
-<bilder/cfv_firefox_autopsy_web_categories.png, id=634, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=638, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
@@ -3423,7 +3468,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-bookmarks' on page 56 undefined on input 
 line 633.
 
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=664, 660.96938pt x 32.37094pt>
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=669, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
@@ -3437,7 +3482,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-cookies' on page 56 undefined on input li
 ne 641.
 
-<bilder/cfv_tor_autopsy_web_cookies.png, id=665, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=670, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
@@ -3452,7 +3497,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-history' on page 57 undefined on input li
 ne 649.
 
-<bilder/cfv_tor_autopsy_web_history.png, id=671, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=675, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
@@ -3466,7 +3511,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `img:tor-web-categories' on page 57 undefined on input
  line 657.
 
-<bilder/cfv_tor_autopsy_web_categories.png, id=672, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=676, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
@@ -3496,23 +3541,18 @@ chapter without number
 
 LaTeX Warning: There were undefined references.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45144 strings out of 475281
- 1115714 string characters out of 2774064
- 2186730 words of memory out of 3000000
- 65554 multiletter control sequences out of 15000+600000
- 597439 words of font info for 243 fonts, out of 8000000 for 9000
+ 45455 strings out of 475281
+ 1122324 string characters out of 2774064
+ 2194604 words of memory out of 3000000
+ 65823 multiletter control sequences out of 15000+600000
+ 613513 words of font info for 262 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,29n,106p,10601b,2784s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 108i,29n,106p,10601b,2802s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
 ers/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
@@ -3520,13 +3560,14 @@ ers/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
 <C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb>
 <C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb>
 <C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><
-C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
-><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pf
-b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
-b>
-Output written on main.pdf (66 pages, 858331 bytes).
+C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C
+:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
+<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb
+><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb
+>
+Output written on main.pdf (67 pages, 885129 bytes).
 PDF statistics:
- 734 PDF objects out of 1000 (max. 8388607)
+ 743 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 60532 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 68724 words of extra memory for PDF output out of 74296 (max. 10000000)
 

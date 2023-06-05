@@ -20,10 +20,10 @@
 \contentsline {section}{\numberline {5.3}Chrome}{35}{}%
 \contentsline {section}{\numberline {5.4}Brave}{35}{}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{36}{}%
-\contentsline {chapter}{\numberline {7}Diskussion}{39}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{41}{}%
-\contentsline {chapter}{Appendices}{42}{}%
-\contentsline {subsection}{\numberline {.0.1}Firefox Common Locations}{43}{}%
+\contentsline {chapter}{\numberline {7}Diskussion}{40}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{42}{}%
+\contentsline {chapter}{Appendices}{43}{}%
+\contentsline {subsection}{\numberline {.0.1}Firefox Common Locations}{44}{}%
 \contentsline {subsection}{\numberline {.0.2}Firefox Uncommon Locations}{48}{}%
 \contentsline {chapter}{Literaturverzeichnis}{59}{}%
 \contentsline {chapter}{\nonumberline Literatur}{59}{}%
