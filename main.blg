@@ -1,26 +1,26 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[152] biber-MSWIN64:340> INFO - === 
-[207] Biber.pm:419> INFO - Reading 'main.bcf'
-[385] Biber.pm:979> INFO - Found 30 citekeys in bib section 0
-[404] Biber.pm:4419> INFO - Processing section 0
-[419] Biber.pm:4610> INFO - Looking for bibtex file 'ref/citavi.bib' for section 0
-[502] bibtex.pm:1713> INFO - LaTeX decoding ...
-[508] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/citavi.bib'
-[517] Biber.pm:4610> INFO - Looking for bibtex file 'ref/manual.bib' for section 0
-[609] bibtex.pm:1713> INFO - LaTeX decoding ...
-[657] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/manual.bib'
-[802] Biber.pm:4610> INFO - Looking for bibtex file 'ref/carl.bib' for section 0
-[802] Biber.pm:4610> INFO - Looking for bibtex file 'ref/christoph.bib' for section 0
-[872] bibtex.pm:1713> INFO - LaTeX decoding ...
-[883] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/christoph.bib'
-[948] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[949] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[949] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[949] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[986] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1004] bbl.pm:763> INFO - Output to main.bbl
-[1004] Biber.pm:131> WARN - Duplicate entry key: 'Hariharan.2022' in file 'ref/manual.bib', skipping ...
-[1004] Biber.pm:131> WARN - Data source 'ref/carl.bib' is empty, ignoring
-[1004] Biber.pm:131> WARN - I didn't find a database entry for 'Hariharan' (section 0)
-[1005] Biber.pm:133> INFO - WARNINGS: 3
+[213] biber-MSWIN64:340> INFO - === 
+[309] Biber.pm:419> INFO - Reading 'main.bcf'
+[484] Biber.pm:979> INFO - Found 30 citekeys in bib section 0
+[503] Biber.pm:4419> INFO - Processing section 0
+[531] Biber.pm:4610> INFO - Looking for bibtex file 'ref/citavi.bib' for section 0
+[613] bibtex.pm:1713> INFO - LaTeX decoding ...
+[625] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/citavi.bib'
+[633] Biber.pm:4610> INFO - Looking for bibtex file 'ref/manual.bib' for section 0
+[710] bibtex.pm:1713> INFO - LaTeX decoding ...
+[759] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/manual.bib'
+[931] Biber.pm:4610> INFO - Looking for bibtex file 'ref/carl.bib' for section 0
+[932] Biber.pm:4610> INFO - Looking for bibtex file 'ref/christoph.bib' for section 0
+[1011] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1028] bibtex.pm:1519> INFO - Found BibTeX data source 'ref/christoph.bib'
+[1092] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1093] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1093] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[1093] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[1159] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1176] bbl.pm:763> INFO - Output to main.bbl
+[1176] Biber.pm:131> WARN - Duplicate entry key: 'Hariharan.2022' in file 'ref/manual.bib', skipping ...
+[1177] Biber.pm:131> WARN - Data source 'ref/carl.bib' is empty, ignoring
+[1177] Biber.pm:131> WARN - I didn't find a database entry for 'Hariharan' (section 0)
+[1177] Biber.pm:133> INFO - WARNINGS: 3

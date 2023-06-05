@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  28 MAY 2023 22:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  5 JUN 2023 23:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1808,183 +1808,190 @@ l.38 I
 
 (kapitel/02_Theoretischer Hintergrund.tex
 chapter 2.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 4.
+Excluding 'comment' comment. Excluding 'comment' comment.
+Underfull \hbox (badness 10000) in paragraph at lines 19--114
+
+ []
+
 [4
 
 
 
 
-] [5] [6] [7] [8]
-Overfull \hbox (13.69048pt too wide) in paragraph at lines 245--248
+] Excluding 'comment' comment. [5] [6]
+Overfull \hbox (13.69048pt too wide) in paragraph at lines 257--260
 []\T1/lmss/m/n/10.95 (-20) Definition pri-va-te Brow-sing Ar-te-fakt: =========
 ============================
  []
 
-[9] [10] [11]) [12]
+[7] [8]) [9]
 \openout2 = `"kapitel/03_Ziel der Arbeit.aux"'.
 
  (kapitel/03_Ziel der Arbeit.tex
 chapter 3.
-[13
+[10
 
 
 
 
-] [14]) [15]
+] [11]) [12]
 \openout2 = `kapitel/04_Methodik.aux'.
 
  (kapitel/04_Methodik.tex
 chapter 4.
-[16
+[13
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'Hariharan' on page 17 undefined on input line 64.
+LaTeX Warning: Citation 'Hariharan' on page 14 undefined on input line 64.
 
-[17] [18] (bilder/process_monitor_to_excel-Latex.pdf_tex
-<bilder//process_monitor_to_excel-Latex.pdf, id=290, page=1, 798.9303pt x 286.9
+[14] [15] (bilder/process_monitor_to_excel-Latex.pdf_tex
+<bilder//process_monitor_to_excel-Latex.pdf, id=263, page=1, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=291, page=2, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=264, page=2, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page2 use
 d on input line 58.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=292, page=3, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=265, page=3, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page3 use
 d on input line 60.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=293, page=4, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=266, page=4, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page4 use
 d on input line 63.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=294, page=5, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=267, page=5, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page5 use
 d on input line 65.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=295, page=6, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=268, page=6, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page6 use
 d on input line 67.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=296, page=7, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=269, page=7, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page7 use
 d on input line 71.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=297, page=8, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=270, page=8, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page8 use
 d on input line 74.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=298, page=9, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=271, page=9, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page9 use
 d on input line 76.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=299, page=10, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=272, page=10, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page10 us
 ed on input line 78.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=300, page=11, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=273, page=11, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page11 us
 ed on input line 81.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=301, page=12, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=274, page=12, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page12 us
 ed on input line 83.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=302, page=13, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=275, page=13, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page13 us
 ed on input line 85.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=303, page=14, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=276, page=14, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page14 us
 ed on input line 87.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=304, page=15, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=277, page=15, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page15 us
 ed on input line 90.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=305, page=16, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=278, page=16, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page16 us
 ed on input line 94.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=306, page=17, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=279, page=17, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page17 us
 ed on input line 97.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=307, page=18, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=280, page=18, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page18 us
 ed on input line 100.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=308, page=19, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=281, page=19, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page19 us
 ed on input line 103.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=309, page=20, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=282, page=20, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page20 us
 ed on input line 107.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=310, page=21, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=283, page=21, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 21>
@@ -1993,98 +2000,98 @@ ed on input line 111.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
 )
 (bilder/sqlite_file_diffs-Latex.pdf_tex
-<bilder//sqlite_file_diffs-Latex.pdf, id=311, page=1, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=284, page=1, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page1 used on in
 put line 56.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=312, page=2, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=285, page=2, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page2 used on in
 put line 58.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=313, page=3, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=286, page=3, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page3 used on in
 put line 60.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=314, page=4, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=287, page=4, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page4 used on in
 put line 63.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=315, page=5, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=288, page=5, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page5 used on in
 put line 65.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=316, page=6, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=289, page=6, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page6 used on in
 put line 67.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=317, page=7, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=290, page=7, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page7 used on in
 put line 71.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=318, page=8, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=291, page=8, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page8 used on in
 put line 75.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=319, page=9, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=292, page=9, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page9 used on in
 put line 78.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=320, page=10, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=293, page=10, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page10 used on i
 nput line 81.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=321, page=11, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=294, page=11, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page11 used on i
 nput line 85.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=322, page=12, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=295, page=12, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page12 used on i
 nput line 89.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=323, page=13, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=296, page=13, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page13 used on i
 nput line 91.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=324, page=14, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=297, page=14, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 14>
@@ -2095,7 +2102,7 @@ nput line 94.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19 <./bilder//process_monitor_to_excel-Latex.pdf> <./bilder//process_monitor_t
+[16 <./bilder//process_monitor_to_excel-Latex.pdf> <./bilder//process_monitor_t
 o_excel-Latex.pdf
 
 pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
@@ -2176,7 +2183,7 @@ pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
 
 pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
->] [20 <./bilder//sqlite_file_diffs-Latex.pdf> <./bilder//sqlite_file_diffs-Lat
+>] [17 <./bilder//sqlite_file_diffs-Latex.pdf> <./bilder//sqlite_file_diffs-Lat
 ex.pdf
 
 pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
@@ -2230,154 +2237,154 @@ inclusion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
 >] (bilder/yarascan_plugin_tree-Latex.pdf_tex
-<bilder//yarascan_plugin_tree-Latex.pdf, id=463, page=1, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=437, page=1, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=464, page=2, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=438, page=2, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page2 used on
  input line 58.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=465, page=3, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=439, page=3, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page3 used on
  input line 60.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=466, page=4, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=440, page=4, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page4 used on
  input line 62.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=467, page=5, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=441, page=5, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page5 used on
  input line 64.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=468, page=6, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=442, page=6, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page6 used on
  input line 66.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=469, page=7, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=443, page=7, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page7 used on
  input line 68.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=470, page=8, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=444, page=8, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page8 used on
  input line 70.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=471, page=9, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=445, page=9, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page9 used on
  input line 72.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=472, page=10, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=446, page=10, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page10 used o
 n input line 74.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=473, page=11, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=447, page=11, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page11 used o
 n input line 79.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=474, page=12, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=448, page=12, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page12 used o
 n input line 81.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=475, page=13, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=449, page=13, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page13 used o
 n input line 84.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=476, page=14, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=450, page=14, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page14 used o
 n input line 86.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=477, page=15, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=451, page=15, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page15 used o
 n input line 88.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=478, page=16, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=452, page=16, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page16 used o
 n input line 90.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=479, page=17, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=453, page=17, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page17 used o
 n input line 92.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=480, page=18, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=454, page=18, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page18 used o
 n input line 94.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=481, page=19, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=455, page=19, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page19 used o
 n input line 97.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=482, page=20, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=456, page=20, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page20 used o
 n input line 100.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=483, page=21, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=457, page=21, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 21>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page21 used o
 n input line 103.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-) [21]) [22 <./bilder//yarascan_plugin_tree-Latex.pdf> <./bilder//yarascan_plug
+) [18]) [19 <./bilder//yarascan_plugin_tree-Latex.pdf> <./bilder//yarascan_plug
 in_tree-Latex.pdf
 
 pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
@@ -2463,7 +2470,7 @@ DF inclusion: multiple pdfs with page group included in a single page
 
  (kapitel/05_Ergebnisse.tex
 chapter 5.
-<bilder/firefox-tabelle-logfile1vlogfile2-reduced.png, id=563, 672.01062pt x 25
+<bilder/firefox-tabelle-logfile1vlogfile2-reduced.png, id=537, 672.01062pt x 25
 7.96375pt>
 File: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png Graphic file (type p
 ng)
@@ -2471,13 +2478,13 @@ ng)
 Package pdftex.def Info: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png  
 used on input line 28.
 (pdftex.def)             Requested size: 672.00897pt x 257.9631pt.
-[23
+[20
 
 
 
 
- <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>] [24]
-<bilder/firefox-sqlite-table.png, id=577, 892.83563pt x 161.85469pt>
+ <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>] [21]
+<bilder/firefox-sqlite-table.png, id=550, 892.83563pt x 161.85469pt>
 File: bilder/firefox-sqlite-table.png Graphic file (type png)
 <use bilder/firefox-sqlite-table.png>
 Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 14
@@ -2487,66 +2494,66 @@ Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 14
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25]
-<bilder/bar-chart-logfile1vs2-test.png, id=582, 777.231pt x 335.946pt>
+[22]
+<bilder/bar-chart-logfile1vs2-test.png, id=555, 777.231pt x 335.946pt>
 File: bilder/bar-chart-logfile1vs2-test.png Graphic file (type png)
 <use bilder/bar-chart-logfile1vs2-test.png>
 Package pdftex.def Info: bilder/bar-chart-logfile1vs2-test.png  used on input l
 ine 172.
 (pdftex.def)             Requested size: 777.22911pt x 335.94518pt.
- [26 <./bilder/firefox-sqlite-table.png> <./bilder/bar-chart-logfile1vs2-test.p
+ [23 <./bilder/firefox-sqlite-table.png> <./bilder/bar-chart-logfile1vs2-test.p
 ng>]
-<bilder/firefox-registry-stacked-bar-chart.png, id=592, 698.172pt x 150.891pt>
+<bilder/firefox-registry-stacked-bar-chart.png, id=566, 698.172pt x 150.891pt>
 File: bilder/firefox-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/firefox-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/firefox-registry-stacked-bar-chart.png  used on
  input line 229.
 (pdftex.def)             Requested size: 698.17029pt x 150.89063pt.
- [27 <./bilder/firefox-registry-stacked-bar-chart.png>]
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=601, 874.76813pt x 117.43875p
+ [24 <./bilder/firefox-registry-stacked-bar-chart.png>]
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=575, 874.76813pt x 117.43875p
 t>
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
 input line 263.
 (pdftex.def)             Requested size: 874.76599pt x 117.43845pt.
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=602, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=576, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
 put line 277.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
-<bilder/cfv_firefox_autopsy_web_history.png, id=603, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=577, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
 put line 291.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-<bilder/cfv_firefox_autopsy_web_categories.png, id=604, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=578, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
  input line 310.
 (pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
- [28 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
+ [25 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
 opsy_web_cookies.png> <./bilder/cfv_firefox_autopsy_web_history.png> <./bilder/
 cfv_firefox_autopsy_web_categories.png>]
-<bilder/volatility/firefox/keywords.png, id=617, 887.607pt x 463.185pt>
+<bilder/volatility/firefox/keywords.png, id=591, 887.607pt x 463.185pt>
 File: bilder/volatility/firefox/keywords.png Graphic file (type png)
 <use bilder/volatility/firefox/keywords.png>
 Package pdftex.def Info: bilder/volatility/firefox/keywords.png  used on input 
 line 365.
 (pdftex.def)             Requested size: 887.60483pt x 463.18385pt.
-<bilder/volatility/firefox/url.png, id=618, 988.347pt x 560.64pt>
+<bilder/volatility/firefox/url.png, id=592, 988.347pt x 560.64pt>
 File: bilder/volatility/firefox/url.png Graphic file (type png)
 <use bilder/volatility/firefox/url.png>
 Package pdftex.def Info: bilder/volatility/firefox/url.png  used on input line 
 376.
 (pdftex.def)             Requested size: 988.34459pt x 560.63863pt.
-<bilder/volatility/firefox/mail.png, id=619, 1162.89pt x 779.859pt>
+<bilder/volatility/firefox/mail.png, id=593, 1162.89pt x 779.859pt>
 File: bilder/volatility/firefox/mail.png Graphic file (type png)
 <use bilder/volatility/firefox/mail.png>
 Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
@@ -2556,11 +2563,11 @@ Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./bilder/volatility/firefox/keywords.png>]
+[26 <./bilder/volatility/firefox/keywords.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=628, 462.22687pt
+<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=601, 462.22687pt
  x 203.25937pt>
 File: bilder/volatility/firefox/password_0xb9ce29180c8_7420.png Graphic file (t
 ype png)
@@ -2568,7 +2575,7 @@ ype png)
 Package pdftex.def Info: bilder/volatility/firefox/password_0xb9ce29180c8_7420.
 png  used on input line 421.
 (pdftex.def)             Requested size: 462.22574pt x 203.25887pt.
-<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=629, 453.94594p
+<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=602, 453.94594p
 t x 179.92218pt>
 File: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png Graphic file (
 type png)
@@ -2576,7 +2583,7 @@ type png)
 Package pdftex.def Info: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420
 .png  used on input line 428.
 (pdftex.def)             Requested size: 453.94482pt x 179.92174pt.
-<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=630, 456.95718pt
+<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=603, 456.95718pt
  x 170.13562pt>
 File: bilder/volatility/firefox/password_0x24083b41858_8424.png Graphic file (t
 ype png)
@@ -2584,7 +2591,7 @@ ype png)
 Package pdftex.def Info: bilder/volatility/firefox/password_0x24083b41858_8424.
 png  used on input line 437.
 (pdftex.def)             Requested size: 456.95605pt x 170.1352pt.
-<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=631, 458.46281pt
+<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=604, 458.46281pt
  x 231.11343pt>
 File: bilder/volatility/firefox/password_0x240840e5b08_8424.png Graphic file (t
 ype png)
@@ -2601,11 +2608,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[30 <./bilder/volatility/firefox/url.png>]
+[27 <./bilder/volatility/firefox/url.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/image.png, id=638, 1150.626pt x 200.385pt>
+<bilder/volatility/firefox/image.png, id=611, 1150.626pt x 200.385pt>
 File: bilder/volatility/firefox/image.png Graphic file (type png)
 <use bilder/volatility/firefox/image.png>
 Package pdftex.def Info: bilder/volatility/firefox/image.png  used on input lin
@@ -2614,7 +2621,7 @@ e 452.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/summary.png, id=639, 1566.069pt x 393.543pt>
+<bilder/volatility/firefox/summary.png, id=612, 1566.069pt x 393.543pt>
 File: bilder/volatility/firefox/summary.png Graphic file (type png)
 <use bilder/volatility/firefox/summary.png>
 Package pdftex.def Info: bilder/volatility/firefox/summary.png  used on input l
@@ -2623,11 +2630,11 @@ ine 462.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[31 <./bilder/volatility/firefox/mail.png> <./bilder/volatility/firefox/passwor
-d_0xb9ce29180c8_7420.png>] [32 <./bilder/volatility/firefox/password_0x2859f4ff
+[28 <./bilder/volatility/firefox/mail.png> <./bilder/volatility/firefox/passwor
+d_0xb9ce29180c8_7420.png>] [29 <./bilder/volatility/firefox/password_0x2859f4ff
 d4e0_7420.png> <./bilder/volatility/firefox/password_0x24083b41858_8424.png> <.
 /bilder/volatility/firefox/password_0x240840e5b08_8424.png>]
-<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=658, 823.57687pt
+<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=632, 823.57687pt
  x 331.2375pt>
 File: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png Graphic file (t
 ype png)
@@ -2639,9 +2646,9 @@ png  used on input line 491.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[33 <./bilder/volatility/firefox/image.png> <./bilder/volatility/firefox/summar
+[30 <./bilder/volatility/firefox/image.png> <./bilder/volatility/firefox/summar
 y.png>]
-<bilder/tor-sqlite-table.png, id=668, 925.95938pt x 185.94469pt>
+<bilder/tor-sqlite-table.png, id=642, 925.95938pt x 185.94469pt>
 File: bilder/tor-sqlite-table.png Graphic file (type png)
 <use bilder/tor-sqlite-table.png>
 Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 553.
@@ -2650,49 +2657,49 @@ Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 553.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
-<bilder/tor-bar-chart-logfile1vs2cs3.png, id=675, 777.231pt x 336.165pt>
+[31 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
+<bilder/tor-bar-chart-logfile1vs2cs3.png, id=649, 777.231pt x 336.165pt>
 File: bilder/tor-bar-chart-logfile1vs2cs3.png Graphic file (type png)
 <use bilder/tor-bar-chart-logfile1vs2cs3.png>
 Package pdftex.def Info: bilder/tor-bar-chart-logfile1vs2cs3.png  used on input
  line 581.
 (pdftex.def)             Requested size: 777.22911pt x 336.16417pt.
- [35 <./bilder/tor-sqlite-table.png> <./bilder/tor-bar-chart-logfile1vs2cs3.png
+ [32 <./bilder/tor-sqlite-table.png> <./bilder/tor-bar-chart-logfile1vs2cs3.png
 >]
-<bilder/tor-registry-stacked-bar-chart.png, id=685, 698.391pt x 150.891pt>
+<bilder/tor-registry-stacked-bar-chart.png, id=658, 698.391pt x 150.891pt>
 File: bilder/tor-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/tor-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/tor-registry-stacked-bar-chart.png  used on inp
 ut line 637.
 (pdftex.def)             Requested size: 698.3893pt x 150.89063pt.
- [36 <./bilder/tor-registry-stacked-bar-chart.png>]
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=693, 660.96938pt x 32.37094pt>
+ [33 <./bilder/tor-registry-stacked-bar-chart.png>]
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=666, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
 t line 671.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
-<bilder/cfv_tor_autopsy_web_cookies.png, id=694, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=667, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
 line 687.
 (pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
-<bilder/cfv_tor_autopsy_web_history.png, id=695, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=668, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
 line 703.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
-<bilder/cfv_tor_autopsy_web_categories.png, id=696, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=669, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
 ut line 723.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
- [37 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web
+ [34 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web
 _cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
-<bilder/volatility/tor/keywords.png, id=709, 1533.657pt x 713.721pt>
+<bilder/volatility/tor/keywords.png, id=682, 1533.657pt x 713.721pt>
 File: bilder/volatility/tor/keywords.png Graphic file (type png)
 <use bilder/volatility/tor/keywords.png>
 Package pdftex.def Info: bilder/volatility/tor/keywords.png  used on input line
@@ -2702,7 +2709,7 @@ Package pdftex.def Info: bilder/volatility/tor/keywords.png  used on input line
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/url.png, id=710, 1539.789pt x 751.608pt>
+<bilder/volatility/tor/url.png, id=683, 1539.789pt x 751.608pt>
 File: bilder/volatility/tor/url.png Graphic file (type png)
 <use bilder/volatility/tor/url.png>
 Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 793.
@@ -2711,7 +2718,7 @@ Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 793.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/mail.png, id=711, 1473.87pt x 952.869pt>
+<bilder/volatility/tor/mail.png, id=684, 1473.87pt x 952.869pt>
 File: bilder/volatility/tor/mail.png Graphic file (type png)
 <use bilder/volatility/tor/mail.png>
 Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 808
@@ -2720,8 +2727,8 @@ Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 808
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38 <./bilder/cfv_tor_autopsy_web_categories.png>]
-<bilder/volatility/tor/image.png, id=719, 1473.87pt x 242.652pt>
+[35 <./bilder/cfv_tor_autopsy_web_categories.png>]
+<bilder/volatility/tor/image.png, id=693, 1473.87pt x 242.652pt>
 File: bilder/volatility/tor/image.png Graphic file (type png)
 <use bilder/volatility/tor/image.png>
 Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 82
@@ -2731,21 +2738,18 @@ Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 82
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/summary.png, id=720, 1537.38pt x 628.092pt>
+<bilder/volatility/tor/summary.png, id=694, 1537.38pt x 628.092pt>
 File: bilder/volatility/tor/summary.png Graphic file (type png)
 <use bilder/volatility/tor/summary.png>
 Package pdftex.def Info: bilder/volatility/tor/summary.png  used on input line 
 838.
 (pdftex.def)             Requested size: 1537.37627pt x 628.09045pt.
-[39 <./bilder/volatility/tor/keywords.png> <./bilder/volatility/tor/url.png>]
+[36 <./bilder/volatility/tor/keywords.png> <./bilder/volatility/tor/url.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Excluding 'comment' comment. [40 <./bilder/volatility/tor/mail.png> <./bilder/v
+Excluding 'comment' comment. [37 <./bilder/volatility/tor/mail.png> <./bilder/v
 olatility/tor/image.png>]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 972.
-
 Underfull \hbox (badness 10000) in paragraph at lines 972--976
 \T1/lmss/m/n/10.95 (+20) Auch wur-den noch \T1/lmss/m/sl/10.95 (+20) 000003.log
 \T1/lmss/m/n/10.95 (+20) -Dateien ge-schrie-ben. Die-se sind Teil ei-nes LevelD
@@ -2758,7 +2762,7 @@ Underfull \hbox (badness 1308) in paragraph at lines 972--976
 hi-fe von HxD und ei-ner Ana-ly-se mit-tels ei-nes selbst
  []
 
-[41 <./bilder/volatility/tor/summary.png>] [42] [43] [44{C:/Users/sell/AppData/
+[38 <./bilder/volatility/tor/summary.png>] [39] [40] [41{C:/Users/sell/AppData/
 Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
 Excluding 'comment' comment.
 Underfull \hbox (badness 10000) in paragraph at lines 1110--1125
@@ -2770,12 +2774,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1110--1125
 
  []
 
-[45]) [46]
+[42]) [43]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
  (kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [47
+) [44
 
 
 
@@ -2785,7 +2789,7 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-) [48
+) [45
 
 
 
@@ -2795,7 +2799,7 @@ chapter 7.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [49
+) [46
 
 
 
@@ -2803,26 +2807,26 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [50
+ (kapitel/09_Anhang.tex [47
 
 
 
 
 
 ]
-<bilder/firefox-all-write-operations.png, id=828, 520.94624pt x 1173.63469pt>
+<bilder/firefox-all-write-operations.png, id=802, 520.94624pt x 1173.63469pt>
 File: bilder/firefox-all-write-operations.png Graphic file (type png)
 <use bilder/firefox-all-write-operations.png>
 Package pdftex.def Info: bilder/firefox-all-write-operations.png  used on input
  line 17.
 (pdftex.def)             Requested size: 520.94498pt x 1173.63184pt.
-<bilder/tor-all-write-operations.png, id=829, 489.32813pt x 1149.5447pt>
+<bilder/tor-all-write-operations.png, id=803, 489.32813pt x 1149.5447pt>
 File: bilder/tor-all-write-operations.png Graphic file (type png)
 <use bilder/tor-all-write-operations.png>
 Package pdftex.def Info: bilder/tor-all-write-operations.png  used on input lin
 e 25.
 (pdftex.def)             Requested size: 489.32692pt x 1149.54189pt.
- [51 <./bilder/firefox-all-write-operations.png>]) [52 <./bilder/tor-all-write-
+ [48 <./bilder/firefox-all-write-operations.png>]) [49 <./bilder/tor-all-write-
 operations.png>]
 chapter without number
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15
@@ -2851,12 +2855,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [53
+ [50
 
 
 
 ]
-[54] [55] (main.aux (kapitel/01_Einführung.aux)
+[51] [52] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -2871,11 +2875,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51195 strings out of 476315
- 1192302 string characters out of 5787669
+ 51185 strings out of 476315
+ 1192186 string characters out of 5787669
  2236844 words of memory out of 5000000
- 70319 multiletter control sequences out of 15000+600000
- 630496 words of font info for 232 fonts, out of 8000000 for 9000
+ 70316 multiletter control sequences out of 15000+600000
+ 630422 words of font info for 230 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,21n,106p,10901b,2459s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pf
@@ -2885,9 +2889,9 @@ b><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb
 ><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb
 ><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
 
-Output written on main.pdf (57 pages, 3166337 bytes).
+Output written on main.pdf (54 pages, 3151086 bytes).
 PDF statistics:
- 1019 PDF objects out of 1200 (max. 8388607)
- 186 named destinations out of 1000 (max. 500000)
+ 992 PDF objects out of 1000 (max. 8388607)
+ 183 named destinations out of 1000 (max. 500000)
  60570 words of extra memory for PDF output out of 61914 (max. 10000000)
 
