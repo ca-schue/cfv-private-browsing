@@ -1,101 +1,62 @@
 \chapter{Einleitung}
+Webbrowser speichern Informationen wie den Verlauf von besuchten Websites, Suchbegriffe, Passwörter, Cookies und andere Nutzeraktivitäten. 
+Um die Privatsphäre von Benutzern zu schützen, wurde der sogenannte \textit{private Modus} für Browser entwickelt.
+Bei den meisten Browsern ist dieser Schutz auf den lokalen Rechner beschränkt. \cite{Rochmadi.2017} Um die Privatsphäre im gesamten Internet zu schützen werden zusätzliche Maßnahmen, wie beispielsweise VPNs empfohlen. \cite{Perdices.2023}
+%Trotzdem wurde im Jahr 2016 die Verwendung eines privaten Browsing-Fensters als die weltweit beliebteste Form der Online-Datenschutzmaßnahme festgestellt [1].
 
-Steigende Beliebtheit private Browsing: \cite{Horsman.2019}
-	•	Die Verwendung von PB wurde als die beliebteste Form der Online-Privatsphäre weltweit identifiziert.
-	•	Aufgrund der gestiegenen Sensibilität und Öffentlichkeit für den Schutz der Privatsphäre und die Regulierung des eigenen digitalen Fußabdrucks im Internet werden PB-Technologien wahrscheinlich häufiger auf den Geräten der Nutzer eingesetzt. 
-	•	Auch wenn es schwierig ist, endgültige Nutzungsstatistiken für solche Aktionen zu erstellen, bietet der Konsens über den Online-Datenschutz einen Einblick. Im Jahr 2016 wurde die Verwendung eines PB-Fensters als die weltweit beliebteste Form der Online-Datenschutzmaßnahme identifiziert [1]. Allein in den USA nutzen Berichten zufolge rund 33 \% der Nutzer ein PB-Fenster, wobei über 70 \% zugeben, ihren Internetverlauf zu löschen [2].
-	- Eine umfassende Studie von Montasari und Peltola (2015) ergab, dass der Erfolg des privaten Modus bei verschiedenen Browsern sehr unterschiedlich ist 
+Es gibt unterschiedliche Nutzermodelle für private Browsing-Modi. Einersets verwenden Privatpersonen diese Technologien, um ihre Privatsphäre zu schützen und ihren lokalen digitalen Fußabdruck im Internet zu regulieren \cite{Horsman.2019}. Darüber hinaus nutzen einige Personen private Browsing-Modi, um persönliche Informationen vor Betrügern im Internet zu schützen oder spezifische Websites, wie beispielsweise Erwachsenen- oder Geschenk-Websites, diskret zu besuchen \cite{Aggarwal.2010}. Auf der anderen Seite nutzen kriminelle Nutzer private Browsing-Modi, um Online-Straftaten zu verschleiern und digitale Beweise in kriminellen Fällen zu minimieren oder zu verhindern \cite{Montasari.2015, Rochmadi.2017}. Des Weiteren gibt es staatlich unterdrückte Nutzer, wie beispielsweise Journalisten in autokratischen Staaten, die private Browsing-Modi nutzen, um ihre freie Meinungsäußerung ohne Repressionen zu ermöglichen \cite{Rathod.2017}. Jedes dieser Nutzermodelle hat seine eigenen Motivationen und Gegenspieler.
 
+Entwickler von privaten Browsing-Modi stehen deshalb vor einem Dilemma, da sie entscheiden müssen, wer zu welchem Grad geschützt werden soll. Beispielsweise strebt der Tor-Browser an, Menschenrechte und Freiheiten zu fördern. % https://www.torproject.org/de/download/
+Jedoch erschweren seine Funktionalitäten forensische Ermittlungen bei Ermittlungen zu kriminellen Nutzern \cite{Muir.2019, Rathod.2017}.
 
-Vermeintliche Privatheim beim Browsen: \cite{Perdices.2023}
-	> Verschlüsselung
-		•	Datenschutz und Datenverwendung sind Hauptbedenken der Internetnutzer geworden [5].
-		•	Fragen wie welche Daten von Unternehmen genutzt werden, mit wem sie geteilt werden und wie wertvoll sie sind, sind heute wichtige Themen.
-		•	Daher versuchen Benutzer, sich so weit wie möglich zu schützen, insbesondere durch Begrenzung der Datenweitergabe.
-		•	Lösungen wie Verschlüsselung auf HTTP-Ebene [6] und auf DNS-Ebene [7,8] sind Standard geworden und werden den Großteil des Datenverkehrs in den nächsten Jahren abdecken.
-		•	Sie können jedoch nur End-to-End-Konversationen verschlüsseln, d.h. IP- und TCP- oder UDP-Informationen sind immer noch verfügbar.
-	> VPNs
-		•	Eine weitere beliebte Methode zum Schutz der Privatsphäre und zur Vermeidung von Datenverwendung ist die Verwendung von Virtual Private Networks (VPNs).
-		•	Obwohl VPNs immer beliebter geworden sind und die meisten von ihnen den IP-Verkehr verschlüsseln und tunneln können, kann der Datenverkehr tatsächlich am Endpunkt des VPNs überwacht werden.
-		•	Dies bedeutet, dass Akteure zwischen dem VPN-Servernetzwerk und dem Website-Server die Daten sehen und nutzen können.
-		•	Der VPN-Anbieter kann sogar noch weiter gehen, da er auch die Identität des Clients kennt.
-	> Tor und Brave:
-		1.	Die Endpunkte der verschlüsselten Verbindungen, die von Tor und Brave hergestellt werden, nicht vollständig verschlüsselt sind. Daher können einige Informationen, wie z.B. die IP-Adresse des Benutzers, an den letzten Servern in der Kette sichtbar sein.
-		2.	Einige Tor-Ausgangsknoten haben in der Vergangenheit die Aktivität ihrer Benutzer ausspioniert, um Daten zu sammeln und möglicherweise zu verkaufen.
-		3.	Obwohl die Verwendung von Brave und Tor dazu beitragen kann, dass Benutzer online nicht nachverfolgt werden, werden sie nicht vor Verfolgung durch andere Methoden wie Standortverfolgung oder Geräte-Fingerprinting geschützt.
-		4.	Schließlich können auch andere Schwachstellen in der Implementierung oder Konfiguration von Tor oder Brave dazu führen, dass Daten durchsickern und somit die Privatsphäre der Benutzer kompromittiert wird.
-		
-	
-	
-	
+Unabhängig davon, wer private Browsing-Modi nutzt, haben alle Stakeholder Interesse daran, ob und welche Spuren hinterlassen werden. In der Literatur werden stets neue Schwachstellen identifiziert, durch die private Browsing-Daten "lecken" \cite{Satvat.2014}.
+Der Umfang dieser Seminararbeit umfasst eine Untersuchung der privaten Browsing-Modi von vier Webbrowsern: Mozilla Firefox, Tor-Browser, Google Chrome und Brave \cite{Montasari.2015}. Es wird untersucht, ob und welche Spuren von diesen Browsern in ihren privaten Modi auf den lokalen Rechnern hinterlassen werden.
 
-Immer mehr Kriminelle im Internet \cite{Mahlous.2020}:
-	> Das Internet und seine Nutzer wachsen ständig, aber auch die Anzahl organisierter Verbrechen und illegale Aktivitäten nehmen zu.
-
-“Webbrowser immer beliebter bla bla …“ \cite{Izzati.2022}
-	> Webbrowser sind heutzutage ein wichtiger Werkzeug für Online-Aktivitäten wie Online-Banking, Online-Shopping und soziale Netzwerke.
-
-Immer mehr Internet-Nuter:\cite{Izzati.2022}
-	•	Im Jahr 2019 gab es laut [13] fast 4,5 Milliarden Internetnutzer.
-
-Zunehmende Bestrebungen nach Privatheit erschwert forensische Ermittlungen \cite{Muir.2019}
-	> Zunehmende Verwendung von verschlüsselten Daten in der Dateispeicherung und Netzwerkkommunikation erschwert Ermittlungen.
-	> Besonders schwierig ist das Tor-Protokoll, das sich auf den Schutz der Privatsphäre des Nutzers konzentriert.
-	> Tor-Browser hinterlässt digitale Artefakte, die von Ermittlern genutzt werden können.
-
-
-Motivation Portable Browser \cite{Hariharan.2022}
-	•	Die Beliebtheit von tragbaren Webbrowsern nimmt aufgrund ihrer bequemen und kompakten Natur sowie des Vorteils, dass Daten einfach über einen USB-Stick gespeichert und übertragen werden können, zu.
-	•	Entwickler arbeiten an Webbrowsern, die tragbar sind und zusätzliche Sicherheitsfunktionen wie den privaten Modus-Browsing, eingebaute Werbeblocker usw. bieten.
-	•	Die erhöhte Wahrscheinlichkeit, tragbare Webbrowser für schädliche Aktivitäten zu nutzen, ist das Ergebnis von Cyberkriminellen, die der Ansicht sind, dass bei der Verwendung von tragbaren Webbrowsern im privaten Modus keine digitalen Fußabdrücke hinterlassen werden.
-	•	Das Forschungspapier zielt darauf ab, eine vergleichende Studie von vier tragbaren Webbrowsern, nämlich Brave, TOR, Vivaldi und Maxthon, zusammen mit verschiedenen Speichererfassungstools durchzuführen, um die Menge und Qualität der aus dem Speicherauszug wiederhergestellten Daten in zwei verschiedenen Bedingungen zu verstehen, nämlich wenn die Browser-Tabs geöffnet und geschlossen waren, um forensische Ermittler zu unterstützen.
-
-
-Private Browsing Motivation und Ausnutzen von Kriminellen: \cite{Montasari.2015}
-	•	Webbrowser werden täglich genutzt, um verschiedene Online-Aktivitäten durchzuführen.
-	•	Webbrowser speichern eine große Menge an Daten über Benutzeraktivitäten, einschließlich besuchter URLs, Suchbegriffen und Cookies.
-	•	Private Browsing-Modi wurden entwickelt, um Benutzern das Surfen im Internet zu ermöglichen, ohne Spuren zu hinterlassen.
-	•	Dies kann von Kriminellen ausgenutzt werden, um ihre Aktivitäten zu verschleiern.
-	•	Experimente werden auf jeder Browser-Modus durchgeführt, um zu untersuchen, ob sie Spuren auf der Festplatte oder im Arbeitsspeicher hinterlassen.
-
-
-Motivation Private Browsing mit Portablen Browsern: \cite{Ohana.2013}
-	•	Das Internet ist ein unverzichtbares Werkzeug für alltägliche Aufgaben.
-	•	Neben der üblichen Nutzung wünschen sich Benutzer die Möglichkeit, das Internet auf private Weise zu durchsuchen.
-	•	Dies kann zu einem Problem führen, wenn private Internetsitzungen vor Computerermittlern verborgen bleiben müssen, die Beweise benötigen.
-	•	Der Schwerpunkt dieser Forschung liegt darauf, verbleibende Artefakte aus privaten und portablen Browsing-Sitzungen zu entdecken.
-	•	Diese Artefakte müssen mehr als nur Dateifragmente enthalten und ausreichend sein, um eine positive Verbindung zwischen Benutzer und Sitzung herzustellen.
-	•	In den letzten 20 Jahren ist das Internet für alltägliche Aufgaben, die mit stationären und mobilen Computergeräten verbunden sind, drastisch unverzichtbar geworden.
-	•	Benutzer wünschen sich neben der üblichen Internetnutzung auch Privatsphäre und die Möglichkeit, das Internet auf private Weise zu durchsuchen.
-	•	Aus diesem Grund wurden neue Funktionen für das private Browsen entwickelt, die von allen gängigen Webbrowsern unterstützt werden.
-	•	Unsere Forschung konzentriert sich auf die Entdeckung von Informationen von lokalen Maschinen, da die meisten Computeruntersuchungen auf der Suche und Beschlagnahme von lokalen Speichergeräten beruhen.
-	•	Artefakte aus privaten und portablen Browsing-Sitzungen wie Benutzernamen, elektronische Kommunikation, Browsing-Verlauf, Bilder und Videos können für einen Computerermittler signifikante Beweise enthalten.
-	•	Wir werden auch flüchtige Daten analysieren, die in einer gängigen Incident-Response-Umgebung verfügbar wären.
-
-
-Schwachstellen in Browsern, durch die Daten “lecken” \cite{Satvat.2014}
-	•	Private browsing ist seit 2005 eine beliebte Datenschutzfunktion in allen gängigen Browsern.
-	•	Laut einer Studie (-> TODO: welche?) leiden alle Browser unter einer Vielzahl von Schwachstellen, von denen viele zuvor nicht bekannt waren.
-	•	Die Probleme werden hauptsächlich durch eine laxere Kontrolle von Berechtigungen, inkonsistente Implementierungen der zugrunde liegenden SQLite-Datenbank, die Vernachlässigung von Cross-Mode-Interferenzen und eine fehlende Beachtung von Timing-Angriffen verursacht.
-	•	Alle Angriffe wurden experimentell verifiziert und Gegenmaßnahmen vorgeschlagen.
-
-
-Private Browsing Motivation und Ausnutzen von Kriminellen \cite{Rochmadi.2017}
-	•	Fast alle Aspekte des Lebens nutzen bereits das Internet, um auf das Internet zugreifen zu können, wird ein Webbrowser verwendet.
-	•	Die Einführung des Internets hat das Leben der Menschen in vielen Bereichen verändert, darunter auch im Bereich der Kriminalität, insbesondere in der Verwendung von Webbrowser-Software für Transaktionen und Prozesse im Internet.
-	•	Webbrowser speichern normalerweise Informationen wie URL-Verlauf, Suchbegriffe, Passwörter und andere Nutzeraktivitäten.
-	•	Aus Sicherheitsgründen wurden einige Funktionen von Webbrowsern entwickelt, um den privaten Modus zu ermöglichen.
-	•	Leider wird diese Funktion von einigen skrupellosen Menschen für kriminelle Aktivitäten durch die Anti-Forensik genutzt, um digitale Beweise in kriminellen Fällen zu minimieren oder zu verhindern.
-
-
-Auswirkung von Darknet und Tor auf Forensiker \cite{Rathod.2017}
-	•	Personen, die Inhalte aus dem Darknet abrufen möchten, müssen nicht nur in einem regulären Browser Schlüsselwörter eingeben, sondern müssen es anonym über den TOR-Browser zugreifen, um ihre Identität wie IP-Adresse oder physische Lage zu verbergen.
-	•	Aufgrund dieser Tatsachen ist es für Strafverfolgungsbehörden oder digitale forensische Experten schwierig, den Ursprung des Datenverkehrs, den Standort oder die Eigentümerschaft eines Computers oder einer Person im Darknet zu lokalisieren.
-	•	Die Auswirkungen des Darknets traten auf, als das Federal Bureau of Investigation (FBI) im Oktober 2013 die Website Silk Road abschaltete, die ein Online-Schwarzmarkt und der erste moderne Darknet-Markt für den Verkauf illegaler Drogen war.
-	•	Silk Road war nur über das TOR-Netzwerk zugänglich und vom Mainstream-Web verborgen.
-	•	Da die meisten Darknet-Sites Transaktionen über anonyme digitale Währungen wie Bitcoin durchführen, die auf kryptografischen Prinzipien basieren, ist es für digitale forensische Experten sehr schwierig, solche Transaktionen zu verfolgen, da Benutzer und Dienste anonym sind.
-	•	Das Ziel dieser Arbeit besteht darin, digitale forensische Techniken zu diskutieren, um solche Darknet-Verbrechen zu behandeln.
-
+%Immer mehr Web-Browser Nutzer:\cite{Izzati.2022}
+%	•	Im Jahr 2019 gab es laut [13] fast 4,5 Milliarden Internetnutzer.
+%	•	Webbrowser werden täglich genutzt, um verschiedene Online-Aktivitäten durchzuführen. \cite{Montasari.2015}
+%Defintion Private Browsing:
+%	•	Webbrowser speichern normalerweise Informationen wie URL-Verlauf, Suchbegriffe, Passwörter, Cookies und andere Nutzeraktivitäten. \cite{Rochmadi.2017}
+%	•	Aus Sicherheitsgründen wurden einige Funktionen von Webbrowsern entwickelt, um den privaten Modus zu ermöglichen. \cite{Rochmadi.2017}
+%	•	Private Browsing-Modi wurden entwickelt, um Benutzern das Surfen im Internet zu ermöglichen, ohne Spuren zu hinterlassen. \cite{Montasari.2015}
+%	- Ziel des privaten Modus = Schutz der Privatsphäre des Nutzers !!!!
+%Steigende Beliebtheit private Browsing: \cite{Horsman.2019}
+%	•	Die Verwendung von PB wurde als die beliebteste Form der Online-Privatsphäre weltweit identifiziert.
+%	•	Im Jahr 2016 wurde die Verwendung eines PB-Fensters als die weltweit beliebteste Form der Online-Datenschutzmaßnahme identifiziert [1]. Allein in den USA nutzen Berichten zufolge rund 33 \% der Nutzer ein PB-Fenster, wobei über 70 \% zugeben, ihren Internetverlauf zu löschen [2].
+%
+%Unterschiedliche Nutzermodelle:
+%1) "Normale Nutzung": Es gibt einige Statistiken zur Nutzung des privaten Modus in Browsern
+%	> Nutzer: Privatpersonen
+%	> Motivation:
+%		- Sensibilität und Öffentlichkeit für den Schutz der Privatsphäre und die Regulierung des eigenen digitalen Fußabdrucks im Internet werden PB-Technologien wahrscheinlich häufiger auf den Geräten der Nutzer eingesetzt. \cite{Horsman.2019}
+%		- Schutz persönlicher Informationen vor Betrügern im Internet % https://www.statista.com/statistics/1384224/uk-reasons-private-browsing/
+%		- Besuch von Erwachsenen- und Geschenk-Websites (\cite{Aggarwal.2010})
+%	> Gegenspieler: Kriminelle/andere Privatpersonen
+%2) "kriminelle Nutzer" => Private Browsing als Anti-Forensik (von öffentlichen Umfragen nicht erfasst) 
+%	> Nutzer: Kriminelle
+%	> Motivation: 
+%		- Verschleiern von Online-Straftaten \cite{Montasari.2015}
+%		- digitale Beweise in kriminellen Fällen zu minimieren oder zu verhindern. \cite{Rochmadi.2017}
+%	> Gegenspieler = Stafverfolgungsbehörden, Forensiker
+%3) "Staatlich unterdrückte Nutzer"
+%	> Nutzer: z.B. unterdrückte Journalisten in autokratischen Staaten
+%	> Motivation:
+%		- freie Meinungsäußerung ohne Repressionen 	
+%		- Nutzung als demokratisches Mittel
+%	> Gegenspieler = Staatliche Institutionen
+%==> Entwickler von PB Modi stehen vor einem Dilemma: Wer wird geschützt?	
+%- Z.B. 
+%	> Einerseits möchte Tor-Browser Menschenrechte und Freiheiten Schützen: 
+%	"Menschenrechte und Freiheiten durch die Entwicklung und Verbreitung von Open Source Anonymitäts- und Privatsphäre-Technologien zu fördern, ihre ungehinderte Verfügbarkeit zu unterstützen und ihr Verständnis in Wissenschaft und der Allgemeinheit zu vergrößern."
+%	% https://www.torproject.org/de/download/
+%	> Erschwert jedoch forensische Ermittlungen bei kriminellen Nutzern \cite{Muir.2019} \cite{Rathod.2017}
+%
+%Unabhängig davon wer PB Nutzt: Alle Stakeholder haben Interesse daran, ob und welche PB hinterlassen werden.
+%	•	In Literatur immer wieder Schwachstellen identifiziert, durch die private Browsingdaten “lecken” von denen viele zuvor nicht bekannt waren. \cite{Satvat.2014}
+%	•	Schwachstellen stets schnell von Browser-Entwicklern geschlossen \cite{Satvat.2014}
+%
+%Umfang dieser Arbeit:
+%	•	Versuch für vier Webbrowser Mozilla Firefox, Tor-Browser, Google Chrome und Brave durchgeführt, um zu untersuchen, ob ihre privaten Modi Spuren auf dem lokalen Rechner hinterlassen. \cite{Montasari.2015}
 
 
 
