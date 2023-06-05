@@ -1,9 +1,7 @@
 \chapter{Methodik}
 \label{chapter:methodik}
-In der Browserforensik ist eine definierte Methodik notwendig, um die Komplexität moderner Browser zu bewältigen. Sie bildet bildet eine wissenschaftliche Basis für den durchgeführten Versuch sowie einen Leitfaden für Ermittler bei zukünftigen Untersuchungen. \cite{Aggarwal.2010, Izzati.2022, Horsman.2019}	
+In der Browserforensik ist eine definierte Methodik notwendig, um die Komplexität moderner Browser zu bewältigen. Sie bildet die wissenschaftliche Basis für den durchgeführten Versuch sowie einen Leitfaden für Ermittler bei zukünftigen Untersuchungen. \cite{Aggarwal.2010, Izzati.2022, Horsman.2019}	
 Ein oft verwendetes Vorgehensmodell in der Computer Forensik ist das \textit{Generic Model Computer Forensics Investigations}, kurz \textit{GCFIM}. \cite{Yusoff.2011}
-%Ähnlich zum ``abschnittsbasierter Verlauf einer forensischen Untersuchung`` des Bundesamt für Sicherheit in der Informationstechnik ist es in Phasen mit definierten Abläufen gegliedert.
-% https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Cyber-Sicherheit/Themen/Leitfaden_IT-Forensik.pdf?__blob=publicationFile&v=2
 
 Izzati et al. haben diese Phasen auf die Browserforensik abgebildet: \cite{Izzati.2022}
 \begin{itemize}
@@ -13,7 +11,7 @@ Izzati et al. haben diese Phasen auf die Browserforensik abgebildet: \cite{Izzat
 	\item Dokumentation: Vorgehensweise und gefundene Artefakte dokumentieren.
 \end{itemize}
 
-Die Dokumentationsphase entspricht in dieser Arbeit dem Kapitel ``Vergleich der Browser`` \ref{chapter:vergleich-der-browser}. Die Methodik der anderen Phasen wird nachfolgend beschrieben.
+Die Dokumentationsphase entspricht in dieser Arbeit dem Kapitel \ref{chapter:vergleich-der-browser}, ``Vergleich der Browser``. Die Methodik der anderen Phasen wird nachfolgend beschrieben.
 
 \section{Vorbereitung}
 \label{section:methodik-vorbereitung}
@@ -21,7 +19,7 @@ In der Vorbereitungsphase wird der durchgeführte Versuch geplant sowie die Vers
 
 \subsection{Browserauswahl}
 \label{section:methodik-vorbereitung-browserauswahl}
-Für diese Arbeit wurde sich dazu entschieden die zwei weit verbreiteten Brower \textit{Google Chrome} und \textit{Mozilla Firefox} zu untersuchen.
+Für diese Arbeit wurde sich dazu entschieden, die zwei weit verbreiteten Brower \textit{Google Chrome} und \textit{Mozilla Firefox} zu untersuchen.
 Weiterhin werden zwei Browser mit verstärkem Schutz der Privatsphäre ausgewählt.
 Basierend auf Chromium wird der Browser \textit{Brave} gewählt.
 Für Firefox wird der \textit{Tor-Browser} gewählt, eine modifizierte Version von Firefox.
@@ -31,22 +29,19 @@ Für Firefox wird der \textit{Tor-Browser} gewählt, eine modifizierte Version v
 Der Browser Mozilla Firefox, kurz \textit{Firefox}, ist ein open-source Webbrowser der gemeinnützigen Organisation Mozilla. 
 Firefox hat die Funktion des \textit{privaten Modus}. Diese ermöglicht es, ohne Speicherung von Verlaufsdaten und Cookies zu im Internet zu Browsen.
 Laut Firefox wird mit dem privaten Modus vor dem lokalen Angreifer geschützt, wie er in Kapitel X (TODO!) definiert ist, jedoch nicht vor dem Webangreifer.
-Es wird ausdrücklich darauf hingewiesen, dass die besuchten Webseiten und Internetanbieter (ISP) weiterhin anhand der IP-Adresse Informationen sammeln können.
-% https://www.mozilla.org/de/firefox/
-% https://www.mozilla.org/de/about/history/
-
+Es wird ausdrücklich darauf hingewiesen, dass die besuchten Webseiten und Internetanbieter (ISP) weiterhin anhand der IP-Adresse Informationen sammeln können. \cite{Mozilla.05.06.2023}
 % Für diesen Versuch: Firefox Version 112.0.2 (64 Bit)
 
 \subsubsection*{Tor}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-tor}
-Der \textit{Tor Browser}, ist ein auf Firefox basierender Webbrowser, der das Tor-Netzwerk nutzt.
-Im Gegensatz zu Firefox wird hier mit Schutzmaßnahmen gegen den Webangreifer geworben.
+Der \textit{Tor Browser}, hier auch nur \textit{Tor} genannt, ist ein auf Firefox basierender Webbrowser, der das Tor-Netzwerk nutzt.
+Im Gegensatz zu Firefox wird mit Schutzmaßnahmen gegen den Webangreifer geworben.
 Der Schutz vor dem Webangreifer ist durch das Tor-Netzwerk gegeben.
-Der Tor Browser wirbt mit verstärkten Schutzmaßnahmen gegen den lokalen Angreifer.
+Der Tor Browser wirbt mit verstärkten Schutzmaßnahmen gegen den lokalen Angreifer. \cite{Tor.24.05.2023}
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-new-identity.png}}
-	\label{img:tor-new-identity}
 	\caption{Funktion ``Neue Identität`` des Tor-Browsers}
+	\label{img:tor-new-identity}
 \end{figure}
 Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion ``\textit{Neue Identität}`` ermöglicht es, alle aktuellen Tabs und Fenster zu schließen, sämtliche private Informationen wie Cookies und Verlauf zu löschen sowie die Verbindung mit dem Tor-Netzwerk neu zu konfigurieren.
 %Für diesen Versuch: Tor Version 12.0.4 (64 Bit)
@@ -59,14 +54,12 @@ Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion ``\textit{Neue Ide
 
 \subsection{Browsing Szenario}
 \label{subsection:methodik-vorbereitung-browsing-szenario}
-%*** TODO: Edge vorinstalliert erwähnen ***
-% > Image als Hex: \cite{Ohana.2013}
-Im Falle der Browser-Forensik werden eine Reihe von Aktivitäten definiert, die für jeden zu untersuchenden Browser durchgeführt werden, das sogenannte \textit{Browsing Szenario}.
-Mit diesem Protokoll wird definiert, mit welchen Daten der Rechner kontaminiert werden soll.
+Im Falle der transparenten Versuchsdurchführung der Browser-Forensik werden eine Reihe von Aktivitäten definiert, die für jeden untersuchten Browser durchgeführt werden -- das sogenannte \textit{Browsing Szenario}.
+In diesem Protokoll wird definiert, mit welchen Daten der Rechner kontaminiert werden soll.
 
 Für diesen Versuch wurden ausschließlich Daten definiert, die nicht bereits vor Durchführung des Browsing-Szenarios auf dem Rechner zu finden sind. Beispielsweise sind die Zeichenketten ``twitter`` oder ``facebook`` bereits in vielen Windows-Standardanwendungen enthalten.
 
-Folgende Schritte werden für diesen Versuch in jedem Browser durchgeführt: 
+Folgende Schritte werden für diesen Versuch mit jedem Browser durchgeführt: 
 \begin{enumerate}
 \item  www.google.com aufrufen
 	\begin{enumerate}[label*=\arabic*.]
@@ -100,7 +93,7 @@ Folgende Schritte werden für diesen Versuch in jedem Browser durchgeführt:
 	\item Mit google Account anmelden: 
 			\begin{enumerate}[label*=\arabic*.]
 			\item E-Mail = ``computerforensikvl@gmail.com``
-			\item Passwort = ``Vorlesung23!``
+			\item Passwort = ``Vorlesung23! ``
 			\end{enumerate}
 	\item Neue E-Mail schreiben:
 			\begin{enumerate}[label*=\arabic*.]
@@ -111,12 +104,12 @@ Folgende Schritte werden für diesen Versuch in jedem Browser durchgeführt:
 	\end{enumerate}
 \end{enumerate}
 
-Aus diesem Browsing-Szenario lassen sich die in Tabelle \ref{tab:pb-artefakte} dargestellten \textit{private Browsing Artefakte}, kurz \textit{PB Artefakte} ableiten. Dabei handelt es sich dabei um Zeichenketten, die eindeutig einem Schritt im Browsing-Szenario zugeordnet werden können. Diese sind von zentraler Bedeutung in der Analysephase: Nur nach diesen Strings wird gesucht.
+Aus diesem Browsing-Szenario lassen sich die in Tabelle \ref{tab:pb-artefakte} dargestellten \textit{private Browsing Artefakte}, kurz \textit{PB Artefakte} ableiten. Dabei handelt es sich um Zeichenketten, die eindeutig einem Schritt im Browsing-Szenario zugeordnet werden können. Diese sind von zentraler Bedeutung in der Analysephase: Nur nach diesen Strings wird gesucht.
 
 \begin{table}[h!]
 \centering
-\label{tab:pb-artefakte}
 \caption{Private Browsing Artefakte des Browsing-Szenarions}
+\label{tab:pb-artefakte}
 \begin{tabular}{|c|l|c|}
 \hline
 \textbf{Kategorie}           & \multicolumn{1}{c|}{\textbf{Private Browsing Artefakt}}                                      & \textbf{\begin{tabular}[c]{@{}c@{}}Schritt im\\  Browsing Szenario\end{tabular}} \\ \hline
@@ -130,7 +123,7 @@ Aus diesem Browsing-Szenario lassen sich die in Tabelle \ref{tab:pb-artefakte} d
                              & ``donaukurier.de``                                                                             & 6.                                                                               \\ \hline
 Bild                         & \begin{tabular}[c]{@{}l@{}}0x89 0x50 0x4E 0x47 ...\\ (PNG als Hexadezimalwerte)\end{tabular} & 6.1                                                                              \\ \hline
 \multirow{4}{*}{E-Mail}      & ``computerforensikvl@gmail.com``                                                               & 7.1.1                                                                            \\ \cline{2-3} 
-                             & ``Vorlesung23!``                                                                               & 7.1.2                                                                            \\ \cline{2-3} 
+                             & ``Vorlesung23! ``                                                                               & 7.1.2                                                                            \\ \cline{2-3} 
                              & ``cas0597@thi.de``                                                                             & 7.2.1                                                                            \\ \cline{2-3} 
                              & ``chs3702@thi.de``                                                                             & 7.2.1                                                                            \\ \hline
 \end{tabular}
@@ -141,18 +134,16 @@ Bild                         & \begin{tabular}[c]{@{}l@{}}0x89 0x50 0x4E 0x47 ..
 \label{subsection:methodik-vorbereitung-vmkonfiguration}
 
 Eine empfohlene Herangehensweise bei Versuchen in Browser Forensik ist die Versuchsdurchführung in einer virtualisierter Umgebung. 
-Neben der daraus entstehenden Reproduzierbarkeit und Transportierbarkeit der Ergebnisse, werden die Versuchsumgebungen der einzelnen Browser voneinander sowie von der Analyseumgebung getrennt. (TODO: Quellen)
-Als Virtualisierungssoftware wird für Versuch die kostenlose Software  Oracle VirtualBox VM verwendet. Pro Browser existiert eine VM, auf der das Browsing Szenario durchgeführt wird. 
+Neben der daraus entstehenden Reproduzierbarkeit und Transportierbarkeit der Ergebnisse, werden die Versuchsumgebungen der einzelnen Browser voneinander sowie von der Analyseumgebung getrennt. \cite{Muir.2019}
+Als Virtualisierungssoftware wird für diesen Versuch die kostenlose Software \textit{Oracle VirtualBox VM} verwendet. Pro Browser existiert eine VM, auf der das Browsing Szenario durchgeführt wird. 
 
 Alle VMs besitzen die gleiche, in Tabelle \ref{tab:vm-config} dargestellte Basiskonfiguration:
-Zum Datenaustausch zwischen VM und Analyserechner wird ein \textit{gemeinsamer Order} eingerichtet. Somit werden beispielsweise ohne Kontaminierung der VM benötigte Programme auf Analyserechner heruntergeladen, in den gemeinsamen Ordner gelegt und offline auf der VM installiert.
-Auf der VM werden zwei Werkzeuge der Sysinternal-Abteilung von Microsoft installiert, um in der Analysephase das Browserverhalten vollständig  untersuchen zu können: \textit{Process Monitor} ermöglicht die Aufzeichnung aller Prozessaktivitäten und \textit{Process Explorer} erweitert die Funktionen des Windows Task Managers. 
-% https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
-% https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
+Zum Datenaustausch zwischen VM und Analyserechner wird ein \textit{gemeinsamer Order} eingerichtet. Somit werden beispielsweise ohne Kontaminierung der VM benötigte Programme auf dem Analyserechner heruntergeladen, in den gemeinsamen Ordner gelegt und offline auf der VM installiert.
+Auf der VM werden zwei Werkzeuge der Sysinternal-Abteilung von Microsoft installiert, um in der Analysephase das Browserverhalten vollständig  untersuchen zu können: \textit{Process Monitor} ermöglicht die Aufzeichnung aller Prozessaktivitäten und \textit{Process Explorer} erweitert die Funktionen des Windows Task Managers. \cite{Markruss.05.06.2023, Markruss.05.06.2023b}
 \begin{table}[h!]
 \centering
-\label{tab:vm-config}
 \caption{Basiskonfiguration jeder VM des Versuchs}
+\label{tab:vm-config}
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Betriebssystem}         & Windows 10 Pro, 64 Bit, Build: 19045.2006                                  \\ \hline
@@ -167,18 +158,18 @@ Nachdem eine VM mit der Standardkonfiguration erstellt wurde, wird diese für je
 \begin{enumerate}
 \item[\textbf{Firefox}] \texttt{C:$\backslash$Program Files$\backslash$Mozilla Firefox$\backslash$firefox.exe}
 \item[\textbf{Tor}] \texttt{C:$\backslash$Program Files$\backslash$Tor Browser$\backslash$Browser$\backslash$firefox.exe}
-\item[\textbf{Chrome}] ***TODO!***
-\item[\textbf{Brave}] ***TODO!***
+\item[\textbf{Chrome}] ***TODO Christoph***
+\item[\textbf{Brave}] ***TODO Christoph***
 \end{enumerate}
 
 \subsection*{Verwendete Software}
 \label{subsection:methodik-vorbereitung-verwendetesoftware}
-Neben der Konfiguration der VM muss die Analyseumgebung vorbereitet werden. Als Analyseumgebung dient für diesen Versuch der Rechner, auf dem die VM läuft. (Windows 10 Home, 64 Bit, Build 19045.2965)
+Neben der VM Konfiguration muss die Analyseumgebung vorbereitet werden. Als Analyseumgebung dient für diesen Versuch der Rechner, auf dem die VM läuft. (Windows 10 Home, 64 Bit, Build 19045.2965)
 Zur Analyse der Browser werden diverse Tools benötigt.
 
 \subsubsection*{Autopsy}
 \label{subsubsection:methodik-vorbereitung-verwendetesoftware-autopsy}
-Um erstellte Festplattenabbilder zu untersuchen wird das Tool \textit{Autopsy} verwendet. Dabei handelt es sich um ein open-source Tool, das auf der Sleuthkit-Bibliothek für die forensische Analyse von Dateisystemen basiert, diese mit zusätzlichen Funktionen erweitert und eine grafische Benutzeroberfläche für die forensische Analyse bietet.   
+Um erstellte Festplattenabbilder zu untersuchen wird das Tool \textit{Autopsy} verwendet. Dabei handelt es sich um ein open-source Tool, das auf der Sleuthkit-Bibliothek für die forensische Analyse von Dateisystemen basiert, diese mit zusätzlichen Funktionen erweitert und eine grafische Benutzeroberfläche für die forensische Analyse bietet. \cite{Autopsy.29.03.2023} 
 %Für diesen Versuch verwendet: Version 4.20.0
 
 \subsubsection*{Volatility}
@@ -186,13 +177,7 @@ Um erstellte Festplattenabbilder zu untersuchen wird das Tool \textit{Autopsy} v
 Um Abbilder des Arbeitsspeichers zu untersuchen wird das open-source Framework \textit{Volatility} verwendet, das speziell darauf ausgerichtet ist, Informationen und Artefakte aus dem physischen oder virtuellen Arbeitsspeicher eines Computers zu extrahieren.
 %Version: Volatility3, Version 2.4.1 (aktuellster Release)
 Für diesen Versuch wird \textit{Volatility3} verwendet, eine 2020 veröffentlichte vollständige Neuschreibung des Volatility Frameworks.
-%Behebt technische und Performanceprobleme der vorherigen Version.
-%Oft beworbender Vorteil von Volatility3: kein ``Profile`` mehr notwendig. Volatility3 erstellt Symboltabellen für Windows-Speicherabbilder basierend auf dem Speicherabbild selbst.
-%Dabei handelt es sich um ein Konfigurationseinstellung, welche die Speicherstruktur und die Verhaltensweisen des Betriebssystems definiert.
-	% https://volatility3.readthedocs.io/en/latest/vol2to3.html
-	% https://www.volatilityfoundation.org/
-	% https://github.com/volatilityfoundation/volatility3
-Volatility basiert auf Plugins, welche spezifische Funktionen und Analysen für verschiedene Aspekte des Systems bereitstellen. Für diesen Versuch werden folgende Plugins verwendet:
+Volatility basiert auf Plugins, welche spezifische Funktionen und Analysen für verschiedene Aspekte des Systems bereitstellen. \cite{GitHub.05.06.2023} Für diesen Versuch werden folgende Plugins verwendet:
 \begin{itemize}
 \item pslist	
 \item yarascan		
@@ -200,20 +185,20 @@ Volatility basiert auf Plugins, welche spezifische Funktionen und Analysen für 
 \item filescan
 \item svcscan
 \end{itemize}
-Die genaue Beschreibung der Plugins sowie deren Zusammenhang ist in Analysephase in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility} beschrieben.
+Die genaue Beschreibung der Plugins sowie deren Zusammenhang ist in der Analysephase in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility} beschrieben.
 
 \subsubsection*{Sonstige Tools}
 \label{subsubsection:methodik-vorbereitung-verwendetesoftware-sonstigetools}
-Tabelle \ref{tab:software-liste} listet zusammenfassend alle in diesem Versuch verwendeten Software-Programme, deren Zweck sowie Version auf.
-Darunter diverse zusätzliche unterstützende Tools, welche zur vollständigen Analyse benötigt werden.
+Tabelle \ref{tab:software-liste} listet zusammenfassend alle in diesem Versuch verwendeten Software-Programme, deren Verwendungszweck sowie Version auf.
+Darunter befinden sich diverse zusätzliche unterstützende Tools, welche zur vollständigen Analyse benötigt werden.
 \begin{table}[h!]
 \centering
-\label{tab:software-liste}
 \caption{Vollständige Liste der verwendeten Software dieses Versuchs.}
+\label{tab:software-liste}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|l|l|}
 \hline
-\multicolumn{1}{|c|}{\textbf{Software}} & \multicolumn{1}{c|}{\textbf{Zweck}}                                              & \multicolumn{1}{c|}{\textbf{Version}} \\ \hline
+\multicolumn{1}{|c|}{\textbf{Software}} & \multicolumn{1}{c|}{\textbf{Verwendungszweck}}                                              & \multicolumn{1}{c|}{\textbf{Version}} \\ \hline
 Oracle VirtualBox                       & Virtualisierung                                                                  & 7.0.8 r156879                         \\ \hline
 Windows 10 Pro                          & VM Betriebssystem                                                                & Build: 19045.2006                     \\ \hline
 Process Monitor                         & Aufzeichnung Prozessaktivitäten                                                  & 3.93                                  \\ \hline
@@ -236,7 +221,7 @@ dejsonlz4                               & Dekomprimierung von .jsonlz4-Dateien  
 
 \section{Datensammlung}
 \label{section:methodik-datensammlung}
-In der Phase der Datensammlung werden alle potenziellen Beweismittel identifiziert und in einem analysierbaren Format gesichert.\cite{Izzati.2022}
+In der Phase der Datensammlung werden alle potenziellen Beweismittel identifiziert und in einem forenisch analysierbaren Format gesichert \cite{Izzati.2022}.
 Für diesen Versuch umfasst dies die Durchführung des Browsing Szenarios sowie die Sammlung von Ressoucen, die potentielle private Browsing Artefakte enthalten.
 
 \subsection*{Process Monitor Logfiles}
@@ -248,24 +233,23 @@ Die PML-Dateien werden mithilfe des gemeinsamen Ordners auf den Analyserechner t
 \subsection*{Speicherabbilder}
 \label{subsection:methodik-datensammlung-speicherabbilder}
 Eine der Hauptaufgaben eines Computer-Forensischen-Ermittlers ist die Erstellung und Analyse von direkten Kopien der Speichermedien des untersuchten Rechners. \cite{Hassan.2019}
-Im Falle der Browser Forensik werden Abbilder der Festplatten und des Arbeitsspeicher erstellt und analysiert.
+Im Falle der Browserforensik werden Abbilder der Festplatten und des Arbeitsspeicher erstellt und analysiert.
 
 \paragraph*{Festplatten-Image}
-Da in diesem Versuch die Festplatten virtualisiert wurden, wird ein Abbild aus einem sogenannten \textit{VM-Snapshot} gewonnen, eine Momentaufnahme der virtuellen Maschine.  % https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html
+Da in diesem Versuch die Festplatten virtualisiert werden, wird ein Abbild aus einem sogenannten \textit{VM-Snapshot} gewonnen, eine Momentaufnahme der virtuellen Maschine. \cite{Oracle.2020} 
 VM-Snapshots können \textit{aufgetaut} werden, wodurch der Zeitpunkt der Momentaufnahme des Betriebssystems wiederhergestellt wird.
 Bei Oracle VirutalBox kann ein VM Snapshot über die grafische Oberfläche erstellt werden.
 Durch den Snapshot wird ein \textit{Virtual Disk Image}, eine VDI-Datei, im Snapshot-Ordner der VM erzeugt. Diese Laufwerksdatei enthält nur differentielle Daten zum vorherigen Snapshot.
-Um aus den differentiellen Daten ein vollständiges Festplatten-Image zu erzeugen muss ein \textit{vollständiger Klon} des Snapshots erstellt werden. Die VDI-Datei der geklonten VM entspricht einem vollständigem Abbild der Festplatte zum Zeitpunkt des durchgeführten Snapshots.
+Um aus den differentiellen Daten ein vollständiges Festplatten-Image zu erzeugen, muss ein \textit{vollständiger Klon} des Snapshots erstellt werden. Die VDI-Datei der geklonten VM entspricht einem vollständigem Abbild der Festplatte zum Zeitpunkt des durchgeführten Snapshots.
 
-Da Autopsy nicht das VDI-Format unterstützt, müssen die Laufwerksdateien der geklonten Snapshots in ein das generische Image-Format (.img) umgewandelt werden.
+Da Autopsy nicht das VDI-Format unterstützt, müssen die Laufwerksdateien der geklonten Snapshots in ein das generische \textit{Image}-Format (.img) umgewandelt werden.
 Durch Nutzung des VirtualBox Befehlszeilen-Tool \textit{vboxmanage} wird mit dem Befehl \texttt{vboxmanage clonehd <VDI\_File>.vdi <IMG\_File>.img --format raw} die VDI-Datei ein eine IMG-Datei umgewandelt.
 Um ein Festplatten-Image in Autopsy einzulesen, wird ein neuer \textit{Fall} (engl. Case) erstellt. Das Einlesen eines ca. 30 GB großen Festplatten-Images dauerte mit allen aktivierten Autopsy-Plugins zwischen 5 und 7 Stunden.
 
 \paragraph*{RAM-Dump}
-Ein \textit{RAM-Dump} erfasst den Zustand des Arbeitsspeichers, einschließlich der im Speicher befindlichen Daten, Programme und Prozesse zu einem bestimmten Zeitpunkt.
-% https://kollee.github.io/posts/memory-forensics-of-a-virtualbox-vm/
+Ein \textit{RAM-Dump} erfasst den Zustand des Arbeitsspeichers, einschließlich der im Speicher befindlichen Daten, Programme und Prozesse zu einem bestimmten Zeitpunkt \cite{TILT.25.03.2023}.
 VirtualBox empfiehlt, Abbilder des RAMs ebenfalls über das vboxmanage Befehlszeilen-Tool durchzuführen.
-Im Unterschied zu Festplatten-Images können RAM-Dumps nur im angeschalteten Zustand der virtellen Maschine mithilfe des Befehls \texttt{vboxmanage debugvm <VM Name> dumpvmcore --filename <RAM Dump Dateiname>.elf} durchgeführt werden. RAM-Dumps im .elf Format können direkt vom Analysetool Volatility eingelesen werden.		
+Im Unterschied zu Festplatten-Images können RAM-Dumps nur im angeschalteten Zustand der virtellen Maschine mithilfe des Befehls \texttt{vboxmanage debugvm <VM Name> dumpvmcore --filename <RAM Dump Dateiname>.elf} durchgeführt werden. RAM-Dumps im .elf Format können direkt vom Analysetool Volatility innerhalb weniger Minuten eingelesen werden.		
 
 \paragraph*{Zeitpunkte zur Datensammlung}
 Wichtig für die Qualität der Versuchsergebnisse sind die Zeitpunkte während des Browsing Szenarios zum Sammeln der Daten.
@@ -279,8 +263,8 @@ Dieses Problem haben Muir, Leimich und Buchanan erkannt und Zeitpunkte zur Daten
 	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-Latex.pdf_tex}}}
 \end{figure}
 
-Der erste RAM-Dump sowie der erste VM-Snapshot nach der Browser-Installation, vor Beginn des Browsing-Szenarios dienen als Baseline für die Analyse, da in diesen Speicherabbildern kein PB Artefakt gefunden werden darf.
-Nachdem der Private Modus im Browser geöffnet wird, bevor das Browsing Szenario beinnt wird die Aufnahme des ersten Process Monitor Logfiles gestartet. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf das private Browsing zurückzuführen sind, wird die Aufzeichnung erst nach dem erstmaligen Öffnen des Browsers im privaten Modus gestartet.
+Der erste RAM-Dump sowie der erste VM-Snapshot nach der Browser-Installation, vor Beginn des Browsing-Szenarios, dienen als Baseline für die Analyse, da in diesen Speicherabbildern kein PB Artefakt gefunden werden darf.
+Nachdem der private Modus im Browser geöffnet wird und bevor das Browsing Szenario beginnt, wird die Aufnahme des ersten Process Monitor Logfiles gestartet. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf das private Browsing zurückzuführen sind, wird die Aufzeichnung erst nach dem erstmaligen Öffnen des Browsers im privaten Modus gestartet.
 Nach Durchführung des Browsing-Szenarios, während der Browser noch geöffnet ist, wird die Aufnahme des ersten Process Monitor Logfiles gestoppt. Weiterhin wird ein zweiter RAM-Dump sowie VM-Snapshot erstellt. Anschließend wird das eine zweite Process Monitor Aufzeichnung gestartet. 
 Nachdem der Browser geschlossen wurde, wird die Aufzeichnung des zweiten Process Monitor Logfiles beendet. Somit enthält das zweite Logfile wird alle Prozessaktivitäten vom Schließen der Browsers. Zusätzlich wird ein dritter RAM-Dump sowie  VM-Snapshot erstellt. 
 Nach Herunterfahren der VM wird ein vierter VM-Snapshot erstellt, der für die für Post-Mortem Analyse relevant ist.
@@ -293,7 +277,6 @@ Dieses Vorgehen zur Datensammlung wird bei allen Browsern durchgeführt. Einzig 
 	\centering
 	\small
 	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-tor-Latex.pdf_tex}}}
-	\caption{Datensammlung Zeitpunkte Tor}
 	\label{fig:jes}
 \end{figure}
 
@@ -325,8 +308,8 @@ Um die gängigen Browserpfade und -dateien zu identifizieren, werden die in den 
 Dazu wird jedes Logfile mit dem Process Explorer eingelesen. Anschließend werden die Aktivitäten gefiltert.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/process-monitor-filter.png}}}
-	\label{img:procmon-writefile-filter}
 	\caption{Process Monitor Filter für Datei-Schreiboperationen}
+	\label{img:procmon-writefile-filter}
 \end{figure}
 Wie in Abbildung \ref{img:procmon-writefile-filter} dargestellt, werden dazu ausschließlich die Option ``File System Activity`` ausgewählt.
 Anschließend wird als Prozessname der Browserprozess gesetzt:
@@ -387,8 +370,8 @@ Dazu wird eine Stichwortsuche mit den in Tabelle \ref{tab:pb-artefakte} definier
 Autopsy bietet dazu die in Abbildung \ref{img:autopsy-keywordsuche} dargestellte Funktion zur Suche nach Strings, Teilstrings oder regulären Ausdrücken in Dateinamen und Dateiinhalten an.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.85\linewidth}{!}{\includegraphics{bilder/autopsy-search.png}}}
-	\label{img:autopsy-keywordsuche}
 	\caption{Autopsy Funktion zur Stichwortsuche}
+	\label{img:autopsy-keywordsuche}
 \end{figure}
 
 Zusätzlich kategorisiert Autopsy automatisch die Dateien eines Festplatten-Images. Für diesen Versuch sind folgende Dateikategorien von Interesse:
@@ -410,8 +393,8 @@ Wie beispielhaft in Abbildung \ref{img:textfile-ram-artifact} gezeigt, wird ein 
 	\subcaptionbox{String in Textdatei}{\includegraphics[width=0.30\textwidth]{bilder/ram-editor1.png}}%
 	\hfill
 	\subcaptionbox{String als Hexadezimalwert in RAM-Dump (geöffnet mit HxD)}{\includegraphics[width=0.65\textwidth]{bilder/ram-editor2.png}}%
-	\label{img:textfile-ram-artifact}  
 	\caption{Negativbeispiel für gefundenes RAM-Artefakt}
+	\label{img:textfile-ram-artifact}  
 \end{figure}
 
 Um einen im RAM gefundenen String einem Browserprozess zuordnen zu können, wird deshalb das forensiche Analysetool Volatility mit dem PlugIn \textit{Yarascan} verwendet.
@@ -445,22 +428,21 @@ Diese zählen sowohl zu den Common als auch Uncommon Locations und werden deshal
 Als Teil der Common Locations werden die Registry-Aktivitäten in den Process Monitor Logfiles analysiert.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/process-monitor-filter-registry.png}}}
-	\label{img:procmon-setvalue-filter}
 	\caption{Process Monitor Filter für Registry-Schreiboperationen}
+	\label{img:procmon-setvalue-filter}
 \end{figure}
 Wie in Abbildung \ref{img:procmon-setvalue-filter} gezeigt, wird zunächst die Logfile nach ``Registry Activity`` sowie Einträgen mit der Operation ``SetValue`` sowie dem Browser-Prozessnamen gefiltert.
 Als CSV Datei wird das Logfile in Excel weiter verarbeitet, indem Duplikate gelöscht werden und die geschriebenen Registry Keys browserspezifisch gruppiert werden.
 	
 \paragraph*{Uncommon Locations}
 Unter Betrachtung als Uncommon Location werden alle Registry Hives in jedem Festplatten-Image mit dem Registry Explorer untersucht.
-Dabei wird zwischen Hives zur Speicherung von Systemeinstellungen (System-Hives) und individuellen Benutzerkonfigurationen (User-Hives) unterschieden. Diese in Tabelle \ref{tab:windows-registry-hives} dargestellten Hives werden von Windows beim Start geladen und dienen Systemkomponenten und Anwendungen als Quelle für Einstellungen und Informationen.	
- % https://medium.com/@haircutfish/tryhackme-windows-forensics-1-task-3-accessing-registry-hives-offline-task-4-data-acquisition-b440f5be2a13
+Dabei wird zwischen Hives zur Speicherung von Systemeinstellungen (System-Hives) und individuellen Benutzerkonfigurationen (User-Hives) unterschieden. Diese in Tabelle \ref{tab:windows-registry-hives} dargestellten Hives werden von Windows beim Start geladen und dienen Systemkomponenten und Anwendungen als Quelle für Einstellungen und Informationen. \cite{Haircutfish.04.11.2022}
 Zur Analyse wird jeder Hive aus den Fesplatten-Images extrahiert und in eine Registry Explorer Sitzung geladen und eine Stringsuche nach PB Artefakten durchgeführt.
 
 \begin{table}[h!]
 \centering
-\label{tab:windows-registry-hives}
 \caption{Windows Registry Hives}
+\label{tab:windows-registry-hives}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{lllll}
 \cline{1-2}

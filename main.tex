@@ -105,6 +105,15 @@ automark,		% Lebende Kolumnentitel
 % Fußnote in Tabelle
 \usepackage{tablefootnote}
 
+% Codebeispiele
+\usepackage{minted}
+\usepackage{multicol} % added package
+
+\usepackage{chngcntr}
+
+% Trennung von texttt Sektionen
+\usepackage[htt]{hyphenat}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -159,7 +168,7 @@ automark,		% Lebende Kolumnentitel
 	
 	\include{kapitel/08_Fazit.tex}
 	
-	\include{kapitel/09_Anhang.tex}
+	\include{09_Anhang.tex}
 	
 	% Literatur anzeigen
 	\addcontentsline{toc}{chapter}{Literaturverzeichnis}

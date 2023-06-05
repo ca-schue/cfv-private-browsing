@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  5 JUN 2023 16:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  5 JUN 2023 20:31
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1378,14 +1378,204 @@ LaTeX Info: Redefining \addtolength on input line 81.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )))
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count475
+\FV@InFile=\read5
+\FV@TabBox=\box75
+\c@FancyVerbLine=\count476
+\FV@StepNumber=\count477
+\FV@OutFile=\write5
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+))
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2022/07/30 line numbers on paragraphs v5.0
+\linenopenalty=\count478
+\output=\toks46
+\linenoprevgraf=\count479
+\linenumbersep=\dimen296
+\linenumberwidth=\dimen297
+\c@linenumber=\count480
+\c@pagewiselinenumber=\count481
+\c@LN@truepage=\count482
+\c@internallinenumber=\count483
+\c@internallinenumbers=\count484
+\quotelinenumbersep=\dimen298
+\bframerule=\dimen299
+\bframesep=\dimen300
+\bframebox=\box76
+\linenoamsmath@ams@eqpen=\count485
+LaTeX Info: Redefining \\ on input line 3114.
+)
+\c@FV@TrueTabGroupLevel=\count486
+\c@FV@TrueTabCounter=\count487
+\FV@TabBox@Group=\box77
+\FV@TmpLength=\skip100
+\c@FV@HighlightLinesStart=\count488
+\c@FV@HighlightLinesStop=\count489
+\FV@LoopCount=\count490
+\FV@NCharsBox=\box78
+\FV@BreakIndent=\dimen301
+\FV@BreakIndentNChars=\count491
+\FV@BreakSymbolSepLeft=\dimen302
+\FV@BreakSymbolSepLeftNChars=\count492
+\FV@BreakSymbolSepRight=\dimen303
+\FV@BreakSymbolSepRightNChars=\count493
+\FV@BreakSymbolIndentLeft=\dimen304
+\FV@BreakSymbolIndentLeftNChars=\count494
+\FV@BreakSymbolIndentRight=\dimen305
+\FV@BreakSymbolIndentRightNChars=\count495
+\c@FancyVerbLineBreakLast=\count496
+\FV@LineBox=\box79
+\FV@LineIndentBox=\box80
+\c@FV@BreakBufferDepth=\count497
+\FV@LineWidth=\dimen306
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count498
+\decimalpart=\count499
+)
+Package: xstring 2021/07/21 v1.84 String manipulations (CT)
+) (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip101
+\fb@frw=\dimen307
+\fb@frh=\dimen308
+\FrameRule=\dimen309
+\FrameSep=\dimen310
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count500
+\float@exts=\toks47
+\float@box=\box81
+\@float@everytoks=\toks48
+\@floatcapt=\box82
+)
+\minted@appexistsfile=\read6
+\minted@bgbox=\box83
+\minted@code=\write6
+\c@minted@FancyVerbLineTemp=\count501
+\c@minted@pygmentizecounter=\count502
+\@float@every@listing=\toks49
+\c@listing=\count503
+)
+runsystem(if not exist _minted-main mkdir _minted-main)...executed.
+
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count504
+\mult@box=\box84
+\multicol@leftmargin=\dimen311
+\c@unbalance=\count505
+\c@collectmore=\count506
+\doublecol@number=\count507
+\multicoltolerance=\count508
+\multicolpretolerance=\count509
+\full@width=\dimen312
+\page@free=\dimen313
+\premulticols=\dimen314
+\postmulticols=\dimen315
+\multicolsep=\skip102
+\multicolbaselineskip=\skip103
+\partial@page=\box85
+\last@line=\box86
+\maxbalancingoverflow=\dimen316
+\mult@rightbox=\box87
+\mult@grightbox=\box88
+\mult@firstbox=\box89
+\mult@gfirstbox=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\c@minrows=\count510
+\c@columnbadness=\count511
+\c@finalcolumnbadness=\count512
+\last@try=\dimen317
+\multicolovershoot=\dimen318
+\multicolundershoot=\dimen319
+\mult@nat@firstbox=\box127
+\colbreak@box=\box128
+\mc@col@check@num=\count513
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/hyphenat\hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+
+
+Package hyphenat Warning: *******************************
+(hyphenat)                * You have used the htt option.
+(hyphenat)                * You are likely to get many Font Warning messages.
+(hyphenat)                * These can usually be ignored.
+(hyphenat)                *******************************.
+
+\langwohyphens=\language81
+LaTeX Info: Redefining \_ on input line 43.
+)
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count475
-\@quotereset=\count476
+\@quotelevel=\count514
+\@quotereset=\count515
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ma
+in.aex <nul: /p x=^%~$PATH:i>> main.aex)...executed.
+
+runsystem(del main.aex)...executed.
+
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-30.
+39.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1397,35 +1587,35 @@ LaTeX Warning: Unused global option(s):
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
-(kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
+(kapitel/08_Fazit.aux) (09_Anhang.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Info: Redefining \microtypecontext on input line 130.
-Package microtype Info: Applying patch `item' on input line 130.
-Package microtype Info: Applying patch `toc' on input line 130.
-Package microtype Info: Applying patch `eqnum' on input line 130.
-Package microtype Info: Applying patch `footnote' on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Info: Redefining \microtypecontext on input line 139.
+Package microtype Info: Applying patch `item' on input line 139.
+Package microtype Info: Applying patch `toc' on input line 139.
+Package microtype Info: Applying patch `eqnum' on input line 139.
+Package microtype Info: Applying patch `footnote' on input line 139.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 130.
+LaTeX Info: Redefining \showhyphens on input line 139.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1458,30 +1648,181 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (main.bbl)
-Package biblatex Info: Reference section=0 on input line 130.
-Package biblatex Info: Reference segment=0 on input line 130.
+ (main.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Bugzilla.05.06.2023':
+(biblatex)                - Entry 'Bugzilla.05.06.2023' (ref/citavi.bib): Inval
+id format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'GitHub.08.04.2019':
+(biblatex)                - Entry 'GitHub.08.04.2019' (ref/citavi.bib): Invalid
+ format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'GitHub.05.06.2023b':
+(biblatex)                - Entry 'GitHub.05.06.2023b' (ref/citavi.bib): Invali
+d format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'GitHub.05.06.2023':
+(biblatex)                - Entry 'GitHub.05.06.2023' (ref/citavi.bib): Invalid
+ format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Gitlab.05.06.2023':
+(biblatex)                - Entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid
+ format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Haircutfish.04.11.2022':
+(biblatex)                - Entry 'Haircutfish.04.11.2022' (ref/citavi.bib): In
+valid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'InfoSecNotes.05.06.2023':
+(biblatex)                - Entry 'InfoSecNotes.05.06.2023' (ref/citavi.bib): I
+nvalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'JeffersonScher.29.11.2020':
+(biblatex)                - Entry 'JeffersonScher.29.11.2020' (ref/citavi.bib):
+ Invalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'MandiOhlinger.05.06.2023':
+(biblatex)                - Entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): 
+Invalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Markruss.05.06.2023b':
+(biblatex)                - Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Inva
+lid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Markruss.05.06.2023':
+(biblatex)                - Entry 'Markruss.05.06.2023' (ref/citavi.bib): Inval
+id format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'MicrosoftLearn.05.06.2023':
+(biblatex)                - Entry 'MicrosoftLearn.05.06.2023' (ref/citavi.bib):
+ Invalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Mills.2021':
+(biblatex)                - Entry 'Mills.2021' (ref/citavi.bib): Invalid format
+ '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Mozilla.05.06.2023':
+(biblatex)                - Entry 'Mozilla.05.06.2023' (ref/citavi.bib): Invali
+d format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'MozillaSupport.26.10.2020':
+(biblatex)                - Entry 'MozillaSupport.26.10.2020' (ref/citavi.bib):
+ Invalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'MozillaWiki.05.06.2023':
+(biblatex)                - Entry 'MozillaWiki.05.06.2023' (ref/citavi.bib): In
+valid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'mozillazine.29.12.2022':
+(biblatex)                - Entry 'mozillazine.29.12.2022' (ref/citavi.bib): In
+valid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Nicholasswhite.05.06.2023':
+(biblatex)                - Entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib):
+ Invalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Oracle.2020':
+(biblatex)                - Entry 'Oracle.2020' (ref/citavi.bib): Invalid forma
+t '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'SecureDrop.05.06.2023':
+(biblatex)                - Entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Inv
+alid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'TechSupportGuy.05.06.2023':
+(biblatex)                - Entry 'TechSupportGuy.05.06.2023' (ref/citavi.bib):
+ Invalid format '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'TILT.25.03.2023':
+(biblatex)                - Entry 'TILT.25.03.2023' (ref/citavi.bib): Invalid f
+ormat '05.06.2023' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Tor.24.05.2023':
+(biblatex)                - Entry 'Tor.24.05.2023' (ref/citavi.bib): Invalid fo
+rmat '05.06.2023' of date field 'urldate' - ignoring.
+
+)
+Package biblatex Info: Reference section=0 on input line 139.
+Package biblatex Info: Reference segment=0 on input line 139.
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count477
-\scratchdimen=\dimen296
-\scratchbox=\box75
-\nofMPsegments=\count478
-\nofMParguments=\count479
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count480
-\MPscratchDim=\dimen297
-\MPnumerator=\count481
-\makeMPintoPDFobject=\count482
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count516
+\scratchdimen=\dimen320
+\scratchbox=\box129
+\nofMPsegments=\count517
+\nofMParguments=\count518
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count519
+\MPscratchDim=\dimen321
+\MPnumerator=\count520
+\makeMPintoPDFobject=\count521
+\everyMPtoPDFconversion=\toks51
 )
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
 fg
@@ -1525,14 +1866,126 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+39.
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/scsl' undefined
+(Font)              using `T1/lmtt/b/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/b/sc' undefined
+(Font)              using `T1/lmtt/b/n' instead on input line 139.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 139.
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 139.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/sl' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 139.
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
+(Font)              using `T1/lmtt/bx/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/sc' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbx/sc' undefined
+(Font)              using `T1/lmtt/sb/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sb/n' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sb/it' undefined
+(Font)              using `T1/lmtt/sb/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sb/sl' undefined
+(Font)              using `T1/lmtt/sb/it' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sb/scit' undefined
+(Font)              using `T1/lmtt/sb/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sb/sc' undefined
+(Font)              using `T1/lmtt/sb/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/sbc/sc' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/n' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/it' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sl' undefined
+(Font)              using `T1/lmtt/c/it' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/scit' undefined
+(Font)              using `T1/lmtt/c/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/c/sc' undefined
+(Font)              using `T1/lmtt/c/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/it' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/lc/sl' tried instead on input line 139.
+
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/scsl' undefined
+(Font)              using `T1/lmtt/lc/sc' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/lc/sc' undefined
+(Font)              using `T1/lmtt/lc/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/ui' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/bx/ui' undefined
+(Font)              using `T1/lmtt/bx/n' instead on input line 139.
+
+
+LaTeX Font Warning: Font shape `T1/lmtt/m/In' undefined
+(Font)              using `T1/lmtt/m/n' instead on input line 139.
+
 <bilder//thi_logo.pdf, id=4, 165.87971pt x 73.25368pt>
 File: bilder//thi_logo.pdf Graphic file (type pdf)
 <use bilder//thi_logo.pdf>
-Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 134.
+Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 143.
 (pdftex.def)             Requested size: 125.47739pt x 55.41292pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-134.
+143.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1540,7 +1993,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 134
+LaTeX Font Info:    Trying to load font information for U+msa on input line 143
 .
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -1549,7 +2002,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 134
+LaTeX Font Info:    Trying to load font information for U+msb on input line 143
 .
 
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1563,19 +2016,34 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 {C:/Users/carls/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./bilder//th
 i_logo.pdf>]
-Package tocbasic Info: character protrusion at toc deactivated on input line 13
-9.
- (main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
+Package tocbasic Info: character protrusion at toc deactivated on input line 14
+8.
+ (main.toc [1
 
- [1
+])
+\tf@toc=\write7
+\openout7 = `main.toc'.
 
-] [2]
+ [2]
 \openout2 = `kapitel/01_Einfuehrung.aux'.
 
  (kapitel/01_Einfuehrung.tex
 chapter 1.
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              Implementation of \float@addtolist became
+(scrreprt)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrreprt)              has been replaced by several more flexible
+(scrreprt)              features of package `tocbasic`.
+(scrreprt)              Since Version 3.12 support for deprecated
+(scrreprt)              \float@addtolist interface has been
+(scrreprt)              restricted to only some of the KOMA-Script
+(scrreprt)              features and been removed from others.
+(scrreprt)              Loading of package `scrhack' may help to
+(scrreprt)              avoid this warning, if you are using a
+(scrreprt)              a package that still implements the
+(scrreprt)              deprecated \float@addtolist interface.
+
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 3.
 ) [1
@@ -1609,7 +2077,7 @@ chapter 3.
  (kapitel/04_Methodik.tex
 chapter 4.
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-10.
+8.
 (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1626,59 +2094,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 <bilder/tor-new-identity.png, id=37, 752.8125pt x 242.40562pt>
 File: bilder/tor-new-identity.png Graphic file (type png)
 <use bilder/tor-new-identity.png>
-Package pdftex.def Info: bilder/tor-new-identity.png  used on input line 47.
+Package pdftex.def Info: bilder/tor-new-identity.png  used on input line 42.
 (pdftex.def)             Requested size: 752.81065pt x 242.40501pt.
 
-
-Package caption Warning: \label without proper reference on input line 48.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:tor-new-identity' on page 5 undefined on input li
-ne 51.
-
-[5 <./bilder/tor-new-identity.png>]
-
-Package caption Warning: \label without proper reference on input line 118.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:pb-artefakte' on page 6 undefined on input line 1
-14.
-
-[6]
-
-Package caption Warning: \label without proper reference on input line 154.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:vm-config' on page 7 undefined on input line 147.
-
-
+[5 <./bilder/tor-new-identity.png>] [6]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[7]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-68.
- (C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-[8]
-
-Package caption Warning: \label without proper reference on input line 211.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:software-liste' on page 9 undefined on input line
- 207.
-
-[9] (bilder/datensammlung-zeitpunkte-Latex.pdf_tex
+[7] [8] [9] (bilder/datensammlung-zeitpunkte-Latex.pdf_tex
 <bilder//datensammlung-zeitpunkte-Latex.pdf, id=57, page=1, 668.0567pt x 119.88
 91pt>
 File: bilder//datensammlung-zeitpunkte-Latex.pdf Graphic file (type pdf)
@@ -1938,18 +2361,10 @@ Package pdftex.def Info: bilder//datensammlung-zeitpunkte-tor-Latex.pdf , page2
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (4.0958pt too wide) in paragraph at lines 300--302
+Overfull \hbox (4.0958pt too wide) in paragraph at lines 283--285
 \T1/lmss/m/n/10.95 (-20) nen des Brow-sers au-to-ma-tisch die Fi-re-fox Datensc
-hutz-Webseite \T1/lmtt/m/n/10.95 https://www.mozilla.org/ 
+hutz-Webseite \T1/lmtt/c/it/10.95 htt-ps://www.mozilla.org/ 
  []
-
-
-Package caption Warning: \label without proper reference on input line 118.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:pb-artefakte' on page 11 undefined on input line 
-305.
 
 [11 <./bilder//datensammlung-zeitpunkte-Latex.pdf> <./bilder//datensammlung-zei
 tpunkte-Latex.pdf
@@ -2017,16 +2432,8 @@ DF inclusion: multiple pdfs with page group included in a single page
 File: bilder/process-monitor-filter.png Graphic file (type png)
 <use bilder/process-monitor-filter.png>
 Package pdftex.def Info: bilder/process-monitor-filter.png  used on input line 
-327.
+310.
 (pdftex.def)             Requested size: 450.9336pt x 360.5963pt.
-
-
-Package caption Warning: \label without proper reference on input line 328.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:procmon-writefile-filter' on page 12 undefined on
- input line 331.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2291,8 +2698,12 @@ File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
 Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page26 us
 ed on input line 124.
 (pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-) [13 <./bilder/process-monitor-filter.png>] (bilder/sqlite-methodology-Latex.p
-df_tex
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./bilder/process-monitor-filter.png>]
+(bilder/sqlite-methodology-Latex.pdf_tex
 <bilder//sqlite-methodology-Latex.pdf, id=246, page=1, 1020.93425pt x 313.17pt>
 
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
@@ -2454,12 +2865,8 @@ File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page23 used on 
 input line 118.
 (pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[14 <./bilder//process_monitor_to_exce-Latexl.pdf> <./bilder//process_monitor_t
-o_exce-Latexl.pdf
+) [14 <./bilder//process_monitor_to_exce-Latexl.pdf> <./bilder//process_monitor
+_to_exce-Latexl.pdf
 
 pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
@@ -2559,330 +2966,285 @@ DF inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+> <./bilder//sqlite-methodology-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
 >]
-
-Package caption Warning: \label without proper reference on input line 118.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:pb-artefakte' on page 15 undefined on input line 
-385.
-
-
-Package caption Warning: \label without proper reference on input line 390.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:autopsy-keywordsuche' on page 15 undefined on inp
-ut line 387.
-
-<bilder/autopsy-search.png, id=355, 475.02469pt x 237.13594pt>
+<bilder/autopsy-search.png, id=428, 475.02469pt x 237.13594pt>
 File: bilder/autopsy-search.png Graphic file (type png)
 <use bilder/autopsy-search.png>
-Package pdftex.def Info: bilder/autopsy-search.png  used on input line 389.
+Package pdftex.def Info: bilder/autopsy-search.png  used on input line 372.
 (pdftex.def)             Requested size: 475.02351pt x 237.13535pt.
-[15 <./bilder//sqlite-methodology-Latex.pdf> <./bilder//sqlite-methodology-Late
-x.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder//sqlite-methodology-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./bilder/autopsy-search.png>]
-
-Package caption Warning: \label without proper reference on input line 413.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:textfile-ram-artifact' on page 16 undefined on in
-put line 407.
-
-<bilder/ram-editor1.png, id=434, 220.57407pt x 156.585pt>
+ [15 <./bilder/autopsy-search.png>]
+<bilder/ram-editor1.png, id=433, 220.57407pt x 156.585pt>
 File: bilder/ram-editor1.png Graphic file (type png)
 <use bilder/ram-editor1.png>
-Package pdftex.def Info: bilder/ram-editor1.png  used on input line 410.
+Package pdftex.def Info: bilder/ram-editor1.png  used on input line 393.
 (pdftex.def)             Requested size: 125.47739pt x 89.07516pt.
-<bilder/ram-editor2.png, id=435, 478.03593pt x 176.15813pt>
+<bilder/ram-editor2.png, id=434, 478.03593pt x 176.15813pt>
 File: bilder/ram-editor2.png Graphic file (type png)
 <use bilder/ram-editor2.png>
-Package pdftex.def Info: bilder/ram-editor2.png  used on input line 412.
+Package pdftex.def Info: bilder/ram-editor2.png  used on input line 395.
 (pdftex.def)             Requested size: 271.86237pt x 100.1827pt.
 
-Package caption Warning: \label without proper reference on input line 118.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:pb-artefakte' on page 16 undefined on input line 
-419.
-
 (bilder/yarascan_plugin_tree-Latex.pdf_tex
-<bilder//yarascan_plugin_tree-Latex.pdf, id=436, page=1, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=435, page=1, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=437, page=2, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=436, page=2, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page2 used on
  input line 58.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=438, page=3, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=437, page=3, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page3 used on
  input line 60.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=439, page=4, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=438, page=4, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page4 used on
  input line 62.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=440, page=5, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=439, page=5, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page5 used on
  input line 64.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=441, page=6, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=440, page=6, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page6 used on
  input line 66.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=442, page=7, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=441, page=7, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page7 used on
  input line 68.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=443, page=8, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=442, page=8, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page8 used on
  input line 70.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=444, page=9, 470.75868pt x 529.8738
+<bilder//yarascan_plugin_tree-Latex.pdf, id=443, page=9, 470.75868pt x 529.8738
 9pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page9 used on
  input line 72.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=445, page=10, 470.75868pt x 529.873
+<bilder//yarascan_plugin_tree-Latex.pdf, id=444, page=10, 470.75868pt x 529.873
 89pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page10 used o
 n input line 76.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=446, page=11, 470.75868pt x 529.873
+<bilder//yarascan_plugin_tree-Latex.pdf, id=445, page=11, 470.75868pt x 529.873
 89pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page11 used o
 n input line 78.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=447, page=12, 470.75868pt x 529.873
+<bilder//yarascan_plugin_tree-Latex.pdf, id=446, page=12, 470.75868pt x 529.873
 89pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page12 used o
 n input line 81.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=448, page=13, 470.75868pt x 529.873
+<bilder//yarascan_plugin_tree-Latex.pdf, id=447, page=13, 470.75868pt x 529.873
 89pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page13 used o
 n input line 83.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=449, page=14, 470.75868pt x 529.873
+<bilder//yarascan_plugin_tree-Latex.pdf, id=448, page=14, 470.75868pt x 529.873
 89pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page14 used o
 n input line 86.
 (pdftex.def)             Requested size: 470.75868pt x 529.88065pt.
-) [16 <./bilder/ram-editor1.png> <./bilder/ram-editor2.png>]
+)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/process-monitor-filter-registry.png, id=456, 450.18187pt x 360.59718pt>
+[16 <./bilder/ram-editor1.png> <./bilder/ram-editor2.png>] [17 <./bilder//yaras
+can_plugin_tree-Latex.pdf> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./bilder//yarascan_plugin_tree-Latex.pdf
+
+pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>]
+<bilder/process-monitor-filter-registry.png, id=505, 450.18187pt x 360.59718pt>
 
 File: bilder/process-monitor-filter-registry.png Graphic file (type png)
 <use bilder/process-monitor-filter-registry.png>
 Package pdftex.def Info: bilder/process-monitor-filter-registry.png  used on in
-put line 447.
+put line 430.
 (pdftex.def)             Requested size: 450.18077pt x 360.5963pt.
 
-Package caption Warning: \label without proper reference on input line 448.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:procmon-setvalue-filter' on page 17 undefined on 
-input line 451.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package caption Warning: \label without proper reference on input line 462.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:windows-registry-hives' on page 17 undefined on i
-nput line 456.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [17] [18 <./bilder//yarascan_plugin_tree-Latex.pdf> <./bilder//yarascan_plugi
-n_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
-> <./bilder//yarascan_plugin_tree-Latex.pdf
-
-pdfTeX warning: pdflatex (file ./bilder//yarascan_plugin_tree-Latex.pdf): PDF i
-nclusion: multiple pdfs with page group included in a single page
->] [19 <./bilder/process-monitor-filter-registry.png>]
+) [18 <./bilder/process-monitor-filter-registry.png>] [19]
 \openout2 = `kapitel/05_Ergebnisse.aux'.
 
 
@@ -2901,19 +3263,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [21]
-
-Package caption Warning: \label without proper reference on input line 376.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `chart:svchost-dnscache' on page 22 undefined on input
- line 373.
-
-<bilder/firefox-dnscache.png, id=520, 903.375pt x 192.72pt>
+<bilder/firefox-dnscache.png, id=519, 903.375pt x 192.72pt>
 File: bilder/firefox-dnscache.png Graphic file (type png)
 <use bilder/firefox-dnscache.png>
-Package pdftex.def Info: bilder/firefox-dnscache.png  used on input line 375.
+Package pdftex.def Info: bilder/firefox-dnscache.png  used on input line 374.
 (pdftex.def)             Requested size: 903.3728pt x 192.71951pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -2921,72 +3276,42 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <./bilder/firefox-dnscache.png>]
-
-Package caption Warning: \label without proper reference on input line 643.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:firefox-mapping-virtaddr-to-byteoffset' on page 2
-4 undefined on input line 631.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 633--644
-[][]
- []
-
-[24]
-<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=534, 462.22687pt
+[23 <./bilder/firefox-dnscache.png>] [24]
+<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=533, 462.22687pt
  x 203.25937pt>
 File: bilder/volatility/firefox/password_0xb9ce29180c8_7420.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0xb9ce29180c8_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0xb9ce29180c8_7420.
-png  used on input line 651.
+png  used on input line 649.
 (pdftex.def)             Requested size: 196.57976pt x 86.44456pt.
-<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=535, 453.94594p
+<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=534, 453.94594p
 t x 179.92218pt>
 File: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png Graphic file (
 type png)
 <use bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420
-.png  used on input line 653.
+.png  used on input line 651.
 (pdftex.def)             Requested size: 196.57976pt x 77.9141pt.
-
-
-Package caption Warning: \label without proper reference on input line 654.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-pw-offset-pid-7420' on page 25 undefined 
-on input line 657.
-
-<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=536, 456.95718pt
+<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=535, 456.95718pt
  x 170.13562pt>
 File: bilder/volatility/firefox/password_0x24083b41858_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x24083b41858_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x24083b41858_8424.
-png  used on input line 663.
+png  used on input line 660.
 (pdftex.def)             Requested size: 196.57976pt x 73.19063pt.
-<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=537, 458.46281pt
+<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=536, 458.46281pt
  x 231.11343pt>
 File: bilder/volatility/firefox/password_0x240840e5b08_8424.png Graphic file (t
 ype png)
 <use bilder/volatility/firefox/password_0x240840e5b08_8424.png>
 Package pdftex.def Info: bilder/volatility/firefox/password_0x240840e5b08_8424.
-png  used on input line 665.
+png  used on input line 662.
 (pdftex.def)             Requested size: 196.57976pt x 99.09824pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package caption Warning: \label without proper reference on input line 666.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-pw-offset-pid-8424' on page 25 undefined 
-on input line 669.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2997,16 +3322,8 @@ efox/password_0x24083b41858_8424.png> <./bilder/volatility/firefox/password_0x2
 40840e5b08_8424.png>] [27] [28]
 
 Package caption Warning: The type was already set to `table'
-(caption)                 on input line 1387.
+(caption)                 on input line 1383.
 See the caption package documentation for explanation.
-
-
-Package caption Warning: \label without proper reference on input line 1408.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:tor-mapping-virtaddr-to-byteoffset' on page 29 un
-defined on input line 1398.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -3020,28 +3337,20 @@ Overfull \vbox (4.84859pt too high) has occurred while \output is active []
 
 
 [30]
-<bilder/volatility/tor/password_0xea0318.png, id=562, 454.69875pt x 122.70844pt
+<bilder/volatility/tor/password_0xea0318.png, id=561, 454.69875pt x 122.70844pt
 >
 File: bilder/volatility/tor/password_0xea0318.png Graphic file (type png)
 <use bilder/volatility/tor/password_0xea0318.png>
 Package pdftex.def Info: bilder/volatility/tor/password_0xea0318.png  used on i
-nput line 1415.
+nput line 1411.
 (pdftex.def)             Requested size: 196.57976pt x 53.05006pt.
-<bilder/volatility/tor/password_0x10f7748.png, id=563, 458.46281pt x 243.15843p
+<bilder/volatility/tor/password_0x10f7748.png, id=562, 458.46281pt x 243.15843p
 t>
 File: bilder/volatility/tor/password_0x10f7748.png Graphic file (type png)
 <use bilder/volatility/tor/password_0x10f7748.png>
 Package pdftex.def Info: bilder/volatility/tor/password_0x10f7748.png  used on 
-input line 1417.
+input line 1413.
 (pdftex.def)             Requested size: 196.57976pt x 104.26297pt.
-
-
-Package caption Warning: \label without proper reference on input line 1418.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-pw-offset-pid-708' on page 31 undefined o
-n input line 1421.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -3060,25 +3369,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-] [34]
-
-Package caption Warning: \label without proper reference on input line 225.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:gewinner-tabelle' on page 35 undefined on input l
-ine 222.
-
-[35]
-
-Package caption Warning: \label without proper reference on input line 253.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:gewinner' on page 36 undefined on input line 249.
-
-
-) [36]
+] [34] [35]) [36]
 \openout2 = `kapitel/07_Diskussion.aux'.
 
  (kapitel/07_Diskussion.tex
@@ -3099,24 +3390,78 @@ chapter 8.
 
 
 ]
-\openout2 = `kapitel/09_Anhang.aux'.
+\openout2 = `09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [40
+ (09_Anhang.tex [40
 
 
 
 
 
 ]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 465.2017pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=465.2017pt
+* \textheight=773.91507pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package caption Warning: \label without proper reference on input line 87.
-See the caption package documentation for explanation.
+\openout5 = `main.pyg'.
+
+ (_minted-main/default.pygstyle)
+(_minted-main/BA87F606FC2F1FFB9502601C098FF49924CE9FD4CCCB34EF23BCE725B498F3E6.
+pygtex) [43
 
 
-LaTeX Warning: Reference `tab:firefox-writefile-operations' on page 41 undefine
-d on input line 31.
+]
+Overfull \hbox (24.86444pt too wide) in paragraph at lines 139--140
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 <User>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/
+10.95 AppData$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Local$\OMS/cmsy/m/n/10.
+95 n$\T1/lmtt/c/it/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Fire
+fox$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Profiles$\OMS/cmsy/m/n/10.95 n$\T
+1/lmtt/c/it/10.95 <Profile>.default-
+ []
 
-[41]
+
+Overfull \hbox (36.36191pt too wide) in paragraph at lines 140--141
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 <User>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/
+10.95 AppData$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Roaming$\OMS/cmsy/m/n/1
+0.95 n$\T1/lmtt/c/it/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Fi
+refox$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Profiles$\OMS/cmsy/m/n/10.95 n$
+\T1/lmtt/c/it/10.95 <Profile>.default-
+ []
+
+[44
+
+
+]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -3166,216 +3511,111 @@ Overfull \vbox (4.85172pt too high) has occurred while \output is active []
 
 
 [44]
-Overfull \hbox (72.3052pt too wide) in paragraph at lines 96--97
-[]\T1/lmtt/m/n/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Users$\OMS/cms
-y/m/n/10.95 n$\T1/lmtt/m/n/10.95 <User>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.9
-5 AppData$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Local$\OMS/cmsy/m/n/10.95 n$
-\T1/lmtt/m/n/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Firefox$\OM
-S/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Profiles$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m
-/n/10.95 <Profile>.default-release$\OMS/cmsy/m/n/10.95 n$ 
- []
-
-
-Overfull \hbox (83.80267pt too wide) in paragraph at lines 97--98
-[]\T1/lmtt/m/n/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Users$\OMS/cms
-y/m/n/10.95 n$\T1/lmtt/m/n/10.95 <User>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.9
-5 AppData$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Roaming$\OMS/cmsy/m/n/10.95 
-n$\T1/lmtt/m/n/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Firefox$\
-OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Profiles$\OMS/cmsy/m/n/10.95 n$\T1/lmtt
-/m/n/10.95 <Profile>.default-release$\OMS/cmsy/m/n/10.95 n$ 
- []
-
-
-Package caption Warning: \label without proper reference on input line 111.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:mzcacheview' on page 45 undefined on input line 1
-06.
-
-<bilder/firefox-cache.png, id=609, 886.81313pt x 136.25906pt>
+<bilder/firefox-cache.png, id=612, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
-Package pdftex.def Info: bilder/firefox-cache.png  used on input line 110.
+Package pdftex.def Info: bilder/firefox-cache.png  used on input line 215.
 (pdftex.def)             Requested size: 886.81096pt x 136.25871pt.
 
-Overfull \hbox (1.0853pt too wide) in paragraph at lines 120--124
+Overfull \hbox (1.0853pt too wide) in paragraph at lines 225--227
 [] \T1/lmss/bx/n/10.95 (-20) Da-ta-re-por-ting[] \T1/lmss/m/n/10.95 (-20) Da-te
-i-en im Ord-ner $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 datareporting$\OMS/cm
-sy/m/n/10.95 n$\T1/lmtt/m/n/10.95 glean$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.9
-5 db \T1/lmss/m/n/10.95 (-20) sind Teil des Glean-Systems,
+i-en im Ord-ner $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 datareporting$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 glean$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/1
+0.95 db \T1/lmss/m/n/10.95 (-20) sind Teil des Glean-Systems,
  []
 
+<bilder/firefox-sessionstore.png, id=613, 534.49687pt x 95.6072pt>
+File: bilder/firefox-sessionstore.png Graphic file (type png)
+<use bilder/firefox-sessionstore.png>
+Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 23
+5.
+(pdftex.def)             Requested size: 534.49556pt x 95.60695pt.
 [45
 
  <./bilder/firefox-cache.png>]
-
-Package caption Warning: \label without proper reference on input line 134.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-session-history-scrounger' on page 46 und
-efined on input line 131.
-
-<bilder/firefox-sessionstore.png, id=614, 534.49687pt x 95.6072pt>
-File: bilder/firefox-sessionstore.png Graphic file (type png)
-<use bilder/firefox-sessionstore.png>
-Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 13
-3.
-(pdftex.def)             Requested size: 534.49556pt x 95.60695pt.
-
-Package caption Warning: \label without proper reference on input line 149.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:firefox-sqlite-dbs-explained' on page 46 undefine
-d on input line 147.
+Overfull \vbox (13.59999pt too high) detected at line 286
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package caption Warning: \label without proper reference on input line 175.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:firefox-veraenderte-sqlitedbs' on page 46 undefin
-ed on input line 167.
-
 [46 <./bilder/firefox-sessionstore.png>]
-Overfull \vbox (13.59999pt too high) detected at line 191
- []
 
-[47]
-
-Package caption Warning: \label without proper reference on input line 265.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-web-bookmarks' on page 48 undefined on in
-put line 262.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <bilder/cfv_firefox_autopsy_web_bookmarks.png, id=623, 739.26187pt x 27.85406pt
 >
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
-input line 264.
+input line 355.
 (pdftex.def)             Requested size: 739.26006pt x 27.85397pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package caption Warning: \label without proper reference on input line 273.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-web-cookies' on page 48 undefined on inpu
-t line 270.
-
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=624, 947.03813pt x 183.68625pt>
+[47]
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=627, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
-put line 272.
+put line 363.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
-[48]
-
-Package caption Warning: \label without proper reference on input line 281.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-web-history' on page 49 undefined on inpu
-t line 278.
-
-<bilder/cfv_firefox_autopsy_web_history.png, id=628, 1141.26375pt x 105.39375pt
+ [48 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
+opsy_web_cookies.png>]
+<bilder/cfv_firefox_autopsy_web_history.png, id=633, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
-put line 280.
+put line 371.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-
-Package caption Warning: \label without proper reference on input line 291.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:firefox-web-categories' on page 49 undefined on i
-nput line 287.
-
-<bilder/cfv_firefox_autopsy_web_categories.png, id=629, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=634, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
- input line 290.
+ input line 381.
 (pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
-[49 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_auto
-psy_web_cookies.png> <./bilder/cfv_firefox_autopsy_web_history.png>]
-Overfull \hbox (97.2085pt too wide) in paragraph at lines 372--376
-\T1/lmss/m/n/10.95 (-20) Re-gis-try Keys ha-ben das For-mat \T1/lmtt/m/n/10.95 
-HKCU$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 SOFTWARE$\OMS/cmsy/m/n/10.95 n$\T
-1/lmtt/m/n/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Firefox$\OMS/
-cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 PreXULSkeletonUISettings$\OMS/cmsy/m/n/10.9
-5 n$\T1/lmtt/m/n/10.95 <Absoluter
+ [49 <./bilder/cfv_firefox_autopsy_web_history.png> <./bilder/cfv_firefox_autop
+sy_web_categories.png>]
+Overfull \hbox (64.09244pt too wide) in paragraph at lines 462--466
+\T1/lmtt/c/it/10.95 PreXULSkeletonUISettings$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
+t/10.95 <Absoluter Fi-re-fox Installationspfad>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/
+c/it/10.95 firefox.exe|<Skeleton
  []
 
-[50 <./bilder/cfv_firefox_autopsy_web_categories.png>]
-Overfull \hbox (305.01245pt too wide) in paragraph at lines 390--397
-\T1/lmss/m/n/10.95 (-20) Der Re-gis-try Key hat das For-mat \T1/lmtt/m/n/10.95 
-HKLM$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 System$\OMS/cmsy/m/n/10.95 n$\T1/
-lmtt/m/n/10.95 CurrentControlSet$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Servi
-ces$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 bam$\OMS/cmsy/m/n/10.95 n$\T1/lmtt
-/m/n/10.95 State$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 UserSettings$\OMS/cms
-y/m/n/10.95 n$\T1/lmtt/m/n/10.95 <SID>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95
- Device$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 HarddiskVolume2$\OMS/cmsy/m/n/
-10.95 n$\T1/lmtt/m/n/10.95 <Absoluter
+[50]
+Overfull \hbox (103.51239pt too wide) in paragraph at lines 480--485
+\T1/lmtt/c/it/10.95 UserSettings$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 <SID
+>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Device$\OMS/cmsy/m/n/10.95 n$\T1/lm
+tt/c/it/10.95 HarddiskVolume2$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 <Absolu
+ter Fi-re-fox Installationspfad>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 fire
+fox.exe
  []
 
 
-Package caption Warning: \label without proper reference on input line 462.
-See the caption package documentation for explanation.
+Overfull \hbox (9.06914pt too wide) in paragraph at lines 520--521
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
+t/10.95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Tor Browser$\OMS/cmsy
+/m/n/10.95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10
+.95 TorBrowser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Data$\OMS/cmsy/m/n/10.
+95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$ 
+ []
 
 
-LaTeX Warning: Reference `tab:windows-registry-hives' on page 51 undefined on i
-nput line 400.
+Overfull \hbox (9.06914pt too wide) in paragraph at lines 521--522
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
+t/10.95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Tor Browser$\OMS/cmsy
+/m/n/10.95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10
+.95 TorBrowser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Data$\OMS/cmsy/m/n/10.
+95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$ 
+ []
 
 [51]
-
-Package caption Warning: \label without proper reference on input line 489.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:tor-writefile-operations' on page 52 undefined on
- input line 425.
-
-
-Overfull \hbox (140.74255pt too wide) in paragraph at lines 432--433
-[]\T1/lmtt/m/n/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Users$\OMS/cms
-y/m/n/10.95 n$\T1/lmtt/m/n/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10
-.95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Tor Browser$\OMS/cmsy/m/n/
-10.95 n$\T1/lmtt/m/n/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Tor
-Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Data$\OMS/cmsy/m/n/10.95 n$\T1
-/lmtt/m/n/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Caches$\OMS/cm
-sy/m/n/10.95 n$\T1/lmtt/m/n/10.95 profile.default$\OMS/cmsy/m/n/10.95 n$ 
- []
-
-
-Overfull \hbox (100.77515pt too wide) in paragraph at lines 433--434
-[]\T1/lmtt/m/n/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Users$\OMS/cms
-y/m/n/10.95 n$\T1/lmtt/m/n/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10
-.95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Tor Browser$\OMS/cmsy/m/n/
-10.95 n$\T1/lmtt/m/n/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Tor
-Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 Data$\OMS/cmsy/m/n/10.95 n$\T1
-/lmtt/m/n/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 profile.defaul
-t$\OMS/cmsy/m/n/10.95 n$ 
- []
-
-
-Overfull \hbox (41.52818pt too wide) in paragraph at lines 435--436
-\T1/lmss/m/n/10.95 (-20) In der Ta-bel-le sind die Da-tei-en je nach Spei-cher-
-ort "Ca-ches"(Hellblau) oder "Pro-fi-le.default"(Dunkelblau)
+Overfull \hbox (11.30208pt too wide) in paragraph at lines 533--538
+[] \T1/lmss/bx/n/10.95 (-20) Da-ta-re-por-ting[] \T1/lmss/m/n/10.95 (-20) Im ``
+Datareporting``-Ordner wird vom Tor-Browser die Da-tei $\OMS/cmsy/m/n/10.95 n$\
+T1/lmtt/c/it/10.95 datareporting$\OMS/cmsy/m/n/10.95 n$ 
  []
 
 [52]
@@ -3413,7 +3653,7 @@ ort "Ca-ches"(Hellblau) oder "Pro-fi-le.default"(Dunkelblau)
 
 
 
-LaTeX Warning: Float too large for page by 11.29208pt on input line 489.
+LaTeX Warning: Float too large for page by 11.29208pt on input line 589.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -3422,121 +3662,80 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-] [53]
-Overfull \hbox (177.72139pt too wide) in paragraph at lines 494--497
-[] \T1/lmss/bx/n/10.95 (-20) Ca-che[] \T1/lmss/m/n/10.95 (-20) Der Tor-Browser 
-schreibt ei-ne ein-zi-ge Cache-Datei $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 
-Caches$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 profile.default$\OMS/cmsy/m/n/1
-0.95 n$\T1/lmtt/m/n/10.95 startupCache$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95
- startupCache.8.little
- []
+] [53] [54
 
-
-Overfull \hbox (76.98364pt too wide) in paragraph at lines 499--505
-[] \T1/lmss/bx/n/10.95 (-20) Da-ta-re-por-ting[] \T1/lmss/m/n/10.95 (-20) Im "D
-a-ta-re-por-ting-Ord-ner wird vom Tor-Browser die Da-tei $\OMS/cmsy/m/n/10.95 n
-$\T1/lmtt/m/n/10.95 datareporting$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 data
-.safe.bin
- []
-
-
-Overfull \hbox (172.26213pt too wide) in paragraph at lines 511--513
-[]\T1/lmss/m/n/10.95 (-20) Weiterhin wird wäh-rend des Brow-sing Sze-na-ri-os d
-ie Da-tei $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 extensions$\OMS/cmsy/m/n/10
-.95 n$\T1/lmtt/m/n/10.95 staged$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/m/n/10.95 73a6fe
-31-595d-460b-a920-fcc0f8843232.xpi
- []
-
-[54
-
-]
-
-Package caption Warning: \label without proper reference on input line 530.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:tor-veraenderte-sqlitedbs' on page 55 undefined o
-n input line 527.
-
-[55]
-
-Package caption Warning: \label without proper reference on input line 636.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:tor-web-bookmarks' on page 56 undefined on input 
-line 633.
-
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=659, 660.96938pt x 32.37094pt>
+] [55]
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=662, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
-t line 635.
+t line 716.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
-
-Package caption Warning: \label without proper reference on input line 644.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:tor-web-cookies' on page 56 undefined on input li
-ne 641.
-
-<bilder/cfv_tor_autopsy_web_cookies.png, id=660, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=663, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
-line 643.
+line 724.
 (pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
-[56 <./bilder/cfv_tor_autopsy_web_bookmarks.png>]
-
-Package caption Warning: \label without proper reference on input line 652.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `img:tor-web-history' on page 57 undefined on input li
-ne 649.
-
-<bilder/cfv_tor_autopsy_web_history.png, id=665, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=664, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
-line 651.
+line 732.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
 
-Package caption Warning: \label without proper reference on input line 661.
-See the caption package documentation for explanation.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Warning: Reference `img:tor-web-categories' on page 57 undefined on input
- line 657.
-
-<bilder/cfv_tor_autopsy_web_categories.png, id=666, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=665, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
-ut line 660.
+ut line 741.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
-[57 <./bilder/cfv_tor_autopsy_web_cookies.png> <./bilder/cfv_tor_autopsy_web_hi
-story.png> <./bilder/cfv_tor_autopsy_web_categories.png>]
 
-Package caption Warning: \label without proper reference on input line 462.
-See the caption package documentation for explanation.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[56 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web_
+cookies.png>]
 
-LaTeX Warning: Reference `tab:windows-registry-hives' on page 58 undefined on i
-nput line 742.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [58]
+) [57 <./bilder/cfv_tor_autopsy_web_history.png> <./bilder/cfv_tor_autopsy_web_
+categories.png>] [58]
 chapter without number
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 17
+5.
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10.95> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 175.
+
+(C:\Users\carls\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 175.
+
+
 [59
 
 
 
-] [60] [61] (main.aux (kapitel/01_Einfuehrung.aux)
+] [60] [61] [62] (main.aux (kapitel/01_Einfuehrung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
-(kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
+(kapitel/08_Fazit.aux) (09_Anhang.aux))
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 
 LaTeX Warning: There were undefined references.
 
@@ -3545,33 +3744,37 @@ Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                main
 (biblatex)                and rerun LaTeX afterwards.
 
+runsystem(del main.pyg)...executed.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45425 strings out of 475281
- 1121960 string characters out of 2774064
- 2194517 words of memory out of 3000000
- 65825 multiletter control sequences out of 15000+600000
- 612393 words of font info for 246 fonts, out of 8000000 for 9000
+ 48779 strings out of 475281
+ 1197556 string characters out of 2774064
+ 2305965 words of memory out of 3000000
+ 69066 multiletter control sequences out of 15000+600000
+ 619823 words of font info for 270 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,29n,106p,10601b,2802s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
-:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Us
-ers/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users
+ 108i,29n,106p,10601b,2830s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
+C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/U
+sers/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}<C:/Users
 /carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb>
-<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb>
-<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><
-C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C
-:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb
-><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb
+<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb
+><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb
+><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb
+><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb>
+<C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><
+C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
+><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pf
+b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
+b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb
 >
-Output written on main.pdf (64 pages, 876967 bytes).
+Output written on main.pdf (66 pages, 935544 bytes).
 PDF statistics:
- 733 PDF objects out of 1000 (max. 8388607)
+ 751 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 68724 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 76916 words of extra memory for PDF output out of 89155 (max. 10000000)
 
