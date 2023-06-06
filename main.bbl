@@ -135,59 +135,6 @@
       \field{pages}{20\bibrangedash 29}
       \range{pages}{10}
     \endentry
-    \entry{ChromiumShutdownMSTxtWebpageDoku}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=65d5644b4049b4215a6faa532e7e5ad5}{%
-           family={Chromium},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{fullhash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{bibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{authorbibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{authornamehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{authorfullhash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \field{extraname}{1}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 16:34 Uhr}
-      \field{title}{Contents of /trunk/src/chrome/browser/browser\_shutdown.cc}
-      \field{year}{2009}
-      \verb{urlraw}
-      \verb https://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/browser_shutdown.cc?pathrev=26058
-      \endverb
-      \verb{url}
-      \verb https://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/browser_shutdown.cc?pathrev=26058
-      \endverb
-    \endentry
-    \entry{CrashpadOverviewDesign}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=65d5644b4049b4215a6faa532e7e5ad5}{%
-           family={Chromium},
-           familyi={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{fullhash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{bibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{authorbibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{authornamehash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \strng{authorfullhash}{65d5644b4049b4215a6faa532e7e5ad5}
-      \field{extraname}{2}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 21:58 Uhr}
-      \field{title}{Crashpad Overview Design}
-      \verb{urlraw}
-      \verb https://chromium.googlesource.com/crashpad/crashpad/+/HEAD/doc/overview_design.md
-      \endverb
-      \verb{url}
-      \verb https://chromium.googlesource.com/crashpad/crashpad/+/HEAD/doc/overview_design.md
-      \endverb
-    \endentry
     \entry{Dayalamurthy.2013}{article}{}
       \name{author}{1}{}{%
         {{hash=ff6296c26b18bf9c6491e01f20c9856b}{%
@@ -248,32 +195,6 @@
       \field{title}{Forensic analysis of private browsing mechanisms: Tracing internet activities}
       \field{year}{2021}
     \endentry
-    \entry{LevelDBGithub}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=8b36e9207c24c76e6719268e49201d94}{%
-           family={Google},
-           familyi={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
-      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
-      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
-      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
-      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
-      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:20 Uhr}
-      \field{title}{leveldb}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://github.com/google/leveldb
-      \endverb
-      \verb{url}
-      \verb https://github.com/google/leveldb
-      \endverb
-    \endentry
     \entry{Gupta.2013}{article}{}
       \name{author}{1}{}{%
         {{hash=56eb58a7c2138a2e81ca51fb22f7a59e}{%
@@ -297,21 +218,6 @@
       \field{year}{2013}
       \field{pages}{109\bibrangedash 113}
       \range{pages}{5}
-    \endentry
-    \entry{LevelDBCCL}{misc}{}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labeltitlesource}{title}
-      \field{month}{10}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:21 Uhr}
-      \field{title}{Hang on! That’s not SQLite! Chrome, Electron and LevelDB}
-      \field{year}{2020}
-      \verb{urlraw}
-      \verb https://www.cclsolutionsgroup.com/post/hang-on-thats-not-sqlite-chrome-electron-and-leveldb
-      \endverb
-      \verb{url}
-      \verb https://www.cclsolutionsgroup.com/post/hang-on-thats-not-sqlite-chrome-electron-and-leveldb
-      \endverb
     \endentry
     \entry{Hariharan.2022}{inproceedings}{}
       \name{author}{3}{}{%
@@ -874,91 +780,6 @@
       \field{year}{2014}
       \field{pages}{380\bibrangedash 389}
       \range{pages}{10}
-    \endentry
-    \entry{SQLiteFileFormat}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=497757a9c5b2ec17ded656170b51c788}{%
-           family={SQLite},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{fullhash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{bibnamehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{authorbibnamehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{authornamehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{authorfullhash}{497757a9c5b2ec17ded656170b51c788}
-      \field{extraname}{1}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{05}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:10 Uhr}
-      \field{title}{Database File Format}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://www.sqlite.org/fileformat.html
-      \endverb
-      \verb{url}
-      \verb https://www.sqlite.org/fileformat.html
-      \endverb
-    \endentry
-    \entry{SQLiteTempfiles}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=497757a9c5b2ec17ded656170b51c788}{%
-           family={SQLite},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{fullhash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{bibnamehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{authorbibnamehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{authornamehash}{497757a9c5b2ec17ded656170b51c788}
-      \strng{authorfullhash}{497757a9c5b2ec17ded656170b51c788}
-      \field{extraname}{2}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{01}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:10 Uhr}
-      \field{title}{Temporary Files Used By SQLite}
-      \field{year}{2022}
-      \verb{urlraw}
-      \verb https://www.sqlite.org/tempfiles.html
-      \endverb
-      \verb{url}
-      \verb https://www.sqlite.org/tempfiles.html
-      \endverb
-    \endentry
-    \entry{DictionaryWin10Files}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=80f4cb50ea5f5ad8c289b776db7ad55b}{%
-           family={Tkachenko},
-           familyi={T\bibinitperiod},
-           given={Sergey},
-           giveni={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
-      \strng{fullhash}{80f4cb50ea5f5ad8c289b776db7ad55b}
-      \strng{bibnamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
-      \strng{authorbibnamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
-      \strng{authornamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
-      \strng{authorfullhash}{80f4cb50ea5f5ad8c289b776db7ad55b}
-      \field{sortinit}{T}
-      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{01}
-      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 21:59 Uhr}
-      \field{title}{Add or Remove Words in Spell Checking Dictionary in Windows 10}
-      \field{year}{2018}
-      \verb{urlraw}
-      \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
-      \endverb
-      \verb{url}
-      \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
-      \endverb
     \endentry
     \entry{Yusoff.2011}{article}{}
       \name{author}{3}{}{%

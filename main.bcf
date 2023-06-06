@@ -2479,19 +2479,11 @@
     <bcf:citekey order="109" intorder="1">Said.2011</bcf:citekey>
     <bcf:citekey order="110" intorder="1">Ohana.2013</bcf:citekey>
     <bcf:citekey order="111" intorder="1">Horsman.2019</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">SQLiteFileFormat</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">SQLiteTempfiles</bcf:citekey>
-    <bcf:citekey order="114" intorder="1">LevelDBGithub</bcf:citekey>
-    <bcf:citekey order="114" intorder="2">LevelDBCCL</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">DictionaryWin10Files</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">CrashpadOverviewDesign</bcf:citekey>
-    <bcf:citekey order="117" intorder="1">CrashpadOverviewDesign</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">ChromiumShutdownMSTxtWebpageDoku</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">Satvat.2014</bcf:citekey>
-    <bcf:citekey order="120" intorder="1">Muir.2019</bcf:citekey>
-    <bcf:citekey order="121" intorder="1">Md.2018</bcf:citekey>
-    <bcf:citekey order="122" intorder="1">Muir.2019</bcf:citekey>
-    <bcf:citekey order="123" intorder="1">Hedberg.2013</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">Satvat.2014</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">Muir.2019</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">Md.2018</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">Muir.2019</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">Hedberg.2013</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

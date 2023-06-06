@@ -886,15 +886,20 @@ Literatur:
 
 \section{Chrome}
 
-\subsection*{White-Box Analyse/Common Locations}
+Anschließend folgt die Analyse des Webbrowsers Chrome. Die Ergebnisse werden dabei wie in den beiden vorherigen Kapitel präsentiert.
 
-\begin{comment}
+\subsection*{Common Locations}
+
+Zuerst werden die Common Locations nach Artefakten des privaten Browsing-Szenarios untersucht. Dabei wird wieder zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und den SQLite-Datenbanken unterschieden, wie im Kapitel [link] erläutert. Es konnten jedoch keine Artefakte darin gefunden werden.\\
+Eine weitergehende Analyse der Dateien sowie den Datenbänken ist im [link Anhang] detailliert aufgeführt.
+
+\begin{comment} % Alles in Anhang nunter
 o Autopsy Keyword-Suche: 
 	> Chrome and Edge produced five artefacts as reported by both tools. (FTK, Autopsy) \cite{Gabet.2018}
 		--> Artefakte werden nicht genannt!
 	> only two temporary files (Figure 7) were recovered with Minitool Power Data Recovery but it was a dead end; Location: appdata/…/Chrome/…/ Preferences/RF1533fa.TMP \cite{Fayyad.2021}
 	> pagefile.sys file showed no traces at all \cite{Said.2011}
-\end{comment}
+
 
 Auch beim Chrome Browser werden zunächst die Ergebnisse der Schreiboperationen ausgewertet. Dargelegt sind diese in die folgenden zwei Unterkapiteln. 
 
@@ -1094,6 +1099,181 @@ HTTP + Vorgehen der Abstraktion inkl. Screenshots hier
 \end{bchart}
 
 Image + Summary Tabellen hier am Ende no!
+
+\end{comment}
+
+\subsection*{Uncommon Locations}
+
+Nachfolgend werden die Ergebnisse der Uncommon Location Analyse des Chrome Browsers dargelegt. Dafür werden die beiden Forensik-Programme Autopsy und Volatility verwendet.
+
+\subsubsection*{Analyse mit Autopsy}
+
+Auch in Autopsy konnten keine Artefakte der durchgeführten Browsing-Session gefunden werden, weder durch die Substringsuche, noch durch die Analyse der von Autopsy kategorisierten Dateien. Eine weitergehende Analyse einiger kategorisierter Dateien ist in [link Anhang] zu sehen.
+
+\subsubsection*{Analyse mit Volatility}
+
+Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die Analyseergebnisse des Hauptspeichers (RAM) mittels des Forensik-Tools Volatility. Im RAM konnten schließlich Artefakte gefunden werden. Diese wurden mittels des Volatility Plugins Yarascan identifiziert werden, wobei die Yara-Regeln aus [link Kapitel] verwendet wurden. Zusätzlich zu den erkannten Strings spielt auch noch die PID eine entscheidende Rolle, da damit der Treffer entweder dem Browser oder einem anderen Prozess eindeutig zuordnet werden kann. Die Ergebnisse dieser String-Suche werden nachfolgend dargelegt.
+
+\paragraph*{Yara-Regel \glqq{}HTML\grqq{}}
+
+Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden.
+%TODO evtl andere xmax hier um es deutlicher hervorzuheben?
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{l}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Insiders</span>},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1400,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Ja</span>},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1400,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{L1</div>},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1400,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{>Themen:},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1400,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{chrome.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener HTML-Fragmente im Chrome RAM}
+	\label{chart:firefox-volatility-keywords}
+\end{table}
 
 \section{Brave}
 

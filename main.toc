@@ -18,11 +18,11 @@
 \contentsline {section}{\numberline {5.1}Firefox}{20}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Tor}{30}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Chrome}{38}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Brave}{42}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{44}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Diskussion}{45}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Fazit}{46}{chapter.8}%
-\contentsline {chapter}{Appendices}{47}{section*.74}%
-\contentsline {chapter}{Literaturverzeichnis}{50}{figure.caption.76}%
-\contentsline {chapter}{\nonumberline Literatur}{50}{chapter*.77}%
+\contentsline {section}{\numberline {5.4}Brave}{40}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{42}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Diskussion}{43}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Fazit}{44}{chapter.8}%
+\contentsline {chapter}{Anhänge}{45}{section*.68}%
+\contentsline {chapter}{Literaturverzeichnis}{48}{figure.caption.70}%
+\contentsline {chapter}{\nonumberline Literatur}{48}{chapter*.71}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

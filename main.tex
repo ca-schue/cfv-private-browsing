@@ -9,6 +9,8 @@ bibtotoc,				% Literaturverzeichis in Inhaltsverzeichnis
 headsepline,			% Kopfzeilentrennlinie
 headings,	
 %  draft,				% Korrekturfassung
+table,
+xcdraw
 ]{scrreprt}		% scrartcl	
 
 % Eingabecodierung
@@ -86,9 +88,39 @@ automark,		% Lebende Kolumnentitel
 \usepackage{adjustbox}
 \usepackage{multirow}
 
-% Charts
+% Balkendiagramme
+\usepackage{pgfplots, pgfplotstable}
+
+% Für zurätzliche pgfplot Features
+\pgfplotsset{compat=1.9}
+
+% Abbildungen nebeneinander
+\usepackage{subcaption}
+
+% Diagramme
+\usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{bchart}
+
+% Tabelle as Figure referenzieren
+\usepackage{caption}
+
+% Fußnote in Tabelle
+\usepackage{tablefootnote}
+
+% Codebeispiele
+\usepackage{minted}
+\usepackage{multicol} % added package
+
+\usepackage{chngcntr}
+
+% Trennung von texttt Sektionen
+\usepackage[htt]{hyphenat}
+
+% Appendix -> Anhang
+\renewcommand\appendixname{Anhang}
+\renewcommand\appendixpagename{Anhänge}
+\renewcommand\appendixtocname{Anhänge}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
