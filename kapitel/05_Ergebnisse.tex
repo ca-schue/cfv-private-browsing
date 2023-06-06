@@ -37,7 +37,7 @@ Die Ergebnisse dieser Stringsuche sind nachfolgend nach den Yara-Regeln geordnet
 In keinem der Firefox RAM Dumps wurden HTML Fragemente der besuchten Seiten gefunden. Somit wird diese Yara-Regel nicht weiter betrachtet.
 
 \paragraph*{Yara-Regel ``Suchbegriffe``}
-Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Suchbegriffe ``pfaffenhofen``, ``nanoradar``, ``mooserliesl`` sowie ``mallofamerica`` ausschließlich nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in zwölf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff ``pfaffenhofen`` mit 1301 gefundenen Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchten Stadt zeigt. 
+Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Suchbegriffe ``pfaffenhofen``, ``nanoradar``, ``mooserliesl`` sowie ``mallofamerica`` ausschließlich nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in elf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff ``pfaffenhofen`` mit 1301 Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchten Stadt zeigt. 
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -363,10 +363,10 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden alle Such
 \end{table}
 
 Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs ``unitree.com``, ``mooserliesl.de``, ``mallofamerica.com`` sowie ``donaukurier.de`` identifiziert werden.
-Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Alle besuchten URLs wurden in diesem Dump sowohl in Firefox- als auch anderen Prozessen gefunden, wobei die meisten Artefakte in Firefox Prozessen zu finden sind. Dabei wurde ``mooserliesl.de`` mit insgesamt 390 Artefakten am wenigsten gefunden, ``donaukurier.de`` mit über 3600 Artefakten am häufigsten.
+Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Die besuchten URLs wurden hauptsächlich in Firefox-Prozessen gefunden. Die URL ``mooserliesl.de`` wurde mit insgesamt 390 Artefakten am wenigsten gefunden, ``donaukurier.de`` mit über 3600 Artefakten am häufigsten.
 
-Bemerkenswert ist, dass selbst URL-Artefakte gefunden wurden, nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL-Artefakt in einem Firefox Prozess gefunden.
-Anhand der PID $2252$ wurde festgestellt, dass sich alle URL-Artefakte des dritten RAM Dumps in einem \textit{svchost.exe} Prozess mit der gleichen PID befinden. Unter dem \textit{Service Host} Prozess laufen gruppierte Windows-Dienste, um Ressourcen zu sparen und die Systemleistung zu verbessern.
+Bemerkenswert ist, dass URL-Artefakte gefunden wurden, selbst nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL-Artefakt in einem Firefox Prozess gefunden.
+Anhand der PID 2252 wurde festgestellt, dass sich alle URL-Artefakte nach Schließen des Browsers (RAM-Dump 3) in einem \textit{svchost.exe} Prozess mit der gleichen PID befinden. Unter dem \textit{Service Host} Prozess laufen gruppierte Windows-Dienste, um Ressourcen zu sparen und die Systemleistung zu verbessern.
 Volatility bietet das Plugin \textit{svcscan} an, mit dem alle laufenden Dienste ausgegeben werden können.
 Bei Anwendung auf den dritten RAM Dump wurde jedoch zu keinem Dienst eine PID angegeben, wordurch der Dienst mit den URL Artefakten nicht im RAM identifiziert werden konnte. \cite{Nicholasswhite.05.06.2023}
 Stattdessen wurde der dritte Snapshot aufgetaut, um im laufenden Windowsbetrieb den Dienst mithilfe des Process Explorers zu identifizieren.
@@ -623,11 +623,10 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 %	\label{chart:final-criteria}  
 %	\caption{Mail}
 %\end{figure}
-Es konnten alle E-Mail Artefakte des Browsing Szenarios gefunden werden.
-Wie in Abbildung \ref{chart:firefox-volatility-mail} gezeigt, befinden sich die Artefakte ausschließlich im zweiten Firefox RAM Dump, nach dem Browsing Szenario mit geöffnetem Browser.
-Unter den gefundenen Artefakten befindet sich mit am häufigsten die Absenderadresse ``computerforensikvl@gmail.com``. Dieses Artefakt wurde als einziges Mail-Artefakt in anderen Prozessen als Firefox gefunden.
+Wie in Abbildung \ref{chart:firefox-volatility-mail} gezeigt, wurden ausschließlich nach dem Browsing Szenario mit geöffnetem Firefox Browser (RAM Dump 2) alle E-Mail Artefakte gefunden.
+Unter den gefundenen Artefakten befindet sich am häufigsten die Absenderadresse ``computerforensikvl@gmail.com``. Dieses Artefakt wurde als einziges E-Mail-Artefakt sechsmal in anderen Prozessen als Firefox gefunden.
 
-Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, vier mal als Klartext im RAM gefunden wurden. Das Passwort wurde in je zwei Firefox Prozessen mit den PIDs 7420 und 8424 zwei mal gefunden. Tabelle \ref{tab:firefox-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
+Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, viermal als Klartext im RAM gefunden wurden. Das Passwort wurde je zweimal in zwei Firefox Prozessen mit den PIDs 7420 und 8424 gefunden. Tabelle \ref{tab:firefox-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
 \begin{table}[h!]
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|c|c|c|ll}
@@ -653,7 +652,7 @@ Zu diesen Artefakten wurde gemäß Methodik in Kapitel \ref{subsubsection:ergebn
 	\caption{Passwort-Klartext in Firefox Speicherseiten von PID 7420}
 	\label{img:firefox-pw-offset-pid-7420}  
 \end{figure}
-Wie in Abbildung \ref{img:firefox-pw-offset-pid-7420} gezeigt, sind in der Speicherseite des Prozesses mit PID $7420$ in unmittelbarer Umgebung des gefundenen Passworts am Byte-Offset $0xb9ce29180c8$ Code-Fragmente der \textit{Gecko-Engine} zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video. \cite{MozillaWiki.05.06.2023}
+Wie in Abbildung \ref{img:firefox-pw-offset-pid-7420} gezeigt, sind in der Speicherseite des Prozesses mit PID 7420 in unmittelbarer Umgebung des gefundenen Passworts am Byte-Offset 0xb9ce29180c8 Code-Fragmente der \textit{Gecko-Engine} zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video. \cite{MozillaWiki.05.06.2023}
 In der gleichen Datei konnten nach dem gefundenen Passwort am Byte-Offset $0x12e234e0$ die Strings ``Passwd`` sowie ``sessionrestore`` (siehe Common Location \textit{Sessionstore} in Anhang \ref{subsubsection:appendix-firefox-common-locations-writefile-operations}) identifiziert werden. 
 
 \begin{figure}[h!]
@@ -741,35 +740,34 @@ Die Analyse der Registry zählt gemäß Methodik in Kapitel \ref{subsection:meth
 In diesem Abschnitt werden die Ergebnisse der Datenanalyse der Common Locations, Uncommon Locations sowie der Registry für den Tor-Browser präsentiert.
 
 \subsection*{Common Locations}
-Zunächst werden die Common Locations analysiert, um potenzielle Hinweise auf Internet-Aktivitäten des Browsing Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wurde gemäß der im Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} beschriebenen Methodik zwischen Schreibvorgängen in den Logdateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden. Dabei konnten in keiner Datei PB Artefakte gefunden werden. Eine detaillierte Analyse der Process Monitor ``WriteFile`` Operations sowie SQLite-Datenbänken ist im Anhang \ref{subsection:appendix-tor-common-locations} beschrieben.
+Zunächst werden die Common Locations analysiert, um potenzielle Hinweise auf Internet-Aktivitäten des Browsing Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wurde gemäß der im Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} beschriebenen Methodik zwischen Schreibvorgängen in den Logdateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden. Dabei konnten in keiner Datei PB Artefakte gefunden werden. Eine detaillierte Analyse der Process Monitor ``WriteFile`` Operations sowie der SQLite-Datenbänke ist im Anhang \ref{subsection:appendix-tor-common-locations} beschrieben.
 
 \subsection*{Uncommon Locations}
 Nachfolgend werden die Analyseergebnisse der Tor Uncommon Locations beschrieben.
-Dazu werden die vollständigen Speicherabbilder nach PB Artefakten untersucht ohne das genaue Browserverhalten zu berücksichtigen. Stattdessen wird sich auf die Vollständigkeit der Funktionen der Forensik-Tools Autopsy und Volatility verlassen.
+Dazu werden die vollständigen Speicherabbilder nach PB Artefakten untersucht, ohne das genaue Browserverhalten zu berücksichtigen. Stattdessen wird sich auf die Vollständigkeit der Funktionen der Forensik-Tools Autopsy und Volatility verlassen.
 
 \subsubsection*{Analyse mit Autopsy}
+Autopsy wird bei den Uncommon Locations als konkretes forensisches Werkzeug verwendet, statt nur zur Dateiextraktion, wie es bei den Common Locations der Fall war.
 
-Im ersten Schritt wird Autopsy als konkretes forensisches Werkzeug verwendet, statt nur nur zur Dateiextraktion, wie es bei den Common Locations der Fall war.
-
-Eine Stichwortsuche nach PB Artefakten in Autopsy in allen fünft Festplatten-Images ergab keine Treffer.
+Eine Stichwortsuche nach PB Artefakten in Autopsy in allen fünf Tor Festplatten-Images ergab keine Treffer.
 
 Ebenso wurden in den automatisch von Autopsy kategorisierten Dateien keine PB Artefakte gefunden. 
 Im Anhang \ref{subsubsection:appendix-tor-uncommon-locations-autopsy} ist eine detaillierte Analyse der kategorisierten Dateien beschrieben.
 
 
 \subsubsection*{Analyse mit Volatility}
-
-Nachfolgend werden die Ergebnisse der Analyse des RAM mithilfe des Volatility Plugins Yarascan beschrieben. Die Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelistet.
+Bei der Untersuchung der Tor RAM-Dumps mithilfe des Volatility Plugins Yarascan, konnten PB-Artefakte identifiziert werden.
+Nachfolgend werden die Ergebnisse der geordnet nach Yara-Regeln beschrieben. Die vollständigen Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelistet.
 
 \paragraph*{Yara-Regel ``HTML``}
 Wie bei Firefox, konnten keine HTML Artefakte im RAM gefunden werden. Deshalb wird diese Kategorie nicht weiter aufgeführt.
 
 \paragraph*{Yara-Regel ``Suchbegriffe``}
-Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Erstellen einer ``Neuen Identität`` (RAM Dump 3-1) Suchbegriffe des Browsing-Szenarios gefunden.
+Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden nach dem Browsing-Szenarios sowie vor (RAM-Dump 2) als auch nach Erstellen einer ``Neuen Identität`` (RAM Dump 3-1) Suchbegriffe des Browsing-Szenarios gefunden.
 Nachdem eine ``Neue Identität`` erstellt wurde, reduzierten sich die gefundenen Artefakte deutlich. 
-Die Suchbegriffe wurden hauptsächlich in Firefox Prozessen gefunden. Kein Artefakt war im Tor.exe Prozess zu finden.
-Mit 4833 Artefakten wurden am häufigsten ``pfaffenhofen`` nach dem Browsing Szenario im zweiten RAM-Dump gefunden. 
-Nach dem Schließen des Tor-Browsers wurde keine Suchbegriffe mehr im RAM identifiziert.
+Die Suchbegriffe wurden hauptsächlich in Firefox Prozessen gefunden. Kein Artefakt war im Tor Prozess zu finden.
+Mit 4833 Artefakten wurde am häufigsten der Suchbegriff ``pfaffenhofen`` nach dem Browsing Szenario im zweiten RAM-Dump gefunden. 
+Nach dem Schließen des Tor-Browsers wurden keine Suchbegriffe im RAM identifiziert.
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -949,9 +947,9 @@ Nach dem Schließen des Tor-Browsers wurde keine Suchbegriffe mehr im RAM identi
 %\end{figure}
 
 \paragraph*{Yara-Regel ``URLs``}
-Ähnlich zur Yara-Regel ``Suchbegriffe`` wurden, wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich während des Browsing-Szenarios (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Ebenso wurden im RAM Dump 3-1 bei deutlich weniger URL-Artefakte als in RAM Dump 2 gefunden. 
-Artefakte dieser Yara-Regel wurden nach Firefox-Prozessen hauptsächlich  in Tor-Prozessen gefunden. Am wenigsten Artefakte konnten in anderen Prozessen identifiziert werden.
-Auffällig ist, dass die URL ``mallofamerica.com`` 26505 Mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde ``mooserliesl.de`` nur 508 Mal im zweiten RAM Dump  gefunden. Nach Schließen des Tor-Browsers wurden keine URL Artefakte mehr im RAM gefunden.
+Ähnlich zur Yara-Regel ``Suchbegriffe`` wurden, wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Dabei wurden im RAM Dump 3-1 deutlich weniger URL-Artefakte als in RAM Dump 2 gefunden. 
+Artefakte dieser Yara-Regel wurden nach Firefox-Prozessen hauptsächlich in Tor-Prozessen gefunden. Am wenigsten Artefakte wurden in anderen Prozessen identifiziert.
+Auffällig ist, dass die URL ``mallofamerica.com`` 26505 Mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde ``mooserliesl.de`` nur 518 Mal gefunden. Nach Schließen des Tor-Browsers wurden keine URL Artefakte mehr im RAM gefunden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{l}	
@@ -1389,10 +1387,10 @@ Nach dem Browsing-Szenario, vor Zuweisung einer ``Neuen Identität`` (RAM-Dump 2
 %	\label{chart:final-criteria}  
 %	\caption{Mail}
 %\end{figure}
-Wie in Abbildung \ref{chart:tor-volatility-mail} zu sehen ist, wurden die Artefakte ausschließlich in Firefox Prozess gefunden.
-Nur die Absenderadresse ``computerforensikvl@gmail.com`` wurde nach Erstellen der neuen Identität im RAM-Dump 3-1 gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene E-Mail Artefakt.
-Wie bei der Analyse der Firefox RAM-Dumps in Kapitel \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}, wurde das Passwort als Klartext nach dem Browsing-Szenario im zweiten RAM-Dump gefunden.
-Das Passwort wurde in zweimal im Firefox Prozess mit der PID 708 gefunden. Tabelle \ref{tab:tor-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe sowie deren Abbildung auf die mithilf des Volatility Plugins \textit{memmap} identifizierten Byte-Offsets der extrahierten Speicherseiten.
+Nur die Absenderadresse ``computerforensikvl@gmail.com`` wurde noch nach Erstellen der ``Neuen Identität`` (RAM-Dump 3-1) gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene E-Mail Artefakt.
+Wie in Abbildung \ref{chart:tor-volatility-mail} dargestellt, wurden die Artefakte ausschließlich in Firefox Prozess gefunden.
+Wie bei der Analyse der Firefox RAM-Dumps in Kapitel \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}, wurde das Passwort als Klartext nach dem Browsing-Szenario, vor Zuweisung einer ``Neuen Identität``(RAM-Dump 2) gefunden.
+Das Passwort wurde zweimal im Firefox Prozess mit der PID 708 gefunden. Tabelle \ref{tab:tor-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe sowie deren Abbildung auf die mithilfe des Volatility Plugins \textit{memmap} identifizierten Byte-Offsets der extrahierten Speicherseiten.
 \begin{table}[h!]
 	\centering
 	\resizebox{\linewidth}{!}{
@@ -1416,12 +1414,12 @@ Das Passwort wurde in zweimal im Firefox Prozess mit der PID 708 gefunden. Tabel
 	\caption{Passwort-Klartext in Firefox Speicherseiten von PID 708}
 	\label{img:firefox-pw-offset-pid-708}  
 \end{figure}
-Bei Untersuchung des String-Kontexts in Abbildung \ref{img:firefox-pw-offset-pid-708}, wurden für das Passwort am Byte-Offset \texttt{0xea0318} keine auffälligen Artefakte entdeckt.
-Im Bereich des gefundenen Passworts am Byte-Offset \texttt{0x10f7748} befindet sich der String ``CSP\_ignoringSrcForStrictDynamic``, dessen Bedeutung nicht näher bestimmt werden konnte.
-Weiterhin wurde die Zeichenkette ``invalidation/lcs/client`` in der Nähe des Passworts gefunden. Dieser String wird in einem Firefox Bug-Ticket verwendet, welches bereits 2017 geschlossen wurde. Der Bug betraf ein Speicher-Leck. \cite{Bugzilla.05.06.2023}
+Bei Untersuchung des String-Kontexts in Abbildung \ref{img:firefox-pw-offset-pid-708}, wurden für das Passwort am Byte-Offset 0xea0318 keine auffälligen Artefakte entdeckt.
+Im Bereich des gefundenen Passworts am Byte-Offset 0x10f7748 befindet sich der String ``CSP\_ignoringSrcForStrictDynamic``, dessen Bedeutung nicht näher bestimmt werden konnte.
+Weiterhin wurde die Zeichenkette ``invalidation/lcs/client`` in der Nähe des Passworts gefunden. Auf diesen String wird in einem Firefox Bug-Ticket verwiesen, welches bereits 2017 geschlossen wurde. Der Bug betraf ein Speicher-Leck. \cite{Bugzilla.05.06.2023}
 	
 \paragraph*{Yara-Regel ``DK-Logo``}
-Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos  ein einziges Mal nach dem Browsing Szenario, vor Erstellen der ``Neuen Identität`` im zweiten RAM-Dump in einem Firefox Prozess gefunden.
+Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos ein einziges Mal nach dem Browsing Szenario, vor Erstellen der ``Neuen Identität`` (RAM-Dump 2) in einem Firefox Prozess gefunden.
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{
 		\begin{tikzpicture}
