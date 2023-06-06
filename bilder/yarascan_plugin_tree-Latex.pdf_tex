@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{468.99993896bp}%
+    \setlength{\unitlength}{607.99996948bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,41 +50,61 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.12557425)%
+  \begin{picture}(1,0.86643028)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.34707601,1.07197548){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}yarascan\end{tabular}}}}%
+    \put(0.52085181,0.82505912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}yarascan\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.36904193,0.84226644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PID\end{tabular}}}}%
+    \put(0.45388225,0.70567377){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PID\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.00863802,0.84226644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string virtual address\end{tabular}}}}%
+    \put(0.046875,0.71394801){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string \end{tabular}}}}%
+    \put(0.02005762,0.69621751){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}virtual address\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.83046996,0.84226644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}triggered yara rule\end{tabular}}}}%
+    \put(0.75134827,0.71394801){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}triggered \end{tabular}}}}%
+    \put(0.75371233,0.69621751){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}yara rule\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.634978,0.84226644){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}found string\end{tabular}}}}%
+    \put(0.9026485,0.71394801){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}triggered \end{tabular}}}}%
+    \put(0.89437427,0.69621751){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string object\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.14445349,0.64318527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memmap \end{tabular}}}}%
+    \put(0.59413786,0.70567377){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}found string\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.60846575,0.64318527){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}pslist\end{tabular}}}}%
+    \put(0.1091349,0.56264777){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memmap \end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.57168837,0.50535985){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process name\end{tabular}}}}%
+    \put(0.45015146,0.56264777){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}pslist\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.14495597,0.52679936){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}mapping: \end{tabular}}}}%
-    \put(0.11200708,0.50535985){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}virtual address -> \end{tabular}}}}%
-    \put(0.10324943,0.48238895){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}offset in memory file\end{tabular}}}}%
+    \put(0.49505024,0.45035462){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process name\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.32056376,0.1837672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HxD\end{tabular}}}}%
+    \put(0.10950429,0.3747045){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}mapping: \end{tabular}}}}%
+    \put(0.07659205,0.35815604){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}virtual addresses -> \end{tabular}}}}%
+    \put(0.07929549,0.34042554){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}offset in memory file\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.0363706,0.36294025){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string offset in\end{tabular}}}}%
-    \put(0.04594181,0.33996934){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
+    \put(0.23914007,0.13593382){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}winhex\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.28378637,0.04594178){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string context\end{tabular}}}}%
+    \put(0.02098109,0.26477543){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string offset in\end{tabular}}}}%
+    \put(0.02836879,0.24704493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.3496363,0.51607961){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process \end{tabular}}}}%
-    \put(0.33688267,0.4931087){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
+    \put(0.21904551,0.03427897){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}string context\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.34353466,0.65390503){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memmap \end{tabular}}}}%
-    \put(0.35528331,0.63093413){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}--dump\end{tabular}}}}%
+    \put(0.37527705,0.45035462){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PPID\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.68201464,0.56264777){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}dllist\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.67531029,0.45862886){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}List of \end{tabular}}}}%
+    \put(0.65637929,0.44089836){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}loaded DLLs\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.81754212,0.56264777){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}dumpfiles \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.26750887,0.36643027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process \end{tabular}}}}%
+    \put(0.25766475,0.34869978){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.80453976,0.45744682){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
+    \put(0.82504064,0.43971633){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.79271943,0.44562649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
+    \put(0.81322031,0.42789599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{yarascan_plugin_tree-Latex.pdf}}%
+    \put(0.26279921,0.570922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memmap \end{tabular}}}}%
+    \put(0.27186761,0.5531915){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}--dump\end{tabular}}}}%
   \end{picture}%
 \endgroup%

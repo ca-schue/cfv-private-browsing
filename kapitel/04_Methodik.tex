@@ -38,12 +38,13 @@ Der \textit{Tor Browser}, hier auch nur \textit{Tor} genannt, ist ein auf Firefo
 Im Gegensatz zu Firefox wird mit Schutzmaßnahmen gegen den Webangreifer geworben.
 Der Schutz vor dem Webangreifer ist durch das Tor-Netzwerk gegeben.
 Der Tor Browser wirbt mit verstärkten Schutzmaßnahmen gegen den lokalen Angreifer. \cite{Tor.24.05.2023}
+
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{\includegraphics{bilder/tor-new-identity.png}}
 	\caption{Funktion ``Neue Identität`` des Tor-Browsers}
 	\label{img:tor-new-identity}
 \end{figure}
-Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion ``\textit{Neue Identität}`` ermöglicht es, alle aktuellen Tabs und Fenster zu schließen, sämtliche private Informationen wie Cookies und Verlauf zu löschen sowie die Verbindung mit dem Tor-Netzwerk neu zu konfigurieren.
+Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion ``\textit{Neue Identität}`` ermöglicht es, alle aktuellen Tabs und Fenster zu schließen, sämtliche private Informationen wie Cookies und Verlauf zu löschen sowie die Verbindung mit dem Tor-Netzwerk neu zu konfigurieren. \cite{Tor.24.05.2023}
 %Für diesen Versuch: Tor Version 12.0.4 (64 Bit)
 
 \subsubsection*{Chrome}
@@ -260,7 +261,7 @@ Dieses Problem haben Muir, Leimich und Buchanan erkannt und Zeitpunkte zur Daten
 	\label{img:zeitpunkte-datensammlung}
 	\centering
 	\small
-	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-Latex.pdf_tex}}}
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-tor-Latex.pdf_tex}}}
 \end{figure}
 
 Der erste RAM-Dump sowie der erste VM-Snapshot nach der Browser-Installation, vor Beginn des Browsing-Szenarios, dienen als Baseline für die Analyse, da in diesen Speicherabbildern kein PB Artefakt gefunden werden darf.
@@ -276,7 +277,7 @@ Dieses Vorgehen zur Datensammlung wird bei allen Browsern durchgeführt. Einzig 
 	\label{img:zeitpunkte-datensammlung-tor}
 	\centering
 	\small
-	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-tor-Latex.pdf_tex}}}
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/datensammlung-zeitpunkte-Latex.pdf_tex}}}
 	\label{fig:jes}
 \end{figure}
 
@@ -403,7 +404,6 @@ Alle verwendeten Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelist
 Um den RAM-Dump nach den Yara-Regeln zu durchsuchen, wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.vadyarascan --yara-file yara\_rules.yara > yarascan.txt}
 Nachdem der RAM-Dump nach den Regeln durchsucht wurde, gibt die Yarascan-Ausgabe für jeden gefundenen String die PID des Prozesses, in dem der String gefunden wurde, sowie die virtuelle Speicheradresse des gefundenen Strings an.
 
-Wie in Abbildung \ref{img:volatility-plugins} dargestellt, wird davon ausgehend mit dem Plugin \textit{pslist} (\texttt{vol.py -f ram\_dump.img windows.pslist --pid <PID> > pslist.txt}) der Prozessname der PID ermittelt, in dem der String gefunden wurde.
 \begin{figure}[h!]
 	\centering
 	\small
@@ -411,6 +411,9 @@ Wie in Abbildung \ref{img:volatility-plugins} dargestellt, wird davon ausgehend 
 	\caption{Abhängigkeiten der verwendeten Volatility-Plugins yarascan, pslist und memmap}
 	\label{img:volatility-plugins}
 \end{figure}
+
+Wie in Abbildung \ref{img:volatility-plugins} dargestellt, wird davon ausgehend mit dem Plugin \textit{pslist} (\texttt{vol.py -f ram\_dump.img windows.pslist --pid <PID> > pslist.txt}) der Prozessname der PID ermittelt, in dem der String gefunden wurde.
+
 Oft ist bei einem gefundenen String von Interesse, ob in den Speicheradressen vor und nach dem Treffer weitere Zusammenhänge erkennbar sind.
 Mithilfe des Plugins \textit{memmap} (\texttt{vol.py -f ram\_dump.img windows.memmap --pid <PID> > memmap.txt}) wird die Abbildung der virtuellen Speicheradressen eines Prozesses auf die Byte-Offsets der extrahierten Speicherseite des Prozesses ermittelt.
 Diese Seite kann mithilfe des ``--dump`` Flags extrahiert werden: \texttt{vol.py -f ram\_dump.img -o $\backslash$dump\_dir$\backslash$ windows.memmap --pid <PID> -{}-dump}.

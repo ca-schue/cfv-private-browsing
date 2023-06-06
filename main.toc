@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {4.3}Datenanalyse}{12}{}%
 \contentsline {subsection}{\numberline {4.3.1}Common Locations}{12}{}%
 \contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{15}{}%
-\contentsline {subsection}{\numberline {4.3.3}Registry}{17}{}%
+\contentsline {subsection}{\numberline {4.3.3}Registry}{18}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{20}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{20}{}%
 \contentsline {section}{\numberline {5.2}Tor}{27}{}%
@@ -21,8 +21,8 @@
 \contentsline {section}{\numberline {5.4}Brave}{32}{}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{33}{}%
 \contentsline {chapter}{\numberline {7}Diskussion}{37}{}%
-\contentsline {chapter}{\numberline {8}Fazit}{39}{}%
-\contentsline {chapter}{Anhänge}{40}{}%
+\contentsline {chapter}{\numberline {8}Fazit}{38}{}%
+\contentsline {chapter}{Anhänge}{39}{}%
 \contentsline {section}{\numberline {A}Yara-Regeln}{43}{}%
 \contentsline {section}{\numberline {B}Ausführliche Analyse: Firefox}{44}{}%
 \contentsline {subsection}{\numberline {B.1}Common Locations}{44}{}%
@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {C}Ausführliche Analyse: Tor}{53}{}%
 \contentsline {subsection}{\numberline {C.1}Common Locations}{53}{}%
 \contentsline {subsection}{\numberline {C.2}Uncommon Locations}{57}{}%
-\contentsline {subsection}{\numberline {C.3}Registry}{59}{}%
+\contentsline {subsection}{\numberline {C.3}Registry}{58}{}%
 \contentsline {chapter}{Literaturverzeichnis}{60}{}%
 \contentsline {chapter}{\nonumberline Literatur}{60}{}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

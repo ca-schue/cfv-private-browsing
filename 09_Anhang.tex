@@ -218,12 +218,11 @@ Weitere Cache Dateien konnten in keinem Festplatten-Image gefunden werden.
 \end{figure}
 Die Indexdatei \texttt{$\backslash$cache2$\backslash$index} dient als Datenbank im Cache. Sie ermöglicht es dem Firefox-Browser, schnell auf die zwischengespeicherten Ressourcen zuzugreifen und diese effizient zu verwalten. In diese Datei wurde beim Schließen des Browsers geschrieben. Sowohl mit HxD als auch dem Tool FirefoxCache2 konnten keine PB Artefakte identifiziert werden.
 
-Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJGVJPzPe7w4w0KwEY0jw==.ico} ein $64x64$ Pixel großes Mozilla Logo. Dieses Logo ist keinem Schritt des Browsing Szenarios zuzuordnen.
-
+Schließlich enthält die Datei \texttt{$\backslash$jumpListCache$\backslash$ZKJGVJPzPe7w4w0KwEY0jw==.ico} ein $64x64$ Pixel großes Mozilla Logo. Dieses Logo ist keinem Schritt des Browsing Szenarios zuzuordnen und ist vermutlich auf die automatisch geöffnete Datenschutzhinweisseite zurückzuführen.
 
 \paragraph*{Datareporting}
 Dateien im Ordner \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db} sind Teil des Glean-Systems, das für die Sammlung von Telemetriedaten und deren Übermittlung an Mozilla verwendet wird. \cite{GitHub.05.06.2023}
-Die Datei \texttt{data.safe.bin} enthält verschlüsselte und anonyme Informationen über die Nutzung des Browsers. In HxD konnten keine keine PB Artefakte gefunden werden. 
+Die Datei \texttt{data.safe.bin} enthält verschlüsselte und anonyme Informationen über die Nutzung des Browsers. In HxD konnten keine PB Artefakte in den Dateien gefunden werden. 
 
 Dateien im Format \texttt{$\backslash$datareporting$\backslash$glean$\backslash$db$\backslash$<Profilname>.new-profile.jsonlz4} speichern Informationen über das Firefox-Profil, das von Glean verwendet wird. In diese Dateien wurde erst nach dem Browsing-Szanrio, beim Schließen des Browser geschrieben. Diese Dateien im proprietären \textit{jsonlz4}-Format lassen sich mit dem Tool dejsonlz4 dekomprimieren. Die entstandene JSON Datei wurde mit dem Notepad++ JSON Plugin untersucht. Dabei konnten keine PB Artefakte gefunden werden.
 
@@ -300,7 +299,7 @@ Sowohl nachdem die VM herunterfahren wurde, (Snapshot 4) als auch nach Durchfüh
 Somit wurden in den SQLite Datenbanken von Firefox keine zurückverfolgbaren PB Artefakte im privaten Modus hinterlassen.
 
 \subsubsection*{Zusammenfassung Firefox Common Locations}
-Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie in Abbildung \ref{chart:firefox-writefile-logfile1v2} dargestellt, gab es mit Ausnahme der Datareporting Dateien in Logfile 1 stets mehr oder gleich viele Schreiboperationen wie in Logfile 2. Keine der Schreiboperation hinterließ Private Browsing Artefakte.
+Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie in Abbildung \ref{chart:firefox-writefile-logfile1v2} dargestellt, gab es mit Ausnahme der \textit{Datareporting} Dateien in Logfile 1 stets mehr oder gleich viele Schreiboperationen wie in Logfile 2. Keine der Schreiboperation hinterließ Private Browsing Artefakte.
 
 \begin{figure}[h!]
 	\begin{tikzpicture}
@@ -327,7 +326,7 @@ Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während d
 	\legend{Logfile 1, Logfile 2}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Firefox Anzahl Schreiboperationen Logfile 1 vs Logfile 2, geordnet nach Kategorie}
+	\caption{Firefox: Anzahl Schreiboperationen Logfile 1 vs Logfile 2, geordnet nach Kategorie}
 	\label{chart:firefox-writefile-logfile1v2}
 \end{figure}
 
@@ -371,7 +370,7 @@ Die Kategorie ``Web Cookies`` enthält bereits vor Beginn des Browsing Szenarios
 \end{figure}
 
 \paragraph*{Web History}
-Die Kategorie ``Web History`` listet alle Dateien mit gespeichertem Suchverlauf auf. Vor Beginn des Browsing Szenarios (Snapshot 1) enthält die Kategorie zwei Einträge zur Outlook Webseite in der Datei \texttt{WebCacheV01.dat}. Nach Durchführung des Browsing Szenarios (Snapshot 2) wurde ein Eintrag in der \texttt{places.sqlite} Datenbank hinzugefügt. Dabei handelt es sich um die automatisch im normalen Browsingmodus geöffnete Firefox-Standardseite über Datenschutzhinweise. Dies deckt sich mit den Beobachtungen der Common Locations in Anhang \ref{subsection:appendix-firefox-common-locations}. Darüber hinaus enthält dieser Snapshot für die Datei \texttt{WebCacheV01.dat} den Eintrag \texttt{file:///Z:/Logfile\_1}. Dabei handelt es sich um das Process Monitor Logfile, das gemäß Methodik in Kapitel \ref{section:methodik-vorbereitung} über den gemeinsamen VM-Ordner zum Analyse-Rechner transportiert wurde. Ergänzt wird die Kategorie in Snapshot 3 durch den Eintrag \texttt{file:///Z:/Logfile\_2}, dem zweiten Process Monitor Logfile. In Snapshot 4 werden in dieser Katgeorie keine neuen Dateien erfasst. Die kategorisierten Dateien sind in Abbildung \ref{img:firefox-web-history} dargestellt.
+Die Kategorie ``Web History`` listet alle Dateien mit gespeichertem Suchverlauf auf. Vor Beginn des Browsing Szenarios (Snapshot 1) enthält die Kategorie zwei Einträge zur Outlook Webseite in der Datei \texttt{WebCacheV01.dat}. Nach Durchführung des Browsing Szenarios (Snapshot 2) wurde ein Eintrag in der \texttt{places.sqlite} Datenbank hinzugefügt. Dabei handelt es sich um die automatisch im normalen Browsingmodus geöffnete Firefox-Standardseite über Datenschutzhinweise. Dies deckt sich mit den Beobachtungen der Common Locations in Anhang \ref{subsection:appendix-firefox-common-locations}. Darüber hinaus enthält dieser Snapshot für die Datei \texttt{WebCacheV01.dat} den Eintrag \texttt{file:///Z:/Logfile\_1}. Dabei handelt es sich um das Process Monitor Logfile, das gemäß Methodik in Kapitel \ref{section:methodik-vorbereitung} über den gemeinsamen VM-Ordner zum Analyse-Rechner transportiert wurde. Ergänzt wird die Kategorie nach Schließen des Browsers (Snapshot 3) durch den Eintrag \texttt{file:///Z:/Logfile\_2}, dem zweiten Process Monitor Logfile. Nach Herunterfahren der virtuellen Maschine (Snapshot 4) werden in dieser Katgeorie keine neuen Dateien erfasst. Die kategorisierten Dateien sind in Abbildung \ref{img:firefox-web-history} dargestellt.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_history.png}}}
 	\caption{Firefox: Von Autopsy als ``Web History`` kategorisierte Dateien}
@@ -381,7 +380,7 @@ Die Kategorie ``Web History`` listet alle Dateien mit gespeichertem Suchverlauf 
 \paragraph*{Web Categories}
 Diese Kategorie klassifiziert im Speicherabbild gefundene Browsing Artefakte nach Inhalt.
 Vor Beginn des Browsing Szenarios (Snapshot 1) werden hier bereits zwei in Abbildung \ref{img:firefox-web-categories} dargestellte Einträge aufgelistet. Der Eintrag \texttt{bing.com} wird als ``Suchmaschine`` klassifiziert und \texttt{live.com} als ``Web-Email``.
-Wie oben erwähnt, wurden beide Seiten nie aufgerufen. Es gab keine zusätzlichen Einträge in dieser Kategorie in den Snapshots 2 bis 4.
+Wie oben erwähnt, wurden beide Seiten nie aufgerufen. Es gab keine zusätzlichen Einträge in dieser Kategorie während des restlichen Browsing Szenarios (Snapshots 2 - 4).
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/cfv_firefox_autopsy_web_categories.png}}}
 	\caption{Firefox: Von Autopsy als ``Web Categories`` kategorisierte Dateien}
@@ -516,7 +515,7 @@ Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
 \subsubsection*{Process Monitor WriteFile Operations}
 \label{subsubsection:appendix-tor-common-locations-writefile-operations}
 Bei der Versuchsdurchführung für den Tor-Browser gemäß Kapitel \ref{section:methodik-datensammlung} wurden drei Process Monitor Logfiles erstellt.
-Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während des Browsing Szenarios, nach dem Erzeugen einer ``Neuen Identität`` sowie nach Schließen des Browsers.
+Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während des Browsing Szenarios, dem Erzeugen einer ``Neuen Identität`` sowie des Schließens des Browsers.
 Tabelle \ref{tab:tor-writefile-operations} enthält alle in den Logfiles identifizierten Dateien.
 Für jede Datei wurde vermerkt ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob PB Artefakte enthalten sind.
 Die Dateien wurden in die Kategorien \textit{Cache}, \textit{datareporting}, und \textit{Sonstige Dateien} eingeordnet.
@@ -536,32 +535,11 @@ Der Tor-Browser schreibt eine einzige Cache-Datei \texttt{$\backslash$Caches$\ba
 Die Datei ``startupCache.8.little`` ist eine interne Datei, welche erstellt wird, um den Startvorgang des Browsers zu beschleunigen. Sie enthält Informationen über bereits geladene Browser-Komponenten wie JavaScript-Code, CSS-Dateien, Bilder und andere Ressourcen. \cite{MozillaWiki.05.06.2023} 
 Bei Untersuchung mit HxD konnten keine PB Artefakte gefunden werden.
 
-\paragraph*{Datareporting}
-Im ``Datareporting``-Ordner wird vom Tor-Browser die Datei \texttt{$\backslash$datareporting$\backslash$\\data.safe.bin} geschrieben. Sie enthält verschlüsselte und anonyme \textit{Glean} Informationen über die Nutzung des Browsers. \cite{GitHub.05.06.2023b}
-In HxD konnten keine keine PB Artefakte gefunden werden.
-Weiterhin wird die Datei \texttt{$\backslash$datareporting$\backslash$state.json} geschrieben
-Sie enthält Informationen über den Zustand und die Konfiguration des Tor-Browsers, beispielsweise installierte Add-Ons, oder Browser-Einstellungen. Sie wird verwendet, um dem Browser bei Bedarf den Zustand und die Einstellungen wiederherzustellen. \cite{GitHub.08.04.2019}
-Eine Analyse mit Notepad++ und dem JSON-Plugin brachte keine PB-Artefakte.
-
-\paragraph*{Sonstige Dateien}
-Die im ersten Logfile geschriebene Datei \texttt{AlternateServices.txt}
-enthält .onion-URLs des HTTP Alternative Services. Dieser Mechanismus ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung. \cite{MozillaSupport.26.10.2020}
-
-Weiterhin wird während des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete \textit{NoScript}-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
-Nach Extraktion dieser Datei, kann diese per Drag-and-Drop in ein geöffnetes Firefox-Fenster gezogen werden und es ist möglich, die Erweiterung zu installieren.
-
-Die geschriebene Datei \texttt{onion-aliases.json} enthält \textit{SecureDrop} Adressen, beispielsweise für die Süddeutsche Zeitung. 
-SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. Whistleblower können über .onion-URLs auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln. \cite{SecureDrop.05.06.2023}
-
-Schließlich wurde in die Datei \texttt{SiteSecurityServiceState.txt} geschrieben.
-Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und andere Sicherheitsmerkmale, die von den besuchten Websites verwendet werden.
-Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt. \cite{Gitlab.05.06.2023} In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
-
 %\newpage
 \newgeometry{bottom=2cm,top=0.5cm}
 \afterpage{
 \begin{landscape}% Landscape page
-	\setcounter{page}{54}
+	\setcounter{page}{53}
 %	\thispagestyle{empty}
 	\vspace*{1.5cm}
 	\hspace*{-1cm}
@@ -610,6 +588,26 @@ Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt.
 \restoregeometry
 
 
+\paragraph*{Datareporting}
+Im ``Datareporting``-Ordner wird vom Tor-Browser die Datei \texttt{$\backslash$datareporting$\backslash$\\data.safe.bin} geschrieben. Sie enthält verschlüsselte und anonyme \textit{Glean} Informationen über die Nutzung des Browsers. \cite{GitHub.05.06.2023b}
+In HxD konnten keine keine PB Artefakte gefunden werden.
+Weiterhin wird die Datei \texttt{$\backslash$datareporting$\backslash$state.json} geschrieben
+Sie enthält Informationen über den Zustand und die Konfiguration des Tor-Browsers, beispielsweise installierte Add-Ons, oder Browser-Einstellungen. Sie wird verwendet, um dem Browser bei Bedarf den Zustand und die Einstellungen wiederherzustellen. \cite{GitHub.08.04.2019}
+Eine Analyse mit Notepad++ und dem JSON-Plugin brachte keine PB-Artefakte.
+
+\paragraph*{Sonstige Dateien}
+Die im ersten Logfile geschriebene Datei \texttt{AlternateServices.txt}
+enthält .onion-URLs des HTTP Alternative Services. Dieser Mechanismus ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung. \cite{MozillaSupport.26.10.2020}
+
+Weiterhin wird während des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete \textit{NoScript}-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
+Nach Extraktion dieser Datei, kann diese per Drag-and-Drop in ein geöffnetes Firefox-Fenster gezogen werden und es ist möglich, die Erweiterung zu installieren.
+
+Die geschriebene Datei \texttt{onion-aliases.json} enthält \textit{SecureDrop} Adressen, beispielsweise für die Süddeutsche Zeitung. 
+SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. Whistleblower können über .onion-URLs auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln. \cite{SecureDrop.05.06.2023}
+
+Schließlich wurde in die Datei \texttt{SiteSecurityServiceState.txt} geschrieben.
+Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und andere Sicherheitsmerkmale, die von den besuchten Websites verwendet werden.
+Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt. \cite{Gitlab.05.06.2023} In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
 	
 \subsubsection*{SQLite Datenbänke} 
 Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel \ref{appendix:firefox-sqlite} verwaltet und schreibt.
@@ -644,7 +642,7 @@ formhistory.sqlite                                         & \cellcolor[HTML]{C0
 Nach Browser-Installation wurde noch keine SQLite-Datei angelegt (Snapshot 1).
 
 Während des Browsing Szenarios wurden alle Datenbänkte initialisiert.
-In places.sqlite wurden automatisch .onion URLs geschrieben, die zu Tor Standardseiten führen. Beispielsweise Seiten wie ``The Tor Blog`` oder ``Tor Browser Manual``.
+In places.sqlite wurden automatisch .onion-URLs geschrieben, die zu Tor Standardseiten führen. Beispielsweise Seiten wie ``The Tor Blog`` oder ``Tor Browser Manual``.
 Die gleichen Einträge wurden in der favicons.sqlite Datenbank geschrieben, mit dem Präfix ``Fake-favicon-uri``. Ein tatsächliches Icon wurde nicht in die Datenbank geschrieben. 
 Weiterhin erhielt die ``remote settings`` Datenbank den gleichen Eintrag wie es bereits bei Firefox der Fall war. Der Eintrag enthält keine PB Artefakte.
 Die restliche SQLite-Dateien wurden ohne Inhalt angelegt, nur die Spaltennamen wurden definiert.
@@ -689,7 +687,7 @@ Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen,
 	\legend{Logfile 1, Logfile 2-1, Logfile 2-2}
 	\end{axis}
 	\end{tikzpicture}
-	\caption{Tor Anzahl Schreiboperationen Logfile 1 vs Logfile 2-1 vs Logfile 2-2, geordnet nach Kategorie}
+	\caption{Tor: Anzahl Schreiboperationen Logfile 1 vs Logfile 2-1 vs Logfile 2-2, geordnet nach Kategorie}
 	\label{chart:firefox-writefile-logfile1v21vs22}
 \end{figure}
 %\begin{figure}[h!]
