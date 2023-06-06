@@ -132,14 +132,14 @@
 \subsubsection*{Process Monitor WriteFile Operations}
 \label{subsubsection:appendix-firefox-common-locations-writefile-operations}
 Gemäß Versuchsdurchführung wurden für Firefox mit dem Process Monitor Tool zwei Logfiles erstellt. Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während und nach dem Browsing Szenario.
-Zunächst wurden die beiden Logfiles gemäß Methodik in Kapitel \ref{subsection:methodik-datensammlung-processmonitorlogfiles} in Excel aufbereitet. Tabelle \ref{tab:firefox-writefile-operations} listet alle in den gefilterten Logfiles identifizierten Dateien auf. Dabei wurde für jede Datei vermerkt, ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob in der Datei PB Artefakte enthalten sind. Die wiederherstellbaren Dateien wurden in die fünf Kategorien \textit{Cache}, \textit{Datareporting}, \textit{Sessionstore-Backup} und \textit{Sonstige Dateien} eingeordnet. In keiner der Dateien wurden PB Artefakte identifiziert.
+Zunächst wurden beide Logfiles gemäß Methodik in Kapitel \ref{subsection:methodik-datensammlung-processmonitorlogfiles} in Excel aufbereitet. Tabelle \ref{tab:firefox-writefile-operations} listet alle in den gefilterten Logfiles identifizierten Dateien auf. Dabei wurde für jede Datei vermerkt, ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob in der Datei PB Artefakte enthalten sind. Die wiederherstellbaren Dateien wurden in die Kategorien \textit{Cache}, \textit{Datareporting}, \textit{Sessionstore-Backup} und \textit{Sonstige Dateien} eingeordnet. In keiner der Dateien wurden PB Artefakte identifiziert.
 
-Bei detaillierter Untersuchung der wiederherstellbaren Dateien konnten zwei Pfade identifiziert werden, in die Firefox während des Versuchs Dateien schreibt. 
+Bei detaillierter Untersuchung der wiederherstellbaren Dateien konnten zwei Pfade identifiziert werden, in die Firefox während des Versuchs Dateien schreibt: 
 \begin{itemize}
 \item[\textbf{Local}] \texttt{C:$\backslash$Users$\backslash$<User>$\backslash$AppData$\backslash$Local$\backslash$Mozilla$\backslash$Firefox$\backslash$Profiles$\backslash$<Profile>.default-release$\backslash$}
 \item[\textbf{Roaming}] \texttt{C:$\backslash$Users$\backslash$<User>$\backslash$AppData$\backslash$Roaming$\backslash$Mozilla$\backslash$Firefox$\backslash$Profiles$\backslash$<Profile>.default-release$\backslash$}
 \end{itemize}
-In Tabelle X (TODO!) sind die Dateien je nach Speicherort \textit{Local} (Hellblau) oder \textit{Roaming} (Dunkelblau) entsprechend eingefärbt. Ausschließlich Dateien der Kategorie ``Cache`` sind im Local Pfad gespeichert.
+In Tabelle 	\ref{tab:firefox-writefile-operations} sind die Dateien je nach Speicherort \textit{Local} (Hellblau) oder \textit{Roaming} (Dunkelblau) entsprechend eingefärbt. Ausschließlich Dateien der Kategorie ``Cache`` sind im Local Pfad gespeichert.
 
 \paragraph*{Cache}
 Firefox verwendet den Cache, um Webseiten und deren Ressourcen temporär lokal zu speichern. Dadurch können wiederholte Anfragen an den Server vermieden und die Ladezeiten verringert werden. Die Inhalte dieser Dateien sind binär.
@@ -150,7 +150,7 @@ Die Cache-Dateien im Format \texttt{$\backslash$cache2$\backslash$entries$\backs
 %\setcounter{figure}{0}    
 \afterpage{
 \begin{landscape}% Landscape page
-	\setcounter{page}{43}
+	\setcounter{page}{44}
 %	\thispagestyle{empty}
 	\vspace*{1.5cm}
 	\hspace*{-1cm}
@@ -243,26 +243,27 @@ Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpa
 
 \subsubsection*{SQLite Datenbänke}
 \label{appendix:firefox-sqlite}
-Wie in Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten detaillierter und getrennt von den Schreiboperationen der Process Logfiles untersucht. Mithilfe der Process Monitor Logfiles wurden zunächst die in Tabelle \ref{tab:firefox-sqlite-dbs-explained} dargestellten SQLite-Datenbanken für Firefox identifiziert:
+Wie in Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten detailliert und getrennt von den Schreiboperationen der Process Logfiles untersucht. Mithilfe der Process Monitor Logfiles wurden zunächst die in Tabelle \ref{tab:firefox-sqlite-dbs-explained} dargestellten SQLite-Datenbanken für Firefox identifiziert:
 \begin{table}[h!]
+\centering
 \caption{Veränderte Firefox SQLite-Datenbänke und deren Verwendungszwecke}
 \label{tab:firefox-sqlite-dbs-explained}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|l|lll}
 \cline{1-2}
 \textbf{Datenbank}                        & \textbf{Gespeicherte Daten \cite{GitHub.08.04.2019}}                                                                                             &  &  &  \\ \cline{1-2}
-\textit{places.sqlite}                    & Informationen über Lesezeichen und Verlauf. Zu jeder besuchten Webseite: URL, Seitentitel, Zeitstempel des Besuchs etc.  &  &  &  \\ \cline{1-2}
+\textit{places.sqlite}                    & Informationen über Lesezeichen und Verlauf. \\&Zu jeder besuchten Webseite: URL, Seitentitel, Zeitstempel des Besuchs etc.  &  &  &  \\ \cline{1-2}
 \textit{cookies.sqlite}                   & Von besuchten Webseiten verwendete Cookies.                                                                              &  &  &  \\ \cline{1-2}
-\textit{storage.sqlite}                   & Diverse Webdaten, z. B. Indexed-Datenbanken, Offline-Cache-Daten und andere lokale Speicherinformationen.                &  &  &  \\ \cline{1-2}
-\textit{favicons.sqlite}                  & Enhtält Favicons (kleine Symbole in der Adressleiste) um besuchte Webseiten visuell zu identifizieren.                   &  &  &  \\ \cline{1-2}
-\textit{webappsstore.sqlite}              & Speichert Informationen über installierte Webanwendungen im Firefox-Browser, z.B. Berechtigungen und Einstellungen.      &  &  &  \\ \cline{1-2}
-\textit{1657114595AmcateirvtiSty.sqlite}  & Datenspeicher für Activity Stream, eine personalisierte Übersicht über Browser-Aktivitäten beim Öffnen eines neuen Tabs. &  &  &  \\ \cline{1-2}
-\textit{3870112724rsegmnoittet-es.sqlite} & Datenspeicher für Remote Settings, eine zentrale Verwaltung von benutzerspezifischen Browsereinstellungen.               &  &  &  \\ \cline{1-2}
+\textit{storage.sqlite}                   & Diverse Webdaten, z. B. Indexed-Datenbanken,\\&Offline-Cache-Daten und andere lokale Speicherinformationen.                &  &  &  \\ \cline{1-2}
+\textit{favicons.sqlite}                  & Enhtält Favicons (kleine Symbole in der Adressleiste)\\&um besuchte Webseiten visuell zu identifizieren.                   &  &  &  \\ \cline{1-2}
+\textit{webappsstore.sqlite}              & Speichert Informationen über installierte Webanwendungen\\&im Firefox-Browser, z.B. Berechtigungen und Einstellungen.      &  &  &  \\ \cline{1-2}
+\textit{1657114595AmcateirvtiSty.sqlite}  & Datenspeicher für Activity Stream, eine personalisierte Übersicht\\&über Browser-Aktivitäten beim Öffnen eines neuen Tabs. &  &  &  \\ \cline{1-2}
+\textit{3870112724rsegmnoittet-es.sqlite} & Datenspeicher für Remote Settings, eine zentrale Verwaltung\\&von benutzerspezifischen Browsereinstellungen.               &  &  &  \\ \cline{1-2}
 \end{tabular}
 }
 \end{table}
 
-Entsprechend der Methodik in Kapitel \ref{subsubsection:methodik-datenanalyse-commonlocations-sqlitedbs} wurde jede SQLite-Datenbank aus allen vier Snapshots extrahiert und verglichen.
+Entsprechend der Methodik in Kapitel \ref{subsubsection:methodik-datenanalyse-commonlocations-sqlitedbs} wurde jede SQLite-Datenbank aus den Festplatten-Images aller vier Snapshots extrahiert und verglichen.
 Die Ergebnisse sind in Tabelle \ref{tab:firefox-veraenderte-sqlitedbs} dargestellt.
 
 \begin{table}[h!]
@@ -287,11 +288,14 @@ formhistory.sqlite                                         & \cellcolor[HTML]{C0
 \end{table}
 
 Unmittelbar nach der Installation von Firefox (Snapshot 1) existierte noch keine der SQLite-Dateien.
+
 Nach dem Browsing Szenario (Snapshot 2) wurden alle SQLite-Datenbanken außer \texttt{webappsstore.sqlite} 
 initialisiert. Dabei wurden in \texttt{places.sqlite} die automatisch im normalen Modus geöffnete Firefoxseite der Datenschutzhinweise eingetragen. 
 Die restlichen Datenbanken wurden leer initialisiert, nur die Spaltennamen wurden definiert.
 Der Inhalt aller initialisierten Datenbanken blieb nach Durchführung von PRAGMA WAL Checkpoints unverändert.
+
 Nach Schließen des Browsers (Snapshot 3) wurden in \texttt{places.sqlite} die Indizes der eingetragenen Seiten aktualisiert. Die SQLite-Datenbank \texttt{1657114595AmcateirvtiSty.sqlite} erhielt ein binäres Datenobjekt als Eintrag. Bei der Untersuchung mit HxD konnten keine Artefakte gefunden werden. Weiterhin wurde \texttt{webappsstore.sqlite} leer initialisiert. Die restlichen Daten blieben im Vergleich mit Snapshot 2 unverändert. Ebenfalls veränderte sich nicht der Inhalt nach Durchführung von PRAGMA WAL Checkpoints.
+
 Sowohl nachdem die VM herunterfahren wurde, (Snapshot 4) als auch nach Durchführung der PRAGMA WAL Checkpoints, entstanden keine Änderungen in den SQLite Datenbanken.	
 Somit wurden in den SQLite Datenbanken von Firefox keine zurückverfolgbaren PB Artefakte im privaten Modus hinterlassen.
 
@@ -315,6 +319,7 @@ Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während d
 	%symbolic y coords={Sonstige-Dateien,Sessionstore-Backup,SQLite,Datareporting,Cache},
 	%ytick=data,
 	nodes near coords, nodes near coords align={horizontal},
+	yminorgrids = true,minor tick num=1
 	]
 	\addplot coordinates {(2,Sonstige Dateien) (1,Sessionstore-Backup) (7,SQLite) (2,Datareporting) (4,Cache)};
 	\addplot coordinates {(2,Sonstige Dateien) (1,Sessionstore-Backup) (3,SQLite) (4,Datareporting) (2,Cache)};
@@ -435,6 +440,7 @@ In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: \textit
 			at={(0.5,-0.1)},
 			anchor=north
 		},
+		every node near coord/.style={xshift=-0.2cm},
 		legend columns=2,
 		scaled x ticks=false
 		]
@@ -460,7 +466,7 @@ In beiden Logfiles wurden zwei Kategorien von Registry Keys geschrieben: \textit
 
 \paragraph*{PreXULSkeletonUISettings}
 Der \textit{PreXULSkeletonUISettings} Registry Key enthält Einstellungen für die Benutzeroberfläche (UI) des Firefox-Browsers, insbesondere für das sogenannte \textit{Skeleton UI}, eine vereinfachte Benutzeroberfläche, die während des Ladens des Browsers angezeigt wird, bevor die vollständige Benutzeroberfläche geladen ist. 
-PreXULSkeletonUISettings Registry Keys haben das Format \texttt{HKCU$\backslash$SOFTWARE$\backslash$Mozilla$\backslash$Firefox$\backslash$\\PreXULSkeletonUISettings$\backslash$<Absoluter Firefox Installationspfad>$\backslash$firefox.exe|<Skeleton UI Setting>}.
+PreXULSkeletonUISettings Registry Keys haben das Format \texttt{HKCU$\backslash$SOFTWARE$\backslash$Mozilla$\backslash$Firefox$\backslash$\\PreXULSkeletonUISettings$\backslash$<Absoluter Firefox Installationspfad>$\backslash$firefox.exe\\|<Skeleton UI Setting>}.
 Somit enthält der Key den absoluten Installationspfad von Firefox gefolgt von einer Skeleton UI Einstellung. Nachfolgend sind alle möglichen UI Einstellungen aufgelistet, gefolgt vom Datentyp des Keys. \cite{Mills.2021}
 \begin{itemize}
 	\item ScreenX (DWORD)
@@ -478,9 +484,9 @@ Somit enthalten die Keys nur Daten zur Formatierung und Struktur der grafischen 
 
 \paragraph*{Business Activity Monitoring}
 \textit{Business Activity Monitoring}, kurz \textit{BAM} ist eine weitgehend undokumentierte Windows Funktion, die im Hintergrund ausgeführte Programme steuert.
-Der Registry Key hat das Format \texttt{HKLM$\backslash$System$\backslash$CurrentControlSet$\backslash$Services$\backslash$bam$\backslash$State$\backslash$\\UserSettings$\backslash$<SID>$\backslash$Device$\backslash$HarddiskVolume2$\backslash$<Absoluter Firefox Installationspfad>$\backslash$firefox.exe} und den Datentyp REG\_BINARY.
+Der Registry Key hat das Format \texttt{HKLM$\backslash$System$\backslash$CurrentControlSet$\backslash$Services$\backslash$bam$\backslash$State$\backslash$\\UserSettings$\backslash$<SID>$\backslash$Device$\backslash$HarddiskVolume2$\backslash$<Absoluter Firefox\\ Installationspfad>$\backslash$firefox.exe} und den Datentyp REG\_BINARY.
 Jeder Schlüssel wird durch die Sicherheits-ID (SID) des Benutzers identifiziert.
-Ein BAM Registry Key schreibt für alle ausgeführten Programme --- hier Firefox --- den Zeitstempel der letzten Ausführung.
+Ein BAM Registry Key schreibt für alle ausgeführten Programme -- hier Firefox -- den Zeitstempel der letzten Ausführung.
 PB Artefakte sind dabei nicht enthalten. \cite{MandiOhlinger.05.06.2023, InfoSecNotes.05.06.2023}
 
 \subsubsection*{Stringsuche in Registry Hives}
@@ -504,10 +510,11 @@ Dabei wurde in keinem Snapshot in keinem Hive ein PB Artefakt gefunden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Ausführliche Analyse: Tor}
+
 \subsection{Common Locations}
-
+\label{subsection:appendix-tor-common-locations}
 \subsubsection*{Process Monitor WriteFile Operations}
-
+\label{subsubsection:appendix-tor-common-locations-writefile-operations}
 Bei der Versuchsdurchführung für den Tor-Browser gemäß Kapitel \ref{section:methodik-datensammlung} wurden drei Process Monitor Logfiles erstellt.
 Diese Dateien enthalten alle aufgezeichneten Prozessaktivitäten während des Browsing Szenarios, nach dem Erzeugen einer ``Neuen Identität`` sowie nach Schließen des Browsers.
 Tabelle \ref{tab:tor-writefile-operations} enthält alle in den Logfiles identifizierten Dateien.
@@ -515,7 +522,7 @@ Für jede Datei wurde vermerkt ob und wie sie wiederherstellbar war, mit welchem
 Die Dateien wurden in die Kategorien \textit{Cache}, \textit{datareporting}, und \textit{Sonstige Dateien} eingeordnet.
 In keiner der identifizierten Dateien konnten PB Artefakte gefunden werden. 
 
-Es konnten zwei Datei-Pfade identifiziert werden:
+Bei Analyse der Schreiboperationen konnten zwei Datei-Pfade identifiziert werden:
 \begin{itemize}
 \item[\textbf{Caches}] \texttt{C:$\backslash$Users$\backslash$Forensik$\backslash$Desktop$\backslash$Tor Browser$\backslash$Browser$\backslash$TorBrowser$\backslash$Data$\backslash$Browser$\backslash$\\Caches$\backslash$profile.default$\backslash$}
 \item[\textbf{Profile.default}] \texttt{C:$\backslash$Users$\backslash$Forensik$\backslash$Desktop$\backslash$Tor Browser$\backslash$Browser$\backslash$TorBrowser$\backslash$Data$\backslash$Browser$\backslash$\\profile.default$\backslash$}
@@ -536,11 +543,25 @@ Weiterhin wird die Datei \texttt{$\backslash$datareporting$\backslash$state.json
 Sie enthält Informationen über den Zustand und die Konfiguration des Tor-Browsers, beispielsweise installierte Add-Ons, oder Browser-Einstellungen. Sie wird verwendet, um dem Browser bei Bedarf den Zustand und die Einstellungen wiederherzustellen. \cite{GitHub.08.04.2019}
 Eine Analyse mit Notepad++ und dem JSON-Plugin brachte keine PB-Artefakte.
 
+\paragraph*{Sonstige Dateien}
+Die im ersten Logfile geschriebene Datei \texttt{AlternateServices.txt}
+enthält .onion-URLs des HTTP Alternative Services. Dieser Mechanismus ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung. \cite{MozillaSupport.26.10.2020}
+
+Weiterhin wird während des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete \textit{NoScript}-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
+Nach Extraktion dieser Datei, kann diese per Drag-and-Drop in ein geöffnetes Firefox-Fenster gezogen werden und es ist möglich, die Erweiterung zu installieren.
+
+Die geschriebene Datei \texttt{onion-aliases.json} enthält \textit{SecureDrop} Adressen, beispielsweise für die Süddeutsche Zeitung. 
+SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. Whistleblower können über .onion-URLs auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln. \cite{SecureDrop.05.06.2023}
+
+Schließlich wurde in die Datei \texttt{SiteSecurityServiceState.txt} geschrieben.
+Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und andere Sicherheitsmerkmale, die von den besuchten Websites verwendet werden.
+Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt. \cite{Gitlab.05.06.2023} In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
+
 %\newpage
 \newgeometry{bottom=2cm,top=0.5cm}
 \afterpage{
 \begin{landscape}% Landscape page
-	\setcounter{page}{52}
+	\setcounter{page}{54}
 %	\thispagestyle{empty}
 	\vspace*{1.5cm}
 	\hspace*{-1cm}
@@ -588,19 +609,7 @@ Eine Analyse mit Notepad++ und dem JSON-Plugin brachte keine PB-Artefakte.
 }
 \restoregeometry
 
-\paragraph*{Sonstige Dateien}
-Die im ersten Logfile geschriebene Datei \texttt{AlternateServices.txt}
-enthält .onion-URLs des HTTP Alternative Services. Dieser Mechanismus ermöglicht es Servern, Clients mitzuteilen, dass der Dienst, auf den sie zugreifen, an einem anderen Netzwerkstandort oder über ein anderes Protokoll verfügbar ist. Die Datei speichert diese Zuordnung. \cite{MozillaSupport.26.10.2020}
 
-Weiterhin wird während des Browsing Szenarios die Datei \texttt{$\backslash$extensions$\backslash$staged$\backslash${73a6fe31-595d-460b-a920-fcc0f8843232}.xpi} geschrieben. Dabei handelt es sich um das von Tor verwendete \textit{NoScript}-AddOn zur selektiven Ausführung von JavaScript Webseiteninhalten.
-Nach Extraktion dieser Datei, kann diese per Drag-and-Drop in ein geöffnetes Firefox-Fenster gezogen werden und es ist möglich, die Erweiterung zu installieren.
-
-Die geschriebene Datei \texttt{onion-aliases.json} enthält \textit{SecureDrop} Adressen, beispielsweise für die Süddeutsche Zeitung. 
-SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichtenorganisationen verwendet wird, um anonyme Informationen von Whistleblowern entgegenzunehmen. Es ermöglicht den sicheren Austausch von Informationen, ohne die Identität der Quelle preiszugeben. Whistleblower können über .onion-URLs auf die SecureDrop-Websites zugreifen und vertrauliche Dokumente oder Nachrichten sicher und anonym übermitteln. \cite{SecureDrop.05.06.2023}
-
-Schließlich wurde in die Datei \texttt{SiteSecurityServiceState.txt} geschrieben.
-Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und andere Sicherheitsmerkmale, die von den besuchten Websites verwendet werden.
-Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt. \cite{Gitlab.05.06.2023} In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
 	
 \subsubsection*{SQLite Datenbänke} 
 Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel \ref{appendix:firefox-sqlite} verwaltet und schreibt.
@@ -631,6 +640,7 @@ formhistory.sqlite                                         & \cellcolor[HTML]{C0
 %	\label{chart:final-criteria}  
 %	\caption{Comparison of found PB artifacts between RAM Dumps}
 %\end{figure}
+
 Nach Browser-Installation wurde noch keine SQLite-Datei angelegt (Snapshot 1).
 
 Während des Browsing Szenarios wurden alle Datenbänkte initialisiert.
@@ -646,6 +656,7 @@ Nach Schließen des Browsers (Snapshot 3-2) wurden in places.sqlite sowie favico
 
 Nach Herunterfahren der VM (Snapshot 4) blieben alle Datenbanken unverändert. Auch nach Durchführung der WAL Checkpoints gab es keine neuen Inhalte.
 
+\subsubsection*{Zusammenfassung Tor Common Locations}
 Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen, dass die meisten Schreiboperationen im ersten Logfile stattfinden. Dort werden Dateien jeder Kategorie beschrieben. Das Schließen des Tor-Browsers führt zu mehr oder genauso vielen Schreiboperationen wie das Zuweisen einer ``Neuen Identität``. Keine der geschriebenen Dateien enthielt private Browsing Artefakte.
 %*** TODO: Was noch? ***
 \begin{figure}[h!]
@@ -663,13 +674,14 @@ Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen,
 	nodes near coords style={font=\small},
 	nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
 	bar width=.25cm,
-	enlarge y limits={abs=3*\pgfplotbarwidth},
+	enlarge y limits={abs=2.4*\pgfplotbarwidth},
 	legend style={
 		at={(1,1)},
 		anchor=north east
 	},
 	legend columns=2,
-	scaled x ticks=false
+	scaled x ticks=false,
+	yminorgrids = true,minor tick num=1
 	]
 	\addplot coordinates {(12,Sonstige Dateien) (2,Datareporting) (8,SQLite) (1,Cache)};
 	\addplot coordinates {(3,Sonstige Dateien) (0,Datareporting) (1,SQLite) (0,Cache)};

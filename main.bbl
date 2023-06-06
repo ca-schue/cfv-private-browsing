@@ -58,6 +58,33 @@
       \field{pages}{79\bibrangedash 94}
       \range{pages}{16}
     \endentry
+    \entry{Autopsy.29.03.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=218970b2d50dfb0d713ea313e955dc37}{%
+           family={Autopsy},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{fullhash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{bibnamehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{authorbibnamehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{authornamehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{authorfullhash}{218970b2d50dfb0d713ea313e955dc37}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Autopsy{\circledR} is the premier end-to-end open source digital forensics platform. Built by Basis Technology with the core features you expect in commercial forensic tools, Autopsy is a fast, thorough, and efficient hard drive investigation solution that evolves with your needs.}
+      \field{title}{Autopsy | Digital Forensics}
+      \field{year}{29.03.2023}
+      \verb{urlraw}
+      \verb https://www.autopsy.com/
+      \endverb
+      \verb{url}
+      \verb https://www.autopsy.com/
+      \endverb
+      \warn{\item Entry 'Autopsy.29.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Bonetti.2014}{article}{}
       \name{author}{5}{}{%
         {{hash=d368a45bf3415ef763c33471b2baa432}{%
@@ -576,7 +603,7 @@
       \endverb
       \warn{\item Entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
-    \entry{Markruss.05.06.2023b}{misc}{}
+    \entry{Markruss.05.06.2023}{misc}{}
       \name{author}{1}{}{%
         {{hash=9326cdfdf2f2da398f5ba63a329f2509}{%
            family={Markruss},
@@ -602,9 +629,9 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
       \endverb
-      \warn{\item Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
-    \entry{Markruss.05.06.2023}{misc}{}
+    \entry{Markruss.05.06.2023b}{misc}{}
       \name{author}{1}{}{%
         {{hash=9326cdfdf2f2da398f5ba63a329f2509}{%
            family={Markruss},
@@ -630,7 +657,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
       \endverb
-      \warn{\item Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Md.2018}{inproceedings}{}
       \name{author}{5}{}{%

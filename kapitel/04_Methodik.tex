@@ -290,9 +290,9 @@ Die gesammelten Daten des Versuchs werden zur Vereinfachung der Analyse in drei 
 
 \subsection{Common Locations}
 \label{subsection:methodik-datenanalyse-commonlocations}
-Die sogenannten \textit{Common Locations} beziehen im Zusammenhang der Browserforensik auf die standardmäßigen Verzeichnisse eines Browsers auf der Festplatte, beispielsweise Ordner von Browsern zur Verwaltung von Nutzerdaten.
+Die sogenannten \textit{Common Locations} beziehen sich im Zusammenhang der Browserforensik auf die standardmäßigen Verzeichnisse eines Browsers auf der Festplatte, beispielsweise Ordner von Browsern zur Verwaltung von Nutzerdaten.
 Untersucht werden Common Locations mittels \textit{Whitebox-Analyse}, 
-wodurch der Fokus darauf liegt, das System vollständig zu verstehen und alle relevanten Beweise zu sammeln. \cite{Bonetti.2014}
+wodurch der Fokus darauf liegt, das System vollständig zu verstehen und alle potentiellen Beweise zu sammeln. \cite{Bonetti.2014}
 
 Bei diesem Versuch werden die Speicherorte über die Schreiboperationen der Process Monitor Logfiles identifiziert.
 Anschließend wird für jede Datei in den Speicherorten geprüft, ob PB Artefakte enthalten sind.
@@ -303,9 +303,9 @@ Dazu sind zwei Schritte notwendig:
 \end{enumerate}
 
 \paragraph*{Identifikation der Common Locations}
-Um die gängigen Browserpfade und -dateien zu identifizieren, werden die in den Process Monitor Logfiles aufgezeichneten Schreibaktivitäten der Browserprozesse ausgewertet.
+Um die gängigen Browserpfade und -dateien zu identifizieren, werden die in den Process Monitor Logfiles aufgezeichneten Datei-Schreibaktivitäten der Browserprozesse ausgewertet.
 
-Dazu wird jedes Logfile mit dem Process Explorer eingelesen. Anschließend werden die Aktivitäten gefiltert.
+Dazu wird jedes Logfile mit dem Process Monitor eingelesen. Anschließend werden die Aktivitäten gefiltert.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.7\linewidth}{!}{\includegraphics{bilder/process-monitor-filter.png}}}
 	\caption{Process Monitor Filter für Datei-Schreiboperationen}
@@ -325,8 +325,8 @@ Die geschriebenen Dateien werden anschließend browserspezifisch gruppiert.
 
 \paragraph*{Prüfung auf PB Artefakte}
 Nachdem die geschriebenen Browserdateien identifiziert und gruppiert wurden, wird für jede Datei geprüft, ob PB Artefakte enthalten sind. Folgende, in Abbildung \ref{img:dateiextraktion-und-analyse} dargestellte Schritte sind zur Dateiextraktion und Dateianalyse notwendig:
-Die Datei befindet sich entweder im entsprechenden Festplatten-Image oder ist im RAM-Dump gespeichert. 
-Wenn die Datei nicht mit Autopsy aus dem Festplatten-Image extrahiert werden kann und sich der Dateiname in der Ausgabe des Volatiltiy Plugins \textit{filescan} (\texttt{vol.py -f ram\_dump.img windows.filescan > filescan.txt}) befindet, wird diese mit dem Volatility Plugin \textit{dumpfiles} aus dem RAM extrahiert.
+Die Datei befindet sich entweder im entsprechenden Festplatten-Image oder ist im RAM-Dump. 
+Wenn die Datei nicht mit Autopsy aus dem Festplatten-Image extrahiert werden kann und sich der Dateiname in der Ausgabe des Volatiltiy Plugins \textit{filescan} (\texttt{vol.py -f ram\_dump.img windows.filescan > filescan.txt}) befindet, wird diese mit dem Volatility Plugin \textit{dumpfiles} (\texttt{vol.py -f ram\_dump.img -o $\backslash$some\_folder$\backslash$ windows.dumpfiles --virtaddr <virtual file address>}) aus dem RAM extrahiert.
 Wenn auch dies nicht möglich ist und es sich um eine temporäre Datei (.tmp) handelt, wird versucht die enstprechende nicht-temporäre Datei zu extrahieren. 
 Im Falle der Datei ``some-file.json.tmp`` wird beispielsweise geprüft, ob die Datei ``some-file.json`` existiert.
 Nachdem die Datei extrahiert wurde und ggf. mit einem Tool zu Analyse vorberarbeitet wurde, wird geprüft, ob die Datei PB Artefakte enthält.
@@ -341,9 +341,9 @@ Nachdem die Datei extrahiert wurde und ggf. mit einem Tool zu Analyse vorberarbe
 \paragraph*{SQLite-Datenbänke}
 \label{subsubsection:methodik-datenanalyse-commonlocations-sqlitedbs}
 Eine besondere Rolle unter den Common Locations bei Browsern nehmen SQLite Datenbänke ein. 
-Sie speichern und verwalten Nutzerinformationen, wie Lesezeichen, Browserverlauf, Caches, Cookies in Datenbankdateien zu speichern, ohne einen separaten Datenbankserver zu benötigen.
+Sie speichern und verwalten Nutzerinformationen, wie Lesezeichen, Browserverlauf, Caches, Cookies in Datenbankdateien, ohne einen separaten Datenbankserver zu benötigen.
 
-Wie in Abbildung \ref{img:dateiextraktion-und-analyse-sqlite} dargestellt, erfolgt die Dateiextraktion analog zur Vorgehensweise bei den Schreiboperationen der Process Monitor Logfiles: Um die SQLite Datenbänke zu analysieren wird jede Datenbank mit der gleichen Datenbank aus dem vorherigem Snapshot mithilfe des Befehlszeilentools \textit{sqldiff.exe} (\texttt{sqldiff.exe database1.sqlite database2.sqlite}) verglichen. Die Inhaltsunterschiede werden für jede Datei in jedem Snapshot untersucht und in einer Excel Tabelle festgehalten.
+Wie in Abbildung \ref{img:dateiextraktion-und-analyse-sqlite} dargestellt, erfolgt die Dateiextraktion analog zur Vorgehensweise bei den Datei-Schreiboperationen der Process Monitor Logfiles. Um die SQLite Datenbänke zu analysieren wird jede Datenbank mit der gleichen Datenbank aus dem vorherigen Snapshot mithilfe des Befehlszeilentools \textit{sqldiff.exe} (\texttt{sqldiff.exe database1.sqlite database2.sqlite}) verglichen. Die Inhaltsunterschiede werden für jede SQLite-Datei in jedem Snapshot untersucht und in einer Excel Tabelle festgehalten.
 Datenbankänderungen einer SQLite-Datei werden zuerst im \textit{Write-Ahead Log}, kurz \textit{WAL}, vorübergehend protokolliert. 
 Um potentielle PB Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlite3 Befehlszeile (\texttt{sqlite3> PRAGMA wal\_checkpoint;}) in die SQLite Hauptdatenbank geschrieben.
 \begin{figure}[h!]
@@ -360,13 +360,12 @@ Um potentielle PB Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
 Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht \cite{Bonetti.2014}:
 Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB Artefakten über die gesamten Speicherabbilder durchgeführt.
-Dies ist nur durch Unterstützung mit Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations in die Vollständigkeit der Tools vertraut.
+Dies ist nur mit Unterstützung durch Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations auf die Vollständigkeit der Tools vertraut.
 
 \subsubsection*{Analyse mit Autopsy}
 \label{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy}
 Bei den Uncommon Locations wird Autopsy als forensisches Werkzeug zur Analyse der Festplatten-Images verwendet.
 Dazu wird eine Stichwortsuche mit den in Tabelle \ref{tab:pb-artefakte} definierten PB Artefakten über das gesamte eingelesene Festplatten-Image durchgeführt.
-
 Autopsy bietet dazu die in Abbildung \ref{img:autopsy-keywordsuche} dargestellte Funktion zur Suche nach Strings, Teilstrings oder regulären Ausdrücken in Dateinamen und Dateiinhalten an.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.85\linewidth}{!}{\includegraphics{bilder/autopsy-search.png}}}
@@ -386,8 +385,8 @@ Zusätzlich kategorisiert Autopsy automatisch die Dateien eines Festplatten-Imag
 \label{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility}
 Bei der Analyse des Arbeitsspeichers als Uncommon Location ist es kritisch, dass ein gefundener String eindeutig einem Browserprozess zugeordnet werden kann. 
 
-In der Literatur wird der Arbeitsspeicher oft unzureichend durch eine Stichwortsuche im RAM-Dump analysiert, der als Binärdatei in einem Hexadezimaleditor geöffnet ist. \cite{Rochmadi.2017, Md.2018, Montasari.2015}
-Wie beispielhaft in Abbildung \ref{img:textfile-ram-artifact} gezeigt, wird ein String, der in einer Textdatei auf dem Desktop gespeichert ist ebenfalls im Hexadezimaleditor HxD angezeigt, obwohl kein Browsing Szenario durchgeführt wurde.
+In der Literatur werden der Arbeitsspeicherabbilder oft unzureichend durch eine Stichwortsuche im Hexadezimaleditor analysiert. \cite{Rochmadi.2017, Md.2018, Montasari.2015}
+Wie beispielhaft in Abbildung \ref{img:textfile-ram-artifact} gezeigt, wird ein String, der in einer Textdatei auf dem Desktop gespeichert ist, im Hexadezimaleditor HxD angezeigt, obwohl kein Browsing Szenario durchgeführt wurde.
 \begin{figure}[h!]
 	\centering
 	\subcaptionbox{String in Textdatei}{\includegraphics[width=0.30\textwidth]{bilder/ram-editor1.png}}%
@@ -397,10 +396,10 @@ Wie beispielhaft in Abbildung \ref{img:textfile-ram-artifact} gezeigt, wird ein 
 	\label{img:textfile-ram-artifact}  
 \end{figure}
 
-Um einen im RAM gefundenen String einem Browserprozess zuordnen zu können, wird deshalb das forensiche Analysetool Volatility mit dem PlugIn \textit{Yarascan} verwendet.
+Um einen im RAM gefundenen String einem Browserprozess zuordnen zu können, wird deshalb das forensiche Analysetool Volatility mit dem Plugin \textit{Yarascan} verwendet.
 Mithilfe sogenannter \textit{Yara-Regeln} (engl. Yararules) wird nach bestimmten Mustern im Arbeitsspeicher gesucht.
 Die für diesen Versuch verwendeten Yara-Regeln entsprechen den Strings der PB Artefakte in Tabelle \ref{tab:pb-artefakte}. Zusätzlich sucht eine Regel nach HTML-Fragmenten, die eindeutig einer besuchten Seite des Browsing-Szenarios zuzuordnen sind. \cite{Said.2011}
-Alle verwendeten Yara-Regeln sind im Anhang X (TODO!) aufgelistet.
+Alle verwendeten Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelistet.
 Um den RAM-Dump nach den Yara-Regeln zu durchsuchen, wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.vadyarascan --yara-file yara\_rules.yara > yarascan.txt}
 Nachdem der RAM-Dump nach den Regeln durchsucht wurde, gibt die Yarascan-Ausgabe für jeden gefundenen String die PID des Prozesses, in dem der String gefunden wurde, sowie die virtuelle Speicheradresse des gefundenen Strings an.
 
@@ -414,13 +413,13 @@ Wie in Abbildung \ref{img:volatility-plugins} dargestellt, wird davon ausgehend 
 \end{figure}
 Oft ist bei einem gefundenen String von Interesse, ob in den Speicheradressen vor und nach dem Treffer weitere Zusammenhänge erkennbar sind.
 Mithilfe des Plugins \textit{memmap} (\texttt{vol.py -f ram\_dump.img windows.memmap --pid <PID> > memmap.txt}) wird die Abbildung der virtuellen Speicheradressen eines Prozesses auf die Byte-Offsets der extrahierten Speicherseite des Prozesses ermittelt.
-Diese Seite kann mithilfe des ``--dump`` Flags extrahiert werden: \texttt{vol.py -f ram\_dump.img -o $\backslash$dump\_dir$\backslash$ windows.memmap --pid <PID> --dump}.
-In einem Hexadezimaleditor, wie HxD, kann der String-Treffer anhand des ermittelten Byte-Offsets in der Speicherseite untersucht werden.
+Diese Seite kann mithilfe des ``--dump`` Flags extrahiert werden: \texttt{vol.py -f ram\_dump.img -o $\backslash$dump\_dir$\backslash$ windows.memmap --pid <PID> -{}-dump}.
+In einem Hexadezimaleditor, wie HxD, kann die Umgebung des String-Treffers anhand des ermittelten Byte-Offsets in der Speicherseite untersucht werden.
 
 \subsection{Registry}
 \label{subsection:methodik-datenanalyse-registry}
 Die letzte Kategorie analysierter Daten umfasst die Artefakte der Registry.
-Diese zählen sowohl zu den Common als auch Uncommon Locations und werden deshalb eigene Kategorie aufgeführt.
+Diese zählen sowohl zu den Common als auch Uncommon Locations und werden deshalb als eigene Kategorie aufgeführt.
 
 \paragraph*{Common Locations}
 %*** TODO: Common location: Shellactivities Key ***
@@ -431,13 +430,13 @@ Als Teil der Common Locations werden die Registry-Aktivitäten in den Process Mo
 	\caption{Process Monitor Filter für Registry-Schreiboperationen}
 	\label{img:procmon-setvalue-filter}
 \end{figure}
-Wie in Abbildung \ref{img:procmon-setvalue-filter} gezeigt, wird zunächst die Logfile nach ``Registry Activity`` sowie Einträgen mit der Operation ``SetValue`` sowie dem Browser-Prozessnamen gefiltert.
-Als CSV Datei wird das Logfile in Excel weiter verarbeitet, indem Duplikate gelöscht werden und die geschriebenen Registry Keys browserspezifisch gruppiert werden.
+Wie in Abbildung \ref{img:procmon-setvalue-filter} gezeigt, wird zunächst das Logfile nach ``Registry Activity`` sowie Einträgen mit der Operation ``SetValue`` sowie dem Browser-Prozessnamen gefiltert.
+Als CSV-Datei wird das Logfile in Excel weiter verarbeitet, indem Duplikate gelöscht werden und die geschriebenen Registry-Keys browserspezifisch gruppiert werden.
 	
 \paragraph*{Uncommon Locations}
-Unter Betrachtung als Uncommon Location werden alle Registry Hives in jedem Festplatten-Image mit dem Registry Explorer untersucht.
+Unter Betrachtung als Uncommon Location werden alle Windows Registry-Hives in jedem Festplatten-Image mit dem Registry Explorer untersucht.
 Dabei wird zwischen Hives zur Speicherung von Systemeinstellungen (System-Hives) und individuellen Benutzerkonfigurationen (User-Hives) unterschieden. Diese in Tabelle \ref{tab:windows-registry-hives} dargestellten Hives werden von Windows beim Start geladen und dienen Systemkomponenten und Anwendungen als Quelle für Einstellungen und Informationen. \cite{Haircutfish.04.11.2022}
-Zur Analyse wird jeder Hive aus den Fesplatten-Images extrahiert und in eine Registry Explorer Sitzung geladen und eine Stringsuche nach PB Artefakten durchgeführt.
+Zur Analyse wird jeder Hive aus den Fesplatten-Images extrahiert und in eine Registry Explorer Sitzung geladen, um eine eine Stringsuche nach PB Artefakten durchzuführen.
 
 \begin{table}[h!]
 \centering
