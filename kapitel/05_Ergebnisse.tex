@@ -1116,7 +1116,7 @@ Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die A
 
 \paragraph*{Yara-Regel \glqq{}HTML\grqq{}}
 
-Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden.
+Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden. Wie in \autoref{chart:chrome-volatility-htmls} dargestellt, wird der String \glqq{}>Themen:\grqq{} im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
 %TODO evtl andere xmax hier um es deutlicher hervorzuheben?
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -1134,7 +1134,7 @@ Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnt
 					ytick=data,
 					xticklabels={,,},
 					xmin = 0,
-					xmax = 1400,
+					xmax = 5,
 					nodes near coords, 
 					nodes near coords align={horizontal},
 					nodes near coords style={font=\tiny},
@@ -1171,7 +1171,7 @@ Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnt
 					ytick=data,
 					xticklabels={,,},
 					xmin = 0,
-					xmax = 1400,
+					xmax = 5,
 					nodes near coords, 
 					nodes near coords align={horizontal},
 					nodes near coords style={font=\tiny},
@@ -1208,7 +1208,7 @@ Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnt
 					ytick=data,
 					xticklabels={,,},
 					xmin = 0,
-					xmax = 1400,
+					xmax = 5,
 					nodes near coords, 
 					nodes near coords align={horizontal},
 					nodes near coords style={font=\tiny},
@@ -1245,7 +1245,7 @@ Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnt
 					ytick=data,
 					xticklabels={,,},
 					xmin = 0,
-					xmax = 1400,
+					xmax = 5,
 					nodes near coords, 
 					nodes near coords align={horizontal},
 					nodes near coords style={font=\tiny},
@@ -1272,10 +1272,673 @@ Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnt
 		\end{tabular}
 	}
 	\caption{Anzahl gefundener HTML-Fragmente im Chrome RAM}
-	\label{chart:firefox-volatility-keywords}
+	\label{chart:chrome-volatility-htmls}
 \end{table}
 
+Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in diesem Fall) des Prozesses, in welchem der String gefunden wurde, sowie die virtuelle Adresse, an welchem das Fragment gefunden wurde (0xa6c018187e1). Dies ist auch in [link Graphik] links zu sehen. Mit dieser Information wurde dann zunächst der Befehl \texttt{python3 vol.py -f LOCATION-DUMP windows.memmap --pid 7012} ausgeführt, um das Memory-Mapping des Prozesses zu erhalten, also die Zuordnung der virtuellen zu den physischen Adressen des Prozesses, sowie deren Offset im Memory-Dump-File. Nachfolgend ist ein Ausschnitt der Ausgabe des Befehls zu sehen:
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{llllll}
+		Virtual                              & Physical                          & Size                          & Offset in File                   & File output                     &  \\
+		0xa6c01817000                        & 0xc4efc000                        & 0x1000                        & 0x105d000                        & Disabled                        &  \\
+		{\color[HTML]{FE0000} 0xa6c01818000} & {\color[HTML]{FE0000} 0xd2dfb000} & {\color[HTML]{FE0000} 0x1000} & {\color[HTML]{FE0000} 0x105e000} & {\color[HTML]{FE0000} Disabled} &  \\
+		0xa6c01819000                        & 0xd50fa000                        & 0x1000                        & 0x105f000                        & Disabled                        & 
+	\end{tabular}
+\end{table}
+
+In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf die physikalische Adresse 0xd2dfb000 gemapped ist und der Offset im memory-file 0x105e000 entspricht. Mithilfe dieser Adressen konnte dann die tatsächliche Position des String im memory-file errechnet werden. Diese betrug somit 0x105e7e1. Anschließend wurde der gesamte Prozess mithilfe von Volatility gedumped und dieses memory-file wurde anschließend in den Hex-Editor HxD geladen. Dort wurde dann genau an dem errechneten Offset nach dem String gesucht und konnte genau dort auch gefunden werden, was auch in \autoref{pic:ChromeStringThemen} zu sehen ist.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{bilder/HxDChromeStringThemen.png}
+	\caption{Ausschnitt aus dem Memory-Dump-File an der Stelle des gefundenen Strings}
+	\label{pic:ChromeStringThemen}
+\end{figure} 
+
+Daraufhin wurde weitergehend versucht zu analysieren, ob nur ein Teil der Website im RAM verfügbar ist, oder ob das die komplette Donaukurier-Website als HTML Artefakt im RAM vorhanden ist. Dafür wurde die Internetseite donaukurier.de nochmals aufgerufen, heruntergeladen und der Beginn sowie das Ende der HTML-Datei analysiert. Nachfolgend sind die ersten sowie letzten Wörter der HTML-Datei zu sehen:
+%TODO Beschriftung / Caption / Label etc. hinzufügen
+\begin{minted}[autogobble=true,frame=single,label=Beginn und Ende der Donaukurier-Website in HTML]{html}
+	<!DOCTYPE html>
+	<html lang="de">
+	<head>
+	
+	<! ... >
+	
+	    </script>
+	</body>
+	</html>
+\end{minted}
+
+Davon ausgehend wurde in HxD zuerst nach dem String \glqq{}<!DOCTYPE html>\grqq{} und anschließend nach \glqq{}</html>\grqq{} gesucht. Beide Strings wurden mehrfach in dem Memory-Dump gefunden. Da jedoch keine weiteren Website-typischen Strings mehr durch Yarascan identifiziert werden konnten, wurden die übrigen String-Treffer nicht mehr weiter analysiert.\\
+Da bei der Suche des Strings mehr als einen Treffer gab, wurde genau der String ausgewählt, welcher einen niedrigeren Offset als 0x105e7e1 aufweist. In diesem Fall war das der Treffer bei dem Offset von 105201b, was auch in \autoref{pic:ChromeBeginDonaukurier} zu sehen ist (markierter Teil). Dabei ist deutlich zu erkennen, dass die Website hier beginnt, da alles Nachfolgende mit dem Beginn der heruntergeladenen Website übereinstimmt und darüber nichts im RAM gespeichert wurde.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{bilder/HxDChrome1.png}
+	\caption{Beginn der Donaukurier-Website}
+	\label{pic:ChromeBeginDonaukurier}
+\end{figure} 
+
+Gleiches wurde mit dem Ende der HTML-Datei durchgeführt. \autoref{pic:ChromeEndDonaukurier} zeigt einen Screenshot mit dem relevanten String-Treffer, welcher das Ende der Website donaukurier.de darstellt.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{bilder/HxDChrome3.png}
+	\caption{Ende der Donaukurier-Website}
+	\label{pic:ChromeEndDonaukurier}
+\end{figure} 
+
+Anschließend wurde alles, was sich zwischen dem gefundenem Anfang und Ende befindet, als Text kopiert und in eine html-Datei gespeichert. Ein detaillierter Vergleich dieses extrahierten Artefakts mit der heruntergeladenen Datei lieferte das Ergebnis, dass die komplette Website rekonstruiert werden kann, die Websiten sich nur in den neuesten Artikeln und Überschriften unterschieden. Übriges war zu 100\% identisch. \\
+Zusammenfassend konnte somit die Website \glqq{}donaukurier.de\grqq{} im zweiten Memory-Dump komplett aus dem RAM extrahiert und rekonstruiert werden.
+
+\paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}
+
+Wie in \autoref{chart:chrome-volatility-keywords} dargestellt, wurden die Suchbegriffe \glqq{}pfaffenhofen\grqq{}, \glqq{}nanoradar\grqq{}, \glqq{}mooserliesl\grqq{} und \glqq{}mallofamerica\grqq{} ausschließlich bei dem noch geöffnetem Chrome-Browser nach dem Browsing-Szenario (zweiter RAM Dump) gefunden. Es wurden dabei alle Suchbegriffe bis auf einen einzigen in Speicherbereichen des Chrome-Browsers gefunden. Am häufigsten konnte der Suchbegriff \glqq{}pfaffenhofen\grqq{} mit 1922 Treffern identifiziert werden. Am seltensten war das der Fall bei dem Begriff \glqq{}mallofamerica\grqq{} mit \glqq{}nur\grqq{} 524 Suchtreffern.  
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{l}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{pfaffenhofen},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 2100,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1922,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{nanoradar},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 2100,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (573,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mooserliesl},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 2100,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (281,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mallofamerica},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 2100,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (524,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{chrome.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener Suchbegriffe im Chrome RAM}
+	\label{chart:chrome-volatility-keywords}
+\end{table}
+
+\paragraph*{Yara-Regel \glqq{}URLs\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{l}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{unitree.com},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 8800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (2622,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mooserliesl.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 8800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1021,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}	
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mallofamerica.com},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 8800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (5247,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{donaukurier.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 8800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (8147,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(5,RAM-Dump 3) (10,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{chrome.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}		
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener URLs im Chrome RAM}
+	\label{chart:chrome-volatility-urls}
+\end{table}
+
+\paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{r}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Betrefftext},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 180,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (64,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Mailtext},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 180,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (136,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}	
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Vorlesung23!}\\\textbf{(Passwort)},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 180,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{computerforensikvl}\\\textbf{@gmail.com},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 180,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (163,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(1,RAM-Dump 3) (9,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}	
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{chs3702@thi.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 180,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (121,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{cas0597@thi.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 180,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (97,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{chrome.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			%	\begin{axis}[]
+				%	\legend{Logfile 1, Logfile 2}
+				%	\end{axis}
+			
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener E-Mail Artefakte im Chrome RAM}
+	\label{chart:chrome-volatility-mail}
+\end{table}
+
+\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{r}
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar stacked,
+					width=18cm, 
+					height=12cm, 
+					ylabel style={align=center}, ylabel=Donaukurier Logo\\(Hexadezimal),
+					y=1cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 4,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=2
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (3,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{chrome.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im Chrome RAM}
+	\label{chart:chrome-volatility-image}
+\end{table}
+
+\subsection*{Registry}
+
 \section{Brave}
+
+\begin{comment}
 
 Analyse aller Schreiboperationen mittels des ProcessMonitors:
 
@@ -1300,7 +1963,7 @@ Glob gegliedert in Dateiendungen, mit möglichen Erklärungen: \\
 - .ftlite \\
 - .dbtemp \\
 - others -> Erklärung der Datenbanken + locations
-\end{comment}
+
 => Zusammenfassung in Tabelle \\\\
 
 Unbekannter Pfad:\\
@@ -1342,5 +2005,782 @@ Mail \\
 HTTP inkl. Screenshots hier (Verweis nach oben)
 
 Image + Summary Tabellen hier am Ende no!
+
+\end{comment}
+
+Anschließend folgt die Analyse des Webbrowsers Brave. Die Ergebnisse werden dabei wie in den beiden vorherigen Kapitel präsentiert.
+
+\subsection*{Common Locations}
+
+\subsection*{Uncommon Locations}
+
+\subsubsection*{Analyse mit Autopsy}
+
+\subsubsection*{Analyse mit Volatility}
+
+\paragraph*{Yara-Regel \glqq{}HTML\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{l}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Insiders</span>},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 5,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Ja</span>},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 5,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{L1</div>},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 5,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{>Themen:},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 5,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{brave.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener HTML-Fragmente im Brave RAM}
+	\label{chart:brave-volatility-htmls}
+\end{table}
+
+\paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}  
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{l}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{pfaffenhofen},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1700,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1447,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{nanoradar},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1700,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (518,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mooserliesl},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1700,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (51,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mallofamerica},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 1700,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (108,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{brave.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener Suchbegriffe im Brave RAM}
+	\label{chart:brave-volatility-keywords}
+\end{table}
+%TODO Vergleich Google Duckduckgo
+
+\paragraph*{Yara-Regel \glqq{}URLs\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{l}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{unitree.com},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 3800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (2788,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mooserliesl.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 3800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (884,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}	
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{mallofamerica.com},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 3800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (2943,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (1,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{donaukurier.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 3800,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (3508,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(5,RAM-Dump 3) (6,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{brave.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}		
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener URLs im Brave RAM}
+	\label{chart:brave-volatility-urls}
+\end{table}
+
+\paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{r}	
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Betrefftext},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 150,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (30,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Mailtext},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 150,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (125,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}	
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{Vorlesung23!}\\\textbf{(Passwort)},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 150,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{computerforensikvl}\\\textbf{@gmail.com},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 150,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (125,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(1,RAM-Dump 3) (9,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}	
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{chs3702@thi.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 150,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (61,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					%				\legend{firefox.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			\\[-7pt]
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar,
+					width=12cm, 
+					height=3cm, 
+					ylabel style={align=center}, ylabel=\textbf{cas0597@thi.de},
+					y=0.75cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					label style={font=\small},
+					tick label style={font=\small},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 150,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					nodes near coords style={font=\tiny},
+					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+					bar width=.17cm,
+					enlarge y limits={abs=2*\pgfplotbarwidth},
+					scaled x ticks=false,
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=3,
+					yminorgrids = true,minor tick num=1
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (67,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{brave.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+			%	\begin{axis}[]
+				%	\legend{Logfile 1, Logfile 2}
+				%	\end{axis}
+			
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener E-Mail Artefakte im Brave RAM}
+	\label{chart:brave-volatility-mail}
+\end{table}
+%TODO Vergleich mit Chrome bzgl. Anzahl der Hits entweder hier oder später
+
+\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}
+
+\begin{table}[h!]
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{r}
+			\begin{tikzpicture}
+				\begin{axis}[
+					xbar stacked,
+					width=18cm, 
+					height=12cm, 
+					ylabel style={align=center}, ylabel=Donaukurier Logo\\(Hexadezimal),
+					y=1cm,
+					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+					ytick=data,
+					xticklabels={,,},
+					xmin = 0,
+					xmax = 4,
+					nodes near coords, 
+					nodes near coords align={horizontal},
+					legend style={
+						at={(0.5,-0.1)},
+						anchor=north
+					},
+					legend columns=2
+					]
+					\addplot coordinates {
+						(0,RAM-Dump 3) (3,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\addplot coordinates {
+						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+					};
+					\legend{brave.exe, Andere Prozesse}
+				\end{axis}
+			\end{tikzpicture}
+		\end{tabular}
+	}
+	\caption{Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im Brave RAM}
+	\label{chart:brave-volatility-image}
+\end{table}
+
+\subsection*{Registry}
+
+%TODO Carl ausbessern p(f)affenhofen + computerforensik(vl)
 
 %EOF

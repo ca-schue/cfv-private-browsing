@@ -18,11 +18,13 @@
 \contentsline {section}{\numberline {5.1}Firefox}{20}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Tor}{30}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Chrome}{38}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Brave}{40}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Vergleich der Browser}{42}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Diskussion}{43}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Fazit}{44}{chapter.8}%
-\contentsline {chapter}{Anhänge}{45}{section*.68}%
-\contentsline {chapter}{Literaturverzeichnis}{48}{figure.caption.70}%
-\contentsline {chapter}{\nonumberline Literatur}{48}{chapter*.71}%
+\contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{42}{table.caption.71}%
+\contentsline {section}{\numberline {5.4}Brave}{43}{section.5.4}%
+\contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{44}{table.caption.87}%
+\contentsline {chapter}{\numberline {6}Vergleich der Browser}{51}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Diskussion}{52}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Fazit}{53}{chapter.8}%
+\contentsline {chapter}{Anhänge}{54}{section*.89}%
+\contentsline {chapter}{Literaturverzeichnis}{57}{figure.caption.91}%
+\contentsline {chapter}{\nonumberline Literatur}{57}{chapter*.92}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
