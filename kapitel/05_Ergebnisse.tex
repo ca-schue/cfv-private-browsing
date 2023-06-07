@@ -1288,6 +1288,7 @@ Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in d
 \end{table}
 
 In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf die physikalische Adresse 0xd2dfb000 gemapped ist und der Offset im memory-file 0x105e000 entspricht. Mithilfe dieser Adressen konnte dann die tatsächliche Position des String im memory-file errechnet werden. Diese betrug somit 0x105e7e1. Anschließend wurde der gesamte Prozess mithilfe von Volatility gedumped und dieses memory-file wurde anschließend in den Hex-Editor HxD geladen. Dort wurde dann genau an dem errechneten Offset nach dem String gesucht und konnte genau dort auch gefunden werden, was auch in \autoref{pic:ChromeStringThemen} zu sehen ist.
+%TODO Evtl doch des andere Bild...
 
 \begin{figure}[h!]
 	\centering
