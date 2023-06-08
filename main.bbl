@@ -378,6 +378,35 @@
       \field{pages}{100036}
       \range{pages}{1}
     \endentry
+    \entry{MemCompressionWebsite}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f50fdc0251e4b9bd97949ffa2f62ac83}{%
+           family={Hub},
+           familyi={H\bibinitperiod},
+           given={Windoes\bibnamedelima OS},
+           giveni={W\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{fullhash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{bibnamehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{authorbibnamehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{authornamehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{authorfullhash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{note}{Zuletzt zugegriffen am 08.06.2023 um 11:51 Uhr}
+      \field{title}{Memory Compression Process: High Memory and CPU Usage in Windows 10 and 11}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://woshub.com/memory-compression-process-high-usage-windows-10/
+      \endverb
+      \verb{url}
+      \verb https://woshub.com/memory-compression-process-high-usage-windows-10/
+      \endverb
+    \endentry
     \entry{Izzati.2022}{article}{}
       \name{author}{2}{}{%
         {{hash=0e2367641a223159d7c2edf3dcd4e08f}{%
@@ -589,6 +618,26 @@
       \field{pages}{135\bibrangedash 142}
       \range{pages}{8}
     \endentry
+    \entry{dwmWebsite}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=832105a18023a5d63fc3ab2165a179f5}{%
+           family={PCtipps},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{fullhash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{bibnamehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{authorbibnamehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{authornamehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{authorfullhash}{832105a18023a5d63fc3ab2165a179f5}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://pctipps.de/dwm-exe/}
+      \field{note}{Zuletzt zugegriffen am 08.06.2023 um 12:29 Uhr}
+      \field{title}{Dwm.exe: Was ist der Desktop Window Manager?}
+    \endentry
     \entry{Perdices.2023}{article}{}
       \name{author}{4}{}{%
         {{hash=3f1b46db2c55aee1f3d23064891b5125}{%
@@ -635,6 +684,40 @@
       \field{year}{2023}
       \field{pages}{109471}
       \range{pages}{1}
+    \endentry
+    \entry{pogonin2022microsoft}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=8be4b17f48287fdd6bb4b48993ff7106}{%
+           family={Pogonin},
+           familyi={P\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5c4c81fab43e8259989ccbf8ad2183b8}{%
+           family={Korkin},
+           familyi={K\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{fullhash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{bibnamehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{authorbibnamehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{authornamehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{authorfullhash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Microsoft Defender Will Be Defended: MemoryRanger Prevents Blinding Windows AV}
+      \field{year}{2022}
+      \verb{doi}
+      \verb https://doi.org/10.48550/arXiv.2210.02821
+      \endverb
+      \verb{eprint}
+      \verb 2210.02821
+      \endverb
     \endentry
     \entry{Rathod.2017}{article}{}
       \name{author}{1}{}{%
@@ -780,6 +863,28 @@
       \field{year}{2014}
       \field{pages}{380\bibrangedash 389}
       \range{pages}{10}
+    \endentry
+    \entry{SiHostWebsite}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=aef0c04552fd197fe71b384c4c730b09}{%
+           family={Sylie},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{fullhash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{bibnamehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{authorbibnamehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{authornamehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{authorfullhash}{aef0c04552fd197fe71b384c4c730b09}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://de.minitool.com/nachrichten/shell-infrastructure-host-hohe-cpu-auslastung.html}
+      \field{month}{02}
+      \field{note}{Zuletzt zugegriffen am 08.06.2023 um 12:20 Uhr}
+      \field{title}{Lösung: Shell Infrastructure Host hohe CPU-Auslastung [MiniTool]}
+      \field{year}{2023}
     \endentry
     \entry{Yusoff.2011}{article}{}
       \name{author}{3}{}{%
