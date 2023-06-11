@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  8 JUN 2023 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  11 JUN 2023 18:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3210,17 +3210,17 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-) [51
+Excluding 'comment' comment. [51
 
 
 
 
-]
+]) [52]
 \openout2 = `kapitel/08_Fazit.aux'.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [52
+) [53
 
 
 
@@ -3228,7 +3228,7 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [53
+ (kapitel/09_Anhang.tex [54
 
 
 
@@ -3247,7 +3247,7 @@ File: bilder/tor-all-write-operations.png Graphic file (type png)
 Package pdftex.def Info: bilder/tor-all-write-operations.png  used on input lin
 e 25.
 (pdftex.def)             Requested size: 489.32692pt x 1149.54189pt.
- [54 <./bilder/firefox-all-write-operations.png>]) [55 <./bilder/tor-all-write-
+ [55 <./bilder/firefox-all-write-operations.png>]) [56 <./bilder/tor-all-write-
 operations.png>]
 chapter without number
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
@@ -3267,11 +3267,11 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-[56
+[57
 
 
 
-] [57] (main.aux (kapitel/01_Einführung.aux)
+] [58] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -3299,11 +3299,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55646 strings out of 476315
- 1296976 string characters out of 5787669
+ 55645 strings out of 476315
+ 1296957 string characters out of 5787669
  2435415 words of memory out of 5000000
  74650 multiletter control sequences out of 15000+600000
- 646518 words of font info for 242 fonts, out of 8000000 for 9000
+ 646448 words of font info for 241 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,29n,106p,10901b,2689s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pf
@@ -3315,9 +3315,9 @@ C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><
 C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C
 :/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
 /Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (59 pages, 3542696 bytes).
+Output written on main.pdf (60 pages, 3546156 bytes).
 PDF statistics:
- 1019 PDF objects out of 1200 (max. 8388607)
- 201 named destinations out of 1000 (max. 500000)
+ 1020 PDF objects out of 1200 (max. 8388607)
+ 202 named destinations out of 1000 (max. 500000)
  68270 words of extra memory for PDF output out of 74296 (max. 10000000)
 

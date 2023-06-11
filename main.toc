@@ -23,8 +23,8 @@
 \contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{46}{paragraph*.87}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{50}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Diskussion}{51}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Fazit}{52}{chapter.8}%
-\contentsline {chapter}{Anhänge}{53}{section*.90}%
-\contentsline {chapter}{Literaturverzeichnis}{56}{figure.caption.92}%
-\contentsline {chapter}{\nonumberline Literatur}{56}{chapter*.93}%
+\contentsline {chapter}{\numberline {8}Fazit}{53}{chapter.8}%
+\contentsline {chapter}{Anhänge}{54}{section*.90}%
+\contentsline {chapter}{Literaturverzeichnis}{57}{figure.caption.92}%
+\contentsline {chapter}{\nonumberline Literatur}{57}{chapter*.93}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
