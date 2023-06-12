@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  11 JUN 2023 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  13 JUN 2023 00:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1083,63 +1083,63 @@ Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \CommentStream=\write5
 
 Excluding comment 'comment')
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
-Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
-
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks35
-\XKV@tempa@toks=\toks36
-)
-\XKV@depth=\count465
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
-Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.st
-y
-Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box61
-)
-\tc@llx=\dimen196
-\tc@lly=\dimen197
-\tc@urx=\dimen198
-\tc@ury=\dimen199
-Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
-File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
-))
-\adjbox@Width=\dimen256
-\adjbox@Height=\dimen257
-\adjbox@Depth=\dimen258
-\adjbox@Totalheight=\dimen259
-\adjbox@pwidth=\dimen260
-\adjbox@pheight=\dimen261
-\adjbox@pdepth=\dimen262
-\adjbox@ptotalheight=\dimen263
-
-(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
-Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count466
-) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
-Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box62
-\sift@deathcycles=\count467
-\@vwid@loff=\dimen264
-\@vwid@roff=\dimen265
-)) (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip100
-\multirow@cntb=\count468
+\multirow@cntb=\count465
 \multirow@dima=\skip101
-\bigstrutjot=\dimen266
+\bigstrutjot=\dimen196
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip102
+\enit@outerparindent=\dimen197
+\enit@toks=\toks35
+\enit@inbox=\box61
+\enit@count@id=\count466
+\enitdp@description=\count467
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nome
+tadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks36
+\AP@partial=\box62
+\AP@footins=\box63
+)
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count468
+\Gm@cntv=\count469
+\c@Gm@tempcnt=\count470
+\Gm@bindingoffset=\dimen198
+\Gm@wd@mp=\dimen199
+\Gm@odd@mp=\dimen256
+\Gm@even@mp=\dimen257
+\Gm@layoutwidth=\dimen258
+\Gm@layoutheight=\dimen259
+\Gm@layouthoffset=\dimen260
+\Gm@layoutvoffset=\dimen261
+\Gm@dimlist=\toks37
+
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tools\hhline.sty
+Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.revi
@@ -1163,12 +1163,12 @@ tex
 ode.tex)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser
 .code.tex
-\pgfmath@dimen=\dimen267
-\pgfmath@count=\count469
-\pgfmath@box=\box63
-\pgfmath@toks=\toks37
-\pgfmath@stack@operand=\toks38
-\pgfmath@stack@operation=\toks39
+\pgfmath@dimen=\dimen262
+\pgfmath@count=\count471
+\pgfmath@box=\box64
+\pgfmath@toks=\toks38
+\pgfmath@stack@operand=\toks39
+\pgfmath@stack@operation=\toks40
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfuncti
 ons.code.tex)
@@ -1192,59 +1192,59 @@ ons.integerarithmetics.code.tex)
 ode.tex)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.
 code.tex
-\c@pgfmathroundto@lastzeros=\count470
+\c@pgfmathroundto@lastzeros=\count472
 ))
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.t
 ex)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 points.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen268
-\pgf@picmaxx=\dimen269
-\pgf@picminy=\dimen270
-\pgf@picmaxy=\dimen271
-\pgf@pathminx=\dimen272
-\pgf@pathmaxx=\dimen273
-\pgf@pathminy=\dimen274
-\pgf@pathmaxy=\dimen275
-\pgf@xx=\dimen276
-\pgf@xy=\dimen277
-\pgf@yx=\dimen278
-\pgf@yy=\dimen279
-\pgf@zx=\dimen280
-\pgf@zy=\dimen281
+\pgf@picminx=\dimen263
+\pgf@picmaxx=\dimen264
+\pgf@picminy=\dimen265
+\pgf@picmaxy=\dimen266
+\pgf@pathminx=\dimen267
+\pgf@pathmaxx=\dimen268
+\pgf@pathminy=\dimen269
+\pgf@pathmaxy=\dimen270
+\pgf@xx=\dimen271
+\pgf@xy=\dimen272
+\pgf@yx=\dimen273
+\pgf@yy=\dimen274
+\pgf@zx=\dimen275
+\pgf@zy=\dimen276
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 pathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen282
-\pgf@path@lasty=\dimen283
+\pgf@path@lastx=\dimen277
+\pgf@path@lasty=\dimen278
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 pathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen284
-\pgf@shorten@start@additional=\dimen285
+\pgf@shorten@end@additional=\dimen279
+\pgf@shorten@start@additional=\dimen280
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 scopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box64
-\pgf@hbox=\box65
-\pgf@layerbox@main=\box66
-\pgf@picture@serial@count=\count471
+\pgfpic=\box65
+\pgf@hbox=\box66
+\pgf@layerbox@main=\box67
+\pgf@picture@serial@count=\count473
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 graphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen286
+\pgflinewidth=\dimen281
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 transformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen287
-\pgf@pt@y=\dimen288
-\pgf@pt@temp=\dimen289
+\pgf@pt@x=\dimen282
+\pgf@pt@y=\dimen283
+\pgf@pt@temp=\dimen284
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 quick.code.tex
@@ -1261,14 +1261,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 arrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen290
+\pgfarrowsep=\dimen285
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 shade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen291
-\pgf@sys@shading@range@num=\count472
-\pgf@shadingcount=\count473
+\pgf@max=\dimen286
+\pgf@sys@shading@range@num=\count474
+\pgf@shadingcount=\count475
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 image.code.tex
@@ -1277,7 +1277,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 external.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box67
+\pgfexternal@startupbox=\box68
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore
 layers.code.tex
@@ -1298,7 +1298,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodules
 hapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box68
+\pgfnodeparttextbox=\box69
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulep
 lot.code.tex
@@ -1307,8 +1307,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
 p-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen292
-\pgf@nodesepend=\dimen293
+\pgf@nodesepstart=\dimen287
+\pgf@nodesepend=\dimen288
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcom
 p-version-1-18.sty
@@ -1326,10 +1326,10 @@ tex))
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.c
 ode.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen294
-\pgffor@skip=\dimen295
-\pgffor@stack=\toks40
-\pgffor@toks=\toks41
+\pgffor@iter=\dimen289
+\pgffor@skip=\dimen290
+\pgffor@stack=\toks41
+\pgffor@toks=\toks42
 ))
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 \tikz.code.tex
@@ -1338,34 +1338,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count474
-\pgfplotmarksize=\dimen296
+\pgf@plot@mark@count=\count476
+\pgfplotmarksize=\dimen291
 )
-\tikz@lastx=\dimen297
-\tikz@lasty=\dimen298
-\tikz@lastxsaved=\dimen299
-\tikz@lastysaved=\dimen300
-\tikz@lastmovetox=\dimen301
-\tikz@lastmovetoy=\dimen302
-\tikzleveldistance=\dimen303
-\tikzsiblingdistance=\dimen304
-\tikz@figbox=\box69
-\tikz@figbox@bg=\box70
-\tikz@tempbox=\box71
-\tikz@tempbox@bg=\box72
-\tikztreelevel=\count475
-\tikznumberofchildren=\count476
-\tikznumberofcurrentchild=\count477
-\tikz@fig@count=\count478
+\tikz@lastx=\dimen292
+\tikz@lasty=\dimen293
+\tikz@lastxsaved=\dimen294
+\tikz@lastysaved=\dimen295
+\tikz@lastmovetox=\dimen296
+\tikz@lastmovetoy=\dimen297
+\tikzleveldistance=\dimen298
+\tikzsiblingdistance=\dimen299
+\tikz@figbox=\box70
+\tikz@figbox@bg=\box71
+\tikz@tempbox=\box72
+\tikz@tempbox@bg=\box73
+\tikztreelevel=\count477
+\tikznumberofchildren=\count478
+\tikznumberofcurrentchild=\count479
+\tikz@fig@count=\count480
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulem
 atrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count479
-\pgfmatrixcurrentcolumn=\count480
-\pgf@matrix@numberofcolumns=\count481
+\pgfmatrixcurrentrow=\count481
+\pgfmatrixcurrentcolumn=\count482
+\pgf@matrix@numberofcolumns=\count483
 )
-\tikz@expandcount=\count482
+\tikz@expandcount=\count484
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarytopaths.code.tex
@@ -1375,12 +1375,12 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 .tex
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore.
 code.tex
-\t@pgfplots@toka=\toks42
-\t@pgfplots@tokb=\toks43
-\t@pgfplots@tokc=\toks44
-\pgfplots@tmpa=\dimen305
-\c@pgfplots@coordindex=\count483
-\c@pgfplots@scanlineindex=\count484
+\t@pgfplots@toka=\toks43
+\t@pgfplots@tokb=\toks44
+\t@pgfplots@tokc=\toks45
+\pgfplots@tmpa=\dimen300
+\c@pgfplots@coordindex=\count485
+\c@pgfplots@scanlineindex=\count486
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplotss
 ysgeneric.code.tex))
@@ -1391,9 +1391,9 @@ b\pgfplotsoldpgfsupp_loader.code.tex
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibra
 ryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks45
-\t@pgf@tokb=\toks46
-\t@pgf@tokc=\toks47
+\t@pgf@toka=\toks46
+\t@pgf@tokb=\toks47
+\t@pgf@tokc=\toks48
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompati
 b\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
@@ -1405,14 +1405,14 @@ util.code.tex
 \pgfplotsliststructureext.code.tex)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count485
+\c@pgfplotsarray@tmp=\count487
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsmatrix.code.tex)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgfp
 lotstableshared.code.tex
-\c@pgfplotstable@counta=\count486
-\t@pgfplotstable@a=\toks48
+\c@pgfplotstable@counta=\count488
+\t@pgfplotstable@a=\toks49
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructure
 \pgfplotsdeque.code.tex)
@@ -1424,7 +1424,7 @@ binary.data.code.tex))
 util.verb.code.tex)
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibra
 rypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count487
+\c@pgfplotslibrarysurf@no=\count489
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibrar
 ypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -1456,16 +1456,16 @@ s.code.tex)
 /libraries\tikzlibrarydecorations.code.tex
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduled
 ecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen306
-\pgfdecoratedremainingdistance=\dimen307
-\pgfdecoratedinputsegmentcompleteddistance=\dimen308
-\pgfdecoratedinputsegmentremainingdistance=\dimen309
-\pgf@decorate@distancetomove=\dimen310
-\pgf@decorate@repeatstate=\count488
-\pgfdecorationsegmentamplitude=\dimen311
-\pgfdecorationsegmentlength=\dimen312
+\pgfdecoratedcompleteddistance=\dimen301
+\pgfdecoratedremainingdistance=\dimen302
+\pgfdecoratedinputsegmentcompleteddistance=\dimen303
+\pgfdecoratedinputsegmentremainingdistance=\dimen304
+\pgf@decorate@distancetomove=\dimen305
+\pgf@decorate@repeatstate=\count490
+\pgfdecorationsegmentamplitude=\dimen306
+\pgfdecorationsegmentlength=\dimen307
 )
-\tikz@lib@dec@box=\box73
+\tikz@lib@dec@box=\box74
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -1477,13 +1477,13 @@ ons\pgflibrarydecorations.pathmorphing.code.tex))
 ons\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlibr
 arypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count489
-\pgfplots@xmin@reg=\dimen313
-\pgfplots@xmax@reg=\dimen314
-\pgfplots@ymin@reg=\dimen315
-\pgfplots@ymax@reg=\dimen316
-\pgfplots@zmin@reg=\dimen317
-\pgfplots@zmax@reg=\dimen318
+\pgfplots@numplots=\count491
+\pgfplots@xmin@reg=\dimen308
+\pgfplots@xmax@reg=\dimen309
+\pgfplots@ymin@reg=\dimen310
+\pgfplots@ymax@reg=\dimen311
+\pgfplots@zmin@reg=\dimen312
+\pgfplots@zmax@reg=\dimen313
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz
 /libraries\tikzlibraryplotmarks.code.tex
@@ -1521,8 +1521,8 @@ Package: bchart
 /libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\bcpos=\skip102
-\bcwidth=\skip103
+\bcpos=\skip103
+\bcwidth=\skip104
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tablefootnote\tablefootn
 ote.sty
@@ -1533,16 +1533,16 @@ Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count490
-\calc@Bcount=\count491
-\calc@Adimen=\dimen319
-\calc@Bdimen=\dimen320
-\calc@Askip=\skip104
-\calc@Bskip=\skip105
+\calc@Acount=\count492
+\calc@Bcount=\count493
+\calc@Adimen=\dimen314
+\calc@Bdimen=\dimen315
+\calc@Askip=\skip105
+\calc@Bskip=\skip106
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count492
-\calc@Cskip=\skip106
+\calc@Ccount=\count494
+\calc@Cskip=\skip107
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
@@ -1555,11 +1555,11 @@ Package: fvextra 2022/11/30 v1.5 fvextra - extensions and patches for fancyvrb
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2023/01/19 4.5a verbatim text (tvz,hv)
-\FV@CodeLineNo=\count493
+\FV@CodeLineNo=\count495
 \FV@InFile=\read5
-\FV@TabBox=\box74
-\c@FancyVerbLine=\count494
-\FV@StepNumber=\count495
+\FV@TabBox=\box75
+\c@FancyVerbLine=\count496
+\FV@StepNumber=\count497
 \FV@OutFile=\write6
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
@@ -1571,105 +1571,104 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 ))
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2023/01/19 line numbers on paragraphs v5.1
-\linenopenalty=\count496
-\output=\toks49
-\linenoprevgraf=\count497
-\linenumbersep=\dimen321
-\linenumberwidth=\dimen322
-\c@linenumber=\count498
-\c@pagewiselinenumber=\count499
-\c@LN@truepage=\count500
-\c@internallinenumber=\count501
-\c@internallinenumbers=\count502
-\quotelinenumbersep=\dimen323
-\bframerule=\dimen324
-\bframesep=\dimen325
-\bframebox=\box75
-\linenoamsmath@ams@eqpen=\count503
+\linenopenalty=\count498
+\output=\toks50
+\linenoprevgraf=\count499
+\linenumbersep=\dimen316
+\linenumberwidth=\dimen317
+\c@linenumber=\count500
+\c@pagewiselinenumber=\count501
+\c@LN@truepage=\count502
+\c@internallinenumber=\count503
+\c@internallinenumbers=\count504
+\quotelinenumbersep=\dimen318
+\bframerule=\dimen319
+\bframesep=\dimen320
+\bframebox=\box76
+\linenoamsmath@ams@eqpen=\count505
 LaTeX Info: Redefining \\ on input line 3131.
 )
-\c@FV@TrueTabGroupLevel=\count504
-\c@FV@TrueTabCounter=\count505
-\FV@TabBox@Group=\box76
-\FV@TmpLength=\skip107
-\c@FV@HighlightLinesStart=\count506
-\c@FV@HighlightLinesStop=\count507
-\FV@LoopCount=\count508
-\FV@NCharsBox=\box77
-\FV@BreakIndent=\dimen326
-\FV@BreakIndentNChars=\count509
-\FV@BreakSymbolSepLeft=\dimen327
-\FV@BreakSymbolSepLeftNChars=\count510
-\FV@BreakSymbolSepRight=\dimen328
-\FV@BreakSymbolSepRightNChars=\count511
-\FV@BreakSymbolIndentLeft=\dimen329
-\FV@BreakSymbolIndentLeftNChars=\count512
-\FV@BreakSymbolIndentRight=\dimen330
-\FV@BreakSymbolIndentRightNChars=\count513
-\c@FancyVerbLineBreakLast=\count514
-\FV@LineBox=\box78
-\FV@LineIndentBox=\box79
-\c@FV@BreakBufferDepth=\count515
-\FV@LineWidth=\dimen331
+\c@FV@TrueTabGroupLevel=\count506
+\c@FV@TrueTabCounter=\count507
+\FV@TabBox@Group=\box77
+\FV@TmpLength=\skip108
+\c@FV@HighlightLinesStart=\count508
+\c@FV@HighlightLinesStop=\count509
+\FV@LoopCount=\count510
+\FV@NCharsBox=\box78
+\FV@BreakIndent=\dimen321
+\FV@BreakIndentNChars=\count511
+\FV@BreakSymbolSepLeft=\dimen322
+\FV@BreakSymbolSepLeftNChars=\count512
+\FV@BreakSymbolSepRight=\dimen323
+\FV@BreakSymbolSepRightNChars=\count513
+\FV@BreakSymbolIndentLeft=\dimen324
+\FV@BreakSymbolIndentLeftNChars=\count514
+\FV@BreakSymbolIndentRight=\dimen325
+\FV@BreakSymbolIndentRightNChars=\count515
+\c@FancyVerbLineBreakLast=\count516
+\FV@LineBox=\box79
+\FV@LineIndentBox=\box80
+\c@FV@BreakBufferDepth=\count517
+\FV@LineWidth=\dimen326
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\integerpart=\count516
-\decimalpart=\count517
+\integerpart=\count518
+\decimalpart=\count519
 )
 Package: xstring 2023/01/14 v1.85 String manipulations (CT)
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip108
-\fb@frw=\dimen332
-\fb@frh=\dimen333
-\FrameRule=\dimen334
-\FrameSep=\dimen335
+\OuterFrameSep=\skip109
+\fb@frw=\dimen327
+\fb@frh=\dimen328
+\FrameRule=\dimen329
+\FrameSep=\dimen330
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count518
-\float@exts=\toks50
-\float@box=\box80
-\@float@everytoks=\toks51
-\@floatcapt=\box81
+\c@float@type=\count520
+\float@exts=\toks51
+\float@box=\box81
+\@float@everytoks=\toks52
+\@floatcapt=\box82
 )
 \minted@appexistsfile=\read6
-\minted@bgbox=\box82
+\minted@bgbox=\box83
 \minted@code=\write7
-\c@minted@FancyVerbLineTemp=\count519
-\c@minted@pygmentizecounter=\count520
-\@float@every@listing=\toks52
-\c@listing=\count521
+\c@minted@FancyVerbLineTemp=\count521
+\c@minted@pygmentizecounter=\count522
+\@float@every@listing=\toks53
+\c@listing=\count523
 )
 runsystem(if not exist _minted-main mkdir _minted-main)...executed.
 
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
-\c@tracingmulticols=\count522
-\mult@box=\box83
-\multicol@leftmargin=\dimen336
-\c@unbalance=\count523
-\c@collectmore=\count524
-\doublecol@number=\count525
-\multicoltolerance=\count526
-\multicolpretolerance=\count527
-\full@width=\dimen337
-\page@free=\dimen338
-\premulticols=\dimen339
-\postmulticols=\dimen340
-\multicolsep=\skip109
-\multicolbaselineskip=\skip110
-\partial@page=\box84
-\last@line=\box85
-\maxbalancingoverflow=\dimen341
-\mult@rightbox=\box86
-\mult@grightbox=\box87
-\mult@firstbox=\box88
-\mult@gfirstbox=\box89
-\@tempa=\box90
+\c@tracingmulticols=\count524
+\mult@box=\box84
+\multicol@leftmargin=\dimen331
+\c@unbalance=\count525
+\c@collectmore=\count526
+\doublecol@number=\count527
+\multicoltolerance=\count528
+\multicolpretolerance=\count529
+\full@width=\dimen332
+\page@free=\dimen333
+\premulticols=\dimen334
+\postmulticols=\dimen335
+\multicolsep=\skip110
+\multicolbaselineskip=\skip111
+\partial@page=\box85
+\last@line=\box86
+\maxbalancingoverflow=\dimen336
+\mult@rightbox=\box87
+\mult@grightbox=\box88
+\mult@firstbox=\box89
+\mult@gfirstbox=\box90
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
@@ -1705,15 +1704,16 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \@tempa=\box123
 \@tempa=\box124
 \@tempa=\box125
-\c@minrows=\count528
-\c@columnbadness=\count529
-\c@finalcolumnbadness=\count530
-\last@try=\dimen342
-\multicolovershoot=\dimen343
-\multicolundershoot=\dimen344
-\mult@nat@firstbox=\box126
-\colbreak@box=\box127
-\mc@col@check@num=\count531
+\@tempa=\box126
+\c@minrows=\count530
+\c@columnbadness=\count531
+\c@finalcolumnbadness=\count532
+\last@try=\dimen337
+\multicolovershoot=\dimen338
+\multicolundershoot=\dimen339
+\mult@nat@firstbox=\box127
+\colbreak@box=\box128
+\mc@col@check@num=\count533
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/chngcntr\chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
@@ -1737,15 +1737,15 @@ LaTeX Info: Redefining \_ on input line 43.
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count532
-\@quotereset=\count533
+\@quotelevel=\count534
+\@quotereset=\count535
 runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ma
 in.aex <nul: /p x=^%~$PATH:i>> main.aex)...executed.
 
 runsystem(del main.aex)...executed.
 
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-47.
+61.
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1848,37 +1848,37 @@ LaTeX Warning: Label `chart:final-criteria' multiply defined.
 (kapitel/08_Fazit.aux) (kapitel/09_Anhang.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Info: Redefining \microtypecontext on input line 147.
-Package microtype Info: Applying patch `item' on input line 147.
-Package microtype Info: Applying patch `toc' on input line 147.
-Package microtype Info: Applying patch `eqnum' on input line 147.
-Package microtype Info: Applying patch `footnote' on input line 147.
-Package microtype Info: Applying patch `verbatim' on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
+LaTeX Font Info:    ... okay on input line 161.
+LaTeX Info: Redefining \microtypecontext on input line 161.
+Package microtype Info: Applying patch `item' on input line 161.
+Package microtype Info: Applying patch `toc' on input line 161.
+Package microtype Info: Applying patch `eqnum' on input line 161.
+Package microtype Info: Applying patch `footnote' on input line 161.
+Package microtype Info: Applying patch `verbatim' on input line 161.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 147.
+LaTeX Info: Redefining \showhyphens on input line 161.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1912,14 +1912,105 @@ Package biblatex Info: ... file 'main.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                GitHub.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                GitHub.05.06.2023b
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                GitHub.08.04.2019
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Gitlab.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                Hariharan
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                InfoSecNotes.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                JeffersonScher.29.11.2020
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                MandiOhlinger.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Mills.2021
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                MozillaSupport.26.10.2020
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                MozillaWiki.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                SecureDrop.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                TechSupportGuy.05.06.2023
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                mozillazine.29.12.2022
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
-Package biblatex Info: Reference section=0 on input line 147.
-Package biblatex Info: Reference segment=0 on input line 147.
-Package hyperref Info: Link coloring ON on input line 147.
+Package biblatex Info: Reference section=0 on input line 161.
+Package biblatex Info: Reference segment=0 on input line 161.
+Package hyperref Info: Link coloring ON on input line 161.
  (main.out) (main.out)
 \@outlinefile=\write8
 \openout8 = `main.out'.
@@ -1931,29 +2022,29 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 147.
+(scrreprt)           before \begin{document} on input line 161.
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count534
+\BKM@id=\count536
 ))
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count535
-\scratchdimen=\dimen345
-\scratchbox=\box128
-\nofMPsegments=\count536
-\nofMParguments=\count537
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count538
-\MPscratchDim=\dimen346
-\MPnumerator=\count539
-\makeMPintoPDFobject=\count540
-\everyMPtoPDFconversion=\toks54
+\scratchcounter=\count537
+\scratchdimen=\dimen340
+\scratchbox=\box129
+\nofMPsegments=\count538
+\nofMParguments=\count539
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count540
+\MPscratchDim=\dimen341
+\MPnumerator=\count541
+\makeMPintoPDFobject=\count542
+\everyMPtoPDFconversion=\toks55
 )
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
 se.sty
@@ -1978,17 +2069,51 @@ Package svg Warning: No version of Inkscape was detected by invoking
 (svg)                so the Inkscape export will fail quite sure as the
 (svg)                command is probably unknown to your OS. You could set
 (svg)                `inkscapeversion=<version>' manually but this is very
-(svg)                unlikely to work on input line 147.
+(svg)                unlikely to work on input line 161.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.53027pt, 152.11002pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=591.53027pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-8.26335pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.9).
 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-47.
+61.
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1999,112 +2124,112 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/b/it' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 147.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/b/scsl' undefined
-(Font)              using `T1/lmtt/b/sc' instead on input line 147.
+(Font)              using `T1/lmtt/b/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/b/sc' undefined
-(Font)              using `T1/lmtt/b/n' instead on input line 147.
+(Font)              using `T1/lmtt/b/n' instead on input line 161.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 147.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 161.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 147.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 161.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/sl' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 147.
+(Font)              Font shape `T1/lmtt/b/sl' tried instead on input line 161.
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/scsl' undefined
-(Font)              using `T1/lmtt/bx/sc' instead on input line 147.
+(Font)              using `T1/lmtt/bx/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/sc' undefined
-(Font)              using `T1/lmtt/bx/n' instead on input line 147.
+(Font)              using `T1/lmtt/bx/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sbx/sc' undefined
-(Font)              using `T1/lmtt/sb/sc' instead on input line 147.
+(Font)              using `T1/lmtt/sb/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sb/n' undefined
-(Font)              using `T1/lmtt/m/n' instead on input line 147.
+(Font)              using `T1/lmtt/m/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sb/it' undefined
-(Font)              using `T1/lmtt/sb/n' instead on input line 147.
+(Font)              using `T1/lmtt/sb/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sb/sl' undefined
-(Font)              using `T1/lmtt/sb/it' instead on input line 147.
+(Font)              using `T1/lmtt/sb/it' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sb/scit' undefined
-(Font)              using `T1/lmtt/sb/sc' instead on input line 147.
+(Font)              using `T1/lmtt/sb/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sb/sc' undefined
-(Font)              using `T1/lmtt/sb/n' instead on input line 147.
+(Font)              using `T1/lmtt/sb/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/sbc/sc' undefined
-(Font)              using `T1/lmtt/c/sc' instead on input line 147.
+(Font)              using `T1/lmtt/c/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/c/n' undefined
-(Font)              using `T1/lmtt/m/n' instead on input line 147.
+(Font)              using `T1/lmtt/m/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/c/it' undefined
-(Font)              using `T1/lmtt/c/n' instead on input line 147.
+(Font)              using `T1/lmtt/c/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/c/sl' undefined
-(Font)              using `T1/lmtt/c/it' instead on input line 147.
+(Font)              using `T1/lmtt/c/it' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/c/scit' undefined
-(Font)              using `T1/lmtt/c/sc' instead on input line 147.
+(Font)              using `T1/lmtt/c/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/c/sc' undefined
-(Font)              using `T1/lmtt/c/n' instead on input line 147.
+(Font)              using `T1/lmtt/c/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/lc/it' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/lc/sl' tried instead on input line 147.
+(Font)              Font shape `T1/lmtt/lc/sl' tried instead on input line 161.
 
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/lc/scsl' undefined
-(Font)              using `T1/lmtt/lc/sc' instead on input line 147.
+(Font)              using `T1/lmtt/lc/sc' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/lc/sc' undefined
-(Font)              using `T1/lmtt/lc/n' instead on input line 147.
+(Font)              using `T1/lmtt/lc/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/m/ui' undefined
-(Font)              using `T1/lmtt/m/n' instead on input line 147.
+(Font)              using `T1/lmtt/m/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/ui' undefined
-(Font)              using `T1/lmtt/bx/n' instead on input line 147.
+(Font)              using `T1/lmtt/bx/n' instead on input line 161.
 
 
 LaTeX Font Warning: Font shape `T1/lmtt/m/In' undefined
-(Font)              using `T1/lmtt/m/n' instead on input line 147.
+(Font)              using `T1/lmtt/m/n' instead on input line 161.
 
 <bilder//thi_logo.pdf, id=6, 165.87971pt x 73.25368pt>
 File: bilder//thi_logo.pdf Graphic file (type pdf)
 <use bilder//thi_logo.pdf>
-Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 151.
-(pdftex.def)             Requested size: 137.88785pt x 60.8933pt.
+Package pdftex.def Info: bilder//thi_logo.pdf  used on input line 165.
+(pdftex.def)             Requested size: 125.47739pt x 55.41292pt.
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-151.
+165.
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2112,7 +2237,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151
+LaTeX Font Info:    Trying to load font information for U+msa on input line 165
 .
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -2121,7 +2246,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151
+LaTeX Font Info:    Trying to load font information for U+msb on input line 165
 .
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -2136,15 +2261,15 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 {C:/Users/sell/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sell/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./bilder//thi_logo
 .pdf>]
-Package tocbasic Info: character protrusion at toc deactivated on input line 15
-6.
- (main.toc)
+Package tocbasic Info: character protrusion at toc deactivated on input line 17
+0.
+ (main.toc [1
+
+])
 \tf@toc=\write9
 \openout9 = `main.toc'.
 
- [1
-
-]
+ [2]
 \openout2 = `kapitel/01_Einführung.aux'.
 
  (kapitel/01_Einführung.tex
@@ -2178,14 +2303,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.38 I
-      mmer mehr Internet-Nuter:\cite{Izzati.2022} [1
+l.32 I
+      mmer mehr Kriminelle im Internet \cite{Mahlous.2020}: [1
 
 
 
 
 {C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [2
-]) [3]
+] [3]) [4]
 \openout2 = `"kapitel/02_Theoretischer Hintergrund.aux"'.
 
 
@@ -2199,371 +2324,366 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--115
 
  []
 
-[4
+[5
 
 
 
 
-] Excluding 'comment' comment. [5] Excluding 'comment' comment.) [6]
+] Excluding 'comment' comment. [6] Excluding 'comment' comment.) [7]
 \openout2 = `"kapitel/03_Ziel der Arbeit.aux"'.
 
 
 (kapitel/03_Ziel der Arbeit.tex
 chapter 3.
-[7
+[8
 
 
 
 
-] [8]) [9]
+] [9]) [10]
 \openout2 = `kapitel/04_Methodik.aux'.
 
  (kapitel/04_Methodik.tex
 chapter 4.
-[10
+[11
 
 
 
 
 ]
 
-LaTeX Warning: Citation 'Hariharan' on page 11 undefined on input line 64.
+LaTeX Warning: Citation 'Hariharan' on page 12 undefined on input line 64.
 
-[11] [12] (bilder/process_monitor_to_excel-Latex.pdf_tex
-<bilder//process_monitor_to_excel-Latex.pdf, id=216, page=1, 798.9303pt x 286.9
+[12] [13] (bilder/process_monitor_to_excel-Latex.pdf_tex
+<bilder//process_monitor_to_excel-Latex.pdf, id=247, page=1, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page1 use
 d on input line 56.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=217, page=2, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=248, page=2, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page2 use
 d on input line 58.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=218, page=3, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=249, page=3, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page3 use
 d on input line 60.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=219, page=4, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=250, page=4, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page4 use
 d on input line 63.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=220, page=5, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=251, page=5, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page5 use
 d on input line 65.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=221, page=6, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=252, page=6, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page6 use
 d on input line 67.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=222, page=7, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=253, page=7, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page7 use
 d on input line 71.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=223, page=8, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=254, page=8, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page8 use
 d on input line 74.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=224, page=9, 798.9303pt x 286.9
+<bilder//process_monitor_to_excel-Latex.pdf, id=255, page=9, 798.9303pt x 286.9
 3419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page9 use
 d on input line 76.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=225, page=10, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=256, page=10, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page10 us
 ed on input line 78.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=226, page=11, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=257, page=11, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page11 us
 ed on input line 81.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=227, page=12, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=258, page=12, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page12 us
 ed on input line 83.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=228, page=13, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=259, page=13, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page13 us
 ed on input line 85.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=229, page=14, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=260, page=14, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page14 us
 ed on input line 87.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=230, page=15, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=261, page=15, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page15 us
 ed on input line 90.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=231, page=16, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=262, page=16, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page16 us
 ed on input line 94.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=232, page=17, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=263, page=17, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page17 us
 ed on input line 97.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=233, page=18, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=264, page=18, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page18 us
 ed on input line 100.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=234, page=19, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=265, page=19, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page19 us
 ed on input line 103.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=235, page=20, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=266, page=20, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page20 us
 ed on input line 107.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-<bilder//process_monitor_to_excel-Latex.pdf, id=236, page=21, 798.9303pt x 286.
+<bilder//process_monitor_to_excel-Latex.pdf, id=267, page=21, 798.9303pt x 286.
 93419pt>
 File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
 <use bilder//process_monitor_to_excel-Latex.pdf, page 21>
 Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page21 us
 ed on input line 111.
 (pdftex.def)             Requested size: 798.93025pt x 286.95099pt.
-)
-(bilder/sqlite_file_diffs-Latex.pdf_tex
-<bilder//sqlite_file_diffs-Latex.pdf, id=237, page=1, 563.17224pt x 286.8669pt>
+) [14 <./bilder//process_monitor_to_excel-Latex.pdf> <./bilder//process_monitor
+_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bilder//process_monitor_to_excel-Latex.pdf
+
+pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
+): PDF inclusion: multiple pdfs with page group included in a single page
+>] (bilder/sqlite_file_diffs-Latex.pdf_tex
+<bilder//sqlite_file_diffs-Latex.pdf, id=342, page=1, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page1 used on in
 put line 56.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=238, page=2, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=343, page=2, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page2 used on in
 put line 58.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=239, page=3, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=344, page=3, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page3 used on in
 put line 60.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=240, page=4, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=345, page=4, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page4 used on in
 put line 63.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=241, page=5, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=346, page=5, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page5 used on in
 put line 65.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=242, page=6, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=347, page=6, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page6 used on in
 put line 67.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=243, page=7, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=348, page=7, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page7 used on in
 put line 71.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=244, page=8, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=349, page=8, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page8 used on in
 put line 75.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=245, page=9, 563.17224pt x 286.8669pt>
+<bilder//sqlite_file_diffs-Latex.pdf, id=350, page=9, 563.17224pt x 286.8669pt>
 
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page9 used on in
 put line 78.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=246, page=10, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=351, page=10, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page10 used on i
 nput line 81.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=247, page=11, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=352, page=11, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page11 used on i
 nput line 85.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=248, page=12, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=353, page=12, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page12 used on i
 nput line 89.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=249, page=13, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=354, page=13, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page13 used on i
 nput line 91.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-<bilder//sqlite_file_diffs-Latex.pdf, id=250, page=14, 563.17224pt x 286.8669pt
+<bilder//sqlite_file_diffs-Latex.pdf, id=355, page=14, 563.17224pt x 286.8669pt
 >
 File: bilder//sqlite_file_diffs-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite_file_diffs-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//sqlite_file_diffs-Latex.pdf , page14 used on i
 nput line 94.
 (pdftex.def)             Requested size: 563.17221pt x 286.88806pt.
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13 <./bilder//process_monitor_to_excel-Latex.pdf> <./bilder//process_monitor_t
-o_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_excel-Latex.pdf
-
-pdfTeX warning: pdflatex.exe (file ./bilder//process_monitor_to_excel-Latex.pdf
-): PDF inclusion: multiple pdfs with page group included in a single page
->] [14 <./bilder//sqlite_file_diffs-Latex.pdf> <./bilder//sqlite_file_diffs-Lat
-ex.pdf
+) [15 <./bilder//sqlite_file_diffs-Latex.pdf> <./bilder//sqlite_file_diffs-Late
+x.pdf
 
 pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
@@ -2615,156 +2735,160 @@ inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex.exe (file ./bilder//sqlite_file_diffs-Latex.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
->] (bilder/yarascan_plugin_tree-Latex.pdf_tex
-<bilder//yarascan_plugin_tree-Latex.pdf, id=389, page=1, 654.44495pt x 601.8298
+>] [16] (bilder/yarascan_plugin_tree-Latex.pdf_tex
+<bilder//yarascan_plugin_tree-Latex.pdf, id=426, page=1, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page1 used on
  input line 56.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=390, page=2, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=427, page=2, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page2 used on
  input line 58.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=391, page=3, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=428, page=3, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page3 used on
  input line 60.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=392, page=4, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=429, page=4, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page4 used on
  input line 62.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=393, page=5, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=430, page=5, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page5 used on
  input line 64.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=394, page=6, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=431, page=6, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page6 used on
  input line 66.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=395, page=7, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=432, page=7, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page7 used on
  input line 68.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=396, page=8, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=433, page=8, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page8 used on
  input line 70.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=397, page=9, 654.44495pt x 601.8298
+<bilder//yarascan_plugin_tree-Latex.pdf, id=434, page=9, 654.44495pt x 601.8298
 5pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page9 used on
  input line 72.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=398, page=10, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=435, page=10, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page10 used o
 n input line 74.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=399, page=11, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=436, page=11, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page11 used o
 n input line 79.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=400, page=12, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=437, page=12, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page12 used o
 n input line 81.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=401, page=13, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=438, page=13, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page13 used o
 n input line 84.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=402, page=14, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=439, page=14, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page14 used o
 n input line 86.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=403, page=15, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=440, page=15, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page15 used o
 n input line 88.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=404, page=16, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=441, page=16, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page16 used o
 n input line 90.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=405, page=17, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=442, page=17, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page17 used o
 n input line 92.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=406, page=18, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=443, page=18, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page18 used o
 n input line 94.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=407, page=19, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=444, page=19, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page19 used o
 n input line 97.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=408, page=20, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=445, page=20, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page20 used o
 n input line 100.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-<bilder//yarascan_plugin_tree-Latex.pdf, id=409, page=21, 654.44495pt x 601.829
+<bilder//yarascan_plugin_tree-Latex.pdf, id=446, page=21, 654.44495pt x 601.829
 85pt>
 File: bilder//yarascan_plugin_tree-Latex.pdf Graphic file (type pdf)
 <use bilder//yarascan_plugin_tree-Latex.pdf, page 21>
 Package pdftex.def Info: bilder//yarascan_plugin_tree-Latex.pdf , page21 used o
 n input line 103.
 (pdftex.def)             Requested size: 654.44493pt x 601.82837pt.
-) [15]) [16 <./bilder//yarascan_plugin_tree-Latex.pdf> <./bilder//yarascan_plug
-in_tree-Latex.pdf
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [17] [18 <./bilder//yarascan_plugin_tree-Latex.pdf> <./bilder//yarascan_plugi
+n_tree-Latex.pdf
 
 pdfTeX warning: pdflatex.exe (file ./bilder//yarascan_plugin_tree-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
@@ -2849,7 +2973,7 @@ DF inclusion: multiple pdfs with page group included in a single page
 
  (kapitel/05_Ergebnisse.tex
 chapter 5.
-<bilder/firefox-tabelle-logfile1vlogfile2-reduced.png, id=489, 672.01062pt x 25
+<bilder/firefox-tabelle-logfile1vlogfile2-reduced.png, id=526, 672.01062pt x 25
 7.96375pt>
 File: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png Graphic file (type p
 ng)
@@ -2857,96 +2981,99 @@ ng)
 Package pdftex.def Info: bilder/firefox-tabelle-logfile1vlogfile2-reduced.png  
 used on input line 28.
 (pdftex.def)             Requested size: 672.00897pt x 257.9631pt.
-[17
+[19
 
 
 
 
- <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>] [18]
-<bilder/firefox-sqlite-table.png, id=503, 892.83563pt x 161.85469pt>
+ <./bilder/firefox-tabelle-logfile1vlogfile2-reduced.png>] [20] [21]
+<bilder/firefox-sqlite-table.png, id=543, 892.83563pt x 161.85469pt>
 File: bilder/firefox-sqlite-table.png Graphic file (type png)
 <use bilder/firefox-sqlite-table.png>
 Package pdftex.def Info: bilder/firefox-sqlite-table.png  used on input line 14
 9.
 (pdftex.def)             Requested size: 892.83345pt x 161.85428pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[19]
-<bilder/bar-chart-logfile1vs2-test.png, id=508, 777.231pt x 335.946pt>
+<bilder/bar-chart-logfile1vs2-test.png, id=544, 777.231pt x 335.946pt>
 File: bilder/bar-chart-logfile1vs2-test.png Graphic file (type png)
 <use bilder/bar-chart-logfile1vs2-test.png>
 Package pdftex.def Info: bilder/bar-chart-logfile1vs2-test.png  used on input l
 ine 172.
 (pdftex.def)             Requested size: 777.22911pt x 335.94518pt.
- [20 <./bilder/firefox-sqlite-table.png> <./bilder/bar-chart-logfile1vs2-test.p
-ng>]
-<bilder/firefox-registry-stacked-bar-chart.png, id=518, 698.172pt x 150.891pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22 <./bilder/firefox-sqlite-table.png>]
+<bilder/firefox-registry-stacked-bar-chart.png, id=553, 698.172pt x 150.891pt>
 File: bilder/firefox-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/firefox-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/firefox-registry-stacked-bar-chart.png  used on
  input line 229.
 (pdftex.def)             Requested size: 698.17029pt x 150.89063pt.
- [21 <./bilder/firefox-registry-stacked-bar-chart.png>]
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=527, 874.76813pt x 117.43875p
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[23 <./bilder/bar-chart-logfile1vs2-test.png>]
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=560, 874.76813pt x 117.43875p
 t>
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
 input line 263.
 (pdftex.def)             Requested size: 874.76599pt x 117.43845pt.
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=528, 947.03813pt x 183.68625pt>
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=561, 947.03813pt x 183.68625pt>
 
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
 put line 277.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
-<bilder/cfv_firefox_autopsy_web_history.png, id=529, 1141.26375pt x 105.39375pt
+<bilder/cfv_firefox_autopsy_web_history.png, id=562, 1141.26375pt x 105.39375pt
 >
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
 put line 291.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-<bilder/cfv_firefox_autopsy_web_categories.png, id=530, 962.84718pt x 51.94406p
+<bilder/cfv_firefox_autopsy_web_categories.png, id=563, 962.84718pt x 51.94406p
 t>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
  input line 310.
 (pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
- [22 <./bilder/cfv_firefox_autopsy_web_bookmarks.png> <./bilder/cfv_firefox_aut
-opsy_web_cookies.png> <./bilder/cfv_firefox_autopsy_web_history.png> <./bilder/
-cfv_firefox_autopsy_web_categories.png>]
-<bilder/volatility/firefox/keywords.png, id=543, 887.607pt x 463.185pt>
+ [24 <./bilder/firefox-registry-stacked-bar-chart.png> <./bilder/cfv_firefox_au
+topsy_web_bookmarks.png> <./bilder/cfv_firefox_autopsy_web_cookies.png>]
+<bilder/volatility/firefox/keywords.png, id=576, 887.607pt x 463.185pt>
 File: bilder/volatility/firefox/keywords.png Graphic file (type png)
 <use bilder/volatility/firefox/keywords.png>
 Package pdftex.def Info: bilder/volatility/firefox/keywords.png  used on input 
 line 365.
 (pdftex.def)             Requested size: 887.60483pt x 463.18385pt.
-<bilder/volatility/firefox/url.png, id=544, 988.347pt x 560.64pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<bilder/volatility/firefox/url.png, id=577, 988.347pt x 560.64pt>
 File: bilder/volatility/firefox/url.png Graphic file (type png)
 <use bilder/volatility/firefox/url.png>
 Package pdftex.def Info: bilder/volatility/firefox/url.png  used on input line 
 376.
 (pdftex.def)             Requested size: 988.34459pt x 560.63863pt.
-<bilder/volatility/firefox/mail.png, id=545, 1162.89pt x 779.859pt>
+<bilder/volatility/firefox/mail.png, id=578, 1162.89pt x 779.859pt>
 File: bilder/volatility/firefox/mail.png Graphic file (type png)
 <use bilder/volatility/firefox/mail.png>
 Package pdftex.def Info: bilder/volatility/firefox/mail.png  used on input line
  400.
 (pdftex.def)             Requested size: 1162.88716pt x 779.85709pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[23 <./bilder/volatility/firefox/keywords.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=554, 462.22687pt
+[25 <./bilder/cfv_firefox_autopsy_web_history.png> <./bilder/cfv_firefox_autops
+y_web_categories.png>] [26 <./bilder/volatility/firefox/keywords.png> <./bilder
+/volatility/firefox/url.png>]
+<bilder/volatility/firefox/password_0xb9ce29180c8_7420.png, id=596, 462.22687pt
  x 203.25937pt>
 File: bilder/volatility/firefox/password_0xb9ce29180c8_7420.png Graphic file (t
 ype png)
@@ -2954,7 +3081,7 @@ ype png)
 Package pdftex.def Info: bilder/volatility/firefox/password_0xb9ce29180c8_7420.
 png  used on input line 421.
 (pdftex.def)             Requested size: 462.22574pt x 203.25887pt.
-<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=555, 453.94594p
+<bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png, id=597, 453.94594p
 t x 179.92218pt>
 File: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png Graphic file (
 type png)
@@ -2962,7 +3089,7 @@ type png)
 Package pdftex.def Info: bilder/volatility/firefox/password_0x2859f4ffd4e0_7420
 .png  used on input line 428.
 (pdftex.def)             Requested size: 453.94482pt x 179.92174pt.
-<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=556, 456.95718pt
+<bilder/volatility/firefox/password_0x24083b41858_8424.png, id=598, 456.95718pt
  x 170.13562pt>
 File: bilder/volatility/firefox/password_0x24083b41858_8424.png Graphic file (t
 ype png)
@@ -2970,7 +3097,7 @@ ype png)
 Package pdftex.def Info: bilder/volatility/firefox/password_0x24083b41858_8424.
 png  used on input line 437.
 (pdftex.def)             Requested size: 456.95605pt x 170.1352pt.
-<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=557, 458.46281pt
+<bilder/volatility/firefox/password_0x240840e5b08_8424.png, id=599, 458.46281pt
  x 231.11343pt>
 File: bilder/volatility/firefox/password_0x240840e5b08_8424.png Graphic file (t
 ype png)
@@ -2979,19 +3106,16 @@ Package pdftex.def Info: bilder/volatility/firefox/password_0x240840e5b08_8424.
 png  used on input line 444.
 (pdftex.def)             Requested size: 458.46169pt x 231.11287pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (1.77638pt too wide) in paragraph at lines 416--449
+\T1/lmss/m/n/10.95 (-20) 0x11dd4000 -> 0xb9ce29180c8 = 0x11dd40c8 0x2859f4ffd00
+0 0x96812000 0x1000 0x12e23000
+ []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[24 <./bilder/volatility/firefox/url.png>]
+[27 <./bilder/volatility/firefox/mail.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/image.png, id=564, 1150.626pt x 200.385pt>
+<bilder/volatility/firefox/image.png, id=606, 1150.626pt x 200.385pt>
 File: bilder/volatility/firefox/image.png Graphic file (type png)
 <use bilder/volatility/firefox/image.png>
 Package pdftex.def Info: bilder/volatility/firefox/image.png  used on input lin
@@ -3000,20 +3124,18 @@ e 452.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/firefox/summary.png, id=565, 1566.069pt x 393.543pt>
+[28 <./bilder/volatility/firefox/password_0xb9ce29180c8_7420.png> <./bilder/vol
+atility/firefox/password_0x2859f4ffd4e0_7420.png> <./bilder/volatility/firefox/
+password_0x24083b41858_8424.png>]
+<bilder/volatility/firefox/summary.png, id=618, 1566.069pt x 393.543pt>
 File: bilder/volatility/firefox/summary.png Graphic file (type png)
 <use bilder/volatility/firefox/summary.png>
 Package pdftex.def Info: bilder/volatility/firefox/summary.png  used on input l
 ine 462.
 (pdftex.def)             Requested size: 1566.0652pt x 393.54202pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[25 <./bilder/volatility/firefox/mail.png> <./bilder/volatility/firefox/passwor
-d_0xb9ce29180c8_7420.png>] [26 <./bilder/volatility/firefox/password_0x2859f4ff
-d4e0_7420.png> <./bilder/volatility/firefox/password_0x24083b41858_8424.png> <.
-/bilder/volatility/firefox/password_0x240840e5b08_8424.png>]
-<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=584, 823.57687pt
+ [29 <./bilder/volatility/firefox/password_0x240840e5b08_8424.png> <./bilder/vo
+latility/firefox/image.png> <./bilder/volatility/firefox/summary.png>]
+<bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png, id=629, 823.57687pt
  x 331.2375pt>
 File: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png Graphic file (t
 ype png)
@@ -3021,163 +3143,129 @@ ype png)
 Package pdftex.def Info: bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.
 png  used on input line 491.
 (pdftex.def)             Requested size: 823.57486pt x 331.23668pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[27 <./bilder/volatility/firefox/image.png> <./bilder/volatility/firefox/summar
-y.png>]
-<bilder/tor-sqlite-table.png, id=594, 925.95938pt x 185.94469pt>
+ [30 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
+<bilder/tor-sqlite-table.png, id=637, 925.95938pt x 185.94469pt>
 File: bilder/tor-sqlite-table.png Graphic file (type png)
 <use bilder/tor-sqlite-table.png>
 Package pdftex.def Info: bilder/tor-sqlite-table.png  used on input line 553.
 (pdftex.def)             Requested size: 925.95712pt x 185.94421pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28 <./bilder/tor-tabelle-logfile1vlogfile2vlogfile3-reduced.png>]
-<bilder/tor-bar-chart-logfile1vs2cs3.png, id=601, 777.231pt x 336.165pt>
+ [31 <./bilder/tor-sqlite-table.png>]
+<bilder/tor-bar-chart-logfile1vs2cs3.png, id=644, 777.231pt x 336.165pt>
 File: bilder/tor-bar-chart-logfile1vs2cs3.png Graphic file (type png)
 <use bilder/tor-bar-chart-logfile1vs2cs3.png>
 Package pdftex.def Info: bilder/tor-bar-chart-logfile1vs2cs3.png  used on input
  line 581.
 (pdftex.def)             Requested size: 777.22911pt x 336.16417pt.
- [29 <./bilder/tor-sqlite-table.png> <./bilder/tor-bar-chart-logfile1vs2cs3.png
->]
-<bilder/tor-registry-stacked-bar-chart.png, id=611, 698.391pt x 150.891pt>
+ [32 <./bilder/tor-bar-chart-logfile1vs2cs3.png>]
+<bilder/tor-registry-stacked-bar-chart.png, id=652, 698.391pt x 150.891pt>
 File: bilder/tor-registry-stacked-bar-chart.png Graphic file (type png)
 <use bilder/tor-registry-stacked-bar-chart.png>
 Package pdftex.def Info: bilder/tor-registry-stacked-bar-chart.png  used on inp
 ut line 637.
 (pdftex.def)             Requested size: 698.3893pt x 150.89063pt.
- [30 <./bilder/tor-registry-stacked-bar-chart.png>]
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=619, 660.96938pt x 32.37094pt>
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=653, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
 t line 671.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
-<bilder/cfv_tor_autopsy_web_cookies.png, id=620, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=654, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
 line 687.
 (pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
-<bilder/cfv_tor_autopsy_web_history.png, id=621, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=655, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
 line 703.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
-<bilder/cfv_tor_autopsy_web_categories.png, id=622, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=656, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
 ut line 723.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
- [31 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web
-_cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
-<bilder/volatility/tor/keywords.png, id=635, 1533.657pt x 713.721pt>
+ [33 <./bilder/tor-registry-stacked-bar-chart.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[34 <./bilder/cfv_tor_autopsy_web_bookmarks.png> <./bilder/cfv_tor_autopsy_web_
+cookies.png> <./bilder/cfv_tor_autopsy_web_history.png>]
+<bilder/volatility/tor/keywords.png, id=676, 1533.657pt x 713.721pt>
 File: bilder/volatility/tor/keywords.png Graphic file (type png)
 <use bilder/volatility/tor/keywords.png>
 Package pdftex.def Info: bilder/volatility/tor/keywords.png  used on input line
  780.
 (pdftex.def)             Requested size: 1533.65327pt x 713.71925pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<bilder/volatility/tor/url.png, id=636, 1539.789pt x 751.608pt>
+ [35 <./bilder/cfv_tor_autopsy_web_categories.png> <./bilder/volatility/tor/key
+words.png>]
+<bilder/volatility/tor/url.png, id=686, 1539.789pt x 751.608pt>
 File: bilder/volatility/tor/url.png Graphic file (type png)
 <use bilder/volatility/tor/url.png>
 Package pdftex.def Info: bilder/volatility/tor/url.png  used on input line 793.
 
 (pdftex.def)             Requested size: 1539.78525pt x 751.60617pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<bilder/volatility/tor/mail.png, id=637, 1473.87pt x 952.869pt>
+<bilder/volatility/tor/mail.png, id=687, 1473.87pt x 952.869pt>
 File: bilder/volatility/tor/mail.png Graphic file (type png)
 <use bilder/volatility/tor/mail.png>
 Package pdftex.def Info: bilder/volatility/tor/mail.png  used on input line 808
 .
 (pdftex.def)             Requested size: 1473.86641pt x 952.86668pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[32 <./bilder/cfv_tor_autopsy_web_categories.png>]
-<bilder/volatility/tor/image.png, id=645, 1473.87pt x 242.652pt>
+<bilder/volatility/tor/image.png, id=688, 1473.87pt x 242.652pt>
 File: bilder/volatility/tor/image.png Graphic file (type png)
 <use bilder/volatility/tor/image.png>
 Package pdftex.def Info: bilder/volatility/tor/image.png  used on input line 82
 8.
 (pdftex.def)             Requested size: 1473.86641pt x 242.6514pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/volatility/tor/summary.png, id=646, 1537.38pt x 628.092pt>
+<bilder/volatility/tor/summary.png, id=689, 1537.38pt x 628.092pt>
 File: bilder/volatility/tor/summary.png Graphic file (type png)
 <use bilder/volatility/tor/summary.png>
 Package pdftex.def Info: bilder/volatility/tor/summary.png  used on input line 
 838.
 (pdftex.def)             Requested size: 1537.37627pt x 628.09045pt.
-[33 <./bilder/volatility/tor/keywords.png> <./bilder/volatility/tor/url.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34 <./bilder/volatility/tor/mail.png> <./bilder/volatility/tor/image.png>]
-Excluding 'comment' comment. [35 <./bilder/volatility/tor/summary.png>]
-[36{C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-<bilder/HxDChromeStringThemen.png, id=684, 471.26062pt x 379.4175pt>
+[36 <./bilder/volatility/tor/url.png>] [37 <./bilder/volatility/tor/mail.png> <
+./bilder/volatility/tor/image.png>] Excluding 'comment' comment. [38 <./bilder/
+volatility/tor/summary.png>] [39{C:/Users/sell/AppData/Local/Programs/MiKTeX/fo
+nts/enc/dvips/lm/lm-rm.enc}]
+<bilder/HxDChromeStringThemen.png, id=724, 471.26062pt x 379.4175pt>
 File: bilder/HxDChromeStringThemen.png Graphic file (type png)
 <use bilder/HxDChromeStringThemen.png>
 Package pdftex.def Info: bilder/HxDChromeStringThemen.png  used on input line 1
 295.
-(pdftex.def)             Requested size: 344.71613pt x 277.53983pt.
+(pdftex.def)             Requested size: 313.69029pt x 252.55841pt.
 \openout6 = `main.pyg'.
 
-
-(_minted-main/default.pygstyle)
+ (_minted-main/default.pygstyle)
 (_minted-main/FB6D47B9D7AF3F3AE88BAE1F21B388E365E8925FFE18267D97CD9CEC6B6FC79A.
-pygtex [37 <./bilder/HxDChromeStringThemen.png>])
-<bilder/HxDChrome1.png, id=694, 1445.4pt x 782.925pt>
+pygtex [40 <./bilder/HxDChromeStringThemen.png>])
+<bilder/HxDChrome1.png, id=735, 1445.4pt x 782.925pt>
 File: bilder/HxDChrome1.png Graphic file (type png)
 <use bilder/HxDChrome1.png>
 Package pdftex.def Info: bilder/HxDChrome1.png  used on input line 1319.
-(pdftex.def)             Requested size: 459.6215pt x 248.96419pt.
-<bilder/HxDChrome3.png, id=696, 1445.4pt x 782.925pt>
+(pdftex.def)             Requested size: 418.25372pt x 226.55263pt.
+ [41 <./bilder/HxDChrome1.png>]
+<bilder/HxDChrome3.png, id=746, 1445.4pt x 782.925pt>
 File: bilder/HxDChrome3.png Graphic file (type png)
 <use bilder/HxDChrome3.png>
 Package pdftex.def Info: bilder/HxDChrome3.png  used on input line 1328.
-(pdftex.def)             Requested size: 459.6215pt x 248.96419pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[38 <./bilder/HxDChrome1.png>]
+(pdftex.def)             Requested size: 418.25372pt x 226.55263pt.
+ [42 <./bilder/HxDChrome3.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39 <./bilder/HxDChrome3.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[40]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[41] Excluding 'comment' comment. [42] [43]
-<bilder//Donaukurier1.png, id=755, 1236.87094pt x 734.745pt>
-File: bilder//Donaukurier1.png Graphic file (type png)
-<use bilder//Donaukurier1.png>
-Package pdftex.def Info: bilder//Donaukurier1.png  used on input line 2212.
-(pdftex.def)             Requested size: 459.6215pt x 273.02858pt.
-
+[43]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -3185,22 +3273,39 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[45] Excluding 'comment' comment. [46]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45 <./bilder//Donaukurier1.png>]
+<bilder//Donaukurier1.png, id=794, 1236.87094pt x 734.745pt>
+File: bilder//Donaukurier1.png Graphic file (type png)
+<use bilder//Donaukurier1.png>
+Package pdftex.def Info: bilder//Donaukurier1.png  used on input line 2212.
+(pdftex.def)             Requested size: 418.25372pt x 248.45341pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [46] [47] [48] [49]
+[47]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[48]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [49 <./bilder//Donaukurier1.png>] [50] [51] [52] [53]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
- (kapitel/06_Vergleich der Browser.tex
+
+(kapitel/06_Vergleich der Browser.tex
 chapter 6.
-) [50
+) [54
 
 
 
@@ -3210,17 +3315,17 @@ chapter 6.
 
  (kapitel/07_Diskussion.tex
 chapter 7.
-Excluding 'comment' comment. [51
+Excluding 'comment' comment. [55
 
 
 
 
-]) [52]
+]) [56]
 \openout2 = `kapitel/08_Fazit.aux'.
 
  (kapitel/08_Fazit.tex
 chapter 8.
-) [53
+) [57
 
 
 
@@ -3228,36 +3333,597 @@ chapter 8.
 ]
 \openout2 = `kapitel/09_Anhang.aux'.
 
- (kapitel/09_Anhang.tex [54
+ (kapitel/09_Anhang.tex [58
 
 
 
 
 
 ]
-<bilder/firefox-all-write-operations.png, id=823, 520.94624pt x 1173.63469pt>
-File: bilder/firefox-all-write-operations.png Graphic file (type png)
-<use bilder/firefox-all-write-operations.png>
-Package pdftex.def Info: bilder/firefox-all-write-operations.png  used on input
- line 17.
-(pdftex.def)             Requested size: 520.94498pt x 1173.63184pt.
-<bilder/tor-all-write-operations.png, id=824, 489.32813pt x 1149.5447pt>
-File: bilder/tor-all-write-operations.png Graphic file (type png)
-<use bilder/tor-all-write-operations.png>
-Package pdftex.def Info: bilder/tor-all-write-operations.png  used on input lin
-e 25.
-(pdftex.def)             Requested size: 489.32692pt x 1149.54189pt.
- [55 <./bilder/firefox-all-write-operations.png>]) [56 <./bilder/tor-all-write-
-operations.png>]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 465.2017pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=465.2017pt
+* \textheight=773.91507pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\openout6 = `main.pyg'.
+
+
+(_minted-main/B2720713C44FDC494DEADB670F55F3552CD726CB27A38EF1DA03C742918B248F.
+pygtex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.43}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.126 		\end{landscape}
+                        [43
+
+
+]
+
+LaTeX Warning: Reference `subsection:methodik-datensammlung-processmonitorlogfi
+les' on page 44 undefined on input line 135.
+
+
+Overfull \hbox (24.86444pt too wide) in paragraph at lines 139--140
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 <User>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/
+10.95 AppData$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Local$\OMS/cmsy/m/n/10.
+95 n$\T1/lmtt/c/it/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Fire
+fox$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Profiles$\OMS/cmsy/m/n/10.95 n$\T
+1/lmtt/c/it/10.95 <Profile>.default-
+ []
+
+
+Overfull \hbox (36.36191pt too wide) in paragraph at lines 140--141
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 <User>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/
+10.95 AppData$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Roaming$\OMS/cmsy/m/n/1
+0.95 n$\T1/lmtt/c/it/10.95 Mozilla$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Fi
+refox$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Profiles$\OMS/cmsy/m/n/10.95 n$
+\T1/lmtt/c/it/10.95 <Profile>.default-
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.44}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.149 		\newgeometry{bottom=2cm,top=0.5cm}
+                                           [44
+
+
+]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=773.91507pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.44}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.203 		\restoregeometry
+                         [44
+
+
+
+]
+
+LaTeX Warning: Text page 45 contains only floats.
+
+
+Overfull \vbox (4.85172pt too high) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.45}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.203 		\restoregeometry
+                         [45]
+
+LaTeX Warning: Citation 'TechSupportGuy.05.06.2023' on page 46 undefined on inp
+ut line 211.
+
+
+LaTeX Warning: Reference `subsection:methodik-vorbereitung-browsing-szenario' o
+n page 46 undefined on input line 212.
+
+<bilder/firefox-cache.png, id=888, 886.81313pt x 136.25906pt>
+File: bilder/firefox-cache.png Graphic file (type png)
+<use bilder/firefox-cache.png>
+Package pdftex.def Info: bilder/firefox-cache.png  used on input line 215.
+(pdftex.def)             Requested size: 886.81096pt x 136.25871pt.
+
+LaTeX Warning: Citation 'GitHub.05.06.2023' on page 46 undefined on input line 
+224.
+
+
+Overfull \hbox (1.0853pt too wide) in paragraph at lines 224--226
+[] []\T1/lmss/bx/n/10.95 (-20) Datareporting[] \T1/lmss/m/n/10.95 (-20) Da-tei-
+en im Ord-ner $\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 datareporting$\OMS/cms
+y/m/n/10.95 n$\T1/lmtt/c/it/10.95 glean$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.
+95 db \T1/lmss/m/n/10.95 (-20) sind Teil des Glean-Systems,
+ []
+
+
+LaTeX Warning: Citation 'JeffersonScher.29.11.2020' on page 46 undefined on inp
+ut line 231.
+
+<bilder/firefox-sessionstore.png, id=890, 534.49687pt x 95.6072pt>
+File: bilder/firefox-sessionstore.png Graphic file (type png)
+<use bilder/firefox-sessionstore.png>
+Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 23
+4.
+(pdftex.def)             Requested size: 534.49556pt x 95.60695pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.46}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.238 		
+         [46
+
+ <./bilder/firefox-cache.png>]
+
+LaTeX Warning: Citation 'mozillazine.29.12.2022' on page 47 undefined on input 
+line 241.
+
+
+LaTeX Warning: Reference `subsection:methodik-datenanalyse-commonlocations' on 
+page 47 undefined on input line 245.
+
+
+LaTeX Warning: Citation 'GitHub.08.04.2019' on page 47 undefined on input line 
+262.
+
+
+LaTeX Warning: Reference `subsubsection:methodik-datenanalyse-commonlocations-s
+qlitedbs' on page 47 undefined on input line 265.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.47}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.267 		
+         [47 <./bilder/firefox-sessionstore.png>]
+Overfull \vbox (13.59999pt too high) detected at line 286
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.48}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.355 		
+         [48]
+File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
+<use bilder/cfv_firefox_autopsy_web_bookmarks.png>
+Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
+input line 359.
+(pdftex.def)             Requested size: 874.76599pt x 117.43845pt.
+File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
+<use bilder/cfv_firefox_autopsy_web_cookies.png>
+Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
+put line 367.
+(pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.49}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.371 		
+         [49]
+
+LaTeX Warning: Reference `section:methodik-vorbereitung' on page 50 undefined o
+n input line 373.
+
+File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
+<use bilder/cfv_firefox_autopsy_web_history.png>
+Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
+put line 375.
+(pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
+File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
+<use bilder/cfv_firefox_autopsy_web_categories.png>
+Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
+ input line 385.
+(pdftex.def)             Requested size: 962.84483pt x 51.94392pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.50}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.391 		
+         [50]
+
+LaTeX Warning: Citation 'Mills.2021' on page 51 undefined on input line 469.
+
+
+Overfull \hbox (6.6051pt too wide) in paragraph at lines 467--471
+\T1/lmtt/c/it/10.95 PreXULSkeletonUISettings$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
+t/10.95 <Absoluter Fi-re-fox Installationspfad>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/
+c/it/10.95 firefox.exe 
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.51}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.471 			\item
+               ScreenX (DWORD) [51]
+
+LaTeX Warning: Citation 'MandiOhlinger.05.06.2023' on page 52 undefined on inpu
+t line 489.
+
+
+LaTeX Warning: Citation 'InfoSecNotes.05.06.2023' on page 52 undefined on input
+ line 489.
+
+
+Overfull \hbox (4.10689pt too wide) in paragraph at lines 485--490
+\T1/lmss/m/n/10.95 (-20) fak-te sind da-bei nicht ent-hal-ten. [[], []] 
+ []
+
+
+LaTeX Warning: Reference `subsection:methodik-datenanalyse-registry' on page 52
+ undefined on input line 492.
+
+
+LaTeX Warning: Reference `tab:windows-registry-hives' on page 52 undefined on i
+nput line 493.
+
+
+LaTeX Warning: Reference `section:methodik-datensammlung' on page 52 undefined 
+on input line 517.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.52}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.523 		
+         [52]
+Overfull \hbox (9.06914pt too wide) in paragraph at lines 526--527
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
+t/10.95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Tor Browser$\OMS/cmsy
+/m/n/10.95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10
+.95 TorBrowser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Data$\OMS/cmsy/m/n/10.
+95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$ 
+ []
+
+
+Overfull \hbox (9.06914pt too wide) in paragraph at lines 527--528
+[]\T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/c
+msy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Forensik$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
+t/10.95 Desktop$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Tor Browser$\OMS/cmsy
+/m/n/10.95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10
+.95 TorBrowser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 Data$\OMS/cmsy/m/n/10.
+95 n$\T1/lmtt/c/it/10.95 Browser$\OMS/cmsy/m/n/10.95 n$ 
+ []
+
+
+LaTeX Warning: Citation 'MozillaWiki.05.06.2023' on page 53 undefined on input 
+line 535.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.53}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.539 		\newgeometry{bottom=2cm,top=0.5cm}
+                                           [53]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=773.91507pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+LaTeX Warning: Float too large for page by 11.29208pt on input line 588.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.53}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.588 		\restoregeometry
+                         [53
+
+
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.54}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.588 		\restoregeometry
+                         [54]
+
+LaTeX Warning: Citation 'GitHub.05.06.2023b' on page 55 undefined on input line
+ 592.
+
+
+LaTeX Warning: Citation 'GitHub.08.04.2019' on page 55 undefined on input line 
+595.
+
+
+Overfull \hbox (11.30208pt too wide) in paragraph at lines 592--597
+[] []\T1/lmss/bx/n/10.95 (-20) Datareporting[] \T1/lmss/m/n/10.95 (-20) Im ``Da
+tareporting``-Ordner wird vom Tor-Browser die Da-tei $\OMS/cmsy/m/n/10.95 n$\T1
+/lmtt/c/it/10.95 datareporting$\OMS/cmsy/m/n/10.95 n$ 
+ []
+
+
+LaTeX Warning: Citation 'MozillaSupport.26.10.2020' on page 55 undefined on inp
+ut line 600.
+
+
+LaTeX Warning: Citation 'SecureDrop.05.06.2023' on page 55 undefined on input l
+ine 606.
+
+
+LaTeX Warning: Citation 'Gitlab.05.06.2023' on page 55 undefined on input line 
+610.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.55}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.644 		W
+         ährend des Browsing Szenarios wurden alle Datenbänkte initialisiert.
+[55
+
+]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.56}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.722 		
+         [56]
+File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_bookmarks.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
+t line 726.
+(pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
+File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_cookies.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
+line 734.
+(pdftex.def)             Requested size: 810.7771pt x 166.37114pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_history.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
+line 742.
+(pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.57}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.746 		
+         [57]
+File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
+<use bilder/cfv_tor_autopsy_web_categories.png>
+Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
+ut line 751.
+(pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
+
+
+LaTeX Warning: Reference `subsection:methodik-datenanalyse-registry' on page 58
+ undefined on input line 783.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.58}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.785 		D
+         abei wurden die gleichen beiden Registry Keys identifiziert, wie be...
+[58]
+
+LaTeX Warning: Reference `tab:windows-registry-hives' on page 59 undefined on i
+nput line 833.
+
+
+LaTeX Warning: Reference `subsection:methodik-datenanalyse-registry' on page 59
+ undefined on input line 833.
+
+[59]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=773.91507pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.59}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.945 \restoregeometry
+                       [59
+
+
+
+] [60] [61
+
+
+] Excluding 'comment' comment.
+<bilder/ChromeCache.png, id=1035, 2890.8pt x 564.60938pt>
+File: bilder/ChromeCache.png Graphic file (type png)
+<use bilder/ChromeCache.png>
+Package pdftex.def Info: bilder/ChromeCache.png  used on input line 1055.
+(pdftex.def)             Requested size: 418.25372pt x 81.68964pt.
+ [62
+
+]
+<bilder/CacheChromeAnalyse.png, id=1047, 1397.22pt x 743.77875pt>
+File: bilder/CacheChromeAnalyse.png Graphic file (type png)
+<use bilder/CacheChromeAnalyse.png>
+Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1064
+.
+(pdftex.def)             Requested size: 418.25372pt x 222.64732pt.
+
+[63 <./bilder/ChromeCache.png> <./bilder/CacheChromeAnalyse.png>]
+<bilder/RegExpl.png, id=1060, 1444.64719pt x 782.17218pt>
+File: bilder/RegExpl.png Graphic file (type png)
+<use bilder/RegExpl.png>
+Package pdftex.def Info: bilder/RegExpl.png  used on input line 1101.
+(pdftex.def)             Requested size: 418.25372pt x 226.45413pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [64] [65 <./bilder/RegExpl.png>]
 chapter without number
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
-3.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 19
+7.
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 183.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 197.
 
 (C:\Users\sell\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -3267,11 +3933,11 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-[57
+[66
 
 
 
-] [58] (main.aux (kapitel/01_Einführung.aux)
+] [67] [68] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -3287,11 +3953,6 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 runsystem(del main.pyg)...executed.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -3299,25 +3960,28 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55645 strings out of 476315
- 1296957 string characters out of 5787669
- 2435415 words of memory out of 5000000
- 74650 multiletter control sequences out of 15000+600000
- 646448 words of font info for 241 fonts, out of 8000000 for 9000
+ 55764 strings out of 476315
+ 1300280 string characters out of 5787669
+ 2458980 words of memory out of 5000000
+ 74662 multiletter control sequences out of 15000+600000
+ 647949 words of font info for 250 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,29n,106p,10901b,2689s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pf
-b><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb
-><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb>
-<C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C
-:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><
-C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><
-C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C
-:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:
-/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
-Output written on main.pdf (60 pages, 3546156 bytes).
+ 108i,29n,106p,10901b,2848s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+csc10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
+ss10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lms
+s12.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss
+8.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx
+10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso
+10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk1
+0.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10
+.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.p
+fb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.p
+fb>
+Output written on main.pdf (90 pages, 4156218 bytes).
 PDF statistics:
- 1020 PDF objects out of 1200 (max. 8388607)
- 202 named destinations out of 1000 (max. 500000)
- 68270 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1342 PDF objects out of 1440 (max. 8388607)
+ 293 named destinations out of 1000 (max. 500000)
+ 68893 words of extra memory for PDF output out of 74296 (max. 10000000)
 

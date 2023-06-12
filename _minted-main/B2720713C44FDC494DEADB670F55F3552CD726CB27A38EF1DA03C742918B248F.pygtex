@@ -1,0 +1,74 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+rule keyword \PYGZob{}
+	strings:
+	\PYGZdl{}pfaffenhofen\PYGZus{}keyword=\PYGZdq{}pfaffenhofen\PYGZdq{} wide ascii nocase
+	\PYGZdl{}nanoradar\PYGZus{}keyword=\PYGZdq{}nanoradar\PYGZdq{} wide ascii nocase	
+	condition:
+	\PYGZdl{}pfaffenhofen\PYGZus{}keyword or \PYGZdl{}nanoradar\PYGZus{}keyword
+\PYGZcb{}
+
+rule keyword\PYGZus{}mooserliesl \PYGZob{}
+	strings:
+	\PYGZdl{}mooserliesl1\PYGZus{}keyword=\PYGZdq{}mooserliesl\PYGZdq{} wide ascii nocase
+	\PYGZdl{}mooserliesl1\PYGZus{}keyword2=\PYGZdq{}mooserliesl.de\PYGZdq{} wide ascii nocase	
+	condition:
+	\PYGZdl{}mooserliesl1\PYGZus{}keyword and not \PYGZdl{}mooserliesl1\PYGZus{}keyword2
+\PYGZcb{}
+
+rule keyword\PYGZus{}mallofamerica \PYGZob{}
+	strings:		
+	\PYGZdl{}mallofamerica1\PYGZus{}keyword=\PYGZdq{}mallofamerica\PYGZdq{} wide ascii nocase
+	\PYGZdl{}mallofamerica1\PYGZus{}keyword2=\PYGZdq{}mallofamerica.com\PYGZdq{} wide ascii nocase	
+	condition:
+	\PYGZdl{}mallofamerica1\PYGZus{}keyword and not \PYGZdl{}mallofamerica1\PYGZus{}keyword2
+\PYGZcb{}
+
+rule url \PYGZob{}
+	strings:
+	\PYGZdl{}mallofamerica\PYGZus{}url=\PYGZdq{}mallofamerica.com\PYGZdq{} wide ascii nocase
+	\PYGZdl{}mooserliesl\PYGZus{}url=\PYGZdq{}mooserliesl.de\PYGZdq{} wide ascii nocase
+	\PYGZdl{}unitree\PYGZus{}url=\PYGZdq{}unitree.com\PYGZdq{} wide ascii nocase
+	\PYGZdl{}donaukurier\PYGZus{}url=\PYGZdq{}donaukurier.de\PYGZdq{} wide ascii nocase	
+	condition:
+	\PYGZdl{}mallofamerica\PYGZus{}url or \PYGZdl{}mooserliesl\PYGZus{}url or \PYGZdl{}unitree\PYGZus{}url or \PYGZdl{}donaukurier\PYGZus{}url
+\PYGZcb{}
+
+rule html \PYGZob{}
+	strings:			
+	\PYGZdl{}mallofamerica\PYGZus{}html=\PYGZdq{}Insiders\PYGZlt{}/span\PYGZgt{}\PYGZdq{} wide ascii nocase
+	\PYGZdl{}mooserliesl\PYGZus{}html=\PYGZdq{}Ja\PYGZlt{}/span\PYGZgt{}\PYGZdq{} wide ascii nocase
+	\PYGZdl{}unitree\PYGZus{}html=\PYGZdq{}L1\PYGZlt{}/div\PYGZgt{}\PYGZdq{} wide ascii nocase
+	\PYGZdl{}donaukurier\PYGZus{}html=\PYGZdq{}\PYGZgt{}Themen:\PYGZdq{} wide ascii nocase		
+	condition:
+	\PYGZdl{}mallofamerica\PYGZus{}html or \PYGZdl{}mooserliesl\PYGZus{}html or \PYGZdl{}unitree\PYGZus{}html or \PYGZdl{}donaukurier\PYGZus{}html
+\PYGZcb{}
+
+rule image \PYGZob{}
+	strings:
+	\PYGZdl{}image\PYGZus{}hex = \PYGZob{}89 50 4E 47 0D 0A 1A 0A 00 00 00 0D 49 48 44 52 00 00 01 2C 00 00
+		00 32 08 03 00 00 00 D1 08 16 18 00 00 00 19 74 45 58 74 53 6F 66
+		74 77 61 72 65 00 41 64 6F 62 65 20 49 6D 61 67 65 52 65 61 64 79
+		71 C9 65 3C 00 00 03 84 69 54 58 74 58 4D 4C 3A 63 6F 6D 2E 61 64
+		6F 62 65 2E 78 6D 70 00 00 00 00 00 3C 3F 78 70 61 63 6B 65 74 20
+		...
+		4E AD 38 61 03 55 6A AB 5E BF F6 40 4E 9D BA 20 FE 43 FE 99 81 2C
+		0A 8F B2 F1 D8 7B DE E5 75 7E 45 E3 FC E4 C8 81 E5 C0 72 60 39 B0
+		1C 71 60 39 B0 1C 58 0E 2C 07 D6 FF A9 FC 57 80 01 00 D9 B2 CD 5E
+		42 B8 37 25 00 00 00 00 49 45 4E 44 AE 42 60 82\PYGZcb{}
+	condition:
+	\PYGZdl{}image\PYGZus{}hex
+\PYGZcb{}
+
+rule mail \PYGZob{}
+	strings:		
+	\PYGZdl{}computerforensik\PYGZus{}address=\PYGZdq{}computerforensikvl@gmail.com\PYGZdq{} wide ascii nocase
+	\PYGZdl{}computerforensik\PYGZus{}password=\PYGZdq{}Vorlesung23!\PYGZdq{} wide ascii nocase
+	\PYGZdl{}cas0597\PYGZus{}address=\PYGZdq{}cas0597@thi.de\PYGZdq{} wide ascii nocase
+	\PYGZdl{}chs3702\PYGZus{}address=\PYGZdq{}chs3702@thi.de\PYGZdq{} wide ascii nocase
+	\PYGZdl{}subject=\PYGZdq{}Betrefftext\PYGZdq{} wide ascii nocase
+	\PYGZdl{}mail\PYGZus{}body=\PYGZdq{}Mailinhalt\PYGZdq{} wide ascii nocase	
+	condition:
+	\PYGZdl{}computerforensik\PYGZus{}address or \PYGZdl{}computerforensik\PYGZus{}password or \PYGZdl{}cas0597\PYGZus{}address or
+	\PYGZdl{}chs3702\PYGZus{}address or \PYGZdl{}subject or \PYGZdl{}mail\PYGZus{}body
+\PYGZcb{}
+\end{Verbatim}

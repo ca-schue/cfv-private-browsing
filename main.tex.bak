@@ -98,9 +98,17 @@ automark,		% Lebende Kolumnentitel
 % Margins ändern
 \usepackage{geometry}
 
+% Tabelle im Querformat
+\usepackage{pdflscape}
+\usepackage{afterpage}
+
+% Margins ändern
+\usepackage{geometry}
+
 % Zellkonturen
 \usepackage{hhline}
-%\usepackage{adjustbox}
+\usepackage{adjustbox}
+\usepackage{multirow}
 
 % Balkendiagramme
 \usepackage{pgfplots, pgfplotstable}

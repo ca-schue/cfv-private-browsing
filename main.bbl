@@ -106,34 +106,58 @@
       \field{pages}{255\bibrangedash 271}
       \range{pages}{17}
     \endentry
-    \entry{Chivers.2014}{article}{}
+    \entry{ChromiumShutdownMSTxtWebpageDoku}{misc}{}
       \name{author}{1}{}{%
-        {{hash=b38c156c49fa7c0bbacaa0de4c5fcc43}{%
-           family={Chivers},
-           familyi={C\bibinitperiod},
-           given={Howard},
-           giveni={H\bibinitperiod}}}%
+        {{hash=65d5644b4049b4215a6faa532e7e5ad5}{%
+           family={Chromium},
+           familyi={C\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier}%
-      }
-      \strng{namehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{fullhash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{bibnamehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{authorbibnamehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{authornamehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{authorfullhash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
+      \strng{namehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{fullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{bibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorbibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authornamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorfullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Digital Investigation}
-      \field{number}{1}
-      \field{title}{Private browsing: A window of forensic opportunity}
-      \field{volume}{11}
-      \field{year}{2014}
-      \field{pages}{20\bibrangedash 29}
-      \range{pages}{10}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 16:34 Uhr}
+      \field{title}{Contents of /trunk/src/chrome/browser/browser\_shutdown.cc}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/browser_shutdown.cc?pathrev=26058
+      \endverb
+      \verb{url}
+      \verb https://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/browser_shutdown.cc?pathrev=26058
+      \endverb
+    \endentry
+    \entry{CrashpadOverviewDesign}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=65d5644b4049b4215a6faa532e7e5ad5}{%
+           family={Chromium},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{fullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{bibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorbibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authornamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorfullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 21:58 Uhr}
+      \field{title}{Crashpad Overview Design}
+      \verb{urlraw}
+      \verb https://chromium.googlesource.com/crashpad/crashpad/+/HEAD/doc/overview_design.md
+      \endverb
+      \verb{url}
+      \verb https://chromium.googlesource.com/crashpad/crashpad/+/HEAD/doc/overview_design.md
+      \endverb
     \endentry
     \entry{Dayalamurthy.2013}{article}{}
       \name{author}{1}{}{%
@@ -159,41 +183,31 @@
       \field{title}{Forensic memory dump analysis and recovery of the artefacts of using tor bundle browser--the need}
       \field{year}{2013}
     \endentry
-    \entry{Fayyad.2021}{article}{}
-      \name{author}{4}{}{%
-        {{hash=569aa589ec89dbff6b88dca0287cff66}{%
-           family={Fayyad-Kazan},
-           familyi={F\bibinithyphendelim K\bibinitperiod},
-           given={Hasan},
-           giveni={H\bibinitperiod}}}%
-        {{hash=115abeb9cdd57943c88167aded3635c6}{%
-           family={Kassem-Moussa},
-           familyi={K\bibinithyphendelim M\bibinitperiod},
-           given={Sondos},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b193e4ebc8b77d45a2cc87472500b0bc}{%
-           family={Hejase},
-           familyi={H\bibinitperiod},
-           given={Hussin\bibnamedelima J},
-           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=22f0cbaa0ed26cf32c47d43496ed8f24}{%
-           family={Hejase},
-           familyi={H\bibinitperiod},
-           given={Ale\bibnamedelima J},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+    \entry{LevelDBGithub}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
       }
-      \strng{namehash}{1e13ba4184ff465c17d41f5616845e90}
-      \strng{fullhash}{c1e356fcb9686ddb04c1c51b933396ad}
-      \strng{bibnamehash}{1e13ba4184ff465c17d41f5616845e90}
-      \strng{authorbibnamehash}{1e13ba4184ff465c17d41f5616845e90}
-      \strng{authornamehash}{1e13ba4184ff465c17d41f5616845e90}
-      \strng{authorfullhash}{c1e356fcb9686ddb04c1c51b933396ad}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Forensic analysis of private browsing mechanisms: Tracing internet activities}
-      \field{year}{2021}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:20 Uhr}
+      \field{title}{leveldb}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/google/leveldb
+      \endverb
+      \verb{url}
+      \verb https://github.com/google/leveldb
+      \endverb
     \endentry
     \entry{Gupta.2013}{article}{}
       \name{author}{1}{}{%
@@ -218,6 +232,21 @@
       \field{year}{2013}
       \field{pages}{109\bibrangedash 113}
       \range{pages}{5}
+    \endentry
+    \entry{LevelDBCCL}{misc}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:21 Uhr}
+      \field{title}{Hang on! That’s not SQLite! Chrome, Electron and LevelDB}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.cclsolutionsgroup.com/post/hang-on-thats-not-sqlite-chrome-electron-and-leveldb
+      \endverb
+      \verb{url}
+      \verb https://www.cclsolutionsgroup.com/post/hang-on-thats-not-sqlite-chrome-electron-and-leveldb
+      \endverb
     \endentry
     \entry{Hariharan.2022}{inproceedings}{}
       \name{author}{3}{}{%
@@ -255,55 +284,6 @@
       \field{year}{2022}
       \field{pages}{1\bibrangedash 5}
       \range{pages}{5}
-    \endentry
-    \entry{Hassan.2019}{book}{}
-      \name{author}{1}{}{%
-        {{hash=3bfa4e18f8700c54c19f39fe74b3bcce}{%
-           family={Hassan},
-           familyi={H\bibinitperiod},
-           given={Nihad\bibnamedelima A},
-           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Apress}%
-      }
-      \strng{namehash}{3bfa4e18f8700c54c19f39fe74b3bcce}
-      \strng{fullhash}{3bfa4e18f8700c54c19f39fe74b3bcce}
-      \strng{bibnamehash}{3bfa4e18f8700c54c19f39fe74b3bcce}
-      \strng{authorbibnamehash}{3bfa4e18f8700c54c19f39fe74b3bcce}
-      \strng{authornamehash}{3bfa4e18f8700c54c19f39fe74b3bcce}
-      \strng{authorfullhash}{3bfa4e18f8700c54c19f39fe74b3bcce}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Digital forensics basics: A practical guide using Windows OS}
-      \field{year}{2019}
-    \endentry
-    \entry{Hedberg.2013}{report}{}
-      \name{author}{1}{}{%
-        {{hash=dc5947d36739fb5dc2c00b999bab3f3b}{%
-           family={Hedberg},
-           familyi={H\bibinitperiod},
-           given={Ashley},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Technical Report, Tufts University, MA, USA}%
-      }
-      \strng{namehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{fullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{bibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authorbibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authornamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authorfullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The privacy of private browsing}
-      \field{type}{techreport}
-      \field{year}{2013}
     \endentry
     \entry{Horsman.2019}{article}{}
       \name{author}{10}{}{%
@@ -864,6 +844,33 @@
       \field{pages}{380\bibrangedash 389}
       \range{pages}{10}
     \endentry
+    \entry{SQLiteTempfiles}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=497757a9c5b2ec17ded656170b51c788}{%
+           family={SQLite},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{fullhash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{bibnamehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{authorbibnamehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{authornamehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{authorfullhash}{497757a9c5b2ec17ded656170b51c788}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:10 Uhr}
+      \field{title}{Temporary Files Used By SQLite}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.sqlite.org/tempfiles.html
+      \endverb
+      \verb{url}
+      \verb https://www.sqlite.org/tempfiles.html
+      \endverb
+    \endentry
     \entry{SiHostWebsite}{misc}{}
       \name{author}{1}{}{%
         {{hash=aef0c04552fd197fe71b384c4c730b09}{%
@@ -885,6 +892,35 @@
       \field{note}{Zuletzt zugegriffen am 08.06.2023 um 12:20 Uhr}
       \field{title}{Lösung: Shell Infrastructure Host hohe CPU-Auslastung [MiniTool]}
       \field{year}{2023}
+    \endentry
+    \entry{DictionaryWin10Files}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80f4cb50ea5f5ad8c289b776db7ad55b}{%
+           family={Tkachenko},
+           familyi={T\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{fullhash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{bibnamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{authorbibnamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{authornamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{authorfullhash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 21:59 Uhr}
+      \field{title}{Add or Remove Words in Spell Checking Dictionary in Windows 10}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
+      \endverb
+      \verb{url}
+      \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
+      \endverb
     \endentry
     \entry{Yusoff.2011}{article}{}
       \name{author}{3}{}{%
@@ -926,7 +962,20 @@
       \range{pages}{15}
     \endentry
   \enddatalist
+  \missing{GitHub.05.06.2023}
+  \missing{GitHub.05.06.2023b}
+  \missing{GitHub.08.04.2019}
+  \missing{Gitlab.05.06.2023}
   \missing{Hariharan}
+  \missing{InfoSecNotes.05.06.2023}
+  \missing{JeffersonScher.29.11.2020}
+  \missing{MandiOhlinger.05.06.2023}
+  \missing{Mills.2021}
+  \missing{MozillaSupport.26.10.2020}
+  \missing{MozillaWiki.05.06.2023}
+  \missing{SecureDrop.05.06.2023}
+  \missing{TechSupportGuy.05.06.2023}
+  \missing{mozillazine.29.12.2022}
 \endrefsection
 \endinput
 
