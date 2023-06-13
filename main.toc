@@ -8,12 +8,12 @@
 \contentsline {chapter}{\numberline {4}Methodik}{4}{}%
 \contentsline {section}{\numberline {4.1}Vorbereitung}{4}{}%
 \contentsline {subsection}{\numberline {4.1.1}Browserauswahl}{4}{}%
-\contentsline {subsection}{\numberline {4.1.2}Browsing Szenario}{5}{}%
-\contentsline {section}{\numberline {4.2}Datensammlung}{9}{}%
+\contentsline {subsection}{\numberline {4.1.2}Browsing Szenario}{6}{}%
+\contentsline {section}{\numberline {4.2}Datensammlung}{10}{}%
 \contentsline {section}{\numberline {4.3}Datenanalyse}{12}{}%
 \contentsline {subsection}{\numberline {4.3.1}Common Locations}{12}{}%
 \contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{15}{}%
-\contentsline {subsection}{\numberline {4.3.3}Registry}{18}{}%
+\contentsline {subsection}{\numberline {4.3.3}Registry}{17}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{20}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{20}{}%
 \contentsline {section}{\numberline {5.2}Tor}{27}{}%

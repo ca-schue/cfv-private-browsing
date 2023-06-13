@@ -394,31 +394,6 @@
       \field{title}{Digital forensics basics: A practical guide using Windows OS}
       \field{year}{2019}
     \endentry
-    \entry{Hedberg.2013}{report}{}
-      \name{author}{1}{}{%
-        {{hash=dc5947d36739fb5dc2c00b999bab3f3b}{%
-           family={Hedberg},
-           familyi={H\bibinitperiod},
-           given={Ashley},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Technical Report, Tufts University, MA, USA}%
-      }
-      \strng{namehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{fullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{bibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authorbibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authornamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authorfullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The privacy of private browsing}
-      \field{type}{techreport}
-      \field{year}{2013}
-    \endentry
     \entry{Horsman.2019}{article}{}
       \name{author}{10}{}{%
         {{hash=0a7ecb8323f6a3c2ca69ac8614e172a3}{%
@@ -576,6 +551,37 @@
       \endverb
       \warn{\item Entry 'JeffersonScher.29.11.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
+    \entry{Mahlous.2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=813278c2f12e84f66c305ad4c118bc79}{%
+           family={Mahlous},
+           familyi={M\bibinitperiod},
+           given={Ahmed\bibnamedelima Redha},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=913cb9205280f72ac07669f2f9da0ab2}{%
+           family={Mahlous},
+           familyi={M\bibinitperiod},
+           given={Houssam},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e43aa537863db5975243134f45587e81}
+      \strng{fullhash}{e43aa537863db5975243134f45587e81}
+      \strng{bibnamehash}{e43aa537863db5975243134f45587e81}
+      \strng{authorbibnamehash}{e43aa537863db5975243134f45587e81}
+      \strng{authornamehash}{e43aa537863db5975243134f45587e81}
+      \strng{authorfullhash}{e43aa537863db5975243134f45587e81}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Intelligent Engineering Systems}
+      \field{number}{06}
+      \field{title}{Private Browsing Forensic Analysis: A Case Study of Privacy Preservation in the Brave Browser}
+      \field{volume}{13}
+      \field{year}{2020}
+      \field{pages}{294\bibrangedash 306}
+      \range{pages}{13}
+    \endentry
     \entry{MandiOhlinger.05.06.2023}{misc}{}
       \name{author}{1}{}{%
         {{hash=8a3a39a42fef13edebb9442150c45a19}{%
@@ -603,7 +609,7 @@
       \endverb
       \warn{\item Entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
-    \entry{Markruss.05.06.2023}{misc}{}
+    \entry{Markruss.05.06.2023b}{misc}{}
       \name{author}{1}{}{%
         {{hash=9326cdfdf2f2da398f5ba63a329f2509}{%
            family={Markruss},
@@ -629,9 +635,9 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
       \endverb
-      \warn{\item Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
-    \entry{Markruss.05.06.2023b}{misc}{}
+    \entry{Markruss.05.06.2023}{misc}{}
       \name{author}{1}{}{%
         {{hash=9326cdfdf2f2da398f5ba63a329f2509}{%
            family={Markruss},
@@ -657,7 +663,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
       \endverb
-      \warn{\item Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Md.2018}{inproceedings}{}
       \name{author}{5}{}{%
@@ -999,6 +1005,76 @@
       \endverb
       \warn{\item Entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
+    \entry{Oh.2011}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4dded0835c6b0d9d4a565aaab5eadb52}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Junghoon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f4385a31ad52708ffac976dbce01e768}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Seungbong},
+           giveni={S\bibinitperiod}}}%
+        {{hash=71b21875e291560338270c7aa1a529c2}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Sangjin},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{fullhash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{bibnamehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{authorbibnamehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{authornamehash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \strng{authorfullhash}{0f0f9e6302ed67f2e36215db3e618a03}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Digital investigation}
+      \field{title}{Advanced evidence collection and analysis of web browser activity}
+      \field{volume}{8}
+      \field{year}{2011}
+      \field{pages}{S62\bibrangedash S70}
+      \range{pages}{-1}
+    \endentry
+    \entry{Ohana.2013}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=644d5cb30bd4d92ad4eb68302e085b8a}{%
+           family={Ohana},
+           familyi={O\bibinitperiod},
+           given={Donny\bibnamedelima Jacob},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e3832b88d767b30ea25fedd1a305189c}{%
+           family={Shashidhar},
+           familyi={S\bibinitperiod},
+           given={Narasimha},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{fullhash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{bibnamehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{authorbibnamehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{authornamehash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \strng{authorfullhash}{570f74bacbcd33e2bca6bd506f0fe0be}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE Security and Privacy Workshops}
+      \field{title}{Do private and portable web browsers leave incriminating evidence? a forensic analysis of residual artifacts from private and portable web browsing sessions}
+      \field{year}{2013}
+      \field{pages}{135\bibrangedash 142}
+      \range{pages}{8}
+    \endentry
     \entry{Oracle.2020}{misc}{}
       \name{author}{1}{}{%
         {{hash=30162ed78b6c10f731411f2fc440c24f}{%
@@ -1271,6 +1347,32 @@
       \verb https://securedrop.org/
       \endverb
       \warn{\item Entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Statista.23.05.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={Statista},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global market share held by leading internet browsers from January 2012 to May 2023}
+      \field{year}{23.05.2023}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/268254/market-share-of-internet-browsers-worldwide-since-2009/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/268254/market-share-of-internet-browsers-worldwide-since-2009/
+      \endverb
+      \warn{\item Entry 'Statista.23.05.2023' (ref/citavi.bib): Invalid format '13.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{TechSupportGuy.05.06.2023}{misc}{}
       \name{author}{1}{}{%
