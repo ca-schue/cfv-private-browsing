@@ -35,8 +35,8 @@
 \contentsline {subsection}{\numberline {C.3}Registry}{58}{subsection.1..3.3}%
 \contentsline {section}{\numberline {D}Ausführliche Analyse: Chrome}{59}{section.1..4}%
 \contentsline {subsection}{\numberline {D.1}Common Locations}{59}{subsection.1..4.1}%
-\contentsline {section}{\numberline {E}Ausführliche Analyse: Brave}{65}{section.1..5}%
-\contentsline {subsection}{\numberline {E.1}Common Locations}{65}{subsection.1..5.1}%
-\contentsline {chapter}{Literaturverzeichnis}{66}{section*.158}%
-\contentsline {chapter}{\nonumberline Literatur}{66}{chapter*.159}%
+\contentsline {section}{\numberline {E}Ausführliche Analyse: Brave}{66}{section.1..5}%
+\contentsline {subsection}{\numberline {E.1}Common Locations}{66}{subsection.1..5.1}%
+\contentsline {chapter}{Literaturverzeichnis}{71}{section*.163}%
+\contentsline {chapter}{\nonumberline Literatur}{71}{chapter*.164}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  13 JUN 2023 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  14 JUN 2023 00:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3904,17 +3904,151 @@ Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1064
 .
 (pdftex.def)             Requested size: 418.25372pt x 222.64732pt.
 
-[63 <./bilder/ChromeCache.png> <./bilder/CacheChromeAnalyse.png>]
-<bilder/RegExpl.png, id=1060, 1444.64719pt x 782.17218pt>
+[63 <./bilder/ChromeCache.png> <./bilder/CacheChromeAnalyse.png>] [64]
+<bilder/RegExpl.png, id=1067, 1444.64719pt x 782.17218pt>
 File: bilder/RegExpl.png Graphic file (type png)
 <use bilder/RegExpl.png>
-Package pdftex.def Info: bilder/RegExpl.png  used on input line 1101.
+Package pdftex.def Info: bilder/RegExpl.png  used on input line 1117.
 (pdftex.def)             Requested size: 418.25372pt x 226.45413pt.
+ [65 <./bilder/RegExpl.png>] [66]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=773.91507pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [64] [65 <./bilder/RegExpl.png>]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.66}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1202 \restoregeometry
+                        [66
+
+
+
+]
+
+LaTeX Warning: Text page 67 contains only floats.
+
+[67]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(113.81102pt, 617.4249pt, 113.81102pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=617.4249pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=4.14102pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+
+LaTeX Warning: Float too large for page by 16.21542pt on input line 1368.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[68]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.6271pt, 418.25372pt, 89.6271pt)
+* v-part:(T,H,B)=(14.22636pt, 773.91507pt, 56.9055pt)
+* \paperwidth=597.50793pt
+* \paperheight=845.04694pt
+* \textwidth=418.25372pt
+* \textheight=773.91507pt
+* \oddsidemargin=17.35712pt
+* \evensidemargin=17.35712pt
+* \topmargin=-95.44363pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=47.6pt
+* \marginparwidth=45.96214pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+ [69
+
+
+
+
+
+
+]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1415.
+
+) [70
+
+]
 chapter without number
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 19
 7.
@@ -3933,11 +4067,11 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-[66
+[71
 
 
 
-] [67] [68] (main.aux (kapitel/01_Einführung.aux)
+] [72] [73] (main.aux (kapitel/01_Einführung.aux)
 (kapitel/02_Theoretischer Hintergrund.aux) (kapitel/03_Ziel der Arbeit.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
 (kapitel/06_Vergleich der Browser.aux) (kapitel/07_Diskussion.aux)
@@ -3960,10 +4094,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55764 strings out of 476315
- 1300280 string characters out of 5787669
- 2458980 words of memory out of 5000000
- 74662 multiletter control sequences out of 15000+600000
+ 55779 strings out of 476315
+ 1300563 string characters out of 5787669
+ 2459367 words of memory out of 5000000
+ 74667 multiletter control sequences out of 15000+600000
  647949 words of font info for 250 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,29n,106p,10901b,2848s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3979,9 +4113,9 @@ s12.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss
 .pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.p
 fb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.p
 fb>
-Output written on main.pdf (90 pages, 4156218 bytes).
+Output written on main.pdf (96 pages, 4177004 bytes).
 PDF statistics:
- 1342 PDF objects out of 1440 (max. 8388607)
- 293 named destinations out of 1000 (max. 500000)
+ 1374 PDF objects out of 1440 (max. 8388607)
+ 303 named destinations out of 1000 (max. 500000)
  68893 words of extra memory for PDF output out of 74296 (max. 10000000)
 
