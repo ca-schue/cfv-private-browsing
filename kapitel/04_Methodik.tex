@@ -5,8 +5,8 @@ Izzati et al. empfehlen als Vorgehensmodell für die Browser-Forensik das \texti
 In Ihrer Anwendung auf die Browser-Forensik besteht das Modell aus vier Phasen: \cite{Izzati.2022}
 \begin{itemize}
 	\item Vorbereitung: Versuchsplanung und Konfiguration der Versuchsumgebung.
-	\item Datensammlung: Speicherabbilder identifizieren und während des Browsing Szenarios erstellen. 
-	\item Datenanalyse: Suche nach Browsing Artefakten in gesammelten Daten.
+	\item Datensammlung: Speicherabbilder identifizieren und während des Browsing-Szenarios erstellen. 
+	\item Datenanalyse: Suche nach Browsing-Artefakten in gesammelten Daten.
 	\item Dokumentation: Vorgehensweise und gefundene Artefakte dokumentieren.
 \end{itemize}
 
@@ -51,9 +51,9 @@ Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion ``\textit{Neue Ide
 \subsubsection*{Brave}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-brave}
 
-\subsection{Browsing Szenario}
+\subsection{Browsing-Szenario}
 \label{subsection:methodik-vorbereitung-browsing-szenario}
-Im Falle der transparenten Versuchsdurchführung der Browser-Forensik werden eine Reihe von Aktivitäten definiert, die für jeden untersuchten Browser durchgeführt werden -- das sogenannte \textit{Browsing Szenario}.
+Im Falle der transparenten Versuchsdurchführung der Browser-Forensik werden eine Reihe von Aktivitäten definiert, die für jeden untersuchten Browser durchgeführt werden -- das sogenannte \textit{Browsing-Szenario}.
 In diesem Protokoll wird definiert, mit welchen Daten der Rechner kontaminiert werden soll.
 
 Für diesen Versuch wurden ausschließlich Daten definiert, die nicht bereits vor Durchführung des Browsing-Szenarios auf dem Rechner zu finden sind. Beispielsweise sind die Zeichenketten ``twitter`` oder ``facebook`` bereits in vielen Windows-Standardanwendungen enthalten.
@@ -103,15 +103,15 @@ Folgende Schritte werden für diesen Versuch mit jedem Browser durchgeführt:
 	\end{enumerate}
 \end{enumerate}
 
-Aus diesem Browsing-Szenario lassen sich die in Tabelle \ref{tab:pb-artefakte} dargestellten \textit{private Browsing Artefakte}, kurz \textit{PB Artefakte} ableiten. Dabei handelt es sich um Zeichenketten, die eindeutig einem Schritt im Browsing-Szenario zugeordnet werden können. Diese sind von zentraler Bedeutung in der Analysephase: Nur nach diesen Strings wird gesucht.
+Aus diesem Browsing-Szenario lassen sich die in Tabelle \ref{tab:pb-artefakte} dargestellten \textit{Private-Browsing-Artefakte}, kurz \textit{PB-Artefakte} ableiten. Dabei handelt es sich um Zeichenketten, die eindeutig einem Schritt im Browsing-Szenario zugeordnet werden können. Diese sind von zentraler Bedeutung in der Analysephase: Nur nach diesen Strings wird gesucht.
 
 \begin{table}[h!]
 \centering
-\caption{Private Browsing Artefakte des Browsing-Szenarions}
+\caption{Private-Browsing-Artefakte des Browsing-Szenarions}
 \label{tab:pb-artefakte}
 \begin{tabular}{|c|l|c|}
 \hline
-\textbf{Kategorie}           & \multicolumn{1}{c|}{\textbf{Private Browsing Artefakt}}                                      & \textbf{\begin{tabular}[c]{@{}c@{}}Schritt im\\  Browsing Szenario\end{tabular}} \\ \hline
+\textbf{Kategorie}           & \multicolumn{1}{c|}{\textbf{Private-Browsing-Artefakt}}                                      & \textbf{\begin{tabular}[c]{@{}c@{}}Schritt im\\  Browsing-Szenario\end{tabular}} \\ \hline
 \multirow{4}{*}{Suchbegriff} & ``pfaffenhofen``                                                                               & 1.2                                                                              \\ \cline{2-3} 
                              & ``nanoradar``                                                                                  & 2.2                                                                              \\ \cline{2-3} 
                              & ``mallofamerica``                                                                              & 3.2                                                                              \\ \cline{2-3} 
@@ -133,7 +133,7 @@ Bild                         & \begin{tabular}[c]{@{}l@{}}0x89 0x50 0x4E 0x47 ..
 \label{subsection:methodik-vorbereitung-vmkonfiguration}
 
 Eine empfohlene Herangehensweise bei Versuchen in der Browser Forensik ist die Versuchsdurchführung in einer virtualisierten Umgebung. 
-Dieser ermöglicht eine Reproduzierbarkeit und Transportierbarkeit der Ergebnisse. Pro Browser existiert eine virtuelle Maschine, kurz \textit{VM}, auf der das Browsing Szenario durchgeführt wird. Somit werden die Versuchsumgebungen der einzelnen Browser voneinander sowie von der Analyseumgebung getrennt. \cite{Muir.2019}
+Dieser ermöglicht eine Reproduzierbarkeit und Transportierbarkeit der Ergebnisse. Pro Browser existiert eine virtuelle Maschine, kurz \textit{VM}, auf der das Browsing-Szenario durchgeführt wird. Somit werden die Versuchsumgebungen der einzelnen Browser voneinander sowie von der Analyseumgebung getrennt. \cite{Muir.2019}
 Als Virtualisierungssoftware wird für diesen Versuch die kostenlose Software \textit{Oracle VirtualBox VM} verwendet. 
 
 Alle VMs besitzen die gleiche, in Tabelle \ref{tab:vm-config} dargestellte Basiskonfiguration.
@@ -221,7 +221,7 @@ dejsonlz4                               & Dekomprimierung von .jsonlz4-Dateien  
 \section{Datensammlung}
 \label{section:methodik-datensammlung}
 In der Phase der Datensammlung werden alle potenziellen Beweismittel identifiziert und in einem forensisch analysierbaren Format gesichert \cite{Izzati.2022}.
-Im Rahmen dieser Arbeit umfasst dies die Durchführung des Browsing Szenarios sowie das Sammeln potenzieller privater Browsing Artefakte.
+Im Rahmen dieser Arbeit umfasst dies die Durchführung des Browsing-Szenarios sowie das Sammeln potenzieller privater Browsing-Artefakte.
 
 \subsection*{Process Monitor Logfiles}
 \label{subsection:methodik-datensammlung-processmonitorlogfiles}
@@ -251,7 +251,7 @@ VirtualBox empfiehlt, Abbilder des RAMs ebenfalls über das vboxmanage Befehlsze
 Im Unterschied zu Festplatten-Images können RAM-Dumps nur im angeschalteten Zustand der virtellen Maschine mithilfe des Befehls \texttt{vboxmanage debugvm <VM Name> dumpvmcore --filename <RAM Dump Dateiname>.elf} durchgeführt werden. RAM-Dumps im .elf Format können direkt vom Analysetool Volatility innerhalb weniger Minuten eingelesen werden.		
 
 \paragraph*{Zeitpunkte zur Datensammlung}
-Wichtig für die Qualität der Versuchsergebnisse sind die Zeitpunkte während des Browsing Szenarios zum Sammeln der Daten.
+Wichtig für die Qualität der Versuchsergebnisse sind die Zeitpunkte während des Browsing-Szenarios zum Sammeln der Daten.
 In der Literatur wählen die Autoren meist ohne Begründung Zeitpunkte zur Datensammlung \cite{Sajan.2021, Nalawade.2016, Montasari.2015, Satvat.2014, Said.2011, Aggarwal.2010}.
 Dieses Problem haben Muir, Leimich und Buchanan erkannt und spezifische Zeitpunkte zur Datensammlung vorgeschlagen. Diese ermögliche eine vollständige Analyse des Browserverhaltens vor, während und nahc dem Browsing-Szenario. \cite{Muir.2019}. Wie in Abbildung \ref{img:zeitpunkte-datensammlung} dargestellt, wurde sich an diesen Zeitpunkten für diesen Versuch orientiert.
 \begin{figure}[h!]
@@ -262,8 +262,8 @@ Dieses Problem haben Muir, Leimich und Buchanan erkannt und spezifische Zeitpunk
 	\label{img:zeitpunkte-datensammlung}
 \end{figure}
 
-Der erste RAM-Dump sowie der erste VM-Snapshot nach der Browser-Installation, vor Beginn des Browsing-Szenarios, dienen als Baseline für die Analyse, da in diesen Speicherabbildern kein PB Artefakt gefunden werden darf.
-Nachdem der private Modus im Browser geöffnet wird und bevor das Browsing Szenario beginnt, wird die Aufnahme des ersten Process Monitor Logfiles gestartet. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf das private Browsing zurückzuführen sind, wird die Aufzeichnung erst nach dem erstmaligen Öffnen des Browsers im privaten Modus gestartet.
+Der erste RAM-Dump sowie der erste VM-Snapshot nach der Browser-Installation, vor Beginn des Browsing-Szenarios, dienen als Baseline für die Analyse, da in diesen Speicherabbildern kein PB-Artefakt gefunden werden darf.
+Nachdem der private Modus im Browser geöffnet wird und bevor das Browsing-Szenario beginnt, wird die Aufnahme des ersten Process Monitor Logfiles gestartet. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf das private Browsing zurückzuführen sind, wird die Aufzeichnung erst nach dem erstmaligen Öffnen des Browsers im privaten Modus gestartet.
 Nach Durchführung des Browsing-Szenarios, während der Browser noch geöffnet ist, wird die Aufnahme des ersten Process Monitor Logfiles gestoppt. Weiterhin wird ein zweiter RAM-Dump sowie VM-Snapshot erstellt. Anschließend wird eine zweite Process Monitor Aufzeichnung gestartet. 
 Nachdem der Browser geschlossen wurde, wird die Aufzeichnung des zweiten Process Monitor Logfiles beendet. Somit enthält das zweite Logfile alle Prozessaktivitäten vom Schließen der Browsers. Zusätzlich wird ein dritter RAM-Dump sowie  VM-Snapshot erstellt. 
 Nach Herunterfahren der VM wird ein vierter VM-Snapshot erstellt, der für die für Post-Mortem Analyse relevant ist.
@@ -283,7 +283,7 @@ de/privacy/firefox/} im nicht-privaten Modus durch den Browser geöffnet.
 
 \section{Datenanalyse}
 \label{section:methodik-datenanalyse}
-Nachdem die Daten in Form von Process Monitor Logfiles und Festplatten- sowie RAM-Speicherabbildern gesammelt wurden, wird nach den PB Artefakten aus Tabelle \ref{tab:pb-artefakte} in Abschnitt \ref{subsection:methodik-vorbereitung-browsing-szenario} gesucht. 
+Nachdem die Daten in Form von Process Monitor Logfiles und Festplatten- sowie RAM-Speicherabbildern gesammelt wurden, wird nach den PB-Artefakten aus Tabelle \ref{tab:pb-artefakte} in Abschnitt \ref{subsection:methodik-vorbereitung-browsing-szenario} gesucht. 
 Die gesammelten Daten des Versuchs werden zur Vereinfachung der Analyse in drei Kategorien aufgeteilt: \textit{Common Locations}, \textit{Uncommon Locations} sowie \textit{Registry}.
 
 \subsection{Common Locations}
@@ -292,11 +292,11 @@ Die sogenannten \textit{Common Locations} beziehen sich im Zusammenhang der Brow
 Untersucht werden Common Locations mittels \textit{Whitebox-Analyse}. Dabei besitzt der Forensiker Fachwissen über das Browserverhalten. Anhand dieses Wissens können gezielt potenzielle Beweise gesammelt werden. \cite{Bonetti.2014}
 
 Bei diesem Versuch werden die Speicherorte über die Schreiboperationen der Process Monitor Logfiles identifiziert.
-Anschließend wird für jede Datei in den Speicherorten geprüft, ob PB Artefakte enthalten sind.
+Anschließend wird für jede Datei in den Speicherorten geprüft, ob PB-Artefakte enthalten sind.
 Dazu sind zwei Schritte notwendig:
 \begin{enumerate}
 \item \textbf{Dateiextraktion}: Extrakion der Datei aus dem Speicherabbild. Wenn die Datei nicht mehr vorhanden ist, werden dazu ggf. Tools zur Dateiwiederherstellung benötigt.
-\item \textbf{Dateianalyse}: Um zu überprüfen ob die Datei PB Artefakte enthält, werden ggf. Tools für spezielle Dateiformate benötigt, beispielsweise Dekomprimierungstools.
+\item \textbf{Dateianalyse}: Um zu überprüfen ob die Datei PB-Artefakte enthält, werden ggf. Tools für spezielle Dateiformate benötigt, beispielsweise Dekomprimierungstools.
 \end{enumerate}
 
 \paragraph*{Identifikation der Common Locations}
@@ -316,33 +316,33 @@ Anschließend wird als Prozessname der Browserprozess gesetzt:
 \item \textbf{Chrome}: chrome.exe
 \item \textbf{Brave}: brave.exe
 \end{itemize}
-Da PB Artefakte nur über Schreiboperationen entstehen können, wird als Prozessoperation ``WriteFile`` gesetzt.
+Da PB-Artefakte nur über Schreiboperationen entstehen können, wird als Prozessoperation ``WriteFile`` gesetzt.
 Die gefilterte Logfile wird als CSV exportiert, um sie dann in Excel zu öffnen und irrelevante Spalten sowie Duplikate zu löschen.
 Die geschriebenen Dateien werden anschließend browserspezifisch gruppiert.
 
-\paragraph*{Prüfung auf PB Artefakte}
-Nachdem die geschriebenen Browserdateien identifiziert und gruppiert wurden, wird für jede Datei geprüft, ob PB Artefakte enthalten sind. Folgende, in Abbildung \ref{img:dateiextraktion-und-analyse} dargestellte Schritte sind zur Dateiextraktion und Dateianalyse notwendig:
+\paragraph*{Prüfung auf PB-Artefakte}
+Nachdem die geschriebenen Browserdateien identifiziert und gruppiert wurden, wird für jede Datei geprüft, ob PB-Artefakte enthalten sind. Folgende, in Abbildung \ref{img:dateiextraktion-und-analyse} dargestellte Schritte sind zur Dateiextraktion und Dateianalyse notwendig:
 Die Datei befindet sich entweder im entsprechenden Festplatten-Image oder ist im RAM-Dump. 
 Wenn die Datei nicht mit Autopsy aus dem Festplatten-Image extrahiert werden kann und sich der Dateiname in der Ausgabe des Volatiltiy Plugins \textit{filescan} (\texttt{vol.py -f ram\_dump.img windows.filescan > filescan.txt}) befindet, wird diese mit dem Volatility Plugin \textit{dumpfiles} (\texttt{vol.py -f ram\_dump.img -o $\backslash$some\_folder$\backslash$ windows.dumpfiles --virtaddr <virtual file address>}) aus dem RAM extrahiert.
 Wenn auch dies nicht möglich ist und es sich um eine temporäre Datei (.tmp) handelt, wird versucht die enstprechende nicht-temporäre Datei zu extrahieren. 
 Im Falle der Datei ``some-file.json.tmp`` wird beispielsweise geprüft, ob die Datei ``some-file.json`` existiert.
-Nachdem die Datei extrahiert wurde und ggf. mit einem Tool zu Analyse vorberarbeitet wurde, wird geprüft, ob die Datei PB Artefakte enthält.
+Nachdem die Datei extrahiert wurde und ggf. mit einem Tool zu Analyse vorberarbeitet wurde, wird geprüft, ob die Datei PB-Artefakte enthält.
 \begin{figure}[h!]
 	\centering
 	\small
-	\centerline{\resizebox{\linewidth}{!}{\input{bilder/process_monitor_to_exce-Latexl.pdf_tex}}}
+	\centerline{\resizebox{\linewidth}{!}{\input{bilder/process_monitor_to_excel-Latex.pdf_tex}}}
 	\caption{Vorgehen zur Dateiextration und -analyse}
 	\label{img:dateiextraktion-und-analyse}
 \end{figure}
 
 \paragraph*{SQLite-Datenbanken}
 \label{subsubsection:methodik-datenanalyse-commonlocations-sqlitedbs}
-Eine besondere Rolle unter den Common Locations bei Browsern nehmen SQLite Datenbänke ein. 
+Eine besondere Rolle unter den Common Locations bei Browsern nehmen SQLite-Datenbanken ein. 
 Sie speichern und verwalten Nutzerinformationen, wie Lesezeichen, Browserverlauf, Caches, Cookies in Datenbankdateien, ohne einen separaten Datenbankserver zu benötigen.
 
-Wie in Abbildung \ref{img:dateiextraktion-und-analyse-sqlite} dargestellt, erfolgt die Dateiextraktion analog zur Vorgehensweise bei den Datei-Schreiboperationen der Process Monitor Logfiles. Um die SQLite Datenbänke zu analysieren wird jede Datenbank mit der gleichen Datenbank aus dem vorherigen Snapshot mithilfe des Befehlszeilentools \textit{sqldiff.exe} (\texttt{sqldiff.exe database1.sqlite database2.sqlite}) verglichen. Die Inhaltsunterschiede werden für jede SQLite-Datei in jedem Snapshot untersucht und in einer Excel Tabelle festgehalten.
+Wie in Abbildung \ref{img:dateiextraktion-und-analyse-sqlite} dargestellt, erfolgt die Dateiextraktion analog zur Vorgehensweise bei den Datei-Schreiboperationen der Process Monitor Logfiles. Um die SQLite-Datenbanken zu analysieren wird jede Datenbank mit der gleichen Datenbank aus dem vorherigen Snapshot mithilfe des Befehlszeilentools \textit{sqldiff.exe} (\texttt{sqldiff.exe database1.sqlite database2.sqlite}) verglichen. Die Inhaltsunterschiede werden für jede SQLite-Datei in jedem Snapshot untersucht und in einer Excel Tabelle festgehalten.
 Datenbankänderungen einer SQLite-Datei werden zuerst im \textit{Write-Ahead Log}, kurz \textit{WAL}, vorübergehend protokolliert. 
-Um potentielle PB Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlite3 Befehlszeile (\texttt{sqlite3> PRAGMA wal\_checkpoint;}) in die SQLite Hauptdatenbank geschrieben.
+Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlite3 Befehlszeile (\texttt{sqlite3> PRAGMA wal\_checkpoint;}) in die SQLite Hauptdatenbank geschrieben.
 \begin{figure}[h!]
 	\centering
 	\small
@@ -356,13 +356,13 @@ Um potentielle PB Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 \textit{Uncommon Locations} beziehen sich auf Verzeichnisse, die nicht zu den gängigen Speicherorten gehören. 
 Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
 Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht \cite{Bonetti.2014}:
-Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB Artefakten über die gesamten Speicherabbilder durchgeführt.
+Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB-Artefakten über die gesamten Speicherabbilder durchgeführt.
 Dies ist nur mit Unterstützung durch Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations auf die Vollständigkeit der Tools vertraut.
 
 \subsubsection*{Analyse mit Autopsy}
 \label{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy}
 Bei den Uncommon Locations wird Autopsy als forensisches Werkzeug zur Analyse der Festplatten-Images verwendet.
-Dazu wird eine Stichwortsuche mit den in Tabelle \ref{tab:pb-artefakte} definierten PB Artefakten über das gesamte eingelesene Festplatten-Image durchgeführt.
+Dazu wird eine Stichwortsuche mit den in Tabelle \ref{tab:pb-artefakte} definierten PB-Artefakten über das gesamte eingelesene Festplatten-Image durchgeführt.
 Autopsy bietet dazu die in Abbildung \ref{img:autopsy-keywordsuche} dargestellte Funktion zur Suche nach Strings, Teilstrings oder regulären Ausdrücken in Dateinamen und Dateiinhalten an.
 \begin{figure}[h!]
 	\centerline{\resizebox{0.85\linewidth}{!}{\includegraphics{bilder/autopsy-search.png}}}
@@ -383,7 +383,7 @@ Zusätzlich kategorisiert Autopsy automatisch die Dateien eines Festplatten-Imag
 Bei der Analyse des Arbeitsspeichers als Uncommon Location ist es von entscheidender Bedeutung, dass ein gefundener String eindeutig einem Browserprozess zugeordnet werden kann. 
 
 In der Literatur werden Arbeitsspeicherabbilder oft unzureichend durch eine Stichwortsuche im Hexadezimaleditor analysiert. \cite{Rochmadi.2017, Md.2018, Montasari.2015}
-Dies kann aber nach Auffassung der Autoren dieser Arbeit zu Fehlschlüssen führen. Beispielhaft wird dies in Abbildung \ref{img:textfile-ram-artifact} gezeigt: Ein String, der in einer Textdatei auf dem Desktop gespeichert ist, wird im Hexadezimaleditor HxD angezeigt, obwohl kein Browsing Szenario durchgeführt wurde.
+Dies kann aber nach Auffassung der Autoren dieser Arbeit zu Fehlschlüssen führen. Beispielhaft wird dies in Abbildung \ref{img:textfile-ram-artifact} gezeigt: Ein String, der in einer Textdatei auf dem Desktop gespeichert ist, wird im Hexadezimaleditor HxD angezeigt, obwohl kein Browsing-Szenario durchgeführt wurde.
 \begin{figure}[h!]
 	\centering
 	\subcaptionbox{String in Textdatei}{\includegraphics[width=0.30\textwidth]{bilder/ram-editor1.png}}%
@@ -395,7 +395,7 @@ Dies kann aber nach Auffassung der Autoren dieser Arbeit zu Fehlschlüssen führ
 
 Um einen im RAM gefundenen String einem Browserprozess zuordnen zu können, wird deshalb das forensiche Analysetool Volatility mit dem Plugin \textit{Yarascan} verwendet.
 Mithilfe sogenannter \textit{Yara-Regeln} (engl. Yararules) wird nach bestimmten Mustern im Arbeitsspeicher gesucht.
-Die für diesen Versuch verwendeten Yara-Regeln entsprechen den Strings der PB Artefakte in Tabelle \ref{tab:pb-artefakte}. Zusätzlich sucht eine Regel nach HTML-Fragmenten, die eindeutig einer besuchten Seite des Browsing-Szenarios zuzuordnen sind. \cite{Said.2011}
+Die für diesen Versuch verwendeten Yara-Regeln entsprechen den Strings der PB-Artefakte in Tabelle \ref{tab:pb-artefakte}. Zusätzlich sucht eine Regel nach HTML-Fragmenten, die eindeutig einer besuchten Seite des Browsing-Szenarios zuzuordnen sind. \cite{Said.2011}
 Alle verwendeten Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelistet.
 Um den RAM-Dump nach den Yara-Regeln zu durchsuchen, wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.vadyarascan --yara-file yara\_rules.yara > yarascan.txt}
 Nachdem der RAM-Dump nach den Regeln durchsucht wurde, gibt die Yarascan-Ausgabe für jeden gefundenen String die PID des Prozesses, in dem der String gefunden wurde, sowie die virtuelle Speicheradresse des gefundenen Strings an.

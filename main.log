@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  13 JUN 2023 12:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  13 JUN 2023 22:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2103,11 +2103,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 ]
-<bilder/tor-new-identity.png, id=39, 752.8125pt x 242.40562pt>
+<bilder/tor-new-identity.png, id=39, 962.943pt x 310.104pt>
 File: bilder/tor-new-identity.png Graphic file (type png)
 <use bilder/tor-new-identity.png>
 Package pdftex.def Info: bilder/tor-new-identity.png  used on input line 41.
-(pdftex.def)             Requested size: 752.81065pt x 242.40501pt.
+(pdftex.def)             Requested size: 962.94064pt x 310.10324pt.
 
 [5 <./bilder/tor-new-identity.png>] [6] [7] [8] [9] [10]
 (bilder/datensammlung-zeitpunkte-tor-Latex.pdf_tex
@@ -2522,452 +2522,452 @@ Package pdftex.def Info: bilder/process-monitor-filter.png  used on input line
 307.
 (pdftex.def)             Requested size: 450.9336pt x 360.5963pt.
 [13 <./bilder/process-monitor-filter.png>]
-(bilder/process_monitor_to_exce-Latexl.pdf_tex
-<bilder//process_monitor_to_exce-Latexl.pdf, id=228, page=1, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 1>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page1 use
+(bilder/process_monitor_to_excel-Latex.pdf_tex
+<bilder//process_monitor_to_excel-Latex.pdf, id=228, page=1, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 1>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page1 use
 d on input line 56.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=229, page=2, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 2>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page2 use
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=229, page=2, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 2>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page2 use
 d on input line 58.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=230, page=3, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 3>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page3 use
-d on input line 60.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=231, page=4, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 4>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page4 use
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=230, page=3, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 3>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page3 use
 d on input line 63.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=232, page=5, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 5>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page5 use
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=231, page=4, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 4>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page4 use
 d on input line 65.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=233, page=6, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 6>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page6 use
-d on input line 67.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=234, page=7, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 7>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page7 use
-d on input line 71.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=235, page=8, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 8>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page8 use
-d on input line 73.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=236, page=9, 817.13275pt x 381.
-34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 9>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page9 use
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=232, page=5, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 5>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page5 use
+d on input line 68.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=233, page=6, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 6>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page6 use
+d on input line 72.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=234, page=7, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 7>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page7 use
 d on input line 75.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=237, page=10, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 10>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page10 us
-ed on input line 78.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=238, page=11, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 11>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page11 us
-ed on input line 80.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=239, page=12, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 12>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page12 us
-ed on input line 82.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=240, page=13, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 13>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page13 us
-ed on input line 84.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=241, page=14, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 14>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page14 us
-ed on input line 87.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=242, page=15, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 15>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page15 us
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=235, page=8, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 8>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page8 use
+d on input line 77.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=236, page=9, 951.84589pt x 457.
+4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 9>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page9 use
+d on input line 80.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=237, page=10, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 10>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page10 us
+ed on input line 83.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=238, page=11, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 11>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page11 us
+ed on input line 85.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=239, page=12, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 12>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page12 us
+ed on input line 88.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=240, page=13, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 13>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page13 us
 ed on input line 90.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=243, page=16, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 16>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page16 us
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=241, page=14, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 14>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page14 us
 ed on input line 93.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=244, page=17, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 17>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page17 us
-ed on input line 96.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=245, page=18, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 18>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page18 us
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=242, page=15, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 15>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page15 us
+ed on input line 95.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=243, page=16, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 16>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page16 us
 ed on input line 99.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=246, page=19, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 19>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page19 us
-ed on input line 103.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=247, page=20, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 20>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page20 us
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=244, page=17, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 17>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page17 us
+ed on input line 101.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=245, page=18, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 18>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page18 us
+ed on input line 104.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=246, page=19, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 19>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page19 us
 ed on input line 107.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=248, page=21, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 21>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page21 us
-ed on input line 110.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=249, page=22, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 22>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page22 us
-ed on input line 113.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=250, page=23, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 23>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page23 us
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=247, page=20, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 20>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page20 us
+ed on input line 109.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=248, page=21, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 21>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page21 us
+ed on input line 111.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=249, page=22, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 22>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page22 us
 ed on input line 115.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=251, page=24, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 24>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page24 us
-ed on input line 119.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=252, page=25, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 25>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page25 us
-ed on input line 121.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
-<bilder//process_monitor_to_exce-Latexl.pdf, id=253, page=26, 817.13275pt x 381
-.34468pt>
-File: bilder//process_monitor_to_exce-Latexl.pdf Graphic file (type pdf)
-<use bilder//process_monitor_to_exce-Latexl.pdf, page 26>
-Package pdftex.def Info: bilder//process_monitor_to_exce-Latexl.pdf , page26 us
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=250, page=23, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 23>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page23 us
+ed on input line 118.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=251, page=24, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 24>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page24 us
+ed on input line 120.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=252, page=25, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 25>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page25 us
 ed on input line 124.
-(pdftex.def)             Requested size: 817.13275pt x 381.34373pt.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
+<bilder//process_monitor_to_excel-Latex.pdf, id=253, page=26, 951.84589pt x 457
+.4262pt>
+File: bilder//process_monitor_to_excel-Latex.pdf Graphic file (type pdf)
+<use bilder//process_monitor_to_excel-Latex.pdf, page 26>
+Package pdftex.def Info: bilder//process_monitor_to_excel-Latex.pdf , page26 us
+ed on input line 127.
+(pdftex.def)             Requested size: 951.84584pt x 457.43901pt.
 )
 (bilder/sqlite-methodology-Latex.pdf_tex
-<bilder//sqlite-methodology-Latex.pdf, id=254, page=1, 1020.93425pt x 313.17pt>
-
+<bilder//sqlite-methodology-Latex.pdf, id=254, page=1, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 1>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page1 used on i
 nput line 56.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=255, page=2, 1020.93425pt x 313.17pt>
-
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=255, page=2, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 2>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page2 used on i
 nput line 58.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=256, page=3, 1020.93425pt x 313.17pt>
-
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=256, page=3, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 3>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page3 used on i
-nput line 60.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=257, page=4, 1020.93425pt x 313.17pt>
-
+nput line 63.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=257, page=4, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 4>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page4 used on i
-nput line 62.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=258, page=5, 1020.93425pt x 313.17pt>
-
+nput line 65.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=258, page=5, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 5>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page5 used on i
-nput line 64.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=259, page=6, 1020.93425pt x 313.17pt>
-
+nput line 68.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=259, page=6, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 6>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page6 used on i
-nput line 67.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=260, page=7, 1020.93425pt x 313.17pt>
-
+nput line 72.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=260, page=7, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 7>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page7 used on i
-nput line 69.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=261, page=8, 1020.93425pt x 313.17pt>
-
+nput line 75.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=261, page=8, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 8>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page8 used on i
-nput line 71.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=262, page=9, 1020.93425pt x 313.17pt>
-
+nput line 77.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=262, page=9, 955.96031pt x 365.73694p
+t>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 9>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page9 used on i
-nput line 75.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=263, page=10, 1020.93425pt x 313.17pt
->
+nput line 80.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=263, page=10, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 10>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page10 used on 
-input line 80.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=264, page=11, 1020.93425pt x 313.17pt
->
+input line 83.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=264, page=11, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 11>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page11 used on 
-input line 83.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=265, page=12, 1020.93425pt x 313.17pt
->
+input line 85.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=265, page=12, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 12>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page12 used on 
-input line 86.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=266, page=13, 1020.93425pt x 313.17pt
->
+input line 87.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=266, page=13, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 13>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page13 used on 
 input line 90.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=267, page=14, 1020.93425pt x 313.17pt
->
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=267, page=14, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 14>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page14 used on 
-input line 94.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=268, page=15, 1020.93425pt x 313.17pt
->
+input line 92.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=268, page=15, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 15>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page15 used on 
-input line 96.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=269, page=16, 1020.93425pt x 313.17pt
->
+input line 94.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=269, page=16, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 16>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page16 used on 
-input line 99.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=270, page=17, 1020.93425pt x 313.17pt
->
+input line 97.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=270, page=17, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 17>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page17 used on 
 input line 102.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=271, page=18, 1020.93425pt x 313.17pt
->
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=271, page=18, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 18>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page18 used on 
-input line 104.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=272, page=19, 1020.93425pt x 313.17pt
->
+input line 106.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=272, page=19, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 19>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page19 used on 
-input line 106.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=273, page=20, 1020.93425pt x 313.17pt
->
+input line 109.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=273, page=20, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 20>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page20 used on 
-input line 110.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=274, page=21, 1020.93425pt x 313.17pt
->
+input line 111.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=274, page=21, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 21>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page21 used on 
-input line 112.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=275, page=22, 1020.93425pt x 313.17pt
->
+input line 113.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=275, page=22, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 22>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page22 used on 
-input line 115.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-<bilder//sqlite-methodology-Latex.pdf, id=276, page=23, 1020.93425pt x 313.17pt
->
+input line 118.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+<bilder//sqlite-methodology-Latex.pdf, id=276, page=23, 955.96031pt x 365.73694
+pt>
 File: bilder//sqlite-methodology-Latex.pdf Graphic file (type pdf)
 <use bilder//sqlite-methodology-Latex.pdf, page 23>
 Package pdftex.def Info: bilder//sqlite-methodology-Latex.pdf , page23 used on 
-input line 118.
-(pdftex.def)             Requested size: 1020.93422pt x 313.18355pt.
-) [14 <./bilder//process_monitor_to_exce-Latexl.pdf> <./bilder//process_monitor
-_to_exce-Latexl.pdf
+input line 121.
+(pdftex.def)             Requested size: 955.96031pt x 365.74161pt.
+) [14 <./bilder//process_monitor_to_excel-Latex.pdf> <./bilder//process_monitor
+_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
-> <./bilder//process_monitor_to_exce-Latexl.pdf
+> <./bilder//process_monitor_to_excel-Latex.pdf
 
-pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_exce-Latexl.pdf): P
+pdfTeX warning: pdflatex (file ./bilder//process_monitor_to_excel-Latex.pdf): P
 DF inclusion: multiple pdfs with page group included in a single page
 >]
 <bilder/autopsy-search.png, id=363, 475.02469pt x 237.13594pt>
@@ -2975,12 +2975,8 @@ File: bilder/autopsy-search.png Graphic file (type png)
 <use bilder/autopsy-search.png>
 Package pdftex.def Info: bilder/autopsy-search.png  used on input line 368.
 (pdftex.def)             Requested size: 475.02351pt x 237.13535pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[15 <./bilder//sqlite-methodology-Latex.pdf> <./bilder//sqlite-methodology-Late
-x.pdf
+ [15 <./bilder//sqlite-methodology-Latex.pdf> <./bilder//sqlite-methodology-Lat
+ex.pdf
 
 pdfTeX warning: pdflatex (file ./bilder//sqlite-methodology-Latex.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
@@ -3343,7 +3339,17 @@ chapter 5.
 
 ]
 
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 197.
+See the caption package documentation for explanation.
+
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 363.
+See the caption package documentation for explanation.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -3356,6 +3362,11 @@ Package pdftex.def Info: bilder/firefox-dnscache.png  used on input line 377.
 [21]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 619.
+See the caption package documentation for explanation.
 
 [22]
 
@@ -3401,47 +3412,66 @@ png  used on input line 664.
  [25 <./bilder/volatility/firefox/password_0xb9ce29180c8_7420.png> <./bilder/vo
 latility/firefox/password_0x2859f4ffd4e0_7420.png> <./bilder/volatility/firefox
 /password_0x24083b41858_8424.png> <./bilder/volatility/firefox/password_0x24084
-0e5b08_8424.png>] [26] [27] [28]
+0e5b08_8424.png>]
 
 Package caption Warning: The type was already set to `table'
-(caption)                 on input line 1384.
+(caption)                 on input line 706.
 See the caption package documentation for explanation.
+
+[26] [27]
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 942.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 1123.
+See the caption package documentation for explanation.
+
+[28]
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 1383.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [29]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<bilder/volatility/tor/password_0xea0318.png, id=595, 454.69875pt x 122.70844pt
->
-File: bilder/volatility/tor/password_0xea0318.png Graphic file (type png)
-<use bilder/volatility/tor/password_0xea0318.png>
-Package pdftex.def Info: bilder/volatility/tor/password_0xea0318.png  used on i
-nput line 1413.
-(pdftex.def)             Requested size: 196.57976pt x 53.05006pt.
-<bilder/volatility/tor/password_0x10f7748.png, id=596, 458.46281pt x 243.15843p
-t>
-File: bilder/volatility/tor/password_0x10f7748.png Graphic file (type png)
-<use bilder/volatility/tor/password_0x10f7748.png>
-Package pdftex.def Info: bilder/volatility/tor/password_0x10f7748.png  used on 
-input line 1415.
-(pdftex.def)             Requested size: 196.57976pt x 104.26297pt.
-[30 <./bilder/volatility/tor/password_0xea0318.png> <./bilder/volatility/tor/pa
-ssword_0x10f7748.png>]
-
-LaTeX Warning: Text page 31 contains only floats.
+LaTeX Warning: Text page 30 contains only floats.
 
 
 Overfull \vbox (4.84859pt too high) has occurred while \output is active []
 
 
-[31]) [32]
+[30]
+<bilder/volatility/tor/password_0xea0318.png, id=598, 454.69875pt x 122.70844pt
+>
+File: bilder/volatility/tor/password_0xea0318.png Graphic file (type png)
+<use bilder/volatility/tor/password_0xea0318.png>
+Package pdftex.def Info: bilder/volatility/tor/password_0xea0318.png  used on i
+nput line 1416.
+(pdftex.def)             Requested size: 196.57976pt x 53.05006pt.
+<bilder/volatility/tor/password_0x10f7748.png, id=599, 458.46281pt x 243.15843p
+t>
+File: bilder/volatility/tor/password_0x10f7748.png Graphic file (type png)
+<use bilder/volatility/tor/password_0x10f7748.png>
+Package pdftex.def Info: bilder/volatility/tor/password_0x10f7748.png  used on 
+input line 1418.
+(pdftex.def)             Requested size: 196.57976pt x 104.26297pt.
+ [31 <./bilder/volatility/tor/password_0xea0318.png> <./bilder/volatility/tor/p
+assword_0x10f7748.png>]) [32]
 \openout2 = `"kapitel/06_Vergleich der Browser.aux"'.
 
  (kapitel/06_Vergleich der Browser.tex
 chapter 6.
+
+Package caption Warning: The type was already set to `table'
+(caption)                 on input line 164.
+See the caption package documentation for explanation.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -3828,11 +3858,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48799 strings out of 475281
- 1199165 string characters out of 2774064
- 2313197 words of memory out of 3000000
+ 48801 strings out of 475281
+ 1199187 string characters out of 2774064
+ 2313201 words of memory out of 3000000
  69098 multiletter control sequences out of 15000+600000
- 619424 words of font info for 264 fonts, out of 8000000 for 9000
+ 619560 words of font info for 265 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,29n,106p,10601b,2830s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
@@ -3849,7 +3879,7 @@ C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
 b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
 b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb
 >
-Output written on main.pdf (65 pages, 947428 bytes).
+Output written on main.pdf (65 pages, 1825693 bytes).
 PDF statistics:
  783 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

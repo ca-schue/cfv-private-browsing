@@ -208,7 +208,7 @@ Die Cache-Dateien im Format \texttt{$\backslash$cache2$\backslash$entries$\backs
 %\end{figure}
 
 Diese Dateien können mit dem Tool MZCacheView eingelesen werden.
-Wie in Abbildung \ref{img:mzcacheview} gezeigt, konnten im Firefox Cache-Ordner des Festplatten-Images vom zweiten Snapshot drei JSON Dateien identifiziert werden. Dabei handelt es sich um Zertifikatsdateien, die von der \textit{One Certificate Revocation List} stammen, ein Mechanismus von Firefox zur Überprüfung von Zertifikaten. In keinem der Zertifikate konnten mit HxD private Browsing Artefakte oder besuchte Seiten gefunden werden. \cite{TechSupportGuy.05.06.2023}
+Wie in Abbildung \ref{img:mzcacheview} gezeigt, konnten im Firefox Cache-Ordner des Festplatten-Images vom zweiten Snapshot drei JSON Dateien identifiziert werden. Dabei handelt es sich um Zertifikatsdateien, die von der \textit{One Certificate Revocation List} stammen, ein Mechanismus von Firefox zur Überprüfung von Zertifikaten. In keinem der Zertifikate konnten mit HxD Private-Browsing-Artefakte oder besuchte Seiten gefunden werden. \cite{TechSupportGuy.05.06.2023}
 Weiterhin befindet sich im Cache das HTML-Dokument der Firefox Datenschutzseite, welche sich beim ersten Start des Browsers automatisch öffnete, siehe Kapitel \ref{subsection:methodik-vorbereitung-browsing-szenario}
 Weitere Cache Dateien konnten in keinem Festplatten-Image gefunden werden.
 \begin{figure}[h!]
@@ -240,12 +240,12 @@ Wie Abbildung \ref{img:firefox-session-history-scrounger} gezeigt, enthielt die 
 In der Datei \texttt{prefs-1.js} werden benutzerspezifische Einstellungen und Konfigurationen für den Firefox-Browser gespeichert. Die Datei enthält Präferenzen des Benutzers in Form von JavaScript-Objekten. Es konnten in den Dateien beider Logfiles mit HxD keine PB Artefakte gefunden werden. 
 Schließlich speichert die Datei \texttt{xulstore.json} benutzerspezifische Anpassungen und Konfigurationen des Firefox-Browsers. In der Datei konnten in den Festplatten-Images beider Logfiles mit Notepad++ keine PB Artefakte gefunden werden. \cite{mozillazine.29.12.2022}
 
-\subsubsection*{SQLite Datenbänke}
+\subsubsection*{SQLite-Datenbanken}
 \label{appendix:firefox-sqlite}
-Wie in Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten detailliert und getrennt von den Schreiboperationen der Process Logfiles untersucht. Mithilfe der Process Monitor Logfiles wurden zunächst die in Tabelle \ref{tab:firefox-sqlite-dbs-explained} dargestellten SQLite-Datenbanken für Firefox identifiziert:
+Wie in Kapitel \ref{subsection:methodik-datenanalyse-commonlocations} erwähnt, werden SQLite-Datenbanken als Datenstrukturen für Nutzerdaten detailliert und getrennt von den Schreiboperationen der Process Logfiles untersucht. Mithilfe der Process Monitor Logfiles wurden zunächst die in Tabelle \ref{tab:firefox-sqlite-dbs-explained} dargestellten SQLite-Datenbanken für Firefox identifiziert:
 \begin{table}[h!]
 \centering
-\caption{Veränderte Firefox SQLite-Datenbänke und deren Verwendungszwecke}
+\caption{Veränderte Firefox SQLite-Datenbanken und deren Verwendungszwecke}
 \label{tab:firefox-sqlite-dbs-explained}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|l|lll}
@@ -267,7 +267,7 @@ Die Ergebnisse sind in Tabelle \ref{tab:firefox-veraenderte-sqlitedbs} dargestel
 
 \begin{table}[h!]
 \centering
-\caption{Veränderung der Firefox SQLite-Datenbänke während der Versuchsdurchführung}
+\caption{Veränderung der Firefox SQLite-Datenbanken während der Versuchsdurchführung}
 \label{tab:firefox-veraenderte-sqlitedbs}  
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|c|cc|cc|cc|}
@@ -295,11 +295,11 @@ Der Inhalt aller initialisierten Datenbanken blieb nach Durchführung von PRAGMA
 
 Nach Schließen des Browsers (Snapshot 3) wurden in \texttt{places.sqlite} die Indizes der eingetragenen Seiten aktualisiert. Die SQLite-Datenbank \texttt{1657114595AmcateirvtiSty.sqlite} erhielt ein binäres Datenobjekt als Eintrag. Bei der Untersuchung mit HxD konnten keine Artefakte gefunden werden. Weiterhin wurde \texttt{webappsstore.sqlite} leer initialisiert. Die restlichen Daten blieben im Vergleich mit Snapshot 2 unverändert. Ebenfalls veränderte sich nicht der Inhalt nach Durchführung von PRAGMA WAL Checkpoints.
 
-Sowohl nachdem die VM herunterfahren wurde, (Snapshot 4) als auch nach Durchführung der PRAGMA WAL Checkpoints, entstanden keine Änderungen in den SQLite Datenbanken.	
-Somit wurden in den SQLite Datenbanken von Firefox keine zurückverfolgbaren PB Artefakte im privaten Modus hinterlassen.
+Sowohl nachdem die VM herunterfahren wurde, (Snapshot 4) als auch nach Durchführung der PRAGMA WAL Checkpoints, entstanden keine Änderungen in den SQLite-Datenbanken.	
+Somit wurden in den SQLite-Datenbanken von Firefox keine zurückverfolgbaren PB Artefakte im privaten Modus hinterlassen.
 
 \subsubsection*{Zusammenfassung Firefox Common Locations}
-Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie in Abbildung \ref{chart:firefox-writefile-logfile1v2} dargestellt, gab es mit Ausnahme der \textit{Datareporting} Dateien in Logfile 1 stets mehr oder gleich viele Schreiboperationen wie in Logfile 2. Keine der Schreiboperation hinterließ Private Browsing Artefakte.
+Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während des Browsing Szenarios (Logfile 1) als auch danach (Logfile 2) Inhalte in Dateien geschrieben wurden. Wie in Abbildung \ref{chart:firefox-writefile-logfile1v2} dargestellt, gab es mit Ausnahme der \textit{Datareporting} Dateien in Logfile 1 stets mehr oder gleich viele Schreiboperationen wie in Logfile 2. Keine der Schreiboperation hinterließ Private-Browsing-Artefakte.
 
 \begin{figure}[h!]
 	\begin{tikzpicture}
@@ -334,8 +334,8 @@ Mithilfe der Process Monitor Logfiles wurde festgestellt, dass sowohl während d
 %	o no traces were found in “common locations” \cite{Montasari.2015}
 %		>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
 %	o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
-%	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing Artefakte)
-%	o	SQLite Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
+%	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing-Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing-Artefakte)
+%	o	SQLite-Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
 %		> \cite{Fayyad.2021} for Mozilla Firefox, 7 database files were recovered: cookies.sqlite-shm, places.sqlite-shm, prefs.js etc.
 %		> \cite{Muir.2019} The two SQLite databases used by Firefox to track cookies and history (cookies.sqlite und places.sqlite) were both recoverable from the file system after deletion	
 %		Ergebnisse stehen im Gegensatz zu \cite{Hedberg.2013} :
@@ -378,7 +378,7 @@ Die Kategorie ``Web History`` listet alle Dateien mit gespeichertem Suchverlauf 
 \end{figure}
 
 \paragraph*{Web Categories}
-Diese Kategorie klassifiziert im Speicherabbild gefundene Browsing Artefakte nach Inhalt.
+Diese Kategorie klassifiziert im Speicherabbild gefundene Browsing-Artefakte nach Inhalt.
 Vor Beginn des Browsing Szenarios (Snapshot 1) werden hier bereits zwei in Abbildung \ref{img:firefox-web-categories} dargestellte Einträge aufgelistet. Der Eintrag \texttt{bing.com} wird als ``Suchmaschine`` klassifiziert und \texttt{live.com} als ``Web-Email``.
 Wie oben erwähnt, wurden beide Seiten nie aufgerufen. Es gab keine zusätzlichen Einträge in dieser Kategorie während des restlichen Browsing Szenarios (Snapshots 2 - 4).
 \begin{figure}[h!]
@@ -387,7 +387,7 @@ Wie oben erwähnt, wurden beide Seiten nie aufgerufen. Es gab keine zusätzliche
 	\label{img:firefox-web-categories}  
 \end{figure}
 
-Somit wurden in allen Kategorien ausschließlich Browsing Artefakte des Edge Browsers in der Datei \texttt{WebCacheV01.dat} gefunden, sowie ein Eintrag in der Firefox SQLite Datenbank \texttt{places.sqlite}. In keiner der Kategorien konnten private Browsing Artefakte identifiziert werden. Die von Autopsy erkannte Firefox-Standardseite deckt sich mit den Ergebnissen der Common Locations. Die aufgelisteten Einträge in der Datei \texttt{WebCacheV01.dat} sind nicht auf Schritte des Browsing Szenarios zurückzuführen. Die Einträge sind bereits im ersten Snapshot enthalten, obwohl vor Beginn des Browsing Szenarios keine Browseraktivitäten durchgeführt wurden. Weiterhin enthält diese Datei Einträge über die Process Monitor Logfiles, welche über einen gemeinsamen VM-Ordner zum Rechner transportiert wurde, auf dem die virtuelle Maschine läuft.
+Somit wurden in allen Kategorien ausschließlich Browsing-Artefakte des Edge Browsers in der Datei \texttt{WebCacheV01.dat} gefunden, sowie ein Eintrag in der Firefox SQLite-Datenbank \texttt{places.sqlite}. In keiner der Kategorien konnten Private-Browsing-Artefakte identifiziert werden. Die von Autopsy erkannte Firefox-Standardseite deckt sich mit den Ergebnissen der Common Locations. Die aufgelisteten Einträge in der Datei \texttt{WebCacheV01.dat} sind nicht auf Schritte des Browsing Szenarios zurückzuführen. Die Einträge sind bereits im ersten Snapshot enthalten, obwohl vor Beginn des Browsing Szenarios keine Browseraktivitäten durchgeführt wurden. Weiterhin enthält diese Datei Einträge über die Process Monitor Logfiles, welche über einen gemeinsamen VM-Ordner zum Rechner transportiert wurde, auf dem die virtuelle Maschine läuft.
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 
@@ -607,21 +607,21 @@ SecureDrop ist ein Open-Source-Softwaretool, das von Journalisten und Nachrichte
 
 Schließlich wurde in die Datei \texttt{SiteSecurityServiceState.txt} geschrieben.
 Diese Datei speichert Daten wie Zertifikate, Verschlüsselungseinstellungen und andere Sicherheitsmerkmale, die von den besuchten Websites verwendet werden.
-Es ist anzumerken, dass diese Datei früher private Browsing Artefakte enthielt. \cite{Gitlab.05.06.2023} In der akutellen Tor-Browser-Version konnten keine private Browsing Artefakte gefunden werden.
+Es ist anzumerken, dass diese Datei früher Private-Browsing-Artefakte enthielt. \cite{Gitlab.05.06.2023} In der akutellen Tor-Browser-Version konnten keine Private-Browsing-Artefakte gefunden werden.
 	
-\subsubsection*{SQLite Datenbänke} 
-Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite Datenbanken wie Firefox aus Kapitel \ref{appendix:firefox-sqlite} verwaltet und schreibt.
+\subsubsection*{SQLite-Datenbanken} 
+Anhand der Process Monitor Logfiles ist erkennbar, dass Tor die gleichen SQLite-Datenbanken wie Firefox aus Kapitel \ref{appendix:firefox-sqlite} verwaltet und schreibt.
 			
 Wie bei der Analyse der SQLite-Datenbanken bei Firefox wird die Entwicklung der Datenbankeninhalte aller fünf Festplatten-Images der Snapshots 1, 2, 3-1, 3-2 und 4 betrachtet. Die Ergebnisse sind in Tabelle \ref{tab:tor-veraenderte-sqlitedbs} dargestellt.
 \begin{table}[h!]
 \centering
-\caption{Veränderung der Tor-Browser SQLite-Datenbänke während der Versuchsdurchführung}
+\caption{Veränderung der Tor-Browser SQLite-Datenbanken während der Versuchsdurchführung}
 \label{tab:tor-veraenderte-sqlitedbs}  
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|l|c|cc|cc|cc|cc|}
 \hline
 \multicolumn{1}{|c|}{}                                     &                                                                                                    & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Browser geöffnet (S2)\end{tabular}}}                                                                                                                                           & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Neue Identität (S3-1)\end{tabular}}}                                                                                                               & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}Nach Browsing Szenario, \\ Browser geschlossen (S3-2)\end{tabular}}}                                                                                                          & \multicolumn{2}{c|}{\textbf{\begin{tabular}[c]{@{}c@{}}VM \\ heruntergefahren (S4)\end{tabular}}}                           \\ \cline{3-10} 
-\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Dateiname}}} & \multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Vor Browsing \\ Szenario\\ (S1)\end{tabular}}} & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                                                   & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                  & \textbf{Nach WAL}                                  \\ \hline
+\multicolumn{1}{|c|}{\multirow{-2}{*}{\textbf{Dateiname}}} & \multirow{-3}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Vor Browsing \\ Szenario (S1)\\ \end{tabular}}} & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                                                   & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                                                                       & \textbf{Nach WAL}                                                                                      & \multicolumn{1}{c|}{\textbf{Vor WAL}}                                  & \textbf{Nach WAL}                                  \\ \hline
 places.sqlite                                              & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Tor-Standardseiten)\end{tabular}}                              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}Indizes aktualisiert}                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{F56B00}\begin{tabular}[c]{@{}c@{}}Indizes \\ aktualisiert\end{tabular}}                & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-3} \cline{5-5} \cline{7-7}
 cookies.sqlite                                             & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFCE93}}                                                                                                           & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-2}
 storage.sqlite                                             & \cellcolor[HTML]{C0C0C0}N/A                                                                        & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{FFCE93}\begin{tabular}[c]{@{}c@{}}Initialisiert \\ (Nur Spaltennamen)\end{tabular}}}              & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\cellcolor[HTML]{FE996B}}                                                                               & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{1}{c|}{\multirow{-2}{*}{\cellcolor[HTML]{FE996B}\begin{tabular}[c]{@{}c@{}}keine \\ Veränderung\end{tabular}}} & \cellcolor[HTML]{FE996B}                                                                               & \multicolumn{2}{c|}{\cellcolor[HTML]{FE996B}}                                                                               \\ \cline{1-3} \cline{7-7}
@@ -643,7 +643,7 @@ Nach Browser-Installation wurde noch keine SQLite-Datei angelegt (Snapshot 1).
 
 Während des Browsing Szenarios wurden alle Datenbänkte initialisiert.
 In places.sqlite wurden automatisch .onion-URLs geschrieben, die zu Tor Standardseiten führen. Beispielsweise Seiten wie ``The Tor Blog`` oder ``Tor Browser Manual``.
-Die gleichen Einträge wurden in der favicons.sqlite Datenbank geschrieben, mit dem Präfix ``Fake-favicon-uri``. Ein tatsächliches Icon wurde nicht in die Datenbank geschrieben. 
+Die gleichen Einträge wurden in der favicons.SQLite-Datenbank geschrieben, mit dem Präfix ``Fake-favicon-uri``. Ein tatsächliches Icon wurde nicht in die Datenbank geschrieben. 
 Weiterhin erhielt die ``remote settings`` Datenbank den gleichen Eintrag wie es bereits bei Firefox der Fall war. Der Eintrag enthält keine PB Artefakte.
 Die restliche SQLite-Dateien wurden ohne Inhalt angelegt, nur die Spaltennamen wurden definiert.
 Nach Durchführung der WAL Checkpoints bleiben Dateien unverändert.
@@ -655,7 +655,7 @@ Nach Schließen des Browsers (Snapshot 3-2) wurden in places.sqlite sowie favico
 Nach Herunterfahren der VM (Snapshot 4) blieben alle Datenbanken unverändert. Auch nach Durchführung der WAL Checkpoints gab es keine neuen Inhalte.
 
 \subsubsection*{Zusammenfassung Tor Common Locations}
-Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen, dass die meisten Schreiboperationen im ersten Logfile stattfinden. Dort werden Dateien jeder Kategorie beschrieben. Das Schließen des Tor-Browsers führt zu mehr oder genauso vielen Schreiboperationen wie das Zuweisen einer ``Neuen Identität``. Keine der geschriebenen Dateien enthielt private Browsing Artefakte.
+Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen, dass die meisten Schreiboperationen im ersten Logfile stattfinden. Dort werden Dateien jeder Kategorie beschrieben. Das Schließen des Tor-Browsers führt zu mehr oder genauso vielen Schreiboperationen wie das Zuweisen einer ``Neuen Identität``. Keine der geschriebenen Dateien enthielt Private-Browsing-Artefakte.
 %*** TODO: Was noch? ***
 \begin{figure}[h!]
 	\begin{tikzpicture}
@@ -700,8 +700,8 @@ Im Balkendiagramm \ref{chart:firefox-writefile-logfile1v21vs22} ist zu erkennen,
 %	o no traces were found in “common locations” \cite{Montasari.2015}
 %		>  “places.sqlite”, “webappsstore. sqlite”, “sessionstore.bak”, “search.json” and “nssckbi.dll”
 %	o	Safebrowsing: Alle Dateien in /safebrowsing-updating/ nicht relevant. Dort nur .vlpset und .sbstore Dateien. Speichern 256-Bit Hash von URLs, die auf SafeSearch Blacklist stehen 
-%	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing Artefakte)
-%	o	SQLite Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
+%	o	Cache-Dateien: drei Caches: startupCache, jumpListCache (beide enthalten Binärdateien ohne Browsing-Artefakte) und cache2 (können mit MozillaCacheView untersucht werden, enthalten keine Browsing-Artefakte)
+%	o	SQLite-Datenbanken: Sqlite Dateien erst ohne WAL Dateien untersuchen, Danach mit sqlite3 Konsole: WAL in Datenbank schreiben mit: PRAGMA wal\_checkpoint; places.sqlite besonders relevant, da dort Browser in public Modus Browsing URLs verwaltet (Am besten hier vergleich mit Public Browsing machen)	
 %		> \cite{Fayyad.2021} for Mozilla Firefox, 7 database files were recovered: cookies.sqlite-shm, places.sqlite-shm, prefs.js etc.
 %		> \cite{Muir.2019} The two SQLite databases used by Firefox to track cookies and history (cookies.sqlite und places.sqlite) were both recoverable from the file system after deletion	
 %		Ergebnisse stehen im Gegensatz zu \cite{Hedberg.2013} :
@@ -753,7 +753,7 @@ Es gab keine zusätzlichen Einträge in dieser Kategorie in den Festplatten-Imag
 	\label{img:tor-web-categories} 
 \end{figure}
 		
-Somit wurden in den von Autopsy kategorisierten Dateien keine PB Artefakte entdeckt. Weiterhin gab es verglichen mit der Analyse der Common Locations keine neuen Erkenntnisse. Autopsy erkannte nicht die in der places.sqlite Datenbank geschriebenen .onion-URLs der Tor-Standardseiten.
+Somit wurden in den von Autopsy kategorisierten Dateien keine PB Artefakte entdeckt. Weiterhin gab es verglichen mit der Analyse der Common Locations keine neuen Erkenntnisse. Autopsy erkannte nicht die in der places.sqlite-Datenbank geschriebenen .onion-URLs der Tor-Standardseiten.
 
 %Literatur:
 %	o	Autopsy Keywortsuche: 

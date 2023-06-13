@@ -3,12 +3,12 @@
 \contentsline {chapter}{\numberline {2}Theoretischer Hintergrund}{2}{}%
 \contentsline {section}{\numberline {2.1}Private Browsing}{2}{}%
 \contentsline {section}{\numberline {2.2}Angreifermodell}{2}{}%
-\contentsline {section}{\numberline {2.3}Private Browsing Artefakte}{2}{}%
+\contentsline {section}{\numberline {2.3}Private-Browsing-Artefakte}{2}{}%
 \contentsline {chapter}{\numberline {3}Ziel der Arbeit}{3}{}%
 \contentsline {chapter}{\numberline {4}Methodik}{4}{}%
 \contentsline {section}{\numberline {4.1}Vorbereitung}{4}{}%
 \contentsline {subsection}{\numberline {4.1.1}Browserauswahl}{4}{}%
-\contentsline {subsection}{\numberline {4.1.2}Browsing Szenario}{6}{}%
+\contentsline {subsection}{\numberline {4.1.2}Browsing-Szenario}{6}{}%
 \contentsline {section}{\numberline {4.2}Datensammlung}{10}{}%
 \contentsline {section}{\numberline {4.3}Datenanalyse}{12}{}%
 \contentsline {subsection}{\numberline {4.3.1}Common Locations}{12}{}%
@@ -16,7 +16,7 @@
 \contentsline {subsection}{\numberline {4.3.3}Registry}{17}{}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{20}{}%
 \contentsline {section}{\numberline {5.1}Firefox}{20}{}%
-\contentsline {section}{\numberline {5.2}Tor}{27}{}%
+\contentsline {section}{\numberline {5.2}Tor-Browser}{27}{}%
 \contentsline {section}{\numberline {5.3}Chrome}{32}{}%
 \contentsline {section}{\numberline {5.4}Brave}{32}{}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{33}{}%

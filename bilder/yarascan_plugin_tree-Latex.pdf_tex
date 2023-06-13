@@ -98,7 +98,7 @@
     \put(0.26750887,0.36643027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process \end{tabular}}}}%
     \put(0.25766475,0.34869978){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}memory file\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=19]{yarascan_plugin_tree-Latex.pdf}}%
-    \put(0.80453976,0.45744682){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
+%    \put(0.80453976,0.45744682){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
     \put(0.82504064,0.43971633){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}process\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=20]{yarascan_plugin_tree-Latex.pdf}}%
     \put(0.79271943,0.44562649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}cached files of\end{tabular}}}}%
