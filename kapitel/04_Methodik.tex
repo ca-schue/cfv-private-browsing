@@ -47,9 +47,17 @@ Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion ``\textit{Neue Ide
 
 \subsubsection*{Chrome}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-chrome}
+Der von Google entwickelte \textit{Chrome} Browser ist ein auf \textit{Chromium} basierender bietet den \textit{Inkognitomodus} als privaten Browsing-Modus an. Laut Google werden dadurch keine Verlaufsdaten, Cookies und Websitedaten oder in Formulare eingetragene Informationen gespeichert.
+Bezüglich des Schutzes vor Webangreifern macht Google keine angaben.
+Chrome basiert auf dem Open-Source-Projekt \textit{Chromium}, ein freier und quelloffener Webbrowser, der von The Chromium Projects entwickelt wird.
+Dabei handelt es sich um eine von Google initiierte quelloffene Plattform für die Entwicklung von Webbrowsern.
+Der Chrome Browser selbst enthält proprietäre Elemente. \cite{GoogleChrome.}
 
 \subsubsection*{Brave}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-brave}
+Der Open-Source-Browser \textit{Brave} wurde von Brendan Eich, dem Mitbegründer von Mozilla, mit Fokus auf Privatsphäre, Sicherheit sowie Nutzerfreundlichkeit auf Baisis des Chromium-Projekts entwickelt. 
+Brave bietet Schutz vor dem lokalen Angreifer durch den \textit{Private-Window}-Modus. In diesem Modus werden laut Herstellerangaben der Browserverlauf sowie Cookies nicht lokal auf dem Gerät gespeichert. 
+Um vor dem Webangreifer zu schützen, bietet Brave mit dem \textit{Private-Window-with-Tor-Connectivity}-Modus zusätzlich die Möglichkeit, eine Verbindung zum Tor-Netzwerk herzustellen. \cite{Brave.} Im Rahmen dieser Seminararbeit wird ausschließlich der Private-Window-Modus untersucht.
 
 \subsection{Browsing-Szenario}
 \label{subsection:methodik-vorbereitung-browsing-szenario}
@@ -433,14 +441,14 @@ Wie in Abbildung \ref{img:procmon-setvalue-filter} gezeigt, wird zunächst das L
 Als CSV-Datei wird das Logfile in Excel weiter verarbeitet, indem Duplikate gelöscht werden und die geschriebenen Registry-Keys browserspezifisch gruppiert werden.
 	
 \paragraph*{Uncommon Locations}
-Unter Betrachtung als Uncommon Location werden alle Windows Registry-Hives in jedem Festplatten-Image mit dem Registry Explorer untersucht.
-Dabei wird zwischen Hives zur Speicherung von Systemeinstellungen (System-Hives) und individuellen Benutzerkonfigurationen (User-Hives) unterschieden. Diese in Tabelle \ref{tab:windows-registry-hives} dargestellten Hives werden von Windows beim Start geladen und dienen Systemkomponenten und Anwendungen als Quelle für Einstellungen und Informationen. \cite{Haircutfish.04.11.2022}
+Unter Betrachtung als Uncommon Location werden alle Windows Registry Hives in jedem Festplatten-Image mit dem Registry Explorer untersucht.
+Dabei wird zwischen Hives zur Speicherung von Systemeinstellungen (System-Hives) und individuellen Benutzerkonfigurationen (User-Hives) unterschieden. Diese in Tabelle \ref{tab:windows-Registry Hives} dargestellten Hives werden von Windows beim Start geladen und dienen Systemkomponenten und Anwendungen als Quelle für Einstellungen und Informationen. \cite{Haircutfish.04.11.2022}
 Zur Analyse wird jeder Hive aus den Fesplatten-Images extrahiert und in eine Registry-Explorer-Sitzung geladen, um eine Stringsuche nach PB-Artefakten durchzuführen.
 
 \begin{table}[h!]
 \centering
 \caption{Windows Registry Hives}
-\label{tab:windows-registry-hives}
+\label{tab:windows-Registry Hives}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{lllll}
 \cline{1-2}

@@ -10,7 +10,7 @@ Somit sind die Common Locations aller Browser während der gesamten Versuchsdurc
 
 \subsection*{Registry}
 Bei Betrachtung der Registry als Common Locations wurden keine PB-Artefakte in den Registry-Key bzw. -Values der Registry-Schreiboperationen der Process Monitor Logfiles gefunden.
-Unter Betrachtung der Registry als Uncommon Locations konnten weder in System- noch User-Hives PB Artefakte gefunden werden.
+Unter Betrachtung der Registry als Uncommon Locations konnten weder in System- noch User-Hives PB-Artefakte gefunden werden.
 Somit befinden sich bei jedem Browser auch in der Registry zu keinem Zeitpunkt PB-Artefakte.
 
 \subsection*{Uncommon Locations}
@@ -18,7 +18,7 @@ Weder über Autopsy Stichwortsuche noch in den automatisch von Autopsy kategoris
 %evtl. unterschiedlich Kategorisierte Dateien hervorheben
 
 Einzig über die Untersuchung der Arbeitsspeicherabbilder mit Volatility konnten PB-Artefakte zu unterschiedlichen Zeitpunkten der Versuchsdurchführung identifiziert werden. 
-Wie in Abbildung \ref{chart:all-browsers-ram-summary} dargestellt, konnten in keinem der Browser vor Durchführung des Browsing Szenarios (RAM-Dump 1) PB Artefakte im Arbeitsspeicher gefunden werden.
+Wie in Abbildung \ref{chart:all-browsers-ram-summary} dargestellt, konnten in keinem der Browser vor Durchführung des Browsing-Szenarios (RAM-Dump 1) PB-Artefakte im Arbeitsspeicher gefunden werden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{r}
@@ -167,7 +167,7 @@ Wie in Abbildung \ref{chart:all-browsers-ram-summary} dargestellt, konnten in ke
 
 \paragraph*{Firefox vs Tor}
 %> RAM-Dump 2: 
-Tor hinterlässt nach dem Browsing Szenario, vor Zuweisung einer ``Neuen Identität`` mehr URL-Artefake und Suchbegriffe im RAM als Firefox (RAM-Dump 2). 
+Tor hinterlässt nach dem Browsing-Szenario, vor Zuweisung einer ``Neuen Identität`` mehr URL-Artefake und Suchbegriffe im RAM als Firefox (RAM-Dump 2). 
 Sowohl bei Tor als auch bei Firefox ist zu diesem Zeitpunkt das Gmail-Passwort als Klartext im RAM identifizierbar.
 Wie anhand der roten, mit * gekennzeichneten Werte in Abbildung \ref{chart:all-browsers-ram-summary} zu erkennen ist, 
 reduzieren sich die hinterlassenen Artefakte nach Zuweisung einer ``Neuen Identität`` beim Tor-Browser deutlich, sodass danach weniger Artefakte als bei Firefox vorhanden sind.
@@ -182,7 +182,7 @@ Keiner der beiden Browser hinterließ zu irgendeinem Zeitpunkt HTML-Artefakte.
 %	- Nach ``Neuer Identität``: Tor 
 %> RAM-Dump 3:
 %	- Tor 
-%Somit hinterlässt Tor sowohl nach dem Browsing Szenario mit ``Neuer Identität`` als auch mit geschlossenem Browser weniger PB Artefakte als Firefox.
+%Somit hinterlässt Tor sowohl nach dem Browsing-Szenario mit ``Neuer Identität`` als auch mit geschlossenem Browser weniger PB-Artefakte als Firefox.
 
 \paragraph*{Chrome vs Brave}
 *** TODO: Christoph ***\\
@@ -190,7 +190,7 @@ Keiner der beiden Browser hinterließ zu irgendeinem Zeitpunkt HTML-Artefakte.
 
 \paragraph*{Firefox vs Chrome}
 %> In RAM-Dump 2: 
-Firefox hinterlässt nach dem Browsing Szenario mit geöffnetem Browser (RAM-Dump 2) in jeder Kategorie gleich viele (DK-Logo) oder weniger (E-Mail, URLs, Suchbegriffe, HTML) Artefakte als Chrome.
+Firefox hinterlässt nach dem Browsing-Szenario mit geöffnetem Browser (RAM-Dump 2) in jeder Kategorie gleich viele (DK-Logo) oder weniger (E-Mail, URLs, Suchbegriffe, HTML) Artefakte als Chrome.
 Dabei werden bei Firefox im zweiten RAM-Dump durchschnittlich 2.024 Artefakte weniger gefunden als bei Chrome.
 %> In Ram-Dump 3: 
 Nach Schließen des Browsers (RAM Dump 3) hinterlässt Firefox mehr URLs im Arbeitsspeicher als Chrome. Im RAM-Dump von Chrome wurde zusätzlich die Absender-Adresse gefunden.
@@ -258,7 +258,7 @@ Diese Unterscheidung findet ebenfalls bei den Gewinnern statt. Die in Tabelle \r
 \end{table}
 
 Unter Berücksichtigung der ``Neuen Identität`` ist der Tor-Browser sowohl der Gewinner pro RAM-Dump als auch pro Kategorie.
-Ohne Berücksichtigung ist neben dem Tor-Browser auch Firefox Gewinner pro RAM-Dump und pro Kategorie. Somit ist gemäß Auswertung der Gewinner-Tabelle der Tor-Browser derjenige Browser mit den wenigsten PB Artefakten, gefolgt von Mozilla Firefox.
+Ohne Berücksichtigung ist neben dem Tor-Browser auch Firefox Gewinner pro RAM-Dump und pro Kategorie. Somit ist gemäß Auswertung der Gewinner-Tabelle der Tor-Browser derjenige Browser mit den wenigsten PB-Artefakten, gefolgt von Mozilla Firefox.
 
 
 

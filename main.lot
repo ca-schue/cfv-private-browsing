@@ -1,0 +1,24 @@
+\babel@toc {ngerman}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Private-Browsing-Artefakte des Browsing-Szenarions\relax }}{8}{table.caption.7}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Basiskonfiguration jeder VM des Versuchs\relax }}{8}{table.caption.9}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Vollständige Liste der verwendeten Software dieses Versuchs\relax }}{10}{table.caption.14}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Windows Registry Hives\relax }}{20}{table.caption.37}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Firefox: Abbildung der virtellen Speicheradressen der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten\relax }}{26}{table.caption.50}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Tor-Browser: Abbildung der virtuellen Speicheradressen der gefundenen Strings im RAM auf Byte-Offsets der entsprechenden Speicherseiten\relax }}{32}{table.caption.67}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Gewinner-Tabelle der vier untersuchten Browser\relax }}{37}{table.caption.81}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Ermittelte Gewinner gemäß Gewinner-Tabelle\relax }}{37}{table.caption.82}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {B.1}{\ignorespaces Firefox alle ``WriteFile``-Operationen der Logfiles 1 und 2\relax }}{45}{table.caption.86}%
+\contentsline {table}{\numberline {B.2}{\ignorespaces Veränderte Firefox SQLite-Datenbanken und deren Verwendungszwecke\relax }}{47}{table.caption.93}%
+\contentsline {table}{\numberline {B.3}{\ignorespaces Veränderung der Firefox SQLite-Datenbanken während der Versuchsdurchführung\relax }}{48}{table.caption.94}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Tor alle ``WriteFile``-Operationen der Logfiles 1, 2-1 und 2-2\relax }}{54}{table.caption.113}%
+\contentsline {table}{\numberline {C.2}{\ignorespaces Veränderung der Tor-Browser SQLite-Datenbanken während der Versuchsdurchführung\relax }}{56}{table.caption.117}%
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

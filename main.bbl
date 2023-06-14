@@ -133,6 +133,31 @@
       \field{pages}{255\bibrangedash 271}
       \range{pages}{17}
     \endentry
+    \entry{Brave.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8d091597127cc044520e13fae3a3af59}{%
+           family={Brave},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{fullhash}{8d091597127cc044520e13fae3a3af59}
+      \strng{bibnamehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{authorbibnamehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{authornamehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{authorfullhash}{8d091597127cc044520e13fae3a3af59}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Die beste Privatsphäre im Internet}
+      \verb{urlraw}
+      \verb https://brave.com/de/
+      \endverb
+      \verb{url}
+      \verb https://brave.com/de/
+      \endverb
+      \warn{\item Entry 'Brave.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Bugzilla.05.06.2023}{misc}{}
       \name{author}{1}{}{%
         {{hash=e20ae03d1719fc6613a0da15e31d32b8}{%
@@ -343,6 +368,31 @@
       \verb https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589
       \endverb
       \warn{\item Entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{GoogleChrome.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bc3d2e5792d6d4a9bd247494a456a7e0}{%
+           family={{Google Chrome}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{fullhash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{bibnamehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{authorbibnamehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{authornamehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{authorfullhash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Startseite}
+      \verb{urlraw}
+      \verb https://www.google.com/intl/de/chrome/
+      \endverb
+      \verb{url}
+      \verb https://www.google.com/intl/de/chrome/
+      \endverb
+      \warn{\item Entry 'GoogleChrome.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Haircutfish.04.11.2022}{misc}{}
       \name{author}{1}{}{%

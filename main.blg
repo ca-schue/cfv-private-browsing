@@ -1,68 +1,70 @@
 [0] Config.pm:306> INFO - This is Biber 2.18
 [0] Config.pm:309> INFO - Logfile is 'main.blg'
-[134] biber-MSWIN64:340> INFO - === 
-[180] Biber.pm:418> INFO - Reading 'main.bcf'
-[327] Biber.pm:978> INFO - Found 46 citekeys in bib section 0
-[344] Biber.pm:4401> INFO - Processing section 0
-[359] Biber.pm:4592> INFO - Looking for bibtex file 'ref/citavi.bib' for section 0
-[427] bibtex.pm:1713> INFO - LaTeX decoding ...
-[461] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/citavi.bib'
-[564] Biber.pm:4592> INFO - Looking for bibtex file 'ref/manual.bib' for section 0
-[631] bibtex.pm:1713> INFO - LaTeX decoding ...
-[675] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/manual.bib'
-[842] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[842] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[842] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[842] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
-[894] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[919] bbl.pm:757> INFO - Output to main.bbl
-[919] Biber.pm:130> WARN - legacy year field '24.05.2023' in entry 'Tor.24.05.2023' is not an integer - this will probably not sort properly.
-[919] Biber.pm:130> WARN - Entry 'Tor.24.05.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[919] Biber.pm:130> WARN - legacy year field '23.05.2023' in entry 'Statista.23.05.2023' is not an integer - this will probably not sort properly.
-[919] Biber.pm:130> WARN - Entry 'Statista.23.05.2023' (ref/citavi.bib): Invalid format '13.06.2023' of date field 'urldate' - ignoring
-[919] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Mozilla.05.06.2023' is not an integer - this will probably not sort properly.
-[919] Biber.pm:130> WARN - Entry 'Mozilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[919] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Markruss.05.06.2023' is not an integer - this will probably not sort properly.
-[919] Biber.pm:130> WARN - Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[919] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Markruss.05.06.2023b' is not an integer - this will probably not sort properly.
-[919] Biber.pm:130> WARN - Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[919] Biber.pm:130> WARN - legacy year field '29.03.2023' in entry 'Autopsy.29.03.2023' is not an integer - this will probably not sort properly.
-[919] Biber.pm:130> WARN - Entry 'Autopsy.29.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[919] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'GitHub.05.06.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'GitHub.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - Entry 'Oracle.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '25.03.2023' in entry 'TILT.25.03.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'TILT.25.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '04.11.2022' in entry 'Haircutfish.04.11.2022' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'Haircutfish.04.11.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Nicholasswhite.05.06.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'MicrosoftLearn.05.06.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'MicrosoftLearn.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'MozillaWiki.05.06.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'MozillaWiki.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Bugzilla.05.06.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'Bugzilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'TechSupportGuy.05.06.2023' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'TechSupportGuy.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '29.11.2020' in entry 'JeffersonScher.29.11.2020' is not an integer - this will probably not sort properly.
-[920] Biber.pm:130> WARN - Entry 'JeffersonScher.29.11.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[920] Biber.pm:130> WARN - legacy year field '29.12.2022' in entry 'mozillazine.29.12.2022' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'mozillazine.29.12.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '08.04.2019' in entry 'GitHub.08.04.2019' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'GitHub.08.04.2019' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - Entry 'Mills.2021' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'MandiOhlinger.05.06.2023' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'InfoSecNotes.05.06.2023' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'InfoSecNotes.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'GitHub.05.06.2023b' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'GitHub.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '26.10.2020' in entry 'MozillaSupport.26.10.2020' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'MozillaSupport.26.10.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'SecureDrop.05.06.2023' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Gitlab.05.06.2023' is not an integer - this will probably not sort properly.
-[921] Biber.pm:130> WARN - Entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
-[921] Biber.pm:130> WARN - Duplicate entry key: 'Hariharan.2022' in file 'ref/manual.bib', skipping ...
-[921] Biber.pm:132> INFO - WARNINGS: 49
+[140] biber-MSWIN64:340> INFO - === 
+[188] Biber.pm:418> INFO - Reading 'main.bcf'
+[335] Biber.pm:978> INFO - Found 48 citekeys in bib section 0
+[353] Biber.pm:4401> INFO - Processing section 0
+[369] Biber.pm:4592> INFO - Looking for bibtex file 'ref/citavi.bib' for section 0
+[435] bibtex.pm:1713> INFO - LaTeX decoding ...
+[474] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/citavi.bib'
+[583] Biber.pm:4592> INFO - Looking for bibtex file 'ref/manual.bib' for section 0
+[652] bibtex.pm:1713> INFO - LaTeX decoding ...
+[698] bibtex.pm:1518> INFO - Found BibTeX data source 'ref/manual.bib'
+[870] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[870] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[870] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[870] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[923] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[949] bbl.pm:757> INFO - Output to main.bbl
+[949] Biber.pm:130> WARN - legacy year field '24.05.2023' in entry 'Tor.24.05.2023' is not an integer - this will probably not sort properly.
+[949] Biber.pm:130> WARN - Entry 'Tor.24.05.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[949] Biber.pm:130> WARN - legacy year field '23.05.2023' in entry 'Statista.23.05.2023' is not an integer - this will probably not sort properly.
+[949] Biber.pm:130> WARN - Entry 'Statista.23.05.2023' (ref/citavi.bib): Invalid format '13.06.2023' of date field 'urldate' - ignoring
+[949] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Mozilla.05.06.2023' is not an integer - this will probably not sort properly.
+[949] Biber.pm:130> WARN - Entry 'Mozilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[949] Biber.pm:130> WARN - Entry 'GoogleChrome.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring
+[949] Biber.pm:130> WARN - Entry 'Brave.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring
+[949] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Markruss.05.06.2023' is not an integer - this will probably not sort properly.
+[949] Biber.pm:130> WARN - Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[949] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Markruss.05.06.2023b' is not an integer - this will probably not sort properly.
+[949] Biber.pm:130> WARN - Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '29.03.2023' in entry 'Autopsy.29.03.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'Autopsy.29.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'GitHub.05.06.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'GitHub.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - Entry 'Oracle.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '25.03.2023' in entry 'TILT.25.03.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'TILT.25.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '04.11.2022' in entry 'Haircutfish.04.11.2022' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'Haircutfish.04.11.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Nicholasswhite.05.06.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'MicrosoftLearn.05.06.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'MicrosoftLearn.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'MozillaWiki.05.06.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'MozillaWiki.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Bugzilla.05.06.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'Bugzilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[950] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'TechSupportGuy.05.06.2023' is not an integer - this will probably not sort properly.
+[950] Biber.pm:130> WARN - Entry 'TechSupportGuy.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '29.11.2020' in entry 'JeffersonScher.29.11.2020' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'JeffersonScher.29.11.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '29.12.2022' in entry 'mozillazine.29.12.2022' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'mozillazine.29.12.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '08.04.2019' in entry 'GitHub.08.04.2019' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'GitHub.08.04.2019' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - Entry 'Mills.2021' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'MandiOhlinger.05.06.2023' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'InfoSecNotes.05.06.2023' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'InfoSecNotes.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'GitHub.05.06.2023b' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'GitHub.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '26.10.2020' in entry 'MozillaSupport.26.10.2020' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'MozillaSupport.26.10.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'SecureDrop.05.06.2023' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[951] Biber.pm:130> WARN - legacy year field '05.06.2023' in entry 'Gitlab.05.06.2023' is not an integer - this will probably not sort properly.
+[951] Biber.pm:130> WARN - Entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring
+[952] Biber.pm:130> WARN - Duplicate entry key: 'Hariharan.2022' in file 'ref/manual.bib', skipping ...
+[952] Biber.pm:132> INFO - WARNINGS: 51
