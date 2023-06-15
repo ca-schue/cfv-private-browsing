@@ -289,6 +289,8 @@ Dieses Vorgehen zur Datensammlung wird bei allen Browsern durchgeführt. Einzig 
 Bei Durchführung des Browsing-Szenarios für den Firefox-Browser wurde nach erstmaligem Öffnen des Browsers automatisch die Firefox Datenschutz-Webseite \texttt{https://www.mozilla.org/\\
 de/privacy/firefox/} im nicht-privaten Modus durch den Browser geöffnet. 
 
+Sowohl Google Chrome als auch der Brave Browser öffneten sich automatisch nach der abgeschlossenen Installation im nicht-privaten Modus.
+
 \section{Datenanalyse}
 \label{section:methodik-datenanalyse}
 Nachdem die Daten in Form von Process Monitor Logfiles und Festplatten- sowie RAM-Speicherabbildern gesammelt wurden, wird nach den PB-Artefakten aus Tabelle \ref{tab:pb-artefakte} in Abschnitt \ref{subsection:methodik-vorbereitung-browsing-szenario} gesucht. 
@@ -362,7 +364,10 @@ Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 \subsection{Uncommon Locations}
 \label{subsection:methodik-datenanalyse-uncommonlocations}
 \textit{Uncommon Locations} beziehen sich auf Verzeichnisse, die nicht zu den gängigen Speicherorten gehören. 
-Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
+Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems\footnote{
+In der betrachteten Literatur wird die sogenannte \textit{pagefile.sys} als Teil der Uncommon Locations unter Windows untersucht. (TODO: Quellen) Diese Datei wird verwendet, um Daten aus dem Hauptspeicher auf die Festplatte auszulagern, wenn der verfügbare physische Speicher begrenzt ist. \cite{MicrosoftLearn.21.03.2023}
+In der betrachteten Literatur wurde nur die Stringsuche im Hexadezimaleditor als Analysemethode identifiziert. Wie in diesem Abschnitt beschrieben, ist dies aufgrund der fehlenden Zuordnung zu einem spezifischen Browser unzureichend. Um eine Beweisauthentifizierung gemäß dem Ziel der Arbeit zu garantieren, wird im Rahmen dieser Arbeit der Inhalt der \textit{pagefile.sys} nicht untersucht. Gleiches gilt für die Speicherverwaltungsdatei \textit{hiberfile.sys}
+} oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
 Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht \cite{Bonetti.2014}:
 Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB-Artefakten über die gesamten Speicherabbilder durchgeführt.
 Dies ist nur mit Unterstützung durch Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations auf die Vollständigkeit der Tools vertraut.

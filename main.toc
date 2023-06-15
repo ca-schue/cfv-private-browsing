@@ -10,10 +10,10 @@
 \contentsline {subsection}{\numberline {4.1.1}Browserauswahl}{4}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Browsing-Szenario}{6}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Datensammlung}{10}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Datenanalyse}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Datenanalyse}{13}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Common Locations}{13}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{16}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Registry}{18}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.2}Uncommon Locations}{15}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Registry}{19}{subsection.4.3.3}%
 \contentsline {chapter}{\numberline {5}Ergebnisse}{21}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Firefox}{21}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Tor-Browser}{28}{section.5.2}%
