@@ -922,6 +922,26 @@
       \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
       \endverb
     \endentry
+    \entry{hiberfile}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a432ba3efe015d8f0a090c9c0ecc2010}{%
+           family={WinTotal},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{fullhash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{bibnamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{authorbibnamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{authornamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{authorfullhash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.wintotal.de/tipp/hiberfil-sys/}
+      \field{note}{Zuletzt zugegriffen am 15.06.2023 um 23:02 Uhr}
+      \field{title}{Was ist hiberfil.sys? - So können Sie die Datei löschen oder verschieben}
+    \endentry
     \entry{Yusoff.2011}{article}{}
       \name{author}{3}{}{%
         {{hash=4be651510992f2f72c3d34cdb22b744f}{%
