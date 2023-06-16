@@ -18,7 +18,7 @@
 \contentsline {section}{\numberline {5.1}Firefox}{19}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Tor}{30}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Chrome}{38}{section.5.3}%
-\contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{45}{paragraph*.70}%
+\contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{44}{paragraph*.70}%
 \contentsline {section}{\numberline {5.4}Brave}{46}{section.5.4}%
 \contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{49}{paragraph*.87}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{54}{chapter.6}%

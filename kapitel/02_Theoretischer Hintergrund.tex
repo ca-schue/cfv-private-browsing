@@ -1,9 +1,9 @@
-\chapter{Theoretischer Hintergrund}
+\chapter{Theoretischer Hintergrund}\label{chap:theorie}
 
 %Einleitend werden Struktur, Motivation und die abgeleiteten Forschungsfragen diskutiert.
 Zunächst werden die Begriffe \textit{Privat Browsing}, das \textit{Angreifermodell} sowie die \textit{Artefakte des private Browsings} erläutert.
 
-\section{Private Browsing}
+\section{Private Browsing}\label{chap:theorie-private-browsing}
 \begin{comment}
 Definition Web Browser: 	
 	> \cite{Rochmadi.2017}
@@ -113,7 +113,7 @@ Stakeholder Private Browsing:
 \end{comment}
 Die wichtigsten Stakeholder, also Benutzer bzw. Interessensgruppen, des privaten Modus sind forensische Ermittler, Benutzer, Browser-Entwickler und Kriminelle. Forensische Ermittler versuchen dabei, Browsing Artefakte, also Rückstände durchgeführter Browsing-Sessions, mit forensischen Tools und Techniken wiederherzustellen, um damit Kriminelle überführen zu können \cite{Montasari.2015}. Kriminelle versuchen dabei gezielt, ihre Spuren von illegalen Aktivitäten mittels des privaten Modus zu verbergen \cite{Mahlous.2020}. Aus Nutzerperspektive ist es die weltweit beliebteste Form der Online-Datenschutzmaßnahme und geht direkt einher mit dem Löschen des Verlaufes \cite{Horsman.2019}. Die Entwickler der Browser haben diesen Modus aufgrund des mangelnden Benutzerdatenschutzes eingeführt und wollen diesen damit garantieren \cite{Mahlous.2020}. \\
 
-\section{Angreifermodell}
+\section{Angreifermodell}\label{chap:theorie-angreifermodell}
 
 Nachdem Private-Browsing jetzt eingeführt wurde, muss nun betrachtet werden, welche Arten es grundsätzlich gibt, um das Browsing-Scenario aufzuzeichnen bzw. zu rekonstruieren, falls die Durchführung bereits in der Vergangenheit liegt.\\
 Eine Art des Angriffes ist der sogenannte \glqq{}Local Attacker\grqq{}. Dieser kann ein forensischer Prüfer, ein Familienmitglied oder Freund sein, welcher physischen Zugriff auf den Computer des Benutzer besitzt und dort beispielsweise versucht, auf den Browserverlauf zuzugreifen. Dies geschieht jedoch explizit, nachdem der Benutzer den privaten Modus verlässt. Erst danach erhält der Angreifer die vollständige Kontrolle über den Computer. Somit ist ein Zugriff auf die Maschine des Benutzers vor dem privaten Surfen ausgeschlossen, was die Sicherheit gegen einen lokalen Angreifer unmöglich macht, beispielsweise durch eine vorherige Installation eines Keyloggers \cite{Aggarwal.2010}.\\
@@ -184,7 +184,7 @@ Beispiel: Web Attacker Angriffe:
 
 
 
-\section{Browser Forensics und Artefakte} % Browser Forensiks mit Artefakte 
+\section{Browser Forensics und Artefakte}\label{chap:theorie-browser-forensics-artefakte} % Browser Forensiks mit Artefakte 
 
 Bevor der Begriff der Browser-Forensik eingeführt wird, ist es zunächst wichtig, die digitale Forensik einzuführen. \\
 Die digitale Forensik konzentriert sich auf die Wiederherstellung von Speichermedien, um digitale Beweise für Cybercrime-Untersuchungen zu sammeln. Diese müssen jedoch in ihrem Originalzustand erhalten bleiben, um beispielsweise vor Gericht zulässig zu sein. Außerdem muss der Prozess der Erwerbung, Untersuchung, Analyse und Berichterstattung von digitalen Beweisen muss forensisch einwandfrei durchgeführt werden. Zusammenfassend hat die digitale Forensik also das Ziel, verwendbare Beweise für Computerkriminalität zu sammeln \cite{Izzati.2022}.\\

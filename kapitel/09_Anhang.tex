@@ -833,11 +833,9 @@
 		Bei Betrachtung der Registry als Uncommon Locations, wurden die in Tabelle \ref{tab:windows-registry-hives} im Kapitel \ref{subsection:methodik-datenanalyse-registry} aufgelisteten Registry-Hives mithilfe des Registry Explorers untersucht. 
 		Weder in den System-Hives noch in den User-Hives konnte in keinem Festplatten-Image PB Artefakte identifiziert werden. 
 
-\section{Ausführliche Analyse: Chrome}
-\subsection{Common Locations}
-\label{subsection:appendix-chrome-common-locations}
-\subsubsection*{Process Monitor WriteFile Operations}
-\label{subsubsection:appendix-chrome-common-locations-writefile-operations}
+\section{Ausführliche Analyse: Chrome}\label{chap:anhang-chrome}
+\subsection{Common Locations}\label{chap:anhang-chrome-common-locations}
+\subsubsection*{Process Monitor WriteFile Operations}\label{chap:anhang-chrome-common-locations-writefile-operations}
 
 Gemäß Versuchsdurchführung wurden auch für Chrome 2 Logfiles erstellt, welche die Prozessaktivitäten während (Logfile 1) und nach dem Browsing Szenario während des Schließens des Browsers (Logfile 2) aufzeichnet. Beide Logfiles wurden gemäß [link] in Excel aufbereitet. \autoref{tab:chrome-writefile-operations} listet dabei alle Dateien auf, welche während des Szenarios durchgeführt wurden, \autoref{tab:chrome-writefile2-operations} hingegen alle Schreiboperationen beim Schließen des Browsers. Dabei wurde für jede Datei wieder vermerkt, ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob in der Datei PB Artefakte enthalten sind. Die Schreiboperationen wurden dieses mal in Dateiendungen gegliedert. In keiner der Dateien wurden PB Artefakte identifiziert.
 
@@ -1047,7 +1045,7 @@ Auch wird wieder eine \textit{000003.log}-Datei geschrieben, welche aber wieder 
 Gleiches gilt für die geschriebenen \textit{data\_1}-Dateien.\\
 Zuletzt wurde noch eine Textdatei namens \textit{chrome\_shotdown\_ms.txt} geschrieben. Diese enthält die Zeit in Millisekunden, welche Chrome für das Schießen benötigt \cite{ChromiumShutdownMSTxtWebpageDoku}. Dort fanden sich neben der Zeit in Millisekunden keine weiteren Artefakte.
 
-\subsubsection*{Cache}
+\subsubsection*{Cache}\label{chap:anhang-chrome-common-cache}
 Es wurden mittels des Tools ChromeCacheView der Cache-Ordner von Chrome analysiert. Exemplarisch dafür zeigt \autoref{pic:chromeCacheView} die Analyse des dritten Snapshots.
 
 \begin{figure}[h!]
@@ -1066,7 +1064,7 @@ Zu sehen ist hier, dass keine Cache-Dateien auf eine von uns besuchte Website zu
 	\label{pic:chromeCacheAnalysis}
 \end{figure}
 
-\subsubsection*{SQLite Datenbanken}
+\subsubsection*{SQLite Datenbanken}\label{chap:anhang-chrome-common-sqlite}
 
 Wie in [link] erwähnt, werden SQLite Datenbanken als Datenstrukturen für Nutzerdaten
 detailliert und getrennt von den Schreiboperationen der Process Logfiles untersucht. Bei Chrome gibt es im Vergleich zu Firefox und Tor den Unterschied, dass die Datenbanken nicht direkt als .sqlite Dateien erkennbar sind, sondern als Dateien ohne bestimmte Endung im Browser-Verzeichnis vorliegen. \\ 
@@ -1096,19 +1094,18 @@ Erkennbar ist, dass im Gegensatz zu Firefox und Tor bereits einige Datenbanken b
 
 Zu sehen ist außerdem, dass trotz einiger Schreiboperationen auf die Datenbanken keine Artefakte gefunden werden konnten. Eine der wichtigsten Datenbank \glqq{}History\grqq{} zeigte keine Datensätze, obwohl genau in diese Informationen zu besuchten Websiten und Login-Zeitpunkte gespeichert werden. Dies wurde auch exemplarisch anhand einer durchgeführten Beispiels-public-Session nachgewiesen. Zusätzlich wurde das Tool \glqq{}ChromeHistoryView\grqq{} verwendet, in der Hoffnung, dass dieses Artefakte findet. Da es aber, wie auch Autopsy und der DB-Browser für SQLite nicht anderes durchführt, als die Datenbank einzulesen, konnten auch damit keine weiteren Artefakte identifiziert werden.
 
-\subsubsection*{Registry}
+\subsubsection*{Registry}\label{chap:anhang-chrome-common-registry}
 
 Zusätzlich zu Schreiboperationen und Datenbanken wurden auch noch die Logfiles des Process Monitors nach \textit{RegSetValue}-Operationen gefiltert. Die darin enthaltenen Schlüssel wurden dann analysiert. Dabei war ein Großteil der vorhandenen Schlüssel direkt vom Datentyp String, welche man somit direkt ablesen konnte. Alle anderen Werte wurden zusätzlich zu Zeichenketten umgewandelt, um sicher keine Artefakte zu übersehen. Hier konnte aber auch kein Hinweis auf das PB Szenario gefunden werden. 
 
 Zusammenfassend, wurden also in keinen Common Locations PB Artefakte hinterlassen.
 
-\subsection*{Uncommon Locations}
-
-\subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}
+\subsection*{Uncommon Locations}\label{chap:anhang-chrome-uncommon}
+\subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}\label{chap:anhang-chrome-uncommon-autopsy}
 
 Wie in [link hoch] bereits schon ausführlicher dargestellt, wurden auch für Chrome alle von Autopsy kategorisierten Dateien betrachtet. Dabei wird immer das Image des vierten Snapshots aufgeführt, da darin alle kategorisierten Dateien aller vorherigen Snapshots enthalten sind.
 
-\paragraph{Web Bookmarks}
+\paragraph{Web Bookmarks}\label{chap:anhang-chrome-uncommon-autopsy-web-bookmarks}
 Wie in \autoref{img:chrome-boo} dargestellt, wurde nur ein einer Datei namens \textit{Bing.url} ein Lesezeichen zur Bing-Startseite gefunden.
 
 \begin{figure}[ht]
@@ -1118,7 +1115,7 @@ Wie in \autoref{img:chrome-boo} dargestellt, wurde nur ein einer Datei namens \t
 	\label{img:chrome-boo}
 \end{figure}
 
-\paragraph*{Web Cookies}
+\paragraph*{Web Cookies}\label{chap:anhang-chrome-uncommon-autopsy-web-cookies}
 In \autoref{img:chrome-web-cookies} sind die zehn Cookies-Einträge zu sehen, welche Cookies der Bing- und Outlook-Startseite darstellen. 
 
 \begin{figure}[ht]
@@ -1128,7 +1125,7 @@ In \autoref{img:chrome-web-cookies} sind die zehn Cookies-Einträge zu sehen, we
 	\label{img:chrome-web-cookies}  
 \end{figure}
 
-\paragraph*{Web History}
+\paragraph*{Web History}\label{chap:anhang-chrome-uncommon-autopsy-web-history}
 
 Bei dieser Kategorie waren, wie in \autoref{img:chrome-web-history} dargestellt, nur zwei Dateien mit Browsingverläufen vorhanden. Dabei handelt es sich zweimal um die Outlook-Startseite, welche jedoch nie aufgerufen wurde.
 
@@ -1139,7 +1136,7 @@ Bei dieser Kategorie waren, wie in \autoref{img:chrome-web-history} dargestellt,
 	\label{img:chrome-web-history}  
 \end{figure}
 
-\paragraph*{Web Categories}
+\paragraph*{Web Categories}\label{chap:anhang-chrome-uncommon-autopsy-web-categories}
 \autoref{img:chrome-web-categories} zeigt, dass in 2 Dateien nur Bing als Suchmaschine und live.com als \glqq{}Web Email\grqq erkannt hat. Auch in den restlichen Images gab es hier keine weiteren Einträge.
 
 %Tatsächlich konnte in dieser Kategorie festgestellt werden, dass Google als Suchmaschine im dritten Snapshot von Autopsy identifiziert wurde, was weder
@@ -1153,7 +1150,7 @@ Bei dieser Kategorie waren, wie in \autoref{img:chrome-web-history} dargestellt,
 
 Somit wurden in allen Kategorien keine Browsing Artefakte bei Chrome identifiziert.
 
-\subsubsection*{Stringsuche in Registry Hives}
+\subsubsection*{Stringsuche in Registry Hives}\label{chap:anhang-chrome-uncommon-registry}
 
 Zusätzlich zu den Analyse der kategorisierten Dateien wurden auch noch alle in [Tabelle link] aufgelisteten Registry Hives in den Registry Explorer eingelesen und dann sowohl nach URLs, Keywords, HTML-Fragmente und E-Mail Artefakten gesucht. \autoref{pic:chromeRegExpl} zeigt einen Screenshot davon. Im Suchfenster unten ist zu sehen, dass hier keine Strings gefunden wurden. Exemplarisch ist hier das Registry-Explorer-Projekt zum vierten Snapshot gezeigt. Auch die Hives aller anderen Speicherabbilder zeigten hier keine Treffer. Somit sind keine Artefakte in der Registry auffindbar.
 
@@ -1166,11 +1163,9 @@ Zusätzlich zu den Analyse der kategorisierten Dateien wurden auch noch alle in 
 
 % Brave ab hier:
 
-\section{Ausführliche Analyse: Brave}
-\subsection{Common Locations}
-\label{subsection:appendix-brave-common-locations}
-\subsubsection*{Process Monitor WriteFile Operations}
-\label{subsubsection:appendix-brave-common-locations-writefile-operations}
+\section{Ausführliche Analyse: Brave}\label{chap:anhang-brave}
+\subsection{Common Locations}\label{chap:anhang-brave-common-locations}
+\subsubsection*{Process Monitor WriteFile Operations}\label{chap:anhang-brave-common-locations-writefile-operations}
 
 Wie in [link oben] beschrieben, wurden für den Browser Brave zwei Logfiles erstellt, welche die Prozessaktivitäten während (Erstes Logfile) und nach dem Browsing Szenario beim Schließen des Browsers (Zweites Logfile) aufzeichnet. Beide Logfiles wurden anschließend so gefiltert, dass nur die relevanten Schreiboperationen übrig bleiben, welche hier analysiert werden sollen. Daraufhin wurden beide in Excel eingelesen und aufbereitet. \autoref{tab:brave-writefile-operations} listet alle Dateien auf, welche während des Browsing-Szenarios beschrieben wurden. Da die Tabelle mit allen Dateien aus der Kategorie \glqq{}ComponentUnpacker\grqq{} zu unübersichtlich gewesen wäre, wurden diese in die \autoref{tab:brave-componentunpacker1} ausgelagert.\\
 Bei Betrachtung der beiden Tabellen fällt sofort auf, dass während des private Browsings deutlich mehrere Dateien in browserunspezifische \glqq{}uncommon\grqq{}-Pfade beschrieben werden. Diese waren jedoch alle im \textit{Local$\backslash$Temp} oder im \textit{Roaming} Ordner zu finden. Auch hier wurden wieder die Schreiboperationen in Dateiendungen bzw. Kategorien aufgeteilt. Die beiden größeren Datekategorien, welche im Vergleich zu Chrome hinzugekommen sind, sind die \glqq{}CpomonentUnpacker\grqq{}- und \glqq{}chrome\_url\_fetcher\grqq{}-Dateien. Da keiner der Dateien bis auf eine Einzige mehr vorhanden war, welche mit HxD untersucht wurde und dabei keine Artefakte feststellbar waren, wurde hier auch nicht weiter nachgeforscht. \\
@@ -1458,11 +1453,11 @@ Auch bei der Analyse der Dateien des zweiten Logfiles konnten keine Artefakte ge
 }
 \restoregeometry
 
-\subsubsection*{Cache}
+\subsubsection*{Cache}\label{chap:anhang-brave-common-locations-cache}
 
 Auch für den Brave-Browser wurde der Cache mittels des Tools ChromeCacheView untersucht. Das Ergebnis hier war jedoch erneut, dass keine Cache-Dateien auf das durchgeführte PB Szenario zurückführbar sind. Dies wurde jeweils im zweiten, dritten und vierten Snapshot mit den Cache-Ordnern durchgeführt. Eine weitere Analyse durch Extraktion und Untersuchung der Dateien mittels HxD zeigte erneut, dass im Cache keine Artefakte vorhanden sind.
 
-\subsubsection*{SQLite Datenbanken}
+\subsubsection*{SQLite Datenbanken}\label{chap:anhang-brave-common-locations-sqlite}
 
 \autoref{tab:brave-veraenderte-sqlitedbs} zeigt eine Übersicht über die Veränderungen der relevanten Brave-Datenbanken über das gesamte Browsing-Szenario. Auf den ersten Blick ist sofort erkennbar, dass bereits alle Datenbanken zu Beginn vorliegen und am Ende nicht gelöscht werden, wie das bei Chrome der Fall ist. Die Datenbanken \textit{History} und \textit{Web Data} verhielten sich dabei ähnlich wie bei Chrome, bei \textit{Reporting and NEL} z.b. gab es dagegen weniger Veränderungen bei Brave. Zusammenfassend konnte hier bei Brave aber auch kein Artefakt identifiziert werden.
 
@@ -1487,17 +1482,17 @@ Auch für den Brave-Browser wurde der Cache mittels des Tools ChromeCacheView un
 
 % weniger Datenbankaktivität als Chrome hier zu sehen, alle Datenbanken bereits zu Beginn erstellt.
 
-\subsubsection*{Registry}
+\subsubsection*{Registry}\label{chap:anhang-brave-common-locations-registry}
 
 Auch für Brave wurde wieder die Registry-Aktivität beobachtet und analysiert. Hier konnten aber, wie bei Chrome, keine relevanten Informationen aus den RegSet-Operationen extrahiert werden, welche das PB-Szenario betreffen.
 
-\subsection*{Uncommon Locations}
+\subsection*{Uncommon Locations}\label{chap:anhang-brave-uncommon-locations}
 
-\subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}
+\subsubsection*{Analyse mit Autopsy - Kategorisierte Dateien}\label{chap:anhang-brave-uncommon-locations-autopsy}
 
 In Autopsy wurden neben der Stringsuche die kategorisierten Dateien analysiert. Die verschiedenen Kategorien \textit{Web Bookmarks}, \textit{Web Cookies}, \textit{Web History} und \textit{Web Categories} wurden erneut bei Brave untersucht.
 
-\paragraph{Web Bookmarks}
+\paragraph{Web Bookmarks}\label{chap:anhang-brave-uncommon-locations-autopsy-web-bookmarks}
 Wie in \autoref{img:brave-boo} dargestellt, wurde nur ein einer Datei namens \textit{Bing.url} ein Lesezeichen zur Micorsoft Bing-Startseite gefunden.
 
 \begin{figure}[ht]
@@ -1507,7 +1502,7 @@ Wie in \autoref{img:brave-boo} dargestellt, wurde nur ein einer Datei namens \te
 	\label{img:brave-boo}
 \end{figure}
 
-\paragraph*{Web Cookies}
+\paragraph*{Web Cookies}\label{chap:anhang-brave-uncommon-locations-autopsy-web-cookies}
 In \autoref{img:brave-web-cookies} sind die zehn Cookies-Einträge zu sehen, welche Cookies der Bing- und Outlook-Startseite darstellen. 
 
 \begin{figure}[ht]
@@ -1517,7 +1512,7 @@ In \autoref{img:brave-web-cookies} sind die zehn Cookies-Einträge zu sehen, wel
 	\label{img:brave-web-cookies}  
 \end{figure}
 
-\paragraph*{Web History}
+\paragraph*{Web History}\label{chap:anhang-brave-uncommon-locations-autopsy-web-history}
 
 Bei dieser Kategorie waren, wie in \autoref{img:brave-web-history} dargestellt, nur zwei Dateien mit Browsingverläufen vorhanden. Dabei handelt es sich zweimal um die Outlook-Startseite, welche jedoch nie aufgerufen wurde.
 
@@ -1528,7 +1523,7 @@ Bei dieser Kategorie waren, wie in \autoref{img:brave-web-history} dargestellt, 
 	\label{img:brave-web-history}  
 \end{figure}
 
-\paragraph*{Web Categories}
+\paragraph*{Web Categories}\label{chap:anhang-brave-uncommon-locations-autopsy-web-categories}
 \autoref{img:brave-web-categories} zeigt, dass in 2 Dateien nur Bing als Suchmaschine und live.com als \glqq{}Web Email\grqq erkannt hat. Auch in den restlichen Images gab es hier keine weiteren Einträge.
 
 %Tatsächlich konnte in dieser Kategorie festgestellt werden, dass Google als Suchmaschine im dritten Snapshot von Autopsy identifiziert wurde, was weder
@@ -1542,7 +1537,7 @@ Bei dieser Kategorie waren, wie in \autoref{img:brave-web-history} dargestellt, 
 
 Somit wurden in allen Kategorien keine Browsing Artefakte bei Brave identifiziert.
 
-\subsubsection*{Stringsuche in Registry Hives}
+\subsubsection*{Stringsuche in Registry Hives}\label{chap:anhang-brave-uncommon-locations-registry}
 
 Eine detaillierte Stringsuche in den extrahierten Registry-Hives wurde ebenfalls durchgeführt. Dabei kam es jedoch in allen vier VM-Snapshots zu keinem Treffer mit den Suchbegriffen.
 

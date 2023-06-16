@@ -884,14 +884,14 @@ Literatur:
 % CHRISTOPH AB HIER %
 %%%%%%%%%%%%%%%%%%%%%
 
-\section{Chrome}
+\section{Chrome}\label{chap:ergebnisse-chrome}
 
 Anschließend folgt die Analyse des Webbrowsers Chrome. Die Ergebnisse werden dabei wie in den beiden vorherigen Kapitel präsentiert.
 
-\subsection*{Common Locations}
+\subsection*{Common Locations}\label{chap:ergebnisse-chrome-common-location}
 
-Zuerst werden die Common Locations nach Artefakten des privaten Browsing-Szenarios untersucht. Dabei wird wieder zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und den SQLite-Datenbanken unterschieden, wie im Kapitel [link] erläutert. Es konnten darin jedoch keine Artefakte gefunden werden.\\
-Eine weitergehende Analyse aller Schreiboperationen sowie den Datenbänken ist im [link Anhang] detailliert aufgeführt.
+Zuerst werden die Common Locations nach Artefakten des privaten Browsing-Szenarios untersucht. Dabei wird wieder zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und den SQLite-Datenbanken unterschieden, wie im [link kapitel] erläutert. Es konnten darin jedoch keine Artefakte gefunden werden.\\
+Eine weitergehende Analyse aller Schreiboperationen sowie den Datenbänken ist im \autoref{chap:anhang-chrome-common-locations} detailliert aufgeführt.
 
 \begin{comment} % Alles in Anhang nunter
 o Autopsy Keyword-Suche: 
@@ -1102,22 +1102,22 @@ Image + Summary Tabellen hier am Ende no!
 
 \end{comment}
 
-\subsection*{Uncommon Locations}
+\subsection*{Uncommon Locations}\label{chap:ergebnisse-chrome-uncommon-locations}
 
 Nachfolgend werden die Ergebnisse der Uncommon Location Analyse des Chrome Browsers dargelegt. Dafür werden die beiden Forensik-Programme Autopsy und Volatility verwendet.
 
-\subsubsection*{Analyse mit Autopsy}
+\subsubsection*{Analyse mit Autopsy}\label{chap:ergebnisse-chrome-uncommon-autopsy}
 
-Auch in Autopsy konnten keine Artefakte der durchgeführten Browsing-Session gefunden werden, weder durch die Substringsuche, noch durch die Analyse der von Autopsy kategorisierten Dateien. Eine weitergehende Analyse einiger kategorisierter Dateien ist in [link Anhang] zu finden.
+Auch in Autopsy konnten keine Artefakte der durchgeführten Browsing-Session gefunden werden, weder durch die Substringsuche, noch durch die Analyse der von Autopsy kategorisierten Dateien. Eine weitergehende Analyse einiger kategorisierter Dateien ist im \autoref{chap:anhang-chrome-uncommon-autopsy} zu finden.
 
-\subsubsection*{Analyse mit Volatility}
+\subsubsection*{Analyse mit Volatility}\label{chap:ergebnisse-chrome-uncommon-volatility}
 
 Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die Analyseergebnisse des Hauptspeichers (RAM) mittels des Forensik-Tools Volatility. Im RAM konnten schließlich Artefakte gefunden werden. Diese wurden mittels des Volatility Plugins Yarascan identifiziert, wobei die Yara-Regeln aus [link Kapitel] verwendet wurden. Zusätzlich zu den erkannten Strings spielt auch noch die PID eine entscheidende Rolle, da damit der Treffer entweder dem Browser oder einem anderen Prozess eindeutig zuordnet werden kann. Die Ergebnisse dieser String-Suche werden nachfolgend dargelegt.
 
-\paragraph*{Yara-Regel \glqq{}HTML\grqq{}}
+\paragraph*{Yara-Regel \glqq{}HTML\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-html}
 
 Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden. Wie in \autoref{chart:chrome-volatility-htmls} dargestellt, wird der String \glqq{}>Themen:\grqq{} im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
-%TODO evtl andere xmax hier um es deutlicher hervorzuheben?
+
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
 		\begin{tabular}{l}	
@@ -1275,7 +1275,7 @@ Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnt
 	\label{chart:chrome-volatility-htmls}
 \end{table}
 
-Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in diesem Fall) des Prozesses, in welchem der String gefunden wurde, sowie die virtuelle Adresse, an welchem das Fragment gefunden wurde (0xa6c018187e1). Dies ist auch in [link Graphik] links zu sehen. Mit dieser Information wurde dann zunächst der Befehl \texttt{python3 vol.py -f DUMP\_FILE windows.memmap --pid 7012} ausgeführt, um das Memory-Mapping des Prozesses zu erhalten, also die Zuordnung der virtuellen zu den physischen Adressen des Prozesses, sowie deren Offset im Memory-Dump-File. Nachfolgend ist ein Ausschnitt der Ausgabe des Befehls zu sehen:
+Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in diesem Fall) des Prozesses, in welchem der String gefunden wurde, sowie die virtuelle Adresse, an welchem das Fragment gefunden wurde (0xa6c018187e1). Mit dieser Information wurde dann zunächst der Befehl \texttt{python3 vol.py -f DUMP\_FILE windows.memmap --pid 7012} ausgeführt, um das Memory-Mapping des Prozesses zu erhalten, also die Zuordnung der virtuellen zu den physischen Adressen des Prozesses, sowie deren Offset im Memory-Dump-File. Nachfolgend ist ein Ausschnitt der Ausgabe des Befehls zu sehen:
 
 \begin{table}[h!]
 	\centering
@@ -1333,7 +1333,7 @@ Gleiches wurde mit dem Ende der HTML-Datei durchgeführt. \autoref{pic:ChromeEnd
 Anschließend wurde alles, was sich zwischen dem gefundenem Anfang und Ende befindet, als Text kopiert und in eine html-Datei gespeichert. Ein detaillierter Vergleich dieses extrahierten Artefakts mit der heruntergeladenen Datei lieferte das Ergebnis, dass die komplette Website rekonstruiert werden kann, die Websiten sich nur in den neuesten Artikeln und Überschriften unterschieden. Übriges war zu 100\% identisch. \\
 Zusammenfassend konnte somit die Website \glqq{}donaukurier.de\grqq{} im zweiten Memory-Dump komplett aus dem RAM extrahiert und rekonstruiert werden.
 
-\paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}
+\paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-suchbegriffe}
 
 Wie in \autoref{chart:chrome-volatility-keywords} dargestellt, wurden die Suchbegriffe \glqq{}pfaffenhofen\grqq{}, \glqq{}nanoradar\grqq{}, \glqq{}mooserliesl\grqq{} und \glqq{}mallofamerica\grqq{} ausschließlich bei dem noch geöffnetem Chrome-Browser nach dem Browsing-Szenario (zweiter RAM Dump) gefunden. Es wurden dabei alle Suchbegriffe bis auf einen einzigen in Speicherbereichen des Chrome-Browsers gefunden. Am häufigsten konnte der Suchbegriff \glqq{}pfaffenhofen\grqq{} mit 1922 Treffern identifiziert werden. Am seltensten war das der Fall bei dem Begriff \glqq{}mooserliesl\grqq{} mit nur 281 Suchtreffern. \\
 Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher eines Prozesses mit dem Namen \textit{MemCompression}, was anhand der PID 1828 festgestellt wurde. Dieser Prozess ist dafür zuständig, dass Windows einen Teil des Arbeitsspeichers komprimiert speichert, was zwar zusätzliche CPU-Ressourcen beansprucht, dafür jedoch deutlich schneller ist, als den Hauptspeicher in das pagefile auszulagern \cite{MemCompressionWebsite}. Daher kann es sein, dass ein Teil des RAMs, in welchem der Suchbegriff vorhanden war, komprimiert wurde und folglich dieser Prozess diesen Begriff beinhaltete.
@@ -1495,7 +1495,7 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 	\label{chart:chrome-volatility-keywords}
 \end{table}
 
-\paragraph*{Yara-Regel \glqq{}URLs\grqq{}}
+\paragraph*{Yara-Regel \glqq{}URLs\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-urls}
 
 \autoref{chart:chrome-volatility-urls} zeigt, dass in den RAM-Dumps alle Suchbegriffe identifiziert werden konnten. Im ersten Speicherabbild wurden dabei keine URLs gefunden, im zweiten am meisten und im dritten, also nach Beenden des Browsers, konnten auch noch 5 URLs identifiziert werden. Dabei waren es bei der URL \glqq{}donaukurier.com\grqq{} am meisten Suchtreffer mit insgesammt 8157 Treffern, 10 davon waren nicht im Speicher von Chrome-Prozessen zu finden. Zwei davon waren im Prozess \textit{MemCompression}, die restlichen acht wurden im Prozess mit der PID 3760 identifiziert, was in diesem Fall der sihost.exe war. Dieses Programm entspricht dem \textit{Shell Infrastructure Host}, welcher die Grafikbenutzeroberflächer erstellt und verwaltet, wie beispielsweise Desktop-Hintergründe, Popup-Benachrichtigungen und Taskleisten \cite{SiHostWebsite}. Im Prozessbereich dieses Programms befanden sich auch die 5 Treffer aus dem dritten RAM-Dump.
 
@@ -1656,7 +1656,7 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 	\label{chart:chrome-volatility-urls}
 \end{table}
 
-\paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}
+\paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-email}
 Wie in \autoref{chart:chrome-volatility-mail} gezeigt, wurden sowohl nach dem Browsing Szenario bei geöffnetem Browser, als auch nach Schließen desselben E-Mail Artefakte gefunden. Darunter war die E-Mail-Adresse mit 172 Treffern, 8 davon außerhalb von Chrome-Prozessen, das häufigste Suchresultat. unter den acht externen Prozessen waren der \textit{Desktop Window Manager}, welcher für visuelle Effekte wie Desktop-Animationen und halbtransparente Fenster verantwortlich ist \cite{dwmWebsite}, explorer.exe, sihost.exe und weiteren Windows-Prozessen. Da dies aber meist Prozesse waren, welche grafische Aktionen durchführten, wurden diese nicht weiter analysiert.\\
 Die beiden Studenten-Mailadressen, an welche die Mail versendet wurden, waren mit 121 bzw. 97 Suchtreffern in Chrome-Prozessen vertreten. Der Mailtext war mit 136 Artefakten mehr als doppelt so oft im RAM zu finden als der Betrefftext. Im dritten RAM-Dump wurde dann noch die E-Mail-Adresse im Prozess \textit{explorer.exe} gefunden.\\
 Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Vergleich zu den URLs beispielsweise.
@@ -1902,7 +1902,7 @@ Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Ve
 	\label{chart:chrome-volatility-mail}
 \end{table}
 
-\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}
+\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-dklogo}
 
 Bei der letzten Yara-Regel zeigt \autoref{chart:chrome-volatility-image} die Ergebnisse, in welchem RAM-Dump und wie oft das Donaukurier Logo im RAM identifiziert werden konnte. Zu sehen ist, dass dies nur im zweiten Speicherabbild der Fall war und insgesamt 3 mal dort in einem Chrome-Prozess zu finden war.
 
@@ -1944,12 +1944,12 @@ Bei der letzten Yara-Regel zeigt \autoref{chart:chrome-volatility-image} die Erg
 	\label{chart:chrome-volatility-image}
 \end{table}
 
-\subsection*{Registry}
+\subsection*{Registry}\label{chap:ergebnisse-chrome-uncommon-registry}
 
-Wie in [link Kapitel] bereits beschrieben, zählt die Analyse der Registry sowohl zu den Common als auch zu den Uncommon Locations. Es können weder in den \glqq{}SetValue\grqq{}-Operationen in den Process Monitor Logs noch durch die Analyse der System- und User-Hives durch den RegistryExplorer Artefakte gefunden werden. Eine weitergehende Analyse der Registry ist im [link Anhang] und [link2 Anhang] beschrieben.
+Wie in [link Kapitel] bereits beschrieben, zählt die Analyse der Registry sowohl zu den Common als auch zu den Uncommon Locations. Es können weder in den \glqq{}SetValue\grqq{}-Operationen in den Process Monitor Logs noch durch die Analyse der System- und User-Hives durch den RegistryExplorer Artefakte gefunden werden. Eine weitergehende Analyse der Registry ist im \autoref{chap:anhang-chrome-common-registry} und \autoref{chap:anhang-chrome-uncommon-registry} beschrieben.
 % Aufführen aller Registry-Schreiboperationen, wie analysiert, 
 
-\section{Brave}
+\section{Brave}\label{chap:ergebnisse-brave}
 
 \begin{comment}
 
@@ -2023,26 +2023,26 @@ Image + Summary Tabellen hier am Ende no!
 
 Abschließend werden in diesem Kapitel die Analyseergebnisse des Browsers Brave dargelegt, wobei diese wieder, wie in den vorherigen Kapiteln, in Common Locations, Uncommon Locations und der Registry unterschieden werden.
 
-\subsection*{Common Locations}
+\subsection*{Common Locations}\label{chap:ergebnisse-brave-common-locations}
 
 Zu Beginn erfolgt die Untersuchung der Common Locations auf potenzielle private Browsing Artefakte. Bei der Analyse der Schreiboperationen aus den Process Monitor Logfiles konnten keine Artefakte befunden werden, wie es auch bei der Untersuchung der SQLite-Datenbanken der Fall war.\\
-Eine umfangreiche Auswertung der Daten sowie den Datenbänken befindet sich in [link Anhang].
+Eine umfangreiche Auswertung der Daten sowie den Datenbänken befindet sich im \autoref{chap:anhang-brave-common-locations}.
 
-\subsection*{Uncommon Locations}
+\subsection*{Uncommon Locations}\label{chap:ergebnisse-brave-uncommon-locations}
 
 Anschließend an die Common Locations folgt nun die Untersuchung der Uncommon Locations. Dafür werden vollständige Speicherabbilder nach Artefakten der privaten Browsing-Session untersucht. Für diesen Zweck werden die beiden Forensik-Programme Autopsy und Volatility verwendet.
 
-\subsubsection*{Analyse mit Autopsy}
+\subsubsection*{Analyse mit Autopsy}\label{chap:ergebnisse-brave-uncommon-locations-autopsy}
 
 Autopsy wird bei den Uncommon Locations zusätzlich als forensisches Werkzeug verwendet im Gegensatz zur Analyse der Common Locations, bei welchen es eingesetzt wurde, um Dateien aus den Snapshots zu extrahieren.\\
 Zunächst wurde die Stringsuche gemäß [link Kapitel] eingesetzt, wobei es keine Suchtreffer gab.\\
-Zusätzlich wurden automatisch kategorisierte Dateien untersucht, wobei hier auch keine Artefakte zu finden waren. [link Anhang] geht auf diese Dateien ausführlicher ein.
+Zusätzlich wurden automatisch kategorisierte Dateien untersucht, wobei hier auch keine Artefakte zu finden waren. \autoref{chap:anhang-brave-uncommon-locations-autopsy} geht auf diese Dateien ausführlicher ein.
 
-\subsubsection*{Analyse mit Volatility}
+\subsubsection*{Analyse mit Volatility}\label{chap:ergebnisse-brave-uncommon-locations-volatility}
 
 Für die Analyse des Arbeitsspeichers wurde das Forensik-Tool Volatility verwendet, womit eine Stringsuche mittels des Plugins Yarascan durchgeführt wird. Damit durchsucht man ein Arbeitsspeicherabbild nach gewissen Strings, welche zuvor in einer yara-rule festgelegt werden können. Die für diese Arbeit verwendete Datei inklusive der Regeln ist in [link Anhang runter] aufgeführt. 
 
-\paragraph*{Yara-Regel \glqq{}HTML\grqq{}}
+\paragraph*{Yara-Regel \glqq{}HTML\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-html}
 
 Beim Brave-Browser konnte ein HTML-Fragment wiederhergestellt werden, was in \autoref{chart:brave-volatility-htmls} dargestellt ist. Es ist wieder der String \glqq{}>Themen:\grqq, welcher einmal im zweiten RAM-Dump vorliegt.
 
@@ -2214,7 +2214,7 @@ Anschließend an die Wiederherstellung der HTML-Datei wurden die beiden extrahie
 	\label{pic:compareHTMLs}
 \end{figure}
 
-\paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}  
+\paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-suchbegriffe}  
 
 \autoref{chart:brave-volatility-keywords} zeigt, dass alle der vier Suchbegriffe jeweils gefunden wurden, jedoch nur im zweiten RAM-Dump, also nach der Durchführung des Browsing-Szenarios bei noch geöffnetem Browser. Der String \glqq{}pfaffenhofen\grqq{} wurde dabei am häufigsten mit 1447 Treffern, \glqq{}nanoradar\grqq{} am seltensten mit nur 51 Suchergebnissen gefunden. Dabei wurden auch alle Suchbegriffe rein in Brave-Prozessen ausfindig gemacht.
 
@@ -2376,7 +2376,7 @@ Anschließend an die Wiederherstellung der HTML-Datei wurden die beiden extrahie
 \end{table}
 %TODO Vergleich Google Duckduckgo
 
-\paragraph*{Yara-Regel \glqq{}URLs\grqq{}}
+\paragraph*{Yara-Regel \glqq{}URLs\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-urls}
 
 Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. Bei \glqq{}donaukurier.de\grqq{} gab es sogar einen Treffer im dritten RAM-Dump, alle anderen waren nur im zweiten Speicherabbild auffindbar. Dabei waren es auch bei der Donaukurier-URL die meisten Treffer mit insgesamt 3514 Artefakten, wobei sechs davon in anderen Prozessen neben Brave gefunden wurden. Sehr präsent war hier der Prozess \glqq{}NisSrv.exe\grqq{}. Dieser ist ein Teil des Microsoft Defenders \cite{pogonin2022microsoft}, was grundsätzlich merkwürdig erscheint, sich aber dadurch erklären lässt, dass dieser vielleicht im Hintergrund den Datenverkehr mitliest und entscheidet, ob gewisse Aktivitäten in Ordnung sind oder evtl. ein Virus oder anderweitige bösartige Software unsicheren Netzwerkverkehr tätigt.
 
@@ -2537,7 +2537,7 @@ Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. B
 	\label{chart:brave-volatility-urls}
 \end{table}
 
-\paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}
+\paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-email}
 
 Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als auch im dritten Arbeitsspeicherabbild Artefakte bzgl. der Yara-Regel \glqq{}E-Mail\grqq{} gefunden. Davon waren die meisten bei der E-Mail-Adresse \glqq{}computerforensikvl@gmail.com\grqq{} mit insgesamt 134 Suchtreffern vorhanden. 9 dieser waren aus anderen Prozessen, die restlichen 125 waren direkt in einem Speicherbereich des Chrome-Browsers zu finden. Bei dieser wurde auch noch ein Artefakt im dritten RAM-Dump gefunden im Speicherbereich des dwm.exe Prozesses, welcher zuvor bereits angesprochen wurde. Am wenigsten Suchtreffer hab es bei dem Betrefftext.
 
@@ -2782,7 +2782,7 @@ Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als 
 \end{table}
 %TODO Vergleich mit Chrome bzgl. Anzahl der Hits entweder hier oder später
 
-\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}
+\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-dklogo} 
 
 Auch bei Brave wurde wieder in den Arbeitsspeicherabbildern nach den Bytes des Donaukurier-Logos gesucht. Hier kam es zu drei Treffern im zweiten RAM-Dump, was in der \autoref{chart:brave-volatility-image} zu erkennen ist.
 
@@ -2824,9 +2824,9 @@ Auch bei Brave wurde wieder in den Arbeitsspeicherabbildern nach den Bytes des D
 	\label{chart:brave-volatility-image}
 \end{table}
 
-\subsection*{Registry}
+\subsection*{Registry}\label{chap:ergebnisse-brave-uncommon-locations-registry} 
 
-Bei der Registry konnten weder in den Process Monitor Logs noch durch die Analyse der verschiedenen Hives Artefakte gefunden werden. Weitergehende Informationen zu den Schreiboperationen und der Stringsuche in den verschiedenen Hives ist in [link Anhang] und [link2 Anhang] zu finden.
+Bei der Registry konnten weder in den Process Monitor Logs noch durch die Analyse der verschiedenen Hives Artefakte gefunden werden. Weitergehende Informationen zu den Schreiboperationen und der Stringsuche in den verschiedenen Hives ist in \autoref{chap:anhang-brave-common-locations-registry} und \autoref{chap:anhang-brave-uncommon-locations-registry} zu finden.
 
 %TODO Carl ausbessern p(f)affenhofen + computerforensik(vl)
 

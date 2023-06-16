@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  16 JUN 2023 00:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.5.4)  16 JUN 2023 11:36
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3239,7 +3239,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ./bilder/volatility/tor/image.png>] Excluding 'comment' comment. [38 <./bilder/
 volatility/tor/summary.png>] [39{C:/Users/sell/AppData/Local/Programs/MiKTeX/fo
 nts/enc/dvips/lm/lm-rm.enc}]
-<bilder/HxDChromeStringThemen.png, id=724, 471.26062pt x 379.4175pt>
+<bilder/HxDChromeStringThemen.png, id=728, 471.26062pt x 379.4175pt>
 File: bilder/HxDChromeStringThemen.png Graphic file (type png)
 <use bilder/HxDChromeStringThemen.png>
 Package pdftex.def Info: bilder/HxDChromeStringThemen.png  used on input line 1
@@ -3256,24 +3256,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1300--1301
  (_minted-main/default.pygstyle)
 (_minted-main/FB6D47B9D7AF3F3AE88BAE1F21B388E365E8925FFE18267D97CD9CEC6B6FC79A.
 pygtex)
-<bilder/HxDChrome1.png, id=735, 1445.4pt x 782.925pt>
+<bilder/HxDChrome1.png, id=739, 1445.4pt x 782.925pt>
 File: bilder/HxDChrome1.png Graphic file (type png)
 <use bilder/HxDChrome1.png>
 Package pdftex.def Info: bilder/HxDChrome1.png  used on input line 1319.
 (pdftex.def)             Requested size: 418.25372pt x 226.55263pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<bilder/HxDChrome3.png, id=737, 1445.4pt x 782.925pt>
+ [41 <./bilder/HxDChrome1.png>]
+<bilder/HxDChrome3.png, id=749, 1445.4pt x 782.925pt>
 File: bilder/HxDChrome3.png Graphic file (type png)
 <use bilder/HxDChrome3.png>
 Package pdftex.def Info: bilder/HxDChrome3.png  used on input line 1328.
 (pdftex.def)             Requested size: 418.25372pt x 226.55263pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[41] [42 <./bilder/HxDChrome1.png> <./bilder/HxDChrome3.png>]
+ [42 <./bilder/HxDChrome3.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -3289,7 +3283,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder//Donaukurier1.png, id=794, 1236.87094pt x 734.745pt>
+<bilder//Donaukurier1.png, id=805, 1236.87094pt x 734.745pt>
 File: bilder//Donaukurier1.png Graphic file (type png)
 <use bilder//Donaukurier1.png>
 Package pdftex.def Info: bilder//Donaukurier1.png  used on input line 2212.
@@ -3500,7 +3494,7 @@ ut line 211.
 LaTeX Warning: Reference `subsection:methodik-vorbereitung-browsing-szenario' o
 n page 46 undefined on input line 212.
 
-<bilder/firefox-cache.png, id=894, 886.81313pt x 136.25906pt>
+<bilder/firefox-cache.png, id=909, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
 Package pdftex.def Info: bilder/firefox-cache.png  used on input line 215.
@@ -3521,7 +3515,7 @@ y/m/n/10.95 n$\T1/lmtt/c/it/10.95 glean$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.
 LaTeX Warning: Citation 'JeffersonScher.29.11.2020' on page 46 undefined on inp
 ut line 231.
 
-<bilder/firefox-sessionstore.png, id=896, 534.49687pt x 95.6072pt>
+<bilder/firefox-sessionstore.png, id=911, 534.49687pt x 95.6072pt>
 File: bilder/firefox-sessionstore.png Graphic file (type png)
 <use bilder/firefox-sessionstore.png>
 Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 23
@@ -3855,7 +3849,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.59}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.844 \newgeometry{bottom=2cm,top=0.5cm}
+l.842 \newgeometry{bottom=2cm,top=0.5cm}
                                          [59]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -3898,7 +3892,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.59}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.945 \restoregeometry
+l.943 \restoregeometry
                        [59
 
 
@@ -3907,51 +3901,51 @@ l.945 \restoregeometry
 
 
 ] Excluding 'comment' comment.
-<bilder/ChromeCache.png, id=1040, 2890.8pt x 564.60938pt>
+<bilder/ChromeCache.png, id=1055, 2890.8pt x 564.60938pt>
 File: bilder/ChromeCache.png Graphic file (type png)
 <use bilder/ChromeCache.png>
-Package pdftex.def Info: bilder/ChromeCache.png  used on input line 1055.
+Package pdftex.def Info: bilder/ChromeCache.png  used on input line 1053.
 (pdftex.def)             Requested size: 418.25372pt x 81.68964pt.
  [62
 
 ]
-<bilder/CacheChromeAnalyse.png, id=1053, 1397.22pt x 743.77875pt>
+<bilder/CacheChromeAnalyse.png, id=1068, 1397.22pt x 743.77875pt>
 File: bilder/CacheChromeAnalyse.png Graphic file (type png)
 <use bilder/CacheChromeAnalyse.png>
-Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1064
+Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1062
 .
 (pdftex.def)             Requested size: 418.25372pt x 222.64732pt.
 
 [63 <./bilder/ChromeCache.png> <./bilder/CacheChromeAnalyse.png>] [64]
-<bilder/CHBoo.png, id=1072, 665.48625pt x 39.14626pt>
+<bilder/CHBoo.png, id=1086, 665.48625pt x 39.14626pt>
 File: bilder/CHBoo.png Graphic file (type png)
 <use bilder/CHBoo.png>
-Package pdftex.def Info: bilder/CHBoo.png  used on input line 1116.
+Package pdftex.def Info: bilder/CHBoo.png  used on input line 1113.
 (pdftex.def)             Requested size: 418.25372pt x 24.60371pt.
-<bilder/CHCoo.png, id=1074, 905.63344pt x 186.6975pt>
+<bilder/CHCoo.png, id=1088, 905.63344pt x 186.6975pt>
 File: bilder/CHCoo.png Graphic file (type png)
 <use bilder/CHCoo.png>
-Package pdftex.def Info: bilder/CHCoo.png  used on input line 1126.
+Package pdftex.def Info: bilder/CHCoo.png  used on input line 1123.
 (pdftex.def)             Requested size: 418.25372pt x 86.22374pt.
-<bilder/CHHis.png, id=1076, 1445.4pt x 170.88844pt>
+<bilder/CHHis.png, id=1090, 1445.4pt x 170.88844pt>
 File: bilder/CHHis.png Graphic file (type png)
 <use bilder/CHHis.png>
-Package pdftex.def Info: bilder/CHHis.png  used on input line 1137.
+Package pdftex.def Info: bilder/CHHis.png  used on input line 1134.
 (pdftex.def)             Requested size: 418.25372pt x 49.44946pt.
-<bilder/CHCat2.png, id=1078, 657.95813pt x 51.19125pt>
+<bilder/CHCat2.png, id=1092, 657.95813pt x 51.19125pt>
 File: bilder/CHCat2.png Graphic file (type png)
 <use bilder/CHCat2.png>
-Package pdftex.def Info: bilder/CHCat2.png  used on input line 1149.
+Package pdftex.def Info: bilder/CHCat2.png  used on input line 1146.
 (pdftex.def)             Requested size: 418.25372pt x 32.542pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [65 <./bilder/CHBoo.png> <./bilder/CHCoo.png>]
-<bilder/RegExpl.png, id=1095, 1444.64719pt x 782.17218pt>
+<bilder/RegExpl.png, id=1108, 1444.64719pt x 782.17218pt>
 File: bilder/RegExpl.png Graphic file (type png)
 <use bilder/RegExpl.png>
-Package pdftex.def Info: bilder/RegExpl.png  used on input line 1162.
+Package pdftex.def Info: bilder/RegExpl.png  used on input line 1159.
 (pdftex.def)             Requested size: 418.25372pt x 226.45413pt.
 
 
@@ -3999,7 +3993,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.66}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1254 \restoregeometry
+l.1249 \restoregeometry
                         [66
 
 
@@ -4013,7 +4007,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.67}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1254 \restoregeometry
+l.1249 \restoregeometry
                         [67]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -4049,7 +4043,7 @@ l.1254 \restoregeometry
 
 
 
-LaTeX Warning: Float too large for page by 16.21542pt on input line 1420.
+LaTeX Warning: Float too large for page by 16.21542pt on input line 1415.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -4097,25 +4091,25 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ] [70
 
 ]
-<bilder/BRBoo.png, id=1143, 663.98062pt x 37.64063pt>
+<bilder/BRBoo.png, id=1154, 663.98062pt x 37.64063pt>
 File: bilder/BRBoo.png Graphic file (type png)
 <use bilder/BRBoo.png>
-Package pdftex.def Info: bilder/BRBoo.png  used on input line 1505.
+Package pdftex.def Info: bilder/BRBoo.png  used on input line 1500.
 (pdftex.def)             Requested size: 418.25372pt x 23.71083pt.
-<bilder/BRCoo.png, id=1145, 939.51pt x 188.95593pt>
+<bilder/BRCoo.png, id=1156, 939.51pt x 188.95593pt>
 File: bilder/BRCoo.png Graphic file (type png)
 <use bilder/BRCoo.png>
-Package pdftex.def Info: bilder/BRCoo.png  used on input line 1515.
+Package pdftex.def Info: bilder/BRCoo.png  used on input line 1510.
 (pdftex.def)             Requested size: 418.25372pt x 84.11827pt.
-<bilder/BRHis.png, id=1147, 1446.90562pt x 140.02313pt>
+<bilder/BRHis.png, id=1158, 1446.90562pt x 140.02313pt>
 File: bilder/BRHis.png Graphic file (type png)
 <use bilder/BRHis.png>
-Package pdftex.def Info: bilder/BRHis.png  used on input line 1526.
+Package pdftex.def Info: bilder/BRHis.png  used on input line 1521.
 (pdftex.def)             Requested size: 418.25372pt x 40.47533pt.
-<bilder/BRCat.png, id=1149, 660.96938pt x 64.74188pt>
+<bilder/BRCat.png, id=1160, 660.96938pt x 64.74188pt>
 File: bilder/BRCat.png Graphic file (type png)
 <use bilder/BRCat.png>
-Package pdftex.def Info: bilder/BRCat.png  used on input line 1538.
+Package pdftex.def Info: bilder/BRCat.png  used on input line 1533.
 (pdftex.def)             Requested size: 418.25372pt x 40.96936pt.
 
 
@@ -4168,13 +4162,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55882 strings out of 476315
- 1302459 string characters out of 5787669
- 2460309 words of memory out of 5000000
- 74727 multiletter control sequences out of 15000+600000
+ 55931 strings out of 476315
+ 1304566 string characters out of 5787669
+ 2461626 words of memory out of 5000000
+ 74776 multiletter control sequences out of 15000+600000
  648761 words of font info for 257 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,29n,106p,10901b,2848s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,28n,106p,10901b,2848s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 msy10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
 csc10.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
@@ -4187,9 +4181,9 @@ s12.pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss
 .pfb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.p
 fb><C:/Users/sell/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.p
 fb>
-Output written on main.pdf (100 pages, 4300023 bytes).
+Output written on main.pdf (100 pages, 4301938 bytes).
 PDF statistics:
- 1440 PDF objects out of 1440 (max. 8388607)
+ 1450 PDF objects out of 1728 (max. 8388607)
  324 named destinations out of 1000 (max. 500000)
  68933 words of extra memory for PDF output out of 74296 (max. 10000000)
 
