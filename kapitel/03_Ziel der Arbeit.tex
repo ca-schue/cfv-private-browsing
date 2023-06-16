@@ -1,99 +1,13 @@
 \chapter{Ziel der Arbeit}
+Die vorliegende Seminararbeit hat das Ziel, die Auswirkungen privater Browsingmodi auf potenziell hinterlassene Dateien einer Internetsitzung, die \textit{Browsing-Artefakte}, auf dem lokalen Rechner zu untersuchen. Konkret werden die Browser Firefox, Tor-Browser, Chrome und Brave analysiert, um festzustellen, welche dieser Browser die geringsten Spuren nach einer privaten Browsing-Sitzung hinterlassen.
 
-Wichtig: White-Box Ansatz gemäß local Attacker in \cite{Aggarwal.2010}
-	-	Das Ziel des Angreifers besteht darin, für eine bestimmte Menge von HTTP-Anfragen, die er wählt, festzustellen, ob der Browser eine dieser Anfragen im privaten Browsing-Modus ausgeführt hat oder nicht. Wenn der lokale Angreifer dieses Ziel nicht erreichen kann, gilt die Implementierung des privaten Browsings als sicher.
-	- Local Attacker weiß, wonach er sucht!
-	
+Zentral für diese Arbeit ist eine \textit{transparente Versuchsdurchführung}. Dies umfasst sowohl die Kontaminierung als auch die Analyse der Browsing-Artefakte durch die gleichen Akteure. Dadurch ist bereits vor der Analyse bekannt, nach welchen spezifischen Browsing-Artefakten gesucht wird. Dies entspricht keinem realistischen forensischen Analyseszenario von Strafverfolgungsbehörden. Dort ist in der Regel nicht bekannt, welche Webseiten besucht wurden. Stattdessen wird meist nach verdächtigen Browsing-Artefakten gesucht.
+Die transparente Versuchsdurchführung zielt darauf ab, das Verhalten des privaten Browsing-Modus umfassend zu analysieren und dabei alle potenziellen Artefakte zu identifizieren. Dies verbessert die Effizienz zukünftiger Untersuchungen und verhindert, dass wichtige Inhalte übersehen werden. \cite{Horsman.2019}
 
+Das oberste Ziel dieser Arbeit besteht darin, gefundene Browsing-Artefakte eindeutig dem entsprechenden Browsing-Szenario oder Browser-Prozess zuzuordnen. 
+Dies ist nötig da digitale Beweise bei Gerichtsverfahren eine Beweisauthentifizierung erfordern, wordurch der Beweis eindeutig einer Straftat zugeordnet werden muss.
 
-Forensiker müssen Funktionsweise von Private Browsing kennen \cite{Horsman.2019}
-	•	Die Kenntnis der Erfolgsrate der PB-Technologie unterstützt die Strafverfolgungsbehörden bei digitalen Untersuchungen von Internetinhalten
-	•	Internetbeweise sind oft entscheidend für Untersuchungen
-	•	Bestimmung des Umfangs und des Erfolgs von PB-Technologie unterstützt die Strafverfolgungsbehörden bei digitalen Untersuchungen von Internetinhalten
-	•	Durch die Bestimmung des Umfangs und des Erfolgs von PB-Technologie können sie unnötige Datenverarbeitung und Zeitverschwendung vermeiden, die Untersuchungseffizienz verbessern und sicherstellen, dass keine wichtigen Inhalte übersehen werden. Daher können diese Punkte dazu beitragen, die Effektivität und Effizienz von Untersuchungen zu verbessern, insbesondere in Fällen, in denen Vor-Ort-Triage stattfindet oder in denen eine SHPO angeordnet wurde. Drei Punkte wichtig:
-	•	Wenn der Verdacht besteht, dass PB stattgefunden hat, hilft es zu wissen, wie erfolgreich die PB-Funktion eines bestimmten Browsers ist, um unnötige Datenverarbeitung (und Zeitverschwendung) zu vermeiden, wenn tatsächlich keine Browserdaten auf einem Gerät vorhanden sind.
-	•	Die Kenntnis darüber, wo PB möglicherweise Informationen zu Browsing-Sitzungen preisgibt, verbessert die Effizienz von Untersuchungen und verhindert, dass wichtige Inhalte übersehen werden. Dies ist besonders wichtig bei Vor-Ort-Triage, wie sie in einigen Fällen mit einer SHPO angeordnet wird.
-	
-
-
-Ziel der Arbeit:
-================
--	Welche Browsing Artefakte werden beim private Browsing auf einem Rechner hinterlassen, welche zeigen, dass eine Browsing Aktion vom Browser durchgeführt wurde?
--	Das heißt: 
-	o	Es wird nach Browsing Artefakten gesucht, welche die Zuordnung „Durchgeführte Browsing Aktion“ <-> Browser ermöglichen
-	o	Vor, während und nach private Browsing Session nach Browsing Artefakten suchen, welche dem Browser zugeordnet werden können
--	Negativbeispiel: Suche in Hexdump nach im Browser gesuchtem String nicht als Beweis ausreichend, dass private Browsing Artefakte gefunden wurde.
-- Kategorisierung nach \cite{Ohana.2013}: 
-	> Browsing History
-	> Usernames/Email Accounts
-	> Images
-
-=> Thematisiert in \cite{Ohana.2013}:
-	o	It appeared that the overall best way to recover residual data was to obtain the evidence from RAM or working memory,
-	o	Kritik: Oft nur String Match in RAM-Hex als Nachweis für PB genannt -> ausreichend? (Evtl. Gegenexperiment mit Editor)
-
-
-Warum muss String-Artefakt Browser zugeordnet werden können? \cite{Izzati.2022}
-	•	Die Artefakte, die von den Browsing-Aktivitäten eines Kriminellen zurückgelassen wurden, können mit forensischen Tools extrahiert werden, um die Untersuchung des Ermittlers zu unterstützen.
-	•	Die erlangten Beweise müssen vor Gericht zugelassen werden, insbesondere digitale Beweise, da sie ohne ordnungsgemäße Verfahren leicht manipuliert werden können.
-	•	Es gibt bestimmte Merkmale von digitalen Beweisen, die Gerichte nach folgenden Kriterien akzeptieren:
-	1.	Durchsuchungsbefehle - Beweise, die ohne Genehmigung erlangt wurden, können vor Gericht nicht anerkannt werden.
-	2.	Berichte - Alle Prozesse, Werkzeuge, Methoden, Techniken, spezifischen Zeit- und Datumsangaben sowie die Beweiskette müssen formell dokumentiert werden, um die Authentizität der digitalen Beweise vor Gericht zu demonstrieren und zu unterstützen.
-	3.	Beweisauthentifizierung - Der ursprünglich erhaltene Beweis sollte durch Vergleich der Hash-Werte mit dem Kopiebeweis übereinstimmen. Der erworbene Beweis muss unverändert bleiben, um die Gerichte mit genauen Informationen zu überzeugen. Gerichte akzeptieren Kopien von Beweisen, wenn der ursprüngliche Beweis verloren gegangen oder zerstört wurde, die Kopie jedoch noch intakt ist.
-	
-
-
-Ziele anderer Arbeiten:
-=======================
-> \cite{Izzati.2022}
-	-	Die Art der extrahierbaren Daten zu untersuchen
-	-	den Unterschied zwischen privatem und normalem Surfen zu vergleichen 
-	-	zu analysieren, welcher Browser die vollständigeren residualen Daten liefert.
-> \cite{Montasari.2015}
-	•	ob bestimmte Arten von Browser-Daten gefunden werden konnten (Webseiten, Verlauf, Download-Verlauf, besuchte URLs und Suchbegriffe)	
-> \cite{Rochmadi.2017}
-	•	Das Ziel dieser Studie ist es, eine Rahmenbedingung für die Analysephasen des Webbrowsers im privaten Modus und Anti-Forensik vorzuschlagen, um eine effektive und effiziente forensische Untersuchung zu ermöglichen.
-	•	Die Studie nutzt Live-Forensik, um detailliertere Informationen über den Computer zu erhalten, während er noch in Betrieb ist, und eignet sich daher besser für die schnelle Datenerfassung in Echtzeit.
-> \cite{Satvat.2014}
-	•	umfassende Analyse der privaten Browsing-Funktion in den vier beliebtesten Webbrowsern (IE, Firefox, Chrome und Safari) vorgestellt.
-> \cite{Izzati.2022}
-	-	digitalen Forensikern helfen, Artefakte von Geräten zu verfolgen, die Live-Memory-Erfassung verwenden
-> \cite{Muir.2019}
-	-	Methodik entwerfen, um folgende Fragen zu beantworten:
-	1.	Kann Tor den Benutzer schützen, indem es Beweise für dessen Nutzung aus dem RAM löscht, wenn die Browsing-Sitzung geschlossen wird?
-	2.	Kann die Tor-Nutzung zu vier Schlüsselmomenten erkannt werden: während das Browser-Fenster geöffnet ist, nach Schließen des Browser-Fensters, nach dem Löschen des Installationsverzeichnisses/ zugehöriger Dateien und nach dem Ausloggen des Benutzers?
-	3.	Können Dateien aus dem Browsing-Protokoll in der Live-Forensik mit Tor 7.5.2 wiederhergestellt werden, der zum Zeitpunkt der Schreibens aktuellsten Version?
-	-	Die Experimente wurden im mobilen Modus mit Tor wiederholt, d.h. von einem USB-Stick ausgeführt.
-	(!!!) zu bestätigen, dass die Existenz und Nutzung des Tor-Browsers in Windows 10 nachweisbar ist.
-	(!!!) nachweisen, dass Artefakte des Tor-Browsing-Protokolls auf dem Zielcomputer wiederhergestellt werden können.
-> \cite{Izzati.2022}
-	> In dieser Studie werden die residualen Daten zwischen Google Chrome und Mozilla Firefox Webbrowsern im normalen und privaten Browsermodus mithilfe eines forensischen Tools analysiert und verglichen.
-> \cite{Montasari.2015}
-	•	In dem Projekt wurden die Effektivität der "privaten" Modus von vier weit verbreiteten Webbrowsern analysiert.
-> \cite{Satvat.2014}
-	•	Ziel: Bewertung der Sicherheit des privaten Surfens in den Browsern Chrome, Safari, Firefox und IE
-	•	Die Autoren haben eine umfassende forensische Analyse durchgeführt, die sowohl Live-Memory-Analyse als auch Post-Mortem-Analyse umfasste.
-> \cite{Montasari.2015}
-	•	Vier getestet: Firefox, IE, Safari und Chrome
-	
-
-Keine Ziele der Arbeit:
-=======================
--	zeitl. Kontext nicht wichtig ( Die zeitliche Reihenfolge innerhalb einer Logfile wird nicht berücksichtigt)
-- 	Private Browsing "Indicators": Entering/Leaving Private Browsing \cite{Ohana.2013}
--	Zeigen, dass ein Browser gestartet/geschlossen wurde
--	Zeigen, dass ein Browser im privaten Modus gestartet wurde
--	Zeigen, wann ein Browser gestartet/geschlossen wurde
-- Browser-Erweiterungen: \cite{Satvat.2014}
-	> Browser-Erweiterungen und ihre Auswirkungen auf das private Surfen wurden in einer Studie von Aggarwal et al. Im Jahr 2010 untersucht. --> Siehe Punkt „Add-Ons als Leck”
-	> Die Chrome-Erweiterung „Incognito Inspector“ kann im privaten Modus genutzt werden, um detaillierte Informationen über die Nutzeraktivitäten zu sammeln und in Echtzeit an einen Remote-Server zu senden.
-	> Firefox-Erweiterungen sind standardmäßig im privaten Modus aktiviert und können genutzt werden, um Nutzeraktivitäten aufzuzeichnen.
-	> Internet Explorer-Erweiterungen sind in der Regel deaktiviert und erfordern die manuelle Aktivierung im privaten Modus. Die von den Autoren entwickelte Erweiterung funktionierte jedoch nicht, da sie aufgrund eingeschränkter Privilegien nicht auf die BHO-Klasse zugreifen konnte
-- \cite{Aggarwal.2010}
-	> Unterschiedliche Handhabung durch Browser: Gefährliche Leckage für private Browsing Artefakte
-	> Entwickler von Add-Ons haben möglicherweise den privaten Browsing-Modus bei der Entwicklung ihrer Software nicht berücksichtigt, und ihr Quellcode wird nicht derselben rigorosen Überprüfung unterzogen wie die Browser selbst.
-	> Gegenmaßnahme: \cite{Aggarwal.2010} 
-		•	Es wurde eine Firefox-Erweiterung namens ExtensionBlocker entwickelt, um unsichere Erweiterungen im privaten Modus zu blockieren
-
-
+Diese Arbeit grenzt sich von bestimmten Themengebieten ab, die nicht im Fokus der Untersuchung liegen. Diese Arbeit beschränkt sich auf den lokalen Angreifer, wie er in Kapitel X (TODO!) definiert wird und betrachtet nicht den Webangreifer. Eine Zuordnung gefundener Artefakte zu bestimmten Zeitstempeln wird nicht berücksichtigt. 
+Weritehin werden keine Indikatoren untersucht, die anzeigen, ob und wann ein Browser gestartet, geschlossen oder im privaten Modus verwendet wurde.
+Schließlich werden nicht die Auswirkungen von Browser-Erweiterungen auf die privaten Browsingmodi untersucht.
 

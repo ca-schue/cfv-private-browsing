@@ -1,0 +1,129 @@
+%% Creator: Inkscape 1.1.2 (b8e25be833, 2022-02-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'process_monitor_to_excel-Latex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{948.2897644bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.4805675)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.27407973,0.46768162){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{D}\textbf{a}\textbf{t}\textbf{e}\textbf{i}\textbf{e}\textbf{x}\textbf{t}\textbf{r}\textbf{a}\textbf{k}\textbf{t}\textbf{i}\textbf{o}\textbf{n}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.17196388,0.33579086){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei im\end{tabular}}}}%
+    \put(0.14918857,0.32517896){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Festplatten-Image\end{tabular}}}}%
+    \put(0.1637444,0.31380907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}mit Autopsy\end{tabular}}}}%
+    \put(0.16543804,0.30319717){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}lokalisieren\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.30264659,0.25923358){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nein\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.38267406,0.43129796){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei extrahieren\end{tabular}}}}%
+    \put(0.39493222,0.41992807){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}mit Autopsy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.2719005,0.22436591){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei im RAM-\end{tabular}}}}%
+    \put(0.26293487,0.21375401){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Dump suchen mit \end{tabular}}}}%
+    \put(0.26863166,0.20238411){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Volatility filelist \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.28341252,0.32517896){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei in\end{tabular}}}}%
+    \put(0.28402839,0.31380907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Image?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.29734064,0.42296004){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ja\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.40882481,0.21905996){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei \end{tabular}}}}%
+    \put(0.39848531,0.20769006){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}gecached?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.38267406,0.32896892){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei extrahieren\end{tabular}}}}%
+    \put(0.39370048,0.31759903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}mit Volatiltiy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.42392545,0.27666742){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ja\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.41632183,0.12658483){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ist\end{tabular}}}}%
+    \put(0.39872219,0.11521493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Hilfsdatei?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.43681133,0.16979042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nein\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.26886853,0.12658483){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}'N/A' in Excel-\end{tabular}}}}%
+    \put(0.28537856,0.11521493){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tabelle\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.36177003,0.1288588){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nein\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.38918806,0.04775357){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei in Excel-\end{tabular}}}}%
+    \put(0.3931083,0.03714167){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tabelle mit *\end{tabular}}}}%
+    \put(0.39913672,0.02577177){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}markieren\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.42392545,0.07125135){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ja\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.27216106,0.04244762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Wechsel zur \end{tabular}}}}%
+    \put(0.26915278,0.03107772){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}nicht-Hilfdatei\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.00173526,0.21678598){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}WriteFile-Operation\end{tabular}}}}%
+    \put(0.02091011,0.20541608){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}in Logdatei\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.72102313,0.35019272){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{D}\textbf{a}\textbf{t}\textbf{e}\textbf{i}\textbf{a}\textbf{n}\textbf{a}\textbf{l}\textbf{y}\textbf{s}\textbf{e}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.64601736,0.20769006){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Nein\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.72351029,0.27894139){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei mit\end{tabular}}}}%
+    \put(0.71330108,0.26832949){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}kompatiblem \end{tabular}}}}%
+    \put(0.71944792,0.2569596){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tool öffnen\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.62493568,0.16524246){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei\end{tabular}}}}%
+    \put(0.6034987,0.15387257){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}vorverarbeiten\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.68240102,0.27742541){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Ja\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.81771457,0.27894139){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Vermerk in Excel-\end{tabular}}}}%
+    \put(0.82411014,0.26832949){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Tabelle, ob PB-\end{tabular}}}}%
+    \put(0.81699213,0.2569596){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Artefact enthalten\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{process_monitor_to_excel-Latex.pdf}}%
+    \put(0.62493568,0.27363544){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Datei\end{tabular}}}}%
+    \put(0.62060091,0.26226555){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}lesbar?\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{process_monitor_to_excel-Latex.pdf}}%
+  \end{picture}%
+\endgroup%

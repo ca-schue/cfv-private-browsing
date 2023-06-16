@@ -1,4 +1,6 @@
-\chapter{Diskussion}
+\chapter{Zusammenfassung und Diskussion}\label{chap:Zusammenfassung-Diskussion}
+
+\begin{comment}
 
 > Artefakte im DNS Cache: \cite{Satvat.2014}
 	•	DNS-Caching ist eine Bedrohung für private Browsing
@@ -6,6 +8,7 @@
 	•	Mehrere Jahre nach der Meldung dieser Schwachstelle besteht sie immer noch in allen Browsern fort
 	•	Es wurden einige Erweiterungen von Drittanbietern entwickelt, um dieses Problem zu beheben, aber keine davon wurde von den Browserherstellern übernommen.
 	
+
 
 > Viele RAM-Artefakte
 	- Firefox \cite{Muir.2019}
@@ -39,13 +42,17 @@ Weiterführende Arbeiten:
 > Für wen wird Browser entwickelt
 > Warum und für wen wird Private Browsing analysiert?
 > Ist das Auffinden privater Browsing Artefakte Schuld von Browser Entwicklern? (Oder Schuld des Betriebssystem, wie in (TODO!) erwähnt)
+\end{comment}
 
-> bei Process Monitor nur nach Browser-Prozessen gefiltert
 
-> Warum in Literatur nur Windows untersucht?
+Zusammenfassend liefern alle der vier betrachteten Browser ein gutes Ergebnis, da keine Browsing-Artefakte im nichtvolatilen, also persistenten Speicher identifiziert werden konnten. Jene konnten nur im RAM gefunden werden und teilweise im DNS-Cache, wobei diese auch durch das Leeren des Caches erfolgreich beseitigt worden konnten. Artefakte im DNS-Cache sind dabei eine bekannte Problematik. DNS-Anfragen des Browsers werden dabei von Betriebssystem darin gespeichert, unabhängig davon, ob der Browser im privaten Modus ist oder nicht \cite{Satvat.2014}. Trotz der Bekanntheit dieser Schwachstelle besteht dieser immer noch in allen Browsern fort. Es wurden gezielt dafür auch schon Erweiterungen von Drittanbietern entwickelt, um dieses Problem des Speicherns von DNS-Anfragen zu cachen, jedoch wurde keine davon von den Browserherstellern übernommen \cite{Satvat.2014}. 
 
-Tor:
-	"Unsere Mission:
-	Menschenrechte und Freiheiten durch die Entwicklung und Verbreitung von Open Source Anonymitäts- und Privatsphäre-Technologien zu fördern, ihre ungehinderte Verfügbarkeit zu unterstützen und ihr Verständnis in Wissenschaft und der Allgemeinheit zu vergrößern."
-	% https://www.torproject.org/de/download/
+Wie in [link kap 6] übersichtlich dargelegt wurde, ist quantitativ gesehen der Tor-Browser der beste Browser, um am wenigsten Artefakte auf einem Computer zu hinterlassen. Zusätzlich zum Schutz vor einem local attacker bietet Tor den Vorteil, dass man dadurch auch noch vor web attackern geschützt ist, da der Datenverkehr über mehrere Router, den sogenannten Nodes, umleitet und somit die Herkunft der Anfrage verschleiert. Somit ist Tor als Gesamtpaket gesehen ein sicherer und guter Browser, um sicher und anonym im Internet zu browsen. \\
+Trotz der gerade angesprochenen Vorteile muss man jedoch auch die Nachteile von Tor sehen. Erstens ist das Browsen an sich meistens langsamer, da der Datenverkehr eben über mehrere Knoten geleitet wird. Zusätzlich wird dabei der Internetverkehr auch noch verschlüsselt. Beides ist positiv für die Privatsphäre, schränkt aber die User Experience ein [cite webpage]. Zusätzlich dazu kann es dazu kommen, dass Websiten den Datenverkehr von Tor-Benutzern als potenzielles Sicherheitsrisiko ansehen und somit zusätzliche Captchas und Sicherheitsmaßnahmen einfügen, was wieder die User Experience einschränkt. Dazu kommt auch noch, dass man von der Infrastruktur des Tor-Netzwerkes angewiesen ist und es zu Verbindungsproblemen führen kann, wenn das Netzwerk gestört ist oder bestimmte nodes nicht verfügbar sind. \\
+Hier muss jedoch beachtet werden, dass Tor in dieser Arbeit nur quantitativ gesehen der beste Browser ist, da er die wenigsten Artefakte von allen analysierten Browsern hinterlässt. Qualitativ gesehen kann es jedoch für einen Benutzer wichtiger sein, dass ein Browser ein Passwort nicht im RAM ablegt und somit davon keine Spuren  auf dem System hinterlässt. Somit kann die objektive Auffassung, dass Tor aufgrund der wenigen Artefakte der beste Browser ist, subjektiv gesehen auch für jemand anderen ein schlechterer Browser sein, wenn beispielsweise das Auffinden von HTML-Artefakten ein weniger kritisches Verhalten darstellt. In diesem Fall wären dann die beiden Browser Chrome und Brave \glqq{}besser\grqq{} bzw. \glqq{}sicherer\grqq{}.
+
+\thispagestyle{plain.scrheadings}
+\ohead{}
+Schließlich ist noch die Frage zu klären, für welche Personen diese Analyse grundsätzlich durchgeführt wird bzw. wer von solch einer forensischen Analyse einen Nutzen zieht. Grundsätzlich wird eine solche forensische Analyse durchgeführt, um Schwächen in Browsern und den privaten Modi aufzudecken. Von diesen Ergebnissen profitieren zunächst einmal die Browser-Entwickler, welche auf Basis der Ergebnisse das Ziel haben (sollten), die aufgedeckten Schwächen zu beseitigen, um ein privateres und sichereres Browsen zu ermöglichen. Dieses private Browsen kann dann entweder genutzt werden, um von „normalen“ Benutzern für legale Aktivitäten verwendet zu werden, oder von Kriminellen für illegale Tätigkeiten. Für diese wäre es dann sinnvoll, wenn der Browser möglichst wenige Artefakte verursacht, um möglichst unerkannt diesen Tätigkeiten nachzugehen. Dies würde es jedoch Forensikern wieder schwieriger machen, jene Tätigkeiten aufzudecken und nachzuweisen. Auch profitieren von solchen Analysen die Forensiker, welche auf Basis der Ergebnisse gezielt nach Artefakten suchen können und es somit leichter gemacht wird, kriminelle Tätigkeiten aufzudecken. \\
+Wie daraus ersichtlich wird, ist es nicht einfach zu sagen, wem eine solche forensische Analyse zunächst mehr nutzt und ob es gut oder schlecht ist, eine solche zu betreiben, da man nicht vorhersagen kann, ob die Ergebnisse zuerst gutartig zum besseren Aufdecken von illegalen Aktivitäten oder bösartig zum besseren Verschleiern von diesen verwendet wird. Ebenfalls ist nicht sicher, ob eventuell bestehende Sicherheitslücken bestehen bleiben sollten, um das Aufdecken illegaler Aktivitäten zu erleichtern.
 

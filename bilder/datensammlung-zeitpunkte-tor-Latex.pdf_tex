@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{816.56112671bp}%
+    \setlength{\unitlength}{486bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,55 +50,50 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.1462555)%
+  \begin{picture}(1,0.28790123)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.30907213,0.1339207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 1\end{tabular}}}}%
+    \put(0.37908509,0.26131333){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor\end{tabular}}}}%
+    \put(0.40961961,0.23915676){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logfile 1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.01408315,0.03259912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S\end{tabular}}}}%
-    \put(0.03259912,0.03259912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM Snapshot\end{tabular}}}}%
+    \put(0.01031665,0.06633551){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S\end{tabular}}}}%
+    \put(0.04135893,0.06633551){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM Snapshot\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.01379405,0.00616741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R\end{tabular}}}}%
-    \put(0.03259912,0.00616741){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}RAM Dump\end{tabular}}}}%
+    \put(0.00983198,0.02202236){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R\end{tabular}}}}%
+    \put(0.04135893,0.02202236){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}RAM Dump\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.18236508,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser im privaten\end{tabular}}}}%
-    \put(0.19271751,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modus geöffnet\end{tabular}}}}%
+    \put(0.2235275,0.18302678){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser im \end{tabular}}}}%
+    \put(0.20972579,0.16234732){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}privaten Modus\end{tabular}}}}%
+    \put(0.23843701,0.14019074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geöffnet\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.03346641,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
-    \put(0.03199339,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}installiert\end{tabular}}}}%
+    \put(0.02557238,0.17268705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser \end{tabular}}}}%
+    \put(0.02557238,0.15053048){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}installiert\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.34829294,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browsing\end{tabular}}}}%
-    \put(0.34916023,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Szenario\end{tabular}}}}%
+    \put(0.4066654,0.17268705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browsing\end{tabular}}}}%
+    \put(0.40814251,0.15053048){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Szenario\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.65810845,0.1339207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 2-2\end{tabular}}}}%
+    \put(0.74247593,0.18450389){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.70306991,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
-    \put(0.69307541,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geschlossen\end{tabular}}}}%
+    \put(0.74199127,0.14019074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.89073511,0.09603524){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM\end{tabular}}}}%
-    \put(0.85810845,0.08281938){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}heruntergefahren\end{tabular}}}}%
+    \put(0.96404165,0.16234732){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S4\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.51333974,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Neue Identität\end{tabular}}}}%
+    \put(0.53272706,0.18450389){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.48233754,0.1339207){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 2-1\end{tabular}}}}%
+    \put(0.53224239,0.14019074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.60556165,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3-1\end{tabular}}}}%
+    \put(0.14572562,0.18450389){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.63434744,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3-1\end{tabular}}}}%
+    \put(0.14524094,0.14019074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.78089203,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3-2\end{tabular}}}}%
+    \put(0.61816834,0.17268705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
+    \put(0.60138936,0.15053048){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geschlossen\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=15]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.80967783,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3-2\end{tabular}}}}%
+    \put(0.84095728,0.17268705){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM \end{tabular}}}}%
+    \put(0.79855975,0.15053048){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}herunterfahren\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=16]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.97943282,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S4\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=17]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.43405835,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S2\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=18]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.46284415,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R2\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=19]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.11599669,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S1\end{tabular}}}}%
-    \put(0,0){\includegraphics[width=\unitlength,page=20]{datensammlung-zeitpunkte-tor-Latex.pdf}}%
-    \put(0.14478249,0.08986784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R1\end{tabular}}}}%
+    \put(0.58661831,0.26131333){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor\end{tabular}}}}%
+    \put(0.61715283,0.23915676){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logfile 2\end{tabular}}}}%
   \end{picture}%
 \endgroup%

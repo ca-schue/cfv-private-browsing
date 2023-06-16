@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{665.56086731bp}%
+    \setlength{\unitlength}{556.08000183bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,47 +50,59 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.17945946)%
+  \begin{picture}(1,0.25161847)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.59707771,0.16432433){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 2\end{tabular}}}}%
+    \put(0.30569322,0.22836599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor\end{tabular}}}}%
+    \put(0.33239722,0.20898894){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logfile 1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.37923987,0.16432433){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor Logfile 1\end{tabular}}}}%
+    \put(0.00902244,0.05784791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S\end{tabular}}}}%
+    \put(0.0361705,0.05784791){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM Snapshot\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.1466554,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S1\end{tabular}}}}%
+    \put(0.00859857,0.01909381){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R\end{tabular}}}}%
+    \put(0.0361705,0.01909381){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}RAM Dump\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.17873311,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R1\end{tabular}}}}%
+    \put(0.16878222,0.15085778){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Privater Modus\end{tabular}}}}%
+    \put(0.19302371,0.13148072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geöffnet\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.53584459,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S2\end{tabular}}}}%
+    \put(0.01590533,0.15085778){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser \end{tabular}}}}%
+    \put(0.01590533,0.13148072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}installiert\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.5679223,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R2\end{tabular}}}}%
+    \put(0.32981361,0.15085778){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browsing\end{tabular}}}}%
+    \put(0.33110542,0.13148072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Szenario\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.75206081,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3\end{tabular}}}}%
+    \put(0.60109238,0.1611922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3-1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.78413852,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3\end{tabular}}}}%
+    \put(0.60066851,0.12114629){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3-1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.98016891,0.11027027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S4\end{tabular}}}}%
+    \put(0.77161045,0.1611922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S3-2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.01728041,0.04){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S\end{tabular}}}}%
-    \put(0.04,0.04){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM Snapshot\end{tabular}}}}%
+    \put(0.77118659,0.12114629){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R3-2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.01692568,0.00756757){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R\end{tabular}}}}%
-    \put(0.04,0.00756757){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}RAM Dump\end{tabular}}}}%
+    \put(0.96840866,0.14181515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S4\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.2237669,0.11783784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser im privaten\end{tabular}}}}%
-    \put(0.2364696,0.10162163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Modus geöffnet\end{tabular}}}}%
+    \put(0.43747737,0.1611922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.04106419,0.11783784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
-    \put(0.03925676,0.10162163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}installiert\end{tabular}}}}%
+    \put(0.43705351,0.12114629){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R2\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.42736486,0.11783784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browsing\end{tabular}}}}%
-    \put(0.42842906,0.10162163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Szenario\end{tabular}}}}%
+    \put(0.11581827,0.1611922){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}S1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=15]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.6464696,0.11783784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
-    \put(0.63420608,0.10162163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geschlossen\end{tabular}}}}%
+    \put(0.1153944,0.1224381){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}R1\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=16]{datensammlung-zeitpunkte-Latex.pdf}}%
-    \put(0.87673987,0.11783784){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM\end{tabular}}}}%
-    \put(0.83670608,0.10162163){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}heruntergefahren\end{tabular}}}}%
+    \put(0.51431951,0.15085778){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Neue\end{tabular}}}}%
+    \put(0.50527688,0.13148072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Identität\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{datensammlung-zeitpunkte-Latex.pdf}}%
+    \put(0.67496739,0.15085778){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Browser\end{tabular}}}}%
+    \put(0.66029332,0.13148072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}geschlossen\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{datensammlung-zeitpunkte-Latex.pdf}}%
+    \put(0.8627028,0.15085778){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VM \end{tabular}}}}%
+    \put(0.82562399,0.13148072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}herunterfahren\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{datensammlung-zeitpunkte-Latex.pdf}}%
+    \put(0.47750311,0.22836599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor\end{tabular}}}}%
+    \put(0.49730403,0.20898894){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logfile 2-1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{datensammlung-zeitpunkte-Latex.pdf}}%
+    \put(0.64672938,0.22836599){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Process Monitor\end{tabular}}}}%
+    \put(0.6665303,0.20898894){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Logfile 2-2\end{tabular}}}}%
   \end{picture}%
 \endgroup%

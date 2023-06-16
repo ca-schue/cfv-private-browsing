@@ -1,3 +1,25 @@
-\chapter{Fazit}
+\chapter{Fazit und Ausblick}\label{chap:Fazit-Ausblick}
+\thispagestyle{plain.scrheadings}
+\ohead{\headmark}
 
-Einleitend werden Struktur, Motivation und die abgeleiteten Forschungsfragen diskutiert.
+Grundsätzlich kann man sagen: Keiner der analysierten Browser ist zu 100\% privat. Bei jedem konnten noch Artefakte gefunden werden. Das sollte jedem bewusst sein, wenn man den privaten Modus eines Browsers benutzt. Er schützt zwar gewissermaßen davon, dass kein Cache oder Verlauf gespeichert wird, jedoch können bei einer forensischen Live-Analyse trotzdem Artefakte des durchgeführten Szenarios rekonstruiert werden. Und wenn man direkt nach dem PB-Szenario direkt Zugriff auf den Computer besitzt, lässt sich das auch (noch) nicht verhindern. Sobald jedoch der RAM gelöscht wird und auch sonst keine Arbeitsspeicher-Dateien in das pagefile oder hiberfile ausgelagert werden, können keine Überreste mehr gefunden werden. Da beim standardmäßigen Herunterfahren von Windows jedoch noch gewisse Dateien im hiberfile abgelegt werden, um den Windows Schnellstart zu ermöglichen \cite{hiberfile}, ist es ratsam, hier einen Neustart durchzuführen. Dann sollten keine Artefakte mehr auffindbar sein.\\
+Diese Sicherheitslücken, welche Browser derzeit noch besitzen, gilt es in zukünftigen Versionen der Browser zu schließen oder eben auch gezielt nicht zu schließen, wie in vorherigen Kapitel bereits diskutiert wurde.
+
+Bevor abschließend noch ein kurzer Ausblick mögliche weiterführende Arbeiten aufzeigt, folgt zunächst noch ein kurzes persönliches Fazit zu dieser Arbeit.\\
+Neben neuen Erkenntnissen, wie dem Vorgehen einer forensischen Analyse und speziell dafür geeignete Tools, konnte bereits vorhandenes Wissen zu den Themen Browser, die Verwendung von virtuellen Maschinen oder dem Verhalten sowie wichtigen Dateien des Windows Betriebssystems erweitert werden. Speziell die Arbeit mit Speicherabbildern, wie Arbeitsspeicherabbildern oder ganzen Snapshots von virtuellen Maschinen, war bzgl. des Vorgehens und der Analyse neu und interessant, wie die Extraktion möglichst vieler Informationen wie aus einer Art Speicher-Blackbox abläuft. Dabei ist sehr deutlich geworden, welch großen und zeitlichen Aufwand sowohl hinter der Ergebung dieser Abbilder sowie deren Auswertung steckt. Zusammenfassend war es jedoch eine sehr spannende und herausfordernde Arbeit.
+
+%Zunächst war es sehr informativ, über den allgemeinen Prozess bei einer forensischen Untersuchung mehr zu erfahren. Darunter zählt eine klar definierte Methodik, das Wissen über die verwendeten Tools sowie schlussendlich die Durchführung der Analyse. Dabei war es stets wichtig, alles stets wie vorgeschrieben durchzuführen, um keine Ergebnisse in irgendeiner Art zu verfälschen. Auch die Verwendung von virtuellen Maschinen sowie Möglichkeiten, Speicherabbilder zu erstellen, war eine neue Erkenntnis. Ebenso wurden erstmals verschiedene Forensik-Tools wie Autopsy und Volatility verwendet sowie Möglichkeiten innerhalb dieser Tools benutzt, um Speicherabbilder mit unterschiedlichen Verfahren zu analysieren. Vor Allem beim Einlesen der Snapshots in Autopsy ist deutlich geworden, welcher zeitliche Aufwand hinter solch einer Analyse steckt, da selbst bei unserem Beispiel dieser Prozess ca. drei Stunden andauerte, wenn man alle Plugins in Autopsy verwenden möchte. Außerdem konnte neues Wissen im Bezug auf die Funktionsweise von Browsern erlangt werden, hier speziell über das Abspeichern von Informationen in bestimmten Dateien in speziellen Dateipfaden und deren Bedeutungen. Auch verschiedene Analyse-Tools wie ein Hex-Editor oder Database-Viewer wurden dafür benötigt und es konnte ein tieferes Verständnis für verschiedene Datentypen sowie Kodierungen gewonnen werden. 
+
+Da jetzt alle Ergebnisse ausführlich ausgeführt wurden und noch weitergehende Fragestellungen angesprochen wurden, ist es nun noch wichtig anzusprechen, was man anschließend an diese Arbeit noch analysieren könnte, um die Browser-Forensik noch detaillierter durchzuführen.\\
+Zum Einen kann der scope, welcher für diese Arbeit getroffen wurde, erweitert werden. Für diese Arbeit wurde beim Process Monitor nur nach Prozessnamen, also nach Browser gefiltert. Eine weitere Möglichkeit wäre es, nach Speicherorten zu filtern, wie beispielsweise den browser-typischen Common Locations, und dann zu analysieren, welche Prozesse eine Schreibaktivität darin durchführen. 
+
+Auch könnten noch weitere Aktivitäten des Betriebssystems näher betrachtet und analysiert werden wie der DNS-Cache, oder ob es noch weitere Ort gibt, an welchem Windows noch Dateien anlegt oder bearbeitet, welche nicht von Browser bearbeitet werden, jedoch Bezug zum Browsingszenario besitzen. Auch eine Analyse der Browser für Mac oder Linux wäre wichtige Aufgabe, da sich die gesamte Literatur hauptsächlich nur mit Windows als Betriebssystem beschäftigt. Zusätzlich könnte man mehr auf den web attacker eingehen, was in dieser Arbeit komplett ausgeschlossen wurde. Ebenfalls könnten man einen direkten Vergleich mit den Aktivitäten der public-Modi ziehen, was aus zeitlichen Gründen und wegen des beschränkten Umfangs hier nicht mehr durchführbar war und den Rahmen diese Arbeit gesprengt hätte. Zuletzt wäre es auch noch möglich, weitere Browser wie Edge oder Safari dieser forensischen Analyse zu unterziehen.
+
+\begin{comment}
+	Struktur:
+	
+	
+	
+	
+	
+\end{comment}

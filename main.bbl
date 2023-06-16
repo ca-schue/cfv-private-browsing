@@ -58,6 +58,33 @@
       \field{pages}{79\bibrangedash 94}
       \range{pages}{16}
     \endentry
+    \entry{Autopsy.29.03.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=218970b2d50dfb0d713ea313e955dc37}{%
+           family={Autopsy},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{fullhash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{bibnamehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{authorbibnamehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{authornamehash}{218970b2d50dfb0d713ea313e955dc37}
+      \strng{authorfullhash}{218970b2d50dfb0d713ea313e955dc37}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Autopsy{\circledR} is the premier end-to-end open source digital forensics platform. Built by Basis Technology with the core features you expect in commercial forensic tools, Autopsy is a fast, thorough, and efficient hard drive investigation solution that evolves with your needs.}
+      \field{title}{Autopsy | Digital Forensics}
+      \field{year}{29.03.2023}
+      \verb{urlraw}
+      \verb https://www.autopsy.com/
+      \endverb
+      \verb{url}
+      \verb https://www.autopsy.com/
+      \endverb
+      \warn{\item misc entry 'Autopsy.29.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Bonetti.2014}{article}{}
       \name{author}{5}{}{%
         {{hash=d368a45bf3415ef763c33471b2baa432}{%
@@ -106,34 +133,110 @@
       \field{pages}{255\bibrangedash 271}
       \range{pages}{17}
     \endentry
-    \entry{Chivers.2014}{article}{}
+    \entry{Brave.}{misc}{}
       \name{author}{1}{}{%
-        {{hash=b38c156c49fa7c0bbacaa0de4c5fcc43}{%
-           family={Chivers},
-           familyi={C\bibinitperiod},
-           given={Howard},
-           giveni={H\bibinitperiod}}}%
+        {{hash=8d091597127cc044520e13fae3a3af59}{%
+           family={Brave},
+           familyi={B\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Elsevier}%
+      \strng{namehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{fullhash}{8d091597127cc044520e13fae3a3af59}
+      \strng{bibnamehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{authorbibnamehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{authornamehash}{8d091597127cc044520e13fae3a3af59}
+      \strng{authorfullhash}{8d091597127cc044520e13fae3a3af59}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Die beste Privatsphäre im Internet}
+      \verb{urlraw}
+      \verb https://brave.com/de/
+      \endverb
+      \verb{url}
+      \verb https://brave.com/de/
+      \endverb
+      \warn{\item misc entry 'Brave.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Bugzilla.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e20ae03d1719fc6613a0da15e31d32b8}{%
+           family={Bugzilla},
+           familyi={B\bibinitperiod}}}%
       }
-      \strng{namehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{fullhash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{bibnamehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{authorbibnamehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{authornamehash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
-      \strng{authorfullhash}{b38c156c49fa7c0bbacaa0de4c5fcc43}
+      \strng{namehash}{e20ae03d1719fc6613a0da15e31d32b8}
+      \strng{fullhash}{e20ae03d1719fc6613a0da15e31d32b8}
+      \strng{bibnamehash}{e20ae03d1719fc6613a0da15e31d32b8}
+      \strng{authorbibnamehash}{e20ae03d1719fc6613a0da15e31d32b8}
+      \strng{authornamehash}{e20ae03d1719fc6613a0da15e31d32b8}
+      \strng{authorfullhash}{e20ae03d1719fc6613a0da15e31d32b8}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{RESOLVED (jdemooij) in Core - JavaScript Engine. Last updated 2018-05-01.}
+      \field{title}{1452114 - Spurious report of OutOfMemory if a script fails to parse}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://bugzilla.mozilla.org/show_bug.cgi?id=1452114
+      \endverb
+      \verb{url}
+      \verb https://bugzilla.mozilla.org/show_bug.cgi?id=1452114
+      \endverb
+      \warn{\item misc entry 'Bugzilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{ChromiumShutdownMSTxtWebpageDoku}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=65d5644b4049b4215a6faa532e7e5ad5}{%
+           family={Chromium},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{fullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{bibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorbibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authornamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorfullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \field{extraname}{1}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Digital Investigation}
-      \field{number}{1}
-      \field{title}{Private browsing: A window of forensic opportunity}
-      \field{volume}{11}
-      \field{year}{2014}
-      \field{pages}{20\bibrangedash 29}
-      \range{pages}{10}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 16:34 Uhr}
+      \field{title}{Contents of /trunk/src/chrome/browser/browser\_shutdown.cc}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb https://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/browser_shutdown.cc?pathrev=26058
+      \endverb
+      \verb{url}
+      \verb https://src.chromium.org/viewvc/chrome/trunk/src/chrome/browser/browser_shutdown.cc?pathrev=26058
+      \endverb
+    \endentry
+    \entry{CrashpadOverviewDesign}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=65d5644b4049b4215a6faa532e7e5ad5}{%
+           family={Chromium},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{fullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{bibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorbibnamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authornamehash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \strng{authorfullhash}{65d5644b4049b4215a6faa532e7e5ad5}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 21:58 Uhr}
+      \field{title}{Crashpad Overview Design}
+      \verb{urlraw}
+      \verb https://chromium.googlesource.com/crashpad/crashpad/+/HEAD/doc/overview_design.md
+      \endverb
+      \verb{url}
+      \verb https://chromium.googlesource.com/crashpad/crashpad/+/HEAD/doc/overview_design.md
+      \endverb
     \endentry
     \entry{Fayyad.2021}{article}{}
       \name{author}{4}{}{%
@@ -210,6 +313,166 @@
       \field{pages}{356\bibrangedash 371}
       \range{pages}{16}
     \endentry
+    \entry{GitHub.08.04.2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={GitHub},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Firefox Data Stores}
+      \field{year}{08.04.2019}
+      \verb{urlraw}
+      \verb https://mozilla.github.io/firefox-browser-architecture/text/0010-firefox-data-stores.html
+      \endverb
+      \verb{url}
+      \verb https://mozilla.github.io/firefox-browser-architecture/text/0010-firefox-data-stores.html
+      \endverb
+      \warn{\item misc entry 'GitHub.08.04.2019' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{GitHub.05.06.2023b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={GitHub},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Modern cross-platform telemetry. Contribute to mozilla/glean development by creating an account on GitHub.}
+      \field{title}{GitHub - mozilla/glean: Modern cross-platform telemetry}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://github.com/mozilla/glean
+      \endverb
+      \verb{url}
+      \verb https://github.com/mozilla/glean
+      \endverb
+      \warn{\item misc entry 'GitHub.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{GitHub.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d3b7c913cd04ebfec0e9ec32cb6fd58c}{%
+           family={GitHub},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{fullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{bibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorbibnamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authornamehash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \strng{authorfullhash}{d3b7c913cd04ebfec0e9ec32cb6fd58c}
+      \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Volatility 3.0 development. Contribute to volatilityfoundation/volatility3 development by creating an account on GitHub.}
+      \field{title}{GitHub - volatilityfoundation/volatility3: Volatility 3.0 development}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://github.com/volatilityfoundation/volatility3
+      \endverb
+      \verb{url}
+      \verb https://github.com/volatilityfoundation/volatility3
+      \endverb
+      \warn{\item misc entry 'GitHub.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Gitlab.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9792e23419583666b178605decaec552}{%
+           family={Gitlab},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{9792e23419583666b178605decaec552}
+      \strng{fullhash}{9792e23419583666b178605decaec552}
+      \strng{bibnamehash}{9792e23419583666b178605decaec552}
+      \strng{authorbibnamehash}{9792e23419583666b178605decaec552}
+      \strng{authornamehash}{9792e23419583666b178605decaec552}
+      \strng{authorfullhash}{9792e23419583666b178605decaec552}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tor browser writes SiteSecurityServiceState.txt with usage history ({\#}18589) · Issues · The Tor Project / Applications / Tor Browser · GitLab}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589
+      \endverb
+      \verb{url}
+      \verb https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589
+      \endverb
+      \warn{\item misc entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{LevelDBGithub}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:20 Uhr}
+      \field{title}{leveldb}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/google/leveldb
+      \endverb
+      \verb{url}
+      \verb https://github.com/google/leveldb
+      \endverb
+    \endentry
+    \entry{GoogleChrome.}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bc3d2e5792d6d4a9bd247494a456a7e0}{%
+           family={{Google Chrome}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{fullhash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{bibnamehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{authorbibnamehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{authornamehash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \strng{authorfullhash}{bc3d2e5792d6d4a9bd247494a456a7e0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Startseite}
+      \verb{urlraw}
+      \verb https://www.google.com/intl/de/chrome/
+      \endverb
+      \verb{url}
+      \verb https://www.google.com/intl/de/chrome/
+      \endverb
+      \warn{\item misc entry 'GoogleChrome.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Gupta.2013}{article}{}
       \name{author}{1}{}{%
         {{hash=56eb58a7c2138a2e81ca51fb22f7a59e}{%
@@ -234,42 +497,46 @@
       \field{pages}{109\bibrangedash 113}
       \range{pages}{5}
     \endentry
-    \entry{Hariharan.2022}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=01cc6f7ad7752b9254fae098e913be70}{%
-           family={Hariharan},
-           familyi={H\bibinitperiod},
-           given={Meenu},
-           giveni={M\bibinitperiod}}}%
-        {{hash=d8d342cb4e8d7f35135842ec86508311}{%
-           family={Thakar},
-           familyi={T\bibinitperiod},
-           given={Akash},
-           giveni={A\bibinitperiod}}}%
-        {{hash=6db216779decf05409b2379b42f7e28e}{%
-           family={Sharma},
-           familyi={S\bibinitperiod},
-           given={Parvesh},
-           giveni={P\bibinitperiod}}}%
+    \entry{Haircutfish.04.11.2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fdf2b875205c6f747fe47738713e308b}{%
+           family={Haircutfish},
+           familyi={H\bibinitperiod}}}%
       }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{3190458b4b98095c624204520f2e9fe2}
-      \strng{fullhash}{3190458b4b98095c624204520f2e9fe2}
-      \strng{bibnamehash}{3190458b4b98095c624204520f2e9fe2}
-      \strng{authorbibnamehash}{3190458b4b98095c624204520f2e9fe2}
-      \strng{authornamehash}{3190458b4b98095c624204520f2e9fe2}
-      \strng{authorfullhash}{3190458b4b98095c624204520f2e9fe2}
+      \strng{namehash}{fdf2b875205c6f747fe47738713e308b}
+      \strng{fullhash}{fdf2b875205c6f747fe47738713e308b}
+      \strng{bibnamehash}{fdf2b875205c6f747fe47738713e308b}
+      \strng{authorbibnamehash}{fdf2b875205c6f747fe47738713e308b}
+      \strng{authornamehash}{fdf2b875205c6f747fe47738713e308b}
+      \strng{authorfullhash}{fdf2b875205c6f747fe47738713e308b}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2022 International Conference on Computing, Communication, Security and Intelligent Systems (IC3SIS)}
-      \field{title}{Forensic Analysis of Private Mode Browsing Artifacts in Portable Web Browsers Using Memory Forensics}
-      \field{year}{2022}
-      \field{pages}{1\bibrangedash 5}
-      \range{pages}{5}
+      \field{title}{TryHackMe Windows Forensics 1: Task 3 Accessing registry hives offline {\&} Task 4 Data Acquisition}
+      \field{year}{04.11.2022}
+      \verb{urlraw}
+      \verb https://medium.com/@haircutfish/tryhackme-windows-forensics-1-task-3-accessing-registry-hives-offline-task-4-data-acquisition-b440f5be2a13
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@haircutfish/tryhackme-windows-forensics-1-task-3-accessing-registry-hives-offline-task-4-data-acquisition-b440f5be2a13
+      \endverb
+      \warn{\item misc entry 'Haircutfish.04.11.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{LevelDBCCL}{misc}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:21 Uhr}
+      \field{title}{Hang on! That’s not SQLite! Chrome, Electron and LevelDB}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.cclsolutionsgroup.com/post/hang-on-thats-not-sqlite-chrome-electron-and-leveldb
+      \endverb
+      \verb{url}
+      \verb https://www.cclsolutionsgroup.com/post/hang-on-thats-not-sqlite-chrome-electron-and-leveldb
+      \endverb
     \endentry
     \entry{Hassan.2019}{book}{}
       \name{author}{1}{}{%
@@ -294,31 +561,6 @@
       \field{labeltitlesource}{title}
       \field{title}{Digital forensics basics: A practical guide using Windows OS}
       \field{year}{2019}
-    \endentry
-    \entry{Hedberg.2013}{report}{}
-      \name{author}{1}{}{%
-        {{hash=dc5947d36739fb5dc2c00b999bab3f3b}{%
-           family={Hedberg},
-           familyi={H\bibinitperiod},
-           given={Ashley},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Technical Report, Tufts University, MA, USA}%
-      }
-      \strng{namehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{fullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{bibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authorbibnamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authornamehash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \strng{authorfullhash}{dc5947d36739fb5dc2c00b999bab3f3b}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{The privacy of private browsing}
-      \field{type}{techreport}
-      \field{year}{2013}
     \endentry
     \entry{Horsman.2019}{article}{}
       \name{author}{10}{}{%
@@ -393,6 +635,62 @@
       \field{pages}{100036}
       \range{pages}{1}
     \endentry
+    \entry{MemCompressionWebsite}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f50fdc0251e4b9bd97949ffa2f62ac83}{%
+           family={Hub},
+           familyi={H\bibinitperiod},
+           given={Windoes\bibnamedelima OS},
+           giveni={W\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{fullhash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{bibnamehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{authorbibnamehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{authornamehash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \strng{authorfullhash}{f50fdc0251e4b9bd97949ffa2f62ac83}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{note}{Zuletzt zugegriffen am 08.06.2023 um 11:51 Uhr}
+      \field{title}{Memory Compression Process: High Memory and CPU Usage in Windows 10 and 11}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://woshub.com/memory-compression-process-high-usage-windows-10/
+      \endverb
+      \verb{url}
+      \verb https://woshub.com/memory-compression-process-high-usage-windows-10/
+      \endverb
+    \endentry
+    \entry{InfoSecNotes.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e2b4179b1a382f2a8152961e02bc65e9}{%
+           family={{InfoSec Notes}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2b4179b1a382f2a8152961e02bc65e9}
+      \strng{fullhash}{e2b4179b1a382f2a8152961e02bc65e9}
+      \strng{bibnamehash}{e2b4179b1a382f2a8152961e02bc65e9}
+      \strng{authorbibnamehash}{e2b4179b1a382f2a8152961e02bc65e9}
+      \strng{authornamehash}{e2b4179b1a382f2a8152961e02bc65e9}
+      \strng{authorfullhash}{e2b4179b1a382f2a8152961e02bc65e9}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"} id=}
+      \field{title}{Artefacts overview}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://notes.qazeer.io/dfir/windows/_artefacts_overview
+      \endverb
+      \verb{url}
+      \verb https://notes.qazeer.io/dfir/windows/_artefacts_overview
+      \endverb
+      \warn{\item misc entry 'InfoSecNotes.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Izzati.2022}{article}{}
       \name{author}{2}{}{%
         {{hash=0e2367641a223159d7c2edf3dcd4e08f}{%
@@ -424,6 +722,32 @@
       \field{pages}{68\bibrangedash 83}
       \range{pages}{16}
     \endentry
+    \entry{JeffersonScher.29.11.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=715a0f94b8644048c37dbd1d88281224}{%
+           family={{Jefferson Scher}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{715a0f94b8644048c37dbd1d88281224}
+      \strng{fullhash}{715a0f94b8644048c37dbd1d88281224}
+      \strng{bibnamehash}{715a0f94b8644048c37dbd1d88281224}
+      \strng{authorbibnamehash}{715a0f94b8644048c37dbd1d88281224}
+      \strng{authornamehash}{715a0f94b8644048c37dbd1d88281224}
+      \strng{authorfullhash}{715a0f94b8644048c37dbd1d88281224}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Session History Scrounger for Firefox (with lz4 support) --- Fx File Utilities}
+      \field{year}{29.11.2020}
+      \verb{urlraw}
+      \verb https://www.jeffersonscher.com/ffu/scrounger.html
+      \endverb
+      \verb{url}
+      \verb https://www.jeffersonscher.com/ffu/scrounger.html
+      \endverb
+      \warn{\item misc entry 'JeffersonScher.29.11.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Mahlous.2020}{article}{}
       \name{author}{2}{}{%
         {{hash=813278c2f12e84f66c305ad4c118bc79}{%
@@ -454,6 +778,89 @@
       \field{year}{2020}
       \field{pages}{294\bibrangedash 306}
       \range{pages}{13}
+    \endentry
+    \entry{MandiOhlinger.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8a3a39a42fef13edebb9442150c45a19}{%
+           family={MandiOhlinger},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a3a39a42fef13edebb9442150c45a19}
+      \strng{fullhash}{8a3a39a42fef13edebb9442150c45a19}
+      \strng{bibnamehash}{8a3a39a42fef13edebb9442150c45a19}
+      \strng{authorbibnamehash}{8a3a39a42fef13edebb9442150c45a19}
+      \strng{authornamehash}{8a3a39a42fef13edebb9442150c45a19}
+      \strng{authorfullhash}{8a3a39a42fef13edebb9442150c45a19}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Weitere Informationen zu: Business Activity Monitoring (BAM)}
+      \field{title}{Business Activity Monitoring (BAM) - BizTalk Server}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
+      \endverb
+      \warn{\item misc entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Markruss.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9326cdfdf2f2da398f5ba63a329f2509}{%
+           family={Markruss},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{fullhash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{bibnamehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{authorbibnamehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{authornamehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{authorfullhash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Erfahren Sie, welche Dateien, Registrierungsschlüssel und andere Objekte prozesse geöffnet haben, welche DLLs sie geladen haben und vieles mehr.}
+      \field{title}{Prozess-Explorer - Sysinternals}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
+      \endverb
+      \warn{\item misc entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Markruss.05.06.2023b}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9326cdfdf2f2da398f5ba63a329f2509}{%
+           family={Markruss},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{fullhash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{bibnamehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{authorbibnamehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{authornamehash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \strng{authorfullhash}{9326cdfdf2f2da398f5ba63a329f2509}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Überwachen Sie dateisystem-, Registrierungs-, Prozess-, Thread- und DLL-Aktivitäten in Echtzeit.}
+      \field{title}{Prozessmonitor - Sysinternals}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
+      \endverb
+      \warn{\item misc entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Md.2018}{inproceedings}{}
       \name{author}{5}{}{%
@@ -502,6 +909,89 @@
       \field{pages}{217\bibrangedash 228}
       \range{pages}{12}
     \endentry
+    \entry{MicrosoftLearn.21.03.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=614e7789840996b5d882c0cad1ad0971}{%
+           family={{Microsoft Learn}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{fullhash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{bibnamehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{authorbibnamehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{authornamehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{authorfullhash}{614e7789840996b5d882c0cad1ad0971}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Einführung in Auslagerungsdateien}
+      \field{year}{21.03.2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/de-de/troubleshoot/windows-client/performance/introduction-to-the-page-file
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/de-de/troubleshoot/windows-client/performance/introduction-to-the-page-file
+      \endverb
+      \warn{\item misc entry 'MicrosoftLearn.21.03.2023' (ref/citavi.bib): Invalid format '15.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{MicrosoftLearn.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=614e7789840996b5d882c0cad1ad0971}{%
+           family={{Microsoft Learn}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{fullhash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{bibnamehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{authorbibnamehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{authornamehash}{614e7789840996b5d882c0cad1ad0971}
+      \strng{authorfullhash}{614e7789840996b5d882c0cad1ad0971}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to disable Windows 10 DNS Cache services - Microsoft Q{\&}A}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/en-us/answers/questions/47441/how-to-disable-windows-10-dns-cache-services
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/en-us/answers/questions/47441/how-to-disable-windows-10-dns-cache-services
+      \endverb
+      \warn{\item misc entry 'MicrosoftLearn.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Mills.2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e986c1a6a9073d6508a93ea685fcb17b}{%
+           family={Mills},
+           familyi={M\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e986c1a6a9073d6508a93ea685fcb17b}
+      \strng{fullhash}{e986c1a6a9073d6508a93ea685fcb17b}
+      \strng{bibnamehash}{e986c1a6a9073d6508a93ea685fcb17b}
+      \strng{authorbibnamehash}{e986c1a6a9073d6508a93ea685fcb17b}
+      \strng{authornamehash}{e986c1a6a9073d6508a93ea685fcb17b}
+      \strng{authorfullhash}{e986c1a6a9073d6508a93ea685fcb17b}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Every time web browsers are becoming heavier programs. And if we have a relatively old computer, this shows. Web browser developers are constantly looking for new ways to optimize and speed up their browsers to offer users the best possible experience. And when it comes to startup, it seems that Mozilla has found the key}
+      \field{title}{Skeleton UI, New Firefox Interface to Start up Much Faster | ITIGIC}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette?utm_content=cmp-true
+      \endverb
+      \verb{url}
+      \verb https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette?utm_content=cmp-true
+      \endverb
+      \warn{\item misc entry 'Mills.2021' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Montasari.2015}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=a4a11326398bc2775580ae9e6cab75cd}{%
@@ -533,6 +1023,110 @@
       \field{year}{2015}
       \field{pages}{96\bibrangedash 109}
       \range{pages}{14}
+    \endentry
+    \entry{Mozilla.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=502f1bd97b0e7d80b88e1f45ae1bfdb8}{%
+           family={Mozilla},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{502f1bd97b0e7d80b88e1f45ae1bfdb8}
+      \strng{fullhash}{502f1bd97b0e7d80b88e1f45ae1bfdb8}
+      \strng{bibnamehash}{502f1bd97b0e7d80b88e1f45ae1bfdb8}
+      \strng{authorbibnamehash}{502f1bd97b0e7d80b88e1f45ae1bfdb8}
+      \strng{authornamehash}{502f1bd97b0e7d80b88e1f45ae1bfdb8}
+      \strng{authorfullhash}{502f1bd97b0e7d80b88e1f45ae1bfdb8}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Geschichte des Mozilla-Projekts}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://www.mozilla.org/de/about/history/
+      \endverb
+      \verb{url}
+      \verb https://www.mozilla.org/de/about/history/
+      \endverb
+      \warn{\item misc entry 'Mozilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{MozillaSupport.26.10.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c48b88830fbc64da3c2012ca05982da0}{%
+           family={{Mozilla Support}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c48b88830fbc64da3c2012ca05982da0}
+      \strng{fullhash}{c48b88830fbc64da3c2012ca05982da0}
+      \strng{bibnamehash}{c48b88830fbc64da3c2012ca05982da0}
+      \strng{authorbibnamehash}{c48b88830fbc64da3c2012ca05982da0}
+      \strng{authornamehash}{c48b88830fbc64da3c2012ca05982da0}
+      \strng{authorfullhash}{c48b88830fbc64da3c2012ca05982da0}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AlternateServices.txt: what does this file do?}
+      \field{year}{26.10.2020}
+      \verb{urlraw}
+      \verb https://support.mozilla.org/en-US/questions/1310302
+      \endverb
+      \verb{url}
+      \verb https://support.mozilla.org/en-US/questions/1310302
+      \endverb
+      \warn{\item misc entry 'MozillaSupport.26.10.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{MozillaWiki.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6e27ae14bf7f118bed78f78f7a492aea}{%
+           family={MozillaWiki},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e27ae14bf7f118bed78f78f7a492aea}
+      \strng{fullhash}{6e27ae14bf7f118bed78f78f7a492aea}
+      \strng{bibnamehash}{6e27ae14bf7f118bed78f78f7a492aea}
+      \strng{authorbibnamehash}{6e27ae14bf7f118bed78f78f7a492aea}
+      \strng{authornamehash}{6e27ae14bf7f118bed78f78f7a492aea}
+      \strng{authorfullhash}{6e27ae14bf7f118bed78f78f7a492aea}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{StartupCache - MozillaWiki}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://wiki.mozilla.org/StartupCache
+      \endverb
+      \verb{url}
+      \verb https://wiki.mozilla.org/StartupCache
+      \endverb
+      \warn{\item misc entry 'MozillaWiki.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{mozillazine.29.12.2022}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ab6689a3aba13377de256b5ddb1550e6}{%
+           family={mozillazine},
+           familyi={m\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab6689a3aba13377de256b5ddb1550e6}
+      \strng{fullhash}{ab6689a3aba13377de256b5ddb1550e6}
+      \strng{bibnamehash}{ab6689a3aba13377de256b5ddb1550e6}
+      \strng{authorbibnamehash}{ab6689a3aba13377de256b5ddb1550e6}
+      \strng{authornamehash}{ab6689a3aba13377de256b5ddb1550e6}
+      \strng{authorfullhash}{ab6689a3aba13377de256b5ddb1550e6}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prefs.js file - MozillaZine Knowledge Base}
+      \field{year}{29.12.2022}
+      \verb{urlraw}
+      \verb https://kb.mozillazine.org/Prefs.js_file
+      \endverb
+      \verb{url}
+      \verb https://kb.mozillazine.org/Prefs.js_file
+      \endverb
+      \warn{\item misc entry 'mozillazine.29.12.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Muir.2019}{article}{}
       \name{author}{3}{}{%
@@ -609,6 +1203,33 @@
       \field{pages}{518\bibrangedash 522}
       \range{pages}{5}
     \endentry
+    \entry{Nicholasswhite.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fc23ba94aa088ae7cd80696c37a0f2bb}{%
+           family={Nicholasswhite},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc23ba94aa088ae7cd80696c37a0f2bb}
+      \strng{fullhash}{fc23ba94aa088ae7cd80696c37a0f2bb}
+      \strng{bibnamehash}{fc23ba94aa088ae7cd80696c37a0f2bb}
+      \strng{authorbibnamehash}{fc23ba94aa088ae7cd80696c37a0f2bb}
+      \strng{authornamehash}{fc23ba94aa088ae7cd80696c37a0f2bb}
+      \strng{authorfullhash}{fc23ba94aa088ae7cd80696c37a0f2bb}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Erfahren Sie mehr über das refactoring des SvcHost-Diensts, das in Windows 10 Version 1703 eingeführt wurde.}
+      \field{title}{Diensthostrefactoring in Windows 10 Version 1703 - Windows Application Management}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://learn.microsoft.com/de-de/windows/application-management/svchost-service-refactoring
+      \endverb
+      \verb{url}
+      \verb https://learn.microsoft.com/de-de/windows/application-management/svchost-service-refactoring
+      \endverb
+      \warn{\item misc entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
     \entry{Oh.2011}{article}{}
       \name{author}{3}{}{%
         {{hash=4dded0835c6b0d9d4a565aaab5eadb52}{%
@@ -679,6 +1300,52 @@
       \field{pages}{135\bibrangedash 142}
       \range{pages}{8}
     \endentry
+    \entry{Oracle.2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=30162ed78b6c10f731411f2fc440c24f}{%
+           family={Oracle},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{fullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{bibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorbibnamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authornamehash}{30162ed78b6c10f731411f2fc440c24f}
+      \strng{authorfullhash}{30162ed78b6c10f731411f2fc440c24f}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{1.10. Snapshots}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html
+      \endverb
+      \verb{url}
+      \verb https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html
+      \endverb
+      \warn{\item misc entry 'Oracle.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{dwmWebsite}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=832105a18023a5d63fc3ab2165a179f5}{%
+           family={PCtipps},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{fullhash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{bibnamehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{authorbibnamehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{authornamehash}{832105a18023a5d63fc3ab2165a179f5}
+      \strng{authorfullhash}{832105a18023a5d63fc3ab2165a179f5}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://pctipps.de/dwm-exe/}
+      \field{note}{Zuletzt zugegriffen am 08.06.2023 um 12:29 Uhr}
+      \field{title}{Dwm.exe: Was ist der Desktop Window Manager?}
+    \endentry
     \entry{Perdices.2023}{article}{}
       \name{author}{4}{}{%
         {{hash=3f1b46db2c55aee1f3d23064891b5125}{%
@@ -725,6 +1392,40 @@
       \field{year}{2023}
       \field{pages}{109471}
       \range{pages}{1}
+    \endentry
+    \entry{pogonin2022microsoft}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=8be4b17f48287fdd6bb4b48993ff7106}{%
+           family={Pogonin},
+           familyi={P\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5c4c81fab43e8259989ccbf8ad2183b8}{%
+           family={Korkin},
+           familyi={K\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{fullhash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{bibnamehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{authorbibnamehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{authornamehash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \strng{authorfullhash}{1977ecf8793499bcf9d65bc5c1ba076a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Microsoft Defender Will Be Defended: MemoryRanger Prevents Blinding Windows AV}
+      \field{year}{2022}
+      \verb{doi}
+      \verb https://doi.org/10.48550/arXiv.2210.02821
+      \endverb
+      \verb{eprint}
+      \verb 2210.02821
+      \endverb
     \endentry
     \entry{Rathod.2017}{article}{}
       \name{author}{1}{}{%
@@ -898,6 +1599,238 @@
       \field{year}{2014}
       \field{pages}{380\bibrangedash 389}
       \range{pages}{10}
+    \endentry
+    \entry{SecureDrop.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=14fabda19cf4127e141c2d208461864e}{%
+           family={SecureDrop},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{14fabda19cf4127e141c2d208461864e}
+      \strng{fullhash}{14fabda19cf4127e141c2d208461864e}
+      \strng{bibnamehash}{14fabda19cf4127e141c2d208461864e}
+      \strng{authorbibnamehash}{14fabda19cf4127e141c2d208461864e}
+      \strng{authornamehash}{14fabda19cf4127e141c2d208461864e}
+      \strng{authorfullhash}{14fabda19cf4127e141c2d208461864e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{SecureDrop is an open-source whistleblower submission system that media organizations can install to securely accept documents from anonymous sources. It was originally coded by the late Aaron Swartz and is now managed by Freedom of the Press Foundation.}
+      \field{title}{Share and accept documents securely}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://securedrop.org/
+      \endverb
+      \verb{url}
+      \verb https://securedrop.org/
+      \endverb
+      \warn{\item misc entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{SQLiteTempfiles}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=497757a9c5b2ec17ded656170b51c788}{%
+           family={SQLite},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{fullhash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{bibnamehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{authorbibnamehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{authornamehash}{497757a9c5b2ec17ded656170b51c788}
+      \strng{authorfullhash}{497757a9c5b2ec17ded656170b51c788}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 22:10 Uhr}
+      \field{title}{Temporary Files Used By SQLite}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.sqlite.org/tempfiles.html
+      \endverb
+      \verb{url}
+      \verb https://www.sqlite.org/tempfiles.html
+      \endverb
+    \endentry
+    \entry{Statista.23.05.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={Statista},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Global market share held by leading internet browsers from January 2012 to May 2023}
+      \field{year}{23.05.2023}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/268254/market-share-of-internet-browsers-worldwide-since-2009/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/268254/market-share-of-internet-browsers-worldwide-since-2009/
+      \endverb
+      \warn{\item misc entry 'Statista.23.05.2023' (ref/citavi.bib): Invalid format '13.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{SiHostWebsite}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=aef0c04552fd197fe71b384c4c730b09}{%
+           family={Sylie},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{fullhash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{bibnamehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{authorbibnamehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{authornamehash}{aef0c04552fd197fe71b384c4c730b09}
+      \strng{authorfullhash}{aef0c04552fd197fe71b384c4c730b09}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://de.minitool.com/nachrichten/shell-infrastructure-host-hohe-cpu-auslastung.html}
+      \field{month}{02}
+      \field{note}{Zuletzt zugegriffen am 08.06.2023 um 12:20 Uhr}
+      \field{title}{Lösung: Shell Infrastructure Host hohe CPU-Auslastung [MiniTool]}
+      \field{year}{2023}
+    \endentry
+    \entry{TechSupportGuy.05.06.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=50d87be333ea27a80ee3bd4756ad100c}{%
+           family={{Tech Support Guy}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{50d87be333ea27a80ee3bd4756ad100c}
+      \strng{fullhash}{50d87be333ea27a80ee3bd4756ad100c}
+      \strng{bibnamehash}{50d87be333ea27a80ee3bd4756ad100c}
+      \strng{authorbibnamehash}{50d87be333ea27a80ee3bd4756ad100c}
+      \strng{authornamehash}{50d87be333ea27a80ee3bd4756ad100c}
+      \strng{authorfullhash}{50d87be333ea27a80ee3bd4756ad100c}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In watching a backup run in a Command box in Windows 10, I noticed it was spending a LOT of time copying files in Firefox's Profiles$\backslash$Cache2$\backslash$Entries folder...}
+      \field{title}{What exactly is in Firefox's Cache2 folder?}
+      \field{year}{05.06.2023}
+      \verb{urlraw}
+      \verb https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
+      \endverb
+      \verb{url}
+      \verb https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
+      \endverb
+      \warn{\item misc entry 'TechSupportGuy.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{TILT.25.03.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=6a7e924097be59e91555acf857f9fd1c}{%
+           family={TILT},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a7e924097be59e91555acf857f9fd1c}
+      \strng{fullhash}{6a7e924097be59e91555acf857f9fd1c}
+      \strng{bibnamehash}{6a7e924097be59e91555acf857f9fd1c}
+      \strng{authorbibnamehash}{6a7e924097be59e91555acf857f9fd1c}
+      \strng{authornamehash}{6a7e924097be59e91555acf857f9fd1c}
+      \strng{authorfullhash}{6a7e924097be59e91555acf857f9fd1c}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}{>}{<}link type=}
+      \field{title}{Memory Forensics of a Virtualbox VM · TILT}
+      \field{year}{25.03.2023}
+      \verb{urlraw}
+      \verb https://kollee.github.io/posts/memory-forensics-of-a-virtualbox-vm/
+      \endverb
+      \verb{url}
+      \verb https://kollee.github.io/posts/memory-forensics-of-a-virtualbox-vm/
+      \endverb
+      \warn{\item misc entry 'TILT.25.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{DictionaryWin10Files}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=80f4cb50ea5f5ad8c289b776db7ad55b}{%
+           family={Tkachenko},
+           familyi={T\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{fullhash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{bibnamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{authorbibnamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{authornamehash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \strng{authorfullhash}{80f4cb50ea5f5ad8c289b776db7ad55b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{note}{Zuletzt zugegriffen am 28.05.2023 um 21:59 Uhr}
+      \field{title}{Add or Remove Words in Spell Checking Dictionary in Windows 10}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
+      \endverb
+      \verb{url}
+      \verb https://winaero.com/words-spell-checking-dictionary-windows-10/
+      \endverb
+    \endentry
+    \entry{Tor.24.05.2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cb14b8a3c25fe43b596b49b4643ff223}{%
+           family={Tor},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb14b8a3c25fe43b596b49b4643ff223}
+      \strng{fullhash}{cb14b8a3c25fe43b596b49b4643ff223}
+      \strng{bibnamehash}{cb14b8a3c25fe43b596b49b4643ff223}
+      \strng{authorbibnamehash}{cb14b8a3c25fe43b596b49b4643ff223}
+      \strng{authornamehash}{cb14b8a3c25fe43b596b49b4643ff223}
+      \strng{authorfullhash}{cb14b8a3c25fe43b596b49b4643ff223}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Herunterladen | Verteidige dich gegen Verfolgung und Überwachung. Umgehe die Zensur.}
+      \field{title}{Das Tor Project | Privatsphäre {\&} Freiheit Online}
+      \field{year}{24.05.2023}
+      \verb{urlraw}
+      \verb https://www.torproject.org/de/download/
+      \endverb
+      \verb{url}
+      \verb https://www.torproject.org/de/download/
+      \endverb
+      \warn{\item misc entry 'Tor.24.05.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{hiberfile}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a432ba3efe015d8f0a090c9c0ecc2010}{%
+           family={WinTotal},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{fullhash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{bibnamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{authorbibnamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{authornamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \strng{authorfullhash}{a432ba3efe015d8f0a090c9c0ecc2010}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{https://www.wintotal.de/tipp/hiberfil-sys/}
+      \field{note}{Zuletzt zugegriffen am 15.06.2023 um 23:02 Uhr}
+      \field{title}{Was ist hiberfil.sys? - So können Sie die Datei löschen oder verschieben}
     \endentry
     \entry{Yusoff.2011}{article}{}
       \name{author}{3}{}{%
