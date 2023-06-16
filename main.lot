@@ -33,9 +33,9 @@
 \contentsline {table}{\numberline {D.1}{\ignorespaces Chrome alle ``WriteFile``-Operationen des Logfiles 1\relax }}{77}{table.caption.172}%
 \contentsline {table}{\numberline {D.2}{\ignorespaces Chrome alle ``WriteFile``-Operationen des Logfiles 2\relax }}{78}{table.caption.173}%
 \contentsline {table}{\numberline {D.3}{\ignorespaces Veränderung der Firefox SQLite-Datenbänke während der Versuchsdurchführung\relax }}{81}{table.caption.178}%
-\contentsline {table}{\numberline {E.1}{\ignorespaces Brave alle ``WriteFile``-Operationen des Logfiles 1\relax }}{85}{table.caption.194}%
-\contentsline {table}{\numberline {E.2}{\ignorespaces Brave alle \glqq {}ComponentUnpacker\grqq {}-Dateien des Logfiles 1\relax }}{86}{table.caption.195}%
-\contentsline {table}{\numberline {E.3}{\ignorespaces Brave alle ``WriteFile``-Operationen des Logfiles 2\relax }}{87}{table.caption.196}%
-\contentsline {table}{\numberline {E.4}{\ignorespaces Veränderung der Firefox SQLite-Datenbänke während der Versuchsdurchführung\relax }}{88}{table.caption.199}%
+\contentsline {table}{\numberline {E.1}{\ignorespaces Brave alle ``WriteFile``-Operationen des Logfiles 1\relax }}{85}{table.caption.193}%
+\contentsline {table}{\numberline {E.2}{\ignorespaces Brave alle \glqq {}ComponentUnpacker\grqq {}-Dateien des Logfiles 1\relax }}{86}{table.caption.194}%
+\contentsline {table}{\numberline {E.3}{\ignorespaces Brave alle ``WriteFile``-Operationen des Logfiles 2\relax }}{87}{table.caption.195}%
+\contentsline {table}{\numberline {E.4}{\ignorespaces Veränderung der Firefox SQLite-Datenbänke während der Versuchsdurchführung\relax }}{88}{table.caption.198}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

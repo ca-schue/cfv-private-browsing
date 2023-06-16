@@ -38,12 +38,14 @@
 \contentsline {subsection}{\numberline {C.3}Registry}{75}{subsection.1..3.3}%
 \contentsline {section}{\numberline {D}Ausführliche Analyse: Chrome}{76}{section.1..4}%
 \contentsline {subsection}{\numberline {D.1}Common Locations}{76}{subsection.1..4.1}%
-\contentsline {paragraph}{\nonumberline Web Bookmarks}{82}{paragraph*.183}%
+\contentsline {subsection}{\numberline {D.2}Uncommon Locations}{82}{subsection.1..4.2}%
+\contentsline {paragraph}{\nonumberline Web Bookmarks}{82}{paragraph*.182}%
 \contentsline {section}{\numberline {E}Ausführliche Analyse: Brave}{83}{section.1..5}%
 \contentsline {subsection}{\numberline {E.1}Common Locations}{83}{subsection.1..5.1}%
-\contentsline {paragraph}{\nonumberline Web Bookmarks}{89}{paragraph*.204}%
-\contentsline {chapter}{Abbildungsverzeichnis}{91}{section*.212}%
-\contentsline {chapter}{Tabellenverzeichnis}{93}{chapter*.213}%
-\contentsline {chapter}{Literaturverzeichnis}{95}{chapter*.214}%
-\contentsline {chapter}{\nonumberline Literatur}{95}{chapter*.215}%
+\contentsline {subsection}{\numberline {E.2}Uncommon Locations}{89}{subsection.1..5.2}%
+\contentsline {paragraph}{\nonumberline Web Bookmarks}{89}{paragraph*.202}%
+\contentsline {chapter}{Abbildungsverzeichnis}{91}{section*.210}%
+\contentsline {chapter}{Tabellenverzeichnis}{93}{chapter*.211}%
+\contentsline {chapter}{Literaturverzeichnis}{95}{chapter*.212}%
+\contentsline {chapter}{\nonumberline Literatur}{95}{chapter*.213}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
