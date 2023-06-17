@@ -1,399 +1,56 @@
 \chapter{Theoretischer Hintergrund}\label{chap:theorie}
 
 %Einleitend werden Struktur, Motivation und die abgeleiteten Forschungsfragen diskutiert.
-Zunächst werden die Begriffe \textit{Privat Browsing}, das \textit{Angreifermodell} sowie die \textit{Artefakte des private Browsings} erläutert.
+Nachfolgend werden die für das Verständnis dieser Arbeit relevanten Begriffe \textit{Private Browsing}, \textit{Angreifermodell} sowie \textit{Private-Browsing-Artefakte} erläutert.
 
 \section{Private Browsing}\label{chap:theorie-private-browsing}
-\begin{comment}
-Definition Web Browser: 	
-	> \cite{Rochmadi.2017}
-		•	Der Webbrowser ist eine Softwareanwendung zum Abrufen, Präsentieren und Durchsuchen von Informationsressourcen im Internet oder World Wide Web (WWW).
-		•	Eine Informationsquelle wird durch einen Uniform Resource Identifier (URI) identifiziert und kann Webseiten, Bilder, Videos oder andere Inhalte enthalten.
-		
-	> \cite{Izzati.2022}
-		•	Ein Webbrowser ist eine Software, die es Benutzern ermöglicht, das Internet über den von ihrem Dienstanbieter bereitgestellten Zugang zu nutzen.
-		•	Die bekanntesten Webbrowser sind Google Chrome, Mozilla Firefox, Microsoft Edge und Brave.
-		•	Webbrowser werden für alltägliche Aktivitäten wie das Anschauen von Videos, das Durchsuchen von Webseiten, das Posten von Bildern oder Videos in sozialen Medien und das Herunterladen und Hochladen von Dateien genutzt.
-		•	Browser-Modi: Es gibt zwei verschiedene Browser-Modi: den normalen Browser-Modus und den privaten Browser-Modus.
-\end{comment}
-Um den Begriff des private Browsing zu definieren, ist es zunächst wichtig, einen Browser und den \glqq{}normalen\grqq{} Modus einzuführen.\\
-Ein Web Browser, kurz \textit{Browser}, ist eine Softwareanwendung zum Abrufen und Durchsuchen von Informationsquellen im Internet oder World Wide Web (WWW) \cite{Rochmadi.2017}. Izuati und Ab Rahman \cite{Izzati.2022} bezeichnen ihn als eine Software, die es Benutzern ermöglicht, das Internet über den von ihrem Dienstanbieter bereitgestellten Zugang zu nutzen. Sie werden für alltägliche Aktivitäten wie das Anschauen von Videos, das Durchsuchen von Websiten, das Posten von Bildern oder Videos in sozialen Medien und das Herunterladen von Dateien genutzt. Die bekanntesten Webbrowser sind dabei Google Chrome, Mozilla Firefox, Microsoft Edge und Brave \cite{Izzati.2022}.\\
-Beim \glqq{}normalen\grqq{} Browsen speichert der Browser dabei alle Browsing-Aktivitäten wie den  Cache, Cookies, Suchbegriffe und URL-Verlauf auf dem Computer \cite{Izzati.2022}. Um das zu verhindern wurde eine neue Funktion namens \glqq{}Private Browsing\grqq{} in die Webbrowser mitaufgenommen, welche den Internetnutzern eine größere Kontrolle über ihre Privatsphäre und das Surfen ohne Rückstände von Datenspuren auf dem Computer ermöglicht \cite{Said.2011}. Dabei unterscheidet man zwei wesentliche Ziele des privaten Browsings. Erstens sollen besuchte Webseiten keine Spuren auf dem lokalen Computer des Benutzers hinterlassen bzw. diese nach der Browsing-Session zu löschen, wie beispielsweise den Browsing-Verlauf. Zweitens soll die Anonymität des Benutzers vor einer Website gewährleistet werden, indem verhindert wird, dass Aktivitäten von Benutzern im privaten und im öffentlichen Modus verknüpft werden \cite{Aggarwal.2010,Montasari.2015}. Das Private-Browsing ist somit abzugrenzen von Anwendungen wie Tor, welche die Verfolgung und Überwachung aus der Ferne verhindern \cite{Horsman.2019}.\\
-Der private Browsing-Modus wurde erstmals 2005 mit Apple Safari 2.0 eingeführt \cite{Said.2011}. Drei Jahre später folgte in Google Chrome der \glqq{}Incognito-Modus\grqq{} und der \glqq{}InPrivate Browsing Modus\grqq{} in Internet Explorer. Im Jahr 2009 führte Mozilla Firefox 3.5 seine Version des privaten Browsing-Modus ein \cite{Montasari.2015}.\\
-\begin{comment}
-Definition „Normal Browsing“:
-	> \cite{Izzati.2022}	
-		•	Der normale Browser-Modus speichert alle Browser-Aktivitäten wie Caches, Cookies, Suchbegriffe, Login-Daten und URL-Verlauf auf dem Computer.
-		•	Die Cookies speichern Details des Benutzers wie z.B. Browsing-Muster, die anzeigen können, welche Websites der Benutzer häufig besucht oder welche Videos er/sie regelmäßig ansieht.
-	
 
-Definition “Private Browsing”: 	
-	> \cite{Said.2011}
-		-	Deshalb wurde eine neue Funktion in die Webbrowser aufgenommen, die den Internetnutzern eine größere Kontrolle über ihre Privatsphäre ermöglicht. Diese Funktion ist als "Private Browsing" bekannt und soll es den Nutzern ermöglichen, im Internet zu surfen, ohne Datenspuren auf ihrem Computer zu hinterlassen.
-	
-	> \cite{Horsman.2019}
-		-	Private Browsing" (PB) ist ein allgemeiner Begriff, der sich auf Mechanismen, die verhindern sollen, dass ein Nutzer Beweise für sein Web-Browsing-Verhaltens auf seinem lokalen Gerät gespeichert werden.
-		-	Von Anfang an muss betont werden, dass sich privates Surfen in diesem Zusammenhang nur auf Plattformen bezieht, die lokale Privatsphäre bieten, und dass diese von Anwendungen wie Tor (siehe https://www.torproject.org/) zu unterscheiden sind, die sich ebenfalls auf die Online-Privatsphäre konzentrieren, sowie von Einrichtungen, die die Verfolgung und Überwachung aus der Ferne verhindern, wie z. B. der Tracking Preference Expression des W3C (auch bekannt als "Do Not Track").
-		-	Je nach Browser des Nutzers wird eine zugehörige PB-Funktion mit unterschiedlichen Begriffen bezeichnet: "Inkognito-Modus" in Chrome, "InPrivate" in Edge und dem inzwischen nicht mehr unterstützten Internet Explorer sowie ein "privates Fenster" in Firefox. 
+Ein \textit{Web Browser}, kurz \textit{Browser}, ist eine Softwareanwendung zum Abrufen und Durchsuchen von Informationsquellen im Internet \cite{Rochmadi.2017}. Izuati und Ab Rahman \cite{Izzati.2022} bezeichnen ihn als eine Software, die es Benutzern ermöglicht, das Internet über den von ihrem Dienstanbieter bereitgestellten Zugang zu nutzen. Sie werden für alltägliche Aktivitäten wie das Anschauen von Videos, das Durchsuchen von Websiten, das Posten von Bildern oder Videos in sozialen Medien und das Herunterladen von Dateien genutzt. \cite{Izzati.2022}
+%Die bekanntesten Webbrowser sind dabei Google Chrome, Mozilla Firefox, Microsoft Edge und Brave \cite{Izzati.2022}.\\
+Beim \textit{normalen} Browsen speichert der Browser alle entstehenden Dateien wie Cache, Cookies, sowie den Suchverlauf auf dem Computer \cite{Izzati.2022}. Um das zu verhindern wurde der sogenannte \textit{private Modus} bei Webbrowsern eingeführt. Diese Funktion ermöglicht das \textit{Private Browsing}, welche den Internetnutzern eine größere Kontrolle über ihre Privatsphäre gibt, ohne Rückstände von Datenspuren auf dem Computer zu hinterlassen \cite{Said.2011}. Der private Browsing-Modus wurde erstmals 2005 mit Apple Safari 2.0 eingeführt \cite{Said.2011}. Drei Jahre später folgte in Google Chrome der \textit{Incognito-Modus} sowie \textit{InPrivate Browsing Modus} für den Internet Explorer. Im Jahr 2009 führte Mozilla Firefox 3.5 mit dem \textit{Privaten Modus} seine Version des privaten Browsing-Modus ein \cite{Montasari.2015}.
+
+Das genaue Ziel des privaten Modus unterscheidet sich je nach Browser. Beispielsweise sollen bei Mozilla Firefox und Google Chrome besuchte Webseiten ausschließlich auf dem lokalen Computer des Benutzers hinterlassen. \cite{MozillaWiki.05.06.2023,GoogleChrome.} Manche Browser erweitern diesen Schutz, indem sie verhindern, dass beispielsweise Webseitenbetreiber auf Informationen des Private-Browsing Nutzers zugreifen. \cite{Tor.24.05.2023}
+
+Die Nutzer des privaten Modus lassen sich in unterschiedliche Interessensgruppen aufteilen. 
+Forensische Ermittler versuchen über Rückstände durchgeführter Browsing-Sessions, Kriminelle mithilfe forensischer Tools und Techniken gezielt zu überführen. \cite{Montasari.2015}. Kriminelle versuchen hingegen gezielt, ihre illegalen Aktivitäten mithilfe des privaten Modus zu verbergen \cite{Mahlous.2020}. 
+Herkömmliche Nutzer verwenden den privaten Modus zum Schutz der Privatsphäre. Dieser stellt zusammen mit dem Löschen des Verlaufes die beliebteste Online-Datenschutzmaßnahme dar \cite{Horsman.2019}. 
+
+\section{Browser-Forensik und Browsing-Artefakte}\label{chap:theorie-browser-forensics-artefakte} % Browser Forensiks mit Artefakte 
+
+%Bevor der Begriff der Browser-Forensik eingeführt wird, ist es zunächst wichtig, die digitale Forensik einzuführen. \\
+Die \textit{digitale Forensik} konzentriert sich auf die Anwendung forensischer Techniken und Methoden zur Untersuchung von digitalen Geräten, Netzwerken und elektronischen Daten, um digitale Beweise für die strafrechtliche Verfolgung von kriminellen Onlineaktivitäten zu sammeln.
+Die gilt es Beweise vollständig und in ihrem Originalzustand zu sichern, um vor Gericht zulässig zu sein. Dazu muss insbesondere der Prozess der Erwerbung, Untersuchung, Analyse sowie Berichterstattung digitaler Beweise forensisch einwandfrei durchgeführt werden.  \cite{Izzati.2022}.
+
+Die \textit{Browser-Forensik} sammelt und identifiziert Beweise und Informationen im Zusammenhang mit einem Verbrechen aus wiederhergestellten Spuren von Browser-Sitzungen. 
+%Diese Art der Forensik wird für Ermittler immer wichtiger, da der Suchverlauf, die Download-Aktivität und Seitenaufrufe das Verständnis für das kriminelle Motiv verbessern können. 
+Dabei werden nach Informationen über die durchgeführten Browsing-Aktivitäten gesucht, die sogenannten \textit{Browsing-Artefakte}. 
+Dies umfasst beispielsweise lokale Dateien, die Informationen wie den Suchverlauf, Cookies, Caches und andere sensiblen Daten enthält. Auch Webseitenbetreiben können Browsing-Artefakte speichern, indem Informationen über die Eigenschaften und das Verhalten der Webseitenbesucher gespeichert werden. Im Rahmen dieser Arbeit werden ausschließlich lokale Browsing-Artefakte untersucht.  \cite{Izzati.2022}
+Browsing-Artefakte, die sensible Informationen während einer Private-Browsing-Sitzung speichern, werden als \textit{Private-Browsing-Artefakte}, kurz \textit{PB-Artefakte} bezeichnet.
+
+Aufgrund der \textit{Berweisauthentifizierung} muss ein gefundenes Browsing-Artefakt eindeutig einer Browsing-Aktivität zugeordnet werden, um einen Verdächtigen aufgrund seiner Online-Aktivitäten zu überführen \cite{Mahlous.2020}. 
 
 
 
-
-Geschichte Private Browsing:
-	> \cite {Said.2011}
-		- Die ADbC-Funktion "Privater Browsing-Modus" wurde erstmals 2005 mit Apple Safari 2.0 eingeführt. Drei Jahre später folgte Google Chrome 1.0 (Inkognito). Später, im Jahr 2009, führten Microsoft Internet Explorer 8 und Mozilla Firefox 3.5 ihre Versionen von privaten Browsing-Modi ein, die als In Private bzw. Private Browsing bekannt sind (Dan, 2010).
-	
-	> \cite{Montasari.2015}
-		•	Private Browsing-Modi haben je nach Browser unterschiedliche Namen, z.B. "Incognito-Modus" in Chrome, "InPrivate Browsing" in Internet Explorer, "Private Browsing" in Firefox und Safari.
-		•	erstmals 2005 von Apple Safari eingeführt, gefolgt von Google Chrome und Microsoft in 2008 und Mozilla in 2009.
-\end{comment}
-\begin{comment}
-Grund des privaten Modus:
-	> \cite{Izzati.2022} 
-		•	Private Browsing Mode wurde entwickelt, um die Privatsphäre und Anonymität beim Surfen im Internet zu verbessern, indem keine Spuren und Informationen von Browsing-Aktivitäten hinterlassen werden.
-		•	Alle neuen Caches, die während des Surfens gespeichert wurden, werden entfernt, sobald der Browser geschlossen wird.
-		•	Jeder Webbrowser bietet einen privaten Browser-Modus mit unterschiedlichen Bezeichnungen an, wie "InPrivate Browsing" für Internet Explorer und Microsoft Edge, "Incognito-Modus" für Google Chrome und "Private Browsing" für Mozilla Firefox.
-	> \cite{Aggarwal.2010} zwei wesentliche Ziele des privaten Browsing: 
-		1. (local) Besuchte Websites sollten im privaten Modus keine Spuren auf dem Computer des Benutzers hinterlassen. Wenn ein Familienmitglied den Browserverlauf überprüft, sollte keine Evidenz von im privaten Modus besuchten Websites gefunden werden können.
-		2. (website) Benutzer möchten möglicherweise ihre Identität vor den Websites, die sie besuchen, verbergen, indem sie es beispielsweise für Websites schwierig machen, die Aktivitäten des Benutzers im privaten Modus mit seinen Aktivitäten im öffentlichen Modus zu verknüpfen. Dies wird als Datenschutz vor einem Webangreifer bezeichnet.
-	> \cite{Montasari.2015} 
-		•	Private Modus Browser sollten in der Lage sein, die von besuchten Websites hinterlassenen Artefakte auf dem Computer des Benutzers zu verhindern.
-		•	Browser sollten es Websites unmöglich machen, herauszufinden, ob ein bestimmter Benutzer sie zuvor besucht hat, indem sie verhindern, dass Websites die Aktivitäten von Benutzern im privaten und öffentlichen Modus verknüpfen.
-		
-Dabei unterscheidet man zwei wesentliche Ziele des privaten Browsings. Erstens sollen besuchte Websiten keine Spuren auf dem lokanel Computer des Benutzers hinterlassen bzw. diese nach der Browsing-Session zu löschen, wie beispielsweise den Browsing-Verlauf. Zweitens soll die Anonymität des Benutzers vor einer Website gewährleistet werden, indem verhindert wird, dass Aktivitäten von Benutzern im privaten und im öffentlichen Modus verknüpft werden \cite{Aggarwal.2010,Montasari.2015}.   
-%\end{comment}
-Stakeholder Private Browsing:
-	> Forensiker 
-		- \cite{Mahlous.2020}
-			•	Die Entwicklung von Datenschutzfunktionen in Browsern stellt eine Herausforderung für digitale Forensiker dar, die Beweismittel sammeln möchten, um Kriminelle zu überführen.
-		- \cite{Horsman.2019}
-			•	Durch die Möglichkeit des privaten Browsens besteht eine erhöhte Gefahr für illegale und schädliche Online-Aktivitäten.
-			•	Die meisten privaten Browsing-Modi sind so konzipiert, dass sie lokal privat sind und Daten, die auf das Surfverhalten des Benutzers hinweisen, nicht auf dem Gerät gespeichert werden.
-			•	Diese Handlungen können die Verfügbarkeit von Beweismaterial beeinträchtigen und stellen eine Herausforderung für Untersuchungen dar.
-		- \cite{Horsman.2019} 
-			• Private browsing (PB) ist eine Funktion, die seit langem auf dem Radar von forensischen Praktikern steht.
-			• Risiko: PB kann dazu führen, dass potenziell beweiskräftiger Inhalt nicht auf einem lokalen Gerät gespeichert wird, was zu Untersuchungsbedenken führt.
-			•	  PB selbst hat viele legitime Anwendungen und ist nicht per se anti-forensisch, kann aber mit anti-forensischer Absicht verwendet werden.
-			•	Fehlende Internetinhalte stellen ein Problem für Beweissammlung
-			•	Private Browsing-Modi sollten die Aktivität des Nutzers vor forensischen Tools verbergen 
-		
-	
-	> Kriminelle: 
-		- \cite{Mahlous.2020}
-			•	Kriminelle nutzen vermehrt private Browser, um ihre Spuren zu verwischen und ihre illegalen Handlungen zu verbergen.
-			•	Cyberkriminelle nutzen Private Browsing-Modi, um digitale Spuren auf dem Gerät zu verwischen und forensische Ermittler mit leeren Händen dastehen zu lassen.	
-	> Nutzerperspektive:
-		- \cite{Horsman.2019}
-			•	Die Verwendung von PB wurde als die beliebteste Form der Online-Privatsphäre weltweit identifiziert.
-			•	Aufgrund der gestiegenen Sensibilität und Öffentlichkeit für den Schutz der Privatsphäre und die Regulierung des eigenen digitalen Fußabdrucks im Internet werden PB-Technologien wahrscheinlich häufiger auf den Geräten der Nutzer eingesetzt. 
-			•	Auch wenn es schwierig ist, endgültige Nutzungsstatistiken für solche Aktionen zu erstellen, bietet der Konsens über den Online-Datenschutz einen Einblick. Im Jahr 2016 wurde die Verwendung eines PB-Fensters als die weltweit beliebteste Form der Online-Datenschutzmaßnahme identifiziert [1]. Allein in den USA nutzen Berichten zufolge rund 33 \% der Nutzer ein PB-Fenster, wobei über 70 \% zugeben, ihren Internetverlauf zu löschen [2].
-			
-		- \cite{Horsman.2019} •	Die PB-Technologie wird aufgrund der gesteigerten Sensibilität und öffentlichen Aufmerksamkeit für den Schutz der Privatsphäre voraussichtlich häufiger auf Geräten verwendet.
-		- \cite{Said.2011} In den letzten Jahren (~2010) haben jedoch viele der bekannten Webbrowser-Hersteller ihre Besorgnis über die Privatsphäre der Nutzer beim Surfen im Internet verstärkt.
-		- Tatsächliche Gründe: \cite{Montasari.2015} in \cite{Aggarwal.2010} Experiment von Aggarwal et al.: Werbung auf Ad-Netzwerken geschaltet wurde, um verschiedene Kategorien von Websites einschließlich Erwachsenen- und Geschenk-Websites zu bewerben, um die Nutzung des privaten Modus mit der Art der besuchten Website zu korrelieren.
-			--> Browsing-Modus auf Erwachsenen-Websites beliebter war als auf Geschenk-Websites.
-	> Herstellerperspektive:
-		- \cite{Montasari.2015} Angeblich lt. Hersteller: 
-			o	Einkaufen von Überraschungsgeschenken auf einem Familien-PC 
-			o	Planung von Überraschungspartys 
-				
-
-Stakeholder Private Browsing:
-	> "Forensicher Ermittler"
-		- \cite{Montasari.2015}
-			•	forensischer Ermittler kann forensische Browsing-Artefakte mit forensischen Tools und Techniken wiederherstellen
-	> "Nutzer": 
-		- \cite{Said.2011}
-			>	Tatsächlich ergab eine Studie, dass Private Browsing auf Websites für Erwachsene beliebter ist als auf Websites für den Geschenkekauf oder für Nachrichten. Dies deutet darauf hin, dass die Anbieter von Webbrowsern den Hauptnutzen dieses Tools möglicherweise falsch einschätzen, wenn sie es als ein Tool zum Kauf von Überraschungsgeschenken beschreiben (Aggarwal, Boneh, Bursztein, und Jackson, 2010).
-	> "Browser Entwickler"
-		- \cite{Mahlous.2020}
-			Die Entwickler von Browsern haben den Mangel an Benutzerdatenschutz erkannt und einen privaten Browsermodus eingeführt, der das Schreiben von Browserdaten auf die Festplatte einschränkt oder idealerweise verhindert.
-		- \cite{Said.2011}
-			Einem Artikel zufolge (Belani, Jones, 2005) behaupten die Hersteller all dieser Webbrowser, dass keine der besuchten Websites, Formularfelddaten, in die Adressleiste eingegebenen Adressen, besuchten Links und Suchanfragen auf dem lokalen Computer des Nutzers gespeichert werden (Brookman, 2010).
-\end{comment}
-Die wichtigsten Stakeholder, also Benutzer bzw. Interessensgruppen, des privaten Modus sind forensische Ermittler, Benutzer, Browser-Entwickler und Kriminelle. Forensische Ermittler versuchen dabei, Browsing Artefakte, also Rückstände durchgeführter Browsing-Sessions, mit forensischen Tools und Techniken wiederherzustellen, um damit Kriminelle überführen zu können \cite{Montasari.2015}. Kriminelle versuchen dabei gezielt, ihre Spuren von illegalen Aktivitäten mittels des privaten Modus zu verbergen \cite{Mahlous.2020}. Aus Nutzerperspektive ist es die weltweit beliebteste Form der Online-Datenschutzmaßnahme und geht direkt einher mit dem Löschen des Verlaufes \cite{Horsman.2019}. Die Entwickler der Browser haben diesen Modus aufgrund des mangelnden Benutzerdatenschutzes eingeführt und wollen diesen damit garantieren \cite{Mahlous.2020}. \\
+%Unterschieden kann bei der forensischen Untersuchung dann zwischen der Live und Dead Forensik. Bei der Live Forensik wird im Gegensatz zur traditionellen (dead) Forensik versucht, flüchtige Daten aufzubewahren (RAM, Caches) und Gegenmaßnahmen für verschlüsselte Dateien auf einem Live-System zu ergreifen. \cite{Gupta.2013}. Eine große Herausforderung dabei ist das Kontaminieren von Beweismitteln, was während des Datenerfassungsprozesses geschieht \cite{Gupta.2013}, wie das Ausführen der Software zum Speichern des Arbeitsspeichers, welche selbst im RAM ausgeführt wird. Bei der Dead Forensik hingegen wird der Computer oder das Gerät, das untersucht werden soll, zuerst heruntergefahren, bevor das Speicherabbild erstellt wird bzw. die Datenextraktion beginnt \cite{Izzati.2022}.
+%
+%Da nun die wichtigsten Begriffe erklärt wurden, folgt anschließend das Ziel dieser Arbeit.
+%
 
 \section{Angreifermodell}\label{chap:theorie-angreifermodell}
 
-Nachdem Private-Browsing jetzt eingeführt wurde, muss nun betrachtet werden, welche Arten es grundsätzlich gibt, um das Browsing-Scenario aufzuzeichnen bzw. zu rekonstruieren, falls die Durchführung bereits in der Vergangenheit liegt.\\
-Eine Art des Angriffes ist der sogenannte \glqq{}Local Attacker\grqq{}. Dieser kann ein forensischer Prüfer, ein Familienmitglied oder Freund sein, welcher physischen Zugriff auf den Computer des Benutzer besitzt und dort beispielsweise versucht, auf den Browserverlauf zuzugreifen. Dies geschieht jedoch explizit, nachdem der Benutzer den privaten Modus verlässt. Erst danach erhält der Angreifer die vollständige Kontrolle über den Computer. Somit ist ein Zugriff auf die Maschine des Benutzers vor dem privaten Surfen ausgeschlossen, was die Sicherheit gegen einen lokalen Angreifer unmöglich macht, beispielsweise durch eine vorherige Installation eines Keyloggers \cite{Aggarwal.2010}.\\
-Eine weitere Art des Angriffes auf das durchgeführte Browsing-Szenario ist der sogenannte \glqq{}Web Attacker\grqq{}. Dieser versucht Onlineaktivitäten des Benutzers im privaten Modus zu verfolgen und zu identifizieren. Dabei kann mittels Tracking-Tools oder durch das Sammeln von Informationen über die IP-Adresse des Benutzers versucht werden, diesen zu identifizieren. Dies kann zum Beispiel der ISP sein, welcher den Datenverkehr der Kunden verfolgt, um die Daten für Marketingzwecke zu monetarisieren, sofern sie anonymisiert und mit Zustimmung der Kunden erfolgt \cite{Aggarwal.2010}. Ein Web-Attacker hat jedoch im Gegensatz zum lokalen Angreifer keinen tatsächlichen physischen Zugriff auf den Computer, von welchem aus das Browsing durchgeführt wurde.
+In der Browser-Forensik bezieht sich das \textit{Angreifermodell} auf die spezifischen Annahmen und Eigenschaften eines potenziellen Angreifers, der auf Browsing-Artefakte abzielt. Aggrawal et al. definierten zwei anzunehmenden Angreifer in der Browser-Forensik.
 
-Nachdem bereits des öfteren über ein Browser-Szenario oder über Browsing-Aktivitäten gesprochen wurde, gilt es nun noch zu definieren, welche Überreste, auch Artefakte genannt, bei einem solchen entstehen können.
+Der sogenannte \textit{Web Attacker} versucht Onlineaktivitäten des Benutzers außerhalb des lokalen Computers zu verfolgen und zu identifizieren. Zum Beispiel kann mittels Tracking-Tools oder durch das Sammeln von Informationen über die IP-Adressen versucht werden, einzelne Benutzer sowie deren Aktivitäten zu identifizieren und nachzuverfolgen. So kann der Internetdienstanbieter den Datenverkehr der Kunden verfolgen, um die Daten unter Zustimmung der Kunden für Marketingzwecke zu monetarisieren \cite{Aggarwal.2010}. 
 
-\begin{comment}
-Definition Local Attacker nach \cite{Aggarwal.2010}:
-	-	Z.B. Forensischer Prüfer
-	-	hat physischen Zugriff auf den Computer des Benutzers 
-	-	versucht, auf dessen privaten Browserverlauf zuzugreifen. 
-	-	beispielsweise ein Familienmitglied oder ein Freund sein, der den Computer des Benutzers nutzt, um auf dessen Browserverlauf zuzugreifen. 
-	-	kann darauf installierte Programme verwenden, um Informationen zu sammeln.
-	-	hat keinen Zugriff auf die Maschine des Benutzers, bevor der Benutzer das private Surfen beendet hat. Ohne diese Einschränkung ist Sicherheit gegen einen lokalen Angreifer unmöglich. (z.B: Keylogger installieren, Benutzeraktionen aufzeichnen)
-	-	Durch die Beschränkung des lokalen Angreifers auf "forensische Untersuchungen nach dem Ereignis" kann man hoffen, Sicherheit zu gewährleisten, indem der Browser persistenten Zustandsänderungen während einer privaten Surfsitzung ausreichend löscht.
-	-	Der Angreifer wartet, bis der Benutzer den privaten Browsing-Modus verlässt, und erhält dann die vollständige Kontrolle über die Maschine. Dies bedeutet, dass der Angreifer auf forensische Daten angewiesen ist.
-	-	Während der aktiven Phase kann der Angreifer nicht mit Netzwerkelementen kommunizieren, die Informationen über die Aktivitäten des Benutzers im privaten Modus enthalten. Dies bedeutet, dass die Implementierung von Browser-seitigen Datenschutzmodi untersucht wird, nicht die serverseitigen Datenschutzmodi.
-	
-	-	Das Ziel des Angreifers besteht darin, für eine bestimmte Menge von HTTP-Anfragen, die er wählt, festzustellen, ob der Browser eine dieser Anfragen im privaten Browsing-Modus ausgeführt hat oder nicht. Wenn der lokale Angreifer dieses Ziel nicht erreichen kann, gilt die Implementierung des privaten Browsings als sicher.
-	-> Local Attacker weiß, wonach er sucht!
-	
-	- Es wird darauf hingewiesen, dass die Definition impliziert, dass der Angreifer nicht feststellen kann, welche Websites der Benutzer besucht hat oder was der Benutzer auf einer bestimmten Website getan hat. Darüber hinaus wird auf die Eigenschaften des privaten Browsings nicht formal eingegangen, wenn der Benutzer den privaten Browsing-Modus nie verlässt.
+%Ein Web Attacker hat jedoch im Gegensatz zum lokalen Angreifer keinen tatsächlichen physischen Zugriff auf den Computer, von welchem aus das Browsing durchgeführt wurde.
 
-Problem: Local Attacker muss überarbeitet werden: \cite{Montasari.2015}
-	•	Es wurde festgestellt, dass das Konzept des lokalen Angreifers nicht ausreichend untersucht wurde und dass neue Experimente durchgeführt werden müssen, um ein besseres Verständnis für das Phänomen zu erlangen und herauszufinden, wie sich diese Funktion auf digitale forensische Untersuchungen auswirken könnte.
+Im Gegensatz dazu hat der \textit{Local Attacker} physischen Zugriff auf den Computer, von welchem aus das Browsing durchgeführt wurde. Dies kann ein forensischer Prüfer, ein Familienmitglied oder Freund sein, der  beispielsweise versucht, auf den Browserverlauf zuzugreifen. 
+Wie im Ziel dieser Arbeit definiert, wird für dieses forensische Experiment der Local Attacker als Angreifermodell angenommen. 
+
+In einem realistischen Forensischen Szenario hätte der Local Attacker erst Zugriff auf den Computer, nachdem der Benutzer den privaten Modus verlässt, was beispielsweise die Aufzeichnung von Browsing-Aktivitäten ausschließt \cite{Aggarwal.2010}
+In der Literatur der Browsing-Forensik wird bei forensischen Versuchen zur Untersuchung des Browser-Verhaltens an dieser Stelle von der Definition des Local Attackers abgewichen. 
+Wie im Ziel der Arbeit beschrieben, hat der Local Attacker im Kontext der \textit{transparenten Versuchsdurchführung} vor, während und nach der Browsing-Sitzung vollständigen Zugriff auf den lokalen Computer. \cite{Fayyad.2021, Rochmadi.2017}
 
 
 
-Definition Web Attacker nach \cite{Aggarwal.2010}
-	-	Z.B. ISP
-	-	versucht Online-Aktivitäten des Benutzers im privaten Modus zu verfolgen und zu identifizieren, um diese mit seinen Aktivitäten im öffentlichen Modus in Verbindung zu bringen. 
-	-	durch den Einsatz von Tracking-Tools oder das Sammeln von Informationen über die IP-Adresse des Benutzers oder andere Identifikationsmerkmale erfolgen. 
-	•	Kontrolliert die von Benutzer besuchten Websites und kann Informationen über Benutzeraktivitäten sammeln (-> z.B. ISP), aber nicht über den Computer des Benutzers.
-	•	Webseiten können auch verschiedene Browser-Funktionen nutzen, um Browser zu identifizieren und sie über Privatsphäre-Grenzen hinweg zu verfolgen.
-	•	Die Electronic Frontier Foundation hat eine Website namens Panopticlick (-> TODO: In Demo zeigen?) erstellt, die zeigt, dass die meisten Browser eindeutig identifiziert werden können, was die Ziele (1) und (2) des privaten Surfens in allen Browsern unterbricht.
-	
-\begin{comment}
-	
-Anti-Forensiche Grundsätze bei Browserentwicklung, um sich gegen Web-Attacker zu schützen nach \cite{Aggarwal.2010}
-	•	Browser haben drei Ziele, um die Privatsphäre der Benutzer zu schützen.
-		o	Ziel 1: Ein Benutzer, der im privaten Modus surft, soll nicht mit demselben Benutzer verknüpft werden können, der im öffentlichen Modus surft.
-		o	Ziel 2: Ein Benutzer in einer privaten Sitzung soll nicht mit demselben Benutzer in einer anderen privaten Sitzung verknüpft werden können.
-		o	Ziel 3: Eine Website soll nicht erkennen können, ob der Browser im privaten Modus ist.
-	•	Ziele (1) und (2) sind schwierig zu erreichen, da die IP-Adresse des Browsers von Webseiten genutzt werden kann, um Benutzer über private Browsing-Grenzen hinweg zu verfolgen.
-	•	Das Torbutton Firefox-Erweiterung (ein Tor-Client) macht große Anstrengungen, um Ziele (1) und (2) zu erreichen, indem es die IP-Adresse des Clients über das Tor-Netzwerk versteckt und Schritte unternimmt, um das Browser-Fingerprinting zu verhindern.
-	
 
-Beispiel: Web Attacker Angriffe:
-	> IP-Angriffe \cite{Perdices.2023}
-		•	Obwohl Nutzer Verschlüsselung oder VPNs nutzen, ist ihre Privatsphäre oft ungeschützt, da mehrere Domains gleichzeitig besucht werden oder IP-Adressen von Cloud-Providern geteilt werden.
-		•	Eine neue Methode zur Identifizierung von Web-Browsing wird vorgestellt, die nur auf den IP-Adressen basiert, mit denen der Nutzer verbunden war, ohne DNS Reverse-Resolution durchzuführen.
-		•	Diese IP-Adresse-Sequenz wird in verschiedene Deep Learning Modelle eingespeist, um die tatsächlich besuchte Website zu identifizieren.
-		•	Untersucht wurden auch andere Faktoren wie Abhängigkeit vom DNS-Server, Genauigkeit bei Top-Domains, Datenverstärkung durch Paket-Sampling-Simulation, Auswirkungen auf Paket-Sampling und Skalierbarkeit der Methode.
-		•	Mit nur 10\% der Pakete konnte die besuchte Website mit einer Genauigkeit und F1-Score von 94\% bis 95\% identifiziert werden.
-	> ISP als „Web attacker“, um Kundenaktivität zu verfolgen \cite{Aggarwal.2010}
-		•	ISP können unsere Ergebnisse nutzen, um den Datenverkehr ihrer Kunden zu identifizieren.
-		•	Dies ermöglicht ISP, Daten für Marketingzwecke zu monetarisieren, sofern sie anonymisiert und mit Zustimmung der Kunden erfolgt.
-		•	ISP müssen jedoch darauf achten, wer Zugriff auf Netzwerkverkehrsdaten hat.
-		•	Das Weitergeben dieser Daten an Dritte kann zu potenziellen Datenschutzverletzungen bei Kunden führen.
-		•	Hauptaufgabe ist eigentlich einfach, aber es können viele Komplikationen auftreten
-		•	Hauptproblem ist das sogenannte "verwickelte Netz"
-		•	Beim Verbinden mit einer Website muss der Webbrowser eine Kaskade von Verbindungen zu anderen Websites öffnen
-		•	Grund dafür sind Bilder, Anzeigen, Banner, JavaScript-Bibliotheken, Social-Media-Links und vieles mehr
-		
-
-\end{comment}
-
-
-
-\section{Browser Forensics und Artefakte}\label{chap:theorie-browser-forensics-artefakte} % Browser Forensiks mit Artefakte 
-
-Bevor der Begriff der Browser-Forensik eingeführt wird, ist es zunächst wichtig, die digitale Forensik einzuführen. \\
-Die digitale Forensik konzentriert sich auf die Wiederherstellung von Speichermedien, um digitale Beweise für Cybercrime-Untersuchungen zu sammeln. Diese müssen jedoch in ihrem Originalzustand erhalten bleiben, um beispielsweise vor Gericht zulässig zu sein. Außerdem muss der Prozess der Erwerbung, Untersuchung, Analyse und Berichterstattung von digitalen Beweisen muss forensisch einwandfrei durchgeführt werden. Zusammenfassend hat die digitale Forensik also das Ziel, verwendbare Beweise für Computerkriminalität zu sammeln \cite{Izzati.2022}.\\
-Die Browser-Forensik sammelt und identifiziert dabei Beweise und Informationen im Zusammenhang mit einem Verbrechen aus wiederhergestellten Spuren von Browser-Sitzungen. Diese Art der Forensik wird für Ermittler immer wichtiger, da der Suchverlauf, die Download-Aktivität und Seitenaufrufe das Verständnis für das kriminelle Motiv verbessern können. Dabei werden diese Informationen bzw. Aktivitäten, welche auch als Browser-Artefakte bezeichnet werden, versucht zu finden oder wiederherzustellen, um jemanden als Verdächtigen aufgrund seiner Online-Aktivitäten überführen zu können \cite{Mahlous.2020}. \\
-Artefakte können neben dem angesprochenen Suchverlauf, der Download-Aktivität und Seitenaufrufe auch noch Cookies, Caches und anderen sensiblen Daten und temporäre Dateien darstellen \cite{Izzati.2022}.\\
-Unterschieden kann bei der forensischen Untersuchung dann zwischen der Live und Dead Forensik. Bei der Live Forensik wird im Gegensatz zur traditionellen (dead) Forensik versucht, flüchtige Daten aufzubewahren (RAM, Caches) und Gegenmaßnahmen für verschlüsselte Dateien auf einem Live-System zu ergreifen. \cite{Gupta.2013}. Eine große Herausforderung dabei ist das Kontaminieren von Beweismitteln, was während des Datenerfassungsprozesses geschieht \cite{Gupta.2013}, wie das Ausführen der Software zum Speichern des Arbeitsspeichers, welche selbst im RAM ausgeführt wird. Bei der Dead Forensik hingegen wird der Computer oder das Gerät, das untersucht werden soll, zuerst heruntergefahren, bevor das Speicherabbild erstellt wird bzw. die Datenextraktion beginnt \cite{Izzati.2022}.
-
-Da nun die wichtigsten Begriffe erklärt wurden, folgt anschließend das Ziel dieser Arbeit.
-
-\begin{comment}
-Residuale Daten  % wichtig?
-	> \cite{Izzati.2022}
-		•	Überraschenderweise besteht der private Browser in Chrome und Firefox aus wenigen residuellen Daten, die jedoch Beweise für Interessen wie Suchbegriffe, E-Mail-IDs und Passwörter liefern können
-		•	Residuale Daten sind Daten, die von einem Gerät entfernt wurden, aber immer noch aufgespürt werden können.
-		•	Diese Daten können mithilfe spezieller Tools, meist in Dateiüberresten oder lokalen Ordnern, identifiziert werden.
-		•	Beispiele für residuale Daten sind Link-Dateien, Log-Dateien, Registry-Dateien, Prefetch-Dateien und Browser-Verlaufsdaten.
-		•	Digitale Forensik kann solide elektronische Beweise aus solchen Überresten und Artefakten sammeln, um sie in Gerichtsverfahren zu verwenden.
-%%%%%%%%%%%%%%%%%
-Browser Artefakte: 
-	> \cite{Izzati.2022}
-		•	Jeder Browser hat unterschiedliche Artefakte im RAM des Geräts gespeichert
-		•	Im normalen Browsing-Modus werden die Browsing-History-Details des Benutzers vor und nach dem Löschen des Verlaufs im Speicher gespeichert
-		•	Benutzeraktivitäten und Daten beim Surfen können in normalen Browser-Modi wie Cookies, Caches, Downloads, Verlauf, anderen sensiblen Daten und temporären Dateien verfolgt und gespeichert werden, was digitalen Forensikern bei der Suche nach Beweisen hilft.
-	
-	> \cite{Mahlous.2020}
-		•	Browser speichern eine Vielzahl von Nutzerdaten, die von besuchten URLs bis zu Benutzernamen und Passwörtern reichen
-		•	Das Wissen, dass Browser private Surfdaten preisgeben, ist schon etwas, aber der Standort dieser Artefakte ist von größter Bedeutung
-	
-	> \cite{Said.2011}
-		- Webbrowser sind so konzipiert, dass sie eine Vielzahl von Informationen über die Aktivitäten ihrer Benutzer aufzeichnen und speichern können. Dazu gehören Caching-Dateien, besuchte URLs, Suchbegriffe, Cookies und andere.
-		- Diese Dateien werden auf dem lokalen Computer gespeichert und können von jeder Person, die denselben Computer verwendet, leicht aufgerufen und abgerufen werden. Dies macht es auch für forensische Prüfer relativ einfach, die Internet-Aktivitäten eines Verdächtigen in Fällen zu untersuchen, in denen fragwürdige Websites besucht oder kriminelle Handlungen über das Internet durchgeführt wurden.
-		
-	> \cite{Chivers.2014}
-		•	Bestimmte Datentypen aus HTTP-Protokoll-Transaktionen oder skriptgesteuerten Aktionen in HTML-Seiten werden separat im Dateisystem gespeichert und führen zu unterschiedlichen Datenbankeinträgen: Cookies, Web Storage und Indexed Database Storage.
-		
-		
-
-Private Browsing Artefakte: 
-	> \cite{Aggarwal.2010}
-		1.	Änderungen, die von einer Website ohne jegliche Benutzerinteraktion initiiert werden. Beispiele hierfür sind das Setzen eines Cookies, das Hinzufügen eines Eintrags zur Verlaufsdatei und das Hinzufügen von Daten zum Browser-Cache.
-		2.	Änderungen, die von einer Website initiiert werden, aber eine Benutzerinteraktion erfordern. Beispiele hierfür sind das Generieren eines Client-Zertifikats oder das Hinzufügen eines Passworts zur Passwortdatenbank.
-		3.	Änderungen, die vom Benutzer initiiert werden. Zum Beispiel das Erstellen eines Bookmarks oder das Herunterladen einer Datei.
-		4.	Nicht benutzerspezifische Zustandsänderungen, wie das Installieren eines Browser-Patches oder das Aktualisieren der Phishing-Blockierungsliste.
-		•	"geschützte Aktionen" = Browser Artefakt, dass beim Verlassen des privaten Surfens gelöscht werden muss
-
-
-
-Wie entstehen "Leckagen" von privaten Browsing Artefakten? \cite{Horsman.2019} % evtl. in einem Nebensatz erwähnen
-	1.  Ein Fehler im Design und in der Entwicklung des Browsers 
-	2. Das Betriebssystem übernimmt mehr Kontrolle über den Browser als es sollte, was dazu führt, dass Daten von außen abgegriffen werden
-	
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-Common Locations: 
-	> Ort der Browserartefakte (“common locations“) ausführlich beschrieben in: \cite{Fayyad.2021}
-
-	> \cite{Izzati.2022}
-		•	Die Artefakte von Webbrowsern werden in bestimmten Ordnern im Betriebssystem gespeichert.
-		•	Die genaue Lage variiert je nach Browser, die Dateiformate bleiben jedoch gleich.
-		•	Es ist wichtig zu wissen, wo die Dateien gespeichert sind, um sie während des normalen und privaten Browsing-Modus untersuchen zu können.
-		•	Tabelle 6 zeigt die Standorte der Artefakte von Google Chrome wie Verlauf, Caches und Cookies.
-		•	Tabelle 7 stellt die häufigsten Standorte von Firefox-Artefakten wie Cookies, Cache, Verlauf und Lesezeichen vor.
-		•	Alle Änderungen in Firefox, wie Lesezeichen, installierte Erweiterungen und gespeicherte Passwörter, werden im Profilordner gespeichert.
-		•	Wie in der Tabelle gezeigt, werden Cookies in cookies.sqlite gespeichert, während Cache-Dateien im cache2-Ordner zu finden sind.
-		•	Alle heruntergeladenen Lesezeichen, Dateien und der Verlauf werden in places.sqlite gespeichert.
-		•	Mögliche Informationen, die aus der Browser-Forensik extrahiert werden können, sind Browsing-Verlauf, Cache, Cookies, Lesezeichen und Download-Liste.
-		
-	> \cite{Rochmadi.2017}
-		•	Digitale Beweise in einem Webbrowser umfassen mindestens Caches, Verlauf, Cookies, Download-Dateilisten und Sitzungen.
-		•	Zumindest ein Minimum an digitalen Beweisen aus einem Webbrowser ist sehr wichtig und wird von Ermittlern genutzt, um einen Fall bei Internetnutzung zu analysieren.
-		
-Gründe für Browser-Artefakte bei Private Browsing: \cite{Horsman.2019}
-	> Fehler im Design und Entwicklung des Browsers -> führt dazu, dass Daten von innen nach außen durchsickern, d. h. Browser ist schuld 
-	> Betriebssystem übernimmt mehr Kontrolle über den Browser als es sollte, was dazu führt, dass Daten von außen abgegriffen werden, d. h. Betriebssystem ist schuld
-
-
-Definition private Browsing Artefakt:
-=====================================
-Strings, die Aktionen des Browsing-Protokolls zugeordnet werden können: Keywords, URLs, HTML-Fragmente, E-Mail-Adressen, Betreffzeilen etc.
-
-
-% Kein extra Kapitel, da kaum relevant für Arbeit?
-%\section{Live- und Post-Mortem-Forensik}
-
-Warum Computer-Forensik: \cite{Mahlous.2020}
-	•	Die Untersuchung von digitalen Beweisen ist von großer Bedeutung, um Straftäter zu identifizieren und zur Rechenschaft zu ziehen.
-
-
-Definition digitale Forensik \cite{Izzati.2022}
-	•	Digitale Forensik konzentriert sich auf die Wiederherstellung von Speichermedien, um digitale Beweise für Cybercrime-Untersuchungen zu sammeln.
-	•	Die gewonnenen Beweise müssen jedoch in ihrem Originalzustand erhalten bleiben, um vor Gericht zulässig zu sein.
-	•	Der Prozess der Erwerbung, Untersuchung, Analyse und Berichterstattung von digitalen Beweisen muss forensisch einwandfrei durchgeführt werden.
-	•	Daher müssen Ermittlungsteams sich an die Phasen der digitalen Forensik halten, die auf weit verbreiteten Standards basieren.
-	•	Digitale Forensik-Investigatoren verlassen sich auf die Artefakte, die aus diesen Browser-Records auf dem Gerät zurückbleiben, und verwenden forensische Techniken, um die Artefakte zu erfassen, um Beweismittel zu finden.
-	•	Die Artefakte werden im Computer-Speicher gespeichert, nachdem alle Browser-Verläufe, Caches und Cookies gelöscht wurden, was es für digitale forensische Gutachter einfach macht, die Daten zu extrahieren.
-
-
-Definition Browser Forensics
-	> \cite{Mahlous.2020} 
-		•	Web-Browser-Forensik sammelt und identifiziert Beweise und Informationen im Zusammenhang mit einem Verbrechen aus wiederhergestellten Browser-Sitzungen
-		-	Forensische Analyse des Webbrowsers beinhaltet die Wiederherstellung von Browsing-Artefakten, die Informationen über die Online-Aktivitäten eines Verdächtigen offenbaren.
-		-	Browser-Forensik wird für Ermittler immer wichtiger, da Suchverlauf, Download-Aktivität und Seitenaufrufe das Verständnis für das kriminelle Motiv verbessern können.
-		
-Ziel digitale Forensik \cite{Izzati.2022} % überflüssig, oder?
-	•	Digitale Forensik hat das Ziel, verwendbare Beweise für Computerkriminalität zu sammeln.
-	•	Cyberkriminalität wie Hacking, betrügerische Transaktionen und Diebstahl geistigen Eigentums erhöhen den Bedarf an digitaler Forensik, um auf Cyberkriminalität mit einem digitalen Gerät zu reagieren. (2022) A Comparative Analysis of Residual Data
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ab hier
-
-Live-Forensik: unterschiedliche Definitionen in Literatur
-	> Live-Forensik als "moderner Trend" der Computer-Forensik \cite{Gupta.2013}
-		Im Gegensatz zur traditionellen (toten) digitalen Forensik wird bei der Live-Forensik versucht, flüchtige Daten aufzubewahren und Gegenmaßnahmen für verschlüsselte Dateien auf einem Live-System zu ergreifen.
-	> \cite{Hassan.2019}: TODO!
-	> \cite{Izzati.2022}
-		•	„Live Forensics“ wird auch als „Live System Acquisition“ bezeichnet.
-		•	Diese Methode wird angewendet, wenn das System in Betrieb ist, um potenzielle Artefakte im flüchtigen Arbeitsspeicher (RAM) zu finden, die als Beweismittel genutzt werden können.
-		•	Viele Spuren von Computer-Sitzungen und Artefakte sind nur im flüchtigen Speicher zu finden und können nicht von externem Speicher aus ausgelesen werden.
-		•	Die Daten können jedoch nicht gesammelt werden, da sie verloren gehen, sobald das System gestoppt oder neu gestartet wird.
-		•	Die RAM-Daten müssen daher mit besonderen Verfahren behandelt werden, um ihre Integrität und Zuverlässigkeit während der Analyse zu gewährleisten.
-		•	„Live Forensics“ ist nützlich, um auch Ereignisse zu untersuchen, die nur während der Nutzung des Systems aufgetreten sind, und um Daten effizient im flüchtigen Arbeitsspeicher zu speichern.	
-		•	Digitale Forensik kann dazu genutzt werden, die Gültigkeit von Beweismitteln bei Gerichtsverfahren zu untersuchen.
-		•	Nach der Identifikation und Sammlung von potenziellen Beweismitteln wird in den meisten Fällen eine exakte Kopie der Daten erstellt, um sie als Backup zu nutzen und Veränderungen zu vermeiden.
-		•	Es gibt zwei Arten von forensischen Techniken, um Speicherabbilder zu erstellen: „Dead Forensics“ und „Live Forensics“.
-		•	Bei „Live Forensics“ hingegen wird das System im laufenden Betrieb untersucht, was oft schwieriger ist, aber auch wertvolle Informationen liefern kann.
-	> \cite{Rochmadi.2017}
-		•	Forensische Untersuchung eines Systems, während es in Betrieb ist
-		•	Daten gehen verloren, wenn das System heruntergefahren oder neu gestartet wird
-		•	Verwendung bei flüchtigem Speicher wie RAM
-		•	RAM-Erfassung durch RAM-Forensik-Tool
-		•	Ziel ist es, den normalen Betrieb des Systems nicht zu beeinträchtigen
-		•	Live Forensics liefert wichtige Informationen für die Analyse
-		•	Analyse von digitalen Beweisen aus dem RAM mit Memory Analysis Tool.
-		•	Eine Lösung für dieses Problem ist die Live-Forensik, um Daten aus dem Arbeitsspeicher zu extrahieren, bevor sie gelöscht werden.
-		•	Diese Forschungsmethode wird verwendet, um Webbrowser im Allgemeinen und insbesondere tragbare Webbrowser zu analysieren.
-
-Beispiele Live-Forensik 
-	> \cite{Satvat.2014}
-		•	Volatiler Speicher (Memory Inspection) kann eine wichtige Informationsquelle für forensische Untersuchungen sein
-		• DNS-Caching ist eine Bedrohung für private Browsing: Diese Schwachstelle entsteht, weil das Betriebssystem DNS-Anfragen des Browsers im Cache speichert, unabhängig davon, ob der Browser im privaten Modus ist oder nicht
-	> \cite{Mahlous.2020}
-		• Registry Snapshots: Um Veränderungen im System-Registry aufgrund der Browserinstallation zu verfolgen, wurde Regshot verwendet, um vor der Installation einen Snapshot der Registry aufzunehmen.
-			- Ein zweiter Snapshot wurde nach der Installation des Browsers aufgenommen und mit dem ersten verglichen.
-			- Regshot generiert einen Bericht über die Ergebnisse, der die neuen Dateien und Ordner zeigt, die dem Registry-Schlüssel hinzugefügt wurden.
-			
-		
-		
-
-Vorteile Live-Forensik
-	> In Literatur bekannt: Die meisten 
-	Informationen im RAM 
-		> \cite{Horsman.2019}
-			•	Die meisten Daten können in den RAM-Speichergeräten des Betriebssystems gefunden werden.
-		> \cite{Muir.2019}
-			•	Da es wahrscheinlich ist, dass RAM-Aufnahmen Inhalte der Browsing-Session (z.B. durch Caching) aufzeigen, wurde dies in das Projekt aufgenommen, insbesondere da Warren (2017) dies aufgrund von Zeitbeschränkungen nicht tun konnte.
-	> \cite{Muir.2019}
-		•	Live Analyse während der Laufzeit einer Anwendung ist besonders vorteilhaft, um zu verstehen, wie das Betriebssystem und die Anwendung interagieren.
-		•	Live Analyse kann potenziell mehr Informationen zur Browsing-Session liefern, da die Designbemühungen des Tor-Projekts darauf abzielten, Schreibzugriffe auf die Festplatte zu vermeiden.
-		
-
-Herausforderungen von Live-Forensik = Kontaminieren von Beweismitteln \cite{Gupta.2013}
-	Die größten Herausforderungen während des Datenerfassungsprozesses sind: Datenveränderung und Abhängigkeit vom Betriebssystem des verdächtigen Systems; wenn der Erfassungsprozess die Daten verändert, werden die Gerichte die Daten als forensisch untauglich abweisen
-
-
-Definition Dead Forensik:
-	> \cite{Izzati.2022}
-		•	Bei „Dead Forensics“ wird der Computer oder das Gerät, das untersucht werden soll, zuerst heruntergefahren, bevor das Speicherabbild erstellt wird.
-	> \cite{Horsman.2019}
-		-	Physische Speichererfassung ist nicht übliche Praxis und in den meisten Fällen nicht verfügbar
-	> \cite{Hassan.2019}: TODO!
-	> \cite{Mahlous.2020}
-		-	Oft einzige Option: Analysen von Festplatten-Images von ausgeschalteten Geräten 
-		-	Gründe für „einzige Option“:
-			o	Verzögerungen bei der Bearbeitung 
-			o	Personalmangel bei den forensischen Untersuchern 
-		-	also unrealistisch und unpraktisch, beschlagnahmte Geräte eingeschaltet zu lassen.
-		-	Ausschalten eines Geräts reduziert Risiko einer Datenänderung (versehentlich oder absichtlich) 
-		-	isoliert es vom Netzwerk, um etwaige Versuche, es ferngesteuert zu löschen, zu verhindern, unter anderem.
-	> \cite{Izzati.2022} -> wiedersprüchlich?
-		•	System wird heruntergefahren, bevor das Speicherabbild erstellt wird.
-		•	Volatile Dateien gehen verloren: versteckte Dateien, ausgetauschte Dateien, Web-Aktivitäten, Artefakte und Log-Dateien 
-		•	Das Ziel ist es, eine genaue Kopie des nichtflüchtigen Speichers zu erstellen, bevor das System heruntergefahren wird, um die Originalität der Beweismittel zu erhalten.
-		
-Beispiele Dead Forensik:
-	> Stichwortsuche in Festplatten-Images nach herunterfahren \cite{Satvat.2014}
-	> Timestamps von Dateien \cite{Satvat.2014}
-	> SQLite Datenbanken \cite{Satvat.2014}
-	> Unallocated Space \cite{Satvat.2014}
-	> Registry-Hives auf Festplatte, z.B. NTUSER.DAT \cite{Satvat.2014}
-	
-
-Probleme bei Dead Forensik 
-	> \cite{Gupta.2013}: TODO!
-
-
-Wann Live-, wann Dead Forensik? \cite{Izzati.2022} % 1 Nebensatz :)
-	•	Die Wahl der Methode hängt von der Art der Untersuchung und der verfügbaren Zeit ab.
-	•	Das Ziel ist es, eine genaue Kopie des Speichers zu erstellen, um die Integrität der Beweise zu bewahren und das Risiko von Veränderungen zu minimieren.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-	
-Definition: Darknet Forensik: \cite{Rathod.2017} % des brauch ma  ned
-	•	Motivation Darknet Forensik:
-		o	Terroristen, Kriminelle, extremistische Gruppen und Hassorganisationen nutzen das Darknet, um Cybercrime zu begehen.
-		o	Die Verwendung von TOR und Bitcoin auf dem Darknet erschwert die Verfolgung von Straftaten durch digitale Forensik-Experten.
-		o	Die vorgeschlagenen forensischen Techniken können digitale Forensik-Experten helfen, mit Cybercrime-Fällen im Zusammenhang mit dem Darknet umzugehen.
-	•	Darknet-Forensik sind in zwei Kategorien unterteilt: 
-		1.	TOR-Browser-Forensik:
-		•	vier Möglichkeiten zur Extraktion von TOR-Browser Artefakten: RAM-Forensik, Registry-Änderungen, Netzwerk-Forensik und Datenbank
-		2.	Bitcoin-Transaktions-Forensik: Extrahieren von forensischen Artefakten aus Bitcoin-Wallet-Anwendung
-\end{comment}
-		

@@ -44,15 +44,38 @@ Weiterführende Arbeiten:
 > Ist das Auffinden privater Browsing Artefakte Schuld von Browser Entwicklern? (Oder Schuld des Betriebssystem, wie in (TODO!) erwähnt)
 \end{comment}
 
+Zusammenfassend liefert jeder der vier betrachteten Browser ein - für den Nutzer des privaten Modus - gutes Ergebnis, da keine Private-Browsing-Artefakte in den Festplatten-Abbildern identifiziert werden konnten. 
+Ausschließlich im Arbeitsspeicher konnten PB-Artefakte gefunden werden.
 
-Zusammenfassend liefern alle der vier betrachteten Browser ein gutes Ergebnis, da keine Browsing-Artefakte im nichtvolatilen, also persistenten Speicher identifiziert werden konnten. Jene konnten nur im RAM gefunden werden und teilweise im DNS-Cache, wobei diese auch durch das Leeren des Caches erfolgreich beseitigt worden konnten. Artefakte im DNS-Cache sind dabei eine bekannte Problematik. DNS-Anfragen des Browsers werden dabei von Betriebssystem darin gespeichert, unabhängig davon, ob der Browser im privaten Modus ist oder nicht \cite{Satvat.2014}. Trotz der Bekanntheit dieser Schwachstelle besteht dieser immer noch in allen Browsern fort. Es wurden gezielt dafür auch schon Erweiterungen von Drittanbietern entwickelt, um dieses Problem des Speicherns von DNS-Anfragen zu cachen, jedoch wurde keine davon von den Browserherstellern übernommen \cite{Satvat.2014}. 
+Solange der Browser noch mit allen besuchten Seiten geöffnet ist, sind in einem realistischen Szenario keine forensischen Werkzeuge nötig, um den Besuch dieser Seiten nachzuweisen. Somit ist für Forensiker insbesondere der RAM-Dump nach dem Schließen des Browsers von besonderer Relevanz. 
+Wie in Kapitel \ref{chapter:vergleich-der-browser} gezeigt, wurden dort kaum PB-Artefakte gefunden.
+Teilweise konnten die zu diesem Zeitpunkt gefundenen Artefakte beseitigt werden.
+Beispielsweise wurden bei Firefox aufgerufene URLs im DNS-Cache gefunden. DNS-Anfragen werden vom Betriebssystem gespeichert, unabhängig davon, ob der private Modus aktiviert ist oder nicht \cite{Satvat.2014}. Diese Einträge können per Kommandozeilenbefehl geleert werden. Es existieren bereits Browser-Erweiterungen, um das Speichern von DNS-Anfragen zu verhindern \cite{Satvat.2014}.
 
-Wie in [link kap 6] übersichtlich dargelegt wurde, ist quantitativ gesehen der Tor-Browser der beste Browser, um am wenigsten Artefakte auf einem Computer zu hinterlassen. Zusätzlich zum Schutz vor einem local attacker bietet Tor den Vorteil, dass man dadurch auch noch vor web attackern geschützt ist, da der Datenverkehr über mehrere Router, den sogenannten Nodes, umleitet und somit die Herkunft der Anfrage verschleiert. Somit ist Tor als Gesamtpaket gesehen ein sicherer und guter Browser, um sicher und anonym im Internet zu browsen. \\
-Trotz der gerade angesprochenen Vorteile muss man jedoch auch die Nachteile von Tor sehen. Erstens ist das Browsen an sich meistens langsamer, da der Datenverkehr eben über mehrere Knoten geleitet wird. Zusätzlich wird dabei der Internetverkehr auch noch verschlüsselt. Beides ist positiv für die Privatsphäre, schränkt aber die User Experience ein [cite webpage]. Zusätzlich dazu kann es dazu kommen, dass Websiten den Datenverkehr von Tor-Benutzern als potenzielles Sicherheitsrisiko ansehen und somit zusätzliche Captchas und Sicherheitsmaßnahmen einfügen, was wieder die User Experience einschränkt. Dazu kommt auch noch, dass man von der Infrastruktur des Tor-Netzwerkes angewiesen ist und es zu Verbindungsproblemen führen kann, wenn das Netzwerk gestört ist oder bestimmte nodes nicht verfügbar sind. \\
-Hier muss jedoch beachtet werden, dass Tor in dieser Arbeit nur quantitativ gesehen der beste Browser ist, da er die wenigsten Artefakte von allen analysierten Browsern hinterlässt. Qualitativ gesehen kann es jedoch für einen Benutzer wichtiger sein, dass ein Browser ein Passwort nicht im RAM ablegt und somit davon keine Spuren  auf dem System hinterlässt. Somit kann die objektive Auffassung, dass Tor aufgrund der wenigen Artefakte der beste Browser ist, subjektiv gesehen auch für jemand anderen ein schlechterer Browser sein, wenn beispielsweise das Auffinden von HTML-Artefakten ein weniger kritisches Verhalten darstellt. In diesem Fall wären dann die beiden Browser Chrome und Brave \glqq{}besser\grqq{} bzw. \glqq{}sicherer\grqq{}.
+Wie in [link kap 6] übersichtlich dargelegt wurde, hinterlässt der Tor-Browser der wenigsten Artefakte auf dem lokalen Computer zu hinterlassen. 
+Zusätzlich zum Schutz vor einem Local Attacker bietet Tor den Vorteil, dass der Datenverkehr durch das Tor-Netzwerks vor dem Web Attacker geschützt ist. 
 
-\thispagestyle{plain.scrheadings}
-\ohead{}
-Schließlich ist noch die Frage zu klären, für welche Personen diese Analyse grundsätzlich durchgeführt wird bzw. wer von solch einer forensischen Analyse einen Nutzen zieht. Grundsätzlich wird eine solche forensische Analyse durchgeführt, um Schwächen in Browsern und den privaten Modi aufzudecken. Von diesen Ergebnissen profitieren zunächst einmal die Browser-Entwickler, welche auf Basis der Ergebnisse das Ziel haben (sollten), die aufgedeckten Schwächen zu beseitigen, um ein privateres und sichereres Browsen zu ermöglichen. Dieses private Browsen kann dann entweder genutzt werden, um von „normalen“ Benutzern für legale Aktivitäten verwendet zu werden, oder von Kriminellen für illegale Tätigkeiten. Für diese wäre es dann sinnvoll, wenn der Browser möglichst wenige Artefakte verursacht, um möglichst unerkannt diesen Tätigkeiten nachzugehen. Dies würde es jedoch Forensikern wieder schwieriger machen, jene Tätigkeiten aufzudecken und nachzuweisen. Auch profitieren von solchen Analysen die Forensiker, welche auf Basis der Ergebnisse gezielt nach Artefakten suchen können und es somit leichter gemacht wird, kriminelle Tätigkeiten aufzudecken. \\
-Wie daraus ersichtlich wird, ist es nicht einfach zu sagen, wem eine solche forensische Analyse zunächst mehr nutzt und ob es gut oder schlecht ist, eine solche zu betreiben, da man nicht vorhersagen kann, ob die Ergebnisse zuerst gutartig zum besseren Aufdecken von illegalen Aktivitäten oder bösartig zum besseren Verschleiern von diesen verwendet wird. Ebenfalls ist nicht sicher, ob eventuell bestehende Sicherheitslücken bestehen bleiben sollten, um das Aufdecken illegaler Aktivitäten zu erleichtern.
+Hier muss jedoch beachtet werden, dass Tor in dieser Arbeit nur quantitativ gesehen der beste Browser ist.
+Bei der Ermittlung des besten Browsers müssen stets individuelle qualitative Präferenzen berücksichtigt werden. 
+Beispielsweise hinterlässt der Tor-Browser weniger E-Mail-Artefakte, speichert jedoch im Gegensatz zu Google Chrome und Brave das Passwort im Klartext. Umgekehrt hinterlässt der Tor-Browser keine HTML-Artefakte.
+Ist für einen Nutzer das Auffinden des Passworts schwerwiegender als hinterlassene HTML-Artefakte, wären Chrome und Brave \glqq{}besser\grqq{} beziehungsweise \glqq{}sicherer\grqq{}.
+
+Weiterhin unterscheidet sich die Nutzererfahrung der Browser deutlich.
+Zwar hinterlässt der Tor-Browser am wenigsten PB-Artefakte, ist jedoch aufgrund des Tor-Netzwerks oft langsam und erfordert häufig das Lösen von Captchas, was sich negativ auf die Nutzererfahrung auswirkt.
+%Weiterhin ist der Nutzer des Tor-Browsers auf die Infrastruktur des Tor-Netzwerkes angewiesen. Bei einer Netzstörung - beispielsweise beim Ausfall bestimmter Tor-Knoten - kommt es zu Verbindungsproblemen. 
+Im Gegensatz dazu legt beispielsweise der Bave-Browser besonderen Wert auf die Nutzerfreundlichkeit. Beispielsweise durch einen integrierten Ad-Blocker. Weiterhin kann entschieden werden, ob der private Modus mit oder ohne Verbindung zum Tor-Netzwerk aktiviert werden soll. \cite{Brave.}
+
+%Somit ist Tor als Gesamtpaket gesehen ein sicherer und guter Browser, um sicher und anonym im Internet zu browsen. \\
+%
+%\thispagestyle{plain.scrheadings}
+%\ohead{}
+%
+%Grundsätzlich wird eine solche forensische Analyse durchgeführt, um Schwächen in Browsern und den privaten Modi aufzudecken. 
+%Beim Umgang mit identifizierten Schwachstellen stehen jedoch Browser-Entwickler vor einem Dilemma.
+%Von diesen Ergebnissen profitieren Browser-Nutzern, wie freien Journalisten in autokratischen Staaten mit Angst vor Repressionen, da Browser-Entwickler auf Basis der Ergebnisse die aufgedeckten Schwächen beseitigen können.
+%Wie zu Beginn dieser Arbeit erwähnt, kann das private Browsen jedoch auch von kriminellen Nutzern für illegale Tätigkeiten missbraucht werden. 
+%Somit erschwert das Schließen der Sicherheitslücken Forensikern, kriminelle Tätigkeiten aufzudecken und nachzuweisen.
+%Andererseits profitieren Forensiker von solchen Analysen, um bei identifizierten Schwachstellen gezielt nach Artefakten suchen können. 
+
+
 

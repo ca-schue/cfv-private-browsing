@@ -2,11 +2,11 @@
 \contentsline {chapter}{Erklärung}{II}{chapter*.1}%
 \contentsline {chapter}{Bearbeiter der jeweiligen Kapitel}{III}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Theoretischer Hintergrund}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Private Browsing}{2}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Angreifermodell}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Browser Forensics und Artefakte}{3}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Ziel der Arbeit}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {2}Ziel der Arbeit}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Theoretischer Hintergrund}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Private Browsing}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Browser-Forensik und Browsing-Artefakte}{4}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Angreifermodell}{4}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Methodik}{6}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Vorbereitung}{6}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Browserauswahl}{6}{subsection.4.1.1}%
@@ -25,11 +25,11 @@
 \contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{46}{paragraph*.108}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{51}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Zusammenfassung und Diskussion}{55}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{57}{chapter.8}%
-\contentsline {chapter}{Anhänge}{59}{section*.122}%
-\contentsline {section}{\numberline {A}Yara-Regeln}{60}{section.1..1}%
-\contentsline {section}{\numberline {B}Ausführliche Analyse: Firefox}{61}{section.1..2}%
-\contentsline {subsection}{\numberline {B.1}Common Locations}{61}{subsection.1..2.1}%
+\contentsline {chapter}{\numberline {8}Fazit und Ausblick}{56}{chapter.8}%
+\contentsline {chapter}{Anhänge}{57}{section*.122}%
+\contentsline {section}{\numberline {A}Yara-Regeln}{58}{section.1..1}%
+\contentsline {section}{\numberline {B}Ausführliche Analyse: Firefox}{59}{section.1..2}%
+\contentsline {subsection}{\numberline {B.1}Common Locations}{59}{subsection.1..2.1}%
 \contentsline {subsection}{\numberline {B.2}Uncommon Locations}{66}{subsection.1..2.2}%
 \contentsline {subsection}{\numberline {B.3}Registry}{68}{subsection.1..2.3}%
 \contentsline {section}{\numberline {C}Ausführliche Analyse: Tor}{70}{section.1..3}%
