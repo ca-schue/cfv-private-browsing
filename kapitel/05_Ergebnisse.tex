@@ -26,7 +26,7 @@ Zur Analyse der Common Locations in Kapitel \ref{subsection:ergebnisse-firefox-c
 
 Eine Autopsy Stichwortsuche gemäß Methodik in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy} lieferte in allen Snapshots keine Treffer. Dabei wurde zusätzlich das \texttt{\$Carved} Verzeichnis durchsucht, in dem Autopsy alle wiederhergestellten Dateien speichert.
 
-Ebenso wurden in den von Autopsy automatisch kategorisierten Dateien keine PB-Artefakte gefunden. Eine detaillierte Analyse der Kategorien ``Web Bookmarks``, ``Web Cookies``, ``Web History`` sowie ``Web Categories`` ist im Anhang \ref{subsubsection:appendix-firefox-uncommon-locations-autopsy} beschrieben.
+Ebenso wurden in den von Autopsy automatisch kategorisierten Dateien keine PB-Artefakte gefunden. Eine detaillierte Analyse der Kategorien \grqq{}Web Bookmarks\grqq{}, \grqq{}Web Cookies\grqq{}, \grqq{}Web History\grqq{} sowie \grqq{}Web Categories\grqq{} ist im Anhang \ref{subsubsection:appendix-firefox-uncommon-locations-autopsy} beschrieben.
 
 \subsubsection*{Analyse mit Volatility}
 \label{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}
@@ -35,11 +35,11 @@ Wie in Abschnitt \ref{subsubsection:methodik-datenanalyse-uncommonlocations-anal
 Dazu wird mit dem Volatility PlugIn \textit{Yarascan} nach den in Anhang \ref{appendix:yara-regeln} aufgeführten Yara-Regeln im RAM gesucht. Davon ausgehend wird das PlugIn \textit{pslist} verwendet, um den Prozessnamen anhand PID zu identifizieren.
 Die Ergebnisse dieser Stringsuche sind nachfolgend nach den Yara-Regeln geordnet.
 
-\paragraph*{Yara-Regel ``HTML``}
+\paragraph*{Yara-Regel \grqq{}HTML\grqq{}}
 In keinem der Firefox RAM Dumps wurden HTML Fragemente der besuchten Seiten gefunden. Somit wird diese Yara-Regel nicht weiter betrachtet.
 
-\paragraph*{Yara-Regel ``Suchbegriffe``}
-Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchbegriffe ``pfaffenhofen``, ``nanoradar``, ``mooserliesl`` sowie ``mallofamerica`` ausschließlich nach dem Browsing-Szenario mit geöffnetem Browser (RAM Dump 2) identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in elf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff ``pfaffenhofen`` mit 1301 Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchte Stadt zeigt. 
+\paragraph*{Yara-Regel \grqq{}Suchbegriffe\grqq{}}
+Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchbegriffe \grqq{}pfaffenhofen\grqq{}, \grqq{}nanoradar\grqq{}, \grqq{}mooserliesl\grqq{} sowie \grqq{}mallofamerica\grqq{} ausschließlich nach dem Browsing-Szenario mit geöffnetem Browser (RAM Dump 2) identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in elf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff \grqq{}pfaffenhofen\grqq{} mit 1301 Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchte Stadt zeigt. 
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -205,11 +205,11 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchb
 %	\caption{Keywords}
 %\end{figure}
 
-\paragraph*{Yara-Regel ``URLs``}
+\paragraph*{Yara-Regel \grqq{}URLs\grqq{}}
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
-	\begin{tabular}{l}	
+	\begin{tabular}{r}	
 		\begin{tikzpicture}
 			\begin{axis}[
 			xbar,
@@ -252,7 +252,7 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchb
 			xbar,
 			width=12cm, 
 			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{mooserliesl.de},
+			ylabel style={align=center}, ylabel=\textbf{mooserliesl}\\\textbf{.de},
 			y=0.75cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			label style={font=\small},
@@ -289,7 +289,7 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchb
 			xbar,
 			width=12cm, 
 			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{mallofamerica.com},
+			ylabel style={align=center}, ylabel=\textbf{mallofamerica}\\\textbf{.com},
 			y=0.75cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			label style={font=\small},
@@ -326,7 +326,7 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchb
 			xbar,
 			width=12cm, 
 			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{donaukurier.de},
+			ylabel style={align=center}, ylabel=\textbf{donaukurier}\\\textbf{.de},
 			y=0.75cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			label style={font=\small},
@@ -364,8 +364,8 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchb
 	\label{chart:firefox-volatility-urls}
 \end{table}
 
-Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs ``unitree.com``, ``mooserliesl.de``, ``mallofamerica.com`` sowie ``donaukurier.de`` identifiziert werden.
-Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing-Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Die besuchten URLs wurden hauptsächlich in Firefox-Prozessen gefunden. Die URL ``mooserliesl.de`` wurde mit insgesamt 390 Artefakten am wenigsten gefunden, ``donaukurier.de`` mit über 3600 Artefakten am häufigsten.
+Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs \grqq{}unitree.com\grqq{}, \grqq{}mooserliesl.de\grqq{}, \grqq{}mallofamerica.com\grqq{} sowie \grqq{}donaukurier.de\grqq{} identifiziert werden.
+Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing-Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Die besuchten URLs wurden hauptsächlich in Firefox-Prozessen gefunden. Die URL \grqq{}mooserliesl.de\grqq{} wurde mit insgesamt 390 Artefakten am wenigsten gefunden, \grqq{}donaukurier.de\grqq{} mit über 3600 Artefakten am häufigsten.
 
 Bemerkenswert ist, dass URL-Artefakte gefunden wurden, selbst nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL-Artefakt in einem Firefox Prozess gefunden.
 Anhand der PID 2252 wurde festgestellt, dass sich alle URL-Artefakte nach Schließen des Browsers (RAM-Dump 3) in einem \textit{svchost.exe} Prozess mit der gleichen PID befinden. Unter dem \textit{Service Host} Prozess laufen gruppierte Windows-Dienste, um Ressourcen zu sparen und die Systemleistung zu verbessern.
@@ -375,13 +375,13 @@ Stattdessen wurde der dritte Snapshot aufgetaut, um im laufenden Windowsbetrieb 
 Wie in Abbildung \ref{chart:svchost-dnscache} gezeigt, wurde anhand der PID $2252$ der Dienst \textit{DNSCache} ermittelt.
 \begin{figure}[h!]
 	\centerline{\resizebox{\linewidth}{!}{\includegraphics{bilder/firefox-dnscache.png}}}
-	\caption{Unter dem SVChost-Prozess PID $2252$ läuft der DNSCache-Dienst.}
+	\caption{Firefox: Unter dem SVChost-Prozess PID $2252$ läuft der DNSCache-Dienst.}
 	\label{chart:svchost-dnscache}  
 \end{figure}
 Der DNSCache-Dienst unter Windows ist ein Teil des Betriebssystems, der für die Übersetzung von Domainnamen in IP-Adressen verantwortlich ist. Der DNSCache-Dienst speichert DNS-Anfragen und Antworten temporär, um wiederholte DNS-Anfragen zu beschleunigen. \cite{MicrosoftLearn.05.06.2023}
 Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flushdns}, dem Schließen aller Process Monitor Instanzen sowie Beenden des DNSCaches Services wurde erneut ein RAM-Dump durchgeführt. Dort wurden keine URL Artefakte mehr gefunden.
 
-\paragraph*{Yara-Regel ``E-Mail``}
+\paragraph*{Yara-Regel \grqq{}E-Mail\grqq{}}
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -543,7 +543,7 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 			xbar,
 			width=12cm, 
 			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{chs3702@thi.de},
+			ylabel style={align=center}, ylabel=\textbf{chs3702}\\\textbf{@gmail.com},
 			y=0.75cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			label style={font=\small},
@@ -578,7 +578,7 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 			xbar,
 			width=12cm, 
 			height=3cm, 
-			ylabel style={align=center}, ylabel=\textbf{cas0597@thi.de},
+			ylabel style={align=center}, ylabel=\textbf{cas0597}\\\textbf{@gmail.com},
 			y=0.75cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			label style={font=\small},
@@ -626,10 +626,12 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 %	\caption{Mail}
 %\end{figure}
 Wie in Abbildung \ref{chart:firefox-volatility-mail} gezeigt, wurden E-Mail-Artefakte ausschließlich nach dem Browsing-Szenario mit geöffnetem Firefox Browser (RAM Dump 2) gefunden. Dabei wurden Artefakte jeder Kategorie gefunden.
-Unter den gefundenen Artefakten befindet sich am häufigsten die Absenderadresse ``computerforensikvl@gmail.com``. Dieses Artefakt wurde als einziges E-Mail-Artefakt sechsmal in anderen Prozessen als Firefox gefunden.
+Unter den gefundenen Artefakten befindet sich am häufigsten die Absenderadresse \grqq{}computerforensikvl@gmail.com\grqq{}. Dieses Artefakt wurde als einziges E-Mail-Artefakt sechsmal in anderen Prozessen als Firefox gefunden.
 
 Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, viermal als Klartext im RAM gefunden wurden. Das Passwort wurde je zweimal in zwei Firefox Prozessen mit den PIDs 7420 und 8424 gefunden. Tabelle \ref{tab:firefox-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
 \begin{table}[h!]
+\caption{Firefox: Abbildung der virtellen Speicheradressen der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten}
+\label{tab:firefox-mapping-virtaddr-to-byteoffset}
 \resizebox{\linewidth}{!}{
 \begin{tabular}{|c|c|c|ll}
 \cline{1-3}
@@ -640,8 +642,6 @@ Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails ve
 0x240840e5b08                      & 8424         & 0x96bb08                                           &  &  \\ \cline{1-3}
 \end{tabular}
 }
-\caption{Firefox: Abbildung der virtellen Speicheradressen der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten}
-\label{tab:firefox-mapping-virtaddr-to-byteoffset}
 \end{table}
 
 Zu diesen Artefakten wurde gemäß Methodik in Kapitel \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility} der String Kontext -- also die Zeichen vor und nach dem gefundenen Artefakt im Speicherbereich -- ermittelt. Dazu wurde mithilfe des Volatility memmap Plugins die Abbildung der virtuellen Speicheradressen auf den Byte-Offset in der extrahierten Speicherseite des Prozesses ermittelt. 
@@ -651,23 +651,23 @@ Zu diesen Artefakten wurde gemäß Methodik in Kapitel \ref{subsubsection:ergebn
 	\subcaptionbox{Byte-Offset 0x11dd40c8}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0xb9ce29180c8_7420.png}}%
 	\hfill
 	\subcaptionbox{Byte-Offset 0x12e234e0}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0x2859f4ffd4e0_7420.png}}%
-	\caption{Passwort-Klartext in Firefox Speicherseiten von PID 7420}
+	\caption{Firefox: Passwort-Klartext in Speicherseiten von PID 7420}
 	\label{img:firefox-pw-offset-pid-7420}  
 \end{figure}
 Wie in Abbildung \ref{img:firefox-pw-offset-pid-7420} gezeigt, sind in der Speicherseite des Prozesses mit PID 7420 in unmittelbarer Umgebung des gefundenen Passworts am Byte-Offset 0xb9ce29180c8 Code-Fragmente der \textit{Gecko-Engine} zu finden. Dieser Teil des Firefox Browsers ist für das Rendering von Webinhalten verantwortlich, einschließlich HTML, CSS, JavaScript und anderen Medienformaten wie Bildern, Audio und Video. \cite{MozillaWiki.05.06.2023}
-In der gleichen Datei konnten nach dem gefundenen Passwort am Byte-Offset $0x12e234e0$ die Strings ``Passwd`` sowie ``sessionrestore`` (siehe Common Location \textit{Sessionstore} in Anhang \ref{subsubsection:appendix-firefox-common-locations-writefile-operations}) identifiziert werden. 
+In der gleichen Datei konnten nach dem gefundenen Passwort am Byte-Offset $0x12e234e0$ die Strings \grqq{}Passwd\grqq{} sowie \grqq{}sessionrestore\grqq{} (siehe Common Location \textit{Sessionstore} in Anhang \ref{subsubsection:appendix-firefox-common-locations-writefile-operations}) identifiziert werden. 
 
 \begin{figure}[h!]
 	\centering
 	\subcaptionbox{Byte-Offset 0x583858}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0x24083b41858_8424.png}}%
 	\hfill
 	\subcaptionbox{Byte-Offset 0x96bb08}{\includegraphics[width=0.47\textwidth]{bilder/volatility/firefox/password_0x240840e5b08_8424.png}}%
-	\caption{Passwort-Klartext in Firefox Speicherseiten von PID 8424}
+	\caption{Firefox: Passwort-Klartext in Speicherseiten von PID 8424}
 	\label{img:firefox-pw-offset-pid-8424}  
 \end{figure}
 Wie in Abbildung \ref{img:firefox-pw-offset-pid-8424} gezeigt, kann in den Byte-Offsets der gefundenen Passwörter in der Speicherseite der PID 8424 kein sinnvoller Kontext ermittelt werden. Im Gegensatz zur Speicherseite der PID 7420 wird das Passwort dort mit 2 Bytes pro Zeichen enkodiert, was eine Unicode-Zeichenenkodierung vermuten lässt.
 
-\paragraph*{Yara-Regel ``DK-Logo``}
+\paragraph*{Yara-Regel \grqq{}DK-Logo\grqq{}}
 Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Browsing-Szenario geöffnete Donaukurier Logo ausschließlich im zweiten RAM Dump dreimal in Firefox Prozessen gefunden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -722,7 +722,7 @@ Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Brow
 
 \subsection*{Registry}
 \label{subsection:ergebnisse-firefox-registry}
-Die Analyse der Registry zählt gemäß Methodik in Kapitel \ref{subsection:methodik-datenanalyse-registry} sowohl zu den Common als auch Uncommon Locations. Weder in den Process Monitor ``SetValue`` Operations noch in den System- und User-Hives konnten PB-Artefakte gefunden werden. Eine detaillierte Analyse dieser Common- und Uncommon Locations der Registry ist im Anhang \ref{subsection:appendix-firefox-registry} beschrieben.
+Die Analyse der Registry zählt gemäß Methodik in Kapitel \ref{subsection:methodik-datenanalyse-registry} sowohl zu den Common als auch Uncommon Locations. Weder in den Process Monitor \grqq{}SetValue\grqq{} Operations noch in den System- und User-Hives konnten PB-Artefakte gefunden werden. Eine detaillierte Analyse dieser Common- und Uncommon Locations der Registry ist im Anhang \ref{subsection:appendix-firefox-registry} beschrieben.
 
 
 %*** TODO: Zusammenfassung Firefox ***
@@ -742,7 +742,7 @@ Die Analyse der Registry zählt gemäß Methodik in Kapitel \ref{subsection:meth
 In diesem Abschnitt werden die Ergebnisse der Datenanalyse der Common Locations, Uncommon Locations sowie der Registry für den Tor-Browser präsentiert.
 
 \subsection*{Common Locations}
-Zunächst werden die Common Locations analysiert, um potenzielle Hinweise auf Internet-Aktivitäten des Browsing-Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wurde gemäß der im Abschnitt \ref{subsection:methodik-datenanalyse-commonlocations} beschriebenen Methodik zwischen Schreibvorgängen in den Logdateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden. Dabei konnten in keiner Datei PB-Artefakte gefunden werden. Eine detaillierte Analyse der Process Monitor ``WriteFile`` Operations sowie der SQLite-Datenbanken ist im Anhang \ref{subsection:appendix-tor-common-locations} beschrieben.
+Zunächst werden die Common Locations analysiert, um potenzielle Hinweise auf Internetaktivitäten des Browsing-Szenarios zu finden. Bei der Untersuchung der gängigen Speicherorte wurde gemäß der im Abschnitt \ref{subsection:methodik-datenanalyse-commonlocations} beschriebenen Methodik zwischen Schreibvorgängen in den Logdateien des Process Monitors und den SQLite-Datenbanken zur Verwaltung von Benutzerdaten unterschieden. Dabei konnten in keiner Datei PB-Artefakte gefunden werden. Eine detaillierte Analyse der Process Monitor \grqq{}WriteFile\grqq{} Operations sowie der SQLite-Datenbanken ist im Anhang \ref{subsection:appendix-tor-common-locations} beschrieben.
 
 \subsection*{Uncommon Locations}
 Nachfolgend werden die Analyseergebnisse der Tor Uncommon Locations beschrieben.
@@ -761,14 +761,14 @@ Im Anhang \ref{subsubsection:appendix-tor-uncommon-locations-autopsy} ist eine d
 Bei der Untersuchung der Tor RAM-Dumps mithilfe des Volatility Plugins Yarascan, konnten PB-Artefakte identifiziert werden.
 Nachfolgend werden die Ergebnisse geordnet nach Yara-Regeln beschrieben. Die vollständigen Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelistet.
 
-\paragraph*{Yara-Regel ``HTML``}
+\paragraph*{Yara-Regel \grqq{}HTML\grqq{}}
 Wie bei Firefox, konnten keine HTML-Artefakte im RAM gefunden werden. Deshalb wird diese Kategorie nicht weiter aufgeführt.
 
-\paragraph*{Yara-Regel ``Suchbegriffe``}
-Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden nach dem Browsing-Szenarios sowie vor (RAM-Dump 2) als auch nach Erstellen einer ``Neuen Identität`` (RAM Dump 3-1) Suchbegriffe des Browsing-Szenarios gefunden.
-Nachdem eine ``Neue Identität`` erstellt wurde, reduzierten sich die gefundenen Artefakte deutlich. 
+\paragraph*{Yara-Regel \grqq{}Suchbegriffe\grqq{}}
+Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden nach dem Browsing-Szenarios sowie vor (RAM-Dump 2) als auch nach Erstellen einer \grqq{}Neuen Identität\grqq{} (RAM Dump 3-1) Suchbegriffe des Browsing-Szenarios gefunden.
+Nachdem eine \grqq{}Neue Identität\grqq{} erstellt wurde, reduzierten sich die gefundenen Artefakte deutlich. 
 Die Suchbegriffe wurden hauptsächlich in Firefox-Prozessen gefunden. Kein Artefakt war im Tor-Prozess zu finden.
-Mit 4833 Artefakten wurde am häufigsten der Suchbegriff ``pfaffenhofen`` nach dem Browsing-Szenario im zweiten RAM-Dump gefunden. 
+Mit 4833 Artefakten wurde am häufigsten der Suchbegriff \grqq{}pfaffenhofen\grqq{} nach dem Browsing-Szenario im zweiten RAM-Dump gefunden. 
 Nach dem Schließen des Tor-Browsers wurden keine Suchbegriffe im RAM identifiziert.
 
 \begin{table}[h!]
@@ -948,10 +948,10 @@ Nach dem Schließen des Tor-Browsers wurden keine Suchbegriffe im RAM identifizi
 %	\caption{Keywords}
 %\end{figure}
 
-\paragraph*{Yara-Regel ``URLs``}
-Ähnlich zur Yara-Regel ``Suchbegriffe`` wurden, wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Dabei wurden im RAM Dump 3-1 deutlich weniger URL-Artefakte als in RAM Dump 2 gefunden. 
+\paragraph*{Yara-Regel \grqq{}URLs\grqq{}}
+Ähnlich zur Yara-Regel \grqq{}Suchbegriffe\grqq{} wurden, wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Dabei wurden im RAM Dump 3-1 deutlich weniger URL-Artefakte als in RAM Dump 2 gefunden. 
 Artefakte dieser Yara-Regel wurden nach Firefox-Prozessen hauptsächlich in Tor-Prozessen gefunden. Am wenigsten Artefakte wurden in anderen Prozessen identifiziert.
-Auffällig ist, dass die URL ``mallofamerica.com`` 26505 Mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde ``mooserliesl.de`` nur 518 Mal gefunden. Nach Schließen des Tor-Browsers wurden keine URL-Artefakte mehr im RAM gefunden.
+Auffällig ist, dass die URL \grqq{}mallofamerica.com\grqq{} 26505 Mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde \grqq{}mooserliesl.de\grqq{} nur 518 Mal gefunden. Nach Schließen des Tor-Browsers wurden keine URL-Artefakte mehr im RAM gefunden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{l}	
@@ -1380,7 +1380,7 @@ Auffällig ist, dass die URL ``mallofamerica.com`` 26505 Mal in RAM-Dump 2 gefun
 		\end{tikzpicture}
 	\end{tabular}
 	}
-	\captionof{figure}{Gefundene E-Mail Artefakte im Tor RAM}
+	\captionof{figure}{Tor-Browser: Gefundene E-Mail Artefakte im RAM}
 	\label{chart:tor-volatility-mail}
 \end{table}
 %\begin{figure}[h!]
@@ -1388,14 +1388,16 @@ Auffällig ist, dass die URL ``mallofamerica.com`` 26505 Mal in RAM-Dump 2 gefun
 %	\label{chart:final-criteria}  
 %	\caption{Mail}
 %\end{figure}
-\paragraph*{Yara-Regel ``E-Mail``}
-Nach dem Browsing-Szenario, vor Zuweisung einer ``Neuen Identität`` (RAM-Dump 2), konnten alle Kategorien von E-Mail-Artefakten gefunden werden.
-Nur die Absenderadresse ``computerforensikvl@gmail.com`` wurde noch nach Erstellen der ``Neuen Identität`` (RAM-Dump 3-1) gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene E-Mail Artefakt.
+\paragraph*{Yara-Regel \grqq{}E-Mail\grqq{}}
+Nach dem Browsing-Szenario, vor Zuweisung einer \grqq{}Neuen Identität\grqq{} (RAM-Dump 2), konnten alle Kategorien von E-Mail-Artefakten gefunden werden.
+Nur die Absenderadresse \grqq{}computerforensikvl@gmail.com\grqq{} wurde noch nach Erstellen der \grqq{}Neuen Identität\grqq{} (RAM-Dump 3-1) gefunden. Die Absenderadresse ist ebenso das am häufigsten gefundene E-Mail Artefakt.
 Wie in Abbildung \ref{chart:tor-volatility-mail} dargestellt, wurden die Artefakte ausschließlich in Firefox-Prozessen gefunden.
-Wie bei der Analyse der Firefox RAM-Dumps in Abschnitt \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}, wurde das Passwort als Klartext nach dem Browsing-Szenario, vor Zuweisung einer ``Neuen Identität``(RAM-Dump 2) gefunden.
+Wie bei der Analyse der Firefox RAM-Dumps in Abschnitt \ref{subsubsection:ergebnisse-firefox-uncommonlocations-analysemitvolatility}, wurde das Passwort als Klartext nach dem Browsing-Szenario, vor Zuweisung einer \grqq{}Neuen Identität\grqq{}(RAM-Dump 2) gefunden.
 
 \begin{table}[h!]
 	\centering
+	\caption{Tor-Browser: Abbildung der virtuellen Speicheradressen der gefundenen Strings im RAM auf Byte-Offsets der entsprechenden Speicherseiten}
+	\label{tab:tor-mapping-virtaddr-to-byteoffset}
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{|c|c|c|ll}
 	\cline{1-3}
@@ -1404,8 +1406,6 @@ Wie bei der Analyse der Firefox RAM-Dumps in Abschnitt \ref{subsubsection:ergebn
 	0x2b1e2ecb748                     & 708         & 0x10f7748                                         &  &  \\ \cline{1-3}
 	\end{tabular}
 	}
-	\caption{Tor-Browser: Abbildung der virtuellen Speicheradressen der gefundenen Strings im RAM auf Byte-Offsets der entsprechenden Speicherseiten}
-	\label{tab:tor-mapping-virtaddr-to-byteoffset}
 \end{table}
 
 Das Passwort wurde zweimal im Firefox Prozess mit der PID 708 gefunden. Tabelle \ref{tab:tor-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe sowie deren Abbildung auf die mithilfe des Volatility Plugins \textit{memmap} identifizierten Byte-Offsets der extrahierten Speicherseiten.
@@ -1416,15 +1416,15 @@ Das Passwort wurde zweimal im Firefox Prozess mit der PID 708 gefunden. Tabelle 
 	\subcaptionbox{Byte-Offset 0xea0318}{\includegraphics[width=0.47\textwidth]{bilder/volatility/tor/password_0xea0318.png}}%
 	\hfill
 	\subcaptionbox{Byte-Offset 0x10f7748}{\includegraphics[width=0.47\textwidth]{bilder/volatility/tor/password_0x10f7748.png}}%
-	\caption{Passwort-Klartext in Firefox Speicherseiten von PID 708}
+	\caption{Tor-Browser: Passwort-Klartext in Speicherseiten von PID 708}
 	\label{img:firefox-pw-offset-pid-708}  
 \end{figure}
 Bei Untersuchung des String-Kontexts in Abbildung \ref{img:firefox-pw-offset-pid-708}, wurden für das Passwort am Byte-Offset 0xea0318 keine auffälligen Artefakte entdeckt.
-Im Bereich des gefundenen Passworts am Byte-Offset 0x10f7748 befindet sich der String ``CSP\_ignoringSrcForStrictDynamic``, dessen Bedeutung nicht näher bestimmt werden konnte.
-Weiterhin wurde die Zeichenkette ``invalidation/lcs/client`` in der Nähe des Passworts gefunden. Auf diesen String wird in einem Firefox Bug-Ticket verwiesen, welches bereits 2017 geschlossen wurde. Der Bug betraf ein Speicher-Leck. \cite{Bugzilla.05.06.2023} Der genaue Zusammenhang mit dem gefundenen Passwort konnte nicht ermittelt werden. 
+Im Bereich des gefundenen Passworts am Byte-Offset 0x10f7748 befindet sich der String \grqq{}CSP\_ignoringSrcForStrictDynamic\grqq{}, dessen Bedeutung nicht näher bestimmt werden konnte.
+Weiterhin wurde die Zeichenkette \grqq{}invalidation/lcs/client\grqq{} in der Nähe des Passworts gefunden. Auf diesen String wird in einem Firefox Bug-Ticket verwiesen, welches bereits 2017 geschlossen wurde. Der Bug betraf ein Speicher-Leck. \cite{Bugzilla.05.06.2023} Der genaue Zusammenhang mit dem gefundenen Passwort konnte nicht ermittelt werden. 
 	
-\paragraph*{Yara-Regel ``DK-Logo``}
-Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos ein einziges Mal nach dem Browsing-Szenario, vor Erstellen der ``Neuen Identität`` (RAM-Dump 2) in einem Firefox Prozess gefunden.
+\paragraph*{Yara-Regel \grqq{}DK-Logo\grqq{}}
+Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadezimal-Wert des Donaukurier-Logos ein einziges Mal nach dem Browsing-Szenario, vor Erstellen der \grqq{}Neuen Identität\grqq{} (RAM-Dump 2) in einem Firefox Prozess gefunden.
 \begin{figure}[h!]
 	\resizebox{\linewidth}{!}{
 		\begin{tikzpicture}
@@ -1458,7 +1458,7 @@ Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadez
 			\end{axis}
 		\end{tikzpicture}
 	}
-	\caption{Gefundener Hexadezimalwert des Donaukurier-Logos im Tor RAM}
+	\caption{Tor-Browser: Gefundener Hexadezimalwert des Donaukurier-Logos im RAM}
 	\label{chart:tor-volatility-image}
 \end{figure}
 %\begin{figure}[h!]
@@ -1504,8 +1504,9 @@ Wie in Abbildung \ref{chart:tor-volatility-image} dargestellt, wurde der Hexadez
 %		 -> Registry and indicates the execution path of the program, as well as the number of times the program was executed 
 
 \subsection*{Registry}
-Wie in der Methodik in Abschnitt \ref{subsection:methodik-datenanalyse-registry} beschrieben, teilt sich die Analyse der Registry sowohl in Common als auch Uncommon Locations. Weder in den Process Monitor ``SetValue`` Operations noch über die Stringsuche in den System- und User-Hives konnten PB-Artefakte gefunden werden. Eine detaillierte Analyse der Registry ist im Anhang \ref{subsection:appendix-firefox-registry} beschrieben. 
+Wie in der Methodik in Abschnitt \ref{subsection:methodik-datenanalyse-registry} beschrieben, teilt sich die Analyse der Registry sowohl in Common als auch Uncommon Locations. Weder in den Process Monitor \grqq{}SetValue\grqq{} Operations noch über die Stringsuche in den System- und User-Hives konnten PB-Artefakte gefunden werden. Eine detaillierte Analyse der Registry ist im Anhang \ref{subsection:appendix-firefox-registry} beschrieben. 
 
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%
 % CHRISTOPH AB HIER %
 %%%%%%%%%%%%%%%%%%%%%
@@ -1516,7 +1517,7 @@ Anschließend folgt die Analyse des Webbrowsers Chrome. Die Ergebnisse werden da
 
 \subsection*{Common Locations}\label{chap:ergebnisse-chrome-common-location}
 
-Zuerst werden die Common Locations nach Artefakten des privaten Browsing-Szenarios untersucht. Dabei wird wieder zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und den SQLite-Datenbanken unterschieden, wie im [link kapitel] erläutert. Es konnten darin jedoch keine Artefakte gefunden werden.\\
+Zuerst werden die Common Locations nach Artefakten des privaten Browsing-Szenarios untersucht. Dabei wird wieder zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und den SQLite-Datenbanken unterschieden, wie im \autoref{subsection:methodik-datenanalyse-commonlocations} erläutert. Es konnten darin jedoch keine Artefakte gefunden werden.\\
 Eine weitergehende Analyse aller Schreiboperationen sowie den Datenbänken ist im \autoref{chap:anhang-chrome-common-locations} detailliert aufgeführt.
 
 \begin{comment} % Alles in Anhang nunter
@@ -1738,223 +1739,240 @@ Auch in Autopsy konnten keine Artefakte der durchgeführten Browsing-Session gef
 
 \subsubsection*{Analyse mit Volatility}\label{chap:ergebnisse-chrome-uncommon-volatility}
 
-Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die Analyseergebnisse des Hauptspeichers (RAM) mittels des Forensik-Tools Volatility. Im RAM konnten schließlich Artefakte gefunden werden. Diese wurden mittels des Volatility Plugins Yarascan identifiziert, wobei die Yara-Regeln aus [link Kapitel] verwendet wurden. Zusätzlich zu den erkannten Strings spielt auch noch die PID eine entscheidende Rolle, da damit der Treffer entweder dem Browser oder einem anderen Prozess eindeutig zuordnet werden kann. Die Ergebnisse dieser String-Suche werden nachfolgend dargelegt.
+Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die Analyseergebnisse des Hauptspeichers (RAM) mittels des Forensik-Tools Volatility. Im RAM konnten schließlich Artefakte gefunden werden. Diese wurden mittels des Volatility Plugins Yarascan identifiziert, wobei die Yara-Regeln aus \autoref{appendix:yara-regeln} verwendet wurden. Zusätzlich zu den erkannten Strings spielt auch noch die PID eine entscheidende Rolle, da damit der Treffer entweder dem Browser oder einem anderen Prozess eindeutig zuordnet werden kann. Die Ergebnisse dieser String-Suche werden nachfolgend dargelegt.
 
 \paragraph*{Yara-Regel \glqq{}HTML\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-html}
 
-Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden. Wie in \autoref{chart:chrome-volatility-htmls} dargestellt, wird der String \glqq{}>Themen:\grqq{} im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
+Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden. Einzig der der String \glqq{}>Themen:\grqq{} wurde im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
 
-\begin{table}[h!]
-	\resizebox{\linewidth}{!}{
-		\begin{tabular}{l}	
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{Insiders</span>},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-				\end{axis}
-			\end{tikzpicture}
-			\\[-7pt]
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{Ja</span>},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-				\end{axis}
-			\end{tikzpicture}
-			\\[-7pt]
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{L1</div>},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-				\end{axis}
-			\end{tikzpicture}
-			\\[-7pt]
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{>Themen:},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\legend{chrome.exe, Andere Prozesse}
-				\end{axis}
-			\end{tikzpicture}
-		\end{tabular}
-	}
-	\caption{Anzahl gefundener HTML-Fragmente im Chrome RAM}
-	\label{chart:chrome-volatility-htmls}
-\end{table}
+%Wie in \autoref{chart:chrome-volatility-htmls} dargestellt, wird der String \glqq{}>Themen:\grqq{} im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
+%
+%\begin{table}[h!]
+%	\resizebox{\linewidth}{!}{
+%		\begin{tabular}{r}	
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{Insiders</span>},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%				\end{axis}
+%			\end{tikzpicture}
+%			\\[-7pt]
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{Ja</span>},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%				\end{axis}
+%			\end{tikzpicture}
+%			\\[-7pt]
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{L1</div>},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%				\end{axis}
+%			\end{tikzpicture}
+%			\\[-7pt]
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{>Themen:},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\legend{chrome.exe, Andere Prozesse}
+%				\end{axis}
+%			\end{tikzpicture}
+%		\end{tabular}
+%	}
+%	\caption{Chrome: Anzahl gefundener HTML-Fragmente im RAM}
+%	\label{chart:chrome-volatility-htmls}
+%\end{table}
 
-Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in diesem Fall) des Prozesses, in welchem der String gefunden wurde, sowie die virtuelle Adresse, an welchem das Fragment gefunden wurde (0xa6c018187e1). Mit dieser Information wurde dann zunächst der Befehl \texttt{python3 vol.py -f DUMP\_FILE windows.memmap --pid 7012} ausgeführt, um das Memory-Mapping des Prozesses zu erhalten, also die Zuordnung der virtuellen zu den physischen Adressen des Prozesses, sowie deren Offset im Memory-Dump-File. Nachfolgend ist ein Ausschnitt der Ausgabe des Befehls zu sehen:
+Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in diesem Fall) des Prozesses, in welchem der String gefunden wurde, sowie die virtuelle Adresse, an welchem das Fragment gefunden wurde (0xa6c018187e1). Mit dieser Information wurde dann zunächst der Befehl \texttt{python3 vol.py -f DUMP\_FILE windows.memmap --pid 7012} ausgeführt, um das Memory-Mapping des Prozesses zu erhalten, also die Zuordnung der virtuellen zu den physikalischen Adressen des Prozesses, sowie deren Offset im Memory-Dump-File. In \autoref{tab:chrome-memmap-to-virtual} ist ein Ausschnitt der Ausgabe des Befehls zu sehen.
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{llllll}
-		Virtual                              & Physical                          & Size                          & Offset in File                   & File output                     &  \\
-		0xa6c01817000                        & 0xc4efc000                        & 0x1000                        & 0x105d000                        & Disabled                        &  \\
-		{\color[HTML]{FE0000} 0xa6c01818000} & {\color[HTML]{FE0000} 0xd2dfb000} & {\color[HTML]{FE0000} 0x1000} & {\color[HTML]{FE0000} 0x105e000} & {\color[HTML]{FE0000} Disabled} &  \\
-		0xa6c01819000                        & 0xd50fa000                        & 0x1000                        & 0x105f000                        & Disabled                        & 
+	\caption{Chrome: Abbildung virtueller Adressen auf Byte-Offsets der Speicherseite}
+	\label{tab:chrome-memmap-to-virtual}
+	\resizebox{0.7\linewidth}{!}{
+	\begin{tabular}{|l|l|l|l|l|}
+	\hline
+	\textbf{Virtual}                     & \textbf{Physical}                 & \textbf{Size}                 & \textbf{Offset in File}          & \textbf{File Output}            \\ \hline
+	0xa6c01817000                        & 0xc4efc000                        & 0x1000                        & 0x105d000                        & Disabled                        \\ \hline
+	{\color[HTML]{FE0000} 0xa6c01818000} & {\color[HTML]{FE0000} 0xd2dfb000} & {\color[HTML]{FE0000} 0x1000} & {\color[HTML]{FE0000} 0x105e000} & {\color[HTML]{FE0000} Disabled} \\ \hline
+	0xa6c01819000                        & 0xd50fa000                        & 0x1000                        & 0x105f000                        & Disabled                        \\ \hline
 	\end{tabular}
+	}
 \end{table}
 
-In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf die physikalische Adresse 0xd2dfb000 gemapped ist und der Offset im memory-file 0x105e000 entspricht. Mithilfe dieser Adressen konnte dann die tatsächliche Position des String im memory-file errechnet werden. Diese betrug somit 0x105e7e1. Anschließend wurde der gesamte Prozess mithilfe von Volatility gedumped und dieses memory-dump-file wurde anschließend in den Hex-Editor HxD geladen. Dort wurde dann genau an dem errechneten Offset nach dem String gesucht und konnte genau dort auch gefunden werden, was auch in \autoref{pic:ChromeStringThemen} zu sehen ist.
+In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf die physikalische Adresse 0xd2dfb000 gemapped ist und der Offset im memory-file 0x105e000 entspricht. Mithilfe dieser Adressen konnte dann die tatsächliche Position des String im memory-file errechnet werden. Diese betrug somit 0x105e7e1. Anschließend wurde der Speicherbereich des Prozesses als Memory-Dump-File gedumpt und in den Hex-Editor HxD geladen. Dort wurde dann genau an dem errechneten Offset nach dem String gesucht und konnte genau dort auch gefunden werden, was auch in \autoref{pic:ChromeStringThemen} zu sehen ist.
 %TODO Evtl doch des andere Bild...
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.75\textwidth]{bilder/HxDChromeStringThemen.png}
-	\caption{Ausschnitt aus dem Memory-Dump-File an der Stelle des gefundenen Strings}
+	\includegraphics[width=0.75\textwidth]{bilder/HxDChromeStringThemen_cropped.png}
+	\caption{Chrome: Ausschnitt aus dem Memory-Dump-File an der Stelle des gefundenen HTML-Strings}
 	\label{pic:ChromeStringThemen}
 \end{figure} 
 
-Daraufhin wurde weitergehend versucht zu analysieren, ob nur ein Teil der Website im RAM verfügbar ist, oder ob die komplette Donaukurier-Website als HTML Artefakt im RAM vorhanden ist. Dafür wurde die Internetseite donaukurier.de nochmals aufgerufen, heruntergeladen und der Beginn sowie das Ende der HTML-Datei analysiert. Nachfolgend sind die ersten sowie letzten Wörter der HTML-Datei zu sehen:\\
+Daraufhin wurde weitergehend versucht zu analysieren, ob nur ein Teil der Website im RAM verfügbar ist, oder ob die komplette Donaukurier-Website als HTML Artefakt im RAM vorhanden ist. Dafür wurde die Internetseite donaukurier.de nochmals aufgerufen, heruntergeladen und der Beginn sowie das Ende der HTML-Datei analysiert. In Abbildung \ref{figure:html-begin-end-dk} sind die ersten sowie letzten Strings der HTML-Datei zu sehen:\\
 
-\begin{minted}[autogobble=true,frame=single,label=Beginn und Ende der Donaukurier-Website]{html}
+
+\begin{figure}[!h]
+ \begin{minipage}{0.5\textwidth}
+  \centering
+	\begin{minted}[autogobble=true,frame=single]{html}
 	<!DOCTYPE html>
 	<html lang="de">
-	<head>
-	
-	<! ... >
-	
-	    </script>
-	</body>
+		<head>
+		...
+	\end{minted}
+%  \captionof{subfigure}{Beginn...}
+ \end{minipage}
+ \begin{minipage}{0.5\textwidth}
+  \centering
+	\begin{minted}[autogobble=true,frame=single]{html}
+			...
+	    	</script>
+		</body>
 	</html>
-\end{minted}
+	\end{minted}
+%  \captionof{subfigure}{... und Ende der Donaukurier-Website}
+ \end{minipage}
+\caption{Chrome: Beginn (links) und Ende (rechts) des HTML-Dokuments der Donaukurier Webseite}
+  \label{figure:html-begin-end-dk}
+\end{figure}
+
 
 Davon ausgehend wurde in HxD zuerst nach dem String \glqq{}<!DOCTYPE html>\grqq{} und anschließend nach \glqq{}</html>\grqq{} gesucht. Beide Strings wurden mehrfach in dem Memory-Dump gefunden. Da jedoch keine weiteren Website-typischen Strings mehr durch Yarascan identifiziert werden konnten, wurden die übrigen String-Treffer nicht mehr weiter analysiert.\\
-Da bei der Suche des Strings mehr als einen Treffer gab, wurde genau der String ausgewählt, welcher einen niedrigeren Offset als 0x105e7e1 aufweist. In diesem Fall war das der Treffer bei dem Offset von 105201b, was auch in \autoref{pic:ChromeBeginDonaukurier} zu sehen ist (markierter Teil). Dabei ist deutlich zu erkennen, dass die Website hier beginnt, da alles Nachfolgende mit dem Beginn der heruntergeladenen Website übereinstimmt und davor nichts im RAM gespeichert wurde.
+Da bei der Suche des Strings mehr als einen Treffer gab, wurde genau der String ausgewählt, welcher einen niedrigeren Offset als 0x105e7e1 aufweist. In diesem Fall war das der Treffer bei dem Offset von 105201b, was links in \autoref{pic:ChromeBeginDonaukurier} zu sehen ist (markierter Teil). Dabei ist deutlich zu erkennen, dass die Website hier beginnt, da alles Nachfolgende mit dem Beginn der heruntergeladenen Website übereinstimmt und davor nichts im RAM gespeichert wurde.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{bilder/HxDChrome1.png}
-	\caption{Beginn der Donaukurier-Website}
+	\subcaptionbox{}{\includegraphics[width=0.47\textwidth]{bilder/HxDChrome1_cropped.png}}%
+	\hfill
+	\subcaptionbox{}{\includegraphics[width=0.47\textwidth]{bilder/HxDChrome3_cropped.png}}%
+	\caption{Chrome: Beginn (links) und Ende (rechts) des HTML-Dokuments der Donaukurier Webseite in HxD}
 	\label{pic:ChromeBeginDonaukurier}
-\end{figure} 
+\end{figure}
 
-Gleiches wurde mit dem Ende der HTML-Datei durchgeführt. \autoref{pic:ChromeEndDonaukurier} zeigt einen Screenshot mit dem relevanten String-Treffer, welcher das Ende der Website donaukurier.de darstellt.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{bilder/HxDChrome3.png}
-	\caption{Ende der Donaukurier-Website}
-	\label{pic:ChromeEndDonaukurier}
-\end{figure} 
+Gleiches wurde mit dem Ende der HTML-Datei durchgeführt. \autoref{pic:ChromeBeginDonaukurier} zeigt rechts einen Screenshot mit dem relevanten String-Treffer, welcher das Ende der Website donaukurier.de darstellt.
 
 Anschließend wurde alles, was sich zwischen dem gefundenem Anfang und Ende befindet, als Text kopiert und in eine html-Datei gespeichert. Ein detaillierter Vergleich dieses extrahierten Artefakts mit der heruntergeladenen Datei lieferte das Ergebnis, dass die komplette Website rekonstruiert werden kann, die Websiten sich nur in den neuesten Artikeln und Überschriften unterschieden. Übriges war zu 100\% identisch. \\
 Zusammenfassend konnte somit die Website \glqq{}donaukurier.de\grqq{} im zweiten Memory-Dump komplett aus dem RAM extrahiert und rekonstruiert werden.
@@ -2117,17 +2135,17 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 			\end{tikzpicture}
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener Suchbegriffe im Chrome RAM}
+	\caption{Chrome: Anzahl gefundener Suchbegriffe im RAM}
 	\label{chart:chrome-volatility-keywords}
 \end{table}
 
 \paragraph*{Yara-Regel \glqq{}URLs\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-urls}
 
-\autoref{chart:chrome-volatility-urls} zeigt, dass in den RAM-Dumps alle Suchbegriffe identifiziert werden konnten. Im ersten Speicherabbild wurden dabei keine URLs gefunden, im zweiten am meisten und im dritten, also nach Beenden des Browsers, konnten auch noch 5 URLs identifiziert werden. Dabei waren es bei der URL \glqq{}donaukurier.com\grqq{} am meisten Suchtreffer mit insgesammt 8157 Treffern, 10 davon waren nicht im Speicher von Chrome-Prozessen zu finden. Zwei davon waren im Prozess \textit{MemCompression}, die restlichen acht wurden im Prozess mit der PID 3760 identifiziert, was in diesem Fall der sihost.exe war. Dieses Programm entspricht dem \textit{Shell Infrastructure Host}, welcher die Grafikbenutzeroberflächer erstellt und verwaltet, wie beispielsweise Desktop-Hintergründe, Popup-Benachrichtigungen und Taskleisten \cite{SiHostWebsite}. Im Prozessbereich dieses Programms befanden sich auch die 5 Treffer aus dem dritten RAM-Dump.
+\autoref{chart:chrome-volatility-urls} zeigt, dass in den RAM-Dumps alle Suchbegriffe identifiziert werden konnten. Im ersten Speicherabbild wurden dabei keine URLs gefunden, im zweiten am meisten und im dritten, also nach Beenden des Browsers, konnten auch noch fünf URLs identifiziert werden. Dabei waren es bei der URL \glqq{}donaukurier.com\grqq{} am meisten Suchtreffer mit insgesamt 8157 Treffern, zehn davon waren nicht im Speicher von Chrome-Prozessen zu finden. Zwei davon waren im Prozess \textit{MemCompression}, die restlichen acht wurden im Prozess mit der PID 3760 identifiziert, was in diesem Fall der sihost.exe war. Dieses Programm entspricht dem \textit{Shell Infrastructure Host}, welcher die Grafikbenutzeroberfläche erstellt und verwaltet, wie beispielsweise Desktop-Hintergründe, Popup-Benachrichtigungen und Taskleisten \cite{SiHostWebsite}. Im Prozessbereich dieses Programms befanden sich auch die fünf Treffer aus dem dritten RAM-Dump.
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
-		\begin{tabular}{l}	
+		\begin{tabular}{r}	
 			\begin{tikzpicture}
 				\begin{axis}[
 					xbar,
@@ -2170,7 +2188,7 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{mooserliesl.de},
+					ylabel style={align=center}, ylabel=\textbf{mooserliesl}\\\textbf{.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -2207,7 +2225,7 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{mallofamerica.com},
+					ylabel style={align=center}, ylabel=\textbf{mallofamerica}\\\textbf{.com},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -2244,7 +2262,7 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{donaukurier.de},
+					ylabel style={align=center}, ylabel=\textbf{donaukurier}\\\textbf{.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -2278,12 +2296,12 @@ Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher 
 			\end{tikzpicture}		
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener URLs im Chrome RAM}
+	\caption{Chrome: Anzahl gefundener URLs im RAM}
 	\label{chart:chrome-volatility-urls}
 \end{table}
 
 \paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-email}
-Wie in \autoref{chart:chrome-volatility-mail} gezeigt, wurden sowohl nach dem Browsing Szenario bei geöffnetem Browser, als auch nach Schließen desselben E-Mail Artefakte gefunden. Darunter war die E-Mail-Adresse mit 172 Treffern, 8 davon außerhalb von Chrome-Prozessen, das häufigste Suchresultat. unter den acht externen Prozessen waren der \textit{Desktop Window Manager}, welcher für visuelle Effekte wie Desktop-Animationen und halbtransparente Fenster verantwortlich ist \cite{dwmWebsite}, explorer.exe, sihost.exe und weiteren Windows-Prozessen. Da dies aber meist Prozesse waren, welche grafische Aktionen durchführten, wurden diese nicht weiter analysiert.\\
+Wie in \autoref{chart:chrome-volatility-mail} gezeigt, wurden sowohl nach dem Browsing Szenario bei geöffnetem Browser, als auch nach Schließen desselben E-Mail Artefakte gefunden. Darunter war die E-Mail-Adresse mit 172 Treffern, acht davon außerhalb von Chrome-Prozessen, das häufigste Suchresultat. unter den acht externen Prozessen waren der \textit{Desktop Window Manager}, welcher für visuelle Effekte wie Desktop-Animationen und halbtransparente Fenster verantwortlich ist \cite{dwmWebsite}, explorer.exe, sihost.exe und weiteren Windows-Prozessen. Da dies aber meist Window-Manager Prozesse waren, wurden diese nicht weiter analysiert. \\
 Die beiden Studenten-Mailadressen, an welche die Mail versendet wurden, waren mit 121 bzw. 97 Suchtreffern in Chrome-Prozessen vertreten. Der Mailtext war mit 136 Artefakten mehr als doppelt so oft im RAM zu finden als der Betrefftext. Im dritten RAM-Dump wurde dann noch die E-Mail-Adresse im Prozess \textit{explorer.exe} gefunden.\\
 Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Vergleich zu den URLs beispielsweise.
 
@@ -2448,7 +2466,7 @@ Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Ve
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{chs3702@thi.de},
+					ylabel style={align=center}, ylabel=\textbf{chs3702}\\\textbf{@thi.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -2486,7 +2504,7 @@ Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Ve
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{cas0597@thi.de},
+					ylabel style={align=center}, ylabel=\textbf{cas0597}\\\textbf{@thi.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -2524,13 +2542,13 @@ Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Ve
 			
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener E-Mail Artefakte im Chrome RAM}
+	\caption{Chrome: Anzahl gefundener E-Mail Artefakte im RAM}
 	\label{chart:chrome-volatility-mail}
 \end{table}
 
 \paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-dklogo}
 
-Bei der letzten Yara-Regel zeigt \autoref{chart:chrome-volatility-image} die Ergebnisse, in welchem RAM-Dump und wie oft das Donaukurier Logo im RAM identifiziert werden konnte. Zu sehen ist, dass dies nur im zweiten Speicherabbild der Fall war und insgesamt 3 mal dort in einem Chrome-Prozess zu finden war.
+Bei der letzten Yara-Regel zeigt \autoref{chart:chrome-volatility-image} die Ergebnisse, in welchem RAM-Dump und wie oft das Donaukurier Logo im RAM identifiziert werden konnte. Zu sehen ist, dass dies nur im zweiten Speicherabbild der Fall war und insgesamt dreimal dort in einem Chrome-Prozess zu finden war.
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -2566,15 +2584,16 @@ Bei der letzten Yara-Regel zeigt \autoref{chart:chrome-volatility-image} die Erg
 			\end{tikzpicture}
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im Chrome RAM}
+	\caption{Chrome: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM}
 	\label{chart:chrome-volatility-image}
 \end{table}
 
 \subsection*{Registry}\label{chap:ergebnisse-chrome-uncommon-registry}
 
-Wie in [link Kapitel] bereits beschrieben, zählt die Analyse der Registry sowohl zu den Common als auch zu den Uncommon Locations. Es können weder in den \glqq{}SetValue\grqq{}-Operationen in den Process Monitor Logs noch durch die Analyse der System- und User-Hives durch den RegistryExplorer Artefakte gefunden werden. Eine weitergehende Analyse der Registry ist im \autoref{chap:anhang-chrome-common-registry} und \autoref{chap:anhang-chrome-uncommon-registry} beschrieben.
+Wie in \autoref{subsection:methodik-datenanalyse-registry} beschrieben, zählt die Analyse der Registry sowohl zu den Common als auch zu den Uncommon Locations. Es können weder in den \glqq{}SetValue\grqq{}-Operationen in den Process Monitor Logs noch durch die Analyse der System- und User-Hives durch den RegistryExplorer Artefakte gefunden werden. Eine weitergehende Analyse der Registry ist im Anhang \ref{chap:anhang-chrome-registry} beschrieben.
 % Aufführen aller Registry-Schreiboperationen, wie analysiert, 
 
+\pagebreak
 \section{Brave}\label{chap:ergebnisse-brave}
 
 \begin{comment}
@@ -2661,182 +2680,182 @@ Anschließend an die Common Locations folgt nun die Untersuchung der Uncommon Lo
 \subsubsection*{Analyse mit Autopsy}\label{chap:ergebnisse-brave-uncommon-locations-autopsy}
 
 Autopsy wird bei den Uncommon Locations zusätzlich als forensisches Werkzeug verwendet im Gegensatz zur Analyse der Common Locations, bei welchen es eingesetzt wurde, um Dateien aus den Snapshots zu extrahieren.\\
-Zunächst wurde die Stringsuche gemäß [link Kapitel] eingesetzt, wobei es keine Suchtreffer gab.\\
+Zunächst wurde die Stringsuche gemäß \autoref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy} eingesetzt, wobei es keine Suchtreffer gab.\\
 Zusätzlich wurden automatisch kategorisierte Dateien untersucht, wobei hier auch keine Artefakte zu finden waren. \autoref{chap:anhang-brave-uncommon-locations-autopsy} geht auf diese Dateien ausführlicher ein.
 
 \subsubsection*{Analyse mit Volatility}\label{chap:ergebnisse-brave-uncommon-locations-volatility}
 
-Für die Analyse des Arbeitsspeichers wurde das Forensik-Tool Volatility verwendet, womit eine Stringsuche mittels des Plugins Yarascan durchgeführt wird. Damit durchsucht man ein Arbeitsspeicherabbild nach gewissen Strings, welche zuvor in einer yara-rule festgelegt werden können. Die für diese Arbeit verwendete Datei inklusive der Regeln ist in [link Anhang runter] aufgeführt. 
+Für die Analyse des Arbeitsspeichers wurde das Forensik-Tool Volatility verwendet, womit eine Stringsuche mittels des Plugins Yarascan durchgeführt wird. Damit durchsucht man ein Arbeitsspeicherabbild nach gewissen Strings, welche zuvor in einer Yara-Regel festgelegt werden können. Die für diese Arbeit verwendete Datei inklusive der Regeln ist in Anhang \ref{appendix:yara-regeln} aufgeführt. 
 
 \paragraph*{Yara-Regel \glqq{}HTML\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-html}
 
-Beim Brave-Browser konnte ein HTML-Fragment wiederhergestellt werden, was in \autoref{chart:brave-volatility-htmls} dargestellt ist. Es ist wieder der String \glqq{}>Themen:\grqq, welcher einmal im zweiten RAM-Dump vorliegt.
+Beim Brave-Browser konnte ausschließlich ein HTML-Fragment im zweiten RAM-Dump wiederhergestellt werden. Dabei handelt es sich wie bei Chrome um den String \glqq{}>Themen:\grqq.
 
-\begin{table}[h!]
-	\resizebox{\linewidth}{!}{
-		\begin{tabular}{l}	
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{Insiders</span>},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-				\end{axis}
-			\end{tikzpicture}
-			\\[-7pt]
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{Ja</span>},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-				\end{axis}
-			\end{tikzpicture}
-			\\[-7pt]
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{L1</div>},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-				\end{axis}
-			\end{tikzpicture}
-			\\[-7pt]
-			\begin{tikzpicture}
-				\begin{axis}[
-					xbar,
-					width=12cm, 
-					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{>Themen:},
-					y=0.75cm,
-					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
-					label style={font=\small},
-					tick label style={font=\small},
-					ytick=data,
-					xticklabels={,,},
-					xmin = 0,
-					xmax = 5,
-					nodes near coords, 
-					nodes near coords align={horizontal},
-					nodes near coords style={font=\tiny},
-					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
-					bar width=.17cm,
-					enlarge y limits={abs=2*\pgfplotbarwidth},
-					scaled x ticks=false,
-					legend style={
-						at={(0.5,-0.1)},
-						anchor=north
-					},
-					legend columns=3,
-					yminorgrids = true,minor tick num=1
-					]
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\addplot coordinates {
-						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
-					};
-					\legend{brave.exe, Andere Prozesse}
-				\end{axis}
-			\end{tikzpicture}
-		\end{tabular}
-	}
-	\caption{Anzahl gefundener HTML-Fragmente im Brave RAM}
-	\label{chart:brave-volatility-htmls}
-\end{table}
+%\begin{table}[h!]
+%	\resizebox{\linewidth}{!}{
+%		\begin{tabular}{l}	
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{Insiders</span>},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3) (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%				\end{axis}
+%			\end{tikzpicture}
+%			\\[-7pt]
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{Ja</span>},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%				\end{axis}
+%			\end{tikzpicture}
+%			\\[-7pt]
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{L1</div>},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%				\end{axis}
+%			\end{tikzpicture}
+%			\\[-7pt]
+%			\begin{tikzpicture}
+%				\begin{axis}[
+%					xbar,
+%					width=12cm, 
+%					height=3cm, 
+%					ylabel style={align=center}, ylabel=\textbf{>Themen:},
+%					y=0.75cm,
+%					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
+%%					label style={font=\small},
+%					tick label style={font=\small},
+%					ytick=data,
+%					xticklabels={,,},
+%					xmin = 0,
+%					xmax = 2,
+%					nodes near coords, 
+%					nodes near coords align={horizontal},
+%					nodes near coords style={font=\tiny},
+%					nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+%					bar width=.17cm,
+%					enlarge y limits={abs=2*\pgfplotbarwidth},
+%					scaled x ticks=false,
+%					legend style={
+%						at={(0.5,-0.1)},
+%						anchor=north
+%					},
+%					legend columns=3,
+%					yminorgrids = true,minor tick num=1
+%					]
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (1,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\addplot coordinates {
+%						(0,RAM-Dump 3)  (0,RAM-Dump 2) (0,RAM-Dump 1)
+%					};
+%					\legend{brave.exe, Andere Prozesse}
+%				\end{axis}
+%			\end{tikzpicture}
+%		\end{tabular}
+%	}
+%	\caption{Brave: Anzahl gefundener HTML-Fragmente im RAM}
+%	\label{chart:brave-volatility-htmls}
+%\end{table}
 
-Die Extraktion der kompletten Webseite war dabei wie in [link nach oben] möglich. Auch das Vorgehen war identisch, außer, wie zu erwarten war, die virtuellen und physikalischen Adressen der verschiedenen Strings. Daher wird hier nicht nochmal ausführlich auf das Vorgehen der Extraktion der Webseite aufgeführt.\\
-Anschließend an die Wiederherstellung der HTML-Datei wurden die beiden extrahierten Dateien nochmals gegeneinander verglichen. \autoref{pic:compareHTMLs} zeigt dies anhand der compre-Funktionalität von Visual Studio Code. An der rechten Seite in der Bildlaufleiste sind die Sektionen farbig dargestellt, welche Unterschiede aufweisen. Dabei wurde durch Analyse derer deutlich, dass der Aufbau und die Struktur beider extrahierter Webseiten übereinstimmt, es nur geringe Unterschiede bei einigen Namen der Artikel und Meldungen gibt. Auch sind die Dateien auch (nahezu) identisch groß (290kB).
+Die Extraktion der kompletten Webseite war dabei wie in \autoref{chap:ergebnisse-chrome-uncommon-volatility-html} möglich. Auch das Vorgehen war identisch, außer, wie zu erwarten war, die virtuellen und physikalischen Adressen der verschiedenen Strings. Daher wird hier nicht nochmal ausführlich auf das Vorgehen der Extraktion der Webseite aufgeführt.\\
+Anschließend an die Wiederherstellung der HTML-Datei wurden die beiden extrahierten Dateien nochmals gegeneinander verglichen. \autoref{pic:compareHTMLs} zeigt dies anhand der \textit{compare}-Funktionalität von Visual Studio Code. An der rechten Seite in der Bildlaufleiste sind die Sektionen farbig dargestellt, welche Unterschiede aufweisen. Dabei wurde durch Analyse derer deutlich, dass der Aufbau und die Struktur beider extrahierter Webseiten übereinstimmt, es nur geringe Unterschiede bei einigen Namen der Artikel und Meldungen gibt. Die Dateien sind nahezu identisch groß (290kB).
 %\autoref{pic:brave-vimdiff} zeigt einen Ausschnitt eines generierten HTML-Reports, welcher mittels \textit{vimdiff} in der Version 9.0 erstellt wurde und die beiden HTML-Seiten vergleicht. Der genaue Befehl lautete dabei: \\ \texttt{vimdiff -c TOhtml -c "w vimdiff\_export.html | qa!" donaukurier\_recovered.html donaukurier\_recovered\_brave.html}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\textwidth]{Donaukurier1.png}
-	\caption{Ausschnitt aus VS Code mit dem Vergleich der beiden Donaukurier Webseiten}
+	\caption{Brave: Ausschnitt aus VS Code mit dem Vergleich der beiden Donaukurier Webseiten}
 	\label{pic:compareHTMLs}
 \end{figure}
 
@@ -2997,18 +3016,18 @@ Anschließend an die Wiederherstellung der HTML-Datei wurden die beiden extrahie
 			\end{tikzpicture}
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener Suchbegriffe im Brave RAM}
+	\caption{Brave: Anzahl gefundener Suchbegriffe im RAM}
 	\label{chart:brave-volatility-keywords}
 \end{table}
 %TODO Vergleich Google Duckduckgo
 
 \paragraph*{Yara-Regel \glqq{}URLs\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-urls}
 
-Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. Bei \glqq{}donaukurier.de\grqq{} gab es sogar einen Treffer im dritten RAM-Dump, alle anderen waren nur im zweiten Speicherabbild auffindbar. Dabei waren es auch bei der Donaukurier-URL die meisten Treffer mit insgesamt 3514 Artefakten, wobei sechs davon in anderen Prozessen neben Brave gefunden wurden. Sehr präsent war hier der Prozess \glqq{}NisSrv.exe\grqq{}. Dieser ist ein Teil des Microsoft Defenders \cite{pogonin2022microsoft}, was grundsätzlich merkwürdig erscheint, sich aber dadurch erklären lässt, dass dieser vielleicht im Hintergrund den Datenverkehr mitliest und entscheidet, ob gewisse Aktivitäten in Ordnung sind oder evtl. ein Virus oder anderweitige bösartige Software unsicheren Netzwerkverkehr tätigt.
+Wie in \ref{chart:brave-volatility-urls} gezeigt, konnten bei der URL-Yara-Rule konnten alle URLs im RAM nachgewiesen werden. Bei \glqq{}donaukurier.de\grqq{} gab es sogar einen Treffer im dritten RAM-Dump, alle anderen waren nur im zweiten Speicherabbild auffindbar. Dabei waren es auch bei der Donaukurier-URL die meisten Treffer mit insgesamt 3514 Artefakten, wobei sechs davon in anderen Prozessen neben Brave gefunden wurden. Sehr präsent war hier der Prozess \glqq{}NisSrv.exe\grqq{}. Dieser ist ein Teil des Microsoft Defenders \cite{pogonin2022microsoft}, was grundsätzlich merkwürdig erscheint, sich aber dadurch erklären lässt, dass dieser vielleicht im Hintergrund den Datenverkehr mitliest und entscheidet, ob gewisse Aktivitäten in Ordnung sind oder evtl. ein Virus oder anderweitige bösartige Software unsicheren Netzwerkverkehr tätigt.
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
-		\begin{tabular}{l}	
+		\begin{tabular}{r}	
 			\begin{tikzpicture}
 				\begin{axis}[
 					xbar,
@@ -3051,7 +3070,7 @@ Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. B
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{mooserliesl.de},
+					ylabel style={align=center}, ylabel=\textbf{mooserliesl}\\\textbf{.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -3088,7 +3107,7 @@ Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. B
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{mallofamerica.com},
+					ylabel style={align=center}, ylabel=\textbf{mallofamerica}\\\textbf{.com},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -3125,7 +3144,7 @@ Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. B
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{donaukurier.de},
+					ylabel style={align=center}, ylabel=\textbf{donaukurier}\\\textbf{.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -3159,13 +3178,13 @@ Auch bei der URL-Yara-Rule konnte wieder alle URLs im RAM nachgewiesen werden. B
 			\end{tikzpicture}		
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener URLs im Brave RAM}
+	\caption{Brave: Anzahl gefundener URLs im RAM}
 	\label{chart:brave-volatility-urls}
 \end{table}
 
 \paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-email}
 
-Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als auch im dritten Arbeitsspeicherabbild Artefakte bzgl. der Yara-Regel \glqq{}E-Mail\grqq{} gefunden. Davon waren die meisten bei der E-Mail-Adresse \glqq{}computerforensikvl@gmail.com\grqq{} mit insgesamt 134 Suchtreffern vorhanden. 9 dieser waren aus anderen Prozessen, die restlichen 125 waren direkt in einem Speicherbereich des Chrome-Browsers zu finden. Bei dieser wurde auch noch ein Artefakt im dritten RAM-Dump gefunden im Speicherbereich des dwm.exe Prozesses, welcher zuvor bereits angesprochen wurde. Am wenigsten Suchtreffer hab es bei dem Betrefftext.
+Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als auch im dritten Arbeitsspeicherabbild Artefakte bzgl. der Yara-Regel \glqq{}E-Mail\grqq{} gefunden. Davon waren die meisten bei der E-Mail-Adresse \glqq{}computerforensikvl@gmail.com\grqq{} mit insgesamt 134 Suchtreffern vorhanden. Neun dieser waren aus anderen Prozessen, die restlichen 125 waren direkt in einem Speicherbereich des Chrome-Browsers zu finden. Bei dieser wurde auch noch ein Artefakt im dritten RAM-Dump gefunden im Speicherbereich des dwm.exe Prozesses, welcher zuvor bereits angesprochen wurde. Am wenigsten Suchtreffer hab es bei dem Betrefftext.
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -3327,7 +3346,7 @@ Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als 
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{chs3702@thi.de},
+					ylabel style={align=center}, ylabel=\textbf{chs3702}\\\textbf{@thi.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -3365,7 +3384,7 @@ Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als 
 					xbar,
 					width=12cm, 
 					height=3cm, 
-					ylabel style={align=center}, ylabel=\textbf{cas0597@thi.de},
+					ylabel style={align=center}, ylabel=\textbf{cas0597}\\\textbf{@thi.de},
 					y=0.75cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					label style={font=\small},
@@ -3403,14 +3422,10 @@ Wie in \autoref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als 
 			
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener E-Mail Artefakte im Brave RAM}
+	\caption{Brave: Anzahl gefundener E-Mail Artefakte im RAM}
 	\label{chart:brave-volatility-mail}
 \end{table}
 %TODO Vergleich mit Chrome bzgl. Anzahl der Hits entweder hier oder später
-
-\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-dklogo} 
-
-Auch bei Brave wurde wieder in den Arbeitsspeicherabbildern nach den Bytes des Donaukurier-Logos gesucht. Hier kam es zu drei Treffern im zweiten RAM-Dump, was in der \autoref{chart:brave-volatility-image} zu erkennen ist.
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -3420,7 +3435,7 @@ Auch bei Brave wurde wieder in den Arbeitsspeicherabbildern nach den Bytes des D
 					xbar stacked,
 					width=18cm, 
 					height=12cm, 
-					ylabel style={align=center}, ylabel=Donaukurier Logo\\(Hexadezimal),
+					ylabel style={align=center}, ylabel=\textbf{Donaukurier Logo}\\\textbf{(Hexadezimal)},
 					y=1cm,
 					symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 					ytick=data,
@@ -3446,13 +3461,18 @@ Auch bei Brave wurde wieder in den Arbeitsspeicherabbildern nach den Bytes des D
 			\end{tikzpicture}
 		\end{tabular}
 	}
-	\caption{Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im Brave RAM}
+	\caption{Brave: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM}
 	\label{chart:brave-volatility-image}
 \end{table}
 
+\paragraph{Yara-Regel \glqq{}DK-Logo\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-dklogo} 
+
+Auch bei Brave wurde wieder in den Arbeitsspeicherabbildern nach den Bytes des Donaukurier-Logos gesucht. Hier kam es zu drei Treffern im zweiten RAM-Dump, was in der \autoref{chart:brave-volatility-image} zu erkennen ist.
+
+
 \subsection*{Registry}\label{chap:ergebnisse-brave-uncommon-locations-registry} 
 
-Bei der Registry konnten weder in den Process Monitor Logs noch durch die Analyse der verschiedenen Hives Artefakte gefunden werden. Weitergehende Informationen zu den Schreiboperationen und der Stringsuche in den verschiedenen Hives ist in \autoref{chap:anhang-brave-common-locations-registry} und \autoref{chap:anhang-brave-uncommon-locations-registry} zu finden.
+Bei der Registry konnten weder in den Process Monitor Logs noch durch die Analyse der verschiedenen Hives Artefakte gefunden werden. Weitergehende Informationen zu den Schreiboperationen und der Stringsuche in den verschiedenen Hives ist in Anhang \ref{chap:anhang-brave-registry} zu finden.
 
 %TODO Carl ausbessern p(f)affenhofen + computerforensik(vl)
 

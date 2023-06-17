@@ -167,26 +167,25 @@ Wie in Abbildung \ref{chart:all-browsers-ram-summary} dargestellt, konnten in ke
 
 \paragraph*{Firefox vs Tor}
 %> RAM-Dump 2: 
-Tor hinterlässt nach dem Browsing-Szenario, vor Zuweisung einer ``Neuen Identität`` mehr URL-Artefake und Suchbegriffe im RAM als Firefox (RAM-Dump 2). 
+Tor hinterlässt nach dem Browsing-Szenario, vor Zuweisung einer \grqq{}Neuen Identität\grqq{} mehr URL-Artefake und Suchbegriffe im RAM als Firefox (RAM-Dump 2). 
 Sowohl bei Tor als auch bei Firefox ist zu diesem Zeitpunkt das Gmail-Passwort als Klartext im RAM identifizierbar.
 Wie anhand der roten, mit * gekennzeichneten Werte in Abbildung \ref{chart:all-browsers-ram-summary} zu erkennen ist, 
-reduzieren sich die hinterlassenen Artefakte nach Zuweisung einer ``Neuen Identität`` beim Tor-Browser deutlich, sodass danach weniger Artefakte als bei Firefox vorhanden sind.
-Wie in Abschnitt \ref{section:methodik-vorbereitung-browserauswahl} erklärt, ermöglicht die ``Neue Identität`` das Schließen von Tabs und Fenstern, das Löschen von privaten Informationen und die Neukonfiguration der Tor-Netzwerkverbindung.
-Mit der ``Neuen Identität`` ist bei Tor das Passwort nicht mehr als Klartext im Arbeitsspeicher zu identifizieren.
+reduzieren sich die hinterlassenen Artefakte nach Zuweisung einer \grqq{}Neuen Identität\grqq{} beim Tor-Browser deutlich, sodass danach weniger Artefakte als bei Firefox vorhanden sind.
+Wie in Abschnitt \ref{section:methodik-vorbereitung-browserauswahl} erklärt, ermöglicht die \grqq{}Neue Identität\grqq{} das Schließen von Tabs und Fenstern, das Löschen von privaten Informationen und die Neukonfiguration der Tor-Netzwerkverbindung.
+Mit der \grqq{}Neuen Identität\grqq{} ist bei Tor das Passwort nicht mehr als Klartext im Arbeitsspeicher zu identifizieren.
 %> RAM-Dump 3:
 Nach Schließen des Browsers (RAM-Dump 3) hinterlässt der Tor Browser keine Artefakte, bei Firefox konnten noch 91 URLs im DNSCache gefunden werden. 
 Keiner der beiden Browser hinterließ zu irgendeinem Zeitpunkt HTML-Artefakte.
 %Gewinner:
 %> RAM-Dump 2:
-%	- Vor ``Neue Identität``: Firefox
-%	- Nach ``Neuer Identität``: Tor 
+%	- Vor \grqq{}Neue Identität\grqq{}: Firefox
+%	- Nach \grqq{}Neuer Identität\grqq{}: Tor 
 %> RAM-Dump 3:
 %	- Tor 
-%Somit hinterlässt Tor sowohl nach dem Browsing-Szenario mit ``Neuer Identität`` als auch mit geschlossenem Browser weniger PB-Artefakte als Firefox.
+%Somit hinterlässt Tor sowohl nach dem Browsing-Szenario mit \grqq{}Neuer Identität\grqq{} als auch mit geschlossenem Browser weniger PB-Artefakte als Firefox.
 
 \paragraph*{Chrome vs Brave}
-*** TODO: Christoph ***\\
-(Brave hinterlässt weniger Artefakte als Chrome)
+Chrome und Brave hinterlassen jeweils nur im zweiten und dritten RAM-Dump PB-Artefakte. Beide Browser hinterlassen in zweiten RAM-Dump gleich viele Artefakte in den Kategorien HTML (eins), DK-Logo (drei) sowie im dritten RAM-Dump in der Kategorie E-Mail (eins). Bei den Kategorien E-Mail, URLs sowie bei den Suchbegriffen hinterließ Brave dabei jeweils weniger Artefakte als der Browser Chrome. Bei keinem der beiden Browser konnte zu irgendeinem Zeitpunkt ein Passwort-Artefakt im RAM festgestellt werden.
 
 \paragraph*{Firefox vs Chrome}
 %> In RAM-Dump 2: 
@@ -202,13 +201,13 @@ Nach Schließen des Browsers (RAM Dump 3) hinterlässt Firefox mehr URLs im Arbe
 %	- E-Mail: Firefox
 
 \paragraph*{Tor vs Brave}
-Vor Zuweisung der ``Neuen Identität`` hinterlässt der Tor-Browser nach dem Browsing-Szenario  deutlich mehr URL- und Suchbegriff-Artefakte als Brave (RAM-Dump 2). Insbesondere hinterlässt Tor zweimal das Passwort des Google-Accounts als Klartext im RAM.
-Nach Zuweisung der ``Neuen Identität`` des Tor-Browsers hinterlässt dieser durchschnittlich 1315 Artefakte weniger als Brave.
+Vor Zuweisung der \grqq{}Neuen Identität\grqq{} hinterlässt der Tor-Browser nach dem Browsing-Szenario  deutlich mehr URL- und Suchbegriff-Artefakte als Brave (RAM-Dump 2). Insbesondere hinterlässt Tor zweimal das Passwort des Google-Accounts als Klartext im RAM.
+Nach Zuweisung der \grqq{}Neuen Identität\grqq{} des Tor-Browsers hinterlässt dieser durchschnittlich 1315 Artefakte weniger als Brave.
 Nach Schließen des Browsers (RAM-Dump 3) hinterlässt Tor kein Artefakt im RAM, Brave einmal die Absender-Mail. 
 %Gewinner:
 %RAM-Dump 2:
 %	- DK-Logo, E-Mail: Tor
-%	- URLs, Suchbegriffe: Brave (Vor ``Neue Identität``), Tor (Nach ``Neuer Identität``) 
+%	- URLs, Suchbegriffe: Brave (Vor \grqq{}Neue Identität\grqq{}), Tor (Nach \grqq{}Neuer Identität\grqq{}) 
 %RAM-Dump 3: Tor
 
 \paragraph*{Quantitativer Vergleich aller Browser}
@@ -231,16 +230,16 @@ Um unter den vier untersuchten Browsern denjenigen mit den wenigsten PB-Artefakt
 	\end{tabular}
 	}
 \end{table}
-
+\begin{sloppypar}
 Dabei liegt der Fokus auf den Kategorien der PB-Artefakte:  Es wird für jede RAM-Dump/Kategorie Kombination derjenige Browser mit den wenigsten PB-Artefakten ermittelt. 
-Somit wird die Anzahl gefundener Artefakte nur innerhalb einer Kategorie verglichen. Die Differenz gefundener PB-Artefakte wird dabei nicht berücksichtigt.
+Somit wird die Anzahl gefundener Artefakte nur innerhalb einer Kategorie verglichen. Die Differenz gefundener PB-Artefakte wird dabei nicht berücksichtigt.\end{sloppypar}
 Daraus ergeben sich zwei Arten von \textit{Gewinnern}:
 \begin{itemize}
 \item \textbf{Gewinner pro RAM-Dump}: Browser, der innerhalb eines RAM-Dumps am häufigsten die wenigsten PB-Artefakte einer Kategorie hinterlässt. (Zeilenweiser Mehrheitsentscheid)
 \item \textbf{Gewinner pro Kategorie}: Browser, der innerhalb einer Kategorie am häufigsten die wenigsten PB-Artefakte in den RAM-Dumps hinterlässt. (Spaltenweiser Mehrheitsentscheid)
 \end{itemize}
 
-Um ein differenziertes Ergebnis zu ermitteln, wird bei RAM-Dump 2 zusätzlich unterschieden, ob der Tor-Browser vor- oder nach der Zuweisung der ``Neuen Identität``, kurz ``Neue ID``, bewertet wird. 
+Um ein differenziertes Ergebnis zu ermitteln, wird bei RAM-Dump 2 zusätzlich unterschieden, ob der Tor-Browser vor- oder nach der Zuweisung der \grqq{}Neuen Identität\grqq{}, kurz \grqq{}Neue ID\grqq{}, bewertet wird. 
 Diese Unterscheidung findet ebenfalls bei den Gewinnern statt. Die in Tabelle \ref{tab:gewinner} ermittelten vier Gewinner ergeben sich per Mehrheitsentscheid innerhalb der jeweiligen Gewinner-Kategorie. 
 
 \begin{table}[h!]
@@ -250,14 +249,14 @@ Diese Unterscheidung findet ebenfalls bei den Gewinnern statt. Die in Tabelle \r
 	\resizebox{0.8\linewidth}{!}{
 	\begin{tabular}{c|c|c|}
 	\cline{2-3}
-	\multicolumn{1}{l|}{}                                 & \textbf{Mit ``Neuer Identität``} & \textbf{Ohne ``Neuer Identität``} \\ \hline
+	\multicolumn{1}{l|}{}                                 & \textbf{Mit \grqq{}Neuer Identität\grqq{}} & \textbf{Ohne \grqq{}Neuer Identität\grqq{}} \\ \hline
 	\multicolumn{1}{|c|}{\textbf{Gewinner pro RAM-Dump}}  & Tor                            & Firefox, Tor                    \\ \hline
 	\multicolumn{1}{|c|}{\textbf{Gewinner pro Kategorie}} & Tor                            & Firefox, Tor                    \\ \hline
 	\end{tabular}
 	}
 \end{table}
 
-Unter Berücksichtigung der ``Neuen Identität`` ist der Tor-Browser sowohl der Gewinner pro RAM-Dump als auch pro Kategorie.
+Unter Berücksichtigung der \grqq{}Neuen Identität\grqq{} ist der Tor-Browser sowohl der Gewinner pro RAM-Dump als auch pro Kategorie.
 Ohne Berücksichtigung ist neben dem Tor-Browser auch Firefox Gewinner pro RAM-Dump und pro Kategorie. Somit ist gemäß Auswertung der Gewinner-Tabelle der Tor-Browser derjenige Browser mit den wenigsten PB-Artefakten, gefolgt von Mozilla Firefox.
 
 

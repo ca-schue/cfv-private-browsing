@@ -13,6 +13,15 @@ table,
 xcdraw
 ]{scrreprt}		% scrartcl	
 
+% Eingabecodierung
+\usepackage[utf8]{inputenc}
+
+% Schriftcodierung
+\usepackage[T1]{fontenc}
+
+% Sprachraum
+\usepackage[ngerman]{babel}
+
 % Verlinkung des Dokuments - dynamisches Dokument
 \usepackage[
 colorlinks=true,
@@ -22,15 +31,6 @@ citecolor=black,
 linkcolor=black,
 urlcolor=black,
 ]{hyperref}
-
-% Eingabecodierung
-\usepackage[utf8]{inputenc}
-
-% Schriftcodierung
-\usepackage[T1]{fontenc}
-
-% Sprachraum
-\usepackage[ngerman]{babel}
 
 % Blindtext
 \usepackage{blindtext}
@@ -72,7 +72,7 @@ automark,		% Lebende Kolumnentitel
 ]
 {scrlayer-scrpage}
 \pagestyle{scrheadings}	
-\ohead{\headmark}
+%\ohead{\headmark}
 
 % Anhang
 \usepackage[toc,page]{appendix}
@@ -132,26 +132,20 @@ automark,		% Lebende Kolumnentitel
 % Kommentare
 \usepackage{comment}
 
-%% Struktur in Abbildungsverzeichnis
-%\makeatletter
-%\def\thischaptertitle{}\def\thischapternumber{}
-%\newtoggle{noFigs}
-%\apptocmd{\@chapter}%
-%{\gdef\thischaptertitle{#1}\gdef\thischapternumber{\thechapter}%
-%	\global\toggletrue{noFigs}}{}{}
-%
-%% the figure environment does the job: the first time it is used after a \chapter command, 
-%% it writes the information of the chapter to the LoF
-%\AtBeginDocument{%
-%	\AtBeginEnvironment{figure}{%
-%		\iftoggle{noFigs}{
-%			\addtocontents{lof}{\protect\contentsline {chapter}%
-%				{\protect\numberline {\thischapternumber} {\thischaptertitle}}{}{} }
-%			\global\togglefalse{noFigs}
-%		}{}
-%	}%
-%}
-%\makeatother
+\newsavebox{\mintedbox}
+
+\NewDocumentEnvironment{mintedsubcaptionbox}{O{#2}mO{}m}
+ {%
+  \VerbatimEnvironment
+  \RecustomVerbatimEnvironment{Verbatim}{BVerbatim}{}%
+  \begin{lrbox}{\mintedbox}%
+  \begin{minted}[#3]{#4}%
+ }
+ {%
+  \end{minted}%
+  \end{lrbox}%
+  \subcaptionbox[#1]{#2}{\usebox{\mintedbox}}%
+ }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
