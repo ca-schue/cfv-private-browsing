@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  18 JUN 2023 09:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  18 JUN 2023 10:05
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3921,7 +3921,7 @@ Overfull \vbox (4.85172pt too high) has occurred while \output is active []
 
 
 [58]
-<bilder/firefox-cache.png, id=1274, 886.81313pt x 136.25906pt>
+<bilder/firefox-cache.png, id=1275, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
 Package pdftex.def Info: bilder/firefox-cache.png  used on input line 222.
@@ -3934,7 +3934,7 @@ y/m/n/10.95 n$\T1/lmtt/c/it/10.95 glean$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.
 95 db \T1/lmss/m/n/10.95 (-20) sind Teil des Glean-Systems,
  []
 
-<bilder/firefox-sessionstore.png, id=1278, 534.49687pt x 95.6072pt>
+<bilder/firefox-sessionstore.png, id=1279, 534.49687pt x 95.6072pt>
 File: bilder/firefox-sessionstore.png Graphic file (type png)
 <use bilder/firefox-sessionstore.png>
 Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 24
@@ -3950,14 +3950,14 @@ Overfull \vbox (13.59999pt too high) detected at line 293
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [61]
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=1316, 739.26187pt x 27.85406p
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=1317, 739.26187pt x 27.85406p
 t>
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
 input line 366.
 (pdftex.def)             Requested size: 739.26006pt x 27.85397pt.
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=1318, 947.03813pt x 183.68625pt
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=1319, 947.03813pt x 183.68625pt
 >
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
@@ -3965,14 +3965,14 @@ Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
 put line 374.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
  [62 <./bilder/cfv_firefox_autopsy_web_bookmarks.png>]
-<bilder/cfv_firefox_autopsy_web_history.png, id=1331, 1141.26375pt x 105.39375p
+<bilder/cfv_firefox_autopsy_web_history.png, id=1332, 1141.26375pt x 105.39375p
 t>
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
 put line 382.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-<bilder/cfv_firefox_autopsy_web_categories.png, id=1333, 962.84718pt x 51.94406
+<bilder/cfv_firefox_autopsy_web_categories.png, id=1334, 962.84718pt x 51.94406
 pt>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
@@ -4062,13 +4062,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [69]
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=1413, 660.96938pt x 32.37094pt>
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=1414, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
 t line 733.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
-<bilder/cfv_tor_autopsy_web_cookies.png, id=1415, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=1416, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
@@ -4078,14 +4078,14 @@ line 741.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/cfv_tor_autopsy_web_history.png, id=1417, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=1418, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
 line 749.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
 [70 <./bilder/cfv_tor_autopsy_web_bookmarks.png>]
-<bilder/cfv_tor_autopsy_web_categories.png, id=1430, 654.94687pt x 51.19125pt>
+<bilder/cfv_tor_autopsy_web_categories.png, id=1431, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
@@ -4148,7 +4148,7 @@ l.970 \restoregeometry
 
 
 ] Excluding 'comment' comment.
-<bilder/ChromeCache.png, id=1488, 2890.8pt x 564.60938pt>
+<bilder/ChromeCache.png, id=1489, 2890.8pt x 564.60938pt>
 File: bilder/ChromeCache.png Graphic file (type png)
 <use bilder/ChromeCache.png>
 Package pdftex.def Info: bilder/ChromeCache.png  used on input line 1077.
@@ -4156,7 +4156,7 @@ Package pdftex.def Info: bilder/ChromeCache.png  used on input line 1077.
  [76
 
  <./bilder/ChromeCache.png>]
-<bilder/CacheChromeAnalyse.png, id=1500, 1397.22pt x 743.77875pt>
+<bilder/CacheChromeAnalyse.png, id=1501, 1397.22pt x 743.77875pt>
 File: bilder/CacheChromeAnalyse.png Graphic file (type png)
 <use bilder/CacheChromeAnalyse.png>
 Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1086
@@ -4167,29 +4167,29 @@ Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1086
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [77 <./bilder/CacheChromeAnalyse.png>]
-<bilder/CHBoo.png, id=1514, 665.48625pt x 39.14626pt>
+<bilder/CHBoo.png, id=1515, 665.48625pt x 39.14626pt>
 File: bilder/CHBoo.png Graphic file (type png)
 <use bilder/CHBoo.png>
 Package pdftex.def Info: bilder/CHBoo.png  used on input line 1133.
 (pdftex.def)             Requested size: 418.25372pt x 24.60371pt.
-<bilder/CHCoo.png, id=1516, 905.63344pt x 186.6975pt>
+<bilder/CHCoo.png, id=1517, 905.63344pt x 186.6975pt>
 File: bilder/CHCoo.png Graphic file (type png)
 <use bilder/CHCoo.png>
 Package pdftex.def Info: bilder/CHCoo.png  used on input line 1143.
 (pdftex.def)             Requested size: 418.25372pt x 86.22374pt.
  [78 <./bilder/CHBoo.png>]
-<bilder/CHHis.png, id=1526, 1445.4pt x 170.88844pt>
+<bilder/CHHis.png, id=1527, 1445.4pt x 170.88844pt>
 File: bilder/CHHis.png Graphic file (type png)
 <use bilder/CHHis.png>
 Package pdftex.def Info: bilder/CHHis.png  used on input line 1154.
 (pdftex.def)             Requested size: 418.25372pt x 49.44946pt.
-<bilder/CHCat2.png, id=1528, 657.95813pt x 51.19125pt>
+<bilder/CHCat2.png, id=1529, 657.95813pt x 51.19125pt>
 File: bilder/CHCat2.png Graphic file (type png)
 <use bilder/CHCat2.png>
 Package pdftex.def Info: bilder/CHCat2.png  used on input line 1166.
 (pdftex.def)             Requested size: 418.25372pt x 32.542pt.
  [79 <./bilder/CHCoo.png> <./bilder/CHHis.png> <./bilder/CHCat2.png>]
-<bilder/RegExpl.png, id=1545, 1444.64719pt x 782.17218pt>
+<bilder/RegExpl.png, id=1546, 1444.64719pt x 782.17218pt>
 File: bilder/RegExpl.png Graphic file (type png)
 <use bilder/RegExpl.png>
 Package pdftex.def Info: bilder/RegExpl.png  used on input line 1183.
@@ -4331,7 +4331,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ]
-<bilder/BRBoo.png, id=1583, 663.98062pt x 37.64063pt>
+<bilder/BRBoo.png, id=1584, 663.98062pt x 37.64063pt>
 File: bilder/BRBoo.png Graphic file (type png)
 <use bilder/BRBoo.png>
 Package pdftex.def Info: bilder/BRBoo.png  used on input line 1524.
@@ -4339,17 +4339,17 @@ Package pdftex.def Info: bilder/BRBoo.png  used on input line 1524.
  [85
 
 ]
-<bilder/BRCoo.png, id=1592, 939.51pt x 188.95593pt>
+<bilder/BRCoo.png, id=1593, 939.51pt x 188.95593pt>
 File: bilder/BRCoo.png Graphic file (type png)
 <use bilder/BRCoo.png>
 Package pdftex.def Info: bilder/BRCoo.png  used on input line 1534.
 (pdftex.def)             Requested size: 418.25372pt x 84.11827pt.
-<bilder/BRHis.png, id=1594, 1446.90562pt x 140.02313pt>
+<bilder/BRHis.png, id=1595, 1446.90562pt x 140.02313pt>
 File: bilder/BRHis.png Graphic file (type png)
 <use bilder/BRHis.png>
 Package pdftex.def Info: bilder/BRHis.png  used on input line 1545.
 (pdftex.def)             Requested size: 418.25372pt x 40.47533pt.
-<bilder/BRCat.png, id=1596, 660.96938pt x 64.74188pt>
+<bilder/BRCat.png, id=1597, 660.96938pt x 64.74188pt>
 File: bilder/BRCat.png Graphic file (type png)
 <use bilder/BRCat.png>
 Package pdftex.def Info: bilder/BRCat.png  used on input line 1557.
@@ -4428,11 +4428,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56239 strings out of 475281
- 1322571 string characters out of 2774064
+ 56241 strings out of 475281
+ 1322595 string characters out of 2774064
  2438080 words of memory out of 3000000
  75932 multiletter control sequences out of 15000+600000
- 625048 words of font info for 287 fonts, out of 8000000 for 9000
+ 625184 words of font info for 288 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,29n,106p,10601b,3182s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
@@ -4452,9 +4452,9 @@ b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
 b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb
 ><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pf
 b>
-Output written on main.pdf (104 pages, 2943122 bytes).
+Output written on main.pdf (104 pages, 2944111 bytes).
 PDF statistics:
- 2115 PDF objects out of 2487 (max. 8388607)
+ 2116 PDF objects out of 2487 (max. 8388607)
  446 named destinations out of 1000 (max. 500000)
  79450 words of extra memory for PDF output out of 89155 (max. 10000000)
 

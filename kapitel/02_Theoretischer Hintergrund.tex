@@ -9,22 +9,22 @@ Ein \textit{Web Browser}, kurz \textit{Browser}, ist eine Softwareanwendung zum 
 %Die bekanntesten Webbrowser sind dabei Google Chrome, Mozilla Firefox, Microsoft Edge und Brave \cite{Izzati.2022}.\\
 Beim \textit{normalen} Browsen speichert der Browser alle entstehenden Dateien wie Cache, Cookies, sowie den Suchverlauf auf dem Computer \cite{Izzati.2022}. Um das zu verhindern wurde der sogenannte \textit{private Modus} bei Webbrowsern eingeführt. Diese Funktion ermöglicht das \textit{Private Browsing}, was den Internetnutzern eine größere Kontrolle über ihre Privatsphäre gibt, ohne Rückstände von Datenspuren auf dem Computer zu hinterlassen \cite{Said.2011}. Der private Modus wurde erstmals 2005 mit Apple Safari 2.0 eingeführt \cite{Said.2011}. Drei Jahre später folgte in Google Chrome der \textit{Incognito-Modus} sowie \textit{InPrivate Browsing Modus} für den Internet Explorer. Im Jahr 2009 führte Mozilla Firefox 3.5 mit dem \textit{Privaten Modus} seine Version des privaten Modus ein \cite{Montasari.2015}.
 
-Das genaue Ziel des privaten Modus unterscheidet sich je nach Browser. Beispielsweise sollen bei Mozilla Firefox und Google Chrome besuchte Webseiten ausschließlich auf dem lokalen Computer des Benutzers hinterlassen. \cite{MozillaWiki.05.06.2023,GoogleChrome.} Manche Browser erweitern diesen Schutz, indem sie verhindern, dass beispielsweise Webseitenbetreiber auf Informationen des Private-Browsing Nutzers zugreifen. \cite{Tor.24.05.2023}
+Das genaue Ziel des privaten Modus unterscheidet sich je nach Browser. Beispielsweise sollen bei Mozilla Firefox und Google Chrome besuchte Webseiten ausschließlich auf dem lokalen Computer des Benutzers keine Spuren hinterlassen. \cite{MozillaWiki.05.06.2023,GoogleChrome.} Manche Browser erweitern diesen Schutz, indem sie verhindern, dass beispielsweise Webseitenbetreiber auf Informationen des Private-Browsing Nutzers zugreifen. \cite{Tor.24.05.2023}
 
 Die Nutzer des privaten Modus lassen sich in unterschiedliche Interessensgruppen aufteilen. 
-Forensische Ermittler versuchen über Rückstände durchgeführter Browsing-Sessions, Kriminelle mithilfe forensischer Tools und Techniken gezielt zu überführen. \cite{Montasari.2015}. Kriminelle versuchen hingegen gezielt, ihre illegalen Aktivitäten mithilfe des privaten Modus zu verbergen \cite{Mahlous.2020}. 
+Forensische Ermittler versuchen über Rückstände durchgeführter Browsing-Sessions, Kriminelle mithilfe forensischer Tools und Techniken gezielt zu überführen. \cite{Montasari.2015}. Kriminelle versuchen hingegen, ihre illegalen Aktivitäten mithilfe des privaten Modus zu verbergen \cite{Mahlous.2020}. 
 Herkömmliche Nutzer verwenden den privaten Modus zum Schutz der Privatsphäre. Dieser stellt zusammen mit dem Löschen des Verlaufes die beliebteste Online-Datenschutzmaßnahme dar \cite{Horsman.2019}. 
 
 \section{Browser-Forensik und Browsing-Artefakte}\label{chap:theorie-browser-forensics-artefakte} % Browser Forensiks mit Artefakte 
 
 %Bevor der Begriff der Browser-Forensik eingeführt wird, ist es zunächst wichtig, die digitale Forensik einzuführen. \\
 Die \textit{digitale Forensik} konzentriert sich auf die Anwendung forensischer Techniken und Methoden zur Untersuchung von digitalen Geräten, Netzwerken und elektronischen Daten, um digitale Beweise für die strafrechtliche Verfolgung von kriminellen Onlineaktivitäten zu sammeln.
-Die gilt es Beweise vollständig und in ihrem Originalzustand zu sichern, um vor Gericht zulässig zu sein. Dazu muss insbesondere der Prozess der Erwerbung, Untersuchung, Analyse sowie Berichterstattung digitaler Beweise forensisch einwandfrei durchgeführt werden.  \cite{Izzati.2022}.
+Die gilt es, Beweise vollständig und in ihrem Originalzustand zu sichern, um vor Gericht zulässig zu sein. Dazu muss insbesondere der Prozess der Erwerbung, Untersuchung, Analyse sowie Berichterstattung digitaler Beweise forensisch einwandfrei durchgeführt werden.  \cite{Izzati.2022}.
 
 Die \textit{Browser-Forensik} sammelt und identifiziert Beweise und Informationen im Zusammenhang mit einem Verbrechen aus wiederhergestellten Spuren von Browser-Sitzungen. 
 %Diese Art der Forensik wird für Ermittler immer wichtiger, da der Suchverlauf, die Download-Aktivität und Seitenaufrufe das Verständnis für das kriminelle Motiv verbessern können. 
 Dabei werden nach Informationen über die durchgeführten Browsing-Aktivitäten gesucht, die sogenannten \textit{Browsing-Artefakte}. 
-Dies umfasst beispielsweise lokale Dateien, die Informationen wie den Suchverlauf, Cookies, Caches und andere sensiblen Daten enthält. Auch Webseitenbetreiben können Browsing-Artefakte speichern, indem Informationen über die Eigenschaften und das Verhalten der Webseitenbesucher gespeichert werden. Im Rahmen dieser Arbeit werden ausschließlich lokale Browsing-Artefakte untersucht.  \cite{Izzati.2022}
+Dies umfasst beispielsweise lokale Dateien, die Informationen wie den Suchverlauf, Cookies, Caches und andere sensiblen Daten enthält. Auch Webseitenbetreiber können Browsing-Artefakte speichern, indem Informationen über die Eigenschaften und das Verhalten der Webseitenbesucher gespeichert werden. Im Rahmen dieser Arbeit werden ausschließlich lokale Browsing-Artefakte untersucht.  \cite{Izzati.2022}
 Browsing-Artefakte, die sensible Informationen während einer Private-Browsing-Sitzung speichern, werden als \textit{Private-Browsing-Artefakte}, kurz \textit{PB-Artefakte} bezeichnet.
 
 Aufgrund der \textit{Berweisauthentifizierung} muss ein gefundenes Browsing-Artefakt eindeutig einer Browsing-Aktivität zugeordnet werden, um einen Verdächtigen aufgrund seiner Online-Aktivitäten zu überführen \cite{Mahlous.2020}. 
@@ -38,7 +38,7 @@ Aufgrund der \textit{Berweisauthentifizierung} muss ein gefundenes Browsing-Arte
 
 \section{Angreifermodell}\label{chap:theorie-angreifermodell}
 
-In der Browser-Forensik bezieht sich das \textit{Angreifermodell} auf die spezifischen Annahmen und Eigenschaften eines potenziellen Angreifers, der auf Browsing-Artefakte abzielt. Aggrawal et al. \cite{Aggarwal.2010} definierten zwei anzunehmenden Angreifer in der Browser-Forensik.
+In der Browser-Forensik bezieht sich das \textit{Angreifermodell} auf die spezifischen Annahmen und Eigenschaften eines potenziellen Angreifers, der auf Browsing-Artefakte abzielt. Aggrawal et al. \cite{Aggarwal.2010} definierten zwei anzunehmende Angreifer in der Browser-Forensik.
 
 Der sogenannte \textit{Web Attacker} versucht Onlineaktivitäten des Benutzers außerhalb des lokalen Computers zu verfolgen und zu identifizieren. Zum Beispiel kann mittels Tracking-Tools oder durch das Sammeln von Informationen über die IP-Adressen versucht werden, einzelne Benutzer sowie deren Aktivitäten zu identifizieren und nachzuverfolgen. So kann der Internetdienstanbieter den Datenverkehr der Kunden verfolgen, um die Daten unter Zustimmung der Kunden für Marketingzwecke zu monetarisieren \cite{Aggarwal.2010}. 
 
@@ -47,7 +47,7 @@ Der sogenannte \textit{Web Attacker} versucht Onlineaktivitäten des Benutzers a
 Im Gegensatz dazu hat der \textit{Local Attacker} physischen Zugriff auf den Computer, von welchem aus das Browsing durchgeführt wurde. Dies kann ein forensischer Prüfer, ein Familienmitglied oder Freund sein, der  beispielsweise versucht, auf den Browserverlauf zuzugreifen. 
 Wie im Ziel dieser Arbeit definiert, wird für dieses forensische Experiment der Local Attacker als Angreifermodell angenommen. \cite{Aggarwal.2010}
 
-In einem realistischen Forensischen Szenario hätte der Local Attacker erst Zugriff auf den Computer, nachdem der Benutzer den privaten Modus verlässt, was beispielsweise die Aufzeichnung von Browsing-Aktivitäten ausschließt \cite{Aggarwal.2010}
+In einem realistischen Forensischen Szenario hätte der Local Attacker erst Zugriff auf den Computer, nachdem der Benutzer den privaten Modus verlässt, was beispielsweise die Aufzeichnung von Browsing-Aktivitäten ausschließt. \cite{Aggarwal.2010}
 In der Literatur der Browsing-Forensik wird bei forensischen Versuchen zur Untersuchung des Browser-Verhaltens an dieser Stelle von der Definition des Local Attackers abgewichen. 
 Wie im Ziel der Arbeit beschrieben, hat der Local Attacker im Kontext der \textit{transparenten Versuchsdurchführung} vor, während und nach der Browsing-Sitzung vollständigen Zugriff auf den lokalen Computer. \cite{Fayyad.2021, Rochmadi.2017}
 

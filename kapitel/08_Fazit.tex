@@ -2,14 +2,14 @@
 \thispagestyle{plain.scrheadings}
 \ohead{\headmark}
 
-Im Rahmen dieser Arbeit wurden vier verschiedene Browser im privaten Modus auf hinterlassene Browsing-Artefakte untersucht. Ein transparenter Ansatz wurde verfolgt, bei dem ein Browsing-Szenario definiert und erwartete Artefakte festgelegt wurden. Die Aktivitäten der Browser wurden vor, während und nach dem Szenario aufgezeichnet, und Festplatten- und Arbeitsspeicherabbilder wurden erstellt. Die Artefakte wurden an gängigen Speicherorten sowie ungewöhnlichen Orten analysiert. Eine quantitative Vergleichsanalyse der Browser wurde durchgeführt, wobei der Tor-Browser die geringste Menge an Artefakten hinterließ. Qualitative Kriterien wie die Nutzererfahrung wurden nicht berücksichtigt.
+Im Rahmen dieser Arbeit wurden vier verschiedene Browser im privaten Modus auf hinterlassene Browsing-Artefakte untersucht. Ein transparenter Ansatz wurde verfolgt, bei dem ein Browsing-Szenario definiert und erwartete Artefakte festgelegt wurden. Die Aktivitäten der Browser wurden vor, während und nach dem Szenario aufgezeichnet sowie Festplatten- und Arbeitsspeicherabbilder wurden erstellt. Die Artefakte wurden an an gängigen sowie ungewöhnlichen Speicherorten, wie dem Arbeitsspeicher analysiert. Ein quantitativer Vergleich der Browser wurde durchgeführt, wobei der Tor-Browser die geringste Menge an Artefakten hinterließ. Qualitative Kriterien wie die Nutzererfahrung wurden nicht berücksichtigt.
 
 Obwohl keine Artefakte in den Festplattenabbildern gefunden wurden, wurden im Arbeitsspeicher Spuren entdeckt. Der private Modus verhindert zwar das Speichern von Browser-Cache und -Verlauf, aber bei einer forensischen Analyse des laufenden Systems können dennoch eindeutig zuordenbare Artefakte gefunden werden.
 
 Die identifizierten Schwachstellen stellen Browser-Entwickler vor einem Dilemma.
-Von diesen Ergebnissen profitieren Browser-Nutzer, da Browser-Entwickler auf Basis der Ergebnisse die aufgedeckten Schwächen beseitigen können.
+Von diesen Ergebnissen profitieren einerseits Browser-Nutzer, da Browser-Entwickler auf Basis der Ergebnisse die aufgedeckten Schwächen beseitigen können.
 Allerdings besteht auch das Risiko des Missbrauchs des privaten Browsens für illegale Aktivitäten.
-Das Schließen von Sicherheitslücken erschwert es Forensikern, kriminelle Aktivitäten aufzudecken und nachzuweisen. 
+Das Schließen von Sicherheitslücken erschwert es somit Forensikern, kriminelle Aktivitäten aufzudecken und nachzuweisen. 
 Andererseits profitieren Forensiker selbst von solchen Analysen, um bei identifizierten Schwachstellen gezielt nach Artefakten zu suchen. 
 
 Zukünftige Arbeiten könnten den Umfang dieser Arbeit um folgende Punkte erweitern, welche aufgrund von Zeitbeschränkungen und begrenztem Umfang nicht möglich war. Statt nach Prozessnamen zu filtern, könnten Process Monitor Logfiles nach den bekannten Speicherorten durchsucht werden, um festzustellen, ob andere Prozesse dort Schreibaktivitäten ausführen. Eine detailliertere Untersuchung weiterer Betriebssystem-Speicherorte wie des DNS-Caches könnte vorgenommen werden. Es wäre wichtig, eine Analyse von Browsern für Mac oder Linux durchzuführen, da bisherige Literatur nur Windows betrachtet. Außerdem könnte der private Modus direkt mit dem normalen Browsing-Modus verglichen werden, um Unterschiede festzustellen. Schließlich wäre es interessant, weitere gängige Browser wie Microsoft Edge oder Safari einer forensischen Analyse zu unterziehen.
