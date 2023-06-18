@@ -14,7 +14,7 @@ Die Dokumentationsphase entspricht in dieser Arbeit dem Kapitel \ref{chapter:ver
 
 \section{Vorbereitung}
 \label{section:methodik-vorbereitung}
-In der Vorbereitungsphase wird der durchgeführte Versuch geplant sowie die Versuchsumgebung konfiguriert. \cite{Izzati.2022} Die Versuchsplanung umfasst die Auswahl von Browsern und Tools sowie die Definition der durchzuführenden Schritte zur Kontaminierung des Rechners. Die Konfiguration der Versuchsumgebung umfasst die Installation und Konfiguration der notwendigen Software und Hardware.
+In der Vorbereitungsphase wird der durchgeführte Versuch geplant sowie die Versuchsumgebung konfiguriert \cite{Izzati.2022}. Die Versuchsplanung umfasst die Auswahl von Browsern und Tools sowie die Definition der durchzuführenden Schritte zur Kontaminierung des Rechners. Die Konfiguration der Versuchsumgebung umfasst die Installation und Konfiguration der notwendigen Software und Hardware.
 
 \subsection{Browserauswahl}
 \label{section:methodik-vorbereitung-browserauswahl}
@@ -24,7 +24,7 @@ Weiterhin werden zwei Browser mit verstärktem Schutz der Privatsphäre ausgewä
 
 \subsubsection*{Mozilla Firefox}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-firefox}
-Der Browser \textit{Mozilla Firefox}, kurz \textit{Firefox}, ist ein open-source Webbrowser der gemeinnützigen Organisation Mozilla. 
+Der Browser \textit{Mozilla Firefox}, kurz \textit{Firefox}, ist ein Open-Source Webbrowser der gemeinnützigen Organisation Mozilla. 
 Firefox hat die Funktion des \textit{Privaten Modus}. Diese ermöglicht es, ohne Speicherung von Verlaufsdaten und Cookies im Internet zu browsen.
 Laut Firefox wird mit dem Privaten Modus vor dem lokalen Angreifer geschützt, wie er in \autoref{chap:theorie-angreifermodell} definiert ist, jedoch nicht vor dem Webangreifer.
 Es wird ausdrücklich darauf hingewiesen, dass die besuchten Webseiten und Internetanbieter (ISP) weiterhin anhand der IP-Adresse Informationen sammeln können. \cite{Mozilla.05.06.2023}
@@ -48,8 +48,8 @@ Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion \glqq{}\textit{Neu
 \subsubsection*{Chrome}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-chrome}
 Der von Google entwickelte \textit{Chrome} Browser bietet den \textit{Inkognitomodus} als privaten Browsing-Modus an. Laut Google werden dadurch keine Verlaufsdaten, Cookies und Websitedaten oder in Formulare eingetragene Informationen gespeichert.
-Bezüglich des Schutzes vor Webangreifern macht Google keine angaben.
-Chrome basiert auf dem Open-Source-Projekt \textit{Chromium}, einem freien und quelloffenen Webbrowser, der von The Chromium Projects entwickelt wird.
+Bezüglich des Schutzes vor Webangreifern macht Google keine Angaben.
+Chrome basiert auf dem Open-Source-Projekt \textit{Chromium}, einem freien und quelloffenen Webbrowser, der von \textit{The Chromium Projects} entwickelt wird.
 Dabei handelt es sich um eine von Google initiierte quelloffene Plattform für die Entwicklung von Webbrowsern.
 Der Chrome Browser selbst enthält proprietäre Elemente. \cite{GoogleChrome.}
 
@@ -165,8 +165,8 @@ Nachdem eine VM mit der Standardkonfiguration erstellt wurde, wird diese für je
 \begin{enumerate}
 \item \textbf{Firefox}: \texttt{C:$\backslash$Program Files$\backslash$Mozilla Firefox$\backslash$firefox.exe}
 \item \textbf{Tor}: \texttt{C:$\backslash$Program Files$\backslash$Tor Browser$\backslash$Browser$\backslash$firefox.exe}
-\item \textbf{Chrome}: \texttt{C:$\backslash$Program Files$\backslash$BraveSoftware$\backslash$Brave-Browser$\backslash$Application$\backslash$brave.exe}
-\item \textbf{Brave}: \texttt{C:$\backslash$Program Files$\backslash$Google$\backslash$Chrome$\backslash$Application$\backslash$chrome.exe}
+\item \textbf{Chrome}: \texttt{C:$\backslash$Program Files$\backslash$Google$\backslash$Chrome$\backslash$Application$\backslash$chrome.exe}
+\item \textbf{Brave}: \texttt{C:$\backslash$Program Files$\backslash$BraveSoftware$\backslash$Brave-Browser$\backslash$Application$\backslash$brave .exe}
 \end{enumerate}
 
 \subsection*{Verwendete Software}
@@ -176,14 +176,14 @@ Zur Analyse der Browser werden diverse Tools benötigt.
 
 \subsubsection*{Autopsy}
 \label{subsubsection:methodik-vorbereitung-verwendetesoftware-autopsy}
-Um erstellte Festplattenabbilder zu untersuchen wird das Tool \textit{Autopsy} verwendet. Dabei handelt es sich um ein open-source Tool, das auf der Sleuthkit-Bibliothek für die forensische Analyse von Dateisystemen basiert, diese mit zusätzlichen Funktionen erweitert und eine grafische Benutzeroberfläche für die forensische Analyse bietet. \cite{Autopsy.29.03.2023} 
+Um erstellte Festplattenabbilder zu untersuchen wird das Tool \textit{Autopsy} verwendet. Dabei handelt es sich um ein Open-Source Tool, das auf der Sleuthkit-Bibliothek für die forensische Analyse von Dateisystemen basiert, diese mit zusätzlichen Funktionen erweitert und eine grafische Benutzeroberfläche für die forensische Analyse bietet. \cite{Autopsy.29.03.2023} 
 %Für diesen Versuch verwendet: Version 4.20.0
 
 \subsubsection*{Volatility}
 \label{subsubsection:methodik-vorbereitung-verwendetesoftware-volatility}
-Um Abbilder des Arbeitsspeichers zu untersuchen wird das open-source Framework \textit{Volatility} verwendet, das speziell darauf ausgerichtet ist, Informationen und Artefakte aus dem physischen oder virtuellen Arbeitsspeicher eines Computers zu extrahieren.
+Um Abbilder des Arbeitsspeichers zu untersuchen wird das Open-Source Framework \textit{Volatility} verwendet, das speziell darauf ausgerichtet ist, Informationen und Artefakte aus dem physischen oder virtuellen Arbeitsspeicher eines Computers zu extrahieren.
 %Version: Volatility3, Version 2.4.1 (aktuellster Release)
-Für diesen Versuch wird \textit{Volatility3} verwendet, eine 2020 veröffentlichte vollständige Neuschreibung des Volatility Frameworks.
+Für diesen Versuch wird \textit{Volatility3} verwendet, eine 2020 veröffentlichte, vollständige Neuschreibung des Volatility Frameworks.
 Volatility basiert auf Plugins, welche spezifische Funktionen und Analysen für verschiedene Aspekte des Systems bereitstellen. \cite{GitHub.05.06.2023} Für diesen Versuch werden folgende Plugins verwendet:
 \begin{itemize}
 \item pslist	
@@ -242,11 +242,11 @@ Die PML-Dateien werden mithilfe des gemeinsamen Ordners auf den Analyserechner t
 
 \subsection*{Speicherabbilder}
 \label{subsection:methodik-datensammlung-speicherabbilder}
-Eine der Hauptaufgaben eines Computer-Forensischen-Ermittlers ist die Erstellung und Analyse von direkten Kopien der Speichermedien des untersuchten Rechners. \cite{Hassan.2019}
+Eine der Hauptaufgaben eines Computer-Forensischen-Ermittlers ist die Erstellung und Analyse von direkten Kopien der Speichermedien des untersuchten Rechners \cite{Hassan.2019}.
 Im Falle der Browser-Forensik werden Abbilder der Festplatten und des Arbeitsspeichers erstellt und analysiert.
 
 \paragraph*{Festplatten-Image}
-Da in diesem Versuch die Festplatten virtualisiert werden, wird ein Abbild aus einem sogenannten \textit{VM-Snapshot} gewonnen, eine Momentaufnahme der virtuellen Maschine. \cite{Oracle.2020} 
+Da in diesem Versuch die Festplatten virtualisiert werden, wird ein Abbild aus einem sogenannten \textit{VM-Snapshot} gewonnen, eine Momentaufnahme der virtuellen Maschine \cite{Oracle.2020}. 
 VM-Snapshots können \textit{aufgetaut} werden, wodurch der Zustand des Betriebssystems zum Zeitpunkt der Momentaufnahme wiederhergestellt wird.
 Bei Oracle VM VirtualBox kann ein VM Snapshot über die grafische Oberfläche erstellt werden.
 Durch den Snapshot wird ein \textit{Virtual Disk Image}, eine VDI-Datei, im Snapshot-Ordner der VM erzeugt. Diese Laufwerksdatei enthält nur differentielle Daten zum vorherigen Snapshot.
@@ -330,7 +330,7 @@ Anschließend wird als Prozessname der Browserprozess gesetzt:
 \item \textbf{Brave}: brave.exe
 \end{itemize}
 Da PB-Artefakte nur über Schreiboperationen entstehen können, wird als Prozessoperation \glqq{}WriteFile\grqq{} gesetzt.
-Die gefilterte Logfile wird als CSV exportiert, um sie dann in Excel zu öffnen und irrelevante Spalten sowie Duplikate zu löschen.
+Das gefilterte Logfile wird als CSV exportiert, um es dann in Excel zu öffnen und irrelevante Spalten sowie Duplikate zu löschen.
 Die geschriebenen Dateien werden anschließend browserspezifisch gruppiert.
 
 \paragraph*{Prüfung auf PB-Artefakte}
@@ -344,7 +344,7 @@ Nachdem die Datei extrahiert wurde und ggf. mit einem Tool zu Analyse vorberarbe
 	\centering
 	\small
 	\centerline{\resizebox{\linewidth}{!}{\input{bilder/process_monitor_to_excel-Latex.pdf_tex}}}
-	\caption{Vorgehen zur Dateiextration und -analyse}
+	\caption{Vorgehen zur Dateiextraktion und -analyse}
 	\label{img:dateiextraktion-und-analyse}
 \end{figure}
 
@@ -370,7 +370,7 @@ Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems\footnote{
 In der betrachteten Literatur wird die sogenannte \textit{pagefile.sys} als Teil der Uncommon Locations unter Windows untersucht. Diese Datei wird verwendet, um Daten aus dem Hauptspeicher auf die Festplatte auszulagern, wenn der verfügbare physische Speicher begrenzt ist. \cite{MicrosoftLearn.21.03.2023}
 In der betrachteten Literatur wurde nur die Stringsuche im Hexadezimaleditor als Analysemethode identifiziert. Wie in diesem Abschnitt beschrieben, ist dies aufgrund der fehlenden Zuordnung zu einem spezifischen Browser unzureichend. Um eine Beweisauthentifizierung gemäß dem Ziel der Arbeit zu garantieren, wird der Inhalt der \textit{pagefile.sys} nicht untersucht. Gleiches gilt für die Speicherverwaltungsdatei \textit{hiberfile.sys}
-} oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
+} oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder den Arbeitsspeicher.
 Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht:
 Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB-Artefakten über die gesamten Speicherabbilder durchgeführt.
 Dies ist nur mit Unterstützung durch Forensik-Tools möglich. \cite{Bonetti.2014} Somit wird bei der Analyse der Uncommon Locations auf die Vollständigkeit der Tools vertraut.

@@ -83,7 +83,7 @@
       \verb{url}
       \verb https://www.autopsy.com/
       \endverb
-      \warn{\item Entry 'Autopsy.29.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Autopsy.29.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Bonetti.2014}{article}{}
       \name{author}{5}{}{%
@@ -156,7 +156,7 @@
       \verb{url}
       \verb https://brave.com/de/
       \endverb
-      \warn{\item Entry 'Brave.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Brave.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Bugzilla.05.06.2023}{misc}{}
       \name{author}{1}{}{%
@@ -183,7 +183,7 @@
       \verb{url}
       \verb https://bugzilla.mozilla.org/show_bug.cgi?id=1452114
       \endverb
-      \warn{\item Entry 'Bugzilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Bugzilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{ChromiumShutdownMSTxtWebpageDoku}{misc}{}
       \name{author}{1}{}{%
@@ -338,7 +338,7 @@
       \verb{url}
       \verb https://mozilla.github.io/firefox-browser-architecture/text/0010-firefox-data-stores.html
       \endverb
-      \warn{\item Entry 'GitHub.08.04.2019' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'GitHub.08.04.2019' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{GitHub.05.06.2023b}{misc}{}
       \name{author}{1}{}{%
@@ -366,7 +366,7 @@
       \verb{url}
       \verb https://github.com/mozilla/glean
       \endverb
-      \warn{\item Entry 'GitHub.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'GitHub.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{GitHub.05.06.2023}{misc}{}
       \name{author}{1}{}{%
@@ -394,7 +394,7 @@
       \verb{url}
       \verb https://github.com/volatilityfoundation/volatility3
       \endverb
-      \warn{\item Entry 'GitHub.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'GitHub.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Gitlab.05.06.2023}{misc}{}
       \name{author}{1}{}{%
@@ -420,7 +420,7 @@
       \verb{url}
       \verb https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/18589
       \endverb
-      \warn{\item Entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Gitlab.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{LevelDBGithub}{misc}{}
       \name{author}{1}{}{%
@@ -471,31 +471,7 @@
       \verb{url}
       \verb https://www.google.com/intl/de/chrome/
       \endverb
-      \warn{\item Entry 'GoogleChrome.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
-    \endentry
-    \entry{Gupta.2013}{article}{}
-      \name{author}{1}{}{%
-        {{hash=56eb58a7c2138a2e81ca51fb22f7a59e}{%
-           family={Gupta},
-           familyi={G\bibinitperiod},
-           given={Ms\bibnamedelima Pooja},
-           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \strng{namehash}{56eb58a7c2138a2e81ca51fb22f7a59e}
-      \strng{fullhash}{56eb58a7c2138a2e81ca51fb22f7a59e}
-      \strng{bibnamehash}{56eb58a7c2138a2e81ca51fb22f7a59e}
-      \strng{authorbibnamehash}{56eb58a7c2138a2e81ca51fb22f7a59e}
-      \strng{authornamehash}{56eb58a7c2138a2e81ca51fb22f7a59e}
-      \strng{authorfullhash}{56eb58a7c2138a2e81ca51fb22f7a59e}
-      \field{sortinit}{G}
-      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IOSR J. Electron. Commun. Eng}
-      \field{title}{Capturing Ephemeral Evidence Using Live Forensics}
-      \field{year}{2013}
-      \field{pages}{109\bibrangedash 113}
-      \range{pages}{5}
+      \warn{\item misc entry 'GoogleChrome.' (ref/citavi.bib): Invalid format '14.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Haircutfish.04.11.2022}{misc}{}
       \name{author}{1}{}{%
@@ -521,7 +497,7 @@
       \verb{url}
       \verb https://medium.com/@haircutfish/tryhackme-windows-forensics-1-task-3-accessing-registry-hives-offline-task-4-data-acquisition-b440f5be2a13
       \endverb
-      \warn{\item Entry 'Haircutfish.04.11.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Haircutfish.04.11.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{LevelDBCCL}{misc}{}
       \field{sortinit}{H}
@@ -689,7 +665,7 @@
       \verb{url}
       \verb https://notes.qazeer.io/dfir/windows/_artefacts_overview
       \endverb
-      \warn{\item Entry 'InfoSecNotes.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'InfoSecNotes.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Izzati.2022}{article}{}
       \name{author}{2}{}{%
@@ -746,7 +722,7 @@
       \verb{url}
       \verb https://www.jeffersonscher.com/ffu/scrounger.html
       \endverb
-      \warn{\item Entry 'JeffersonScher.29.11.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'JeffersonScher.29.11.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Mahlous.2020}{article}{}
       \name{author}{2}{}{%
@@ -804,7 +780,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/biztalk/core/business-activity-monitoring-bam
       \endverb
-      \warn{\item Entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'MandiOhlinger.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Markruss.05.06.2023}{misc}{}
       \name{author}{1}{}{%
@@ -832,7 +808,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/sysinternals/downloads/process-explorer
       \endverb
-      \warn{\item Entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Markruss.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Markruss.05.06.2023b}{misc}{}
       \name{author}{1}{}{%
@@ -860,7 +836,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/sysinternals/downloads/procmon
       \endverb
-      \warn{\item Entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Markruss.05.06.2023b' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Md.2018}{inproceedings}{}
       \name{author}{5}{}{%
@@ -934,7 +910,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/troubleshoot/windows-client/performance/introduction-to-the-page-file
       \endverb
-      \warn{\item Entry 'MicrosoftLearn.21.03.2023' (ref/citavi.bib): Invalid format '15.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'MicrosoftLearn.21.03.2023' (ref/citavi.bib): Invalid format '15.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{MicrosoftLearn.05.06.2023}{misc}{}
       \name{author}{1}{}{%
@@ -961,7 +937,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/en-us/answers/questions/47441/how-to-disable-windows-10-dns-cache-services
       \endverb
-      \warn{\item Entry 'MicrosoftLearn.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'MicrosoftLearn.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Mills.2021}{misc}{}
       \name{author}{1}{}{%
@@ -990,7 +966,7 @@
       \verb{url}
       \verb https://itigic.com/skeleton-ui-new-firefox-interface-to-start-up-much-faster/#google_vignette?utm_content=cmp-true
       \endverb
-      \warn{\item Entry 'Mills.2021' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Mills.2021' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Montasari.2015}{inproceedings}{}
       \name{author}{2}{}{%
@@ -1048,7 +1024,7 @@
       \verb{url}
       \verb https://www.mozilla.org/de/about/history/
       \endverb
-      \warn{\item Entry 'Mozilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Mozilla.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{MozillaSupport.26.10.2020}{misc}{}
       \name{author}{1}{}{%
@@ -1074,7 +1050,7 @@
       \verb{url}
       \verb https://support.mozilla.org/en-US/questions/1310302
       \endverb
-      \warn{\item Entry 'MozillaSupport.26.10.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'MozillaSupport.26.10.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{MozillaWiki.05.06.2023}{misc}{}
       \name{author}{1}{}{%
@@ -1100,7 +1076,7 @@
       \verb{url}
       \verb https://wiki.mozilla.org/StartupCache
       \endverb
-      \warn{\item Entry 'MozillaWiki.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'MozillaWiki.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{mozillazine.29.12.2022}{misc}{}
       \name{author}{1}{}{%
@@ -1126,7 +1102,7 @@
       \verb{url}
       \verb https://kb.mozillazine.org/Prefs.js_file
       \endverb
-      \warn{\item Entry 'mozillazine.29.12.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'mozillazine.29.12.2022' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Muir.2019}{article}{}
       \name{author}{3}{}{%
@@ -1228,7 +1204,7 @@
       \verb{url}
       \verb https://learn.microsoft.com/de-de/windows/application-management/svchost-service-refactoring
       \endverb
-      \warn{\item Entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Nicholasswhite.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Oh.2011}{article}{}
       \name{author}{3}{}{%
@@ -1324,7 +1300,7 @@
       \verb{url}
       \verb https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/snapshots.html
       \endverb
-      \warn{\item Entry 'Oracle.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Oracle.2020' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{dwmWebsite}{misc}{}
       \name{author}{1}{}{%
@@ -1625,7 +1601,7 @@
       \verb{url}
       \verb https://securedrop.org/
       \endverb
-      \warn{\item Entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'SecureDrop.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{SQLiteTempfiles}{misc}{}
       \name{author}{1}{}{%
@@ -1678,7 +1654,7 @@
       \verb{url}
       \verb https://www.statista.com/statistics/268254/market-share-of-internet-browsers-worldwide-since-2009/
       \endverb
-      \warn{\item Entry 'Statista.23.05.2023' (ref/citavi.bib): Invalid format '13.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'Statista.23.05.2023' (ref/citavi.bib): Invalid format '13.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{SiHostWebsite}{misc}{}
       \name{author}{1}{}{%
@@ -1727,7 +1703,7 @@
       \verb{url}
       \verb https://www.techguy.org/threads/what-exactly-is-in-firefoxs-cache2-folder.1221567/
       \endverb
-      \warn{\item Entry 'TechSupportGuy.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'TechSupportGuy.05.06.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{TILT.25.03.2023}{misc}{}
       \name{author}{1}{}{%
@@ -1754,7 +1730,7 @@
       \verb{url}
       \verb https://kollee.github.io/posts/memory-forensics-of-a-virtualbox-vm/
       \endverb
-      \warn{\item Entry 'TILT.25.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
+      \warn{\item misc entry 'TILT.25.03.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{DictionaryWin10Files}{misc}{}
       \name{author}{1}{}{%
@@ -1810,27 +1786,7 @@
       \verb{url}
       \verb https://www.torproject.org/de/download/
       \endverb
-      \warn{\item Entry 'Tor.24.05.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
-    \endentry
-    \entry{hiberfile}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=a432ba3efe015d8f0a090c9c0ecc2010}{%
-           family={WinTotal},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{a432ba3efe015d8f0a090c9c0ecc2010}
-      \strng{fullhash}{a432ba3efe015d8f0a090c9c0ecc2010}
-      \strng{bibnamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
-      \strng{authorbibnamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
-      \strng{authornamehash}{a432ba3efe015d8f0a090c9c0ecc2010}
-      \strng{authorfullhash}{a432ba3efe015d8f0a090c9c0ecc2010}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{https://www.wintotal.de/tipp/hiberfil-sys/}
-      \field{note}{Zuletzt zugegriffen am 15.06.2023 um 23:02 Uhr}
-      \field{title}{Was ist hiberfil.sys? - So können Sie die Datei löschen oder verschieben}
+      \warn{\item misc entry 'Tor.24.05.2023' (ref/citavi.bib): Invalid format '05.06.2023' of date field 'urldate' - ignoring}
     \endentry
     \entry{Yusoff.2011}{article}{}
       \name{author}{3}{}{%
