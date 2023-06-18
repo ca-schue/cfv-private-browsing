@@ -1,13 +1,13 @@
 \chapter{Methodik}
 \label{chapter:methodik}
-In der Browserforensik ist eine definierte Methodik notwendig, um die Komplexität moderner Browser zu bewältigen. Sie bildet die wissenschaftliche Basis für den durchgeführten Versuch sowie einen Leitfaden für Ermittler bei zukünftigen Untersuchungen. \cite{Aggarwal.2010, Izzati.2022, Horsman.2019}	
+In der Browser-Forensik ist eine definierte Methodik notwendig, um die Komplexität moderner Browser zu bewältigen. Sie bildet die wissenschaftliche Basis für den durchgeführten Versuch sowie einen Leitfaden für Ermittler bei zukünftigen Untersuchungen. \cite{Aggarwal.2010, Izzati.2022, Horsman.2019}	
 Izzati et al. empfehlen als Vorgehensmodell für die Browser-Forensik das \textit{Generic Model Computer Forensics Investigations}, kurz \textit{GCFIM}. \cite{Yusoff.2011}
 In Ihrer Anwendung auf die Browser-Forensik besteht das Modell aus vier Phasen: \cite{Izzati.2022}
 \begin{itemize}
-	\item Vorbereitung: Versuchsplanung und Konfiguration der Versuchsumgebung.
-	\item Datensammlung: Speicherabbilder identifizieren und während des Browsing-Szenarios erstellen. 
-	\item Datenanalyse: Suche nach Browsing-Artefakten in gesammelten Daten.
-	\item Dokumentation: Vorgehensweise und gefundene Artefakte dokumentieren.
+	\item \textbf{Vorbereitung:} Versuchsplanung und Konfiguration der Versuchsumgebung.
+	\item \textbf{Datensammlung:} Speicherabbilder identifizieren und während des Browsing-Szenarios erstellen. 
+	\item \textbf{Datenanalyse:} Suche nach Browsing-Artefakten in gesammelten Daten.
+	\item \textbf{Dokumentation:} Vorgehensweise und gefundene Artefakte dokumentieren.
 \end{itemize}
 
 Die Dokumentationsphase entspricht in dieser Arbeit dem Kapitel \ref{chapter:vergleich-der-browser}, \glqq{}Vergleich der Browser\grqq{}. Die Methodik der anderen Phasen wird nachfolgend beschrieben.
@@ -24,9 +24,9 @@ Weiterhin werden zwei Browser mit verstärktem Schutz der Privatsphäre ausgewä
 
 \subsubsection*{Mozilla Firefox}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-firefox}
-Der Browser Mozilla Firefox, kurz \textit{Firefox}, ist ein open-source Webbrowser der gemeinnützigen Organisation Mozilla. 
-Firefox hat die Funktion des \textit{privaten Modus}. Diese ermöglicht es, ohne Speicherung von Verlaufsdaten und Cookies im Internet zu browsen.
-Laut Firefox wird mit dem privaten Modus vor dem lokalen Angreifer geschützt, wie er in Kapitel X (TODO!) definiert ist, jedoch nicht vor dem Webangreifer.
+Der Browser \textit{Mozilla Firefox}, kurz \textit{Firefox}, ist ein open-source Webbrowser der gemeinnützigen Organisation Mozilla. 
+Firefox hat die Funktion des \textit{Privaten Modus}. Diese ermöglicht es, ohne Speicherung von Verlaufsdaten und Cookies im Internet zu browsen.
+Laut Firefox wird mit dem Privaten Modus vor dem lokalen Angreifer geschützt, wie er in \autoref{chap:theorie-angreifermodell} definiert ist, jedoch nicht vor dem Webangreifer.
 Es wird ausdrücklich darauf hingewiesen, dass die besuchten Webseiten und Internetanbieter (ISP) weiterhin anhand der IP-Adresse Informationen sammeln können. \cite{Mozilla.05.06.2023}
 % Für diesen Versuch: Firefox Version 112.0.2 (64 Bit)
 
@@ -47,9 +47,9 @@ Die in Abbildung \ref{img:tor-new-identity} gezeigte Funktion \glqq{}\textit{Neu
 
 \subsubsection*{Chrome}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-chrome}
-Der von Google entwickelte \textit{Chrome} Browser ist ein auf \textit{Chromium} basierender bietet den \textit{Inkognitomodus} als privaten Browsing-Modus an. Laut Google werden dadurch keine Verlaufsdaten, Cookies und Websitedaten oder in Formulare eingetragene Informationen gespeichert.
+Der von Google entwickelte \textit{Chrome} Browser bietet den \textit{Inkognitomodus} als privaten Browsing-Modus an. Laut Google werden dadurch keine Verlaufsdaten, Cookies und Websitedaten oder in Formulare eingetragene Informationen gespeichert.
 Bezüglich des Schutzes vor Webangreifern macht Google keine angaben.
-Chrome basiert auf dem Open-Source-Projekt \textit{Chromium}, ein freier und quelloffener Webbrowser, der von The Chromium Projects entwickelt wird.
+Chrome basiert auf dem Open-Source-Projekt \textit{Chromium}, einem freien und quelloffenen Webbrowser, der von The Chromium Projects entwickelt wird.
 Dabei handelt es sich um eine von Google initiierte quelloffene Plattform für die Entwicklung von Webbrowsern.
 Der Chrome Browser selbst enthält proprietäre Elemente. \cite{GoogleChrome.}
 
@@ -100,7 +100,7 @@ Folgende Schritte werden für diesen Versuch mit jedem Browser durchgeführt:
 	\item Mit google Account anmelden: 
 			\begin{enumerate}[label*=\arabic*.]
 			\item E-Mail = \glqq{}computerforensikvl@gmail.com\grqq{}
-			\item Passwort = \glqq{}Vorlesung23! \grqq{}
+			\item Passwort = \glqq{}Vorlesung23!\grqq{}
 			\end{enumerate}
 	\item Neue E-Mail schreiben:
 			\begin{enumerate}[label*=\arabic*.]
@@ -165,8 +165,8 @@ Nachdem eine VM mit der Standardkonfiguration erstellt wurde, wird diese für je
 \begin{enumerate}
 \item \textbf{Firefox}: \texttt{C:$\backslash$Program Files$\backslash$Mozilla Firefox$\backslash$firefox.exe}
 \item \textbf{Tor}: \texttt{C:$\backslash$Program Files$\backslash$Tor Browser$\backslash$Browser$\backslash$firefox.exe}
-\item \textbf{Chrome}: \texttt{C:$\backslash$Program Files$\backslash$BraveSoftware$\backslash$Brave-Browser$\backslash$Application$\backslash$brave.exe"}
-\item \textbf{Brave}: "C:$\backslash$Program Files$\backslash$Google$\backslash$Chrome$\backslash$Application$\backslash$chrome.exe"
+\item \textbf{Chrome}: \texttt{C:$\backslash$Program Files$\backslash$BraveSoftware$\backslash$Brave-Browser$\backslash$Application$\backslash$brave.exe}
+\item \textbf{Brave}: \texttt{C:$\backslash$Program Files$\backslash$Google$\backslash$Chrome$\backslash$Application$\backslash$chrome.exe}
 \end{enumerate}
 
 \subsection*{Verwendete Software}
@@ -192,7 +192,7 @@ Volatility basiert auf Plugins, welche spezifische Funktionen und Analysen für 
 \item filescan
 \item svcscan
 \end{itemize}
-Die genaue Beschreibung der Plugins sowie deren Zusammenhang ist in der Analysephase in Kapitel \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility} beschrieben.
+Die genaue Beschreibung der Plugins sowie deren Zusammenhang ist in der Analysephase in Abschnitt \ref{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitvolatility} beschrieben.
 
 \subsubsection*{Sonstige Tools}
 \label{subsubsection:methodik-vorbereitung-verwendetesoftware-sonstigetools}
@@ -206,7 +206,10 @@ Darunter befinden sich diverse zusätzliche unterstützende Tools, welche zur vo
 \begin{tabular}{|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Software}} & \multicolumn{1}{c|}{\textbf{Verwendungszweck}}                                              & \multicolumn{1}{c|}{\textbf{Version}} \\ \hline
-Oracle VirtualBox                       & Virtualisierung                                                                  & 7.0.8 r156879                         \\ \hline
+Mozilla Firefox                       & Webbrowser                                                                  & 114.0.1 (64-bit) \\ \hline
+Tor-Browser                       & Webbrowser                                                                  & 12.0.4 (64-bit)      \\ \hline
+Google Chrome                       & Webbrowser                                                                  & 112.0.5615.138 (64-bit)    \\ \hline
+Brave                       & Webbrowser                                                                  & 1.50.121 (64-bit)    \\ \hline
 Windows 10 Pro                          & VM Betriebssystem                                                                & Build: 19045.2006                     \\ \hline
 Process Monitor                         & Aufzeichnung Prozessaktivitäten                                                  & 3.93                                  \\ \hline
 Process Explorer                        & Darstellung der Eigenschaften aktueller Prozesse                                 & 17.04                                 \\ \hline
@@ -240,12 +243,12 @@ Die PML-Dateien werden mithilfe des gemeinsamen Ordners auf den Analyserechner t
 \subsection*{Speicherabbilder}
 \label{subsection:methodik-datensammlung-speicherabbilder}
 Eine der Hauptaufgaben eines Computer-Forensischen-Ermittlers ist die Erstellung und Analyse von direkten Kopien der Speichermedien des untersuchten Rechners. \cite{Hassan.2019}
-Im Falle der Browserforensik werden Abbilder der Festplatten und des Arbeitsspeichers erstellt und analysiert.
+Im Falle der Browser-Forensik werden Abbilder der Festplatten und des Arbeitsspeichers erstellt und analysiert.
 
 \paragraph*{Festplatten-Image}
 Da in diesem Versuch die Festplatten virtualisiert werden, wird ein Abbild aus einem sogenannten \textit{VM-Snapshot} gewonnen, eine Momentaufnahme der virtuellen Maschine. \cite{Oracle.2020} 
 VM-Snapshots können \textit{aufgetaut} werden, wodurch der Zustand des Betriebssystems zum Zeitpunkt der Momentaufnahme wiederhergestellt wird.
-Bei Oracle VirutalBox kann ein VM Snapshot über die grafische Oberfläche erstellt werden.
+Bei Oracle VM VirtualBox kann ein VM Snapshot über die grafische Oberfläche erstellt werden.
 Durch den Snapshot wird ein \textit{Virtual Disk Image}, eine VDI-Datei, im Snapshot-Ordner der VM erzeugt. Diese Laufwerksdatei enthält nur differentielle Daten zum vorherigen Snapshot.
 Um aus den differentiellen Daten ein vollständiges Festplatten-Image zu erzeugen, muss ein \textit{vollständiger Klon} des Snapshots erstellt werden. Die VDI-Datei der geklonten VM entspricht einem vollständigem Abbild der Festplatte zum Zeitpunkt des durchgeführten Snapshots.
 
@@ -274,7 +277,7 @@ Der erste RAM-Dump sowie der erste VM-Snapshot nach der Browser-Installation, vo
 Nachdem der private Modus im Browser geöffnet wird und bevor das Browsing-Szenario beginnt, wird die Aufnahme des ersten Process Monitor Logfiles gestartet. Um ausschließlich Schreiboperationen aufzuzeichnen, die auf das private Browsing zurückzuführen sind, wird die Aufzeichnung erst nach dem erstmaligen Öffnen des Browsers im privaten Modus gestartet.
 Nach Durchführung des Browsing-Szenarios, während der Browser noch geöffnet ist, wird die Aufnahme des ersten Process Monitor Logfiles gestoppt. Weiterhin wird ein zweiter RAM-Dump sowie VM-Snapshot erstellt. Anschließend wird eine zweite Process Monitor Aufzeichnung gestartet. 
 Nachdem der Browser geschlossen wurde, wird die Aufzeichnung des zweiten Process Monitor Logfiles beendet. Somit enthält das zweite Logfile alle Prozessaktivitäten vom Schließen der Browsers. Zusätzlich wird ein dritter RAM-Dump sowie  VM-Snapshot erstellt. 
-Nach Herunterfahren der VM wird ein vierter VM-Snapshot erstellt, der für die für Post-Mortem Analyse relevant ist.
+Nach Herunterfahren der VM wird ein vierter VM-Snapshot erstellt.
 
 \paragraph*{Sonderfälle}
 Dieses Vorgehen zur Datensammlung wird bei allen Browsern durchgeführt. Einzig der Tor-Browser weicht davon ab. Um die \glqq{}Neue Identität\grqq{}-Funktion des Tor-Browsers zu berücksichten, werden zusätzlich Daten vor und nach der Erstellung einer \glqq{}Neuen Identiät\grqq{} gesammelt. Wie in Abbildung \ref{img:zeitpunkte-datensammlung-tor} dargestellt, umfasst dies einen zusätzlichen RAM-Dump sowie VM-Snapshot und ein weiteres Process Monitor Logfile.
@@ -298,7 +301,7 @@ Die gesammelten Daten des Versuchs werden zur Vereinfachung der Analyse in drei 
 
 \subsection{Common Locations}
 \label{subsection:methodik-datenanalyse-commonlocations}
-Die sogenannten \textit{Common Locations} beziehen sich im Zusammenhang der Browserforensik auf die standardmäßigen Verzeichnisse eines Browsers auf der Festplatte, beispielsweise Ordner von Browsern zur Verwaltung von Nutzerdaten.
+Die sogenannten \textit{Common Locations} beziehen sich im Zusammenhang der Browser-Forensik auf die standardmäßigen Verzeichnisse eines Browsers auf der Festplatte, beispielsweise Ordner von Browsern zur Verwaltung von Nutzerdaten.
 Untersucht werden Common Locations mittels \textit{Whitebox-Analyse}. Dabei besitzt der Forensiker Fachwissen über das Browserverhalten. Anhand dieses Wissens können gezielt potenzielle Beweise gesammelt werden. \cite{Bonetti.2014}
 
 Bei diesem Versuch werden die Speicherorte über die Schreiboperationen der Process Monitor Logfiles identifiziert.
@@ -352,7 +355,7 @@ Sie speichern und verwalten Nutzerinformationen, wie Lesezeichen, Browserverlauf
 
 Wie in Abbildung \ref{img:dateiextraktion-und-analyse-sqlite} dargestellt, erfolgt die Dateiextraktion analog zur Vorgehensweise bei den Datei-Schreiboperationen der Process Monitor Logfiles. Um die SQLite-Datenbanken zu analysieren wird jede Datenbank mit der gleichen Datenbank aus dem vorherigen Snapshot mithilfe des Befehlszeilentools \textit{sqldiff.exe} (\texttt{sqldiff.exe database1.sqlite database2.sqlite}) verglichen. Die Inhaltsunterschiede werden für jede SQLite-Datei in jedem Snapshot untersucht und in einer Excel Tabelle festgehalten.
 Datenbankänderungen einer SQLite-Datei werden zuerst im \textit{Write-Ahead Log}, kurz \textit{WAL}, vorübergehend protokolliert. 
-Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlite3 Befehlszeile (\texttt{sqlite3> PRAGMA wal\_checkpoint;}) in die SQLite Hauptdatenbank geschrieben.
+Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlite3 Befehlszeile (\texttt{sqlite3> PRAGMA wal\_checkpoint;}) in die SQLite-Hauptdatenbank geschrieben.
 \begin{figure}[h!]
 	\centering
 	\small
@@ -365,12 +368,12 @@ Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 \label{subsection:methodik-datenanalyse-uncommonlocations}
 \textit{Uncommon Locations} beziehen sich auf Verzeichnisse, die nicht zu den gängigen Speicherorten gehören. 
 Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems\footnote{
-In der betrachteten Literatur wird die sogenannte \textit{pagefile.sys} als Teil der Uncommon Locations unter Windows untersucht. (TODO: Quellen) Diese Datei wird verwendet, um Daten aus dem Hauptspeicher auf die Festplatte auszulagern, wenn der verfügbare physische Speicher begrenzt ist. \cite{MicrosoftLearn.21.03.2023}
-In der betrachteten Literatur wurde nur die Stringsuche im Hexadezimaleditor als Analysemethode identifiziert. Wie in diesem Abschnitt beschrieben, ist dies aufgrund der fehlenden Zuordnung zu einem spezifischen Browser unzureichend. Um eine Beweisauthentifizierung gemäß dem Ziel der Arbeit zu garantieren, wird im Rahmen dieser Arbeit der Inhalt der \textit{pagefile.sys} nicht untersucht. Gleiches gilt für die Speicherverwaltungsdatei \textit{hiberfile.sys}
+In der betrachteten Literatur wird die sogenannte \textit{pagefile.sys} als Teil der Uncommon Locations unter Windows untersucht. Diese Datei wird verwendet, um Daten aus dem Hauptspeicher auf die Festplatte auszulagern, wenn der verfügbare physische Speicher begrenzt ist. \cite{MicrosoftLearn.21.03.2023}
+In der betrachteten Literatur wurde nur die Stringsuche im Hexadezimaleditor als Analysemethode identifiziert. Wie in diesem Abschnitt beschrieben, ist dies aufgrund der fehlenden Zuordnung zu einem spezifischen Browser unzureichend. Um eine Beweisauthentifizierung gemäß dem Ziel der Arbeit zu garantieren, wird der Inhalt der \textit{pagefile.sys} nicht untersucht. Gleiches gilt für die Speicherverwaltungsdatei \textit{hiberfile.sys}
 } oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder der Arbeitsspeicher.
-Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht \cite{Bonetti.2014}:
+Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht:
 Im Kontext der Browser Forensik werden dazu Stringsuchen nach PB-Artefakten über die gesamten Speicherabbilder durchgeführt.
-Dies ist nur mit Unterstützung durch Forensik-Tools möglich. Somit wird bei der Analyse der Uncommon Locations auf die Vollständigkeit der Tools vertraut.
+Dies ist nur mit Unterstützung durch Forensik-Tools möglich. \cite{Bonetti.2014} Somit wird bei der Analyse der Uncommon Locations auf die Vollständigkeit der Tools vertraut.
 
 \subsubsection*{Analyse mit Autopsy}
 \label{subsubsection:methodik-datenanalyse-uncommonlocations-analysemitautopsy}
@@ -425,7 +428,7 @@ Wie in Abbildung \ref{img:volatility-plugins} dargestellt, wird davon ausgehend 
 
 Oft ist bei einem gefundenen String von Interesse, ob in den Speicheradressen vor und nach dem Treffer weitere Zusammenhänge erkennbar sind.
 Mithilfe des Plugins \textit{memmap} (\texttt{vol.py -f ram\_dump.img windows.memmap --pid <PID> > memmap.txt}) wird die Abbildung der virtuellen Speicheradressen eines Prozesses auf die Byte-Offsets der extrahierten Speicherseite des Prozesses ermittelt.
-Diese Seite kann mithilfe des \glqq{}--dump\grqq{} Flags extrahiert werden: \texttt{vol.py -f ram\_dump.img -o $\backslash$dump\_dir$\backslash$ windows.memmap --pid <PID> -{}-dump}.
+Diese Seite kann mithilfe des \glqq{}dump\grqq{}-Flags extrahiert werden: \texttt{vol.py -f ram\_dump.img -o $\backslash$dump\_dir$\backslash$ windows.memmap --pid <PID> -{}-dump}.
 In einem Hexadezimaleditor, wie HxD, kann die Umgebung des String-Treffers anhand des ermittelten Byte-Offsets in der Speicherseite untersucht werden.
 
 \subsection{Registry}

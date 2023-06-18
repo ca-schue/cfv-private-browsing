@@ -4,7 +4,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Funktion \glqq {}Neue Identität\grqq {} des Tor-Browsers\relax }}{7}{figure.caption.6}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Zeitpunkte zur Datensammlung während der Versuchsdurchführung nach \blx@tocontentsinit {0}\cite {Muir.2019}\relax }}{13}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Zeitpunkte zur Datensammlung während der Versuchsdurchführung nach \blx@tocontentsinit {0}\cite {Muir.2019}\relax }}{14}{figure.caption.22}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Zeitpunkte zur Datensammlung während der Versuchsdurchführung für den Tor-Browser\relax }}{14}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Process Monitor Filter für Datei-Schreiboperationen\relax }}{16}{figure.caption.26}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Vorgehen zur Dateiextration und -analyse\relax }}{17}{figure.caption.28}%
@@ -21,50 +21,51 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Firefox: Passwort-Klartext in Speicherseiten von PID 7420\relax }}{28}{figure.caption.53}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Firefox: Passwort-Klartext in Speicherseiten von PID 8424\relax }}{28}{figure.caption.54}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Firefox: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{29}{table.caption.56}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Tor-Browser: Anzahl gefundener URL-Artefakte im RAM\relax }}{32}{table.caption.66}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Tor-Browser: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{33}{table.caption.67}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Tor-Browser: Passwort-Klartext in Speicherseiten von PID 708\relax }}{34}{figure.caption.70}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Tor-Browser: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{35}{figure.caption.72}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Chrome: Ausschnitt aus dem Memory-Dump-File an der Stelle des gefundenen HTML-Strings\relax }}{37}{figure.caption.80}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Chrome: Beginn (links) und Ende (rechts) des HTML-Dokuments der Donaukurier Webseite\relax }}{38}{figure.caption.81}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Chrome: Beginn (links) und Ende (rechts) des HTML-Dokuments der Donaukurier Webseite in HxD\relax }}{38}{figure.caption.82}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Chrome: Anzahl gefundener Suchbegriffe im RAM\relax }}{39}{table.caption.84}%
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Chrome: Anzahl gefundener URLs im RAM\relax }}{40}{table.caption.86}%
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Chrome: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{41}{table.caption.88}%
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Chrome: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{42}{table.caption.91}%
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Brave: Ausschnitt aus VS Code mit dem Vergleich der beiden Donaukurier Webseiten\relax }}{44}{figure.caption.98}%
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Brave: Anzahl gefundener Suchbegriffe im RAM\relax }}{45}{table.caption.100}%
-\contentsline {figure}{\numberline {5.21}{\ignorespaces Brave: Anzahl gefundener URLs im RAM\relax }}{46}{table.caption.102}%
-\contentsline {figure}{\numberline {5.22}{\ignorespaces Brave: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{47}{table.caption.104}%
-\contentsline {figure}{\numberline {5.23}{\ignorespaces Brave: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{48}{table.caption.105}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Tor-Browser: Anzahl gefundenener Suchbegriffe im RAM\relax }}{31}{table.caption.64}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Tor-Browser: Anzahl gefundener URL-Artefakte im RAM\relax }}{32}{table.caption.66}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Tor-Browser: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{33}{table.caption.67}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Tor-Browser: Passwort-Klartext in Speicherseiten von PID 708\relax }}{34}{figure.caption.70}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Tor-Browser: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{35}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Chrome: Ausschnitt aus dem Memory-Dump-File an der Stelle des gefundenen HTML-Strings\relax }}{37}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Chrome: Beginn (links) und Ende (rechts) des HTML-Dokuments der Donaukurier Webseite\relax }}{38}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Chrome: Beginn (links) und Ende (rechts) des HTML-Dokuments der Donaukurier Webseite in HxD\relax }}{38}{figure.caption.82}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Chrome: Anzahl gefundener Suchbegriffe im RAM\relax }}{39}{table.caption.84}%
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Chrome: Anzahl gefundener URLs im RAM\relax }}{40}{table.caption.86}%
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Chrome: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{41}{table.caption.88}%
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Chrome: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{42}{table.caption.91}%
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Brave: Ausschnitt aus VS Code mit dem Vergleich der beiden Donaukurier Webseiten\relax }}{44}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Brave: Anzahl gefundener Suchbegriffe im RAM\relax }}{45}{table.caption.100}%
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Brave: Anzahl gefundener URLs im RAM\relax }}{46}{table.caption.102}%
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Brave: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{46}{table.caption.106}%
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Brave: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{47}{table.caption.108}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Zusammenfassung gefundener Artefakte im RAM der Browser\relax }}{50}{table.caption.112}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Zusammenfassung gefundener Artefakte im RAM der Browser\relax }}{49}{table.caption.112}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Firefox: Mit MZCacheView eingelesene Cache-Dateien\relax }}{59}{figure.caption.124}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Firefox: Sitzungsdatei \texttt {recovery.jsonlz4}, geöffnet mit dem \glqq {}Session History Scrounger for Firefox\grqq {}\relax }}{60}{figure.caption.127}%
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Firefox: Anzahl Schreiboperationen Logfile 1 vs Logfile 2, geordnet nach Kategorie\relax }}{62}{figure.caption.133}%
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Firefox: Von Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{62}{figure.caption.136}%
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Firefox: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{63}{figure.caption.138}%
-\contentsline {figure}{\numberline {B.6}{\ignorespaces Firefox: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{63}{figure.caption.140}%
-\contentsline {figure}{\numberline {B.7}{\ignorespaces Firefox: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{64}{figure.caption.142}%
-\contentsline {figure}{\numberline {B.8}{\ignorespaces Firefox: Registry \glqq {}SetValue\grqq {} Operationen in den Process Monitor Logfiles 1 und 2\relax }}{64}{figure.caption.144}%
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Tor-Browser: Anzahl Schreiboperationen Logfile 1 vs Logfile 2-1 vs Logfile 2-2, geordnet nach Kategorie\relax }}{70}{figure.caption.156}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{70}{figure.caption.159}%
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{71}{figure.caption.161}%
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{71}{figure.caption.163}%
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{71}{figure.caption.165}%
-\contentsline {figure}{\numberline {C.6}{\ignorespaces Tor-Browser: Registry \glqq {}SetValue\grqq {} Operationen in den Process Monitor Logfiles 1, 2-1 und 2-2\relax }}{72}{figure.caption.167}%
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Chrome: Cache Analyse mit ChromeCacheView\relax }}{76}{figure.caption.173}%
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Chrome: Analyse eines Cache-files\relax }}{77}{figure.caption.174}%
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Chrome: In Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{78}{figure.caption.180}%
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Chrome: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{79}{figure.caption.182}%
-\contentsline {figure}{\numberline {D.5}{\ignorespaces Chrome: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{79}{figure.caption.184}%
-\contentsline {figure}{\numberline {D.6}{\ignorespaces Chrome: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{79}{figure.caption.186}%
-\contentsline {figure}{\numberline {D.7}{\ignorespaces Chrome: Stringsuche in den Registry-Hives mithilfe des Registry Explorers\relax }}{80}{figure.caption.189}%
-\contentsline {figure}{\numberline {E.1}{\ignorespaces In Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{86}{figure.caption.200}%
-\contentsline {figure}{\numberline {E.2}{\ignorespaces Brave: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{86}{figure.caption.202}%
-\contentsline {figure}{\numberline {E.3}{\ignorespaces Brave: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{86}{figure.caption.204}%
-\contentsline {figure}{\numberline {E.4}{\ignorespaces Brave: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{86}{figure.caption.206}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Firefox: Mit MZCacheView eingelesene Cache-Dateien\relax }}{58}{figure.caption.124}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Firefox: Sitzungsdatei \texttt {recovery.jsonlz4}, geöffnet mit dem \glqq {}Session History Scrounger for Firefox\grqq {}\relax }}{59}{figure.caption.127}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Firefox: Anzahl Schreiboperationen Logfile 1 vs Logfile 2, geordnet nach Kategorie\relax }}{61}{figure.caption.133}%
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Firefox: Von Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{61}{figure.caption.136}%
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Firefox: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{62}{figure.caption.138}%
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Firefox: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{62}{figure.caption.140}%
+\contentsline {figure}{\numberline {B.7}{\ignorespaces Firefox: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{63}{figure.caption.142}%
+\contentsline {figure}{\numberline {B.8}{\ignorespaces Firefox: Registry \glqq {}SetValue\grqq {} Operationen in den Process Monitor Logfiles 1 und 2\relax }}{63}{figure.caption.144}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Tor-Browser: Anzahl Schreiboperationen Logfile 1 vs Logfile 2-1 vs Logfile 2-2, geordnet nach Kategorie\relax }}{69}{figure.caption.156}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{69}{figure.caption.159}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{70}{figure.caption.161}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{70}{figure.caption.163}%
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Tor-Browser: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{70}{figure.caption.165}%
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Tor-Browser: Registry \glqq {}SetValue\grqq {} Operationen in den Process Monitor Logfiles 1, 2-1 und 2-2\relax }}{71}{figure.caption.167}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Chrome: Cache Analyse mit ChromeCacheView\relax }}{75}{figure.caption.173}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Chrome: Analyse eines Cache-files\relax }}{76}{figure.caption.174}%
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Chrome: In Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{77}{figure.caption.180}%
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Chrome: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{78}{figure.caption.182}%
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Chrome: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{78}{figure.caption.184}%
+\contentsline {figure}{\numberline {D.6}{\ignorespaces Chrome: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{78}{figure.caption.186}%
+\contentsline {figure}{\numberline {D.7}{\ignorespaces Chrome: Stringsuche in den Registry-Hives mithilfe des Registry Explorers\relax }}{79}{figure.caption.189}%
+\contentsline {figure}{\numberline {E.1}{\ignorespaces In Autopsy als \glqq {}Web Bookmarks\grqq {} kategorisierte Dateien\relax }}{85}{figure.caption.200}%
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Brave: In Autopsy als \glqq {}Web Cookies\grqq {} kategorisierte Dateien\relax }}{85}{figure.caption.202}%
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Brave: In Autopsy als \glqq {}Web History\grqq {} kategorisierte Dateien\relax }}{85}{figure.caption.204}%
+\contentsline {figure}{\numberline {E.4}{\ignorespaces Brave: In Autopsy als \glqq {}Web Categories\grqq {} kategorisierte Dateien\relax }}{85}{figure.caption.206}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
