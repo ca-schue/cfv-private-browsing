@@ -30,24 +30,24 @@
 \contentsline {section}{\numberline {A}Yara-Regeln}{56}{section.1..1}%
 \contentsline {section}{\numberline {B}Ausführliche Analyse: Firefox}{57}{section.1..2}%
 \contentsline {subsection}{\numberline {B.1}Common Locations}{57}{subsection.1..2.1}%
-\contentsline {subsection}{\numberline {B.2}Uncommon Locations}{66}{subsection.1..2.2}%
-\contentsline {subsection}{\numberline {B.3}Registry}{68}{subsection.1..2.3}%
-\contentsline {section}{\numberline {C}Ausführliche Analyse: Tor}{70}{section.1..3}%
-\contentsline {subsection}{\numberline {C.1}Common Locations}{70}{subsection.1..3.1}%
-\contentsline {subsection}{\numberline {C.2}Uncommon Locations}{74}{subsection.1..3.2}%
-\contentsline {subsection}{\numberline {C.3}Registry}{75}{subsection.1..3.3}%
-\contentsline {section}{\numberline {D}Ausführliche Analyse: Chrome}{77}{section.1..4}%
-\contentsline {subsection}{\numberline {D.1}Common Locations}{77}{subsection.1..4.1}%
-\contentsline {subsection}{\numberline {D.2}Uncommon Locations}{81}{subsection.1..4.2}%
-\contentsline {paragraph}{\nonumberline Web Bookmarks}{81}{paragraph*.179}%
-\contentsline {subsection}{\numberline {D.3}Registry}{82}{subsection.1..4.3}%
-\contentsline {section}{\numberline {E}Ausführliche Analyse: Brave}{84}{section.1..5}%
-\contentsline {subsection}{\numberline {E.1}Common Locations}{84}{subsection.1..5.1}%
-\contentsline {subsection}{\numberline {E.2}Uncommon Locations}{88}{subsection.1..5.2}%
-\contentsline {paragraph}{\nonumberline Web Bookmarks}{89}{paragraph*.199}%
-\contentsline {subsection}{\numberline {E.3}Registry}{90}{subsection.1..5.3}%
-\contentsline {chapter}{Abbildungsverzeichnis}{91}{section*.208}%
-\contentsline {chapter}{Tabellenverzeichnis}{93}{chapter*.209}%
-\contentsline {chapter}{Literaturverzeichnis}{94}{chapter*.210}%
-\contentsline {chapter}{\nonumberline Literatur}{94}{chapter*.211}%
+\contentsline {subsection}{\numberline {B.2}Uncommon Locations}{62}{subsection.1..2.2}%
+\contentsline {subsection}{\numberline {B.3}Registry}{64}{subsection.1..2.3}%
+\contentsline {section}{\numberline {C}Ausführliche Analyse: Tor}{66}{section.1..3}%
+\contentsline {subsection}{\numberline {C.1}Common Locations}{66}{subsection.1..3.1}%
+\contentsline {subsection}{\numberline {C.2}Uncommon Locations}{70}{subsection.1..3.2}%
+\contentsline {subsection}{\numberline {C.3}Registry}{71}{subsection.1..3.3}%
+\contentsline {section}{\numberline {D}Ausführliche Analyse: Chrome}{73}{section.1..4}%
+\contentsline {subsection}{\numberline {D.1}Common Locations}{73}{subsection.1..4.1}%
+\contentsline {subsection}{\numberline {D.2}Uncommon Locations}{78}{subsection.1..4.2}%
+\contentsline {paragraph}{\nonumberline Web Bookmarks}{78}{paragraph*.179}%
+\contentsline {subsection}{\numberline {D.3}Registry}{79}{subsection.1..4.3}%
+\contentsline {section}{\numberline {E}Ausführliche Analyse: Brave}{81}{section.1..5}%
+\contentsline {subsection}{\numberline {E.1}Common Locations}{81}{subsection.1..5.1}%
+\contentsline {subsection}{\numberline {E.2}Uncommon Locations}{85}{subsection.1..5.2}%
+\contentsline {paragraph}{\nonumberline Web Bookmarks}{86}{paragraph*.199}%
+\contentsline {subsection}{\numberline {E.3}Registry}{87}{subsection.1..5.3}%
+\contentsline {chapter}{Abbildungsverzeichnis}{88}{section*.208}%
+\contentsline {chapter}{Tabellenverzeichnis}{90}{chapter*.209}%
+\contentsline {chapter}{Literaturverzeichnis}{91}{chapter*.210}%
+\contentsline {chapter}{\nonumberline Literatur}{91}{chapter*.211}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

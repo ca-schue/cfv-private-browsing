@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  18 JUN 2023 09:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.12) (preloaded format=pdflatex 2022.12.13)  18 JUN 2023 09:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2196,12 +2196,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
 
 
-]
-Overfull \hbox (14.761pt too wide) in paragraph at lines 20--33
-[] 
- []
-
-) [3
+]) [3
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 18
@@ -3907,20 +3902,26 @@ pygtex) [56
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[61
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.57}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.210 \restoregeometry
+                       [57
 
 
 
 ]
 
-LaTeX Warning: Text page 62 contains only floats.
+LaTeX Warning: Text page 58 contains only floats.
 
 
 Overfull \vbox (4.85172pt too high) has occurred while \output is active []
 
 
-[62]
-<bilder/firefox-cache.png, id=1275, 886.81313pt x 136.25906pt>
+[58]
+<bilder/firefox-cache.png, id=1274, 886.81313pt x 136.25906pt>
 File: bilder/firefox-cache.png Graphic file (type png)
 <use bilder/firefox-cache.png>
 Package pdftex.def Info: bilder/firefox-cache.png  used on input line 222.
@@ -3933,45 +3934,45 @@ y/m/n/10.95 n$\T1/lmtt/c/it/10.95 glean$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.
 95 db \T1/lmss/m/n/10.95 (-20) sind Teil des Glean-Systems,
  []
 
-<bilder/firefox-sessionstore.png, id=1279, 534.49687pt x 95.6072pt>
+<bilder/firefox-sessionstore.png, id=1278, 534.49687pt x 95.6072pt>
 File: bilder/firefox-sessionstore.png Graphic file (type png)
 <use bilder/firefox-sessionstore.png>
 Package pdftex.def Info: bilder/firefox-sessionstore.png  used on input line 24
 1.
 (pdftex.def)             Requested size: 534.49556pt x 95.60695pt.
-[63
+[59
 
- <./bilder/firefox-cache.png>] [64 <./bilder/firefox-sessionstore.png>]
+ <./bilder/firefox-cache.png>] [60 <./bilder/firefox-sessionstore.png>]
 Overfull \vbox (13.59999pt too high) detected at line 293
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[65]
-<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=1317, 739.26187pt x 27.85406p
+[61]
+<bilder/cfv_firefox_autopsy_web_bookmarks.png, id=1316, 739.26187pt x 27.85406p
 t>
 File: bilder/cfv_firefox_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_bookmarks.png  used on 
 input line 366.
 (pdftex.def)             Requested size: 739.26006pt x 27.85397pt.
-<bilder/cfv_firefox_autopsy_web_cookies.png, id=1319, 947.03813pt x 183.68625pt
+<bilder/cfv_firefox_autopsy_web_cookies.png, id=1318, 947.03813pt x 183.68625pt
 >
 File: bilder/cfv_firefox_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_cookies.png  used on in
 put line 374.
 (pdftex.def)             Requested size: 947.03581pt x 183.68578pt.
- [66 <./bilder/cfv_firefox_autopsy_web_bookmarks.png>]
-<bilder/cfv_firefox_autopsy_web_history.png, id=1332, 1141.26375pt x 105.39375p
+ [62 <./bilder/cfv_firefox_autopsy_web_bookmarks.png>]
+<bilder/cfv_firefox_autopsy_web_history.png, id=1331, 1141.26375pt x 105.39375p
 t>
 File: bilder/cfv_firefox_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_history.png  used on in
 put line 382.
 (pdftex.def)             Requested size: 1141.26097pt x 105.39348pt.
-<bilder/cfv_firefox_autopsy_web_categories.png, id=1334, 962.84718pt x 51.94406
+<bilder/cfv_firefox_autopsy_web_categories.png, id=1333, 962.84718pt x 51.94406
 pt>
 File: bilder/cfv_firefox_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_firefox_autopsy_web_categories.png>
@@ -3982,7 +3983,7 @@ Package pdftex.def Info: bilder/cfv_firefox_autopsy_web_categories.png  used on
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[67 <./bilder/cfv_firefox_autopsy_web_cookies.png> <./bilder/cfv_firefox_autops
+[63 <./bilder/cfv_firefox_autopsy_web_cookies.png> <./bilder/cfv_firefox_autops
 y_web_history.png>]
 Overfull \hbox (6.6051pt too wide) in paragraph at lines 474--478
 \T1/lmtt/c/it/10.95 PreXULSkeletonUISettings$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/i
@@ -3990,7 +3991,7 @@ t/10.95 <Absoluter Fi-re-fox Installationspfad>$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/
 c/it/10.95 firefox.exe 
  []
 
-[68 <./bilder/cfv_firefox_autopsy_web_categories.png>] [69]
+[64 <./bilder/cfv_firefox_autopsy_web_categories.png>] [65]
 Overfull \hbox (9.67892pt too wide) in paragraph at lines 534--535
 []\T1/lmss/bx/n/10.95 (-20) Profile.default: \T1/lmtt/c/it/10.95 C:$\OMS/cmsy/m
 /n/10.95 n$\T1/lmtt/c/it/10.95 Users$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 
@@ -4000,7 +4001,7 @@ wser$\OMS/cmsy/m/n/10.95 n$\T1/lmtt/c/it/10.95 TorBrowser$\OMS/cmsy/m/n/10.95 n
 $ 
  []
 
-[70]
+[66]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -4041,33 +4042,33 @@ LaTeX Warning: Float too large for page by 11.29208pt on input line 595.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.70}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.66}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.595 \restoregeometry
-                       [70
+                       [66
 
 
 
-] [71]
+] [67]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[72
+[68
 
 ]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[73]
-<bilder/cfv_tor_autopsy_web_bookmarks.png, id=1414, 660.96938pt x 32.37094pt>
+[69]
+<bilder/cfv_tor_autopsy_web_bookmarks.png, id=1413, 660.96938pt x 32.37094pt>
 File: bilder/cfv_tor_autopsy_web_bookmarks.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_bookmarks.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_bookmarks.png  used on inpu
 t line 733.
 (pdftex.def)             Requested size: 660.96776pt x 32.37085pt.
-<bilder/cfv_tor_autopsy_web_cookies.png, id=1416, 810.77907pt x 166.37157pt>
+<bilder/cfv_tor_autopsy_web_cookies.png, id=1415, 810.77907pt x 166.37157pt>
 File: bilder/cfv_tor_autopsy_web_cookies.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_cookies.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_cookies.png  used on input 
@@ -4077,26 +4078,26 @@ line 741.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<bilder/cfv_tor_autopsy_web_history.png, id=1418, 712.91344pt x 98.61844pt>
+<bilder/cfv_tor_autopsy_web_history.png, id=1417, 712.91344pt x 98.61844pt>
 File: bilder/cfv_tor_autopsy_web_history.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_history.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_history.png  used on input 
 line 749.
 (pdftex.def)             Requested size: 712.9117pt x 98.61818pt.
-[74 <./bilder/cfv_tor_autopsy_web_bookmarks.png>]
-<bilder/cfv_tor_autopsy_web_categories.png, id=1431, 654.94687pt x 51.19125pt>
+[70 <./bilder/cfv_tor_autopsy_web_bookmarks.png>]
+<bilder/cfv_tor_autopsy_web_categories.png, id=1430, 654.94687pt x 51.19125pt>
 File: bilder/cfv_tor_autopsy_web_categories.png Graphic file (type png)
 <use bilder/cfv_tor_autopsy_web_categories.png>
 Package pdftex.def Info: bilder/cfv_tor_autopsy_web_categories.png  used on inp
 ut line 758.
 (pdftex.def)             Requested size: 654.94528pt x 51.19112pt.
- [75 <./bilder/cfv_tor_autopsy_web_cookies.png> <./bilder/cfv_tor_autopsy_web_h
-istory.png> <./bilder/cfv_tor_autopsy_web_categories.png>] [76]
+ [71 <./bilder/cfv_tor_autopsy_web_cookies.png> <./bilder/cfv_tor_autopsy_web_h
+istory.png> <./bilder/cfv_tor_autopsy_web_categories.png>] [72]
 Underfull \hbox (badness 10000) in paragraph at lines 864--868
 
  []
 
-[77]
+[73]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -4134,22 +4135,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 864--868
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.76}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.73}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.970 \restoregeometry
-                       [76
+                       [73
 
 
 
-]
-pdfTeX warning (ext4): destination with the same identifier (name{page.77}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.970 \restoregeometry
-                       [77] [78
+] [74] [75
 
 
 ] Excluding 'comment' comment.
@@ -4158,7 +4153,7 @@ File: bilder/ChromeCache.png Graphic file (type png)
 <use bilder/ChromeCache.png>
 Package pdftex.def Info: bilder/ChromeCache.png  used on input line 1077.
 (pdftex.def)             Requested size: 418.25372pt x 81.68964pt.
- [79
+ [76
 
  <./bilder/ChromeCache.png>]
 <bilder/CacheChromeAnalyse.png, id=1500, 1397.22pt x 743.77875pt>
@@ -4171,7 +4166,7 @@ Package pdftex.def Info: bilder/CacheChromeAnalyse.png  used on input line 1086
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[80 <./bilder/CacheChromeAnalyse.png>]
+[77 <./bilder/CacheChromeAnalyse.png>]
 <bilder/CHBoo.png, id=1514, 665.48625pt x 39.14626pt>
 File: bilder/CHBoo.png Graphic file (type png)
 <use bilder/CHBoo.png>
@@ -4182,7 +4177,7 @@ File: bilder/CHCoo.png Graphic file (type png)
 <use bilder/CHCoo.png>
 Package pdftex.def Info: bilder/CHCoo.png  used on input line 1143.
 (pdftex.def)             Requested size: 418.25372pt x 86.22374pt.
- [81 <./bilder/CHBoo.png>]
+ [78 <./bilder/CHBoo.png>]
 <bilder/CHHis.png, id=1526, 1445.4pt x 170.88844pt>
 File: bilder/CHHis.png Graphic file (type png)
 <use bilder/CHHis.png>
@@ -4193,18 +4188,18 @@ File: bilder/CHCat2.png Graphic file (type png)
 <use bilder/CHCat2.png>
 Package pdftex.def Info: bilder/CHCat2.png  used on input line 1166.
 (pdftex.def)             Requested size: 418.25372pt x 32.542pt.
- [82 <./bilder/CHCoo.png> <./bilder/CHHis.png> <./bilder/CHCat2.png>]
+ [79 <./bilder/CHCoo.png> <./bilder/CHHis.png> <./bilder/CHCat2.png>]
 <bilder/RegExpl.png, id=1545, 1444.64719pt x 782.17218pt>
 File: bilder/RegExpl.png Graphic file (type png)
 <use bilder/RegExpl.png>
 Package pdftex.def Info: bilder/RegExpl.png  used on input line 1183.
 (pdftex.def)             Requested size: 418.25372pt x 226.45413pt.
- [83 <./bilder/RegExpl.png>]
+ [80 <./bilder/RegExpl.png>]
 
 LaTeX Warning: Reference `subsection:methodik-datenanalyse-commonlocations ' on
- page 84 undefined on input line 1197.
+ page 81 undefined on input line 1197.
 
-[84]
+[81]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -4242,20 +4237,20 @@ LaTeX Warning: Reference `subsection:methodik-datenanalyse-commonlocations ' on
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.84}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.81}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1277 \restoregeometry
-                        [84
+                        [81
 
 
 
 ]
 
-LaTeX Warning: Text page 85 contains only floats.
+LaTeX Warning: Text page 82 contains only floats.
 
-[85]
+[82]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -4295,7 +4290,7 @@ LaTeX Warning: Float too large for page by 16.21542pt on input line 1443.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[86]
+[83]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -4328,7 +4323,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [87
+ [84
 
 
 
@@ -4341,7 +4336,7 @@ File: bilder/BRBoo.png Graphic file (type png)
 <use bilder/BRBoo.png>
 Package pdftex.def Info: bilder/BRBoo.png  used on input line 1524.
 (pdftex.def)             Requested size: 418.25372pt x 23.71083pt.
- [88
+ [85
 
 ]
 <bilder/BRCoo.png, id=1592, 939.51pt x 188.95593pt>
@@ -4359,15 +4354,15 @@ File: bilder/BRCat.png Graphic file (type png)
 <use bilder/BRCat.png>
 Package pdftex.def Info: bilder/BRCat.png  used on input line 1557.
 (pdftex.def)             Requested size: 418.25372pt x 40.96936pt.
- [89 <./bilder/BRBoo.png> <./bilder/BRCoo.png> <./bilder/BRHis.png> <./bilder/B
-RCat.png>]) [90]
+ [86 <./bilder/BRBoo.png> <./bilder/BRCoo.png> <./bilder/BRHis.png> <./bilder/B
+RCat.png>]) [87]
 \openout2 = `kapitel/09_Abbildungsverzeichnis.aux'.
 
  (kapitel/09_Abbildungsverzeichnis.tex
 Package tocbasic Info: character protrusion at lof deactivated on input line 4.
 
  (main.lof
-[91
+[88
 
 
 
@@ -4376,14 +4371,14 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 4.
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
- [92]
+ [89]
 Package tocbasic Info: character protrusion at lot deactivated on input line 9.
 
  (main.lot)
 \tf@lot=\write11
 \openout11 = `main.lot'.
 
-) [93
+) [90
 
 ]
 chapter without number
@@ -4407,11 +4402,11 @@ LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <10.95> not available
 (Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 212.
 
 
-[94
+[91
 
 
 
-] [95] [96] [97] [98] (main.aux (kapitel/00_Titelseite.aux)
+] [92] [93] [94] [95] (main.aux (kapitel/00_Titelseite.aux)
 (kapitel/00_Erklaerung.aux) (kapitel/01_Einfuehrung.aux)
 (kapitel/03_Ziel der Arbeit.aux) (kapitel/02_Theoretischer Hintergrund.aux)
 (kapitel/04_Methodik.aux) (kapitel/05_Ergebnisse.aux)
@@ -4457,7 +4452,7 @@ b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pf
 b><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb
 ><C:/Users/carls/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pf
 b>
-Output written on main.pdf (104 pages, 2942715 bytes).
+Output written on main.pdf (104 pages, 2943122 bytes).
 PDF statistics:
  2115 PDF objects out of 2487 (max. 8388607)
  446 named destinations out of 1000 (max. 500000)
