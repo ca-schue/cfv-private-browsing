@@ -11,29 +11,22 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces Firefox: Abbildung der virtellen Speicheradressen der gefundenen Strings auf Byte-Offsets der entsprechenden Speicherseiten\relax }}{28}{table.caption.52}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces Tor-Browser: Abbildung der virtuellen Speicheradressen der gefundenen Strings im RAM auf Byte-Offsets der entsprechenden Speicherseiten\relax }}{34}{table.caption.69}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Chrome: Abbildung virtueller Adressen auf Byte-Offsets der Speicherseite\relax }}{37}{table.caption.79}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Chrome: Anzahl gefundener Suchbegriffe im RAM\relax }}{39}{table.caption.84}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Chrome: Anzahl gefundener URLs im RAM\relax }}{40}{table.caption.86}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Chrome: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{41}{table.caption.88}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Chrome: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{42}{table.caption.91}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Brave: Anzahl gefundener Suchbegriffe im RAM\relax }}{45}{table.caption.100}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Brave: Anzahl gefundener URLs im RAM\relax }}{46}{table.caption.102}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Brave: Anzahl gefundener E-Mail Artefakte im RAM\relax }}{47}{table.caption.104}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces Brave: Anzahl gefundener Hexadezimalwerte des Donaukurier-Logos im RAM\relax }}{47}{table.caption.105}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Gewinner-Tabelle der vier untersuchten Browser\relax }}{51}{table.caption.118}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Ermittelte Gewinner gemäß Gewinner-Tabelle\relax }}{51}{table.caption.119}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Gewinner-Tabelle der vier untersuchten Browser\relax }}{52}{table.caption.118}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Ermittelte Gewinner gemäß Gewinner-Tabelle\relax }}{52}{table.caption.119}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Firefox alle \grqq {}WriteFile\grqq {}-Operationen der Logfiles 1 und 2\relax }}{62}{table.caption.123}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Firefox alle \glqq {}WriteFile\grqq {}-Operationen der Logfiles 1 und 2\relax }}{62}{table.caption.123}%
 \contentsline {table}{\numberline {B.2}{\ignorespaces Firefox: Veränderte SQLite-Datenbanken und deren Verwendungszwecke\relax }}{64}{table.caption.130}%
 \contentsline {table}{\numberline {B.3}{\ignorespaces Veränderung der Firefox SQLite-Datenbanken während der Versuchsdurchführung\relax }}{65}{table.caption.131}%
-\contentsline {table}{\numberline {C.1}{\ignorespaces Tor-Browser: Alle \grqq {}WriteFile\grqq {}-Operationen der Logfiles 1, 2-1 und 2-2\relax }}{71}{table.caption.150}%
+\contentsline {table}{\numberline {C.1}{\ignorespaces Tor-Browser: Alle \glqq {}WriteFile\grqq {}-Operationen der Logfiles 1, 2-1 und 2-2\relax }}{71}{table.caption.150}%
 \contentsline {table}{\numberline {C.2}{\ignorespaces Tor-Browser: Veränderung der SQLite-Datenbanken während der Versuchsdurchführung\relax }}{73}{table.caption.154}%
 \contentsline {table}{\numberline {D.1}{\ignorespaces Chrome alle \grqq {}WriteFile\grqq {}-Operationen des Logfiles 1\relax }}{77}{table.caption.170}%
 \contentsline {table}{\numberline {D.2}{\ignorespaces Chrome: alle \grqq {}WriteFile\grqq {}-Operationen des Logfiles 2\relax }}{78}{table.caption.171}%
-\contentsline {table}{\numberline {D.3}{\ignorespaces Chrome: Veränderung der SQLite-Datenbänke während der Versuchsdurchführung\relax }}{81}{table.caption.176}%
+\contentsline {table}{\numberline {D.3}{\ignorespaces Chrome: Veränderung der SQLite-Datenbanken während der Versuchsdurchführung\relax }}{81}{table.caption.176}%
 \contentsline {table}{\numberline {E.1}{\ignorespaces Brave: alle \grqq {}WriteFile\grqq {}-Operationen des Logfiles 1\relax }}{85}{table.caption.191}%
-\contentsline {table}{\numberline {E.2}{\ignorespaces Brave alle \grqq {}WriteFile\grqq {}-Operationen des Logfiles 2\relax }}{86}{table.caption.192}%
-\contentsline {table}{\numberline {E.3}{\ignorespaces Brave: Veränderung der SQLite-Datenbänke während der Versuchsdurchführung\relax }}{87}{table.caption.195}%
+\contentsline {table}{\numberline {E.2}{\ignorespaces Brave alle \glqq {}ComponentUnpacker\grqq {}-Dateien des Logfiles 1\relax }}{86}{table.caption.192}%
+\contentsline {table}{\numberline {E.3}{\ignorespaces Brave alle \grqq {}WriteFile\grqq {}-Operationen des Logfiles 2\relax }}{87}{table.caption.193}%
+\contentsline {table}{\numberline {E.4}{\ignorespaces Brave: Veränderung der SQLite-Datenbanken während der Versuchsdurchführung\relax }}{88}{table.caption.196}%
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
