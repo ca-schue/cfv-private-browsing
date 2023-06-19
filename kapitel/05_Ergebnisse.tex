@@ -1519,7 +1519,7 @@ Anschließend folgt die Analyse des Webbrowsers Chrome. Aufgeteilt in die drei K
 \subsection*{Common Locations}\label{chap:ergebnisse-chrome-common-location}
 
 Zuerst werden die Common Locations nach Artefakten des privaten Browsing-Szenarios untersucht. Dabei wird wieder zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und den SQLite-Datenbanken unterschieden, wie im \autoref{subsection:methodik-datenanalyse-commonlocations} erläutert. Es konnten darin jedoch keine Artefakte gefunden werden.\\
-Eine weitergehende Analyse aller Schreiboperationen sowie den Datenbanken ist im \autoref{chap:anhang-chrome-common-locations} detailliert aufgeführt.
+Eine weitergehende Analyse aller Schreiboperationen sowie den Datenbanken ist im Anhang \ref{chap:anhang-chrome-common-locations} detailliert aufgeführt.
 
 \begin{comment} % Alles in Anhang nunter
 o Autopsy Keyword-Suche: 
@@ -1736,15 +1736,15 @@ Nachfolgend werden die Ergebnisse der Uncommon Location Analyse des Chrome Brows
 
 \subsubsection*{Analyse mit Autopsy}\label{chap:ergebnisse-chrome-uncommon-autopsy}
 
-Auch in Autopsy konnten keine Artefakte der durchgeführten Browsing-Session gefunden werden, weder durch die Substringsuche, noch durch die Analyse der von Autopsy kategorisierten Dateien. Eine weitergehende Analyse einiger kategorisierter Dateien ist im \autoref{chap:anhang-chrome-uncommon-autopsy} zu finden.
+Auch in Autopsy konnten keine Artefakte der durchgeführten Browsing-Session gefunden werden, weder durch die Substringsuche, noch durch die Analyse der von Autopsy kategorisierten Dateien. Eine weitergehende Analyse einiger kategorisierter Dateien ist im Anhang \ref{chap:anhang-chrome-uncommon-autopsy} zu finden.
 
 \subsubsection*{Analyse mit Volatility}\label{chap:ergebnisse-chrome-uncommon-volatility}
 
-Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die Analyseergebnisse des Hauptspeichers (RAM) mittels des Forensik-Tools Volatility. Im RAM konnten schließlich Artefakte gefunden werden. Diese wurden mittels des Volatility Plugins Yarascan identifiziert, wobei die Yara-Regeln aus Anhang \ref{appendix:yara-regeln} verwendet wurden. Zusätzlich zu den erkannten Strings spielt auch noch die PID eine entscheidende Rolle, da damit der Treffer entweder dem Browser oder einem anderen Prozess eindeutig zuordnet werden kann. Die Ergebnisse dieser String-Suche werden nachfolgend dargelegt.
+Nachdem bis jetzt noch keine Artefakte gefunden werden konnten, folgen nun die Analyseergebnisse des Hauptspeichers (RAM), welche mittels des Forensik-Tools Volatility gewonnen wurden. Im RAM konnten schließlich Artefakte gefunden werden. Diese wurden mittels des Volatility Plugins Yarascan identifiziert, wobei die Yara-Regeln aus Anhang \ref{appendix:yara-regeln} verwendet wurden. Zusätzlich zu den erkannten Strings spielt auch noch die PID eine entscheidende Rolle, da damit der Treffer entweder dem Browser oder einem anderen Prozess eindeutig zuordnet werden kann. Die Ergebnisse dieser String-Suche werden nachfolgend präsentiert.
 
 \paragraph*{Yara-Regel \glqq{}HTML\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-html}
 
-Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden. Einzig der der String \glqq{}>Themen:\grqq{} wurde im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
+Im Gegensatz zu den Ergebnissen der Analyse der beiden vorherigen Browser, konnte ein HTML-Fragment bei Chrome im Arbeitsspeicher gefunden werden. Einzig der String \glqq{}>Themen:\grqq{} wurde im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
 
 %Wie in \autoref{chart:chrome-volatility-htmls} dargestellt, wird der String \glqq{}>Themen:\grqq{} im zweiten RAM-Dump in einem Chrome-Prozess gefunden.
 %
@@ -1922,7 +1922,7 @@ Das Volatility-Plugin lieferte hierbei neben dem Treffer noch die PID (7012 in d
 	}
 \end{table}
 
-In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf die physikalische Adresse 0xd2dfb000 gemapped ist und der Offset im memory-file 0x105e000 entspricht. Mithilfe dieser Adressen konnte dann die tatsächliche Position des String im memory-file errechnet werden. Diese betrug somit 0x105e7e1. Anschließend wurde der Speicherbereich des Prozesses als Memory-Dump-File gedumpt und in den Hex-Editor HxD geladen. Dort wurde dann genau an dem errechneten Offset nach dem String gesucht und konnte genau dort auch gefunden werden, was auch in \autoref{pic:ChromeStringThemen} zu sehen ist.
+In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf die physikalische Adresse 0xd2dfb000 gemapped ist und der Offset im Memory-File 0x105e000 entspricht. Mithilfe dieser Adressen konnte dann die tatsächliche Position des Strings im Memory-File errechnet werden. Diese betrug somit 0x105e7e1. Anschließend wurde der Speicherbereich des Prozesses als Memory-Dump-File gedumpt und in den Hex-Editor HxD geladen. Dort wurde dann genau an dem errechneten Offset nach dem String gesucht und konnte genau dort auch gefunden werden, was auch in \autoref{pic:ChromeStringThemen} zu sehen ist.
 %TODO Evtl doch des andere Bild...
 
 \begin{figure}[h!]
@@ -1932,7 +1932,7 @@ In der Farbe rot ist hervorgehoben, dass die virtuelle Adresse 0xa6c01818000 auf
 	\label{pic:ChromeStringThemen}
 \end{figure} 
 
-Daraufhin wurde weitergehend versucht zu analysieren, ob nur ein Teil der Website im RAM verfügbar ist, oder ob die komplette Donaukurier-Website als HTML Artefakt im RAM vorhanden ist. Dafür wurde die Internetseite donaukurier.de nochmals aufgerufen, heruntergeladen und der Beginn sowie das Ende der HTML-Datei analysiert. In \autoref{figure:html-begin-end-dk} sind die ersten sowie letzten Strings der HTML-Datei zu sehen:\\
+Daraufhin wurde weitergehend versucht zu analysieren, ob nur ein Teil der Website im RAM verfügbar ist, oder ob die komplette Donaukurier-Website als HTML-Artefakt im RAM vorhanden ist. Dafür wurde die Internetseite donaukurier.de nochmals aufgerufen, heruntergeladen und der Beginn sowie das Ende der HTML-Datei analysiert. In \autoref{figure:html-begin-end-dk} sind die ersten sowie letzten String-Zeichenketten der HTML-Datei zu sehen.\\
 
 
 \begin{figure}[!h]
@@ -1975,7 +1975,7 @@ Da bei der Suche des Strings mehr als einen Treffer gab, wurde genau der String 
 
 Gleiches wurde mit dem Ende der HTML-Datei durchgeführt. \autoref{pic:ChromeBeginDonaukurier} zeigt rechts einen Screenshot mit dem relevanten String-Treffer, welcher das Ende der Website donaukurier.de darstellt.
 
-Anschließend wurde alles, was sich zwischen dem gefundenem Anfang und Ende befindet, als Text kopiert und in eine html-Datei gespeichert. Ein detaillierter Vergleich dieses extrahierten Artefakts mit der heruntergeladenen Datei lieferte das Ergebnis, dass die komplette Website rekonstruiert werden kann, die Websiten sich nur in den neuesten Artikeln und Überschriften unterschieden. Übriges war zu 100\% identisch. \\
+Anschließend wurde alles, was sich zwischen dem gefundenen Anfang und Ende befindet, als Text kopiert und in eine HTML-Datei gespeichert. Ein detaillierter Vergleich dieses extrahierten Artefakts mit der heruntergeladenen Datei lieferte das Ergebnis, dass die komplette Website rekonstruiert werden kann, die Websiten sich nur in den neuesten Artikeln und Überschriften unterschieden. Übriges war zu 100\% identisch. \\
 Zusammenfassend konnte somit die Website \glqq{}donaukurier.de\grqq{} im zweiten Memory-Dump komplett aus dem RAM extrahiert und rekonstruiert werden.
 
 \paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-suchbegriffe}
@@ -2301,7 +2301,7 @@ Abbildung \ref{chart:chrome-volatility-urls} zeigt, dass in den RAM-Dumps alle S
 \end{table}
 
 \paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-email}
-Wie in Abbildung \ref{chart:chrome-volatility-mail} gezeigt, wurden sowohl nach dem Browsing-Szenario bei geöffnetem Browser, als auch nach Schließen desselben E-Mail Artefakte gefunden. Darunter war die E-Mail-Adresse mit 172 Treffern, acht davon außerhalb von Chrome-Prozessen, das häufigste Suchresultat. Unter den acht externen Prozessen waren der \textit{Desktop Window Manager}, welcher für visuelle Effekte wie Desktop-Animationen und halbtransparente Fenster verantwortlich ist \cite{dwmWebsite}, explorer.exe, sihost.exe und weiteren Windows-Prozessen. Da dies aber meist Window-Manager Prozesse waren, wurden diese nicht weiter analysiert. \\
+Wie in Abbildung \ref{chart:chrome-volatility-mail} gezeigt, wurden sowohl nach dem Browsing-Szenario bei geöffnetem Browser, als auch nach Schließen desselben E-Mail Artefakte gefunden. Darunter war die E-Mail-Adresse mit 172 Treffern, acht davon außerhalb von Chrome-Prozessen, das häufigste Suchresultat. Unter den acht externen Prozessen waren der \textit{Desktop Window Manager}, welcher für visuelle Effekte wie Desktop-Animationen und halbtransparente Fenster verantwortlich ist \cite{dwmWebsite}, explorer.exe, sihost.exe und weiteren Windows-Prozessen. Da dies aber meist Window-Manager-Prozesse waren, wurden diese nicht weiter analysiert. \\
 Die beiden Studenten-Mailadressen, an welche die Mail versendet wurden, waren mit 121 bzw. 97 Suchtreffern in Chrome-Prozessen vertreten. Der Mailtext war mit 136 Artefakten mehr als doppelt so oft im RAM zu finden als der Betrefftext. Im dritten RAM-Dump wurde dann noch die E-Mail-Adresse im Prozess \textit{explorer.exe} gefunden.\\
 Grundsätzlich wurden bei dieser Yara-Regel wenige Artefakte identifiziert im Vergleich zu den URLs beispielsweise.
 
@@ -2666,7 +2666,7 @@ Image + Summary Tabellen hier am Ende no!
 
 \end{comment}
 
-Abschließend werden in diesem Kapitel die Analyseergebnisse des Browsers Brave dargelegt, wobei diese wieder, wie in den vorherigen Kapiteln, in Common Locations, Uncommon Locations und der Registry unterschieden werden.
+Abschließend werden in diesem Kapitel die Analyseergebnisse des Browsers Brave dargelegt, wobei diese wieder, wie in den vorherigen Kapiteln, in Common Locations, Uncommon Locations und der Registry unterteilt werden.
 
 \subsection*{Common Locations}\label{chap:ergebnisse-brave-common-locations}
 
@@ -2848,7 +2848,7 @@ Beim Brave-Browser konnte ausschließlich ein HTML-Fragment im zweiten RAM-Dump 
 %	\label{chart:brave-volatility-htmls}
 %\end{table}
 
-Die Extraktion der kompletten Webseite war dabei wie in \autoref{chap:ergebnisse-chrome-uncommon-volatility-html} möglich. Auch das Vorgehen war identisch, außer, wie zu erwarten war, die virtuellen und physikalischen Adressen der verschiedenen Strings. Daher wird hier nicht nochmal ausführlich auf das Vorgehen der Extraktion der Webseite aufgeführt.\\
+Die Extraktion der kompletten Webseite war dabei wie in \autoref{chap:ergebnisse-chrome-uncommon-volatility-html} möglich. Auch das Vorgehen war identisch, außer, wie zu erwarten war, die virtuellen und physikalischen Adressen der verschiedenen Zeichenketten. Daher wird hier nicht nochmal ausführlich auf das Vorgehen der Extraktion der Webseite aufgeführt.\\
 Anschließend an die Wiederherstellung der HTML-Datei wurden die beiden extrahierten Dateien nochmals gegeneinander verglichen. \autoref{pic:compareHTMLs} zeigt dies anhand der \textit{compare}-Funktionalität von Visual Studio Code. An der rechten Seite in der Bildlaufleiste sind die Sektionen farbig dargestellt, welche Unterschiede aufweisen. Dabei wurde durch Analyse derer deutlich, dass der Aufbau und die Struktur beider extrahierter Webseiten übereinstimmt, es nur geringe Unterschiede bei einigen Namen der Artikel und Meldungen gibt. Die Dateien sind nahezu identisch groß (290kB).
 %\autoref{pic:brave-vimdiff} zeigt einen Ausschnitt eines generierten HTML-Reports, welcher mittels \textit{vimdiff} in der Version 9.0 erstellt wurde und die beiden HTML-Seiten vergleicht. Der genaue Befehl lautete dabei: \\ \texttt{vimdiff -c TOhtml -c "w vimdiff\_export.html | qa!" donaukurier\_recovered.html donaukurier\_recovered\_brave.html}
 
@@ -3183,7 +3183,7 @@ Wie in Abbildung \ref{chart:brave-volatility-urls} gezeigt, konnten alle URLs im
 
 \paragraph*{Yara-Regel \glqq{}E-Mail\grqq{}}\label{chap:ergebnisse-brave-uncommon-locations-volatility-email}
 
-Wie in Abbildung \ref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als auch im dritten Arbeitsspeicherabbild Artefakte bzgl. der Yara-Regel \glqq{}E-Mail\grqq{} gefunden. Davon waren die meisten bei der E-Mail-Adresse \glqq{}computerforensikvl@gmail.com\grqq{} mit insgesamt 134 Suchtreffern vorhanden. Neun dieser waren aus anderen Prozessen, die restlichen 125 waren direkt in einem Speicherbereich des Chrome-Browsers zu finden. Bei dieser wurde auch noch ein Artefakt im dritten RAM-Dump gefunden im Speicherbereich des dwm.exe Prozesses, welcher zuvor bereits angesprochen wurde. Am wenigsten Suchtreffer hab es bei dem Betrefftext.
+Wie in Abbildung \ref{chart:brave-volatility-mail} dargestellt, wurden im zweiten als auch im dritten Arbeitsspeicherabbild Artefakte bzgl. der Yara-Regel \glqq{}E-Mail\grqq{} gefunden. Davon waren die meisten bei der E-Mail-Adresse \glqq{}computerforensikvl@gmail.com\grqq{} mit insgesamt 134 Suchtreffern vorhanden. Neun dieser waren aus anderen Prozessen, die restlichen 125 waren direkt in einem Speicherbereich des Brave-Browsers zu finden. Bei dieser wurde auch noch ein Artefakt im dritten RAM-Dump gefunden im Speicherbereich des dwm.exe Prozesses, welcher zuvor bereits angesprochen wurde. Am wenigsten Suchtreffer hab es bei dem Betrefftext.
 
 %TODO Vergleich mit Chrome bzgl. Anzahl der Hits entweder hier oder später
 

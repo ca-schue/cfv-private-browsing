@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {5.1}Firefox}{23}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Tor-Browser}{30}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Chrome}{36}{section.5.3}%
-\contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{42}{paragraph*.90}%
+\contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{41}{paragraph*.90}%
 \contentsline {section}{\numberline {5.4}Brave}{43}{section.5.4}%
 \contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{46}{paragraph*.105}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{48}{chapter.6}%
@@ -48,6 +48,5 @@
 \contentsline {subsection}{\numberline {E.3}Registry}{86}{subsection.1..5.3}%
 \contentsline {chapter}{Abbildungsverzeichnis}{87}{section*.208}%
 \contentsline {chapter}{Tabellenverzeichnis}{89}{chapter*.209}%
-\contentsline {chapter}{Literaturverzeichnis}{90}{chapter*.210}%
-\contentsline {chapter}{\nonumberline Literatur}{90}{chapter*.211}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{90}{chapter*.211}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

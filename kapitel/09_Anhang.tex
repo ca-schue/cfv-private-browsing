@@ -860,12 +860,12 @@ Weder in den System-Hives noch in den User-Hives konnten PB-Artefakte identifizi
 \subsection{Common Locations}\label{chap:anhang-chrome-common-locations}
 \subsubsection*{Process Monitor WriteFile Operations}\label{chap:anhang-chrome-common-locations-writefile-operations}
 
-Gemäß Versuchsdurchführung wurden auch für Chrome 2 Logfiles erstellt, welche die Prozessaktivitäten während (Logfile 1) und nach dem Browsing-Szenario während des Schließens des Browsers (Logfile 2) aufzeichnet. Beide Logfiles wurden gemäß Methodik in \autoref{subsection:methodik-datenanalyse-commonlocations} in Excel aufbereitet. \autoref{tab:chrome-writefile-operations} listet dabei alle Dateien auf, welche während der Durchführung des Szenarios beschrieben wurden, \autoref{tab:chrome-writefile2-operations} hingegen alle Schreiboperationen beim Schließen des Browsers. Dabei wurde für jede Datei wieder vermerkt, ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob in der Datei PB-Artefakte enthalten sind. Die Schreiboperationen wurden dieses mal in Dateiendungen gegliedert. In keiner der Dateien wurden PB-Artefakte identifiziert.
+Gemäß Versuchsdurchführung wurden auch für Chrome zwei Logfiles erstellt, welche die Prozessaktivitäten während (Logfile 1) und nach dem Browsing-Szenario während des Schließens des Browsers (Logfile 2) aufzeichnet. Beide Logfiles wurden gemäß Methodik in \autoref{subsection:methodik-datenanalyse-commonlocations} in Excel aufbereitet. \autoref{tab:chrome-writefile-operations} listet dabei alle Dateien auf, welche während der Durchführung des Szenarios beschrieben wurden, \autoref{tab:chrome-writefile2-operations} hingegen alle Schreiboperationen beim Schließen des Browsers. Dabei wurde für jede Datei wieder vermerkt, ob und wie sie wiederherstellbar war, mit welchem Tool die Datei analysiert wurde und ob in der Datei PB-Artefakte enthalten sind. Die Schreiboperationen wurden dieses Mal in Dateiendungen gegliedert. In keiner der Dateien wurden PB-Artefakte identifiziert.
 
 Dabei wurde in \autoref{tab:chrome-writefile-operations} unterschieden zwischen den \textbf{Local}-Browser Pfaden (hellblau) und \textbf{andere Pfaden} (dunkelblau).\\
 Zu sehen ist hier, dass hauptsächlich Dateien in den Browser-Pfad geschrieben werden.\\
-Alle \textit{.tmp}-Dateien waren nicht wiederherstellbar, was eine Analyse unmöglich macht. Die Dateien mit dem Namen \textit{data\_1} waren jeweils vorhanden, enthielten jedoch keine PB-Artefakte nach ausführlicher Analyse. Die \textit{-journal}-Dateien Diese sind sogenannte \glqq{}Rollback Journals\grqq{} und sind relevant für atomare Commit- und Rollback-Funktionen \cite{SQLiteTempfiles}. Da diese Dateien jedoch alle 0 Bytes groß waren, konnte hier kein Artefakt gefunden werden.\\
-Auch wurden noch \textit{000003.log}-Dateien geschrieben. Diese sind Teil eines LevelDB-Schlüssel-\\wertespeichers \cite{LevelDBGithub,LevelDBCCL} . Mithife von HxD und einer Analyse mittels eines selbst erstellen Python-Scripts zur Ausgabe der Schlüssel-Werte-Paare derjenigen Ordner, welche die .log und weitere LevelDB spezifische Dateien enthalten, kann auch in diesen Ordner bzw. Dateien auch keine Artefakte gefunden werden.\\
+Alle \textit{.tmp}-Dateien waren nicht wiederherstellbar, was eine Analyse unmöglich macht. Die Dateien mit dem Namen \textit{data\_1} waren jeweils vorhanden, enthielten jedoch keine PB-Artefakte nach ausführlicher Analyse. Die \textit{-journal}-Dateien sind sogenannte \glqq{}Rollback Journals\grqq{} und sind relevant für atomare Commit- und Rollback-Funktionen \cite{SQLiteTempfiles}. Da diese Dateien jedoch alle 0 Bytes groß waren, konnte hier kein Artefakt gefunden werden.\\
+Auch wurden noch \textit{000003.log}-Dateien geschrieben. Diese sind Teil eines LevelDB-Schlüssel-\\wertespeichers \cite{LevelDBGithub,LevelDBCCL} . Mithife von HxD und einer Analyse mittels eines selbst erstellen Python-Scripts zur Ausgabe der Schlüssel-Werte-Paare derjenigen Ordner, welche die .log und weitere LevelDB spezifische Dateien enthalten, kann auch in diesen Ordnern bzw. Dateien auch keine Artefakte gefunden werden.\\
 
 \newgeometry{bottom=2cm,top=0.5cm}
 %\setcounter{figure}{0}    
@@ -972,7 +972,7 @@ Auch wurden noch \textit{000003.log}-Dateien geschrieben. Diese sind Teil eines 
 \begin{sloppypar}
 
 Wie in \autoref{tab:chrome-writefile-operations} bereits dargestellt wurde, konnten auch keine temporären Icons wiederhergestellt werden. Diese waren weder in Autopsy im Snapshot oder im Arbeitsspeicher auffindbar. \\
-Weiterhin wurden Dateien geschrieben, welche zum Microsoft Windows Wörterbuch (dictionary) zuzuordnen sind. Diese Dateien sorgen dafür, dass systemweit gewisse Wörter zu einer Sprache hinzugefügt werden oder Ausnahmen für bestimmte Begriffe gemacht werden \cite{DictionaryWin10Files}. Da alle drei Dateien hier den Inhalt \glqq{}FF FE\grqq{} aufwiesen, konnte hier auch kein Artefakt gefunden werden.\\
+Weiterhin wurden Dateien geschrieben, welche zum Microsoft Windows Wörterbuch (dictionary) zuzuordnen sind. Diese Dateien sorgen dafür, dass systemweit gewisse Wörter zu einer Sprache hinzugefügt werden oder Ausnahmen für bestimmte Begriffe gemacht werden \cite{DictionaryWin10Files}. Da alle drei Dateien hier den hexadezimalen Inhalt \glqq{}FF FE\grqq{} aufwiesen, konnte hier auch kein Artefakt gefunden werden.\\
 Zuletzt wurden auch noch Dateien geschrieben, welche dem Shader-Cache zuzuordnen sind. Diese enthielten jedoch nach genauerer Analyse auch keine Informationen über die PB Session.\end{sloppypar}
 
 Anschließend folgt die Analyse des zweiten Logfiles.
@@ -1064,9 +1064,9 @@ Anschließend folgt die Analyse des zweiten Logfiles.
 
 Die Datei \textit{settings.dat} im Crashpad Ordner ist Teil der Crashpad library, welche den Maschinen- und Programmzustand im Falle eines Prozessabsturzes erfasst und einen Absturzbericht an einen Backend-Server übermittelt \cite{CrashpadOverviewDesign}. Die (binäre) Datei an sich beinhaltet dabei die Einstellungen für die Bibliothek \cite{CrashpadOverviewDesign}. Diese Datei beinhaltet jedoch keine Browsing-Artefakte. \\
 Weiterhin wurden wieder temporäre Dateien geschrieben, welche bis auf eine Datei nicht rekonstruierbar sind. Diese Eine enthält jedoch keine Artefakte. \\
-Die \textit{-journal}-Datei zeigte auch wieder keine Artefakte.
+Die \textit{-journal}-Datei zeigte erneut keine Artefakte.
 Die Datei \textit{Variations} direkt im Google\textbackslash{}Chrome\textbackslash{}User Data\textbackslash{}-Ordner ist der Dateistruktur nach eine JSON-Datei. Diese enthält aber auch keinerlei Informationen über das durchgeführte Browsing-Szenario.\\
-Auch wird wieder eine \textit{000003.log}-Datei geschrieben, welche aber wieder keine Artefakte enthält.\\
+Zum wiederholten Male wird eine \textit{000003.log}-Datei geschrieben, welche jedoch erneut keine Artefakte enthält.\\
 Gleiches gilt für die geschriebenen \textit{data\_1}-Dateien.\\
 Zuletzt wurde noch eine Textdatei namens \textit{chrome\_shotdown\_ms.txt} geschrieben. Diese enthält die Zeit in Millisekunden, welche Chrome für das Schießen benötigt \cite{ChromiumShutdownMSTxtWebpageDoku}. Dort fanden sich neben der Zeit in Millisekunden keine weiteren Artefakte.
 
@@ -1115,7 +1115,7 @@ Auch hier wurden alle relevanten Datenbanken aus den Festplatten-Speicherabbilde
 }
 \end{table}
 
-Erkennbar ist, dass im Gegensatz zu Firefox und Tor bereits einige Datenbanken bereits vor dem Browsing-Szenario initialisiert wurden. Das kam dadurch zustande, dass sich Chrome direkt nach der Installation geöffnet hat, was nicht verhindert werden konnte. Trotz einer \textit{offline executable}, welche extra für den Zweck heruntergeladen wurde, dass Chrome keine Artefakte bereits vor dem Browsing-Szenario anlegt, konnte jenes Starten nicht verhindert werden.
+Erkennbar ist, dass im Gegensatz zu Firefox und Tor bereits einige Datenbanken vor dem Browsing-Szenario initialisiert wurden. Das kam dadurch zustande, dass sich Chrome direkt nach der Installation geöffnet hat, was nicht verhindert werden konnte. Trotz einer \textit{offline executable}, welche extra für den Zweck heruntergeladen wurde, dass Chrome keine Artefakte bereits vor dem Browsing-Szenario anlegt, konnte jenes Starten nicht verhindert werden.
 
 Zu sehen ist außerdem, dass trotz einiger Schreiboperationen auf die Datenbanken keine Artefakte gefunden werden konnten. Eine der wichtigsten Datenbank \glqq{}History\grqq{} zeigte keine Datensätze, obwohl genau in diese Informationen zu besuchten Websiten und Login-Zeitpunkte gespeichert werden. Dies wurde auch exemplarisch anhand einer durchgeführten Beispiels-public-Session nachgewiesen. Zusätzlich wurde das Tool \glqq{}ChromeHistoryView\grqq{} verwendet, in der Hoffnung, dass dieses Artefakte findet. Da es aber, wie auch Autopsy und der DB-Browser für SQLite, nichts anderes durchführt, als die Datenbank einzulesen, konnten auch damit keine weiteren Artefakte identifiziert werden.
 
@@ -1127,7 +1127,7 @@ Zusammenfassend, wurden somit in keiner Common Location PB-Artefakte hinterlasse
 Wie in \autoref{subsubsection:appendix-tor-uncommon-locations-autopsy} ausführlich dargestellt, wurden auch für Chrome alle von Autopsy kategorisierten Dateien betrachtet. Dabei wird immer das Image des vierten Snapshots aufgeführt, da darin alle kategorisierten Dateien aller vorherigen Snapshots enthalten sind.
 
 \paragraph{Web Bookmarks}\label{chap:anhang-chrome-uncommon-autopsy-web-bookmarks}
-Wie in \autoref{img:chrome-boo} dargestellt, wurde nur ein einer Datei namens \textit{Bing.url} ein Lesezeichen zur Bing-Startseite gefunden.
+Wie in \autoref{img:chrome-boo} dargestellt, wurde nur in einer Datei namens \textit{Bing.url} ein Lesezeichen zur Bing-Startseite gefunden.
 
 \begin{figure}[ht]
 	\centering
@@ -1195,11 +1195,11 @@ Als Teil der Uncommon Locations wurden alle in \autoref{tab:windows-Registry Hiv
 \subsection{Common Locations}\label{chap:anhang-brave-common-locations}
 \subsubsection*{Process Monitor WriteFile Operations}\label{chap:anhang-brave-common-locations-writefile-operations}
 
-Wie in \autoref{subsection:methodik-datenanalyse-commonlocations} beschrieben, wurden für den Browser Brave zwei Logfiles erstellt, welche die Prozessaktivitäten während (Erstes Logfile) und nach dem Browsing-Szenario beim Schließen des Browsers (Zweites Logfile) aufzeichnet. Beide Logfiles wurden anschließend so gefiltert, dass nur die relevanten Schreiboperationen übrig bleiben, welche hier analysiert werden sollen. Daraufhin wurden beide in Excel eingelesen und aufbereitet. \autoref{tab:brave-writefile-operations} listet alle Dateien auf, welche während des Browsing-Szenarios beschrieben wurden. Die Kategorie \glqq{}ComponentUnpacker\grqq{} umfasst deutlich mehr Dateien als in der Tabelle dargestellt. Um die Lesbarkeit zu bewahren, sind diese Dateien separat in \autoref{tab:brave-componentunpacker1} dargestellt. Keine der Dateien war wiederherstellbar.
+Wie in \autoref{subsection:methodik-datenanalyse-commonlocations} beschrieben, wurden für den Browser Brave zwei Logfiles erstellt, welche die Prozessaktivitäten während (Erstes Logfile) und nach dem Browsing-Szenario beim Schließen des Browsers (Zweites Logfile) aufzeichnet. Beide Logfiles wurden anschließend so gefiltert, dass nur die relevanten Schreiboperationen übrig blieben, welche hier analysiert werden sollen. Daraufhin wurden beide in Excel eingelesen und aufbereitet. \autoref{tab:brave-writefile-operations} listet alle Dateien auf, welche während des Browsing-Szenarios beschrieben wurden. Die Kategorie \glqq{}ComponentUnpacker\grqq{} umfasst deutlich mehr Dateien als in der Tabelle dargestellt. Um die Lesbarkeit zu bewahren, sind diese Dateien separat in \autoref{tab:brave-componentunpacker1} dargestellt. Keine der Dateien war wiederherstellbar.
 %Da sich diese jedoch nur durch zwei Länderbuchstaben unterscheiden und keine der Dateien wiederherstellbar waren, wurden diese nicht in der Tabelle dargestellt. 
-Bei Betrachtung der beiden Tabellen fällt sofort auf, dass während des private Browsings deutlich mehrere Dateien in browserunspezifische \glqq{}uncommon\grqq{}-Pfade beschrieben werden. Diese waren jedoch alle im \textit{Local$\backslash$Temp} oder im \textit{Roaming} Ordner zu finden. Auch hier wurden wieder die Schreiboperationen in Dateiendungen bzw. Kategorien aufgeteilt. Die beiden größeren Datenkategorien, welche im Vergleich zu Chrome hinzugekommen sind, sind die \glqq{}ComponentUnpacker\grqq{}- und \glqq{}chrome\_url\_fetcher\grqq{}-Dateien. Da keiner der Dateien bis auf eine Einzige mehr vorhanden war, welche mit HxD untersucht wurde und dabei keine Artefakte feststellbar waren, wurde hier auch nicht weiter nachgeforscht. \\
+Bei Betrachtung der beiden Tabellen fällt sofort auf, dass während des private Browsings deutlich mehrere Dateien in browserunspezifische \glqq{}Uncommon\grqq{}-Pfade beschrieben werden. Diese waren jedoch alle im \textit{Local$\backslash$Temp} oder im \textit{Roaming} Ordner zu finden. Auch hier wurden wieder die Schreiboperationen in Dateiendungen bzw. Kategorien aufgeteilt. Die beiden größeren Datenkategorien, welche im Vergleich zu Chrome hinzugekommen sind, sind die \glqq{}ComponentUnpacker\grqq{}- und \glqq{}chrome\_url\_fetcher\grqq{}-Dateien. Da keiner der Dateien bis auf eine Einzige mehr vorhanden war, welche mit HxD untersucht wurde und dabei keine Artefakte feststellbar waren, wurde hier auch nicht weiter nachgeforscht. \\
 Die restlichen Dateien verhielten sich dabei ähnlich zu Chrome, was den Grund haben könnte, dass beide Browser auf Chromium, dem Open-Source Browserprojekt, basieren. \\
-Die .tmp Dateien waren wieder nicht wiederherstellbar, weder in den Festplatten-Images, noch im RAM-Dump. Die \textit{-journal}-Dateien der SQLite-Datenbanken waren abermals leer. Die 000003.log-Datei wurde, genauso wie der ganze LevelDB-Ordner, analysiert, jedoch ohne einen Fund eines Artefakts. Die \textit{store\_new}-Dateien enthielten ebenfalls keine relevanten Informationen. Die Wörterbuch-Dateien sowie die Dateien aus dem \glqq{}D3DSCache\grqq{}-Ordner waren ebenfalls ohne einen auf das PB zurückführbare Inhalt.
+Die .tmp-Dateien waren erneut nicht wiederherstellbar, weder in den Festplatten-Images, noch im RAM-Dump. Die \textit{-journal}-Dateien der SQLite-Datenbanken waren abermals leer. Die 000003.log-Datei wurde, genauso wie der ganze LevelDB-Ordner, analysiert, jedoch ohne einen Fund eines Artefakts. Die \textit{store\_new}-Dateien enthielten ebenfalls keine relevanten Informationen. Die Wörterbuch-Dateien sowie die Dateien aus dem \glqq{}D3DSCache\grqq{}-Ordner waren ebenfalls ohne einen auf das PB zurückführbare Inhalt.
 
 Anschließend folgt die Analyse des zweiten Logfiles.
 
@@ -1484,7 +1484,7 @@ Auch bei der Analyse der Dateien des zweiten Logfiles konnten keine Artefakte ge
 
 \subsubsection*{Cache}\label{chap:anhang-brave-common-locations-cache}
 
-Auch für den Brave-Browser wurde der Cache mittels des Tools ChromeCacheView untersucht. Das Ergebnis hier war jedoch erneut, dass keine Cache-Dateien auf das durchgeführte PB Szenario zurückführbar sind. Dies wurde jeweils im zweiten, dritten und vierten Snapshot mit den Cache-Ordnern durchgeführt. Eine weitere Analyse durch Extraktion und Untersuchung der Dateien mittels HxD zeigte erneut, dass im Cache keine Artefakte vorhanden sind.
+Auch für den Brave-Browser wurde der Cache mittels des Tools ChromeCacheView untersucht. Das Ergebnis hier war jedoch erneut, dass keine Cache-Dateien auf das durchgeführte PB-Szenario zurückführbar sind. Dies wurde jeweils im zweiten, dritten und vierten Snapshot mit den Cache-Ordnern durchgeführt. Eine weitere Analyse durch Extraktion und Untersuchung der Dateien mittels HxD zeigte erneut, dass im Cache keine Artefakte vorhanden sind.
 
 \subsubsection*{SQLite-Datenbanken}\label{chap:anhang-brave-common-locations-sqlite}
 
@@ -1518,7 +1518,7 @@ Auch für den Brave-Browser wurde der Cache mittels des Tools ChromeCacheView un
 In Autopsy wurden neben der Stringsuche die kategorisierten Dateien analysiert. Die verschiedenen Kategorien \textit{Web Bookmarks}, \textit{Web Cookies}, \textit{Web History} und \textit{Web Categories} wurden erneut bei Brave untersucht.
 
 \paragraph{Web Bookmarks}\label{chap:anhang-brave-uncommon-locations-autopsy-web-bookmarks}
-Wie in \autoref{img:brave-boo} dargestellt, wurde nur ein einer Datei namens \textit{Bing.url} ein Lesezeichen zur Micorsoft Bing-Startseite gefunden.
+Wie in \autoref{img:brave-boo} dargestellt, wurde nur in einer Datei namens \textit{Bing.url} ein Lesezeichen zur Micorsoft Bing-Startseite gefunden.
 
 \begin{figure}[ht]
 	\centering
