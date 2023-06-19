@@ -57,7 +57,7 @@ Der Chrome Browser selbst enthält proprietäre Elemente. \cite{GoogleChrome.}
 \label{subsubsection:methodik-vorbereitung-browserauswahl-brave}
 Der Open-Source-Browser \textit{Brave} wurde von Brendan Eich, dem Mitbegründer von Mozilla, mit Fokus auf Privatsphäre, Sicherheit sowie Nutzerfreundlichkeit auf Baisis des Chromium-Projekts entwickelt. 
 Brave bietet Schutz vor dem lokalen Angreifer durch den \textit{Private-Window}-Modus. In diesem Modus werden laut Herstellerangaben der Browserverlauf sowie Cookies nicht lokal auf dem Gerät gespeichert. 
-Um vor dem Webangreifer zu schützen, bietet Brave mit dem \textit{Private-Window-with-Tor-Connectivity}-Modus zusätzlich die Möglichkeit, eine Verbindung zum Tor-Netzwerk herzustellen. \cite{Brave.} Im Rahmen dieser Seminararbeit wird ausschließlich der Private-Window-Modus untersucht.
+Um vor dem Webangreifer zu schützen, bietet Brave mit dem \textit{Private-Window-with-Tor-Connectivity}-Modus zusätzlich die Möglichkeit, eine Verbindung zum Tor-Netzwerk herzustellen. \cite{Brave.} Im Rahmen dieser Seminararbeit wird für Brave ausschließlich der Private-Window-Modus ohne Verbindung zum Tor-Netzwerk untersucht.
 
 \subsection{Browsing-Szenario}
 \label{subsection:methodik-vorbereitung-browsing-szenario}
@@ -236,7 +236,7 @@ Im Rahmen dieser Arbeit umfasst dies die Durchführung des Browsing-Szenarios so
 
 \subsection*{Process Monitor Logfiles}
 \label{subsection:methodik-datensammlung-processmonitorlogfiles}
-Um das Verhalten von privaten Browsingmodi möglichst vollständig zu untersuchen, schlagen Fayyad-Kazan et al. \cite{Fayyad.2021} vor, alle Aktivitäten des Browsers während Browsing-Szenarios aufzuzeichnen.
+Um das Verhalten von privaten Browsing-Modi möglichst vollständig zu untersuchen, schlagen Fayyad-Kazan et al. \cite{Fayyad.2021} vor, alle Aktivitäten des Browsers während des Browsing-Szenarios aufzuzeichnen.
 Dazu werden mit dem Tool Process Monitor alle Prozess-Aktivitäten zwischen zwei Zeitpunkten als \textit{Process Monitor Logfile} (PML) oder CSV-Datei gespeichert. \cite{Fayyad.2021, Rochmadi.2017}
 Die PML-Dateien werden mithilfe des gemeinsamen Ordners auf den Analyserechner transportiert.
 
@@ -248,23 +248,23 @@ Im Falle der Browser-Forensik werden Abbilder der Festplatten und des Arbeitsspe
 \paragraph*{Festplatten-Image}
 Da in diesem Versuch die Festplatten virtualisiert werden, wird ein Abbild aus einem sogenannten \textit{VM-Snapshot} gewonnen, eine Momentaufnahme der virtuellen Maschine \cite{Oracle.2020}. 
 VM-Snapshots können \textit{aufgetaut} werden, wodurch der Zustand des Betriebssystems zum Zeitpunkt der Momentaufnahme wiederhergestellt wird.
-Bei Oracle VM VirtualBox kann ein VM Snapshot über die grafische Oberfläche erstellt werden.
+Bei Oracle VM VirtualBox kann ein VM-Snapshot über die grafische Oberfläche erstellt werden.
 Durch den Snapshot wird ein \textit{Virtual Disk Image}, eine VDI-Datei, im Snapshot-Ordner der VM erzeugt. Diese Laufwerksdatei enthält nur differentielle Daten zum vorherigen Snapshot.
 Um aus den differentiellen Daten ein vollständiges Festplatten-Image zu erzeugen, muss ein \textit{vollständiger Klon} des Snapshots erstellt werden. Die VDI-Datei der geklonten VM entspricht einem vollständigem Abbild der Festplatte zum Zeitpunkt des durchgeführten Snapshots.
 
 Da Autopsy nicht das VDI-Format unterstützt, müssen die Laufwerksdateien der geklonten Snapshots in das generische \textit{Image}-Format (.img) umgewandelt werden.
-Durch Nutzung des VirtualBox Befehlszeilen-Tool \textit{vboxmanage} wird mit dem Befehl \texttt{vboxmanage clonehd <VDI\_File>.vdi <IMG\_File>.img --format raw} die VDI-Datei ein eine IMG-Datei umgewandelt.
+Durch Nutzung des VirtualBox Befehlszeilen-Tool \textit{vboxmanage} wird mit dem Befehl \texttt{vboxmanage clonehd <VDI\_File>.vdi <IMG\_File>.img --format raw} die VDI-Datei in eine IMG-Datei umgewandelt.
 Um ein Festplatten-Image in Autopsy einzulesen, wird ein neuer \textit{Fall} (engl. Case) erstellt. Das Einlesen eines ca. 30 GB großen Festplatten-Images dauerte mit allen aktivierten Autopsy-Plugins zwischen 5 und 7 Stunden.
 
 \paragraph*{RAM-Dump}
 Ein \textit{RAM-Dump} erfasst den Zustand des Arbeitsspeichers, einschließlich der im Speicher befindlichen Daten, Programme und Prozesse zu einem bestimmten Zeitpunkt \cite{TILT.25.03.2023}.
 VirtualBox empfiehlt, Abbilder des RAMs ebenfalls über das vboxmanage Befehlszeilen-Tool durchzuführen.
-Im Unterschied zu Festplatten-Images können RAM-Dumps nur im angeschalteten Zustand der virtellen Maschine mithilfe des Befehls \texttt{vboxmanage debugvm <VM Name> dumpvmcore --filename <RAM Dump Dateiname>.elf} durchgeführt werden. RAM-Dumps im .elf Format können direkt vom Analysetool Volatility innerhalb weniger Minuten eingelesen werden.		
+Im Unterschied zu Festplatten-Images können RAM-Dumps nur im angeschalteten Zustand der virtellen Maschine mithilfe des Befehls \texttt{vboxmanage debugvm <VM Name> dumpvmcore --filename <RAM-Dump Dateiname>.elf} durchgeführt werden. RAM-Dumps im .elf Format können direkt vom Analysetool Volatility innerhalb weniger Minuten eingelesen werden.		
 
 \paragraph*{Zeitpunkte zur Datensammlung}
 Wichtig für die Qualität der Versuchsergebnisse sind die Zeitpunkte während des Browsing-Szenarios zum Sammeln der Daten.
 In der Literatur wählen die Autoren meist ohne Begründung Zeitpunkte zur Datensammlung \cite{Sajan.2021, Nalawade.2016, Montasari.2015, Satvat.2014, Said.2011, Aggarwal.2010}.
-Dieses Problem haben Muir, Leimich und Buchanan erkannt und spezifische Zeitpunkte zur Datensammlung vorgeschlagen. Diese ermögliche eine vollständige Analyse des Browserverhaltens vor, während und nach dem Browsing-Szenario. \cite{Muir.2019}. Wie in Abbildung \ref{img:zeitpunkte-datensammlung} dargestellt, wurde sich an diesen Zeitpunkten für diesen Versuch orientiert.
+Dieses Problem haben Muir, Leimich und Buchanan erkannt und spezifische Zeitpunkte zur Datensammlung vorgeschlagen. Diese ermöglichen eine vollständige Analyse des Browserverhaltens vor, während und nach dem Browsing-Szenario. \cite{Muir.2019} Wie in Abbildung \ref{img:zeitpunkte-datensammlung} dargestellt, wurde sich an diesen Zeitpunkten für diesen Versuch orientiert.
 \begin{figure}[h!]
 	\centering
 	\small
@@ -368,7 +368,7 @@ Um potenzielle PB-Artefakte zu berücksichtigen, wird der WAL mithilfe der sqlit
 \label{subsection:methodik-datenanalyse-uncommonlocations}
 \textit{Uncommon Locations} beziehen sich auf Verzeichnisse, die nicht zu den gängigen Speicherorten gehören. 
 Bei Festplatten-Images handelt es sich dabei meist um Dateien des Betriebssystems\footnote{
-In der betrachteten Literatur wird die sogenannte \textit{pagefile.sys} als Teil der Uncommon Locations unter Windows untersucht. Diese Datei wird verwendet, um Daten aus dem Hauptspeicher auf die Festplatte auszulagern, wenn der verfügbare physische Speicher begrenzt ist. \cite{MicrosoftLearn.21.03.2023}
+In der betrachteten Literatur wird die sogenannte \textit{pagefile.sys} als Teil der Uncommon Locations unter Windows betrachtet. Diese Datei wird verwendet, um Daten aus dem Hauptspeicher auf die Festplatte auszulagern, wenn der verfügbare physische Speicher begrenzt ist. \cite{MicrosoftLearn.21.03.2023}
 In der betrachteten Literatur wurde nur die Stringsuche im Hexadezimaleditor als Analysemethode identifiziert. Wie in diesem Abschnitt beschrieben, ist dies aufgrund der fehlenden Zuordnung zu einem spezifischen Browser unzureichend. Um eine Beweisauthentifizierung gemäß dem Ziel der Arbeit zu garantieren, wird der Inhalt der \textit{pagefile.sys} nicht untersucht. Gleiches gilt für die Speicherverwaltungsdatei \textit{hiberfile.sys}
 } oder andere Festplattenbereiche, wie beispielsweise unallokierte Speicherbereiche oder den Arbeitsspeicher.
 Uncommon Locations werden ohne Vorwissen über das Browserverhalten sowie ohne Vorverarbeitung der Dateien mithilfe der \textit{Blackbox-Analyse} untersucht:
@@ -413,7 +413,7 @@ Um einen im RAM gefundenen String einem Browserprozess zuordnen zu können, wird
 Mithilfe sogenannter \textit{Yara-Regeln} (engl. Yararules) wird nach bestimmten Mustern im Arbeitsspeicher gesucht.
 Die für diesen Versuch verwendeten Yara-Regeln entsprechen den Strings der PB-Artefakte in Tabelle \ref{tab:pb-artefakte}. Zusätzlich sucht eine Regel nach HTML-Fragmenten, die eindeutig einer besuchten Seite des Browsing-Szenarios zuzuordnen sind. \cite{Said.2011}
 Alle verwendeten Yara-Regeln sind im Anhang \ref{appendix:yara-regeln} aufgelistet.
-Um den RAM-Dump nach den Yara-Regeln zu durchsuchen, wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.vadyarascan --yara-file yara\_rules.yara > yarascan.txt}
+Um den RAM-Dump nach den Yara-Regeln zu durchsuchen, wird folgender Befehl ausgeführt: \texttt{vol.py -f ram\_dump.img windows.vadyarascan --yara-file yara\_rules.yara > yarascan.txt}.
 Nachdem der RAM-Dump nach den Regeln durchsucht wurde, gibt die Yarascan-Ausgabe für jeden gefundenen String die PID des Prozesses, in dem der String gefunden wurde, sowie die virtuelle Speicheradresse des gefundenen Strings an.
 
 \begin{figure}[h!]

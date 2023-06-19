@@ -11,7 +11,7 @@ Im nachfolgenden Abschnitt werden die Ergebnisse der Datenanalyse für den Webbr
 
 \subsection*{Common Locations}
 \label{subsection:ergebnisse-firefox-commonlocations}
-Zunächst werden die Common Locations nach potenziellen privaten Browsing-Artefakten untersucht. Diese standardmäßigen Speicherorte für Browsing-Artefakte umfassen ausschließlich auf die Festplatte geschriebene Dateien. In diesem Versuch wurde gemäß Methodik in Abschnitt \ref{subsection:methodik-datenanalyse-commonlocations} zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und SQLite-Datenbanken zur Verwaltung von Nutzerdaten unterschieden. Weder in den Schreiboperationen der Process Monitor Logfiles noch in den SQLite-Datenbanken konnten PB-Artefakte gefunden werden. 
+Zunächst werden die Common Locations nach potenziellen privaten Browsing-Artefakten untersucht. In diesem Versuch wurde gemäß Methodik in Abschnitt \ref{subsection:methodik-datenanalyse-commonlocations} zwischen Datei-Schreiboperationen aus den Process Monitor Logfiles und SQLite-Datenbanken zur Verwaltung von Nutzerdaten unterschieden. Weder in den Schreiboperationen der Process Monitor Logfiles noch in den SQLite-Datenbanken konnten PB-Artefakte gefunden werden. 
 
 Eine detaillierte Analyse der untersuchten Dateien ist im Anhang \ref{subsection:appendix-firefox-common-locations} beschrieben.
 
@@ -36,10 +36,10 @@ Dazu wird mit dem Volatility PlugIn \textit{Yarascan} nach den in Anhang \ref{ap
 Die Ergebnisse dieser Stringsuche sind nachfolgend nach den Yara-Regeln geordnet.
 
 \paragraph*{Yara-Regel \glqq{}HTML\grqq{}}
-In keinem der Firefox RAM Dumps wurden HTML Fragemente der besuchten Seiten gefunden. Somit wird diese Yara-Regel nicht weiter betrachtet.
+In keinem der Firefox RAM-Dumps wurden HTML-Fragemente der besuchten Seiten gefunden. Somit wird diese Yara-Regel nicht weiter betrachtet.
 
 \paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}
-Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchbegriffe \glqq{}pfaffenhofen\grqq{}, \glqq{}nanoradar\grqq{}, \glqq{}mooserliesl\grqq{} sowie \glqq{}mallofamerica\grqq{} ausschließlich nach dem Browsing-Szenario mit geöffnetem Browser (RAM Dump 2) identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in elf Fällen wurden Suchbegriffe in anderen Prozessen identifiziert. Am häufigsten wurde der Suchbegriff \glqq{}pfaffenhofen\grqq{} mit 1301 Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchte Stadt zeigt. 
+Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchbegriffe \glqq{}pfaffenhofen\grqq{}, \glqq{}nanoradar\grqq{}, \glqq{}mooserliesl\grqq{} sowie \glqq{}mallofamerica\grqq{} ausschließlich nach dem Browsing-Szenario mit geöffnetem Browser (RAM-Dump 2) identifiziert. Die Suchbegriffe wurden größtenteils in den Speicherbereichen von Firefox-Prozessen gefunden. Nur in elf Fällen wurden Suchbegriffe in diversen anderen Prozessen des Betriebssystems identifiziert. Am häufigsten wurde der Suchbegriff \glqq{}pfaffenhofen\grqq{} mit 1301 Artefakten gefunden. Dies ist vermutlich auf den  visuellen Google Maps Kartenausschnitt zurückzuführen, welcher bei der Google-Suche relevante Informationen über die gesuchte Stadt zeigt. 
 
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -365,12 +365,12 @@ Wie in Tabelle \ref{chart:firefox-volatility-keywords} gezeigt, wurden die Suchb
 \end{table}
 
 Es konnten in den Arbeitsspeicherabbildern alle besuchten URLs \glqq{}unitree.com\grqq{}, \glqq{}mooserliesl.de\grqq{}, \glqq{}mallofamerica.com\grqq{} sowie \glqq{}donaukurier.de\grqq{} identifiziert werden.
-Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing-Szenario mit geöffnetem Browser (RAM Dump 2) gefunden. Die besuchten URLs wurden hauptsächlich in Firefox-Prozessen gefunden. Die URL \glqq{}mooserliesl.de\grqq{} wurde mit insgesamt 390 Artefakten am wenigsten gefunden, \glqq{}donaukurier.de\grqq{} mit über 3600 Artefakten am häufigsten.
+Wie in Tabelle \ref{chart:firefox-volatility-urls} gezeigt, wurden die meisten Artefakte nach dem Browsing-Szenario mit geöffnetem Browser (RAM-Dump 2) gefunden. Die besuchten URLs wurden hauptsächlich in Firefox-Prozessen gefunden. Die URL \glqq{}mooserliesl.de\grqq{} wurde mit insgesamt 390 Artefakten am wenigsten gefunden, \glqq{}donaukurier.de\grqq{} mit über 3600 Artefakten am häufigsten.
 
-Bemerkenswert ist, dass URL-Artefakte gefunden wurden, selbst nachdem der Browser geschlossen wurde (RAM Dump 3). Dabei wurde kein URL-Artefakt in einem Firefox Prozess gefunden.
+Bemerkenswert ist, dass URL-Artefakte gefunden wurden, selbst nachdem der Browser geschlossen wurde (RAM-Dump 3). Dabei wurde kein URL-Artefakt in einem Firefox Prozess gefunden.
 Anhand der PID 2252 wurde festgestellt, dass sich alle URL-Artefakte nach Schließen des Browsers (RAM-Dump 3) in einem \textit{svchost.exe} Prozess mit der gleichen PID befinden. Unter dem \textit{Service Host} Prozess laufen gruppierte Windows-Dienste, um Ressourcen zu sparen und die Systemleistung zu verbessern.
 Volatility bietet das Plugin \textit{svcscan} an, mit dem alle laufenden Dienste ausgegeben werden können.
-Bei Anwendung auf den dritten RAM Dump wurde jedoch zu keinem Dienst eine PID angegeben, wordurch der Dienst mit den URL Artefakten nicht im RAM identifiziert werden konnte. \cite{Nicholasswhite.05.06.2023}
+Bei Anwendung auf den dritten RAM-Dump wurde jedoch zu keinem Dienst eine PID angegeben, wordurch der Dienst mit den URL Artefakten nicht im RAM identifiziert werden konnte. \cite{Nicholasswhite.05.06.2023}
 Stattdessen wurde der dritte Snapshot aufgetaut, um im laufenden Windowsbetrieb den Dienst mithilfe des Process Explorers zu identifizieren.
 Wie in Abbildung \ref{chart:svchost-dnscache} gezeigt, wurde anhand der PID $2252$ der Dienst \textit{DNSCache} ermittelt.
 \begin{figure}[h!]
@@ -625,7 +625,7 @@ Nach Löschen des DNSCaches mit dem Kommandozeilenbefehl \texttt{ipconfig /flush
 %	\label{chart:final-criteria}  
 %	\caption{Mail}
 %\end{figure}
-Wie in Abbildung \ref{chart:firefox-volatility-mail} gezeigt, wurden E-Mail-Artefakte ausschließlich nach dem Browsing-Szenario mit geöffnetem Firefox Browser (RAM Dump 2) gefunden. Dabei wurden Artefakte jeder Kategorie gefunden.
+Wie in Abbildung \ref{chart:firefox-volatility-mail} gezeigt, wurden E-Mail-Artefakte ausschließlich nach dem Browsing-Szenario mit geöffnetem Firefox Browser (RAM-Dump 2) gefunden. Dabei wurden Artefakte jeder Kategorie gefunden.
 Unter den gefundenen Artefakten befindet sich am häufigsten die Absenderadresse \glqq{}computerforensikvl@gmail.com\grqq{}. Dieses Artefakt wurde als einziges E-Mail-Artefakt sechsmal in anderen Prozessen als Firefox gefunden.
 
 Bemerkenswert ist, dass das Passwort des Google-Accounts, mit dem die E-Mails verschickt wurden, viermal als Klartext im RAM gefunden wurden. Das Passwort wurde je zweimal in zwei Firefox Prozessen mit den PIDs 7420 und 8424 gefunden. Tabelle \ref{tab:firefox-mapping-virtaddr-to-byteoffset} zeigt die virtuellen Speicheradressen der Artefakte aus der Yarascan Ausgabe.
@@ -668,7 +668,7 @@ In der gleichen Datei konnten nach dem gefundenen Passwort am Byte-Offset $0x12e
 Wie in Abbildung \ref{img:firefox-pw-offset-pid-8424} gezeigt, kann in den Byte-Offsets der gefundenen Passwörter in der Speicherseite der PID 8424 kein sinnvoller Kontext ermittelt werden. Im Gegensatz zur Speicherseite der PID 7420 wird das Passwort dort mit 2 Bytes pro Zeichen enkodiert, was eine Unicode-Zeichenenkodierung vermuten lässt.
 
 \paragraph*{Yara-Regel \glqq{}DK-Logo\grqq{}}
-Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Browsing-Szenario geöffnete Donaukurier Logo ausschließlich im zweiten RAM Dump dreimal in Firefox Prozessen gefunden.
+Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Browsing-Szenario geöffnete Donaukurier Logo ausschließlich im zweiten RAM-Dump dreimal in Firefox Prozessen gefunden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
 	\begin{tabular}{r}
@@ -677,7 +677,7 @@ Wie in Abbildung \ref{chart:firefox-volatility-image} gezeigt, wurde das im Brow
 			xbar stacked,
 			width=18cm, 
 			height=12cm, 
-			ylabel style={align=center}, ylabel=Donaukurier Logo\\(Hexadezimal),
+			ylabel style={align=center}, ylabel=\textbf{Donaukurier Logo}\\\textbf{(Hexadezimal)},
 			y=1cm,
 			symbolic y coords={RAM-Dump 3, RAM-Dump 2, RAM-Dump 1},
 			ytick=data,
@@ -765,7 +765,7 @@ Nachfolgend werden die Ergebnisse geordnet nach Yara-Regeln beschrieben. Die vol
 Wie bei Firefox, konnten keine HTML-Artefakte im RAM gefunden werden. Deshalb wird diese Kategorie nicht weiter aufgeführt.
 
 \paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}
-Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden nach dem Browsing-Szenarios sowie vor (RAM-Dump 2) als auch nach Erstellen einer \glqq{}Neuen Identität\grqq{} (RAM Dump 3-1) Suchbegriffe des Browsing-Szenarios gefunden.
+Wie in Abbildung \ref{chart:tor-volatility-keywords} gezeigt, wurden nach dem Browsing-Szenarios sowie vor (RAM-Dump 2) als auch nach Erstellen einer \glqq{}Neuen Identität\grqq{} (RAM-Dump 3-1) Suchbegriffe des Browsing-Szenarios gefunden.
 Nachdem eine \glqq{}Neue Identität\grqq{} erstellt wurde, reduzierten sich die gefundenen Artefakte deutlich. 
 Die Suchbegriffe wurden hauptsächlich in Firefox-Prozessen gefunden. Kein Artefakt war im Tor-Prozess zu finden.
 Mit 4833 Artefakten wurde am häufigsten der Suchbegriff \glqq{}pfaffenhofen\grqq{} nach dem Browsing-Szenario im zweiten RAM-Dump gefunden. 
@@ -949,8 +949,9 @@ Nach dem Schließen des Tor-Browsers wurden keine Suchbegriffe im RAM identifizi
 %\end{figure}
 
 \paragraph*{Yara-Regel \glqq{}URLs\grqq{}}
-Ähnlich zur Yara-Regel \glqq{}Suchbegriffe\grqq{} wurden, wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Dabei wurden im RAM Dump 3-1 deutlich weniger URL-Artefakte als in RAM Dump 2 gefunden. 
-Artefakte dieser Yara-Regel wurden nach Firefox-Prozessen hauptsächlich in Tor-Prozessen gefunden. Am wenigsten Artefakte wurden in anderen Prozessen identifiziert.
+Ähnlich zur Yara-Regel \glqq{}Suchbegriffe\grqq{} wurden, wie in Abbildung \ref{chart:tor-volatility-urls} gezeigt, ausschließlich nach dem Browsing-Szenario vor (RAM-Dump 2) und nach Zuweisung einer neuen Identität (RAM-Dump 3-1) URL Artefakte gefunden. Dabei wurden im RAM-Dump 3-1 deutlich weniger URL-Artefakte als in RAM-Dump 2 gefunden. 
+Artefakte dieser Yara-Regel wurden nach Firefox-Prozessen hauptsächlich in Tor-Prozessen gefunden. 
+Ausschließlich im zweiten RAM-Dump wurden Artefakte in einem anderen Prozess gefunden: \textit{MemCompression}, eine Windows-Anwendung zur Komprimierung von Bereichen des Arbeitsspeichers \cite{MemCompressionWebsite}.
 Auffällig ist, dass die URL \glqq{}mallofamerica.com\grqq{} 26505 Mal in RAM-Dump 2 gefunden wurde. Im Gegensatz dazu wurde \glqq{}mooserliesl.de\grqq{} nur 518 Mal gefunden. Nach Schließen des Tor-Browsers wurden keine URL-Artefakte mehr im RAM gefunden.
 \begin{table}[h!]
 	\resizebox{\linewidth}{!}{
@@ -1979,7 +1980,7 @@ Zusammenfassend konnte somit die Website \glqq{}donaukurier.de\grqq{} im zweiten
 
 \paragraph*{Yara-Regel \glqq{}Suchbegriffe\grqq{}}\label{chap:ergebnisse-chrome-uncommon-volatility-suchbegriffe}
 
-Wie in Abbildung \ref{chart:chrome-volatility-keywords} dargestellt, wurden die Suchbegriffe \glqq{}pfaffenhofen\grqq{}, \glqq{}nanoradar\grqq{}, \glqq{}mooserliesl\grqq{} und \glqq{}mallofamerica\grqq{} ausschließlich bei dem noch geöffnetem Chrome-Browser nach dem Browsing-Szenario (zweiter RAM Dump) gefunden. Es wurden dabei alle Suchbegriffe bis auf einen einzigen in Speicherbereichen des Chrome-Browsers gefunden. Am häufigsten konnte der Suchbegriff \glqq{}pfaffenhofen\grqq{} mit 1922 Treffern identifiziert werden. Am seltensten war das der Fall bei dem Begriff \glqq{}mooserliesl\grqq{} mit nur 281 Suchtreffern. \\
+Wie in Abbildung \ref{chart:chrome-volatility-keywords} dargestellt, wurden die Suchbegriffe \glqq{}pfaffenhofen\grqq{}, \glqq{}nanoradar\grqq{}, \glqq{}mooserliesl\grqq{} und \glqq{}mallofamerica\grqq{} ausschließlich bei dem noch geöffnetem Chrome-Browser nach dem Browsing-Szenario (zweiter RAM-Dump) gefunden. Es wurden dabei alle Suchbegriffe bis auf einen einzigen in Speicherbereichen des Chrome-Browsers gefunden. Am häufigsten konnte der Suchbegriff \glqq{}pfaffenhofen\grqq{} mit 1922 Treffern identifiziert werden. Am seltensten war das der Fall bei dem Begriff \glqq{}mooserliesl\grqq{} mit nur 281 Suchtreffern. \\
 Der eine Treffer bei der Suchphrase \glqq{}mallofamerica\grqq{} war im Speicher eines Prozesses mit dem Namen \textit{MemCompression}, was anhand der PID 1828 festgestellt wurde. Dieser Prozess ist dafür zuständig, dass Windows einen Teil des Arbeitsspeichers komprimiert speichert, was zwar zusätzliche CPU-Ressourcen beansprucht, dafür jedoch deutlich schneller ist, als den Hauptspeicher in das pagefile auszulagern \cite{MemCompressionWebsite}. Daher kann es sein, dass ein Teil des RAMs, in welchem der Suchbegriff vorhanden war, komprimiert wurde und folglich dieser Prozess diesen Begriff beinhaltete.
 
 \begin{table}[h!]

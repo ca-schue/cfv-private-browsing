@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.9" bltxversion="3.18b" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,11 +37,6 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
-    </bcf:option>
-    <bcf:option type="multivalued">
-      <bcf:key>extradatecontext</bcf:key>
-      <bcf:value order="1">labelname</bcf:value>
-      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -281,11 +276,6 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
-    <bcf:option type="multivalued">
-      <bcf:key>extradatecontext</bcf:key>
-      <bcf:value order="1">labelname</bcf:value>
-      <bcf:value order="2">labeltitle</bcf:value>
-    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -505,7 +495,6 @@
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
-    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -731,7 +720,6 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
-    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -2461,36 +2449,37 @@
     <bcf:citekey order="63" intorder="1">Nicholasswhite.05.06.2023</bcf:citekey>
     <bcf:citekey order="64" intorder="1">MicrosoftLearn.05.06.2023</bcf:citekey>
     <bcf:citekey order="65" intorder="1">MozillaWiki.05.06.2023</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">Bugzilla.05.06.2023</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">MemCompressionWebsite</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">SiHostWebsite</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">dwmWebsite</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">pogonin2022microsoft</bcf:citekey>
-    <bcf:citekey order="71" intorder="1">Horsman.2019</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">Satvat.2014</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">MemCompressionWebsite</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">Bugzilla.05.06.2023</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">MemCompressionWebsite</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">SiHostWebsite</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">dwmWebsite</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">pogonin2022microsoft</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">Horsman.2019</bcf:citekey>
     <bcf:citekey order="73" intorder="1">Satvat.2014</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">Brave.</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">TechSupportGuy.05.06.2023</bcf:citekey>
-    <bcf:citekey order="76" intorder="1">GitHub.05.06.2023</bcf:citekey>
-    <bcf:citekey order="77" intorder="1">JeffersonScher.29.11.2020</bcf:citekey>
-    <bcf:citekey order="78" intorder="1">mozillazine.29.12.2022</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">GitHub.08.04.2019</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">Mills.2021</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">MandiOhlinger.05.06.2023</bcf:citekey>
-    <bcf:citekey order="81" intorder="2">InfoSecNotes.05.06.2023</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">MozillaWiki.05.06.2023</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">GitHub.05.06.2023b</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">GitHub.08.04.2019</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">MozillaSupport.26.10.2020</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">SecureDrop.05.06.2023</bcf:citekey>
-    <bcf:citekey order="87" intorder="1">Gitlab.05.06.2023</bcf:citekey>
-    <bcf:citekey order="88" intorder="1">SQLiteTempfiles</bcf:citekey>
-    <bcf:citekey order="89" intorder="1">LevelDBGithub</bcf:citekey>
-    <bcf:citekey order="89" intorder="2">LevelDBCCL</bcf:citekey>
-    <bcf:citekey order="90" intorder="1">DictionaryWin10Files</bcf:citekey>
-    <bcf:citekey order="91" intorder="1">CrashpadOverviewDesign</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Satvat.2014</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">Brave.</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">TechSupportGuy.05.06.2023</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">GitHub.05.06.2023</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">JeffersonScher.29.11.2020</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">mozillazine.29.12.2022</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">GitHub.08.04.2019</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">Mills.2021</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">MandiOhlinger.05.06.2023</bcf:citekey>
+    <bcf:citekey order="82" intorder="2">InfoSecNotes.05.06.2023</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">MozillaWiki.05.06.2023</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">GitHub.05.06.2023b</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">GitHub.08.04.2019</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">MozillaSupport.26.10.2020</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">SecureDrop.05.06.2023</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">Gitlab.05.06.2023</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">SQLiteTempfiles</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">LevelDBGithub</bcf:citekey>
+    <bcf:citekey order="90" intorder="2">LevelDBCCL</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">DictionaryWin10Files</bcf:citekey>
     <bcf:citekey order="92" intorder="1">CrashpadOverviewDesign</bcf:citekey>
-    <bcf:citekey order="93" intorder="1">ChromiumShutdownMSTxtWebpageDoku</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">CrashpadOverviewDesign</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">ChromiumShutdownMSTxtWebpageDoku</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
