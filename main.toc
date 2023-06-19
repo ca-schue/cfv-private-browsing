@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {5.4}Brave}{43}{section.5.4}%
 \contentsline {paragraph}{\nonumberline Yara-Regel \glqq {}DK-Logo\grqq {}}{46}{paragraph*.105}%
 \contentsline {chapter}{\numberline {6}Vergleich der Browser}{48}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Diskussion}{52}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Diskussion}{52}{chapter.7}%
 \contentsline {chapter}{\numberline {8}Fazit und Ausblick}{53}{chapter.8}%
 \contentsline {chapter}{Anhänge}{54}{section*.120}%
 \contentsline {section}{\numberline {A}Yara-Regeln}{55}{section.1..1}%
